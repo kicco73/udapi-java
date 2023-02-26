@@ -14,21 +14,21 @@ public interface Bundle {
      *
      * @param root root of sentence tree
      */
-    void addTree(Root root);
+    void addTree(Sentence root);
 
     /**
      * Creates tree and adds it to the bundle.
      *
      * @return created tree
      */
-    Root createTree();
+    Sentence createTree();
 
     /**
      * Returns list of sentence trees.
      *
      * @return list of sentence trees
      */
-    List<Root> getTrees();
+    List<Sentence> getSentences();
 
     /**
      * Ties bundle with given document.
@@ -62,7 +62,7 @@ public interface Bundle {
      * @param zone zone to search for
      * @return tree with given zone
      */
-    Optional<Root> getTree(String zone);
+    Optional<Sentence> getTree(String zone);
 
     /**
      * Removes bundle from the document.

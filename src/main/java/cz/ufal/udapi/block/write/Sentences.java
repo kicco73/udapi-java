@@ -1,7 +1,7 @@
 package cz.ufal.udapi.block.write;
 
 import cz.ufal.udapi.core.Block;
-import cz.ufal.udapi.core.Root;
+import cz.ufal.udapi.core.Sentence;
 import cz.ufal.udapi.exception.UdapiException;
 
 import java.io.PrintStream;
@@ -40,15 +40,15 @@ public class Sentences extends Block {
     }
 
     @Override
-    public void processTree(Root tree) {
+    public void processTree(Sentence tree) {
 
-        String sentence = tree.getSentence();
+        String sentence = tree.getText();
         if (null == sentence) {
             if (getParams().containsKey(IF_MISSING)) {
                 String ifMissing = getParams().get(IF_MISSING);
                 if (DETOKENIZE.equals(ifMissing)) {
                     // TODO SpaceAfter=No
-                    sentence = tree.getDescendants().stream().map(node -> node.getForm()).collect(Collectors.joining(" "));
+                    sentence = tree.getTokens().stream().map(node -> node.getForm()).collect(Collectors.joining(" "));
                 } else if (EMPTY.equals(ifMissing)) {
                     sentence = "";
                 } else {

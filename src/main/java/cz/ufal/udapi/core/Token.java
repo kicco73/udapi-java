@@ -9,7 +9,7 @@ import java.util.Optional;
  *
  * @author Martin Vojtek
  */
-public interface Node {
+public interface Token {
 
     /**
      * Args used for child removal.
@@ -52,14 +52,14 @@ public interface Node {
      *
      * @return new child
      */
-    Node createChild();
+    Token createChild();
 
     /**
      * Returns children of the node in word order.
      *
      * @return children of the node
      */
-    List<Node> getChildren();
+    List<Token> getChildren();
 
     /**
      * Returns children of the node in word order.
@@ -67,21 +67,21 @@ public interface Node {
      * @param args args to augment resulting collection
      * @return children of the node
      */
-    List<Node> getChildren(EnumSet<ChildrenArg> args);
+    List<Token> getChildren(EnumSet<ChildrenArg> args);
 
     /**
      * Returns parent node.
      *
      * @return parent node
      */
-    Optional<Node> getParent();
+    Optional<Token> getParent();
 
     /**
      * Sets parent.
      *
      * @param node new parent node
      */
-    void setParent(Node node);
+    void setParent(Token node);
 
     /**
      * Sets parent.
@@ -89,7 +89,7 @@ public interface Node {
      * @param node new parent node
      * @param skipCycles skip operation in case of cycles
      */
-    void setParent(Node node, boolean skipCycles);
+    void setParent(Token node, boolean skipCycles);
 
     /**
      *
@@ -101,14 +101,14 @@ public interface Node {
      *
      * @return descendants of the node in word order
      */
-    List<Node> getDescendants();
+    List<Token> getTokens();
 
     /**
      *
      * @param args args to augment resulting collection
      * @return descendants of the node in word order
      */
-    List<Node> getDescendants(EnumSet<DescendantsArg> args);
+    List<Token> getTokens(EnumSet<DescendantsArg> args);
 
     /**
      *
@@ -116,50 +116,50 @@ public interface Node {
      * @param except the resulting collection without this node
      * @return descendants of the node in word order
      */
-    List<Node> getDescendants(EnumSet<DescendantsArg> args, Node except);
+    List<Token> getTokens(EnumSet<DescendantsArg> args, Token except);
 
     /**
      *
      * @return siblings of the node
      */
-    List<Node> getSiblings();
+    List<Token> getSiblings();
 
     /**
      *
      * @return previous sibling
      */
-    Optional<Node> getPrevSibling();
+    Optional<Token> getPrevSibling();
 
     /**
      *
      * @return next sibling
      */
-    Optional<Node> getNextSibling();
+    Optional<Token> getNextSibling();
 
     /**
      *
      * @param newNextSibling set new next sibling
      */
-    void setNextSibling(Optional<Node> newNextSibling);
+    void setNextSibling(Optional<Token> newNextSibling);
 
     /**
      *
      * @return previous node in word order
      */
-    Optional<Node> getPrevNode();
+    Optional<Token> getPrevNode();
 
     /**
      *
      * @return next node in word order
      */
-    Optional<Node> getNextNode();
+    Optional<Token> getNextNode();
 
     /**
      *
      * @param node node we want to find out if there is descendat relation
      * @return true if this is descendant of given node
      */
-    boolean isDescendantOf(Node node);
+    boolean isDescendantOf(Token node);
 
     /**
      *
@@ -294,7 +294,7 @@ public interface Node {
      *
      * @param node node to shift after
      */
-    void shiftAfterNode(Node node);
+    void shiftAfterNode(Token node);
 
     /**
      * Shifts node after given node.
@@ -302,14 +302,14 @@ public interface Node {
      * @param node node to shift after
      * @param args args to augment resulting collection
      */
-    void shiftAfterNode(Node node, EnumSet<ShiftArg> args);
+    void shiftAfterNode(Token node, EnumSet<ShiftArg> args);
 
     /**
      * Shifts node before given node.
      *
      * @param node node to shift before
      */
-    void shiftBeforeNode(Node node);
+    void shiftBeforeNode(Token node);
 
     /**
      * Shifts node before given node.
@@ -317,14 +317,14 @@ public interface Node {
      * @param node node to shift before
      * @param args args to augment resulting collection
      */
-    void shiftBeforeNode(Node node, EnumSet<ShiftArg> args);
+    void shiftBeforeNode(Token node, EnumSet<ShiftArg> args);
 
     /**
      * Shifts node with its subtree after given node.
      *
      * @param node node to shift after
      */
-    void shiftAfterSubtree(Node node);
+    void shiftAfterSubtree(Token node);
 
     /**
      * Shifts node with its subtree after given node.
@@ -332,14 +332,14 @@ public interface Node {
      * @param node node to shift after
      * @param args args to augment resulting collection
      */
-    void shiftAfterSubtree(Node node, EnumSet<ShiftArg> args);
+    void shiftAfterSubtree(Token node, EnumSet<ShiftArg> args);
 
     /**
      * Shifts node with its subtree before given node.
      *
      * @param node node to shift before
      */
-    void shiftBeforeSubtree(Node node);
+    void shiftBeforeSubtree(Token node);
 
     /**
      * Shifts node with its subtree before given node.
@@ -347,14 +347,14 @@ public interface Node {
      * @param node node to shift before
      * @param args args to augment resulting collection
      */
-    void shiftBeforeSubtree(Node node, EnumSet<ShiftArg> args);
+    void shiftBeforeSubtree(Token node, EnumSet<ShiftArg> args);
 
     /**
      *
      * @param anotherNode anotherNode we want to find out precedes relation
      * @return true if the node precedes anotherNode
      */
-    boolean precedes(Node anotherNode);
+    boolean precedes(Token anotherNode);
 
     /**
      * Removes node from the tree.
@@ -367,7 +367,7 @@ public interface Node {
      *
      * @return tree of the sentence the node is part of
      */
-    Root getRoot();
+    Sentence getRoot();
 
     /**
      *

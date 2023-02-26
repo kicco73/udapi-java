@@ -5,8 +5,9 @@ import java.util.List;
 /**
  * Document representing given CoNLLU file or some collection of bundles.
  *
- * @author Martin Vojtek
+ * @author Enrico Carniani
  */
+
 public interface Document {
     /**
      * Useful for node IDs generation.
@@ -41,4 +42,11 @@ public interface Document {
      * @return first bundle
      */
     Bundle getDefaultBundle();
+
+    /**
+     * Convenient method to return all sentences from all bundles.
+     *
+     * @return list of Sentences from all bundles
+     */
+    List<Sentence> getSentences();
 }

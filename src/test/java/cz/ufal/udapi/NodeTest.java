@@ -26,13 +26,13 @@ public class NodeTest {
 
         Document document = reader.readDocument();
 
-        assertEquals(1, document.getDefaultBundle().getTrees().size());
+        assertEquals(1, document.getDefaultBundle().getSentences().size());
 
-        Root tree = document.getDefaultBundle().getTrees().get(0);
+        Sentence tree = document.getDefaultBundle().getSentences().get(0);
 
         assertEquals("no deprels at tree level", 0, tree.getDeps().getDeps().size());
 
-        Node firstNode = tree.getDescendants().get(0);
+        Token firstNode = tree.getTokens().get(0);
 
         List<EnhancedDeps.Dep> deps = firstNode.getDeps().getDeps();
         assertEquals("first node has 2 enhanced dependencies", 2, deps.size());
@@ -45,7 +45,7 @@ public class NodeTest {
 
         assertEquals("amod", secondDep.getRel());
         assertEquals(false, secondDep.getHead().isRoot());
-        assertEquals(tree.getDescendants().get(1), secondDep.getHead().getNode());
+        assertEquals(tree.getTokens().get(1), secondDep.getHead().getNode());
 
         //test write
         CoNLLUWriter writer = new CoNLLUWriter();
@@ -68,9 +68,9 @@ public class NodeTest {
 
         Document document = reader.readDocument();
 
-        assertEquals(1, document.getDefaultBundle().getTrees().size());
+        assertEquals(1, document.getDefaultBundle().getSentences().size());
 
-        Root tree = document.getDefaultBundle().getTrees().get(0);
+        Sentence tree = document.getDefaultBundle().getSentences().get(0);
 
         assertEquals("no deprels at tree level", 0, tree.getDeps().getDeps().size());
 
@@ -78,9 +78,9 @@ public class NodeTest {
 
         MultiwordToken mwt = tree.getMultiwords().get(0);
         assertEquals("aby", mwt.getForm());
-        assertEquals(2, mwt.getWords().size());
-        assertEquals("aby", mwt.getWords().get(0).getForm());
-        assertEquals("by", mwt.getWords().get(1).getForm());
+        assertEquals(2, mwt.getTokens().size());
+        assertEquals("aby", mwt.getTokens().get(0).getForm());
+        assertEquals("by", mwt.getTokens().get(1).getForm());
 
         //test write
         CoNLLUWriter writer = new CoNLLUWriter();

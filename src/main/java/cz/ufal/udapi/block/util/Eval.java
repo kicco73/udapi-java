@@ -78,7 +78,7 @@ public class Eval extends Block {
         }
 
         if (getParams().containsKey(TREE) || getParams().containsKey(NODE)) {
-            for (Root tree : bundle.getTrees()) {
+            for (Sentence tree : bundle.getSentences()) {
                 if (shouldProcessTree(tree)) {
                     processTree(tree);
                 }
@@ -88,7 +88,7 @@ public class Eval extends Block {
     }
 
     @Override
-    public void processTree(Root tree) {
+    public void processTree(Sentence tree) {
         if (getParams().containsKey(TREE)) {
             Map<String, Object> params = new HashMap<>();
             params.put(VAR_SELF, tree);
@@ -100,7 +100,7 @@ public class Eval extends Block {
         }
 
         if (getParams().containsKey(NODE)) {
-            for (Node descendant : tree.getDescendants()) {
+            for (Token descendant : tree.getTokens()) {
                 Map<String, Object> params = new HashMap<>();
                 params.put(VAR_SELF, descendant);
                 params.put(VAR_TREE, tree);

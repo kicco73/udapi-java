@@ -7,7 +7,7 @@ import java.util.List;
  *
  * @author Martin Vojtek
  */
-public interface Root {
+public interface Sentence {
     /**
      * default zone is undefined
      */
@@ -17,7 +17,7 @@ public interface Root {
      *
      * @return node representing technical root
      */
-    Node getNode();
+    Token getToken();
 
     /**
      *
@@ -66,7 +66,7 @@ public interface Root {
      * @param form from of multiword
      * @param misc misc of multiword
      */
-    void addMultiword(List<Node> words, String form, String misc);
+    void addMultiword(List<Token> words, String form, String misc);
 
     /**
      *
@@ -79,13 +79,13 @@ public interface Root {
      *
      * @param sentenceText sentence plain text
      */
-    void setSentence(String sentenceText);
+    void setText(String sentenceText);
 
     /**
      *
      * @return sentence in plain text
      */
-    String getSentence();
+    String getText();
 
     /**
      * Orders nodes in the tree to reflect correct word order.
@@ -96,7 +96,7 @@ public interface Root {
      *
      * @return descendants of the node
      */
-    List<Node> getDescendants();
+    List<Token> getTokens();
 
     /**
      *
@@ -126,7 +126,7 @@ public interface Root {
      *
      * @return deep copy of the tree
      */
-    Root copyTree();
+    Sentence copyTree();
 
     /**
      *
@@ -156,7 +156,7 @@ public interface Root {
      *
      * @return new child
      */
-    Node createChild();
+    Token createChild();
 
     /**
      *

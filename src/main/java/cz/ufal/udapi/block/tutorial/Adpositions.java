@@ -1,7 +1,7 @@
 package cz.ufal.udapi.block.tutorial;
 
 import cz.ufal.udapi.core.Block;
-import cz.ufal.udapi.core.Node;
+import cz.ufal.udapi.core.Token;
 
 /**
  * This class is useful for tutorial purposes.
@@ -33,7 +33,7 @@ public class Adpositions extends Block {
     private static final String ADP = "ADP";
 
     @Override
-    public void processNode(Node node) {
+    public void processNode(Token node) {
         // TODO: Your task: distinguish prepositions and postpositions
         if (ADP.equals(node.getUpos())) {
             prepositions++;

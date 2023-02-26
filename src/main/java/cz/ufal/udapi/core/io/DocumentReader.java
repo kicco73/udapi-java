@@ -1,7 +1,7 @@
 package cz.ufal.udapi.core.io;
 
 import cz.ufal.udapi.core.Document;
-import cz.ufal.udapi.core.Root;
+import cz.ufal.udapi.core.Sentence;
 
 import java.io.BufferedReader;
 import java.util.Optional;
@@ -35,7 +35,7 @@ public interface DocumentReader {
      * @return tree of the sentence
      * @throws UdapiIOException If any error occurs
      */
-    Optional<Root> readTree(final Document document) throws UdapiIOException;
+    Optional<Sentence> readTree(final Document document) throws UdapiIOException;
 
     /**
      * Reads tree into document with given reader.
@@ -45,5 +45,5 @@ public interface DocumentReader {
      * @return tree of the sentence
      * @throws UdapiIOException If any error occurs
      */
-    Optional<Root> readTree(BufferedReader bufferedReader, final Document document) throws UdapiIOException;
+    Optional<Sentence> readTree(BufferedReader bufferedReader, final Document document) throws UdapiIOException;
 }

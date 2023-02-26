@@ -60,10 +60,10 @@ public class Treex extends Block {
     }
 
     @Override
-    public void processTree(Root tree) {
+    public void processTree(Sentence tree) {
         StringBuilder rootId = new StringBuilder("a-");
         rootId.append(tree.getBundle().getNumber());
-        String sentence = tree.getSentence();
+        String sentence = tree.getText();
         String language = "und"; //TODO: selector
         StringBuilder treeId = new StringBuilder("s");
         treeId.append(tree.getBundle().getNumber()).append("-").append(language);
@@ -77,14 +77,14 @@ public class Treex extends Block {
         say.append(in).append("  <trees>\n").append(in).append("    <a_tree id='").append(treeId).append("'>");
 
         ps.println(say.toString());
-        printSubTree(true, tree.getNode(), treeId, SPACES_12);
+        printSubTree(true, tree.getToken(), treeId, SPACES_12);
 
         StringBuilder postTree = new StringBuilder(in);
         postTree.append("    </a_tree>\n").append(in).append("  </trees>\n").append(in).append("</zone>");
         ps.println(postTree.toString());
     }
 
-    public void printSubTree(boolean isRoot, Node node, StringBuilder treeId, String indent) {
+    public void printSubTree(boolean isRoot, Token node, StringBuilder treeId, String indent) {
         if (!isRoot) {
             StringBuilder toPrint = new StringBuilder(indent);
             toPrint.append("<LM id='").append(treeId).append("-n").append(node.getOrd()).append("'>");
@@ -119,10 +119,10 @@ public class Treex extends Block {
 
         ps.print(toPrint.toString());
 
-        List<Node> children = node.getChildren();
+        List<Token> children = node.getChildren();
         if (!children.isEmpty()) {
             ps.println(in + "<children>");
-            for (Node child : children) {
+            for (Token child : children) {
                 printSubTree(false, child, treeId, in.toString() + "  ");
             }
             ps.println(in + "</children>");

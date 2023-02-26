@@ -2,6 +2,7 @@ package cz.ufal.udapi.core.impl;
 
 import cz.ufal.udapi.core.Bundle;
 import cz.ufal.udapi.core.Document;
+import cz.ufal.udapi.core.Sentence;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -77,6 +78,20 @@ public class DefaultDocument implements Document {
     @Override
     public Bundle getDefaultBundle() {
         return bundles.get(0);
+    }
+
+    /**
+     * Helper method. Returns all sentences.
+     *
+     * @return all sentences in all bundles
+     */
+    @Override
+    public List<Sentence> getSentences() {
+        List<Sentence> sentences = new ArrayList<Sentence>();
+        for (Bundle bundle: bundles) {
+            sentences.addAll(bundle.getSentences());
+        }
+        return sentences;
     }
 
 }

@@ -3,7 +3,7 @@ package cz.ufal.udapi.block.common;
 import cz.ufal.udapi.core.Block;
 import cz.ufal.udapi.core.Bundle;
 import cz.ufal.udapi.core.Document;
-import cz.ufal.udapi.core.Root;
+import cz.ufal.udapi.core.Sentence;
 import cz.ufal.udapi.exception.UdapiException;
 
 import java.util.ArrayList;
@@ -40,7 +40,7 @@ public abstract class Reader extends Block {
     /**
      * Helper class during loading.
      */
-    private Optional<Root> buffer = Optional.empty();
+    private Optional<Sentence> buffer = Optional.empty();
 
     /**
      * Reads tree and loads it into the document.
@@ -48,7 +48,7 @@ public abstract class Reader extends Block {
      * @param document document to read into
      * @return Root of read tree
      */
-    protected abstract Optional<Root> readTree(Document document);
+    protected abstract Optional<Sentence> readTree(Document document);
 
     /**
      * @return true if the reader supports multiple zones
@@ -100,9 +100,9 @@ public abstract class Reader extends Block {
             buffer = Optional.empty();
         }
         int sentenceId = 1;
-        Optional<Root> root = readTree(document);
+        Optional<Sentence> root = readTree(document);
         while (root.isPresent()) {
-            Root tree = root.get();
+            Sentence tree = root.get();
 
             boolean addToTheLastBundle = false;
 

@@ -12,9 +12,9 @@ import java.util.*;
  *
  * @author Martin Vojtek
  */
-public class DefaultNode implements Node {
+public class DefaultToken implements Token {
 
-    protected final Root tree;
+    protected final Sentence tree;
 
     private final int id;
     private int ord = -1;
@@ -31,24 +31,24 @@ public class DefaultNode implements Node {
     private String misc;
     private Optional<MultiwordToken> mwt = Optional.empty();
 
-    private Optional<Node> firstChild = Optional.empty();
-    private Optional<Node> nextSibling = Optional.empty();
+    private Optional<Token> firstChild = Optional.empty();
+    private Optional<Token> nextSibling = Optional.empty();
 
-    private Optional<Node> parent;
+    private Optional<Token> parent;
 
-    public DefaultNode(Root tree, Node parent) {
+    public DefaultToken(Sentence tree, Token parent) {
         this.parent = Optional.ofNullable(parent);
         this.tree = tree;
         this.id = tree.getDocument().getUniqueNodeId();
     }
 
-    public DefaultNode(Root tree) {
+    public DefaultToken(Sentence tree) {
         this(tree, null);
     }
 
     @Override
     public void remove() {
-        remove(EnumSet.noneOf(Node.RemoveArg.class));
+        remove(EnumSet.noneOf(Token.RemoveArg.class));
     }
 
     /**
@@ -64,13 +64,13 @@ public class DefaultNode implements Node {
     }
 
     @Override
-    public void remove(EnumSet<Node.RemoveArg> args) {
+    public void remove(EnumSet<Token.RemoveArg> args) {
         //already removed
         if (isRemoved) return;
 
-        Optional<Node> parent = getParent();
+        Optional<Token> parent = getParent();
         if (args.contains(RemoveArg.REHANG)) {
-            for (Node child : getChildren()) {
+            for (Token child : getChildren()) {
                 child.setParent(parent.get());
             }
         }
@@ -79,10 +79,10 @@ public class DefaultNode implements Node {
             System.err.println(getAddress() + " is being removed by remove, but it has (unexpected) children");
         }
 
-        List<Node> toRemove = getDescendantsF();
+        List<Token> toRemove = getDescendantsF();
         toRemove.add(this);
         if (!toRemove.isEmpty()) {
-            List<Node> allNodes = tree.getDescendants();
+            List<Token> allNodes = tree.getTokens();
             allNodes.removeAll(toRemove);
 
             //update ord of the nodes in the tree
@@ -90,7 +90,7 @@ public class DefaultNode implements Node {
         }
 
         //Disconnect the node from its parent (& siblings) and delete all attributes
-        Optional<Node> node = toDefaultNode(parent.get()).getFirstChild();
+        Optional<Token> node = toDefaultNode(parent.get()).getFirstChild();
         if (node.isPresent() && node.get() == this) {
             toDefaultNode(parent.get()).setFirstChild(this.getNextSibling());
         } else {
@@ -102,13 +102,13 @@ public class DefaultNode implements Node {
             }
         }
 
-        for (Node removedNode : toRemove) {
+        for (Token removedNode : toRemove) {
             toDefaultNode(removedNode).isRemoved = true;
         }
     }
 
     @Override
-    public Root getRoot() {
+    public Sentence getRoot() {
         return tree;
     }
 
@@ -122,17 +122,17 @@ public class DefaultNode implements Node {
         return getBundle().getDocument();
     }
 
-    public List<Node> getDescendantsF() {
+    public List<Token> getDescendantsF() {
         if (!getFirstChild().isPresent()) {
             return new ArrayList<>();
         }
 
-        Deque<Node> stack = new ArrayDeque<>();
+        Deque<Token> stack = new ArrayDeque<>();
         stack.push(getFirstChild().get());
 
-        List<Node> descs = new ArrayList<>();
+        List<Token> descs = new ArrayList<>();
         while (!stack.isEmpty()) {
-            Node node = stack.pop();
+            Token node = stack.pop();
             descs.add(node);
             node.getNextSibling().ifPresent(next -> stack.push(next));
             toDefaultNode(node).getFirstChild().ifPresent(first -> stack.push(first));
@@ -142,25 +142,25 @@ public class DefaultNode implements Node {
     }
 
     @Override
-    public Node createChild() {
-        Node newChild = createNode();
+    public Token createChild() {
+        Token newChild = createNode();
         newChild.setParent(this);
         return newChild;
     }
 
-    protected Node createNode() {
-        DefaultNode newNode = new DefaultNode(tree);
-        tree.getDescendants().add(newNode);
-        newNode.ord = tree.getDescendants().size();
+    protected Token createNode() {
+        DefaultToken newNode = new DefaultToken(tree);
+        tree.getTokens().add(newNode);
+        newNode.ord = tree.getTokens().size();
         return newNode;
     }
 
     @Override
-    public List<Node> getChildren(EnumSet<ChildrenArg> args) {
+    public List<Token> getChildren(EnumSet<ChildrenArg> args) {
 
-        List<Node> result = new ArrayList<>();
+        List<Token> result = new ArrayList<>();
 
-        Optional<Node> child = getFirstChild();
+        Optional<Token> child = getFirstChild();
         while (child.isPresent()) {
             result.add(child.get());
             child = child.get().getNextSibling();
@@ -183,21 +183,21 @@ public class DefaultNode implements Node {
     }
 
     @Override
-    public List<Node> getChildren() {
-        return getChildren(EnumSet.noneOf(Node.ChildrenArg.class));
+    public List<Token> getChildren() {
+        return getChildren(EnumSet.noneOf(Token.ChildrenArg.class));
     }
 
     @Override
-    public Optional<Node> getParent() {
+    public Optional<Token> getParent() {
         return parent;
     }
 
-    public void setParent(Node parent) {
+    public void setParent(Token parent) {
         setParent(parent, false);
     }
 
     @Override
-    public void setParent(Node parent, boolean skipCycles) {
+    public void setParent(Token parent, boolean skipCycles) {
 
         if (null == parent) {
             throw new UdapiException("Not allowed to set null parent.");
@@ -210,7 +210,7 @@ public class DefaultNode implements Node {
                     + " to itself (cycle).");
         }
         if (firstChild.isPresent()) {
-            Optional<Node> grandpa = parent.getParent();
+            Optional<Token> grandpa = parent.getParent();
             while (grandpa.isPresent()) {
                 if (grandpa.get() == this) {
                     if (skipCycles) return;
@@ -222,9 +222,9 @@ public class DefaultNode implements Node {
         }
 
         //Disconnect the node from its original parent
-        Optional<Node> origParent = getParent();
+        Optional<Token> origParent = getParent();
         if (origParent.isPresent()) {
-            Optional<Node> node = toDefaultNode(origParent.get()).getFirstChild();
+            Optional<Token> node = toDefaultNode(origParent.get()).getFirstChild();
             if (node.isPresent() && this == node.get()) {
                 toDefaultNode(origParent.get()).setFirstChild(nextSibling);
             } else {
@@ -249,7 +249,7 @@ public class DefaultNode implements Node {
     }
 
     @Override
-    public List<Node> getDescendants(EnumSet<Node.DescendantsArg> args, Node except) {
+    public List<Token> getTokens(EnumSet<Token.DescendantsArg> args, Token except) {
 
         if (args.isEmpty()) {
             return getDescendantsInner(args, Optional.of(except));
@@ -259,24 +259,24 @@ public class DefaultNode implements Node {
     }
 
     @Override
-    public List<Node> getDescendants(EnumSet<Node.DescendantsArg> args) {
+    public List<Token> getTokens(EnumSet<Token.DescendantsArg> args) {
         return getDescendantsInner(args, Optional.empty());
     }
 
     @Override
-    public List<Node> getDescendants() {
-        return getDescendantsInner(EnumSet.noneOf(Node.DescendantsArg.class), Optional.empty());
+    public List<Token> getTokens() {
+        return getDescendantsInner(EnumSet.noneOf(Token.DescendantsArg.class), Optional.empty());
     }
 
-    protected List<Node> getDescendantsInner(EnumSet<Node.DescendantsArg> args, Optional<Node> except) {
+    protected List<Token> getDescendantsInner(EnumSet<Token.DescendantsArg> args, Optional<Token> except) {
         if (except.isPresent() && this == except.get()) {
             return new ArrayList<>();
         }
 
-        List<Node> descs = new ArrayList<>();
-        Deque<Node> stack = new ArrayDeque<>();
+        List<Token> descs = new ArrayList<>();
+        Deque<Token> stack = new ArrayDeque<>();
         getFirstChild().ifPresent(first -> stack.push(first));
-        Node node;
+        Token node;
         while (!stack.isEmpty()) {
             node = stack.pop();
             node.getNextSibling().ifPresent(next -> stack.push(next));
@@ -303,15 +303,15 @@ public class DefaultNode implements Node {
         return descs;
     }
 
-    private DefaultNode toDefaultNode(Node node) {
-        return (DefaultNode) node;
+    private DefaultToken toDefaultNode(Token node) {
+        return (DefaultToken) node;
     }
 
-    private List<Node> getFirstLastNode(List<Node> descs, boolean first) {
+    private List<Token> getFirstLastNode(List<Token> descs, boolean first) {
         if (!descs.isEmpty()) {
-            Node firstLast = descs.get(0);
+            Token firstLast = descs.get(0);
             for (int i = 1; i < descs.size(); i++) {
-                Node next = descs.get(i);
+                Token next = descs.get(i);
                 if (first) {
                     if (next.getOrd() < firstLast.getOrd()) {
                         firstLast = next;
@@ -328,18 +328,18 @@ public class DefaultNode implements Node {
     }
 
     @Override
-    public List<Node> getSiblings() {
+    public List<Token> getSiblings() {
         if (parent.isPresent()) {
-            List<Node> siblings = parent.get().getChildren();
+            List<Token> siblings = parent.get().getChildren();
             siblings.remove(this);
             return siblings;
         } else return new ArrayList<>();
     }
 
     @Override
-    public Optional<Node> getPrevSibling() {
+    public Optional<Token> getPrevSibling() {
         if (parent.isPresent()) {
-            List<Node> parentChildren = parent.get().getChildren();
+            List<Token> parentChildren = parent.get().getChildren();
 
             int index = parentChildren.indexOf(this);
             if (index != -1 && index > 0) {
@@ -351,19 +351,19 @@ public class DefaultNode implements Node {
     }
 
     @Override
-    public Optional<Node> getNextSibling() {
+    public Optional<Token> getNextSibling() {
         return nextSibling;
     }
 
     @Override
-    public void setNextSibling(Optional<Node> newNextSibling) {
+    public void setNextSibling(Optional<Token> newNextSibling) {
         this.nextSibling = newNextSibling;
     }
 
     @Override
-    public Optional<Node> getNextNode() {
+    public Optional<Token> getNextNode() {
         int ord = getOrd();
-        List<Node> rootDescendants = tree.getDescendants();
+        List<Token> rootDescendants = tree.getTokens();
         if (ord == rootDescendants.size()) {
             return Optional.empty();
         }
@@ -371,25 +371,25 @@ public class DefaultNode implements Node {
     }
 
     @Override
-    public Optional<Node> getPrevNode() {
+    public Optional<Token> getPrevNode() {
 
         int ord = getOrd() - 1;
 
         if (0 == ord) {
-            return Optional.of(tree.getNode());
+            return Optional.of(tree.getToken());
         }
 
-        return Optional.of(tree.getDescendants().get(ord - 1));
+        return Optional.of(tree.getTokens().get(ord - 1));
     }
 
     @Override
-    public boolean isDescendantOf(Node node) {
+    public boolean isDescendantOf(Token node) {
 
         if (!toDefaultNode(node).getFirstChild().isPresent()) {
             return false;
         }
 
-        Optional<Node> pathParent = parent;
+        Optional<Token> pathParent = parent;
         while (pathParent.isPresent()) {
             if (pathParent.get() == node) {
                 return true;
@@ -400,39 +400,39 @@ public class DefaultNode implements Node {
         return false;
     }
 
-    public void shiftAfterNode(Node node) {
+    public void shiftAfterNode(Token node) {
         shiftAfterNode(node, EnumSet.noneOf(ShiftArg.class));
     }
 
-    public void shiftAfterNode(Node node, EnumSet<ShiftArg> args) {
+    public void shiftAfterNode(Token node, EnumSet<ShiftArg> args) {
         shiftToNode(node, true, false, args);
     }
 
-    public void shiftBeforeNode(Node node) {
+    public void shiftBeforeNode(Token node) {
         shiftBeforeNode(node, EnumSet.noneOf(ShiftArg.class));
     }
 
-    public void shiftBeforeNode(Node node, EnumSet<ShiftArg> args) {
+    public void shiftBeforeNode(Token node, EnumSet<ShiftArg> args) {
         shiftToNode(node, false, false, args);
     }
 
-    public void shiftBeforeSubtree(Node node) {
+    public void shiftBeforeSubtree(Token node) {
         shiftBeforeSubtree(node, EnumSet.noneOf(ShiftArg.class));
     }
 
-    public void shiftBeforeSubtree(Node node, EnumSet<ShiftArg> args) {
+    public void shiftBeforeSubtree(Token node, EnumSet<ShiftArg> args) {
         shiftToNode(node, false, true, args);
     }
 
-    public void shiftAfterSubtree(Node node) {
+    public void shiftAfterSubtree(Token node) {
         shiftAfterSubtree(node, EnumSet.noneOf(ShiftArg.class));
     }
 
-    public void shiftAfterSubtree(Node node, EnumSet<ShiftArg> args) {
+    public void shiftAfterSubtree(Token node, EnumSet<ShiftArg> args) {
         shiftToNode(node, true, true, args);
     }
 
-    private void shiftToNode(Node referenceNode, boolean after, boolean subtree, EnumSet<ShiftArg> args) {
+    private void shiftToNode(Token referenceNode, boolean after, boolean subtree, EnumSet<ShiftArg> args) {
 
         //node.shiftAfterNode(node) should result in no action.
         if (!subtree && this == referenceNode) {
@@ -458,14 +458,14 @@ public class DefaultNode implements Node {
         //For shiftSubtree* methods, we need to find the real reference node first.
         if (subtree) {
             if (withoutChildren) {
-                Node newRef = null;
+                Token newRef = null;
                 if (after) {
 
                     if (this != referenceNode) {
                         newRef = referenceNode;
                     }
 
-                    for (Node node : toDefaultNode(referenceNode).getDescendantsF()) {
+                    for (Token node : toDefaultNode(referenceNode).getDescendantsF()) {
                         if (this == node) continue;
                         if (null == newRef || node.getOrd() > newRef.getOrd()) {
                             newRef = node;
@@ -476,7 +476,7 @@ public class DefaultNode implements Node {
                         newRef = referenceNode;
                     }
 
-                    for (Node node : toDefaultNode(referenceNode).getDescendantsF()) {
+                    for (Token node : toDefaultNode(referenceNode).getDescendantsF()) {
                         if (this == node) continue;
                         if (null == newRef || node.getOrd() < newRef.getOrd()) {
                             newRef = node;
@@ -496,13 +496,13 @@ public class DefaultNode implements Node {
                     descendantsArgs.add(DescendantsArg.FIRST_ONLY);
                 }
 
-                List<Node> descendants = referenceNode.getDescendants(descendantsArgs, this);
+                List<Token> descendants = referenceNode.getTokens(descendantsArgs, this);
                 referenceNode = descendants.get(0);
             }
         }
 
         //convert shiftAfter* to shiftBefore*
-        List<Node> allNodes = tree.getDescendants();
+        List<Token> allNodes = tree.getTokens();
         int referenceOrd = referenceNode.getOrd();
         if (after) {
             referenceOrd++;
@@ -513,7 +513,7 @@ public class DefaultNode implements Node {
             int myOrd = getOrd();
             if (referenceOrd > myOrd + 1) {
                 for (int newOrd = myOrd; newOrd < referenceOrd - 1; newOrd++) {
-                    Node ordNode = allNodes.get(newOrd);
+                    Token ordNode = allNodes.get(newOrd);
                     allNodes.set(newOrd - 1, ordNode);
                     ordNode.setOrd(newOrd);
                 }
@@ -521,7 +521,7 @@ public class DefaultNode implements Node {
                 setOrd(referenceOrd - 1);
             } else if (referenceOrd < myOrd) {
                 for (int newOrd = myOrd; newOrd > referenceOrd; newOrd--) {
-                    Node ordNode = allNodes.get(newOrd - 2);
+                    Token ordNode = allNodes.get(newOrd - 2);
                     allNodes.set(newOrd - 1, ordNode);
                     ordNode.setOrd(newOrd);
                 }
@@ -533,7 +533,7 @@ public class DefaultNode implements Node {
 
         //which nodes are to be moved?
         //this and all its descendants
-        List<Node> nodesToMove = getDescendants(EnumSet.of(DescendantsArg.ADD_SELF));
+        List<Token> nodesToMove = getTokens(EnumSet.of(DescendantsArg.ADD_SELF));
         int firstOrd = nodesToMove.get(0).getOrd();
         int lastOrd = nodesToMove.get(nodesToMove.size() - 1).getOrd();
 
@@ -554,7 +554,7 @@ public class DefaultNode implements Node {
                     break RIGHTSWIPE;
                 }
             }
-            Node ordNode = allNodes.get(sourceOrd - 1);
+            Token ordNode = allNodes.get(sourceOrd - 1);
             allNodes.set(targetOrd - 1, ordNode);
             ordNode.setOrd(targetOrd);
             targetOrd--;
@@ -576,7 +576,7 @@ public class DefaultNode implements Node {
                     break LEFTSWIPE;
                 }
             }
-            Node ordNode = allNodes.get(sourceOrd - 1);
+            Token ordNode = allNodes.get(sourceOrd - 1);
             allNodes.set(targetOrd - 1, ordNode);
             ordNode.setOrd(targetOrd);
             targetOrd++;
@@ -587,7 +587,7 @@ public class DefaultNode implements Node {
         if (referenceOrd < firstOrd) {
             targetOrd = referenceOrd;
         }
-        for (Node node : nodesToMove) {
+        for (Token node : nodesToMove) {
             allNodes.set(targetOrd - 1, node);
             node.setOrd(targetOrd++);
         }
@@ -595,15 +595,15 @@ public class DefaultNode implements Node {
     }
 
     @Override
-    public boolean precedes(Node anotherNode) {
+    public boolean precedes(Token anotherNode) {
         return ord < anotherNode.getOrd();
     }
 
-    Optional<Node> getFirstChild() {
+    Optional<Token> getFirstChild() {
         return firstChild;
     }
 
-    void setFirstChild(Optional<Node> newFirstChild) {
+    void setFirstChild(Optional<Token> newFirstChild) {
         this.firstChild = newFirstChild;
     }
 
@@ -612,7 +612,7 @@ public class DefaultNode implements Node {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        DefaultNode that = (DefaultNode) o;
+        DefaultToken that = (DefaultToken) o;
 
         return id == that.id;
     }

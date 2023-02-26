@@ -11,10 +11,10 @@ import java.util.List;
  * Represents multi-word token in UD tree.
  */
 public class DefaultMultiwordToken implements MultiwordToken {
-    private List<Node> words = new ArrayList<>();
+    private List<Token> words = new ArrayList<>();
     private String form;
     private Misc misc;
-    private Root root;
+    private Sentence root;
     private static final String TAB = "\t";
     private static final String UNDERSCORE = "_";
 
@@ -29,14 +29,14 @@ public class DefaultMultiwordToken implements MultiwordToken {
     }
 
     @Override
-    public void setWords(List<Node> words) {
+    public void setWords(List<Token> words) {
         this.words.clear();
         if (null != words) {
             this.words.addAll(words);
         }
     }
 
-    public List<Node> getWords() {
+    public List<Token> getTokens() {
         return words;
     }
 
@@ -55,7 +55,7 @@ public class DefaultMultiwordToken implements MultiwordToken {
     }
 
     @Override
-    public void setRoot(Root root) {
+    public void setRoot(Sentence root) {
         this.root = root;
     }
 

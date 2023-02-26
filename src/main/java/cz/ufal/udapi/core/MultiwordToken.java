@@ -10,9 +10,9 @@ public interface MultiwordToken {
 
     Misc getMisc();
 
-    void setWords(List<Node> words);
+    void setWords(List<Token> words);
 
-    void setRoot(Root root);
+    void setRoot(Sentence root);
 
     void setForm(String form);
 
@@ -22,7 +22,7 @@ public interface MultiwordToken {
 
     String getAddresss();
 
-    List<Node> getWords();
+    List<Token> getTokens();
 
     String toStringFormat();
 }

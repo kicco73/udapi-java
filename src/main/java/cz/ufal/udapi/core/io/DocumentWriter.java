@@ -1,7 +1,7 @@
 package cz.ufal.udapi.core.io;
 
 import cz.ufal.udapi.core.Document;
-import cz.ufal.udapi.core.Root;
+import cz.ufal.udapi.core.Sentence;
 
 import java.io.BufferedWriter;
 import java.io.Writer;

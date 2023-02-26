@@ -61,7 +61,7 @@ public class CoNLLUWriter implements DocumentWriter {
 
             for (Bundle bundle : document.getBundles()) {
 
-                for (Root tree : bundle.getTrees()) {
+                for (Sentence tree : bundle.getSentences()) {
                     processTree(sb, tree);
                 }
                 if (sb.length() > BUFFER) {
@@ -88,7 +88,7 @@ public class CoNLLUWriter implements DocumentWriter {
         try (BufferedWriter bufferedWriter = new BufferedWriter(writer)) {
             StringBuilder sb = new StringBuilder();
             for (Bundle bundle : document.getBundles()) {
-                for (Root tree : bundle.getTrees()) {
+                for (Sentence tree : bundle.getSentences()) {
                     processTree(sb, tree);
                 }
                 if (sb.length() > BUFFER) {
@@ -105,8 +105,8 @@ public class CoNLLUWriter implements DocumentWriter {
         }
     }
 
-    public void processTree(StringBuilder sb, Root tree) throws UdapiIOException {
-        List<Node> descendants = tree.getDescendants();
+    public void processTree(StringBuilder sb, Sentence tree) throws UdapiIOException {
+        List<Token> descendants = tree.getTokens();
         Bundle bundle = tree.getBundle();
 
         //do not write empty sentences
@@ -150,12 +150,12 @@ public class CoNLLUWriter implements DocumentWriter {
                 nextEmptyNode = emptyNodes.get(0).getEmptyNodePrefixId();
             }
 
-            for (Node descendant : descendants) {
+            for (Token descendant : descendants) {
 
                 //multiword
                 Optional<MultiwordToken> mwt = descendant.getMwt();
                 if (mwt.isPresent() && descendant.getOrd()  >lastMwtId) {
-                    List<Node> words = mwt.get().getWords();
+                    List<Token> words = mwt.get().getTokens();
                     lastMwtId = words.get(words.size()-1).getOrd();
                     sb.append(mwt.get().toStringFormat());
                     sb.append(NEW_LINE);
@@ -203,7 +203,7 @@ public class CoNLLUWriter implements DocumentWriter {
         sb.append(getString(node.getMisc()));
     }
 
-    private void buildLine(StringBuilder sb, Node node) {
+    private void buildLine(StringBuilder sb, Token node) {
         sb.append(node.getOrd());
         sb.append(TAB);
         sb.append(getString(node.getForm()));

@@ -7,23 +7,23 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * Implementation of Root.
+ * Implementation of Sentence.
  *
  * Serves as a container for technical node.
  * Maintains descendants in word order.
  *
  * @author Martin Vojtek
  */
-public class DefaultRoot implements Root {
+public class DefaultSentence implements Sentence {
 
-    private final Node node;
+    private final Token node;
     private final Document document;
     private Bundle bundle;
-    private String zone = Root.DEFAULT_ZONE;
+    private String zone = Sentence.DEFAULT_ZONE;
 
     private List<String> comments = new ArrayList<>();
     private List<MultiwordToken> multiwords = new ArrayList<>();
-    private List<Node> descendants = new ArrayList<>();
+    private List<Token> descendants = new ArrayList<>();
     private List<EmptyNode> emptyNodes = new ArrayList<>();
     private String text;
     private String id;
@@ -33,25 +33,25 @@ public class DefaultRoot implements Root {
     private boolean isNewDoc;
     private boolean isNewPar;
 
-    public DefaultRoot(Document document) {
+    public DefaultSentence(Document document) {
         this.document = document;
-        this.node = createNode();
+        this.node = createToken();
         this.node.setOrd(0);
     }
 
-    public DefaultRoot(Document document, Bundle bundle) {
+    public DefaultSentence(Document document, Bundle bundle) {
         this.document = document;
-        this.node = createNode();
+        this.node = createToken();
         this.node.setOrd(0);
         this.bundle = bundle;
     }
 
-    protected Node createNode() {
-        return new DefaultRootNode(this);
+    protected Token createToken() {
+        return new DefaultRootToken(this);
     }
 
     @Override
-    public Node getNode() {
+    public Token getToken() {
         return node;
     }
 
@@ -73,13 +73,13 @@ public class DefaultRoot implements Root {
     @Override
     public void normalizeOrder() {
         int newOrder = 1;
-        for (Node descendant : node.getDescendants()) {
+        for (Token descendant : node.getTokens()) {
             descendant.setOrd(newOrder++);
         }
     }
 
     @Override
-    public List<Node> getDescendants() {
+    public List<Token> getTokens() {
         return descendants;
     }
 
@@ -113,9 +113,9 @@ public class DefaultRoot implements Root {
     }
 
     @Override
-    public Root copyTree() {
-        DefaultRoot newRoot = new DefaultRoot(document, bundle);
-        copySubtree(getNode(), newRoot.getNode());
+    public Sentence copyTree() {
+        DefaultSentence newRoot = new DefaultSentence(document, bundle);
+        copySubtree(getToken(), newRoot.getToken());
         return newRoot;
     }
 
@@ -160,7 +160,7 @@ public class DefaultRoot implements Root {
     }
 
     @Override
-    public Node createChild() {
+    public Token createChild() {
         return node.createChild();
     }
 
@@ -257,9 +257,9 @@ public class DefaultRoot implements Root {
         this.isNewPar = isNewPar;
     }
 
-    private void copySubtree(Node oldNode, Node newNode) {
-        for (Node child : oldNode.getChildren()) {
-            Node newChild = newNode.createChild();
+    private void copySubtree(Token oldNode, Token newNode) {
+        for (Token child : oldNode.getChildren()) {
+            Token newChild = newNode.createChild();
             newChild.setDeps(child.getDeps());
             newChild.setDeprel(child.getDeprel());
             newChild.setFeats(child.getFeats());
@@ -283,7 +283,7 @@ public class DefaultRoot implements Root {
     }
 
     @Override
-    public void addMultiword(List<Node> words, String form, String misc) {
+    public void addMultiword(List<Token> words, String form, String misc) {
         MultiwordToken newMwt = new DefaultMultiwordToken();
         newMwt.setWords(words);
         newMwt.setForm(form);
@@ -300,12 +300,12 @@ public class DefaultRoot implements Root {
     }
 
     @Override
-    public void setSentence(String sentenceText) {
+    public void setText(String sentenceText) {
         this.text = sentenceText;
     }
 
     @Override
-    public String getSentence() {
+    public String getText() {
         return text;
     }
 

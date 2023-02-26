@@ -1,16 +1,16 @@
 package cz.ufal.udapi.core.impl;
 
 import cz.ufal.udapi.core.EmptyNode;
-import cz.ufal.udapi.core.Root;
+import cz.ufal.udapi.core.Sentence;
 
 /**
  * Created by mvojtek on 05/07/2017.
  */
-public class DefaultEmptyNode extends DefaultNode implements EmptyNode {
+public class DefaultEmptyNode extends DefaultToken implements EmptyNode {
 
     private String id;
 
-    public DefaultEmptyNode(Root tree) {
+    public DefaultEmptyNode(Sentence tree) {
         super(tree);
     }
 

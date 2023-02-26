@@ -1,7 +1,7 @@
 package cz.ufal.udapi.block.read;
 
 import cz.ufal.udapi.core.Document;
-import cz.ufal.udapi.core.Root;
+import cz.ufal.udapi.core.Sentence;
 import cz.ufal.udapi.core.io.DocumentReader;
 import cz.ufal.udapi.core.io.UdapiIOException;
 import cz.ufal.udapi.core.io.impl.CoNLLUReader;
@@ -42,7 +42,7 @@ public class CoNLLU extends cz.ufal.udapi.block.common.Reader {
      * @return Loaded tree.
      */
     @Override
-    protected Optional<Root> readTree(Document document) {
+    protected Optional<Sentence> readTree(Document document) {
         return coNLLUReader.readTree(reader, document);
     }
 

@@ -1,7 +1,7 @@
 package cz.ufal.udapi.block.write;
 
 import cz.ufal.udapi.core.Block;
-import cz.ufal.udapi.core.Root;
+import cz.ufal.udapi.core.Sentence;
 import cz.ufal.udapi.exception.UdapiException;
 
 import java.io.PrintStream;
@@ -83,7 +83,7 @@ public class TextModeTrees extends Block {
     }
 
     @Override
-    public void processTree(Root xtree) {
+    public void processTree(Sentence xtree) {
 
         Map<Integer, Node> tree = new HashMap<>();
 
@@ -101,7 +101,7 @@ public class TextModeTrees extends Block {
         Deque<Node> stack = new ArrayDeque<>();
         stack.push(rootNode);
 
-        for (cz.ufal.udapi.core.Node descendant : xtree.getDescendants()) {
+        for (cz.ufal.udapi.core.Token descendant : xtree.getTokens()) {
             int index = descendant.getOrd();
             Node newNode = new Node();
             newNode.index = index;
@@ -252,7 +252,7 @@ public class TextModeTrees extends Block {
         }
     }
 
-    private String nodeToString(cz.ufal.udapi.core.Node node) {
+    private String nodeToString(cz.ufal.udapi.core.Token node) {
 
         if (null == node) {
             return ""; //for roots
@@ -285,6 +285,6 @@ public class TextModeTrees extends Block {
         int depth;
         int leftmost;
         int rightmost;
-        cz.ufal.udapi.core.Node xNode;
+        cz.ufal.udapi.core.Token xNode;
     }
 }

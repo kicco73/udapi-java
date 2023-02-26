@@ -1,7 +1,7 @@
 package cz.ufal.udapi.core.impl;
 
 import cz.ufal.udapi.core.EnhancedDeps;
-import cz.ufal.udapi.core.Root;
+import cz.ufal.udapi.core.Sentence;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -20,9 +20,9 @@ public class DefaultEnhancedDeps implements EnhancedDeps {
 
     private String stringRepresentation;
     private List<Dep> deps = new ArrayList<>();
-    private Root root;
+    private Sentence root;
 
-    public DefaultEnhancedDeps(String value, Root root) {
+    public DefaultEnhancedDeps(String value, Sentence root) {
         setMapping(value);
         this.root = root;
     }
@@ -38,7 +38,7 @@ public class DefaultEnhancedDeps implements EnhancedDeps {
 
             Map<Integer, RootNode> map = new HashMap<>();
             map.put(0, new RootNodeDep(root));
-            root.getDescendants().forEach(d -> map.put(d.getOrd(), new NodeDep(d)));
+            root.getTokens().forEach(d -> map.put(d.getOrd(), new NodeDep(d)));
 
             String[] rawDeps = stringRepresentation.split(PIPE_REGEX);
             for (String rawDep : rawDeps) {

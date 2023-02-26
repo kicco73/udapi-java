@@ -1,7 +1,7 @@
 package cz.ufal.udapi.block.tutorial;
 
 import cz.ufal.udapi.core.Block;
-import cz.ufal.udapi.core.Node;
+import cz.ufal.udapi.core.Token;
 
 /**
  * This class deletes commas in the document.
@@ -27,7 +27,7 @@ import cz.ufal.udapi.core.Node;
 public class DeleteCommas extends Block {
 
     @Override
-    public void processNode(Node node) {
+    public void processNode(Token node) {
         if (",".equals(node.getLemma())) {
             node.remove();
         }

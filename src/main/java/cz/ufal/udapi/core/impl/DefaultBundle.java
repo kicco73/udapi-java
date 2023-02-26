@@ -2,7 +2,7 @@ package cz.ufal.udapi.core.impl;
 
 import cz.ufal.udapi.core.Bundle;
 import cz.ufal.udapi.core.Document;
-import cz.ufal.udapi.core.Root;
+import cz.ufal.udapi.core.Sentence;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +17,7 @@ import java.util.Optional;
  */
 public class DefaultBundle implements Bundle {
 
-    private List<Root> trees = new ArrayList<>();
+    private List<Sentence> trees = new ArrayList<>();
     private Document document;
     private String id;
     int index = -1;
@@ -26,20 +26,20 @@ public class DefaultBundle implements Bundle {
         this.document = document;
     }
 
-    public void addTree(Root root) {
+    public void addTree(Sentence root) {
         root.setBundle(this);
         trees.add(root);
     }
 
     @Override
-    public Root createTree() {
-        Root tree = new DefaultRoot(document, this);
+    public Sentence createTree() {
+        Sentence tree = new DefaultSentence(document, this);
         trees.add(tree);
         return tree;
     }
 
     @Override
-    public List<Root> getTrees() {
+    public List<Sentence> getSentences() {
         return trees;
     }
 
@@ -63,7 +63,7 @@ public class DefaultBundle implements Bundle {
     }
 
     @Override
-    public Optional<Root> getTree(String zone) {
+    public Optional<Sentence> getTree(String zone) {
         return trees.stream().filter(tree -> tree.getZone().equals(zone)).findFirst();
     }
 

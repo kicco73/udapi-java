@@ -40,7 +40,7 @@ public class Sentences extends Block {
                 String currLine;
 
                 while ((currLine = bufferedReader.readLine()) != null) {
-                    bundle.createTree().setSentence(currLine);
+                    bundle.createTree().setText(currLine);
                 }
             } catch (IOException e) {
                 throw new UdapiIOException(e);

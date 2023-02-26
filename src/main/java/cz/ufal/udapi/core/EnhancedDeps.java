@@ -12,8 +12,8 @@ public interface EnhancedDeps {
 
     abstract class RootNode {
         public abstract boolean isRoot();
-        public Root getRoot() {return null;}
-        public Node getNode() {return null;}
+        public Sentence getRoot() {return null;}
+        public Token getNode() {return null;}
 
         public int getOrd() {
             if (isRoot()) {
@@ -26,9 +26,9 @@ public interface EnhancedDeps {
 
     class RootNodeDep extends RootNode {
 
-        private final Root root;
+        private final Sentence root;
 
-        public RootNodeDep(Root root) {
+        public RootNodeDep(Sentence root) {
             this.root = root;
         }
 
@@ -38,16 +38,16 @@ public interface EnhancedDeps {
         }
 
         @Override
-        public Root getRoot() {
+        public Sentence getRoot() {
             return root;
         }
     }
 
     class NodeDep extends RootNode {
 
-        private final Node node;
+        private final Token node;
 
-        public NodeDep(Node node) {
+        public NodeDep(Token node) {
             this.node = node;
         }
 
@@ -57,7 +57,7 @@ public interface EnhancedDeps {
         }
 
         @Override
-        public Node getNode() {
+        public Token getNode() {
             return node;
         }
     }

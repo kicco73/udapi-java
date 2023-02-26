@@ -2,7 +2,7 @@ package cz.ufal.udapi.block.write;
 
 import cz.ufal.udapi.core.Block;
 import cz.ufal.udapi.core.Document;
-import cz.ufal.udapi.core.Root;
+import cz.ufal.udapi.core.Sentence;
 import cz.ufal.udapi.core.io.UdapiIOException;
 import cz.ufal.udapi.core.io.impl.CoNLLUWriter;
 
@@ -33,7 +33,7 @@ public class CoNLLU extends Block {
     }
 
     @Override
-    public void processTree(Root tree) {
+    public void processTree(Sentence tree) {
         StringBuilder sb = new StringBuilder();
         coNLLUWriter.processTree(sb, tree);
         try {

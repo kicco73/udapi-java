@@ -1,7 +1,7 @@
 package cz.ufal.udapi.core.impl;
 
-import cz.ufal.udapi.core.Node;
-import cz.ufal.udapi.core.Root;
+import cz.ufal.udapi.core.Token;
+import cz.ufal.udapi.core.Sentence;
 
 import java.util.*;
 
@@ -10,14 +10,14 @@ import java.util.*;
  *
  * @author Martin Vojtek
  */
-public class DefaultRootNode extends DefaultNode {
+public class DefaultRootToken extends DefaultToken {
 
-    public DefaultRootNode(Root tree, Node parent) {
+    public DefaultRootToken(Sentence tree, Token parent) {
         super(tree, parent);
         setRootFields();
     }
 
-    public DefaultRootNode(Root tree) {
+    public DefaultRootToken(Sentence tree) {
         super(tree, null);
         setRootFields();
     }
@@ -33,52 +33,52 @@ public class DefaultRootNode extends DefaultNode {
     }
 
     @Override
-    public List<Node> getDescendants() {
-        return Collections.unmodifiableList(tree.getDescendants());
+    public List<Token> getTokens() {
+        return Collections.unmodifiableList(tree.getTokens());
     }
 
     @Override
-    public List<Node> getDescendants(EnumSet<DescendantsArg> args) {
+    public List<Token> getTokens(EnumSet<DescendantsArg> args) {
         if (args.isEmpty()) {
-            return Collections.unmodifiableList(tree.getDescendants());
+            return Collections.unmodifiableList(tree.getTokens());
         }
 
         return getDescendantsInner(args, Optional.empty());
     }
 
     @Override
-    public List<Node> getDescendants(EnumSet<DescendantsArg> args, Node except) {
+    public List<Token> getTokens(EnumSet<DescendantsArg> args, Token except) {
         if (args.isEmpty()) {
-            return Collections.unmodifiableList(tree.getDescendants());
+            return Collections.unmodifiableList(tree.getTokens());
         }
 
         return getDescendantsInner(args, Optional.of(except));
     }
 
     @Override
-    public List<Node> getDescendantsF() {
-        return Collections.unmodifiableList(tree.getDescendants());
+    public List<Token> getDescendantsF() {
+        return Collections.unmodifiableList(tree.getTokens());
     }
 
     @Override
-    protected List<Node> getDescendantsInner(EnumSet<DescendantsArg> args, Optional<Node> except) {
+    protected List<Token> getDescendantsInner(EnumSet<DescendantsArg> args, Optional<Token> except) {
         if (args.contains(DescendantsArg.FIRST_ONLY)) {
             if (args.contains(DescendantsArg.ADD_SELF)) {
                 return Arrays.asList(this);
             }
-            return Arrays.asList(tree.getDescendants().get(0));
+            return Arrays.asList(tree.getTokens().get(0));
         }
 
         return super.getDescendantsInner(args, except);
     }
 
     @Override
-    public boolean isDescendantOf(Node node) {
+    public boolean isDescendantOf(Token node) {
         return false;
     }
 
     @Override
-    public Optional<Node> getPrevNode() {
+    public Optional<Token> getPrevNode() {
         return Optional.empty();
     }
 
@@ -88,13 +88,13 @@ public class DefaultRootNode extends DefaultNode {
     }
 
     @Override
-    public boolean precedes(Node anotherNode) {
+    public boolean precedes(Token anotherNode) {
         return true;
     }
 
     @Override
-    public Optional<Node> getNextNode() {
-        List<Node> descendants = tree.getDescendants();
+    public Optional<Token> getNextNode() {
+        List<Token> descendants = tree.getTokens();
         if (descendants.isEmpty()) {
             return Optional.empty();
         }

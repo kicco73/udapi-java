@@ -1,7 +1,7 @@
 package cz.ufal.udapi.block.tutorial;
 
 import cz.ufal.udapi.core.Block;
-import cz.ufal.udapi.core.Node;
+import cz.ufal.udapi.core.Token;
 
 /**
  * This classes changes prepositions into postpositions.
@@ -29,7 +29,7 @@ public class ToPositions extends Block {
     private static final String ADP = "ADP";
 
     @Override
-    public void processNode(Node node) {
+    public void processNode(Token node) {
         if (node.getParent().isPresent()) {
             if (ADP.equals(node.getUpos()) && node.precedes(node.getParent().get())) {
                 node.shiftAfterSubtree(node.getParent().get());

@@ -101,7 +101,7 @@ public class Block {
      * @param tree tree to process
      * @return true if the tree should be processed
      */
-    protected boolean shouldProcessTree(Root tree) {
+    protected boolean shouldProcessTree(Sentence tree) {
         return true;
     }
 
@@ -119,7 +119,7 @@ public class Block {
      * @param bundle bundle to process
      */
     public void processBundle(Bundle bundle) {
-        for (Root tree : bundle.getTrees()) {
+        for (Sentence tree : bundle.getSentences()) {
             if (shouldProcessTree(tree)) {
                 processTree(tree);
             }
@@ -139,9 +139,9 @@ public class Block {
      *
      * @param tree tree to process
      */
-    public void processTree(Root tree) {
+    public void processTree(Sentence tree) {
         //wrap with ArrayList to prevent ConcurrentModificationException
-        new ArrayList<>(tree.getDescendants()).forEach(this::processNode);
+        new ArrayList<>(tree.getTokens()).forEach(this::processNode);
     }
 
     /**
@@ -149,7 +149,7 @@ public class Block {
      *
      * @param node node to process
      */
-    public void processNode(Node node) {
+    public void processNode(Token node) {
         throw new RuntimeException("Block doesn't implement or override any of process* methods.");
     }
 }

@@ -4,7 +4,7 @@ import cz.ufal.udapi.core.*;
 import cz.ufal.udapi.core.impl.DefaultDocument;
 import cz.ufal.udapi.core.impl.DefaultEmptyNode;
 import cz.ufal.udapi.core.impl.DefaultEnhancedDeps;
-import cz.ufal.udapi.core.impl.DefaultRoot;
+import cz.ufal.udapi.core.impl.DefaultSentence;
 import cz.ufal.udapi.core.io.DocumentReader;
 import cz.ufal.udapi.core.io.UdapiIOException;
 
@@ -133,7 +133,7 @@ public class CoNLLUReader implements DocumentReader {
      * @throws UdapiIOException If any IOException happens
      */
     @Override
-    public Optional<Root> readTree(BufferedReader bufferedReader, final Document document) throws UdapiIOException {
+    public Optional<Sentence> readTree(BufferedReader bufferedReader, final Document document) throws UdapiIOException {
         try {
             String currLine;
             List<String> words = new ArrayList<>();
@@ -143,7 +143,7 @@ public class CoNLLUReader implements DocumentReader {
                 if (EMPTY_STRING.equals(trimLine)) {
                     //end of sentence
                     List<String> finalWords = words;
-                    Root root = processSentence(document, finalWords);
+                    Sentence root = processSentence(document, finalWords);
                     if (null != root) {
                         return Optional.of(root);
                     }
@@ -154,7 +154,7 @@ public class CoNLLUReader implements DocumentReader {
             }
             //process last sentence if there was no empty line after it
             List<String> finalWords = words;
-            Root root = processSentence(document, finalWords);
+            Sentence root = processSentence(document, finalWords);
             if (null == root) {
                 return Optional.empty();
             }
@@ -172,7 +172,7 @@ public class CoNLLUReader implements DocumentReader {
      * @throws UdapiIOException If any IOException happens
      */
     @Override
-    public Optional<Root> readTree(final Document document) throws UdapiIOException {
+    public Optional<Sentence> readTree(final Document document) throws UdapiIOException {
         try (BufferedReader bufferedReader = new BufferedReader(reader)) {
             return readTree(bufferedReader, document);
         } catch (IOException e) {
@@ -182,7 +182,7 @@ public class CoNLLUReader implements DocumentReader {
 
     private void processSentenceWithBundle(int sentenceId, final Document document, List<String> words) {
 
-        Root tree = processSentence(document, words);
+        Sentence tree = processSentence(document, words);
 
         String treeId = tree.getId();
         //add tree to correct bundle
@@ -232,18 +232,18 @@ public class CoNLLUReader implements DocumentReader {
      * @param words words of the sentence
      * @return constructed tree
      */
-    private Root processSentence(final Document document, List<String> words) {
+    private Sentence processSentence(final Document document, List<String> words) {
 
         //ignore empty sentences
         if (words.isEmpty()) {
             return null;
         }
 
-        Root tree = new DefaultRoot(document);
+        Sentence tree = new DefaultSentence(document);
 
-        Node root = tree.getNode();
+        Token root = tree.getToken();
 
-        List<Node> nodes = new ArrayList<>();
+        List<Token> nodes = new ArrayList<>();
         List<EmptyNode> emptyNodes = new ArrayList<>();
         nodes.add(root);
         List<Integer> parents = new ArrayList<>();
@@ -264,7 +264,7 @@ public class CoNLLUReader implements DocumentReader {
 
                     Matcher textMatcher = textPattern.matcher(word);
                     if (textMatcher.matches()) {
-                        tree.setSentence(textMatcher.group(1));
+                        tree.setText(textMatcher.group(1));
                     } else {
 
                         Matcher newParDocMatcher = newParDocPattern.matcher(word);
@@ -302,7 +302,7 @@ public class CoNLLUReader implements DocumentReader {
 
         //process multiwords
         mwtStructs.forEach(m -> {
-            List<Node> wordsList = nodes.subList(m.rangeStart, m.rangeEnd+1);
+            List<Token> wordsList = nodes.subList(m.rangeStart, m.rangeEnd+1);
             tree.addMultiword(wordsList, m.form, m.misc);
 
         });
@@ -321,7 +321,7 @@ public class CoNLLUReader implements DocumentReader {
     /**
      * Processes word.
      */
-    private void processWord(Root tree, Node root, List<Node> nodes, List<Integer> parents, List<EmptyNode> emptyNodes, List<MwtStruct> mwtStructs, String word) {
+    private void processWord(Sentence tree, Token root, List<Token> nodes, List<Integer> parents, List<EmptyNode> emptyNodes, List<MwtStruct> mwtStructs, String word) {
 
         String[] fields = tabPattern.split(word, 10);
         String id = fields[0];
@@ -367,7 +367,7 @@ public class CoNLLUReader implements DocumentReader {
 
             emptyNodes.add(newEmptyNode);
         } else {
-            Node child = root.createChild();
+            Token child = root.createChild();
             child.setForm(form);
             child.setLemma(lemma);
             child.setUpos(upos);
