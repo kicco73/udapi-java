@@ -6,7 +6,8 @@ package cz.ufal.udapi.main;
 
 public class SPARQLWriter {
 	final StringBuffer buffer = new StringBuffer();
-
+	private boolean insertStarted = false;
+	
 	final private String prefixes = """		
 		PREFIX : <http://tbx2rdf/test#>
 		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
@@ -19,7 +20,11 @@ public class SPARQLWriter {
 	""";
 
 	private void insertTriple(String subject, String link, String object) {
-		String query = String.format("INSERT DATA { %s %s %s };\n", subject, link, object);
+		if (!insertStarted) {
+			buffer.append("INSERT DATA {\n");
+			insertStarted = true;
+		}
+		String query = String.format("\t%s %s %s .\n", subject, link, object);
 		buffer.append(query);
 	}
 
@@ -74,12 +79,20 @@ public class SPARQLWriter {
 	}
 
 	public void splitChunk(String separator) {
+		if (insertStarted) {
+			buffer.append("}\n");
+			insertStarted = false;
+		}
 		buffer.append(String.format("# %s\n", separator));
 		buffer.append(this.prefixes);
 	}
 
 	@Override
 	public String toString() {
+		if (insertStarted) {
+			buffer.append("}\n");
+			insertStarted = false;
+		}
 		return this.buffer.toString();
 	}
 }

@@ -15,7 +15,7 @@ public class Word {
 
 	public Word(String lemma, String partOfSpeech) {
 		
-		String FQName = lemma.replaceAll("'", "-");
+		String FQName = lemma.replaceAll("[\\.']", "-");
 
 		if (lemma != FQName) {
 			System.err.println(String.format("Warning: found lemma %s, using FQName %s", lemma, FQName));

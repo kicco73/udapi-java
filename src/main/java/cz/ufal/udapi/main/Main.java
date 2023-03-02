@@ -23,7 +23,7 @@ public class Main {
         String inCoNLL = "";
         String graphURL = null;
         String repository = "LexO";
-        int chunkSize = 1000;
+        int chunkSize = 5000;
         int startIndex = 0; 
         while (startIndex < args.length) {
             switch (args[startIndex++]) {
