@@ -4,9 +4,7 @@
 
 package cz.ufal.udapi.main;
 
-import java.io.IOException;
 import java.net.URI;
-import java.net.URISyntaxException;
 import java.net.URLEncoder;
 import java.net.http.HttpClient;
 import java.net.http.HttpClient.Version;
@@ -38,7 +36,7 @@ public class GraphDBClient {
 				.uri(this.api)
 				.POST(ofFormData(form))
 				.header("Content-Type", "application/x-www-form-urlencoded")
-				.timeout(Duration.ofSeconds(10))
+				.timeout(Duration.ofSeconds(20))
 				.build();
 
 		client.sendAsync(request, BodyHandlers.ofString())

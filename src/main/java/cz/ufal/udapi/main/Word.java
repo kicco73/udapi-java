@@ -4,17 +4,19 @@
 
 package cz.ufal.udapi.main;
 
-import java.util.HashSet;
-import java.util.Set;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Word {
 	final String FQName;
-	final String canonicalForm;
+	final Form canonicalForm;
 	final String partOfSpeech;
-	final Set<String> otherForms;
+	final private Map<String, Form> otherForms;
 
 	public Word(String lemma, String partOfSpeech) {
 		
+		lemma = lemma.toLowerCase();
 		String FQName = lemma.replaceAll("[\\.']", "-");
 
 		if (lemma != FQName) {
@@ -22,8 +24,20 @@ public class Word {
 		}
 
 		this.FQName = String.format(":le_%s", FQName);
-		this.canonicalForm = lemma;
+		canonicalForm = new Form(lemma);
 		this.partOfSpeech = partOfSpeech;
-		this.otherForms = new HashSet<>();
+		otherForms = new HashMap<>();
+	}
+
+	public void addOtherForm(Form form) {
+		otherForms.put(form.text, form);
+	}
+
+	public Collection<Form> getOtheForms() {
+		return otherForms.values();
+	}
+
+	public boolean hasForm(String text) {
+		return canonicalForm.text.equals(text) || otherForms.keySet().contains(text);
 	}
 }

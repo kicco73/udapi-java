@@ -4,6 +4,8 @@
 
 package cz.ufal.udapi.main;
 
+import java.util.Map.Entry;
+
 public class SPARQLWriter {
 	final StringBuffer buffer = new StringBuffer();
 	private boolean insertStarted = false;
@@ -31,7 +33,7 @@ public class SPARQLWriter {
 	private void createWordEntry(String lexiconFQN, Word word) {
 		this.insertTriple(lexiconFQN, "lime:entry", word.FQName);        
 		this.insertTriple(word.FQName, "rdf:type", "ontolex:Word");        
-		this.insertTriple(word.FQName, "rdfs:label", String.format("\"%s\"@it", word.canonicalForm));        
+		this.insertTriple(word.FQName, "rdfs:label", String.format("\"%s\"@it", word.canonicalForm.text));        
 		this.insertTriple(word.FQName, "lexinfo:partOfSpeech", word.partOfSpeech);
 	}
 
@@ -45,17 +47,26 @@ public class SPARQLWriter {
 		String canonicalFormFQN = String.format("%s_lemma", word.FQName);
 		this.insertTriple(word.FQName, "ontolex:canonicalForm", canonicalFormFQN);        
 		this.insertTriple(canonicalFormFQN, "rdf:type", "ontolex:Form");        
-		this.insertTriple(canonicalFormFQN, "ontolex:writtenRep", String.format("\"%s\"@it", word.canonicalForm));
+		this.insertTriple(canonicalFormFQN, "ontolex:writtenRep", String.format("\"%s\"@it", word.canonicalForm.text));
+
+		for (Entry<String,String> entry: word.canonicalForm.features.entrySet()) {
+			this.insertTriple(canonicalFormFQN, entry.getKey(), entry.getValue());
+		}
+
 	}
 
 	private void createOtherForms(Word word) {
 		int i = 1;
-		for (String otherForm: word.otherForms) {
-			String otherFormFQN = String.format(":forma%d_%s", i++, word.canonicalForm);
+		for (Form otherForm: word.getOtheForms()) {
+			String otherFormFQN = String.format("%s_form%d",word.FQName, i++);
 			this.insertTriple(word.FQName, "ontolex:otherForm", otherFormFQN);
 			this.insertTriple(otherFormFQN, "rdf:type", "ontolex:Form");        
-			this.insertTriple(otherFormFQN, "ontolex:writtenRep", String.format("\"%s\"@it", otherForm));        
-		}
+			this.insertTriple(otherFormFQN, "ontolex:writtenRep", String.format("\"%s\"@it", otherForm.text));        
+
+			for (Entry<String,String> entry: otherForm.features.entrySet()) {
+				this.insertTriple(otherFormFQN, entry.getKey(), entry.getValue());
+			}
+			}
 	}
 	// Hi-level interface
 

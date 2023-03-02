@@ -13,8 +13,6 @@ import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.nio.file.Paths;
 import java.util.*;
-import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
 public class Main {
 
@@ -45,7 +43,7 @@ public class Main {
         }
 
         Document document = parseCoNLL(inCoNLL);
-        Collection<Word> words = compileLexicon(document);
+        Collection<Word> words = Compiler.compileLexicon(document);
         String statements = createSPARQL(words, chunkSize);
 
         if (graphURL != null) {
@@ -73,48 +71,6 @@ public class Main {
         DocumentReader coNLLUReader = new CoNLLUReader(fileReader);
         Document document = coNLLUReader.readDocument();
         return document;
-    }
-
-    private static Collection<Word> compileLexicon(Document document) {
-
-        Map<String, String> parts = Stream.of(new String[][] {
-                { "ADV", "lexinfo:adverb" },
-                { "VERB", "lexinfo:verb" },
-                { "ADJ", "lexinfo:adjective" },
-                { "NOUN", "lexinfo:noun" },
-                { "PROPN", "lexinfo:properNoun" },
-        }).collect(Collectors.toMap(data -> data[0], data -> data[1]));
-
-        Map<String, Word> lemmas = new HashMap<>();        
-        List<Sentence> sentences = document.getSentences();
-
-        for (Sentence sentence : sentences) {
-
-            for (Token token : sentence.getTokens()) {
-                Optional<MultiwordToken> mwt = token.getMwt();
-                if (mwt.isPresent() && mwt.get().getTokens().get(0) == token)
-                    continue;
-
-                if (!parts.containsKey(token.getUpos())) 
-                    continue;
-                    
-                String lemma = token.getLemma();
-                String partOfSpeech = parts.get(token.getUpos());
-                Word word;
-
-                if (!lemmas.containsKey(lemma)) {
-                    word = new Word(lemma, partOfSpeech);
-                    lemmas.put(lemma, word);
-                } else {
-                    word = lemmas.get(lemma);
-                    String form = token.getForm();
-                    if (!lemma.equals(form)) {
-                        word.otherForms.add(form);
-                    }                
-                }
-            }
-        }
-        return lemmas.values();
     }
 
     private static String createSPARQL(Collection<Word> words, int chunkSize) throws Exception {
