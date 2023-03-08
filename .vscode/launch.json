@@ -14,9 +14,9 @@
 			"type": "java",
 			"name": "Launch Main",
 			"request": "launch",
-			"mainClass": "cz.ufal.udapi.main.Main",
+			"mainClass": "cnr.ilc.conllu.main.Main",
 			"projectName": "udapi",
-			"args": "-i demo/conll-u_example.tsv -o http://localhost:7200 -r LexO",
+			"args": "-i demo/conll-u_example.tsv -o http://localhost:7200 -r LexO"
 		}
 	]
 }

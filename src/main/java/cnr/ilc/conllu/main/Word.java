@@ -2,7 +2,7 @@
  * @author Enrico Carniani
  */
 
-package cz.ufal.udapi.main;
+package cnr.ilc.conllu.main;
 
 import java.util.Collection;
 import java.util.HashMap;
