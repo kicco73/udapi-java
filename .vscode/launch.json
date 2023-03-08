@@ -16,7 +16,7 @@
 			"request": "launch",
 			"mainClass": "cnr.ilc.conllu.main.Main",
 			"projectName": "udapi",
-			"args": "-i demo/conll-u_example.tsv -o http://localhost:7200 -r LexO"
+			"args": "-i demo/conll-u_example.tsv -l en -o http://localhost:7200 -r LexO"
 		}
 	]
 }
