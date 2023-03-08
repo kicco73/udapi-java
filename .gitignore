@@ -1,5 +1,4 @@
 *.iml
 .gradle/
-build/
+bin/
 .idea
-bin/cz/**
