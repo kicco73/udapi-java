@@ -22,20 +22,25 @@ public class Main {
         String graphURL = null;
         String repository = "LexO";
         String language = "it";
+        String creator = "bot";
         int chunkSize = 5000;
+
         int startIndex = 0; 
         while (startIndex < args.length) {
             switch (args[startIndex++]) {
                 case "-i":
                     inCoNLL = args[startIndex];
                     break;
+                case "-c":
+                    creator = args[startIndex];     
+                    break;   
                 case "-o":
                     graphURL = args[startIndex];
                     break;
                 case "-r":
                     repository = args[startIndex];
                     break;
-                case "-c":
+                case "-s":
                     chunkSize = Integer.parseInt(args[startIndex]);        
                     break;
                 case "-l":
@@ -48,7 +53,7 @@ public class Main {
 
         Document document = parseCoNLL(inCoNLL);
         Collection<Word> words = Compiler.compileLexicon(document);
-        String statements = createSPARQL(words, chunkSize, language);
+        String statements = createSPARQL(words, chunkSize, language, creator);
 
         if (graphURL != null) {
             GraphDBClient client = new GraphDBClient(graphURL, repository);
@@ -77,8 +82,8 @@ public class Main {
         return document;
     }
 
-    private static String createSPARQL(Collection<Word> words, int chunkSize, String language) throws Exception {
-        SPARQLWriter sparql = new SPARQLWriter(language);
+    private static String createSPARQL(Collection<Word> words, int chunkSize, String language, String creator) throws Exception {
+        SPARQLWriter sparql = new SPARQLWriter(language, creator);
         String lexiconFQN = sparql.createLexicon();
      
         int count = 0;
