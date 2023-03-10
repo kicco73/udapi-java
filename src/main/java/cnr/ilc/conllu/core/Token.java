@@ -277,6 +277,8 @@ public interface Token {
      */
     void setMisc(String misc);
 
+    void addMisc(String key, String value);
+
     /**
      *
      * @return ord of the node

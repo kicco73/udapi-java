@@ -57,7 +57,7 @@ public class Compiler {
         }    
     }
 
-    static Collection<Word> compileLexicon(Document document) {
+    static Collection<Word> compileLexicon(Document document, String namespace) {
 
         final Map<String, String> parts = Stream.of(new String[][] {
                 { "ADV", "lexinfo:adverb" },
@@ -84,26 +84,41 @@ public class Compiler {
                 String writtenRep = token.getForm().toLowerCase();
                 String partOfSpeech = parts.get(token.getUpos());
                 String features = token.getFeats();
-                Word word = lemmas.get(lemma);
+
+                String key = String.format("%s+%s", lemma, partOfSpeech);
+                Word word = lemmas.get(key);
+                Form form = null;
 
                 // la chiave di lemmas deve essere: lemma+upos e non lemma
 
                 if (word == null) {
                     word = new Word(lemma, partOfSpeech);
-                    lemmas.put(lemma, word);
+                    lemmas.put(key, word);
 
-                    if (lemma.equals(writtenRep))
+                    if (lemma.equals(writtenRep)) {
                         compileFeatures(features, word.canonicalForm);
+                        form = word.canonicalForm;
+                    } else {
+                        form = createOtherForm(word, writtenRep);
+                    }
 
-                } else if (!word.hasForm(writtenRep)) {
-                    Form form = new Form(writtenRep);
+                } else if ((form = word.findForm(writtenRep)) == null) {
+                    form = createOtherForm(word, writtenRep);
                     word.addOtherForm(form);
                     compileFeatures(features, form);
                 } else if (word.canonicalForm.features.isEmpty()) {
                     compileFeatures(features, word.canonicalForm);
                 }     
-            }
+
+                token.addMisc("annotation", namespace + form.FQName.substring(1));
+        }
         }
         return lemmas.values();
+    }
+
+    static private Form createOtherForm(Word word, String writtenRep) {
+        String FQName = String.format("%s_form_%s", word.FQName, writtenRep);
+        Form form = new Form(FQName, writtenRep);
+        return form;
     }
 }

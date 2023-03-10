@@ -706,6 +706,14 @@ public class DefaultToken implements Token {
         this.misc = misc;
     }
 
+    public void addMisc(String key, String value) {
+        String keyValue = String.format("%s=%s", key, value);
+
+        if (!misc.equals("_"))
+            misc += "|" + keyValue;
+        else misc = keyValue;
+    }
+
     @Override
     public Optional<MultiwordToken> getMwt() {
         return mwt;

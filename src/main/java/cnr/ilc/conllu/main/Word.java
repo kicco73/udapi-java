@@ -23,8 +23,9 @@ public class Word {
 			System.err.println(String.format("Warning: found lemma %s, using FQName %s", lemma, FQName));
 		}
 
-		this.FQName = String.format(":le_%s", FQName);
-		canonicalForm = new Form(lemma);
+		this.FQName = String.format(":le_%s_%s", FQName, partOfSpeech.split(":")[1]);
+		String canonicalFormFQN = String.format("%s_lemma", this.FQName);
+		canonicalForm = new Form(canonicalFormFQN, lemma);
 		this.partOfSpeech = partOfSpeech;
 		otherForms = new HashMap<>();
 	}
@@ -37,7 +38,9 @@ public class Word {
 		return otherForms.values();
 	}
 
-	public boolean hasForm(String text) {
-		return canonicalForm.text.equals(text) || otherForms.keySet().contains(text);
+	public Form findForm(String text) {
+		if (canonicalForm.text.equals(text)) return canonicalForm;
+		return otherForms.get(text);
 	}
+
 }

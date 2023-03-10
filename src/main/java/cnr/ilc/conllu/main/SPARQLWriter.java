@@ -7,18 +7,17 @@ package cnr.ilc.conllu.main;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import java.util.TimeZone;
 import java.util.Map.Entry;
 
 public class SPARQLWriter {
+	final private String namespace;
 	final StringBuffer buffer = new StringBuffer();
 	private boolean insertStarted = false;
-	private String language;
-	private String creator;
-	
-	final private String prefixes = 
+	final private String language;
+	final private String creator;
+	private String prefixes =
 		"""		
-		PREFIX : <http://tbx2rdf/test#>
+		PREFIX : <%s>
 		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 		PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		PREFIX dct: <http://purl.org/dc/terms/>
@@ -43,9 +42,9 @@ public class SPARQLWriter {
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmX"); // Quoted "Z" to indicate UTC, no timezone offset
 		String date = df.format(now);
 
-		//insertTriple(entryFQN, "dct:creator", String.format("\"%s\"", creator));
+		insertTriple(entryFQN, "dct:creator", String.format("\"%s\"", creator));
 		insertTriple(entryFQN, "dct:created", String.format("\"%s:00\"", date));
-		//insertTriple(entryFQN, "dct:modified", String.format("\"%s:00\"", date));
+		insertTriple(entryFQN, "dct:modified", String.format("\"%s:00\"", date));
 	}
 
 	private void createWordEntry(String lexiconFQN, Word word) {
@@ -65,7 +64,7 @@ public class SPARQLWriter {
 	}
 
 	private void createCanonicalForm(Word word) {
-		String canonicalFormFQN = String.format("%s_lemma", word.FQName);
+		String canonicalFormFQN = word.canonicalForm.FQName;
 		insertTriple(word.FQName, "ontolex:canonicalForm", canonicalFormFQN);        
 		insertTriple(canonicalFormFQN, "rdf:type", "ontolex:Form");        
 		insertTriple(canonicalFormFQN, "ontolex:writtenRep", String.format("\"%s\"@%s", word.canonicalForm.text, language));
@@ -78,9 +77,8 @@ public class SPARQLWriter {
 	}
 
 	private void createOtherForms(Word word) {
-		int i = 1;
 		for (Form otherForm: word.getOtheForms()) {
-			String otherFormFQN = String.format("%s_form%d",word.FQName, i++);
+			String otherFormFQN = otherForm.FQName;
 			insertTriple(word.FQName, "ontolex:otherForm", otherFormFQN);
 			insertTriple(otherFormFQN, "rdf:type", "ontolex:Form");        
 			insertTriple(otherFormFQN, "ontolex:writtenRep", String.format("\"%s\"@%s", otherForm.text, language));        
@@ -89,13 +87,15 @@ public class SPARQLWriter {
 			for (Entry<String,String> entry: otherForm.features.entrySet()) {
 				insertTriple(otherFormFQN, entry.getKey(), entry.getValue());
 			}
-			}
+		}
 	}
 	// Hi-level interface
 
-	public SPARQLWriter(String language, String creator) {
+	public SPARQLWriter(String namespace, String language, String creator) {
+		this.namespace = namespace;
 		this.language = language;
 		this.creator = creator;
+		prefixes = String.format(prefixes, namespace);
 		buffer.append(prefixes);
 	}
 
@@ -120,8 +120,7 @@ public class SPARQLWriter {
 			buffer.append("}\n");
 			insertStarted = false;
 		}
-		buffer.append(String.format("# %s\n", separator));
-		buffer.append(this.prefixes);
+		buffer.append(String.format("# %s\n%s", separator, prefixes));
 	}
 
 	@Override
