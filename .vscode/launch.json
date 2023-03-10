@@ -16,7 +16,7 @@
 			"request": "launch",
 			"mainClass": "cnr.ilc.conllu.main.Main",
 			"projectName": "udapi",
-			"args": "-i demo/conll-u_example.tsv --creator kicco --language en --export-conll enriched.conllu --graphdb-url http://localhost:7200 --repository LexO"
+			"args": "-i demo/conll-u_example.tsv --namespace http://txt2rdf/test# --creator kicco --language en --export-conll enriched.conllu --graphdb-url http://localhost:7200 --repository LexO"
 		}
 	]
 }

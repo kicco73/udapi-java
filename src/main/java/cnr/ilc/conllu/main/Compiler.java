@@ -14,6 +14,12 @@ import cnr.ilc.conllu.core.*;
 
 public class Compiler {
 
+    private static Form createOtherForm(Word word, String writtenRep) {
+        String FQName = String.format("%s_form_%s", word.FQName, writtenRep);
+        Form form = new Form(FQName, writtenRep);
+        return form;
+    }
+
     private static void compileFeatures(String featuresString, Form form) {
         
         final Map<String, String> mapping = Stream.of(new String[][] {
@@ -114,11 +120,5 @@ public class Compiler {
         }
         }
         return lemmas.values();
-    }
-
-    static private Form createOtherForm(Word word, String writtenRep) {
-        String FQName = String.format("%s_form_%s", word.FQName, writtenRep);
-        Form form = new Form(FQName, writtenRep);
-        return form;
     }
 }

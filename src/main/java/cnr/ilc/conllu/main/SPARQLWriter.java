@@ -10,7 +10,6 @@ import java.util.Date;
 import java.util.Map.Entry;
 
 public class SPARQLWriter {
-	final private String namespace;
 	final StringBuffer buffer = new StringBuffer();
 	private boolean insertStarted = false;
 	final private String language;
@@ -92,7 +91,6 @@ public class SPARQLWriter {
 	// Hi-level interface
 
 	public SPARQLWriter(String namespace, String language, String creator) {
-		this.namespace = namespace;
 		this.language = language;
 		this.creator = creator;
 		prefixes = String.format(prefixes, namespace);
