@@ -2,7 +2,7 @@
  * @author Enrico Carniani
  */
 
-package cnr.ilc.conllu.main;
+package cnr.ilc.rut;
 
 import java.net.URI;
 import java.net.URLEncoder;

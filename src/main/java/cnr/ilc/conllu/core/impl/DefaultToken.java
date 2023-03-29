@@ -2,8 +2,8 @@ package cnr.ilc.conllu.core.impl;
 
 import java.util.*;
 
+import cnr.ilc.common.RutException;
 import cnr.ilc.conllu.core.*;
-import cnr.ilc.conllu.exception.UdapiException;
 
 /**
  * Default implementation of node.
@@ -200,13 +200,13 @@ public class DefaultToken implements Token {
     public void setParent(Token parent, boolean skipCycles) {
 
         if (null == parent) {
-            throw new UdapiException("Not allowed to set null parent.");
+            throw new RutException("Not allowed to set null parent.");
         }
 
         //check cycles
         if (this == parent) {
             if (skipCycles) return;
-            throw new UdapiException("Bundle " + tree.getBundle().getId() + ": Attempt to set parent of " + ord
+            throw new RutException("Bundle " + tree.getBundle().getId() + ": Attempt to set parent of " + ord
                     + " to itself (cycle).");
         }
         if (firstChild.isPresent()) {
@@ -214,7 +214,7 @@ public class DefaultToken implements Token {
             while (grandpa.isPresent()) {
                 if (grandpa.get() == this) {
                     if (skipCycles) return;
-                    throw new UdapiException("Bundle " + tree.getBundle().getId() + ": Attempt to set parent of " + ord
+                    throw new RutException("Bundle " + tree.getBundle().getId() + ": Attempt to set parent of " + ord
                             + " to the node " + parent.getId() + ", which would lead to a cycle.");
                 }
                 grandpa = grandpa.get().getParent();

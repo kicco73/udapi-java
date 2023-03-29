@@ -6,17 +6,18 @@
 	"configurations": [
 		{
 			"type": "java",
-			"name": "Launch Current File",
+			"name": "Main",
 			"request": "launch",
-			"mainClass": "${file}"
+			"mainClass": "cnr.ilc.rut.Main",
+			"projectName": "udapi",
+			"args": "-t demo/Astronomy_DCT_VALID.tbx --namespace http://txt2rdf/test# --creator kicco --language en --export-conll enriched.conllu --graphdb-url http://localhost:7200 --repository LexO"
+			//"args": "-i demo/conll-u_example.tsv --namespace http://txt2rdf/test# --creator kicco --language en --export-conll enriched.conllu --graphdb-url http://localhost:7200 --repository LexO"
 		},
 		{
 			"type": "java",
-			"name": "Launch Main",
+			"name": "Launch Current File",
 			"request": "launch",
-			"mainClass": "cnr.ilc.conllu.main.Main",
-			"projectName": "udapi",
-			"args": "-i demo/conll-u_example.tsv --namespace http://txt2rdf/test# --creator kicco --language en --export-conll enriched.conllu --graphdb-url http://localhost:7200 --repository LexO"
+			"mainClass": "${file}"
 		}
 	]
 }

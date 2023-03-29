@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Basic_dialect/master/DCT/TBX-Basic_DCT.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Basic_dialect/master/DCT/TBX-Basic.nvdl" type="application/xml"schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
+<tbx xmlns="urn:iso:std:iso:30042:ed-2" type="TBX-Basic" style="dct" xml:lang="en" xmlns:min="http://www.tbxinfo.net/ns/min" xmlns:basic="http://www.tbxinfo.net/ns/basic">
+	<tbxHeader>
+		<fileDesc>
+			<sourceDesc>
+				<p>A sample of the TBX-Basic dialect</p>
+			</sourceDesc>
+		</fileDesc>
+	</tbxHeader>
+
+	<text>
+		<body>
+			<conceptEntry id="c1">
+
+				<transacGrp>
+					<basic:transactionType>origination</basic:transactionType>
+					<date>2022-11-10</date>
+					<basic:responsibility>Federica Vezzani</basic:responsibility>
+				</transacGrp>
+
+				<transacGrp>
+					<basic:transactionType>modification</basic:transactionType>
+					<date>2022-11-11</date>
+					<basic:responsibility>Andrea Bellandi</basic:responsibility>
+				</transacGrp>
+
+				<min:subjectField>e-mobility</min:subjectField>
+
+				<langSec xml:lang="en">
+					<descripGrp>
+						<basic:definition>A battery-electric car that is capable of
+							traveling at a maximum speed of 25 miles per hour (mph) and has a maximum loaded weight of 3,000 lbs. </basic:definition>
+						<basic:source>TechTarget</basic:source>
+						<min:externalCrossReference>https://www.techtarget.com/whatis/definition/neighborhood-electric-vehicle-NEV</min:externalCrossReference>
+					</descripGrp>
+
+					<termSec>
+						<term>neighborhood electric vehicle</term>
+						<basic:termType>fullForm</basic:termType>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+						<min:administrativeStatus>preferredTerm-admn-sts</min:administrativeStatus>
+						<descripGrp>
+							<basic:context>A Neighborhood Electric Vehicle (NEV) is a U.S. category for battery electric vehicles that are usually built to have a top speed of 25 miles
+								per hour (40 km/h), and have a maximum loaded weight of 3,000 lb (1,400 kg).</basic:context>
+							<basic:source>Wikipedia</basic:source>
+							<min:externalCrossReference>https://en.wikipedia.org/wiki/Neighborhood_Electric_Vehicle</min:externalCrossReference>
+						</descripGrp>
+					</termSec>
+
+					<termSec>
+						<term>NEV</term>
+						<basic:termType>acronym</basic:termType>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+						<min:administrativeStatus>admittedTerm-admn-sts</min:administrativeStatus>
+					</termSec>
+
+				</langSec>
+
+				<langSec xml:lang="fr">
+					<descripGrp>
+						<basic:definition>Véhicule à deux places, activé par un moteur électrique à courant continu
+							alimenté par des batteries au plomb rechargeables à partir d'une prise de courant résidentielle de 110 volts.</basic:definition>
+						<basic:source>Office québécois de la langue française, 2002</basic:source>
+						<min:externalCrossReference>https://gdt.oqlf.gouv.qc.ca/ficheOqlf.aspx?Id_Fiche=2069944</min:externalCrossReference>
+					</descripGrp>
+
+					<termSec>
+						<term>véhicule électrique de proximité</term>
+						<basic:termType>fullForm</basic:termType>
+						<basic:grammaticalGender>masculine</basic:grammaticalGender>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+						<min:administrativeStatus>preferredTerm-admn-sts</min:administrativeStatus>
+						<descripGrp>
+							<basic:context>Un véhicule électrique de proximité (NEV) est une voiture électrique à batterie capable de se déplacer
+								à une vitesse maximale de 25 miles par heure (mph) et dont le poids maximal en charge est de 3 000 livres. </basic:context>
+							<basic:source>Definir Tech</basic:source>
+							<min:externalCrossReference>https://definir-tech.com/vehicule-electrique-de-proximite-nev/</min:externalCrossReference>
+						</descripGrp>
+					</termSec>
+
+					<termSec>
+						<term>véhicule de proximité</term>
+						<basic:termType>fullForm</basic:termType>
+						<basic:grammaticalGender>masculine</basic:grammaticalGender>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+						<min:administrativeStatus>admittedTerm-admn-sts</min:administrativeStatus>
+					</termSec>
+
+					<termSec>
+						<term>VEP</term>
+						<basic:termType>acronym</basic:termType>
+						<basic:grammaticalGender>masculine</basic:grammaticalGender>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+						<min:administrativeStatus>admittedTerm-admn-sts</min:administrativeStatus>
+					</termSec>
+
+					<termSec>
+						<term>NEV</term>
+						<basic:termType>acronym</basic:termType>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+						<min:administrativeStatus>deprecatedTerm-admn-sts</min:administrativeStatus>
+						<note>Il semble inutile d'emprunter l'acronyme anglais NEV puisque la dénomination
+							française produit par siglaison une appellation aussi efficace et aussi brève.</note>
+					</termSec>
+
+				</langSec>
+
+				<langSec xml:lang="it">
+					<descripGrp>
+						<basic:definition>Un Neighborhood Electric Vehicle (NEV) è una denominazione USA per i veicoli elettrici di prossimità urbana che solitamente sono costruiti per avere una velocità non superiori a 50 km/h (70 km/h per categoria N1)
+							e hanno un peso massimo caricato di circa 1.000 kg. I NEV rientrano nella classificazione dei quadricicli leggeri.</basic:definition>
+						<basic:source>Wikipedia</basic:source>
+						<min:externalCrossReference>https://it.wikipedia.org/wiki/Neighborhood_Electric_Vehicle</min:externalCrossReference>
+					</descripGrp>
+
+					<termSec>
+						<term>veicoli elettrici di prossimità urbana</term>
+						<basic:termType>fullForm</basic:termType>
+						<basic:grammaticalGender>masculine</basic:grammaticalGender>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+						<min:administrativeStatus>admittedTerm-admn-sts</min:administrativeStatus>
+						<descripGrp>
+							<basic:context>Mobilità in spazi chiusi, aree sensibili e protette? La risposta è NEV – Neighborhood
+								Electric Vehicles, veicoli elettrici di prossimità urbana, idonei ad andare dove altri si fermano.</basic:context>
+							<basic:source>Exelentia</basic:source>
+							<min:externalCrossReference>https://www.exelentia.it/veicoli-elettrici-urbani-nev/</min:externalCrossReference>
+						</descripGrp>
+					</termSec>
+
+					<termSec>
+						<term>NEV</term>
+						<basic:termType>acronym</basic:termType>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+						<min:administrativeStatus>preferredTerm-admn-sts</min:administrativeStatus>
+					</termSec>
+
+				</langSec>
+			</conceptEntry>
+
+			<conceptEntry id="c2">
+
+				<langSec xml:lang="fr">
+					<descripGrp>
+						<basic:definition>Véhicule entièrement électrique [conçu] spécifiquement pour transporter une seule personne sur de courtes distances.</basic:definition>
+						<basic:source>TERMIUM Plus</basic:source>
+						<min:externalCrossReference>https://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-fra.html?lang=fra&amp;i=1&amp;srchtxt=Véhicule+Électrique+Personnel&amp;codom2nd_wet=1#resultrecs</min:externalCrossReference>
+					</descripGrp>
+
+					<termSec>
+						<term>véhicule électrique personnel</term>
+						<basic:termType>fullForm</basic:termType>
+						<basic:grammaticalGender>masculine</basic:grammaticalGender>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+						<min:administrativeStatus>preferredTerm-admn-sts</min:administrativeStatus>
+						<descripGrp>
+							<basic:context>C’est une solution alternative adaptée à l’usage peu fréquent du véhicule électrique personnel
+								sur les longues distances et qui peut se révéler très vertueuse sur le plan environnemental </basic:context>
+							<basic:source>Carbone 4</basic:source>
+							<min:externalCrossReference>https://www.carbone4.com/decryptage-mobilite-recharge-electrique</min:externalCrossReference>
+						</descripGrp>
+					</termSec>
+
+					<termSec>
+						<term>VEP</term>
+						<basic:termType>acronym</basic:termType>
+						<basic:grammaticalGender>masculine</basic:grammaticalGender>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+						<min:administrativeStatus>admittedTerm-admn-sts</min:administrativeStatus>
+					</termSec>
+
+				</langSec>
+
+			</conceptEntry>
+
+</body>
+
+</text>
+
+</tbx>

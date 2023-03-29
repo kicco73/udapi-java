@@ -1,13 +1,13 @@
 package cnr.ilc.conllu.core.io;
 
-import cnr.ilc.conllu.exception.UdapiException;
+import cnr.ilc.common.RutException;
 
 /**
  * Exception encapsulating any exception occured during read/write operations.
  *
  * @author Martin Vojtek
  */
-public class UdapiIOException extends UdapiException {
+public class UdapiIOException extends RutException {
     /**
      * Default constructor.
      */

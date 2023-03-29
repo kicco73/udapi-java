@@ -63,7 +63,7 @@ public class Compiler {
         }    
     }
 
-    static Collection<Word> compileLexicon(Document document, String namespace) {
+    static public Collection<Word> compileLexicon(Document document, String namespace, String language) {
 
         final Map<String, String> parts = Stream.of(new String[][] {
                 { "ADV", "lexinfo:adverb" },
@@ -95,10 +95,8 @@ public class Compiler {
                 Word word = lemmas.get(key);
                 Form form = null;
 
-                // la chiave di lemmas deve essere: lemma+upos e non lemma
-
                 if (word == null) {
-                    word = new Word(lemma, partOfSpeech);
+                    word = new Word(lemma, partOfSpeech, language);
                     lemmas.put(key, word);
 
                     if (lemma.equals(writtenRep)) {

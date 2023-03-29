@@ -12,12 +12,13 @@ public class Word {
 	final String FQName;
 	final Form canonicalForm;
 	final String partOfSpeech;
+	final String language;
 	final private Map<String, Form> otherForms;
 
-	public Word(String lemma, String partOfSpeech) {
+	public Word(String lemma, String partOfSpeech, String language) {
 		
 		lemma = lemma.toLowerCase();
-		String FQName = lemma.replaceAll("[\\.']", "-");
+		String FQName = lemma.replaceAll("[\\.' ]", "-");
 
 		if (lemma != FQName) {
 			System.err.println(String.format("Warning: found lemma %s, using FQName %s", lemma, FQName));
@@ -27,6 +28,7 @@ public class Word {
 		String canonicalFormFQN = String.format("%s_lemma", this.FQName);
 		canonicalForm = new Form(canonicalFormFQN, lemma);
 		this.partOfSpeech = partOfSpeech;
+		this.language = language;
 		otherForms = new HashMap<>();
 	}
 

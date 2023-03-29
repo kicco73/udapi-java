@@ -12,7 +12,6 @@ import java.util.Map.Entry;
 public class SPARQLWriter {
 	final StringBuffer buffer = new StringBuffer();
 	private boolean insertStarted = false;
-	final private String language;
 	final private String creator;
 	private String prefixes =
 		"""		
@@ -27,7 +26,7 @@ public class SPARQLWriter {
 		PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 		""";
 
-	private void insertTriple(String subject, String link, String object) {
+	public void insertTriple(String subject, String link, String object) {
 		if (!insertStarted) {
 			buffer.append("INSERT DATA {\n");
 			insertStarted = true;
@@ -46,10 +45,10 @@ public class SPARQLWriter {
 		insertTriple(entryFQN, "dct:modified", String.format("\"%s:00\"", date));
 	}
 
-	private void createWordEntry(String lexiconFQN, Word word) {
+	private void createWordEntry(String lexiconFQN, Word word, String rdfType) {
 		insertTriple(lexiconFQN, "lime:entry", word.FQName);       
-		insertTriple(word.FQName, "rdf:type", "ontolex:Word");        
-		insertTriple(word.FQName, "rdfs:label", String.format("\"%s\"@%s", word.canonicalForm.text, language));        
+		insertTriple(word.FQName, "rdf:type", rdfType);        
+		insertTriple(word.FQName, "rdfs:label", String.format("\"%s\"@%s", word.canonicalForm.text, word.language));        
 		insertTriple(word.FQName, "lexinfo:partOfSpeech", word.partOfSpeech);
 		insertTriple(word.FQName, "vs:term_status", "\"working\"");
 		addMetaData(word.FQName); 
@@ -66,11 +65,11 @@ public class SPARQLWriter {
 		String canonicalFormFQN = word.canonicalForm.FQName;
 		insertTriple(word.FQName, "ontolex:canonicalForm", canonicalFormFQN);        
 		insertTriple(canonicalFormFQN, "rdf:type", "ontolex:Form");        
-		insertTriple(canonicalFormFQN, "ontolex:writtenRep", String.format("\"%s\"@%s", word.canonicalForm.text, language));
+		insertTriple(canonicalFormFQN, "ontolex:writtenRep", String.format("\"%s\"@%s", word.canonicalForm.text, word.language));
 		addMetaData(canonicalFormFQN); 
 
 		for (Entry<String,String> entry: word.canonicalForm.features.entrySet()) {
-			insertTriple(canonicalFormFQN, entry.getKey(), entry.getValue());
+			insertTriple(canonicalFormFQN, entry.getValue(), entry.getKey());
 		}
 
 	}
@@ -80,34 +79,31 @@ public class SPARQLWriter {
 			String otherFormFQN = otherForm.FQName;
 			insertTriple(word.FQName, "ontolex:otherForm", otherFormFQN);
 			insertTriple(otherFormFQN, "rdf:type", "ontolex:Form");        
-			insertTriple(otherFormFQN, "ontolex:writtenRep", String.format("\"%s\"@%s", otherForm.text, language));        
+			insertTriple(otherFormFQN, "ontolex:writtenRep", String.format("\"%s\"@%s", otherForm.text, word.language));        
 			addMetaData(otherFormFQN); 
 
 			for (Entry<String,String> entry: otherForm.features.entrySet()) {
-				insertTriple(otherFormFQN, entry.getKey(), entry.getValue());
+				insertTriple(otherFormFQN, entry.getValue(), entry.getKey());
 			}
 		}
 	}
 	// Hi-level interface
 
-	public SPARQLWriter(String namespace, String language, String creator) {
-		this.language = language;
+	public SPARQLWriter(String namespace, String creator) {
 		this.creator = creator;
 		prefixes = String.format(prefixes, namespace);
 		buffer.append(prefixes);
 	}
 
-	public String createLexicon() {
-		String lexiconFQN = ":connll-u";
-		
+	public String createLexicon(String lexiconFQN, String language) {		
 		insertTriple(lexiconFQN, "rdf:type", "lime:Lexicon");
         insertTriple(lexiconFQN, "lime:language", String.format("\"%s\"", language));   
 		addMetaData(lexiconFQN);     
 		return lexiconFQN;
 	}
 
-	public void addWord(Word word, String lexiconFQN) {
-		createWordEntry(lexiconFQN, word);
+	public void addWord(Word word, String lexiconFQN, String rdfType) {
+		createWordEntry(lexiconFQN, word, rdfType);
 		createLexicalSense(word);
 		createCanonicalForm(word);
 		createOtherForms(word);
