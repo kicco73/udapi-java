@@ -5,7 +5,6 @@
 package cnr.ilc.rut;
 
 import cnr.ilc.conllu.Connlu2Sparql;
-import cnr.ilc.conllu.main.SPARQLWriter;
 import cnr.ilc.tbx.Tbx2Sparql;
 
 public class Main {
@@ -69,10 +68,10 @@ public class Main {
             }
         }
         String statements = null;
-        SPARQLWriter sparql = new SPARQLWriter(namespace, creator);
+        SPARQLWriter sparql = new SPARQLWriter(namespace, creator, chunkSize);
 
         if (inCoNLL != null) {
-            Connlu2Sparql sparqlConverter = new Connlu2Sparql(inCoNLL, sparql, chunkSize);
+            Connlu2Sparql sparqlConverter = new Connlu2Sparql(inCoNLL, sparql);
             statements = sparqlConverter.createSPARQL();
     
             if (exportConll != null) {

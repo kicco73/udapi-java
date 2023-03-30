@@ -2,7 +2,7 @@
  * @author Enrico Carniani
  */
 
-package cnr.ilc.conllu.main;
+package cnr.ilc.conllu;
 
 import java.util.*;
 import java.util.regex.Matcher;
@@ -11,6 +11,8 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import cnr.ilc.conllu.core.*;
+import cnr.ilc.rut.Form;
+import cnr.ilc.rut.Word;
 
 public class Compiler {
 

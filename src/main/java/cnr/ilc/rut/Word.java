@@ -2,17 +2,18 @@
  * @author Enrico Carniani
  */
 
-package cnr.ilc.conllu.main;
+package cnr.ilc.rut;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
 public class Word {
-	final String FQName;
-	final Form canonicalForm;
-	final String partOfSpeech;
-	final String language;
+	public final String FQName;
+	public final Form canonicalForm;
+	public final String partOfSpeech;
+	public final String language;
+	public String conceptFQN;
 	final private Map<String, Form> otherForms;
 
 	public Word(String lemma, String partOfSpeech, String language) {

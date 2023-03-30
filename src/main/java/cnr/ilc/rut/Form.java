@@ -2,15 +2,15 @@
  * @author Enrico Carniani
  */
 
-package cnr.ilc.conllu.main;
+package cnr.ilc.rut;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Form {
-	final String FQName;
-	final String text;
-	final Map<String, String> features;
+	public final String FQName;
+	public final String text;
+	public final Map<String, String> features;
 
 	public Form(String FQName, String text) {
 		this.FQName = FQName.replaceAll("[\\.']", "-");;

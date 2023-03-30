@@ -2,17 +2,20 @@
  * @author Enrico Carniani
  */
 
-package cnr.ilc.conllu.main;
+package cnr.ilc.rut;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.Map;
 import java.util.Map.Entry;
 
 public class SPARQLWriter {
 	final StringBuffer buffer = new StringBuffer();
 	private boolean insertStarted = false;
 	final private String creator;
+	private int chunkSize;
+	private int numberOfWords = 0;
 	private String prefixes =
 		"""		
 		PREFIX : <%s>
@@ -24,15 +27,37 @@ public class SPARQLWriter {
 		PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
 		PREFIX lime: <http://www.w3.org/ns/lemon/lime#>
 		PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+		PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 		""";
 
+	private void splitChunk(String separator) {
+		if (insertStarted) {
+			buffer.append("}\n");
+			insertStarted = false;
+		}
+		buffer.append(String.format("# %s\n%s", separator, prefixes));
+	}
+	
 	public void insertTriple(String subject, String link, String object) {
 		if (!insertStarted) {
 			buffer.append("INSERT DATA {\n");
 			insertStarted = true;
 		}
+		object = object.replaceAll("\n|\t", " ");
+		object = object.replaceAll(" +", " ");
 		String query = String.format("\t%s %s %s .\n", subject, link, object);
 		buffer.append(query);
+	}
+
+	public void insertTriple(String subject, String link, Map<String, String> anon) {
+		String object = "[ ";
+		int count = anon.size();
+		for (Entry<String,String> entry: anon.entrySet()) {
+			object += entry.getKey() + " " + entry.getValue();
+			if (--count > 0) object += " ; ";
+		}
+		object += " ]";
+		insertTriple(subject, link, object);
 	}
 
 	private void addMetaData(String entryFQN) {
@@ -58,6 +83,8 @@ public class SPARQLWriter {
 		String lexicalSenseFQN = String.format("%s_sense", word.FQName);
 		insertTriple(word.FQName, "ontolex:sense", lexicalSenseFQN);        
 		insertTriple(lexicalSenseFQN, "rdf:type", "ontolex:LexicalSense"); 
+		if (word.conceptFQN != null)
+			insertTriple(lexicalSenseFQN, "ontolex:reference", word.conceptFQN); 
 		addMetaData(lexicalSenseFQN); 
 	}
 
@@ -89,8 +116,9 @@ public class SPARQLWriter {
 	}
 	// Hi-level interface
 
-	public SPARQLWriter(String namespace, String creator) {
+	public SPARQLWriter(String namespace, String creator, int chunkSize) {
 		this.creator = creator;
+		this.chunkSize = chunkSize;
 		prefixes = String.format(prefixes, namespace);
 		buffer.append(prefixes);
 	}
@@ -103,18 +131,14 @@ public class SPARQLWriter {
 	}
 
 	public void addWord(Word word, String lexiconFQN, String rdfType) {
+
+		if (chunkSize > 0 && ++numberOfWords % chunkSize == 0) 
+			splitChunk("[data-chunk]");
+
 		createWordEntry(lexiconFQN, word, rdfType);
 		createLexicalSense(word);
 		createCanonicalForm(word);
 		createOtherForms(word);
-	}
-
-	public void splitChunk(String separator) {
-		if (insertStarted) {
-			buffer.append("}\n");
-			insertStarted = false;
-		}
-		buffer.append(String.format("# %s\n%s", separator, prefixes));
 	}
 
 	@Override

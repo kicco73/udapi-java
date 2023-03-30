@@ -1,0 +1,69 @@
+package cnr.ilc.tbx;
+import org.w3c.dom.*;
+
+import cnr.ilc.rut.SPARQLWriter;
+import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Map;
+import java.util.Set;
+
+public class LangSec {
+	private SPARQLWriter sparql;
+	protected final Set<String> lexicons = new HashSet<>();
+
+	public LangSec(SPARQLWriter sparql) {
+		this.sparql = sparql;
+	}
+
+	private void parseLangSecChildren(Element langSec, String conceptFQN, String language) {
+
+		String note = Nodes.getTextOfTag(langSec, "note");
+		String definition = Nodes.getTextOfTag(langSec, "definition");
+		String source = Nodes.getTextOfTag(langSec, "source");
+		String externalCrossReference = Nodes.getTextOfTag(langSec, "externalCrossReference");
+
+		if (note != null) {
+			note = String.format("\"%s\"@%s", note, language);
+			sparql.insertTriple(conceptFQN, "skos:note", note);
+		}
+		if (definition == null) return;
+
+		String value = String.format("\"%s\"@%s", definition, language);
+
+		if (source == null && externalCrossReference == null) {
+			sparql.insertTriple(conceptFQN, "skos:definition", value);
+		} else {
+			Map<String, String> content = new HashMap<>();
+			content.put("rdf:value", value);
+			
+			if (source != null)
+				content.put("dct:source", String.format("\"%s\"", source));
+			if (externalCrossReference != null)
+				content.put("dct:identifier", String.format("\"%s\"", externalCrossReference));
+	
+			sparql.insertTriple(conceptFQN, "skos:definition", content);	
+		}
+	}
+
+	public int parseLangSec(Element langSec, String conceptFQN) {
+		String lang = langSec.getAttribute("xml:lang");
+		String lexiconFQN = String.format(":tbx_%s", lang);
+
+		if (!lexicons.contains(lang)) {
+			lexicons.add(lang);
+			sparql.createLexicon(lexiconFQN, lang);
+		}
+
+		NodeList termSecs = langSec.getElementsByTagNameNS("*", "termSec");
+		int numberOfTerms = termSecs.getLength();
+		for (int k = 0; k < termSecs.getLength(); ++k)  {
+			Element termSec = (Element) termSecs.item(k);
+			TermSec termSecParser = new TermSec(termSec, sparql);
+			termSecParser.parseTermSec(lexiconFQN, lang, conceptFQN);
+		}
+
+		Nodes.removeNodesFromParsingTree(termSecs);
+		parseLangSecChildren(langSec, conceptFQN, lang);
+		return numberOfTerms;
+	}
+}

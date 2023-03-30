@@ -15,21 +15,18 @@ import cnr.ilc.conllu.core.io.DocumentWriter;
 import cnr.ilc.conllu.core.io.UdapiIOException;
 import cnr.ilc.conllu.core.io.impl.CoNLLUReader;
 import cnr.ilc.conllu.core.io.impl.CoNLLUWriter;
-import cnr.ilc.conllu.main.Compiler;
-import cnr.ilc.conllu.main.SPARQLWriter;
-import cnr.ilc.conllu.main.Word;
+import cnr.ilc.rut.SPARQLWriter;
+import cnr.ilc.rut.Word;
 
 public class Connlu2Sparql {
     Document document;
     String language;
     String creator;
-    int chunkSize;
     String namespace;
     private SPARQLWriter sparql;
 
-    public Connlu2Sparql(String inCoNLL, SPARQLWriter sparql, int chunkSize) throws Exception {
+    public Connlu2Sparql(String inCoNLL, SPARQLWriter sparql) throws Exception {
         this.sparql = sparql;
-        this.chunkSize = chunkSize;
         document = parseCoNLL(inCoNLL);
     }
 
@@ -50,11 +47,8 @@ public class Connlu2Sparql {
         Collection<Word> words = Compiler.compileLexicon(document, namespace, language);
         String lexiconFQN = sparql.createLexicon(":connll-u", language);
      
-        int count = 0;
         for (Word word: words) {
             sparql.addWord(word, lexiconFQN, "ontolex:Word");
-            if (chunkSize > 0 && ++count % chunkSize == 0) 
-                sparql.splitChunk("[data-chunk]");
         }
 
         return sparql.toString();
