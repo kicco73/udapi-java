@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min_DCT.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Min_dialect/master/DCT/TBX-Min.nvdl" type="application/xml"schematypens="http://purl.oclc.org/dsdl/nvdl/ns/structure/1.0"?>
+<tbx xmlns="urn:iso:std:iso:30042:ed-2" type="TBX-Min" style="dct" xml:lang="en" xmlns:min="http://www.tbxinfo.net/ns/min">
+
+	<tbxHeader>
+		<fileDesc>
+			<sourceDesc>
+				<p>A sample of the TBX-Min dialect</p>
+			</sourceDesc>
+		</fileDesc>
+	</tbxHeader>
+
+	<text>
+		<body>
+			<conceptEntry id="c1">
+				<min:subjectField>e-mobility</min:subjectField>
+
+				<langSec xml:lang="en">
+					<termSec>
+						<term>carsharing</term>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+						<min:administrativeStatus>preferredTerm-admn-sts</min:administrativeStatus>
+						<min:externalCrossReference>https://en.wikipedia.org/wiki/Carsharing</min:externalCrossReference>
+					</termSec>
+
+					<termSec>
+						<term>car sharing</term>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+						<note>terminological variant in AU, NZ, CA, TH, and US</note>
+					</termSec>
+
+					<termSec>
+						<term>car clubs</term>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+						<note>terminological variant in UK</note>
+					</termSec>
+				</langSec>
+
+				<langSec xml:lang="fr">
+					<termSec>
+						<term>autopartage</term>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+						<min:administrativeStatus>preferredTerm-admn-sts</min:administrativeStatus>
+						<min:externalCrossReference>https://fr.wikipedia.org/wiki/Autopartage</min:externalCrossReference>
+						<note>Il faut distinguer le terme analysé de "service de partage de véhicules" et "partage de véhicules".
+							Ces derniers sont souvent utilisés comme synonymes, mais il s'agit en réalité de concepts plus généraux qui englobent
+							tous les types de véhicules, tandis que l'autopartage ne concerne que les voitures.</note>
+					</termSec>
+
+					<termSec>
+						<term>voitures en libre-service</term>
+						<min:partOfSpeech>noun</min:partOfSpeech>
+					</termSec>
+					</langSec>
+
+					<langSec xml:lang="it">
+						<termSec>
+							<term>car sharing</term>
+							<min:partOfSpeech>noun</min:partOfSpeech>
+							<min:administrativeStatus>preferredTerm-admn-sts</min:administrativeStatus>
+							<min:externalCrossReference>https://it.wikipedia.org/wiki/Car_sharing</min:externalCrossReference>
+							<note>Generalmente in italiano si utilizza l'anglicismo sebbene la variante "auto condivisa" sia attestata.</note>
+						</termSec>
+						
+						</langSec>
+
+			</conceptEntry>
+
+			</body>
+	</text>
+</tbx>

@@ -74,7 +74,8 @@ public class SPARQLWriter {
 		insertTriple(lexiconFQN, "lime:entry", word.FQName);       
 		insertTriple(word.FQName, "rdf:type", rdfType);        
 		insertTriple(word.FQName, "rdfs:label", String.format("\"%s\"@%s", word.canonicalForm.text, word.language));        
-		insertTriple(word.FQName, "lexinfo:partOfSpeech", word.partOfSpeech);
+		if (word.partOfSpeech != null)
+			insertTriple(word.FQName, "lexinfo:partOfSpeech", word.partOfSpeech);
 		insertTriple(word.FQName, "vs:term_status", "\"working\"");
 		addMetaData(word.FQName); 
 	}

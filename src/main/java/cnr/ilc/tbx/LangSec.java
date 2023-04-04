@@ -10,9 +10,11 @@ import java.util.Set;
 public class LangSec {
 	private SPARQLWriter sparql;
 	protected final Set<String> lexicons = new HashSet<>();
+	TermSec termSecParser;
 
 	public LangSec(SPARQLWriter sparql) {
 		this.sparql = sparql;
+		termSecParser = new TermSec(sparql);
 	}
 
 	private void parseLangSecChildren(Element langSec, String conceptFQN, String language) {
@@ -58,8 +60,7 @@ public class LangSec {
 		int numberOfTerms = termSecs.getLength();
 		for (int k = 0; k < termSecs.getLength(); ++k)  {
 			Element termSec = (Element) termSecs.item(k);
-			TermSec termSecParser = new TermSec(termSec, sparql);
-			termSecParser.parseTermSec(lexiconFQN, lang, conceptFQN);
+			termSecParser.parseTermSec(termSec, lexiconFQN, lang, conceptFQN);
 		}
 
 		Nodes.removeNodesFromParsingTree(termSecs);

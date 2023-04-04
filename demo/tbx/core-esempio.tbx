@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Core_dialect/master/Schemas/TBXcoreStructV03_TBX-Core_integrated.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?><?xml-model href="https://raw.githubusercontent.com/LTAC-Global/TBX-Core_dialect/master/Schemas/TBX-Core.sch" type="application/xml" schematypens="http://purl.oclc.org/dsdl/schematron"?>
+<tbx type="TBX-Core" style="dca" xml:lang="en" xmlns="urn:iso:std:iso:30042:ed-2">
+
+	<tbxHeader>
+		<fileDesc>
+			<sourceDesc>
+				<p>A sample of the TBX-Core dialect</p>
+			</sourceDesc>
+		</fileDesc>
+	</tbxHeader>
+
+	<text>
+		<body>
+
+			<conceptEntry id="c1">
+				<date>2022-11-11</date>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>goods vehicle</term>
+					</termSec>
+					<termSec>
+						<term>utility vehicle</term>
+					</termSec>
+				</langSec>
+
+				<langSec xml:lang="fr">
+					<termSec>
+						<term>véhicule utilitaire</term>
+						<note>On distingue le véhicule utilitaire léger, aussi appelé VUL, défini par son PTAC (poids total autorisé en charge)
+							qui ne doit pas ex-céder 3,5 tonnes et le véhicule utilitaire poids lourd (aussi appelé camion poids lourd)
+							sont quant à eux définis par un PTAC supérieur à 3,5 tonnes.</note>
+					</termSec>
+				</langSec>
+
+				<langSec xml:lang="it">
+					<termSec>
+						<term>veicolo commerciale</term>
+						<note>Si distingue tra veicolo commerciale leggero (LCV) e veicolo commerciale pesante (veicolo industriale, che superano le 3,5 t)</note>
+					</termSec>
+				</langSec>
+
+			</conceptEntry>
+
+			<conceptEntry id="c2">
+				<date>2022-11-11</date>
+				<langSec xml:lang="en">
+					<termSec>
+						<term>storage</term>
+					</termSec>
+					<termSec>
+						<term>store</term>
+					</termSec>
+				</langSec>
+
+				<langSec xml:lang="fr">
+					<termSec>
+						<term>stockage</term>
+						<note>Les méthodes de stockage dépendent du type d’énergie. Les sources d’énergies fossiles (charbon, gaz, pétrole), sous forme de réservoirs à l’état naturel, remplissent naturellement la fonction de stocks.
+							Une fois extraites, elles peuvent facilement être isolées, hébergées et transportées d’un point de vue technique. Le stockage s’avère plus complexe pour les énergies intermittentes :
+							leur production est relayée par des vecteurs énergétiques tels que l’électricité, la chaleur ou l’hydrogène, nécessitant des systèmes spécifiques de stockage.</note>
+					</termSec>
+				</langSec>
+
+				<langSec xml:lang="it">
+					<termSec>
+						<term>stoccaggio</term>
+					</termSec>
+				</langSec>
+
+			</conceptEntry>
+
+		</body>
+	</text>
+</tbx>
