@@ -15,15 +15,13 @@ public class Word {
 	public final String language;
 	public String conceptFQN;
 	final private Map<String, Form> otherForms = new HashMap<>();
+	static final private BaseEncoder baseEncoder = new BaseEncoder();
 
 	public Word(String lemma, String partOfSpeech, String language) {
-		
-		lemma = lemma.toLowerCase();
-		String FQName = lemma.replaceAll("[\\.\\(\\)/' ]", "-");
+		this.partOfSpeech = partOfSpeech;
+		this.language = language;
 
-		if (lemma != FQName) {
-			System.err.println(String.format("Warning: found lemma %s, using FQName %s", lemma, FQName));
-		}
+		String FQName = baseEncoder.getHash(lemma);
 
 		if (partOfSpeech != null) {
 			this.FQName = String.format(":le_%s_%s", FQName, partOfSpeech.split(":")[1]);
@@ -33,8 +31,6 @@ public class Word {
 
 		String canonicalFormFQN = String.format("%s_lemma", this.FQName);
 		canonicalForm = new Form(canonicalFormFQN, lemma);
-		this.partOfSpeech = partOfSpeech;
-		this.language = language;
 	}
 
 	public void addOtherForm(Form form) {

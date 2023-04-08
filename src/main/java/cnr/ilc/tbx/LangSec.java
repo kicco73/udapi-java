@@ -25,12 +25,11 @@ public class LangSec {
 		String externalCrossReference = Nodes.getTextOfTag(langSec, "externalCrossReference");
 
 		if (note != null) {
-			note = String.format("\"%s\"@%s", note, language);
-			sparql.insertTriple(conceptFQN, "skos:note", note);
+			sparql.insertTripleWithLanguage(conceptFQN, "skos:note", note, language);
 		}
 		if (definition == null) return;
 
-		String value = String.format("\"%s\"@%s", definition, language);
+		String value = sparql.formatObjectWithLanguage(definition, language);
 
 		if (source == null && externalCrossReference == null) {
 			sparql.insertTriple(conceptFQN, "skos:definition", value);
@@ -39,9 +38,9 @@ public class LangSec {
 			content.put("rdf:value", value);
 			
 			if (source != null)
-				content.put("dct:source", String.format("\"%s\"", source));
+				content.put("dct:source", sparql.formatObjectWithUrlIfPossible(source));
 			if (externalCrossReference != null)
-				content.put("dct:identifier", String.format("\"%s\"", externalCrossReference));
+				content.put("dct:identifier", sparql.formatObjectWithUrlIfPossible(externalCrossReference));
 	
 			sparql.insertTriple(conceptFQN, "skos:definition", content);	
 		}

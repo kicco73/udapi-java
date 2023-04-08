@@ -4,6 +4,8 @@ import org.w3c.dom.*;
 import cnr.ilc.rut.SPARQLWriter;
 import cnr.ilc.rut.Word;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -55,27 +57,27 @@ public class TermSec {
 
 		if (context != null) {
 			Map<String, String> object = new HashMap<>();
-			object.put("rdf:value", String.format("\"%s\"@%s", context, language));
+			object.put("rdf:value", sparql.formatObjectWithLanguage(context, language));
 
 			if (source != null) 
-				object.put("dct:source", String.format("\"%s\"", source));
+				object.put("dct:source", sparql.formatObjectWithUrlIfPossible(source));
 			
 			if (externalCrossReference != null) 
-				object.put("dct:identifier", String.format("\"%s\"", externalCrossReference));
+				object.put("dct:identifier", sparql.formatObjectWithUrlIfPossible(externalCrossReference));
 
 			if (crossReference != null) 
-				object.put("rdf:seeAlso", String.format("\"%s\"", crossReference));
+				object.put("rdf:seeAlso", sparql.formatObjectWithUrlIfPossible(crossReference));
 
 			sparql.insertTriple(word.FQName+"_sense", "ontolex:usage", object);
 		} else {
 			if (source != null)
-				sparql.insertTriple(word.FQName, "dct:source", String.format("\"%s\"", source));
+				sparql.insertTripleWithUrlIfPossible(word.FQName, "dct:source", source);
 
 			if (externalCrossReference != null)
-				sparql.insertTriple(word.FQName, "rdf:seeAlso", String.format("\"%s\"", externalCrossReference));
+				sparql.insertTripleWithUrlIfPossible(word.FQName, "rdf:seeAlso", externalCrossReference);
 
 			if (crossReference != null)
-				sparql.insertTriple(word.FQName, "rdf:seeAlso", String.format("\"%s\"", crossReference));
+				sparql.insertTripleWithUrlIfPossible(word.FQName, "rdf:seeAlso", crossReference);
 		}
 	}
 
@@ -101,8 +103,10 @@ public class TermSec {
 		parseDescriptGrp(termSec, word, language);
 
 		String note = Nodes.getTextOfTag(termSec, "note");
-		if (note != null)
-			sparql.insertTriple(word.FQName, "skos:note", String.format("\"%s\"", note));
+		if (note != null) {
+			sparql.insertTripleWithString(word.FQName, "skos:note", note);
+
+		}
 
 	}
 

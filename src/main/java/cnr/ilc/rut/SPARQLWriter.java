@@ -4,6 +4,8 @@
 
 package cnr.ilc.rut;
 
+import java.net.MalformedURLException;
+import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -11,11 +13,11 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 public class SPARQLWriter {
-	final StringBuffer buffer = new StringBuffer();
-	private boolean insertStarted = false;
+	static final public String separator = "# data-chunk";
+	final private StringBuffer buffer = new StringBuffer();
 	final private String creator;
-	private int chunkSize;
-	private int numberOfWords = 0;
+	final private int chunkSize;
+	private int numberOfTriples = 0;
 	private String prefixes =
 		"""		
 		PREFIX : <%s>
@@ -30,21 +32,13 @@ public class SPARQLWriter {
 		PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 		""";
 
-	private void splitChunk(String separator) {
-		if (insertStarted) {
-			buffer.append("}\n");
-			insertStarted = false;
-		}
-		buffer.append(String.format("# %s\n%s", separator, prefixes));
-	}
-	
 	public void insertTriple(String subject, String link, String object) {
-		if (!insertStarted) {
-			buffer.append("INSERT DATA {\n");
-			insertStarted = true;
+		if (chunkSize > 0 && ++numberOfTriples % chunkSize == 0) {
+			buffer.append(String.format("}\n%s\n%s", separator, prefixes));
+			buffer.append("INSERT DATA {\n");	
 		}
-		object = object.replaceAll("\n|\t", " ");
-		object = object.replaceAll(" +", " ");
+
+		object = object.replaceAll("[\n\t ]+", " ");
 		String query = String.format("\t%s %s %s .\n", subject, link, object);
 		buffer.append(query);
 	}
@@ -65,18 +59,18 @@ public class SPARQLWriter {
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmX"); // Quoted "Z" to indicate UTC, no timezone offset
 		String date = df.format(now);
 
-		insertTriple(entryFQN, "dct:creator", String.format("\"%s\"", creator));
-		insertTriple(entryFQN, "dct:created", String.format("\"%s:00\"", date));
-		insertTriple(entryFQN, "dct:modified", String.format("\"%s:00\"", date));
+		insertTripleWithString(entryFQN, "dct:creator", creator);
+		insertTripleWithString(entryFQN, "dct:created", date + ":00");
+		insertTripleWithString(entryFQN, "dct:modified", date + ":00");
 	}
 
 	private void createWordEntry(String lexiconFQN, Word word, String rdfType) {
 		insertTriple(lexiconFQN, "lime:entry", word.FQName);       
 		insertTriple(word.FQName, "rdf:type", rdfType);        
-		insertTriple(word.FQName, "rdfs:label", String.format("\"%s\"@%s", word.canonicalForm.text, word.language));        
+		insertTripleWithLanguage(word.FQName, "rdfs:label", word.canonicalForm.text, word.language);        
 		if (word.partOfSpeech != null)
 			insertTriple(word.FQName, "lexinfo:partOfSpeech", word.partOfSpeech);
-		insertTriple(word.FQName, "vs:term_status", "\"working\"");
+		insertTripleWithString(word.FQName, "vs:term_status", "working");
 		addMetaData(word.FQName); 
 	}
 
@@ -93,7 +87,7 @@ public class SPARQLWriter {
 		String canonicalFormFQN = word.canonicalForm.FQName;
 		insertTriple(word.FQName, "ontolex:canonicalForm", canonicalFormFQN);        
 		insertTriple(canonicalFormFQN, "rdf:type", "ontolex:Form");        
-		insertTriple(canonicalFormFQN, "ontolex:writtenRep", String.format("\"%s\"@%s", word.canonicalForm.text, word.language));
+		insertTripleWithLanguage(canonicalFormFQN, "ontolex:writtenRep", word.canonicalForm.text, word.language);
 		addMetaData(canonicalFormFQN); 
 
 		for (Entry<String,String> entry: word.canonicalForm.features.entrySet()) {
@@ -107,7 +101,7 @@ public class SPARQLWriter {
 			String otherFormFQN = otherForm.FQName;
 			insertTriple(word.FQName, "ontolex:otherForm", otherFormFQN);
 			insertTriple(otherFormFQN, "rdf:type", "ontolex:Form");        
-			insertTriple(otherFormFQN, "ontolex:writtenRep", String.format("\"%s\"@%s", otherForm.text, word.language));        
+			insertTripleWithLanguage(otherFormFQN, "ontolex:writtenRep", otherForm.text, word.language);        
 			addMetaData(otherFormFQN); 
 
 			for (Entry<String,String> entry: otherForm.features.entrySet()) {
@@ -126,27 +120,56 @@ public class SPARQLWriter {
 
 	public String createLexicon(String lexiconFQN, String language) {		
 		insertTriple(lexiconFQN, "rdf:type", "lime:Lexicon");
-        insertTriple(lexiconFQN, "lime:language", String.format("\"%s\"", language));   
+        insertTripleWithString(lexiconFQN, "lime:language", language);   
 		addMetaData(lexiconFQN);     
 		return lexiconFQN;
 	}
 
 	public void addWord(Word word, String lexiconFQN, String rdfType) {
-
-		if (chunkSize > 0 && ++numberOfWords % chunkSize == 0) 
-			splitChunk("[data-chunk]");
-
 		createWordEntry(lexiconFQN, word, rdfType);
 		createLexicalSense(word);
 		createCanonicalForm(word);
 		createOtherForms(word);
 	}
 
+	public String formatObjectWithUrlIfPossible(String object) {
+		try {
+			new URL(object);
+			object = String.format("<%s>", object);
+		}
+		catch (MalformedURLException e) {
+			object = formatObject(object);
+		}
+		return object;
+	}
+
+	public String formatObjectWithLanguage(String object, String language) {
+		object = String.format("%s@%s", formatObject(object), language);
+		return object;
+	}
+
+	private String formatObject(String object) {
+		object = object.replaceAll("\"", "\\\\\"");
+		object = String.format("\"%s\"", object.trim());
+		return object;
+	}
+
+	public void insertTripleWithUrlIfPossible(String subject, String link, String object) {
+		insertTriple(subject, link, formatObjectWithUrlIfPossible(object));
+	}
+
+	public void insertTripleWithLanguage(String subject, String link, String object, String language) {
+		insertTriple(subject, link, formatObjectWithLanguage(object, language));
+	}
+
+	public void insertTripleWithString(String subject, String link, String object) {
+		insertTriple(subject, link, formatObject(object));
+	}
+
 	@Override
 	public String toString() {
-		if (insertStarted) {
+		if (numberOfTriples % chunkSize != 0) {
 			buffer.append("}\n");
-			insertStarted = false;
 		}
 		return buffer.toString();
 	}

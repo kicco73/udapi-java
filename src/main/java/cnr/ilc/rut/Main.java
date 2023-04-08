@@ -14,7 +14,7 @@ public class Main {
     String repository = "LexO";
     String language = "it";
     String creator = "bot";
-    int chunkSize = 1250;
+    int chunkSize = 15000;
     String namespace = "http://txt2rdf/test#";
     String exportConll = null;
 
@@ -98,7 +98,7 @@ public class Main {
 
     private static void uploadStatements(String graphURL, String repository, String statements) throws Exception {
         GraphDBClient client = new GraphDBClient(graphURL, repository);
-        String[] chunks = statements.split("# \\[data-chunk\\]\n", 0);
+        String[] chunks = statements.split(SPARQLWriter.separator, 0);
         int n = 0;
         for (String chunk: chunks) {
             System.out.print(String.format("\rPosting... %.0f%%", ++n * 100.0/chunks.length));

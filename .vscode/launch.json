@@ -10,7 +10,7 @@
 			"request": "launch",
 			"mainClass": "cnr.ilc.rut.Main",
 			"projectName": "udapi",
-			"args": "-t demo/tbx/bigTest.tbx.xml --namespace http://txt2rdf/test# --creator kicco --language en > demo.sparql"
+			"args": "-t demo/tbx/DualConcept_MultiTerm_Sample.tbx --namespace http://txt2rdf/test# --creator kicco --language en > demo.sparql"
 			//"args": "-i demo/conll-u_example.tsv --namespace http://txt2rdf/test# --creator kicco --language en --export-conll enriched.conllu --graphdb-url http://localhost:7200 --repository LexO"
 		},
 		{

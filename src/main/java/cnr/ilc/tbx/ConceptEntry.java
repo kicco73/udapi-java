@@ -2,6 +2,7 @@ package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
 import cnr.ilc.common.RutException;
+import cnr.ilc.rut.BaseEncoder;
 import cnr.ilc.rut.SPARQLWriter;
 
 import java.util.HashSet;
@@ -13,6 +14,7 @@ import java.util.stream.Stream;
 
 
 public class ConceptEntry {
+	static private BaseEncoder baseEncoder = new BaseEncoder();
 	private SPARQLWriter sparql;
 	private LangSec langSecParser;
 	private Set<String> subjectFields = new HashSet<>();
@@ -34,12 +36,12 @@ public class ConceptEntry {
 		};
 
 		String subjectField = subjectFieldNode.getTextContent();
-		String subjectFieldFQN = String.format("%s_%s", conceptFQN, subjectField.replaceAll(" ", "_").replaceAll(";", "-"));
+		String subjectFieldFQN = String.format("%s_%s", conceptFQN, baseEncoder.getHash(subjectField));
 		
 		if (!subjectFields.contains(subjectFieldFQN)) {
 			subjectFields.add(subjectFieldFQN);
 			sparql.insertTriple(subjectFieldFQN, "rdf:type", "skos:ConceptScheme");
-			sparql.insertTriple(subjectFieldFQN, "skos:prefLabel", String.format("\"%s\"", subjectField));
+			sparql.insertTripleWithString(subjectFieldFQN, "skos:prefLabel", subjectField);
 		}
 
 		sparql.insertTriple(conceptFQN, "skos:inScheme", subjectFieldFQN);
@@ -59,7 +61,7 @@ public class ConceptEntry {
 			String link = entry.getValue();
 			String content = Nodes.getTextOfTag(root, key);
 			if (content != null) {
-				sparql.insertTriple(FQN, link,  "\"" + content + "\"");
+				sparql.insertTripleWithUrlIfPossible(FQN, link, content);
 			}
 		}
 	}
@@ -74,7 +76,7 @@ public class ConceptEntry {
 		}
 
 		sparql.insertTriple(conceptFQN, "rdf:type", "skos:Concept");
-		sparql.insertTriple(conceptFQN, "skos:prefLabel", String.format("\"%s\"", id));
+		sparql.insertTripleWithString(conceptFQN, "skos:prefLabel", id);
 
 		NodeList langSecs = conceptEntry.getElementsByTagNameNS("*", "langSec");
 
