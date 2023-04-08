@@ -1,11 +1,10 @@
 package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
+import cnr.ilc.common.RutException;
 import cnr.ilc.rut.SPARQLWriter;
 import cnr.ilc.rut.Word;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
@@ -24,11 +23,17 @@ public class TermSec {
 			{ "deprecatedTerm-admn-sts", "lexinfo:deprecatedTerm" },
 			{ "supersededTerm-admn-sts", "lexinfo:supersededTerm" },
 			{ "preferredTerm-admn-sts", "lexinfo:preferredTerm" },
+			//{ "proposedTerm-admn-sts", "lexinfo:proposedTerm" },	// FIXME: does it exist?
 		}).collect(Collectors.toMap(data -> data[0], data -> data[1]));
 		
-		String status = statuses.get(Nodes.getTextOfTag(termSec, "administrativeStatus"));
+		String status = Nodes.getTextOfTagOrAlternateTagWithAttribute(termSec, "administrativeStatus", "termNote", "type");
 		if (status != null) {
-			sparql.insertTriple(word.FQName, "lexinfo:normativeAuthorization", status);
+			String translatedStatus = statuses.get(status);
+			if (translatedStatus == null) 
+				System.err.println("Warning: unknown administrative status "+ status);
+				//throw new RutException(String.format("Unknown administrative status: %s", status));
+			else
+				sparql.insertTriple(word.FQName, "lexinfo:normativeAuthorization", translatedStatus);
 		}
 	}
 
@@ -42,18 +47,21 @@ public class TermSec {
 			{ "variant", "lexinfo:shortForm" },
 		}).collect(Collectors.toMap(data -> data[0], data -> data[1]));
 		
-		String termType = termTypes.get(Nodes.getTextOfTag(termSec, "termType"));
+		String termType = Nodes.getTextOfTagOrAlternateTagWithAttribute(termSec, "termType", "termNote", "type");
 		if (termType != null) {
-			sparql.insertTriple(word.FQName, "lexinfo:termType", termType);
+			String translatedType = termTypes.get(termType);
+			if (translatedType == null) 
+				throw new RutException(String.format("Unknown term type: %s", translatedType));
+			sparql.insertTriple(word.FQName, "lexinfo:termType", translatedType);
 		}
 	}
 
 	private void parseDescriptGrp(Element termSec, Word word, String language) {
-		Element descriptGrp = (Element) termSec.getElementsByTagNameNS("*", "descriptGrp").item(0);
-		String externalCrossReference = Nodes.getTextOfTag(descriptGrp, "externalCrossReference");
-		String crossReference = Nodes.getTextOfTag(descriptGrp, "crossReference");
-		String source = Nodes.getTextOfTag(descriptGrp, "source");
-		String context = Nodes.getTextOfTag(descriptGrp, "context");
+		Element descripGrp = (Element) termSec.getElementsByTagNameNS("*", "descripGrp").item(0);
+		String externalCrossReference = Nodes.getTextOfTag(descripGrp, "externalCrossReference");
+		String crossReference = Nodes.getTextOfTag(descripGrp, "crossReference");
+		String source = Nodes.getTextOfTag(descripGrp, "source");
+		String context = Nodes.getTextOfTag(descripGrp, "context");
 
 		if (context != null) {
 			Map<String, String> object = new HashMap<>();
@@ -84,12 +92,13 @@ public class TermSec {
 	public void parseTermSec(Element termSec, String lexiconFQN, String language, String conceptFQN) {
 
 		String lemma = Nodes.getTextOfTag(termSec, "term");
-		String partOfSpeech = Nodes.getTextOfTag(termSec, "partOfSpeech");
 		String grammaticalGender = Nodes.getTextOfTag(termSec, "grammaticalGender");
 
 		if (lemma == null) return;
 
+		String partOfSpeech = Nodes.getTextOfTagOrAlternateTagWithAttribute(termSec, "partOfSpeech", "termNote", "type");
 		String partOfSpeechFQN = partOfSpeech != null? String.format("lexinfo:%s", partOfSpeech) : null;
+		
 		String grammaticalGenderFQN = String.format("lexinfo:%s", grammaticalGender);
 
 		Word word = new Word(lemma, partOfSpeechFQN, language);
@@ -105,7 +114,6 @@ public class TermSec {
 		String note = Nodes.getTextOfTag(termSec, "note");
 		if (note != null) {
 			sparql.insertTripleWithString(word.FQName, "skos:note", note);
-
 		}
 
 	}

@@ -14,72 +14,71 @@ INSERT DATA {
 	:tbx_en rdf:type lime:Lexicon .
 	:tbx_en lime:language "en" .
 	:tbx_en dct:creator "kicco" .
-	:tbx_en dct:created "2023-04-08T13:00+02:00" .
-	:tbx_en dct:modified "2023-04-08T13:00+02:00" .
+	:tbx_en dct:created "2023-04-08T17:53+02:00" .
+	:tbx_en dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_6dd0upETMueL23x5DciEpo .
 	:le_6dd0upETMueL23x5DciEpo rdf:type ontolex:LexicalEntry .
 	:le_6dd0upETMueL23x5DciEpo rdfs:label "open cluster"@en .
 	:le_6dd0upETMueL23x5DciEpo vs:term_status "working" .
 	:le_6dd0upETMueL23x5DciEpo dct:creator "kicco" .
-	:le_6dd0upETMueL23x5DciEpo dct:created "2023-04-08T13:00+02:00" .
-	:le_6dd0upETMueL23x5DciEpo dct:modified "2023-04-08T13:00+02:00" .
+	:le_6dd0upETMueL23x5DciEpo dct:created "2023-04-08T17:53+02:00" .
+	:le_6dd0upETMueL23x5DciEpo dct:modified "2023-04-08T17:53+02:00" .
 	:le_6dd0upETMueL23x5DciEpo ontolex:sense :le_6dd0upETMueL23x5DciEpo_sense .
 	:le_6dd0upETMueL23x5DciEpo_sense rdf:type ontolex:LexicalSense .
 	:le_6dd0upETMueL23x5DciEpo_sense ontolex:reference :concept_c1 .
 	:le_6dd0upETMueL23x5DciEpo_sense dct:creator "kicco" .
-	:le_6dd0upETMueL23x5DciEpo_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_6dd0upETMueL23x5DciEpo_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_6dd0upETMueL23x5DciEpo_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_6dd0upETMueL23x5DciEpo_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_6dd0upETMueL23x5DciEpo ontolex:canonicalForm :le_6dd0upETMueL23x5DciEpo_lemma .
 	:le_6dd0upETMueL23x5DciEpo_lemma rdf:type ontolex:Form .
 	:le_6dd0upETMueL23x5DciEpo_lemma ontolex:writtenRep "open cluster"@en .
 	:le_6dd0upETMueL23x5DciEpo_lemma dct:creator "kicco" .
-	:le_6dd0upETMueL23x5DciEpo_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_6dd0upETMueL23x5DciEpo_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_6dd0upETMueL23x5DciEpo_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_6dd0upETMueL23x5DciEpo_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_2RfpfUAJNSfRzXOMWvAeE5 .
 	:le_2RfpfUAJNSfRzXOMWvAeE5 rdf:type ontolex:LexicalEntry .
 	:le_2RfpfUAJNSfRzXOMWvAeE5 rdfs:label "galactic cluster"@en .
 	:le_2RfpfUAJNSfRzXOMWvAeE5 vs:term_status "working" .
 	:le_2RfpfUAJNSfRzXOMWvAeE5 dct:creator "kicco" .
-	:le_2RfpfUAJNSfRzXOMWvAeE5 dct:created "2023-04-08T13:00+02:00" .
-	:le_2RfpfUAJNSfRzXOMWvAeE5 dct:modified "2023-04-08T13:00+02:00" .
+	:le_2RfpfUAJNSfRzXOMWvAeE5 dct:created "2023-04-08T17:53+02:00" .
+	:le_2RfpfUAJNSfRzXOMWvAeE5 dct:modified "2023-04-08T17:53+02:00" .
 	:le_2RfpfUAJNSfRzXOMWvAeE5 ontolex:sense :le_2RfpfUAJNSfRzXOMWvAeE5_sense .
 	:le_2RfpfUAJNSfRzXOMWvAeE5_sense rdf:type ontolex:LexicalSense .
 	:le_2RfpfUAJNSfRzXOMWvAeE5_sense ontolex:reference :concept_c1 .
 	:le_2RfpfUAJNSfRzXOMWvAeE5_sense dct:creator "kicco" .
-	:le_2RfpfUAJNSfRzXOMWvAeE5_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_2RfpfUAJNSfRzXOMWvAeE5_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_2RfpfUAJNSfRzXOMWvAeE5_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_2RfpfUAJNSfRzXOMWvAeE5_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_2RfpfUAJNSfRzXOMWvAeE5 ontolex:canonicalForm :le_2RfpfUAJNSfRzXOMWvAeE5_lemma .
 	:le_2RfpfUAJNSfRzXOMWvAeE5_lemma rdf:type ontolex:Form .
 	:le_2RfpfUAJNSfRzXOMWvAeE5_lemma ontolex:writtenRep "galactic cluster"@en .
 	:le_2RfpfUAJNSfRzXOMWvAeE5_lemma dct:creator "kicco" .
-	:le_2RfpfUAJNSfRzXOMWvAeE5_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_2RfpfUAJNSfRzXOMWvAeE5_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_2RfpfUAJNSfRzXOMWvAeE5_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_2RfpfUAJNSfRzXOMWvAeE5_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_2RfpfUAJNSfRzXOMWvAeE5 skos:note "Another name for an open star cluster. They are often termed Galactic Clusters because they are found mainly in the plane of our galaxy. If you were to view our galaxy from afar, you would find that all the open/galactic clusters lie within the spiral arms of the galaxy." .
-	:concept_c1 skos:note "Another name for an open star cluster. They are often termed Galactic Clusters because they are found mainly in the plane of our galaxy. If you were to view our galaxy from afar, you would find that all the open/galactic clusters lie within the spiral arms of the galaxy."@en .
 	:tbx_es rdf:type lime:Lexicon .
 	:tbx_es lime:language "es" .
 	:tbx_es dct:creator "kicco" .
-	:tbx_es dct:created "2023-04-08T13:00+02:00" .
-	:tbx_es dct:modified "2023-04-08T13:00+02:00" .
+	:tbx_es dct:created "2023-04-08T17:53+02:00" .
+	:tbx_es dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_3xARRDfRXPyWUHBRH0eAzK .
 	:le_3xARRDfRXPyWUHBRH0eAzK rdf:type ontolex:LexicalEntry .
 	:le_3xARRDfRXPyWUHBRH0eAzK rdfs:label "cúmulo abierto"@es .
 	:le_3xARRDfRXPyWUHBRH0eAzK vs:term_status "working" .
 	:le_3xARRDfRXPyWUHBRH0eAzK dct:creator "kicco" .
-	:le_3xARRDfRXPyWUHBRH0eAzK dct:created "2023-04-08T13:00+02:00" .
-	:le_3xARRDfRXPyWUHBRH0eAzK dct:modified "2023-04-08T13:00+02:00" .
+	:le_3xARRDfRXPyWUHBRH0eAzK dct:created "2023-04-08T17:53+02:00" .
+	:le_3xARRDfRXPyWUHBRH0eAzK dct:modified "2023-04-08T17:53+02:00" .
 	:le_3xARRDfRXPyWUHBRH0eAzK ontolex:sense :le_3xARRDfRXPyWUHBRH0eAzK_sense .
 	:le_3xARRDfRXPyWUHBRH0eAzK_sense rdf:type ontolex:LexicalSense .
 	:le_3xARRDfRXPyWUHBRH0eAzK_sense ontolex:reference :concept_c1 .
 	:le_3xARRDfRXPyWUHBRH0eAzK_sense dct:creator "kicco" .
-	:le_3xARRDfRXPyWUHBRH0eAzK_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_3xARRDfRXPyWUHBRH0eAzK_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_3xARRDfRXPyWUHBRH0eAzK_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_3xARRDfRXPyWUHBRH0eAzK_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_3xARRDfRXPyWUHBRH0eAzK ontolex:canonicalForm :le_3xARRDfRXPyWUHBRH0eAzK_lemma .
 	:le_3xARRDfRXPyWUHBRH0eAzK_lemma rdf:type ontolex:Form .
 	:le_3xARRDfRXPyWUHBRH0eAzK_lemma ontolex:writtenRep "cúmulo abierto"@es .
 	:le_3xARRDfRXPyWUHBRH0eAzK_lemma dct:creator "kicco" .
-	:le_3xARRDfRXPyWUHBRH0eAzK_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_3xARRDfRXPyWUHBRH0eAzK_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_3xARRDfRXPyWUHBRH0eAzK_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_3xARRDfRXPyWUHBRH0eAzK_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c2 rdf:type skos:Concept .
 	:concept_c2 skos:prefLabel "c2" .
 	:tbx_en lime:entry :le_58nhVZCsXRw4xmUgKUcy5I .
@@ -87,96 +86,96 @@ INSERT DATA {
 	:le_58nhVZCsXRw4xmUgKUcy5I rdfs:label "circumstellar accretion disk"@en .
 	:le_58nhVZCsXRw4xmUgKUcy5I vs:term_status "working" .
 	:le_58nhVZCsXRw4xmUgKUcy5I dct:creator "kicco" .
-	:le_58nhVZCsXRw4xmUgKUcy5I dct:created "2023-04-08T13:00+02:00" .
-	:le_58nhVZCsXRw4xmUgKUcy5I dct:modified "2023-04-08T13:00+02:00" .
+	:le_58nhVZCsXRw4xmUgKUcy5I dct:created "2023-04-08T17:53+02:00" .
+	:le_58nhVZCsXRw4xmUgKUcy5I dct:modified "2023-04-08T17:53+02:00" .
 	:le_58nhVZCsXRw4xmUgKUcy5I ontolex:sense :le_58nhVZCsXRw4xmUgKUcy5I_sense .
 	:le_58nhVZCsXRw4xmUgKUcy5I_sense rdf:type ontolex:LexicalSense .
 	:le_58nhVZCsXRw4xmUgKUcy5I_sense ontolex:reference :concept_c2 .
 	:le_58nhVZCsXRw4xmUgKUcy5I_sense dct:creator "kicco" .
-	:le_58nhVZCsXRw4xmUgKUcy5I_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_58nhVZCsXRw4xmUgKUcy5I_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_58nhVZCsXRw4xmUgKUcy5I_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_58nhVZCsXRw4xmUgKUcy5I_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_58nhVZCsXRw4xmUgKUcy5I ontolex:canonicalForm :le_58nhVZCsXRw4xmUgKUcy5I_lemma .
 	:le_58nhVZCsXRw4xmUgKUcy5I_lemma rdf:type ontolex:Form .
 	:le_58nhVZCsXRw4xmUgKUcy5I_lemma ontolex:writtenRep "circumstellar accretion disk"@en .
 	:le_58nhVZCsXRw4xmUgKUcy5I_lemma dct:creator "kicco" .
-	:le_58nhVZCsXRw4xmUgKUcy5I_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_58nhVZCsXRw4xmUgKUcy5I_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_58nhVZCsXRw4xmUgKUcy5I_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_58nhVZCsXRw4xmUgKUcy5I_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_6mxJiCZQveJb8cKQD451mx .
 	:le_6mxJiCZQveJb8cKQD451mx rdf:type ontolex:LexicalEntry .
 	:le_6mxJiCZQveJb8cKQD451mx rdfs:label "accretion disc"@en .
 	:le_6mxJiCZQveJb8cKQD451mx vs:term_status "working" .
 	:le_6mxJiCZQveJb8cKQD451mx dct:creator "kicco" .
-	:le_6mxJiCZQveJb8cKQD451mx dct:created "2023-04-08T13:00+02:00" .
-	:le_6mxJiCZQveJb8cKQD451mx dct:modified "2023-04-08T13:00+02:00" .
+	:le_6mxJiCZQveJb8cKQD451mx dct:created "2023-04-08T17:53+02:00" .
+	:le_6mxJiCZQveJb8cKQD451mx dct:modified "2023-04-08T17:53+02:00" .
 	:le_6mxJiCZQveJb8cKQD451mx ontolex:sense :le_6mxJiCZQveJb8cKQD451mx_sense .
 	:le_6mxJiCZQveJb8cKQD451mx_sense rdf:type ontolex:LexicalSense .
 	:le_6mxJiCZQveJb8cKQD451mx_sense ontolex:reference :concept_c2 .
 	:le_6mxJiCZQveJb8cKQD451mx_sense dct:creator "kicco" .
-	:le_6mxJiCZQveJb8cKQD451mx_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_6mxJiCZQveJb8cKQD451mx_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_6mxJiCZQveJb8cKQD451mx_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_6mxJiCZQveJb8cKQD451mx_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_6mxJiCZQveJb8cKQD451mx ontolex:canonicalForm :le_6mxJiCZQveJb8cKQD451mx_lemma .
 	:le_6mxJiCZQveJb8cKQD451mx_lemma rdf:type ontolex:Form .
 	:le_6mxJiCZQveJb8cKQD451mx_lemma ontolex:writtenRep "accretion disc"@en .
 	:le_6mxJiCZQveJb8cKQD451mx_lemma dct:creator "kicco" .
-	:le_6mxJiCZQveJb8cKQD451mx_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_6mxJiCZQveJb8cKQD451mx_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_6mxJiCZQveJb8cKQD451mx_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_6mxJiCZQveJb8cKQD451mx_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_3kepB9lvhskA654mCub5yS .
 	:le_3kepB9lvhskA654mCub5yS rdf:type ontolex:LexicalEntry .
 	:le_3kepB9lvhskA654mCub5yS rdfs:label "circumstellar disk"@en .
 	:le_3kepB9lvhskA654mCub5yS vs:term_status "working" .
 	:le_3kepB9lvhskA654mCub5yS dct:creator "kicco" .
-	:le_3kepB9lvhskA654mCub5yS dct:created "2023-04-08T13:00+02:00" .
-	:le_3kepB9lvhskA654mCub5yS dct:modified "2023-04-08T13:00+02:00" .
+	:le_3kepB9lvhskA654mCub5yS dct:created "2023-04-08T17:53+02:00" .
+	:le_3kepB9lvhskA654mCub5yS dct:modified "2023-04-08T17:53+02:00" .
 	:le_3kepB9lvhskA654mCub5yS ontolex:sense :le_3kepB9lvhskA654mCub5yS_sense .
 	:le_3kepB9lvhskA654mCub5yS_sense rdf:type ontolex:LexicalSense .
 	:le_3kepB9lvhskA654mCub5yS_sense ontolex:reference :concept_c2 .
 	:le_3kepB9lvhskA654mCub5yS_sense dct:creator "kicco" .
-	:le_3kepB9lvhskA654mCub5yS_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_3kepB9lvhskA654mCub5yS_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_3kepB9lvhskA654mCub5yS_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_3kepB9lvhskA654mCub5yS_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_3kepB9lvhskA654mCub5yS ontolex:canonicalForm :le_3kepB9lvhskA654mCub5yS_lemma .
 	:le_3kepB9lvhskA654mCub5yS_lemma rdf:type ontolex:Form .
 	:le_3kepB9lvhskA654mCub5yS_lemma ontolex:writtenRep "circumstellar disk"@en .
 	:le_3kepB9lvhskA654mCub5yS_lemma dct:creator "kicco" .
-	:le_3kepB9lvhskA654mCub5yS_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_3kepB9lvhskA654mCub5yS_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_3kepB9lvhskA654mCub5yS_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_3kepB9lvhskA654mCub5yS_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_3dHMSvjLZojAhtD9oh911k .
 	:le_3dHMSvjLZojAhtD9oh911k rdf:type ontolex:LexicalEntry .
 	:le_3dHMSvjLZojAhtD9oh911k rdfs:label "disco de acreción"@es .
 	:le_3dHMSvjLZojAhtD9oh911k vs:term_status "working" .
 	:le_3dHMSvjLZojAhtD9oh911k dct:creator "kicco" .
-	:le_3dHMSvjLZojAhtD9oh911k dct:created "2023-04-08T13:00+02:00" .
-	:le_3dHMSvjLZojAhtD9oh911k dct:modified "2023-04-08T13:00+02:00" .
+	:le_3dHMSvjLZojAhtD9oh911k dct:created "2023-04-08T17:53+02:00" .
+	:le_3dHMSvjLZojAhtD9oh911k dct:modified "2023-04-08T17:53+02:00" .
 	:le_3dHMSvjLZojAhtD9oh911k ontolex:sense :le_3dHMSvjLZojAhtD9oh911k_sense .
 	:le_3dHMSvjLZojAhtD9oh911k_sense rdf:type ontolex:LexicalSense .
 	:le_3dHMSvjLZojAhtD9oh911k_sense ontolex:reference :concept_c2 .
 	:le_3dHMSvjLZojAhtD9oh911k_sense dct:creator "kicco" .
-	:le_3dHMSvjLZojAhtD9oh911k_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_3dHMSvjLZojAhtD9oh911k_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_3dHMSvjLZojAhtD9oh911k_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_3dHMSvjLZojAhtD9oh911k_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_3dHMSvjLZojAhtD9oh911k ontolex:canonicalForm :le_3dHMSvjLZojAhtD9oh911k_lemma .
 	:le_3dHMSvjLZojAhtD9oh911k_lemma rdf:type ontolex:Form .
 	:le_3dHMSvjLZojAhtD9oh911k_lemma ontolex:writtenRep "disco de acreción"@es .
 	:le_3dHMSvjLZojAhtD9oh911k_lemma dct:creator "kicco" .
-	:le_3dHMSvjLZojAhtD9oh911k_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_3dHMSvjLZojAhtD9oh911k_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_3dHMSvjLZojAhtD9oh911k_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_3dHMSvjLZojAhtD9oh911k_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_559JDyweE6yKtO6n5XCrte .
 	:le_559JDyweE6yKtO6n5XCrte rdf:type ontolex:LexicalEntry .
 	:le_559JDyweE6yKtO6n5XCrte rdfs:label "disco de acrecimiento"@es .
 	:le_559JDyweE6yKtO6n5XCrte vs:term_status "working" .
 	:le_559JDyweE6yKtO6n5XCrte dct:creator "kicco" .
-	:le_559JDyweE6yKtO6n5XCrte dct:created "2023-04-08T13:00+02:00" .
-	:le_559JDyweE6yKtO6n5XCrte dct:modified "2023-04-08T13:00+02:00" .
+	:le_559JDyweE6yKtO6n5XCrte dct:created "2023-04-08T17:53+02:00" .
+	:le_559JDyweE6yKtO6n5XCrte dct:modified "2023-04-08T17:53+02:00" .
 	:le_559JDyweE6yKtO6n5XCrte ontolex:sense :le_559JDyweE6yKtO6n5XCrte_sense .
 	:le_559JDyweE6yKtO6n5XCrte_sense rdf:type ontolex:LexicalSense .
 	:le_559JDyweE6yKtO6n5XCrte_sense ontolex:reference :concept_c2 .
 	:le_559JDyweE6yKtO6n5XCrte_sense dct:creator "kicco" .
-	:le_559JDyweE6yKtO6n5XCrte_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_559JDyweE6yKtO6n5XCrte_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_559JDyweE6yKtO6n5XCrte_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_559JDyweE6yKtO6n5XCrte_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_559JDyweE6yKtO6n5XCrte ontolex:canonicalForm :le_559JDyweE6yKtO6n5XCrte_lemma .
 	:le_559JDyweE6yKtO6n5XCrte_lemma rdf:type ontolex:Form .
 	:le_559JDyweE6yKtO6n5XCrte_lemma ontolex:writtenRep "disco de acrecimiento"@es .
 	:le_559JDyweE6yKtO6n5XCrte_lemma dct:creator "kicco" .
-	:le_559JDyweE6yKtO6n5XCrte_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_559JDyweE6yKtO6n5XCrte_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_559JDyweE6yKtO6n5XCrte_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_559JDyweE6yKtO6n5XCrte_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c3 rdf:type skos:Concept .
 	:concept_c3 skos:prefLabel "c3" .
 	:tbx_en lime:entry :le_1XTBW3MoGHmLluPmD0U46E .
@@ -184,39 +183,39 @@ INSERT DATA {
 	:le_1XTBW3MoGHmLluPmD0U46E rdfs:label "black hole"@en .
 	:le_1XTBW3MoGHmLluPmD0U46E vs:term_status "working" .
 	:le_1XTBW3MoGHmLluPmD0U46E dct:creator "kicco" .
-	:le_1XTBW3MoGHmLluPmD0U46E dct:created "2023-04-08T13:00+02:00" .
-	:le_1XTBW3MoGHmLluPmD0U46E dct:modified "2023-04-08T13:00+02:00" .
+	:le_1XTBW3MoGHmLluPmD0U46E dct:created "2023-04-08T17:53+02:00" .
+	:le_1XTBW3MoGHmLluPmD0U46E dct:modified "2023-04-08T17:53+02:00" .
 	:le_1XTBW3MoGHmLluPmD0U46E ontolex:sense :le_1XTBW3MoGHmLluPmD0U46E_sense .
 	:le_1XTBW3MoGHmLluPmD0U46E_sense rdf:type ontolex:LexicalSense .
 	:le_1XTBW3MoGHmLluPmD0U46E_sense ontolex:reference :concept_c3 .
 	:le_1XTBW3MoGHmLluPmD0U46E_sense dct:creator "kicco" .
-	:le_1XTBW3MoGHmLluPmD0U46E_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1XTBW3MoGHmLluPmD0U46E_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1XTBW3MoGHmLluPmD0U46E_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1XTBW3MoGHmLluPmD0U46E_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1XTBW3MoGHmLluPmD0U46E ontolex:canonicalForm :le_1XTBW3MoGHmLluPmD0U46E_lemma .
 	:le_1XTBW3MoGHmLluPmD0U46E_lemma rdf:type ontolex:Form .
 	:le_1XTBW3MoGHmLluPmD0U46E_lemma ontolex:writtenRep "black hole"@en .
 	:le_1XTBW3MoGHmLluPmD0U46E_lemma dct:creator "kicco" .
-	:le_1XTBW3MoGHmLluPmD0U46E_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1XTBW3MoGHmLluPmD0U46E_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1XTBW3MoGHmLluPmD0U46E_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1XTBW3MoGHmLluPmD0U46E_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_5YnlM1H7EpulQ86vHoi0yS .
 	:le_5YnlM1H7EpulQ86vHoi0yS rdf:type ontolex:LexicalEntry .
 	:le_5YnlM1H7EpulQ86vHoi0yS rdfs:label "agujero negro"@es .
 	:le_5YnlM1H7EpulQ86vHoi0yS vs:term_status "working" .
 	:le_5YnlM1H7EpulQ86vHoi0yS dct:creator "kicco" .
-	:le_5YnlM1H7EpulQ86vHoi0yS dct:created "2023-04-08T13:00+02:00" .
-	:le_5YnlM1H7EpulQ86vHoi0yS dct:modified "2023-04-08T13:00+02:00" .
+	:le_5YnlM1H7EpulQ86vHoi0yS dct:created "2023-04-08T17:53+02:00" .
+	:le_5YnlM1H7EpulQ86vHoi0yS dct:modified "2023-04-08T17:53+02:00" .
 	:le_5YnlM1H7EpulQ86vHoi0yS ontolex:sense :le_5YnlM1H7EpulQ86vHoi0yS_sense .
 	:le_5YnlM1H7EpulQ86vHoi0yS_sense rdf:type ontolex:LexicalSense .
 	:le_5YnlM1H7EpulQ86vHoi0yS_sense ontolex:reference :concept_c3 .
 	:le_5YnlM1H7EpulQ86vHoi0yS_sense dct:creator "kicco" .
-	:le_5YnlM1H7EpulQ86vHoi0yS_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5YnlM1H7EpulQ86vHoi0yS_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5YnlM1H7EpulQ86vHoi0yS_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5YnlM1H7EpulQ86vHoi0yS_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5YnlM1H7EpulQ86vHoi0yS ontolex:canonicalForm :le_5YnlM1H7EpulQ86vHoi0yS_lemma .
 	:le_5YnlM1H7EpulQ86vHoi0yS_lemma rdf:type ontolex:Form .
 	:le_5YnlM1H7EpulQ86vHoi0yS_lemma ontolex:writtenRep "agujero negro"@es .
 	:le_5YnlM1H7EpulQ86vHoi0yS_lemma dct:creator "kicco" .
-	:le_5YnlM1H7EpulQ86vHoi0yS_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5YnlM1H7EpulQ86vHoi0yS_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5YnlM1H7EpulQ86vHoi0yS_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5YnlM1H7EpulQ86vHoi0yS_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c4 rdf:type skos:Concept .
 	:concept_c4 skos:prefLabel "c4" .
 	:tbx_en lime:entry :le_7ZbHACm5heeRctoqQ3JlJi .
@@ -224,77 +223,77 @@ INSERT DATA {
 	:le_7ZbHACm5heeRctoqQ3JlJi rdfs:label "gamma-ray burst"@en .
 	:le_7ZbHACm5heeRctoqQ3JlJi vs:term_status "working" .
 	:le_7ZbHACm5heeRctoqQ3JlJi dct:creator "kicco" .
-	:le_7ZbHACm5heeRctoqQ3JlJi dct:created "2023-04-08T13:00+02:00" .
-	:le_7ZbHACm5heeRctoqQ3JlJi dct:modified "2023-04-08T13:00+02:00" .
+	:le_7ZbHACm5heeRctoqQ3JlJi dct:created "2023-04-08T17:53+02:00" .
+	:le_7ZbHACm5heeRctoqQ3JlJi dct:modified "2023-04-08T17:53+02:00" .
 	:le_7ZbHACm5heeRctoqQ3JlJi ontolex:sense :le_7ZbHACm5heeRctoqQ3JlJi_sense .
 	:le_7ZbHACm5heeRctoqQ3JlJi_sense rdf:type ontolex:LexicalSense .
 	:le_7ZbHACm5heeRctoqQ3JlJi_sense ontolex:reference :concept_c4 .
 	:le_7ZbHACm5heeRctoqQ3JlJi_sense dct:creator "kicco" .
-	:le_7ZbHACm5heeRctoqQ3JlJi_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_7ZbHACm5heeRctoqQ3JlJi_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_7ZbHACm5heeRctoqQ3JlJi_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_7ZbHACm5heeRctoqQ3JlJi_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_7ZbHACm5heeRctoqQ3JlJi ontolex:canonicalForm :le_7ZbHACm5heeRctoqQ3JlJi_lemma .
 	:le_7ZbHACm5heeRctoqQ3JlJi_lemma rdf:type ontolex:Form .
 	:le_7ZbHACm5heeRctoqQ3JlJi_lemma ontolex:writtenRep "gamma-ray burst"@en .
 	:le_7ZbHACm5heeRctoqQ3JlJi_lemma dct:creator "kicco" .
-	:le_7ZbHACm5heeRctoqQ3JlJi_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_7ZbHACm5heeRctoqQ3JlJi_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_7ZbHACm5heeRctoqQ3JlJi_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_7ZbHACm5heeRctoqQ3JlJi_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_6Fv716M0fZcW3yAE7005Jb .
 	:le_6Fv716M0fZcW3yAE7005Jb rdf:type ontolex:LexicalEntry .
 	:le_6Fv716M0fZcW3yAE7005Jb rdfs:label "GRB"@en .
 	:le_6Fv716M0fZcW3yAE7005Jb vs:term_status "working" .
 	:le_6Fv716M0fZcW3yAE7005Jb dct:creator "kicco" .
-	:le_6Fv716M0fZcW3yAE7005Jb dct:created "2023-04-08T13:00+02:00" .
-	:le_6Fv716M0fZcW3yAE7005Jb dct:modified "2023-04-08T13:00+02:00" .
+	:le_6Fv716M0fZcW3yAE7005Jb dct:created "2023-04-08T17:53+02:00" .
+	:le_6Fv716M0fZcW3yAE7005Jb dct:modified "2023-04-08T17:53+02:00" .
 	:le_6Fv716M0fZcW3yAE7005Jb ontolex:sense :le_6Fv716M0fZcW3yAE7005Jb_sense .
 	:le_6Fv716M0fZcW3yAE7005Jb_sense rdf:type ontolex:LexicalSense .
 	:le_6Fv716M0fZcW3yAE7005Jb_sense ontolex:reference :concept_c4 .
 	:le_6Fv716M0fZcW3yAE7005Jb_sense dct:creator "kicco" .
-	:le_6Fv716M0fZcW3yAE7005Jb_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_6Fv716M0fZcW3yAE7005Jb_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_6Fv716M0fZcW3yAE7005Jb_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_6Fv716M0fZcW3yAE7005Jb_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_6Fv716M0fZcW3yAE7005Jb ontolex:canonicalForm :le_6Fv716M0fZcW3yAE7005Jb_lemma .
 	:le_6Fv716M0fZcW3yAE7005Jb_lemma rdf:type ontolex:Form .
 	:le_6Fv716M0fZcW3yAE7005Jb_lemma ontolex:writtenRep "GRB"@en .
 	:le_6Fv716M0fZcW3yAE7005Jb_lemma dct:creator "kicco" .
-	:le_6Fv716M0fZcW3yAE7005Jb_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_6Fv716M0fZcW3yAE7005Jb_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_6Fv716M0fZcW3yAE7005Jb_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_6Fv716M0fZcW3yAE7005Jb_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_6s00dBaIk8U3xqXQPfPcnp .
 	:le_6s00dBaIk8U3xqXQPfPcnp rdf:type ontolex:LexicalEntry .
 	:le_6s00dBaIk8U3xqXQPfPcnp rdfs:label "explosión de rayos gamma"@es .
 	:le_6s00dBaIk8U3xqXQPfPcnp vs:term_status "working" .
 	:le_6s00dBaIk8U3xqXQPfPcnp dct:creator "kicco" .
-	:le_6s00dBaIk8U3xqXQPfPcnp dct:created "2023-04-08T13:00+02:00" .
-	:le_6s00dBaIk8U3xqXQPfPcnp dct:modified "2023-04-08T13:00+02:00" .
+	:le_6s00dBaIk8U3xqXQPfPcnp dct:created "2023-04-08T17:53+02:00" .
+	:le_6s00dBaIk8U3xqXQPfPcnp dct:modified "2023-04-08T17:53+02:00" .
 	:le_6s00dBaIk8U3xqXQPfPcnp ontolex:sense :le_6s00dBaIk8U3xqXQPfPcnp_sense .
 	:le_6s00dBaIk8U3xqXQPfPcnp_sense rdf:type ontolex:LexicalSense .
 	:le_6s00dBaIk8U3xqXQPfPcnp_sense ontolex:reference :concept_c4 .
 	:le_6s00dBaIk8U3xqXQPfPcnp_sense dct:creator "kicco" .
-	:le_6s00dBaIk8U3xqXQPfPcnp_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_6s00dBaIk8U3xqXQPfPcnp_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_6s00dBaIk8U3xqXQPfPcnp_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_6s00dBaIk8U3xqXQPfPcnp_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_6s00dBaIk8U3xqXQPfPcnp ontolex:canonicalForm :le_6s00dBaIk8U3xqXQPfPcnp_lemma .
 	:le_6s00dBaIk8U3xqXQPfPcnp_lemma rdf:type ontolex:Form .
 	:le_6s00dBaIk8U3xqXQPfPcnp_lemma ontolex:writtenRep "explosión de rayos gamma"@es .
 	:le_6s00dBaIk8U3xqXQPfPcnp_lemma dct:creator "kicco" .
-	:le_6s00dBaIk8U3xqXQPfPcnp_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_6s00dBaIk8U3xqXQPfPcnp_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_6s00dBaIk8U3xqXQPfPcnp_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_6s00dBaIk8U3xqXQPfPcnp_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_1uwv1y7zF80rSfChhSl23F .
 	:le_1uwv1y7zF80rSfChhSl23F rdf:type ontolex:LexicalEntry .
 	:le_1uwv1y7zF80rSfChhSl23F rdfs:label "brote de rayos gamma"@es .
 	:le_1uwv1y7zF80rSfChhSl23F vs:term_status "working" .
 	:le_1uwv1y7zF80rSfChhSl23F dct:creator "kicco" .
-	:le_1uwv1y7zF80rSfChhSl23F dct:created "2023-04-08T13:00+02:00" .
-	:le_1uwv1y7zF80rSfChhSl23F dct:modified "2023-04-08T13:00+02:00" .
+	:le_1uwv1y7zF80rSfChhSl23F dct:created "2023-04-08T17:53+02:00" .
+	:le_1uwv1y7zF80rSfChhSl23F dct:modified "2023-04-08T17:53+02:00" .
 	:le_1uwv1y7zF80rSfChhSl23F ontolex:sense :le_1uwv1y7zF80rSfChhSl23F_sense .
 	:le_1uwv1y7zF80rSfChhSl23F_sense rdf:type ontolex:LexicalSense .
 	:le_1uwv1y7zF80rSfChhSl23F_sense ontolex:reference :concept_c4 .
 	:le_1uwv1y7zF80rSfChhSl23F_sense dct:creator "kicco" .
-	:le_1uwv1y7zF80rSfChhSl23F_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1uwv1y7zF80rSfChhSl23F_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1uwv1y7zF80rSfChhSl23F_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1uwv1y7zF80rSfChhSl23F_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1uwv1y7zF80rSfChhSl23F ontolex:canonicalForm :le_1uwv1y7zF80rSfChhSl23F_lemma .
 	:le_1uwv1y7zF80rSfChhSl23F_lemma rdf:type ontolex:Form .
 	:le_1uwv1y7zF80rSfChhSl23F_lemma ontolex:writtenRep "brote de rayos gamma"@es .
 	:le_1uwv1y7zF80rSfChhSl23F_lemma dct:creator "kicco" .
-	:le_1uwv1y7zF80rSfChhSl23F_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1uwv1y7zF80rSfChhSl23F_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1uwv1y7zF80rSfChhSl23F_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1uwv1y7zF80rSfChhSl23F_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c5 rdf:type skos:Concept .
 	:concept_c5 skos:prefLabel "c5" .
 	:tbx_en lime:entry :le_3VuZl2L7sXjAbcGZ8B6pk2 .
@@ -302,40 +301,40 @@ INSERT DATA {
 	:le_3VuZl2L7sXjAbcGZ8B6pk2 rdfs:label "globular cluster"@en .
 	:le_3VuZl2L7sXjAbcGZ8B6pk2 vs:term_status "working" .
 	:le_3VuZl2L7sXjAbcGZ8B6pk2 dct:creator "kicco" .
-	:le_3VuZl2L7sXjAbcGZ8B6pk2 dct:created "2023-04-08T13:00+02:00" .
-	:le_3VuZl2L7sXjAbcGZ8B6pk2 dct:modified "2023-04-08T13:00+02:00" .
+	:le_3VuZl2L7sXjAbcGZ8B6pk2 dct:created "2023-04-08T17:53+02:00" .
+	:le_3VuZl2L7sXjAbcGZ8B6pk2 dct:modified "2023-04-08T17:53+02:00" .
 	:le_3VuZl2L7sXjAbcGZ8B6pk2 ontolex:sense :le_3VuZl2L7sXjAbcGZ8B6pk2_sense .
 	:le_3VuZl2L7sXjAbcGZ8B6pk2_sense rdf:type ontolex:LexicalSense .
 	:le_3VuZl2L7sXjAbcGZ8B6pk2_sense ontolex:reference :concept_c5 .
 	:le_3VuZl2L7sXjAbcGZ8B6pk2_sense dct:creator "kicco" .
-	:le_3VuZl2L7sXjAbcGZ8B6pk2_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_3VuZl2L7sXjAbcGZ8B6pk2_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_3VuZl2L7sXjAbcGZ8B6pk2_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_3VuZl2L7sXjAbcGZ8B6pk2_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_3VuZl2L7sXjAbcGZ8B6pk2 ontolex:canonicalForm :le_3VuZl2L7sXjAbcGZ8B6pk2_lemma .
 	:le_3VuZl2L7sXjAbcGZ8B6pk2_lemma rdf:type ontolex:Form .
 	:le_3VuZl2L7sXjAbcGZ8B6pk2_lemma ontolex:writtenRep "globular cluster"@en .
 	:le_3VuZl2L7sXjAbcGZ8B6pk2_lemma dct:creator "kicco" .
-	:le_3VuZl2L7sXjAbcGZ8B6pk2_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_3VuZl2L7sXjAbcGZ8B6pk2_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_3VuZl2L7sXjAbcGZ8B6pk2_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_3VuZl2L7sXjAbcGZ8B6pk2_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_3VuZl2L7sXjAbcGZ8B6pk2 skos:note "Related Term: star cluster" .
 	:tbx_es lime:entry :le_7McpzZgm6BNBLAhdRkA62H .
 	:le_7McpzZgm6BNBLAhdRkA62H rdf:type ontolex:LexicalEntry .
 	:le_7McpzZgm6BNBLAhdRkA62H rdfs:label "cúmulo globular"@es .
 	:le_7McpzZgm6BNBLAhdRkA62H vs:term_status "working" .
 	:le_7McpzZgm6BNBLAhdRkA62H dct:creator "kicco" .
-	:le_7McpzZgm6BNBLAhdRkA62H dct:created "2023-04-08T13:00+02:00" .
-	:le_7McpzZgm6BNBLAhdRkA62H dct:modified "2023-04-08T13:00+02:00" .
+	:le_7McpzZgm6BNBLAhdRkA62H dct:created "2023-04-08T17:53+02:00" .
+	:le_7McpzZgm6BNBLAhdRkA62H dct:modified "2023-04-08T17:53+02:00" .
 	:le_7McpzZgm6BNBLAhdRkA62H ontolex:sense :le_7McpzZgm6BNBLAhdRkA62H_sense .
 	:le_7McpzZgm6BNBLAhdRkA62H_sense rdf:type ontolex:LexicalSense .
 	:le_7McpzZgm6BNBLAhdRkA62H_sense ontolex:reference :concept_c5 .
 	:le_7McpzZgm6BNBLAhdRkA62H_sense dct:creator "kicco" .
-	:le_7McpzZgm6BNBLAhdRkA62H_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_7McpzZgm6BNBLAhdRkA62H_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_7McpzZgm6BNBLAhdRkA62H_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_7McpzZgm6BNBLAhdRkA62H_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_7McpzZgm6BNBLAhdRkA62H ontolex:canonicalForm :le_7McpzZgm6BNBLAhdRkA62H_lemma .
 	:le_7McpzZgm6BNBLAhdRkA62H_lemma rdf:type ontolex:Form .
 	:le_7McpzZgm6BNBLAhdRkA62H_lemma ontolex:writtenRep "cúmulo globular"@es .
 	:le_7McpzZgm6BNBLAhdRkA62H_lemma dct:creator "kicco" .
-	:le_7McpzZgm6BNBLAhdRkA62H_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_7McpzZgm6BNBLAhdRkA62H_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_7McpzZgm6BNBLAhdRkA62H_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_7McpzZgm6BNBLAhdRkA62H_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_7McpzZgm6BNBLAhdRkA62H skos:note "Related Term: cúmulo estelar" .
 	:concept_c6 rdf:type skos:Concept .
 	:concept_c6 skos:prefLabel "c6" .
@@ -344,39 +343,39 @@ INSERT DATA {
 	:le_1nlPV9LtjMgPKHie434KWB rdfs:label "main-sequence"@en .
 	:le_1nlPV9LtjMgPKHie434KWB vs:term_status "working" .
 	:le_1nlPV9LtjMgPKHie434KWB dct:creator "kicco" .
-	:le_1nlPV9LtjMgPKHie434KWB dct:created "2023-04-08T13:00+02:00" .
-	:le_1nlPV9LtjMgPKHie434KWB dct:modified "2023-04-08T13:00+02:00" .
+	:le_1nlPV9LtjMgPKHie434KWB dct:created "2023-04-08T17:53+02:00" .
+	:le_1nlPV9LtjMgPKHie434KWB dct:modified "2023-04-08T17:53+02:00" .
 	:le_1nlPV9LtjMgPKHie434KWB ontolex:sense :le_1nlPV9LtjMgPKHie434KWB_sense .
 	:le_1nlPV9LtjMgPKHie434KWB_sense rdf:type ontolex:LexicalSense .
 	:le_1nlPV9LtjMgPKHie434KWB_sense ontolex:reference :concept_c6 .
 	:le_1nlPV9LtjMgPKHie434KWB_sense dct:creator "kicco" .
-	:le_1nlPV9LtjMgPKHie434KWB_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1nlPV9LtjMgPKHie434KWB_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1nlPV9LtjMgPKHie434KWB_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1nlPV9LtjMgPKHie434KWB_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1nlPV9LtjMgPKHie434KWB ontolex:canonicalForm :le_1nlPV9LtjMgPKHie434KWB_lemma .
 	:le_1nlPV9LtjMgPKHie434KWB_lemma rdf:type ontolex:Form .
 	:le_1nlPV9LtjMgPKHie434KWB_lemma ontolex:writtenRep "main-sequence"@en .
 	:le_1nlPV9LtjMgPKHie434KWB_lemma dct:creator "kicco" .
-	:le_1nlPV9LtjMgPKHie434KWB_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1nlPV9LtjMgPKHie434KWB_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1nlPV9LtjMgPKHie434KWB_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1nlPV9LtjMgPKHie434KWB_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_A8AVASIy7i40r7bb7gazM .
 	:le_A8AVASIy7i40r7bb7gazM rdf:type ontolex:LexicalEntry .
 	:le_A8AVASIy7i40r7bb7gazM rdfs:label "de secuencia principal"@es .
 	:le_A8AVASIy7i40r7bb7gazM vs:term_status "working" .
 	:le_A8AVASIy7i40r7bb7gazM dct:creator "kicco" .
-	:le_A8AVASIy7i40r7bb7gazM dct:created "2023-04-08T13:00+02:00" .
-	:le_A8AVASIy7i40r7bb7gazM dct:modified "2023-04-08T13:00+02:00" .
+	:le_A8AVASIy7i40r7bb7gazM dct:created "2023-04-08T17:53+02:00" .
+	:le_A8AVASIy7i40r7bb7gazM dct:modified "2023-04-08T17:53+02:00" .
 	:le_A8AVASIy7i40r7bb7gazM ontolex:sense :le_A8AVASIy7i40r7bb7gazM_sense .
 	:le_A8AVASIy7i40r7bb7gazM_sense rdf:type ontolex:LexicalSense .
 	:le_A8AVASIy7i40r7bb7gazM_sense ontolex:reference :concept_c6 .
 	:le_A8AVASIy7i40r7bb7gazM_sense dct:creator "kicco" .
-	:le_A8AVASIy7i40r7bb7gazM_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_A8AVASIy7i40r7bb7gazM_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_A8AVASIy7i40r7bb7gazM_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_A8AVASIy7i40r7bb7gazM_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_A8AVASIy7i40r7bb7gazM ontolex:canonicalForm :le_A8AVASIy7i40r7bb7gazM_lemma .
 	:le_A8AVASIy7i40r7bb7gazM_lemma rdf:type ontolex:Form .
 	:le_A8AVASIy7i40r7bb7gazM_lemma ontolex:writtenRep "de secuencia principal"@es .
 	:le_A8AVASIy7i40r7bb7gazM_lemma dct:creator "kicco" .
-	:le_A8AVASIy7i40r7bb7gazM_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_A8AVASIy7i40r7bb7gazM_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_A8AVASIy7i40r7bb7gazM_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_A8AVASIy7i40r7bb7gazM_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c7 rdf:type skos:Concept .
 	:concept_c7 skos:prefLabel "c7" .
 	:tbx_en lime:entry :le_6bPHnCMToDJYRIDk6Y58fn .
@@ -384,39 +383,39 @@ INSERT DATA {
 	:le_6bPHnCMToDJYRIDk6Y58fn rdfs:label "protostar"@en .
 	:le_6bPHnCMToDJYRIDk6Y58fn vs:term_status "working" .
 	:le_6bPHnCMToDJYRIDk6Y58fn dct:creator "kicco" .
-	:le_6bPHnCMToDJYRIDk6Y58fn dct:created "2023-04-08T13:00+02:00" .
-	:le_6bPHnCMToDJYRIDk6Y58fn dct:modified "2023-04-08T13:00+02:00" .
+	:le_6bPHnCMToDJYRIDk6Y58fn dct:created "2023-04-08T17:53+02:00" .
+	:le_6bPHnCMToDJYRIDk6Y58fn dct:modified "2023-04-08T17:53+02:00" .
 	:le_6bPHnCMToDJYRIDk6Y58fn ontolex:sense :le_6bPHnCMToDJYRIDk6Y58fn_sense .
 	:le_6bPHnCMToDJYRIDk6Y58fn_sense rdf:type ontolex:LexicalSense .
 	:le_6bPHnCMToDJYRIDk6Y58fn_sense ontolex:reference :concept_c7 .
 	:le_6bPHnCMToDJYRIDk6Y58fn_sense dct:creator "kicco" .
-	:le_6bPHnCMToDJYRIDk6Y58fn_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_6bPHnCMToDJYRIDk6Y58fn_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_6bPHnCMToDJYRIDk6Y58fn_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_6bPHnCMToDJYRIDk6Y58fn_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_6bPHnCMToDJYRIDk6Y58fn ontolex:canonicalForm :le_6bPHnCMToDJYRIDk6Y58fn_lemma .
 	:le_6bPHnCMToDJYRIDk6Y58fn_lemma rdf:type ontolex:Form .
 	:le_6bPHnCMToDJYRIDk6Y58fn_lemma ontolex:writtenRep "protostar"@en .
 	:le_6bPHnCMToDJYRIDk6Y58fn_lemma dct:creator "kicco" .
-	:le_6bPHnCMToDJYRIDk6Y58fn_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_6bPHnCMToDJYRIDk6Y58fn_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_6bPHnCMToDJYRIDk6Y58fn_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_6bPHnCMToDJYRIDk6Y58fn_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_1yd29x4OJUXiHPQxj7DyRk .
 	:le_1yd29x4OJUXiHPQxj7DyRk rdf:type ontolex:LexicalEntry .
 	:le_1yd29x4OJUXiHPQxj7DyRk rdfs:label "protoestrella"@es .
 	:le_1yd29x4OJUXiHPQxj7DyRk vs:term_status "working" .
 	:le_1yd29x4OJUXiHPQxj7DyRk dct:creator "kicco" .
-	:le_1yd29x4OJUXiHPQxj7DyRk dct:created "2023-04-08T13:00+02:00" .
-	:le_1yd29x4OJUXiHPQxj7DyRk dct:modified "2023-04-08T13:00+02:00" .
+	:le_1yd29x4OJUXiHPQxj7DyRk dct:created "2023-04-08T17:53+02:00" .
+	:le_1yd29x4OJUXiHPQxj7DyRk dct:modified "2023-04-08T17:53+02:00" .
 	:le_1yd29x4OJUXiHPQxj7DyRk ontolex:sense :le_1yd29x4OJUXiHPQxj7DyRk_sense .
 	:le_1yd29x4OJUXiHPQxj7DyRk_sense rdf:type ontolex:LexicalSense .
 	:le_1yd29x4OJUXiHPQxj7DyRk_sense ontolex:reference :concept_c7 .
 	:le_1yd29x4OJUXiHPQxj7DyRk_sense dct:creator "kicco" .
-	:le_1yd29x4OJUXiHPQxj7DyRk_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1yd29x4OJUXiHPQxj7DyRk_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1yd29x4OJUXiHPQxj7DyRk_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1yd29x4OJUXiHPQxj7DyRk_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1yd29x4OJUXiHPQxj7DyRk ontolex:canonicalForm :le_1yd29x4OJUXiHPQxj7DyRk_lemma .
 	:le_1yd29x4OJUXiHPQxj7DyRk_lemma rdf:type ontolex:Form .
 	:le_1yd29x4OJUXiHPQxj7DyRk_lemma ontolex:writtenRep "protoestrella"@es .
 	:le_1yd29x4OJUXiHPQxj7DyRk_lemma dct:creator "kicco" .
-	:le_1yd29x4OJUXiHPQxj7DyRk_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1yd29x4OJUXiHPQxj7DyRk_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1yd29x4OJUXiHPQxj7DyRk_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1yd29x4OJUXiHPQxj7DyRk_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c8 rdf:type skos:Concept .
 	:concept_c8 skos:prefLabel "c8" .
 	:tbx_en lime:entry :le_4Uj8LL1AEEfhN9b2zJ2ZEP .
@@ -424,62 +423,60 @@ INSERT DATA {
 	:le_4Uj8LL1AEEfhN9b2zJ2ZEP rdfs:label "star cluster"@en .
 	:le_4Uj8LL1AEEfhN9b2zJ2ZEP vs:term_status "working" .
 	:le_4Uj8LL1AEEfhN9b2zJ2ZEP dct:creator "kicco" .
-	:le_4Uj8LL1AEEfhN9b2zJ2ZEP dct:created "2023-04-08T13:00+02:00" .
-	:le_4Uj8LL1AEEfhN9b2zJ2ZEP dct:modified "2023-04-08T13:00+02:00" .
+	:le_4Uj8LL1AEEfhN9b2zJ2ZEP dct:created "2023-04-08T17:53+02:00" .
+	:le_4Uj8LL1AEEfhN9b2zJ2ZEP dct:modified "2023-04-08T17:53+02:00" .
 	:le_4Uj8LL1AEEfhN9b2zJ2ZEP ontolex:sense :le_4Uj8LL1AEEfhN9b2zJ2ZEP_sense .
 	:le_4Uj8LL1AEEfhN9b2zJ2ZEP_sense rdf:type ontolex:LexicalSense .
 	:le_4Uj8LL1AEEfhN9b2zJ2ZEP_sense ontolex:reference :concept_c8 .
 	:le_4Uj8LL1AEEfhN9b2zJ2ZEP_sense dct:creator "kicco" .
-	:le_4Uj8LL1AEEfhN9b2zJ2ZEP_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_4Uj8LL1AEEfhN9b2zJ2ZEP_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_4Uj8LL1AEEfhN9b2zJ2ZEP_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_4Uj8LL1AEEfhN9b2zJ2ZEP_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_4Uj8LL1AEEfhN9b2zJ2ZEP ontolex:canonicalForm :le_4Uj8LL1AEEfhN9b2zJ2ZEP_lemma .
 	:le_4Uj8LL1AEEfhN9b2zJ2ZEP_lemma rdf:type ontolex:Form .
 	:le_4Uj8LL1AEEfhN9b2zJ2ZEP_lemma ontolex:writtenRep "star cluster"@en .
 	:le_4Uj8LL1AEEfhN9b2zJ2ZEP_lemma dct:creator "kicco" .
-	:le_4Uj8LL1AEEfhN9b2zJ2ZEP_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_4Uj8LL1AEEfhN9b2zJ2ZEP_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_4Uj8LL1AEEfhN9b2zJ2ZEP_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_4Uj8LL1AEEfhN9b2zJ2ZEP_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_4Uj8LL1AEEfhN9b2zJ2ZEP skos:note "Related Term: globular cluster" .
 	:tbx_es lime:entry :le_4nDouQYmDWmD3e6WvlDQ6M .
 	:le_4nDouQYmDWmD3e6WvlDQ6M rdf:type ontolex:LexicalEntry .
 	:le_4nDouQYmDWmD3e6WvlDQ6M rdfs:label "cúmulo estelar"@es .
 	:le_4nDouQYmDWmD3e6WvlDQ6M vs:term_status "working" .
 	:le_4nDouQYmDWmD3e6WvlDQ6M dct:creator "kicco" .
-	:le_4nDouQYmDWmD3e6WvlDQ6M dct:created "2023-04-08T13:00+02:00" .
-	:le_4nDouQYmDWmD3e6WvlDQ6M dct:modified "2023-04-08T13:00+02:00" .
+	:le_4nDouQYmDWmD3e6WvlDQ6M dct:created "2023-04-08T17:53+02:00" .
+	:le_4nDouQYmDWmD3e6WvlDQ6M dct:modified "2023-04-08T17:53+02:00" .
 	:le_4nDouQYmDWmD3e6WvlDQ6M ontolex:sense :le_4nDouQYmDWmD3e6WvlDQ6M_sense .
 	:le_4nDouQYmDWmD3e6WvlDQ6M_sense rdf:type ontolex:LexicalSense .
 	:le_4nDouQYmDWmD3e6WvlDQ6M_sense ontolex:reference :concept_c8 .
 	:le_4nDouQYmDWmD3e6WvlDQ6M_sense dct:creator "kicco" .
-	:le_4nDouQYmDWmD3e6WvlDQ6M_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_4nDouQYmDWmD3e6WvlDQ6M_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_4nDouQYmDWmD3e6WvlDQ6M_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_4nDouQYmDWmD3e6WvlDQ6M_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_4nDouQYmDWmD3e6WvlDQ6M ontolex:canonicalForm :le_4nDouQYmDWmD3e6WvlDQ6M_lemma .
 	:le_4nDouQYmDWmD3e6WvlDQ6M_lemma rdf:type ontolex:Form .
 	:le_4nDouQYmDWmD3e6WvlDQ6M_lemma ontolex:writtenRep "cúmulo estelar"@es .
 	:le_4nDouQYmDWmD3e6WvlDQ6M_lemma dct:creator "kicco" .
-	:le_4nDouQYmDWmD3e6WvlDQ6M_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_4nDouQYmDWmD3e6WvlDQ6M_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_4nDouQYmDWmD3e6WvlDQ6M_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_4nDouQYmDWmD3e6WvlDQ6M_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_MU2nLbU9W3UIcW4Xcb3CB .
 	:le_MU2nLbU9W3UIcW4Xcb3CB rdf:type ontolex:LexicalEntry .
 	:le_MU2nLbU9W3UIcW4Xcb3CB rdfs:label "cúmulo de estrellas"@es .
 	:le_MU2nLbU9W3UIcW4Xcb3CB vs:term_status "working" .
 	:le_MU2nLbU9W3UIcW4Xcb3CB dct:creator "kicco" .
-	:le_MU2nLbU9W3UIcW4Xcb3CB dct:created "2023-04-08T13:00+02:00" .
-	:le_MU2nLbU9W3UIcW4Xcb3CB dct:modified "2023-04-08T13:00+02:00" .
+	:le_MU2nLbU9W3UIcW4Xcb3CB dct:created "2023-04-08T17:53+02:00" .
+	:le_MU2nLbU9W3UIcW4Xcb3CB dct:modified "2023-04-08T17:53+02:00" .
 	:le_MU2nLbU9W3UIcW4Xcb3CB ontolex:sense :le_MU2nLbU9W3UIcW4Xcb3CB_sense .
 	:le_MU2nLbU9W3UIcW4Xcb3CB_sense rdf:type ontolex:LexicalSense .
 	:le_MU2nLbU9W3UIcW4Xcb3CB_sense ontolex:reference :concept_c8 .
 	:le_MU2nLbU9W3UIcW4Xcb3CB_sense dct:creator "kicco" .
-	:le_MU2nLbU9W3UIcW4Xcb3CB_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_MU2nLbU9W3UIcW4Xcb3CB_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_MU2nLbU9W3UIcW4Xcb3CB_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_MU2nLbU9W3UIcW4Xcb3CB_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_MU2nLbU9W3UIcW4Xcb3CB ontolex:canonicalForm :le_MU2nLbU9W3UIcW4Xcb3CB_lemma .
 	:le_MU2nLbU9W3UIcW4Xcb3CB_lemma rdf:type ontolex:Form .
 	:le_MU2nLbU9W3UIcW4Xcb3CB_lemma ontolex:writtenRep "cúmulo de estrellas"@es .
 	:le_MU2nLbU9W3UIcW4Xcb3CB_lemma dct:creator "kicco" .
-	:le_MU2nLbU9W3UIcW4Xcb3CB_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_MU2nLbU9W3UIcW4Xcb3CB_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_MU2nLbU9W3UIcW4Xcb3CB_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_MU2nLbU9W3UIcW4Xcb3CB_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_MU2nLbU9W3UIcW4Xcb3CB skos:note "Related Term: cúmulo globular" .
-	:concept_c8 skos:note "Related Term: cúmulo globular"@es .
-	:concept_c8 skos:note "Related Term: cúmulo globular" .
 	:concept_c9 rdf:type skos:Concept .
 	:concept_c9 skos:prefLabel "c9" .
 	:tbx_en lime:entry :le_6p3EWg64SUMYBsB7XHJij9 .
@@ -487,115 +484,115 @@ INSERT DATA {
 	:le_6p3EWg64SUMYBsB7XHJij9 rdfs:label "Galaxy"@en .
 	:le_6p3EWg64SUMYBsB7XHJij9 vs:term_status "working" .
 	:le_6p3EWg64SUMYBsB7XHJij9 dct:creator "kicco" .
-	:le_6p3EWg64SUMYBsB7XHJij9 dct:created "2023-04-08T13:00+02:00" .
-	:le_6p3EWg64SUMYBsB7XHJij9 dct:modified "2023-04-08T13:00+02:00" .
+	:le_6p3EWg64SUMYBsB7XHJij9 dct:created "2023-04-08T17:53+02:00" .
+	:le_6p3EWg64SUMYBsB7XHJij9 dct:modified "2023-04-08T17:53+02:00" .
 	:le_6p3EWg64SUMYBsB7XHJij9 ontolex:sense :le_6p3EWg64SUMYBsB7XHJij9_sense .
 	:le_6p3EWg64SUMYBsB7XHJij9_sense rdf:type ontolex:LexicalSense .
 	:le_6p3EWg64SUMYBsB7XHJij9_sense ontolex:reference :concept_c9 .
 	:le_6p3EWg64SUMYBsB7XHJij9_sense dct:creator "kicco" .
-	:le_6p3EWg64SUMYBsB7XHJij9_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_6p3EWg64SUMYBsB7XHJij9_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_6p3EWg64SUMYBsB7XHJij9_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_6p3EWg64SUMYBsB7XHJij9_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_6p3EWg64SUMYBsB7XHJij9 ontolex:canonicalForm :le_6p3EWg64SUMYBsB7XHJij9_lemma .
 	:le_6p3EWg64SUMYBsB7XHJij9_lemma rdf:type ontolex:Form .
 	:le_6p3EWg64SUMYBsB7XHJij9_lemma ontolex:writtenRep "Galaxy"@en .
 	:le_6p3EWg64SUMYBsB7XHJij9_lemma dct:creator "kicco" .
-	:le_6p3EWg64SUMYBsB7XHJij9_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_6p3EWg64SUMYBsB7XHJij9_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_6p3EWg64SUMYBsB7XHJij9_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_6p3EWg64SUMYBsB7XHJij9_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_439hxHe1QpygNEK3xo8nJe .
 	:le_439hxHe1QpygNEK3xo8nJe rdf:type ontolex:LexicalEntry .
 	:le_439hxHe1QpygNEK3xo8nJe rdfs:label "Milky Way Galaxy"@en .
 	:le_439hxHe1QpygNEK3xo8nJe vs:term_status "working" .
 	:le_439hxHe1QpygNEK3xo8nJe dct:creator "kicco" .
-	:le_439hxHe1QpygNEK3xo8nJe dct:created "2023-04-08T13:00+02:00" .
-	:le_439hxHe1QpygNEK3xo8nJe dct:modified "2023-04-08T13:00+02:00" .
+	:le_439hxHe1QpygNEK3xo8nJe dct:created "2023-04-08T17:53+02:00" .
+	:le_439hxHe1QpygNEK3xo8nJe dct:modified "2023-04-08T17:53+02:00" .
 	:le_439hxHe1QpygNEK3xo8nJe ontolex:sense :le_439hxHe1QpygNEK3xo8nJe_sense .
 	:le_439hxHe1QpygNEK3xo8nJe_sense rdf:type ontolex:LexicalSense .
 	:le_439hxHe1QpygNEK3xo8nJe_sense ontolex:reference :concept_c9 .
 	:le_439hxHe1QpygNEK3xo8nJe_sense dct:creator "kicco" .
-	:le_439hxHe1QpygNEK3xo8nJe_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_439hxHe1QpygNEK3xo8nJe_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_439hxHe1QpygNEK3xo8nJe_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_439hxHe1QpygNEK3xo8nJe_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_439hxHe1QpygNEK3xo8nJe ontolex:canonicalForm :le_439hxHe1QpygNEK3xo8nJe_lemma .
 	:le_439hxHe1QpygNEK3xo8nJe_lemma rdf:type ontolex:Form .
 	:le_439hxHe1QpygNEK3xo8nJe_lemma ontolex:writtenRep "Milky Way Galaxy"@en .
 	:le_439hxHe1QpygNEK3xo8nJe_lemma dct:creator "kicco" .
-	:le_439hxHe1QpygNEK3xo8nJe_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_439hxHe1QpygNEK3xo8nJe_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_439hxHe1QpygNEK3xo8nJe_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_439hxHe1QpygNEK3xo8nJe_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_4Nww7mnC4ELezFtmvkA1HJ .
 	:le_4Nww7mnC4ELezFtmvkA1HJ rdf:type ontolex:LexicalEntry .
 	:le_4Nww7mnC4ELezFtmvkA1HJ rdfs:label "Milky Way"@en .
 	:le_4Nww7mnC4ELezFtmvkA1HJ vs:term_status "working" .
 	:le_4Nww7mnC4ELezFtmvkA1HJ dct:creator "kicco" .
-	:le_4Nww7mnC4ELezFtmvkA1HJ dct:created "2023-04-08T13:00+02:00" .
-	:le_4Nww7mnC4ELezFtmvkA1HJ dct:modified "2023-04-08T13:00+02:00" .
+	:le_4Nww7mnC4ELezFtmvkA1HJ dct:created "2023-04-08T17:53+02:00" .
+	:le_4Nww7mnC4ELezFtmvkA1HJ dct:modified "2023-04-08T17:53+02:00" .
 	:le_4Nww7mnC4ELezFtmvkA1HJ ontolex:sense :le_4Nww7mnC4ELezFtmvkA1HJ_sense .
 	:le_4Nww7mnC4ELezFtmvkA1HJ_sense rdf:type ontolex:LexicalSense .
 	:le_4Nww7mnC4ELezFtmvkA1HJ_sense ontolex:reference :concept_c9 .
 	:le_4Nww7mnC4ELezFtmvkA1HJ_sense dct:creator "kicco" .
-	:le_4Nww7mnC4ELezFtmvkA1HJ_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_4Nww7mnC4ELezFtmvkA1HJ_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_4Nww7mnC4ELezFtmvkA1HJ_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_4Nww7mnC4ELezFtmvkA1HJ_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_4Nww7mnC4ELezFtmvkA1HJ ontolex:canonicalForm :le_4Nww7mnC4ELezFtmvkA1HJ_lemma .
 	:le_4Nww7mnC4ELezFtmvkA1HJ_lemma rdf:type ontolex:Form .
 	:le_4Nww7mnC4ELezFtmvkA1HJ_lemma ontolex:writtenRep "Milky Way"@en .
 	:le_4Nww7mnC4ELezFtmvkA1HJ_lemma dct:creator "kicco" .
-	:le_4Nww7mnC4ELezFtmvkA1HJ_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_4Nww7mnC4ELezFtmvkA1HJ_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_4Nww7mnC4ELezFtmvkA1HJ_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_4Nww7mnC4ELezFtmvkA1HJ_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_6Nub5UXoSJknfiEctpPt8x .
 	:le_6Nub5UXoSJknfiEctpPt8x rdf:type ontolex:LexicalEntry .
 	:le_6Nub5UXoSJknfiEctpPt8x rdfs:label "Galaxia"@es .
 	:le_6Nub5UXoSJknfiEctpPt8x vs:term_status "working" .
 	:le_6Nub5UXoSJknfiEctpPt8x dct:creator "kicco" .
-	:le_6Nub5UXoSJknfiEctpPt8x dct:created "2023-04-08T13:00+02:00" .
-	:le_6Nub5UXoSJknfiEctpPt8x dct:modified "2023-04-08T13:00+02:00" .
+	:le_6Nub5UXoSJknfiEctpPt8x dct:created "2023-04-08T17:53+02:00" .
+	:le_6Nub5UXoSJknfiEctpPt8x dct:modified "2023-04-08T17:53+02:00" .
 	:le_6Nub5UXoSJknfiEctpPt8x ontolex:sense :le_6Nub5UXoSJknfiEctpPt8x_sense .
 	:le_6Nub5UXoSJknfiEctpPt8x_sense rdf:type ontolex:LexicalSense .
 	:le_6Nub5UXoSJknfiEctpPt8x_sense ontolex:reference :concept_c9 .
 	:le_6Nub5UXoSJknfiEctpPt8x_sense dct:creator "kicco" .
-	:le_6Nub5UXoSJknfiEctpPt8x_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_6Nub5UXoSJknfiEctpPt8x_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_6Nub5UXoSJknfiEctpPt8x_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_6Nub5UXoSJknfiEctpPt8x_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_6Nub5UXoSJknfiEctpPt8x ontolex:canonicalForm :le_6Nub5UXoSJknfiEctpPt8x_lemma .
 	:le_6Nub5UXoSJknfiEctpPt8x_lemma rdf:type ontolex:Form .
 	:le_6Nub5UXoSJknfiEctpPt8x_lemma ontolex:writtenRep "Galaxia"@es .
 	:le_6Nub5UXoSJknfiEctpPt8x_lemma dct:creator "kicco" .
-	:le_6Nub5UXoSJknfiEctpPt8x_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_6Nub5UXoSJknfiEctpPt8x_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_6Nub5UXoSJknfiEctpPt8x_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_6Nub5UXoSJknfiEctpPt8x_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_4jNlDpxOu2aSnRuaX0NiRH .
 	:le_4jNlDpxOu2aSnRuaX0NiRH rdf:type ontolex:LexicalEntry .
 	:le_4jNlDpxOu2aSnRuaX0NiRH rdfs:label "Vía Láctea"@es .
 	:le_4jNlDpxOu2aSnRuaX0NiRH vs:term_status "working" .
 	:le_4jNlDpxOu2aSnRuaX0NiRH dct:creator "kicco" .
-	:le_4jNlDpxOu2aSnRuaX0NiRH dct:created "2023-04-08T13:00+02:00" .
-	:le_4jNlDpxOu2aSnRuaX0NiRH dct:modified "2023-04-08T13:00+02:00" .
+	:le_4jNlDpxOu2aSnRuaX0NiRH dct:created "2023-04-08T17:53+02:00" .
+	:le_4jNlDpxOu2aSnRuaX0NiRH dct:modified "2023-04-08T17:53+02:00" .
 	:le_4jNlDpxOu2aSnRuaX0NiRH ontolex:sense :le_4jNlDpxOu2aSnRuaX0NiRH_sense .
 	:le_4jNlDpxOu2aSnRuaX0NiRH_sense rdf:type ontolex:LexicalSense .
 	:le_4jNlDpxOu2aSnRuaX0NiRH_sense ontolex:reference :concept_c9 .
 	:le_4jNlDpxOu2aSnRuaX0NiRH_sense dct:creator "kicco" .
-	:le_4jNlDpxOu2aSnRuaX0NiRH_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_4jNlDpxOu2aSnRuaX0NiRH_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_4jNlDpxOu2aSnRuaX0NiRH_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_4jNlDpxOu2aSnRuaX0NiRH_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_4jNlDpxOu2aSnRuaX0NiRH ontolex:canonicalForm :le_4jNlDpxOu2aSnRuaX0NiRH_lemma .
 	:le_4jNlDpxOu2aSnRuaX0NiRH_lemma rdf:type ontolex:Form .
 	:le_4jNlDpxOu2aSnRuaX0NiRH_lemma ontolex:writtenRep "Vía Láctea"@es .
 	:le_4jNlDpxOu2aSnRuaX0NiRH_lemma dct:creator "kicco" .
-	:le_4jNlDpxOu2aSnRuaX0NiRH_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_4jNlDpxOu2aSnRuaX0NiRH_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_4jNlDpxOu2aSnRuaX0NiRH_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_4jNlDpxOu2aSnRuaX0NiRH_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_2thyyPV5uAI8KtD1yYB9gC .
 	:le_2thyyPV5uAI8KtD1yYB9gC rdf:type ontolex:LexicalEntry .
 	:le_2thyyPV5uAI8KtD1yYB9gC rdfs:label "galaxia Vía Láctea"@es .
 	:le_2thyyPV5uAI8KtD1yYB9gC vs:term_status "working" .
 	:le_2thyyPV5uAI8KtD1yYB9gC dct:creator "kicco" .
-	:le_2thyyPV5uAI8KtD1yYB9gC dct:created "2023-04-08T13:00+02:00" .
-	:le_2thyyPV5uAI8KtD1yYB9gC dct:modified "2023-04-08T13:00+02:00" .
+	:le_2thyyPV5uAI8KtD1yYB9gC dct:created "2023-04-08T17:53+02:00" .
+	:le_2thyyPV5uAI8KtD1yYB9gC dct:modified "2023-04-08T17:53+02:00" .
 	:le_2thyyPV5uAI8KtD1yYB9gC ontolex:sense :le_2thyyPV5uAI8KtD1yYB9gC_sense .
 	:le_2thyyPV5uAI8KtD1yYB9gC_sense rdf:type ontolex:LexicalSense .
 	:le_2thyyPV5uAI8KtD1yYB9gC_sense ontolex:reference :concept_c9 .
 	:le_2thyyPV5uAI8KtD1yYB9gC_sense dct:creator "kicco" .
-	:le_2thyyPV5uAI8KtD1yYB9gC_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_2thyyPV5uAI8KtD1yYB9gC_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_2thyyPV5uAI8KtD1yYB9gC_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_2thyyPV5uAI8KtD1yYB9gC_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_2thyyPV5uAI8KtD1yYB9gC ontolex:canonicalForm :le_2thyyPV5uAI8KtD1yYB9gC_lemma .
 	:le_2thyyPV5uAI8KtD1yYB9gC_lemma rdf:type ontolex:Form .
 	:le_2thyyPV5uAI8KtD1yYB9gC_lemma ontolex:writtenRep "galaxia Vía Láctea"@es .
 	:le_2thyyPV5uAI8KtD1yYB9gC_lemma dct:creator "kicco" .
-	:le_2thyyPV5uAI8KtD1yYB9gC_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_2thyyPV5uAI8KtD1yYB9gC_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_2thyyPV5uAI8KtD1yYB9gC_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_2thyyPV5uAI8KtD1yYB9gC_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c10 rdf:type skos:Concept .
 	:concept_c10 skos:prefLabel "c10" .
 	:tbx_en lime:entry :le_4NfqRDcLSwaHfiHTndBFTH .
@@ -603,39 +600,39 @@ INSERT DATA {
 	:le_4NfqRDcLSwaHfiHTndBFTH rdfs:label "star"@en .
 	:le_4NfqRDcLSwaHfiHTndBFTH vs:term_status "working" .
 	:le_4NfqRDcLSwaHfiHTndBFTH dct:creator "kicco" .
-	:le_4NfqRDcLSwaHfiHTndBFTH dct:created "2023-04-08T13:00+02:00" .
-	:le_4NfqRDcLSwaHfiHTndBFTH dct:modified "2023-04-08T13:00+02:00" .
+	:le_4NfqRDcLSwaHfiHTndBFTH dct:created "2023-04-08T17:53+02:00" .
+	:le_4NfqRDcLSwaHfiHTndBFTH dct:modified "2023-04-08T17:53+02:00" .
 	:le_4NfqRDcLSwaHfiHTndBFTH ontolex:sense :le_4NfqRDcLSwaHfiHTndBFTH_sense .
 	:le_4NfqRDcLSwaHfiHTndBFTH_sense rdf:type ontolex:LexicalSense .
 	:le_4NfqRDcLSwaHfiHTndBFTH_sense ontolex:reference :concept_c10 .
 	:le_4NfqRDcLSwaHfiHTndBFTH_sense dct:creator "kicco" .
-	:le_4NfqRDcLSwaHfiHTndBFTH_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_4NfqRDcLSwaHfiHTndBFTH_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_4NfqRDcLSwaHfiHTndBFTH_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_4NfqRDcLSwaHfiHTndBFTH_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_4NfqRDcLSwaHfiHTndBFTH ontolex:canonicalForm :le_4NfqRDcLSwaHfiHTndBFTH_lemma .
 	:le_4NfqRDcLSwaHfiHTndBFTH_lemma rdf:type ontolex:Form .
 	:le_4NfqRDcLSwaHfiHTndBFTH_lemma ontolex:writtenRep "star"@en .
 	:le_4NfqRDcLSwaHfiHTndBFTH_lemma dct:creator "kicco" .
-	:le_4NfqRDcLSwaHfiHTndBFTH_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_4NfqRDcLSwaHfiHTndBFTH_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_4NfqRDcLSwaHfiHTndBFTH_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_4NfqRDcLSwaHfiHTndBFTH_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_5BmmluyXzELvY9Jth9q9yq .
 	:le_5BmmluyXzELvY9Jth9q9yq rdf:type ontolex:LexicalEntry .
 	:le_5BmmluyXzELvY9Jth9q9yq rdfs:label "estrella"@es .
 	:le_5BmmluyXzELvY9Jth9q9yq vs:term_status "working" .
 	:le_5BmmluyXzELvY9Jth9q9yq dct:creator "kicco" .
-	:le_5BmmluyXzELvY9Jth9q9yq dct:created "2023-04-08T13:00+02:00" .
-	:le_5BmmluyXzELvY9Jth9q9yq dct:modified "2023-04-08T13:00+02:00" .
+	:le_5BmmluyXzELvY9Jth9q9yq dct:created "2023-04-08T17:53+02:00" .
+	:le_5BmmluyXzELvY9Jth9q9yq dct:modified "2023-04-08T17:53+02:00" .
 	:le_5BmmluyXzELvY9Jth9q9yq ontolex:sense :le_5BmmluyXzELvY9Jth9q9yq_sense .
 	:le_5BmmluyXzELvY9Jth9q9yq_sense rdf:type ontolex:LexicalSense .
 	:le_5BmmluyXzELvY9Jth9q9yq_sense ontolex:reference :concept_c10 .
 	:le_5BmmluyXzELvY9Jth9q9yq_sense dct:creator "kicco" .
-	:le_5BmmluyXzELvY9Jth9q9yq_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5BmmluyXzELvY9Jth9q9yq_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5BmmluyXzELvY9Jth9q9yq_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5BmmluyXzELvY9Jth9q9yq_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5BmmluyXzELvY9Jth9q9yq ontolex:canonicalForm :le_5BmmluyXzELvY9Jth9q9yq_lemma .
 	:le_5BmmluyXzELvY9Jth9q9yq_lemma rdf:type ontolex:Form .
 	:le_5BmmluyXzELvY9Jth9q9yq_lemma ontolex:writtenRep "estrella"@es .
 	:le_5BmmluyXzELvY9Jth9q9yq_lemma dct:creator "kicco" .
-	:le_5BmmluyXzELvY9Jth9q9yq_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5BmmluyXzELvY9Jth9q9yq_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5BmmluyXzELvY9Jth9q9yq_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5BmmluyXzELvY9Jth9q9yq_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c11 rdf:type skos:Concept .
 	:concept_c11 skos:prefLabel "c11" .
 	:tbx_en lime:entry :le_1rlpEAqmmFIJXklR6ZvkCu .
@@ -643,77 +640,77 @@ INSERT DATA {
 	:le_1rlpEAqmmFIJXklR6ZvkCu rdfs:label "UV radiation"@en .
 	:le_1rlpEAqmmFIJXklR6ZvkCu vs:term_status "working" .
 	:le_1rlpEAqmmFIJXklR6ZvkCu dct:creator "kicco" .
-	:le_1rlpEAqmmFIJXklR6ZvkCu dct:created "2023-04-08T13:00+02:00" .
-	:le_1rlpEAqmmFIJXklR6ZvkCu dct:modified "2023-04-08T13:00+02:00" .
+	:le_1rlpEAqmmFIJXklR6ZvkCu dct:created "2023-04-08T17:53+02:00" .
+	:le_1rlpEAqmmFIJXklR6ZvkCu dct:modified "2023-04-08T17:53+02:00" .
 	:le_1rlpEAqmmFIJXklR6ZvkCu ontolex:sense :le_1rlpEAqmmFIJXklR6ZvkCu_sense .
 	:le_1rlpEAqmmFIJXklR6ZvkCu_sense rdf:type ontolex:LexicalSense .
 	:le_1rlpEAqmmFIJXklR6ZvkCu_sense ontolex:reference :concept_c11 .
 	:le_1rlpEAqmmFIJXklR6ZvkCu_sense dct:creator "kicco" .
-	:le_1rlpEAqmmFIJXklR6ZvkCu_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1rlpEAqmmFIJXklR6ZvkCu_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1rlpEAqmmFIJXklR6ZvkCu_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1rlpEAqmmFIJXklR6ZvkCu_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1rlpEAqmmFIJXklR6ZvkCu ontolex:canonicalForm :le_1rlpEAqmmFIJXklR6ZvkCu_lemma .
 	:le_1rlpEAqmmFIJXklR6ZvkCu_lemma rdf:type ontolex:Form .
 	:le_1rlpEAqmmFIJXklR6ZvkCu_lemma ontolex:writtenRep "UV radiation"@en .
 	:le_1rlpEAqmmFIJXklR6ZvkCu_lemma dct:creator "kicco" .
-	:le_1rlpEAqmmFIJXklR6ZvkCu_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1rlpEAqmmFIJXklR6ZvkCu_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1rlpEAqmmFIJXklR6ZvkCu_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1rlpEAqmmFIJXklR6ZvkCu_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_3Aaj2zNQuxKEFYyr2STag4 .
 	:le_3Aaj2zNQuxKEFYyr2STag4 rdf:type ontolex:LexicalEntry .
 	:le_3Aaj2zNQuxKEFYyr2STag4 rdfs:label "ultraviolet radiation"@en .
 	:le_3Aaj2zNQuxKEFYyr2STag4 vs:term_status "working" .
 	:le_3Aaj2zNQuxKEFYyr2STag4 dct:creator "kicco" .
-	:le_3Aaj2zNQuxKEFYyr2STag4 dct:created "2023-04-08T13:00+02:00" .
-	:le_3Aaj2zNQuxKEFYyr2STag4 dct:modified "2023-04-08T13:00+02:00" .
+	:le_3Aaj2zNQuxKEFYyr2STag4 dct:created "2023-04-08T17:53+02:00" .
+	:le_3Aaj2zNQuxKEFYyr2STag4 dct:modified "2023-04-08T17:53+02:00" .
 	:le_3Aaj2zNQuxKEFYyr2STag4 ontolex:sense :le_3Aaj2zNQuxKEFYyr2STag4_sense .
 	:le_3Aaj2zNQuxKEFYyr2STag4_sense rdf:type ontolex:LexicalSense .
 	:le_3Aaj2zNQuxKEFYyr2STag4_sense ontolex:reference :concept_c11 .
 	:le_3Aaj2zNQuxKEFYyr2STag4_sense dct:creator "kicco" .
-	:le_3Aaj2zNQuxKEFYyr2STag4_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_3Aaj2zNQuxKEFYyr2STag4_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_3Aaj2zNQuxKEFYyr2STag4_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_3Aaj2zNQuxKEFYyr2STag4_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_3Aaj2zNQuxKEFYyr2STag4 ontolex:canonicalForm :le_3Aaj2zNQuxKEFYyr2STag4_lemma .
 	:le_3Aaj2zNQuxKEFYyr2STag4_lemma rdf:type ontolex:Form .
 	:le_3Aaj2zNQuxKEFYyr2STag4_lemma ontolex:writtenRep "ultraviolet radiation"@en .
 	:le_3Aaj2zNQuxKEFYyr2STag4_lemma dct:creator "kicco" .
-	:le_3Aaj2zNQuxKEFYyr2STag4_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_3Aaj2zNQuxKEFYyr2STag4_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_3Aaj2zNQuxKEFYyr2STag4_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_3Aaj2zNQuxKEFYyr2STag4_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_3zJKVMwTaDF6f6JaaY3qRK .
 	:le_3zJKVMwTaDF6f6JaaY3qRK rdf:type ontolex:LexicalEntry .
 	:le_3zJKVMwTaDF6f6JaaY3qRK rdfs:label "radiación UV"@es .
 	:le_3zJKVMwTaDF6f6JaaY3qRK vs:term_status "working" .
 	:le_3zJKVMwTaDF6f6JaaY3qRK dct:creator "kicco" .
-	:le_3zJKVMwTaDF6f6JaaY3qRK dct:created "2023-04-08T13:00+02:00" .
-	:le_3zJKVMwTaDF6f6JaaY3qRK dct:modified "2023-04-08T13:00+02:00" .
+	:le_3zJKVMwTaDF6f6JaaY3qRK dct:created "2023-04-08T17:53+02:00" .
+	:le_3zJKVMwTaDF6f6JaaY3qRK dct:modified "2023-04-08T17:53+02:00" .
 	:le_3zJKVMwTaDF6f6JaaY3qRK ontolex:sense :le_3zJKVMwTaDF6f6JaaY3qRK_sense .
 	:le_3zJKVMwTaDF6f6JaaY3qRK_sense rdf:type ontolex:LexicalSense .
 	:le_3zJKVMwTaDF6f6JaaY3qRK_sense ontolex:reference :concept_c11 .
 	:le_3zJKVMwTaDF6f6JaaY3qRK_sense dct:creator "kicco" .
-	:le_3zJKVMwTaDF6f6JaaY3qRK_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_3zJKVMwTaDF6f6JaaY3qRK_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_3zJKVMwTaDF6f6JaaY3qRK_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_3zJKVMwTaDF6f6JaaY3qRK_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_3zJKVMwTaDF6f6JaaY3qRK ontolex:canonicalForm :le_3zJKVMwTaDF6f6JaaY3qRK_lemma .
 	:le_3zJKVMwTaDF6f6JaaY3qRK_lemma rdf:type ontolex:Form .
 	:le_3zJKVMwTaDF6f6JaaY3qRK_lemma ontolex:writtenRep "radiación UV"@es .
 	:le_3zJKVMwTaDF6f6JaaY3qRK_lemma dct:creator "kicco" .
-	:le_3zJKVMwTaDF6f6JaaY3qRK_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_3zJKVMwTaDF6f6JaaY3qRK_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_3zJKVMwTaDF6f6JaaY3qRK_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_3zJKVMwTaDF6f6JaaY3qRK_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_2qk8fdaPMvEw0TawjQqJNV .
 	:le_2qk8fdaPMvEw0TawjQqJNV rdf:type ontolex:LexicalEntry .
 	:le_2qk8fdaPMvEw0TawjQqJNV rdfs:label "radiación ultravioleta"@es .
 	:le_2qk8fdaPMvEw0TawjQqJNV vs:term_status "working" .
 	:le_2qk8fdaPMvEw0TawjQqJNV dct:creator "kicco" .
-	:le_2qk8fdaPMvEw0TawjQqJNV dct:created "2023-04-08T13:00+02:00" .
-	:le_2qk8fdaPMvEw0TawjQqJNV dct:modified "2023-04-08T13:00+02:00" .
+	:le_2qk8fdaPMvEw0TawjQqJNV dct:created "2023-04-08T17:53+02:00" .
+	:le_2qk8fdaPMvEw0TawjQqJNV dct:modified "2023-04-08T17:53+02:00" .
 	:le_2qk8fdaPMvEw0TawjQqJNV ontolex:sense :le_2qk8fdaPMvEw0TawjQqJNV_sense .
 	:le_2qk8fdaPMvEw0TawjQqJNV_sense rdf:type ontolex:LexicalSense .
 	:le_2qk8fdaPMvEw0TawjQqJNV_sense ontolex:reference :concept_c11 .
 	:le_2qk8fdaPMvEw0TawjQqJNV_sense dct:creator "kicco" .
-	:le_2qk8fdaPMvEw0TawjQqJNV_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_2qk8fdaPMvEw0TawjQqJNV_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_2qk8fdaPMvEw0TawjQqJNV_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_2qk8fdaPMvEw0TawjQqJNV_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_2qk8fdaPMvEw0TawjQqJNV ontolex:canonicalForm :le_2qk8fdaPMvEw0TawjQqJNV_lemma .
 	:le_2qk8fdaPMvEw0TawjQqJNV_lemma rdf:type ontolex:Form .
 	:le_2qk8fdaPMvEw0TawjQqJNV_lemma ontolex:writtenRep "radiación ultravioleta"@es .
 	:le_2qk8fdaPMvEw0TawjQqJNV_lemma dct:creator "kicco" .
-	:le_2qk8fdaPMvEw0TawjQqJNV_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_2qk8fdaPMvEw0TawjQqJNV_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_2qk8fdaPMvEw0TawjQqJNV_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_2qk8fdaPMvEw0TawjQqJNV_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c12 rdf:type skos:Concept .
 	:concept_c12 skos:prefLabel "c12" .
 	:tbx_en lime:entry :le_5T9ZZ79fNkn2yZWctsDqgL .
@@ -721,39 +718,39 @@ INSERT DATA {
 	:le_5T9ZZ79fNkn2yZWctsDqgL rdfs:label "magnetic field"@en .
 	:le_5T9ZZ79fNkn2yZWctsDqgL vs:term_status "working" .
 	:le_5T9ZZ79fNkn2yZWctsDqgL dct:creator "kicco" .
-	:le_5T9ZZ79fNkn2yZWctsDqgL dct:created "2023-04-08T13:00+02:00" .
-	:le_5T9ZZ79fNkn2yZWctsDqgL dct:modified "2023-04-08T13:00+02:00" .
+	:le_5T9ZZ79fNkn2yZWctsDqgL dct:created "2023-04-08T17:53+02:00" .
+	:le_5T9ZZ79fNkn2yZWctsDqgL dct:modified "2023-04-08T17:53+02:00" .
 	:le_5T9ZZ79fNkn2yZWctsDqgL ontolex:sense :le_5T9ZZ79fNkn2yZWctsDqgL_sense .
 	:le_5T9ZZ79fNkn2yZWctsDqgL_sense rdf:type ontolex:LexicalSense .
 	:le_5T9ZZ79fNkn2yZWctsDqgL_sense ontolex:reference :concept_c12 .
 	:le_5T9ZZ79fNkn2yZWctsDqgL_sense dct:creator "kicco" .
-	:le_5T9ZZ79fNkn2yZWctsDqgL_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5T9ZZ79fNkn2yZWctsDqgL_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5T9ZZ79fNkn2yZWctsDqgL_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5T9ZZ79fNkn2yZWctsDqgL_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5T9ZZ79fNkn2yZWctsDqgL ontolex:canonicalForm :le_5T9ZZ79fNkn2yZWctsDqgL_lemma .
 	:le_5T9ZZ79fNkn2yZWctsDqgL_lemma rdf:type ontolex:Form .
 	:le_5T9ZZ79fNkn2yZWctsDqgL_lemma ontolex:writtenRep "magnetic field"@en .
 	:le_5T9ZZ79fNkn2yZWctsDqgL_lemma dct:creator "kicco" .
-	:le_5T9ZZ79fNkn2yZWctsDqgL_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5T9ZZ79fNkn2yZWctsDqgL_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5T9ZZ79fNkn2yZWctsDqgL_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5T9ZZ79fNkn2yZWctsDqgL_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_3kAPhGakbqiyxDIdmHeNZB .
 	:le_3kAPhGakbqiyxDIdmHeNZB rdf:type ontolex:LexicalEntry .
 	:le_3kAPhGakbqiyxDIdmHeNZB rdfs:label "campo magnético"@es .
 	:le_3kAPhGakbqiyxDIdmHeNZB vs:term_status "working" .
 	:le_3kAPhGakbqiyxDIdmHeNZB dct:creator "kicco" .
-	:le_3kAPhGakbqiyxDIdmHeNZB dct:created "2023-04-08T13:00+02:00" .
-	:le_3kAPhGakbqiyxDIdmHeNZB dct:modified "2023-04-08T13:00+02:00" .
+	:le_3kAPhGakbqiyxDIdmHeNZB dct:created "2023-04-08T17:53+02:00" .
+	:le_3kAPhGakbqiyxDIdmHeNZB dct:modified "2023-04-08T17:53+02:00" .
 	:le_3kAPhGakbqiyxDIdmHeNZB ontolex:sense :le_3kAPhGakbqiyxDIdmHeNZB_sense .
 	:le_3kAPhGakbqiyxDIdmHeNZB_sense rdf:type ontolex:LexicalSense .
 	:le_3kAPhGakbqiyxDIdmHeNZB_sense ontolex:reference :concept_c12 .
 	:le_3kAPhGakbqiyxDIdmHeNZB_sense dct:creator "kicco" .
-	:le_3kAPhGakbqiyxDIdmHeNZB_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_3kAPhGakbqiyxDIdmHeNZB_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_3kAPhGakbqiyxDIdmHeNZB_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_3kAPhGakbqiyxDIdmHeNZB_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_3kAPhGakbqiyxDIdmHeNZB ontolex:canonicalForm :le_3kAPhGakbqiyxDIdmHeNZB_lemma .
 	:le_3kAPhGakbqiyxDIdmHeNZB_lemma rdf:type ontolex:Form .
 	:le_3kAPhGakbqiyxDIdmHeNZB_lemma ontolex:writtenRep "campo magnético"@es .
 	:le_3kAPhGakbqiyxDIdmHeNZB_lemma dct:creator "kicco" .
-	:le_3kAPhGakbqiyxDIdmHeNZB_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_3kAPhGakbqiyxDIdmHeNZB_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_3kAPhGakbqiyxDIdmHeNZB_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_3kAPhGakbqiyxDIdmHeNZB_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c13 rdf:type skos:Concept .
 	:concept_c13 skos:prefLabel "c13" .
 	:tbx_en lime:entry :le_6NbMfzq5gI3cSOiRz0qc4f .
@@ -761,39 +758,39 @@ INSERT DATA {
 	:le_6NbMfzq5gI3cSOiRz0qc4f rdfs:label "blue straggler"@en .
 	:le_6NbMfzq5gI3cSOiRz0qc4f vs:term_status "working" .
 	:le_6NbMfzq5gI3cSOiRz0qc4f dct:creator "kicco" .
-	:le_6NbMfzq5gI3cSOiRz0qc4f dct:created "2023-04-08T13:00+02:00" .
-	:le_6NbMfzq5gI3cSOiRz0qc4f dct:modified "2023-04-08T13:00+02:00" .
+	:le_6NbMfzq5gI3cSOiRz0qc4f dct:created "2023-04-08T17:53+02:00" .
+	:le_6NbMfzq5gI3cSOiRz0qc4f dct:modified "2023-04-08T17:53+02:00" .
 	:le_6NbMfzq5gI3cSOiRz0qc4f ontolex:sense :le_6NbMfzq5gI3cSOiRz0qc4f_sense .
 	:le_6NbMfzq5gI3cSOiRz0qc4f_sense rdf:type ontolex:LexicalSense .
 	:le_6NbMfzq5gI3cSOiRz0qc4f_sense ontolex:reference :concept_c13 .
 	:le_6NbMfzq5gI3cSOiRz0qc4f_sense dct:creator "kicco" .
-	:le_6NbMfzq5gI3cSOiRz0qc4f_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_6NbMfzq5gI3cSOiRz0qc4f_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_6NbMfzq5gI3cSOiRz0qc4f_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_6NbMfzq5gI3cSOiRz0qc4f_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_6NbMfzq5gI3cSOiRz0qc4f ontolex:canonicalForm :le_6NbMfzq5gI3cSOiRz0qc4f_lemma .
 	:le_6NbMfzq5gI3cSOiRz0qc4f_lemma rdf:type ontolex:Form .
 	:le_6NbMfzq5gI3cSOiRz0qc4f_lemma ontolex:writtenRep "blue straggler"@en .
 	:le_6NbMfzq5gI3cSOiRz0qc4f_lemma dct:creator "kicco" .
-	:le_6NbMfzq5gI3cSOiRz0qc4f_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_6NbMfzq5gI3cSOiRz0qc4f_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_6NbMfzq5gI3cSOiRz0qc4f_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_6NbMfzq5gI3cSOiRz0qc4f_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_3EObAJFWELGCBpuqPFHFAH .
 	:le_3EObAJFWELGCBpuqPFHFAH rdf:type ontolex:LexicalEntry .
 	:le_3EObAJFWELGCBpuqPFHFAH rdfs:label "estrella rezagada azul"@es .
 	:le_3EObAJFWELGCBpuqPFHFAH vs:term_status "working" .
 	:le_3EObAJFWELGCBpuqPFHFAH dct:creator "kicco" .
-	:le_3EObAJFWELGCBpuqPFHFAH dct:created "2023-04-08T13:00+02:00" .
-	:le_3EObAJFWELGCBpuqPFHFAH dct:modified "2023-04-08T13:00+02:00" .
+	:le_3EObAJFWELGCBpuqPFHFAH dct:created "2023-04-08T17:53+02:00" .
+	:le_3EObAJFWELGCBpuqPFHFAH dct:modified "2023-04-08T17:53+02:00" .
 	:le_3EObAJFWELGCBpuqPFHFAH ontolex:sense :le_3EObAJFWELGCBpuqPFHFAH_sense .
 	:le_3EObAJFWELGCBpuqPFHFAH_sense rdf:type ontolex:LexicalSense .
 	:le_3EObAJFWELGCBpuqPFHFAH_sense ontolex:reference :concept_c13 .
 	:le_3EObAJFWELGCBpuqPFHFAH_sense dct:creator "kicco" .
-	:le_3EObAJFWELGCBpuqPFHFAH_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_3EObAJFWELGCBpuqPFHFAH_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_3EObAJFWELGCBpuqPFHFAH_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_3EObAJFWELGCBpuqPFHFAH_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_3EObAJFWELGCBpuqPFHFAH ontolex:canonicalForm :le_3EObAJFWELGCBpuqPFHFAH_lemma .
 	:le_3EObAJFWELGCBpuqPFHFAH_lemma rdf:type ontolex:Form .
 	:le_3EObAJFWELGCBpuqPFHFAH_lemma ontolex:writtenRep "estrella rezagada azul"@es .
 	:le_3EObAJFWELGCBpuqPFHFAH_lemma dct:creator "kicco" .
-	:le_3EObAJFWELGCBpuqPFHFAH_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_3EObAJFWELGCBpuqPFHFAH_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_3EObAJFWELGCBpuqPFHFAH_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_3EObAJFWELGCBpuqPFHFAH_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c14 rdf:type skos:Concept .
 	:concept_c14 skos:prefLabel "c14" .
 	:tbx_en lime:entry :le_4vMXEICd7V8XVexrh7WfFo .
@@ -801,39 +798,39 @@ INSERT DATA {
 	:le_4vMXEICd7V8XVexrh7WfFo rdfs:label "gravitational collapse"@en .
 	:le_4vMXEICd7V8XVexrh7WfFo vs:term_status "working" .
 	:le_4vMXEICd7V8XVexrh7WfFo dct:creator "kicco" .
-	:le_4vMXEICd7V8XVexrh7WfFo dct:created "2023-04-08T13:00+02:00" .
-	:le_4vMXEICd7V8XVexrh7WfFo dct:modified "2023-04-08T13:00+02:00" .
+	:le_4vMXEICd7V8XVexrh7WfFo dct:created "2023-04-08T17:53+02:00" .
+	:le_4vMXEICd7V8XVexrh7WfFo dct:modified "2023-04-08T17:53+02:00" .
 	:le_4vMXEICd7V8XVexrh7WfFo ontolex:sense :le_4vMXEICd7V8XVexrh7WfFo_sense .
 	:le_4vMXEICd7V8XVexrh7WfFo_sense rdf:type ontolex:LexicalSense .
 	:le_4vMXEICd7V8XVexrh7WfFo_sense ontolex:reference :concept_c14 .
 	:le_4vMXEICd7V8XVexrh7WfFo_sense dct:creator "kicco" .
-	:le_4vMXEICd7V8XVexrh7WfFo_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_4vMXEICd7V8XVexrh7WfFo_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_4vMXEICd7V8XVexrh7WfFo_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_4vMXEICd7V8XVexrh7WfFo_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_4vMXEICd7V8XVexrh7WfFo ontolex:canonicalForm :le_4vMXEICd7V8XVexrh7WfFo_lemma .
 	:le_4vMXEICd7V8XVexrh7WfFo_lemma rdf:type ontolex:Form .
 	:le_4vMXEICd7V8XVexrh7WfFo_lemma ontolex:writtenRep "gravitational collapse"@en .
 	:le_4vMXEICd7V8XVexrh7WfFo_lemma dct:creator "kicco" .
-	:le_4vMXEICd7V8XVexrh7WfFo_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_4vMXEICd7V8XVexrh7WfFo_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_4vMXEICd7V8XVexrh7WfFo_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_4vMXEICd7V8XVexrh7WfFo_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_64T0rkRgA6WoWNxBnFq5EK .
 	:le_64T0rkRgA6WoWNxBnFq5EK rdf:type ontolex:LexicalEntry .
 	:le_64T0rkRgA6WoWNxBnFq5EK rdfs:label "colapso gravitacional"@es .
 	:le_64T0rkRgA6WoWNxBnFq5EK vs:term_status "working" .
 	:le_64T0rkRgA6WoWNxBnFq5EK dct:creator "kicco" .
-	:le_64T0rkRgA6WoWNxBnFq5EK dct:created "2023-04-08T13:00+02:00" .
-	:le_64T0rkRgA6WoWNxBnFq5EK dct:modified "2023-04-08T13:00+02:00" .
+	:le_64T0rkRgA6WoWNxBnFq5EK dct:created "2023-04-08T17:53+02:00" .
+	:le_64T0rkRgA6WoWNxBnFq5EK dct:modified "2023-04-08T17:53+02:00" .
 	:le_64T0rkRgA6WoWNxBnFq5EK ontolex:sense :le_64T0rkRgA6WoWNxBnFq5EK_sense .
 	:le_64T0rkRgA6WoWNxBnFq5EK_sense rdf:type ontolex:LexicalSense .
 	:le_64T0rkRgA6WoWNxBnFq5EK_sense ontolex:reference :concept_c14 .
 	:le_64T0rkRgA6WoWNxBnFq5EK_sense dct:creator "kicco" .
-	:le_64T0rkRgA6WoWNxBnFq5EK_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_64T0rkRgA6WoWNxBnFq5EK_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_64T0rkRgA6WoWNxBnFq5EK_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_64T0rkRgA6WoWNxBnFq5EK_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_64T0rkRgA6WoWNxBnFq5EK ontolex:canonicalForm :le_64T0rkRgA6WoWNxBnFq5EK_lemma .
 	:le_64T0rkRgA6WoWNxBnFq5EK_lemma rdf:type ontolex:Form .
 	:le_64T0rkRgA6WoWNxBnFq5EK_lemma ontolex:writtenRep "colapso gravitacional"@es .
 	:le_64T0rkRgA6WoWNxBnFq5EK_lemma dct:creator "kicco" .
-	:le_64T0rkRgA6WoWNxBnFq5EK_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_64T0rkRgA6WoWNxBnFq5EK_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_64T0rkRgA6WoWNxBnFq5EK_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_64T0rkRgA6WoWNxBnFq5EK_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c15 rdf:type skos:Concept .
 	:concept_c15 skos:prefLabel "c15" .
 	:tbx_en lime:entry :le_3B4eG3cYrcgziZ9GWOR6mx .
@@ -841,58 +838,58 @@ INSERT DATA {
 	:le_3B4eG3cYrcgziZ9GWOR6mx rdfs:label "binary star"@en .
 	:le_3B4eG3cYrcgziZ9GWOR6mx vs:term_status "working" .
 	:le_3B4eG3cYrcgziZ9GWOR6mx dct:creator "kicco" .
-	:le_3B4eG3cYrcgziZ9GWOR6mx dct:created "2023-04-08T13:00+02:00" .
-	:le_3B4eG3cYrcgziZ9GWOR6mx dct:modified "2023-04-08T13:00+02:00" .
+	:le_3B4eG3cYrcgziZ9GWOR6mx dct:created "2023-04-08T17:53+02:00" .
+	:le_3B4eG3cYrcgziZ9GWOR6mx dct:modified "2023-04-08T17:53+02:00" .
 	:le_3B4eG3cYrcgziZ9GWOR6mx ontolex:sense :le_3B4eG3cYrcgziZ9GWOR6mx_sense .
 	:le_3B4eG3cYrcgziZ9GWOR6mx_sense rdf:type ontolex:LexicalSense .
 	:le_3B4eG3cYrcgziZ9GWOR6mx_sense ontolex:reference :concept_c15 .
 	:le_3B4eG3cYrcgziZ9GWOR6mx_sense dct:creator "kicco" .
-	:le_3B4eG3cYrcgziZ9GWOR6mx_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_3B4eG3cYrcgziZ9GWOR6mx_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_3B4eG3cYrcgziZ9GWOR6mx_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_3B4eG3cYrcgziZ9GWOR6mx_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_3B4eG3cYrcgziZ9GWOR6mx ontolex:canonicalForm :le_3B4eG3cYrcgziZ9GWOR6mx_lemma .
 	:le_3B4eG3cYrcgziZ9GWOR6mx_lemma rdf:type ontolex:Form .
 	:le_3B4eG3cYrcgziZ9GWOR6mx_lemma ontolex:writtenRep "binary star"@en .
 	:le_3B4eG3cYrcgziZ9GWOR6mx_lemma dct:creator "kicco" .
-	:le_3B4eG3cYrcgziZ9GWOR6mx_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_3B4eG3cYrcgziZ9GWOR6mx_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_3B4eG3cYrcgziZ9GWOR6mx_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_3B4eG3cYrcgziZ9GWOR6mx_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_1TjihSeZU4y18VmkarjXqb .
 	:le_1TjihSeZU4y18VmkarjXqb rdf:type ontolex:LexicalEntry .
 	:le_1TjihSeZU4y18VmkarjXqb rdfs:label "estrella binaria"@es .
 	:le_1TjihSeZU4y18VmkarjXqb vs:term_status "working" .
 	:le_1TjihSeZU4y18VmkarjXqb dct:creator "kicco" .
-	:le_1TjihSeZU4y18VmkarjXqb dct:created "2023-04-08T13:00+02:00" .
-	:le_1TjihSeZU4y18VmkarjXqb dct:modified "2023-04-08T13:00+02:00" .
+	:le_1TjihSeZU4y18VmkarjXqb dct:created "2023-04-08T17:53+02:00" .
+	:le_1TjihSeZU4y18VmkarjXqb dct:modified "2023-04-08T17:53+02:00" .
 	:le_1TjihSeZU4y18VmkarjXqb ontolex:sense :le_1TjihSeZU4y18VmkarjXqb_sense .
 	:le_1TjihSeZU4y18VmkarjXqb_sense rdf:type ontolex:LexicalSense .
 	:le_1TjihSeZU4y18VmkarjXqb_sense ontolex:reference :concept_c15 .
 	:le_1TjihSeZU4y18VmkarjXqb_sense dct:creator "kicco" .
-	:le_1TjihSeZU4y18VmkarjXqb_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1TjihSeZU4y18VmkarjXqb_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1TjihSeZU4y18VmkarjXqb_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1TjihSeZU4y18VmkarjXqb_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1TjihSeZU4y18VmkarjXqb ontolex:canonicalForm :le_1TjihSeZU4y18VmkarjXqb_lemma .
 	:le_1TjihSeZU4y18VmkarjXqb_lemma rdf:type ontolex:Form .
 	:le_1TjihSeZU4y18VmkarjXqb_lemma ontolex:writtenRep "estrella binaria"@es .
 	:le_1TjihSeZU4y18VmkarjXqb_lemma dct:creator "kicco" .
-	:le_1TjihSeZU4y18VmkarjXqb_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1TjihSeZU4y18VmkarjXqb_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1TjihSeZU4y18VmkarjXqb_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1TjihSeZU4y18VmkarjXqb_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_5w7FZCZOfKoe8rJ8NIBRAF .
 	:le_5w7FZCZOfKoe8rJ8NIBRAF rdf:type ontolex:LexicalEntry .
 	:le_5w7FZCZOfKoe8rJ8NIBRAF rdfs:label "estrella doble"@es .
 	:le_5w7FZCZOfKoe8rJ8NIBRAF vs:term_status "working" .
 	:le_5w7FZCZOfKoe8rJ8NIBRAF dct:creator "kicco" .
-	:le_5w7FZCZOfKoe8rJ8NIBRAF dct:created "2023-04-08T13:00+02:00" .
-	:le_5w7FZCZOfKoe8rJ8NIBRAF dct:modified "2023-04-08T13:00+02:00" .
+	:le_5w7FZCZOfKoe8rJ8NIBRAF dct:created "2023-04-08T17:53+02:00" .
+	:le_5w7FZCZOfKoe8rJ8NIBRAF dct:modified "2023-04-08T17:53+02:00" .
 	:le_5w7FZCZOfKoe8rJ8NIBRAF ontolex:sense :le_5w7FZCZOfKoe8rJ8NIBRAF_sense .
 	:le_5w7FZCZOfKoe8rJ8NIBRAF_sense rdf:type ontolex:LexicalSense .
 	:le_5w7FZCZOfKoe8rJ8NIBRAF_sense ontolex:reference :concept_c15 .
 	:le_5w7FZCZOfKoe8rJ8NIBRAF_sense dct:creator "kicco" .
-	:le_5w7FZCZOfKoe8rJ8NIBRAF_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5w7FZCZOfKoe8rJ8NIBRAF_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5w7FZCZOfKoe8rJ8NIBRAF_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5w7FZCZOfKoe8rJ8NIBRAF_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5w7FZCZOfKoe8rJ8NIBRAF ontolex:canonicalForm :le_5w7FZCZOfKoe8rJ8NIBRAF_lemma .
 	:le_5w7FZCZOfKoe8rJ8NIBRAF_lemma rdf:type ontolex:Form .
 	:le_5w7FZCZOfKoe8rJ8NIBRAF_lemma ontolex:writtenRep "estrella doble"@es .
 	:le_5w7FZCZOfKoe8rJ8NIBRAF_lemma dct:creator "kicco" .
-	:le_5w7FZCZOfKoe8rJ8NIBRAF_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5w7FZCZOfKoe8rJ8NIBRAF_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5w7FZCZOfKoe8rJ8NIBRAF_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5w7FZCZOfKoe8rJ8NIBRAF_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c16 rdf:type skos:Concept .
 	:concept_c16 skos:prefLabel "c16" .
 	:tbx_en lime:entry :le_57k7fM5WDyWUZWhvuAklWo .
@@ -900,66 +897,66 @@ INSERT DATA {
 	:le_57k7fM5WDyWUZWhvuAklWo rdfs:label "initial mass function"@en .
 	:le_57k7fM5WDyWUZWhvuAklWo vs:term_status "working" .
 	:le_57k7fM5WDyWUZWhvuAklWo dct:creator "kicco" .
-	:le_57k7fM5WDyWUZWhvuAklWo dct:created "2023-04-08T13:00+02:00" .
-	:le_57k7fM5WDyWUZWhvuAklWo dct:modified "2023-04-08T13:00+02:00" .
+	:le_57k7fM5WDyWUZWhvuAklWo dct:created "2023-04-08T17:53+02:00" .
+	:le_57k7fM5WDyWUZWhvuAklWo dct:modified "2023-04-08T17:53+02:00" .
 	:le_57k7fM5WDyWUZWhvuAklWo ontolex:sense :le_57k7fM5WDyWUZWhvuAklWo_sense .
 	:le_57k7fM5WDyWUZWhvuAklWo_sense rdf:type ontolex:LexicalSense .
 	:le_57k7fM5WDyWUZWhvuAklWo_sense ontolex:reference :concept_c16 .
 	:le_57k7fM5WDyWUZWhvuAklWo_sense dct:creator "kicco" .
-	:le_57k7fM5WDyWUZWhvuAklWo_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_57k7fM5WDyWUZWhvuAklWo_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_57k7fM5WDyWUZWhvuAklWo_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_57k7fM5WDyWUZWhvuAklWo_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_57k7fM5WDyWUZWhvuAklWo ontolex:canonicalForm :le_57k7fM5WDyWUZWhvuAklWo_lemma .
 	:le_57k7fM5WDyWUZWhvuAklWo_lemma rdf:type ontolex:Form .
 	:le_57k7fM5WDyWUZWhvuAklWo_lemma ontolex:writtenRep "initial mass function"@en .
 	:le_57k7fM5WDyWUZWhvuAklWo_lemma dct:creator "kicco" .
-	:le_57k7fM5WDyWUZWhvuAklWo_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_57k7fM5WDyWUZWhvuAklWo_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_57k7fM5WDyWUZWhvuAklWo_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_57k7fM5WDyWUZWhvuAklWo_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_79OTA1TcIecuPWulxX2fxx .
 	:le_79OTA1TcIecuPWulxX2fxx rdf:type ontolex:LexicalEntry .
 	:le_79OTA1TcIecuPWulxX2fxx rdfs:label "función inicial de masa"@es .
 	:le_79OTA1TcIecuPWulxX2fxx vs:term_status "working" .
 	:le_79OTA1TcIecuPWulxX2fxx dct:creator "kicco" .
-	:le_79OTA1TcIecuPWulxX2fxx dct:created "2023-04-08T13:00+02:00" .
-	:le_79OTA1TcIecuPWulxX2fxx dct:modified "2023-04-08T13:00+02:00" .
+	:le_79OTA1TcIecuPWulxX2fxx dct:created "2023-04-08T17:53+02:00" .
+	:le_79OTA1TcIecuPWulxX2fxx dct:modified "2023-04-08T17:53+02:00" .
 	:le_79OTA1TcIecuPWulxX2fxx ontolex:sense :le_79OTA1TcIecuPWulxX2fxx_sense .
 	:le_79OTA1TcIecuPWulxX2fxx_sense rdf:type ontolex:LexicalSense .
 	:le_79OTA1TcIecuPWulxX2fxx_sense ontolex:reference :concept_c16 .
 	:le_79OTA1TcIecuPWulxX2fxx_sense dct:creator "kicco" .
-	:le_79OTA1TcIecuPWulxX2fxx_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_79OTA1TcIecuPWulxX2fxx_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_79OTA1TcIecuPWulxX2fxx_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_79OTA1TcIecuPWulxX2fxx_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_79OTA1TcIecuPWulxX2fxx ontolex:canonicalForm :le_79OTA1TcIecuPWulxX2fxx_lemma .
 	:le_79OTA1TcIecuPWulxX2fxx_lemma rdf:type ontolex:Form .
 	:le_79OTA1TcIecuPWulxX2fxx_lemma ontolex:writtenRep "función inicial de masa"@es .
 	:le_79OTA1TcIecuPWulxX2fxx_lemma dct:creator "kicco" .
-	:le_79OTA1TcIecuPWulxX2fxx_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_79OTA1TcIecuPWulxX2fxx_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_79OTA1TcIecuPWulxX2fxx_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_79OTA1TcIecuPWulxX2fxx_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c16 skos:note "This figure compares the IMFs by ploting mass fraction per dex versus mass, i.e., normalized so that the integral under each curve is unity. They are assumed to be valid from 0.1 to 120 solar masses." .
 	:concept_c17 rdf:type skos:Concept .
 	:concept_c17 skos:prefLabel "c17" .
 	:tbx_zu rdf:type lime:Lexicon .
 	:tbx_zu lime:language "zu" .
 	:tbx_zu dct:creator "kicco" .
-	:tbx_zu dct:created "2023-04-08T13:00+02:00" .
-	:tbx_zu dct:modified "2023-04-08T13:00+02:00" .
+	:tbx_zu dct:created "2023-04-08T17:53+02:00" .
+	:tbx_zu dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_zu lime:entry :le_5u0CjdBdPLi8mVEdrOWGej .
 	:le_5u0CjdBdPLi8mVEdrOWGej rdf:type ontolex:LexicalEntry .
 	:le_5u0CjdBdPLi8mVEdrOWGej rdfs:label "Bally2005"@zu .
 	:le_5u0CjdBdPLi8mVEdrOWGej vs:term_status "working" .
 	:le_5u0CjdBdPLi8mVEdrOWGej dct:creator "kicco" .
-	:le_5u0CjdBdPLi8mVEdrOWGej dct:created "2023-04-08T13:00+02:00" .
-	:le_5u0CjdBdPLi8mVEdrOWGej dct:modified "2023-04-08T13:00+02:00" .
+	:le_5u0CjdBdPLi8mVEdrOWGej dct:created "2023-04-08T17:53+02:00" .
+	:le_5u0CjdBdPLi8mVEdrOWGej dct:modified "2023-04-08T17:53+02:00" .
 	:le_5u0CjdBdPLi8mVEdrOWGej ontolex:sense :le_5u0CjdBdPLi8mVEdrOWGej_sense .
 	:le_5u0CjdBdPLi8mVEdrOWGej_sense rdf:type ontolex:LexicalSense .
 	:le_5u0CjdBdPLi8mVEdrOWGej_sense ontolex:reference :concept_c17 .
 	:le_5u0CjdBdPLi8mVEdrOWGej_sense dct:creator "kicco" .
-	:le_5u0CjdBdPLi8mVEdrOWGej_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5u0CjdBdPLi8mVEdrOWGej_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5u0CjdBdPLi8mVEdrOWGej_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5u0CjdBdPLi8mVEdrOWGej_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5u0CjdBdPLi8mVEdrOWGej ontolex:canonicalForm :le_5u0CjdBdPLi8mVEdrOWGej_lemma .
 	:le_5u0CjdBdPLi8mVEdrOWGej_lemma rdf:type ontolex:Form .
 	:le_5u0CjdBdPLi8mVEdrOWGej_lemma ontolex:writtenRep "Bally2005"@zu .
 	:le_5u0CjdBdPLi8mVEdrOWGej_lemma dct:creator "kicco" .
-	:le_5u0CjdBdPLi8mVEdrOWGej_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5u0CjdBdPLi8mVEdrOWGej_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5u0CjdBdPLi8mVEdrOWGej_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5u0CjdBdPLi8mVEdrOWGej_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_5u0CjdBdPLi8mVEdrOWGej skos:note "Author[s]: Bally, John and Hans Zinnecker" .
 	:concept_c18 rdf:type skos:Concept .
 	:concept_c18 skos:prefLabel "c18" .
@@ -968,20 +965,20 @@ INSERT DATA {
 	:le_2CvQUViGiCNw5aSQKuCbzi rdfs:label "Cambridge2007"@zu .
 	:le_2CvQUViGiCNw5aSQKuCbzi vs:term_status "working" .
 	:le_2CvQUViGiCNw5aSQKuCbzi dct:creator "kicco" .
-	:le_2CvQUViGiCNw5aSQKuCbzi dct:created "2023-04-08T13:00+02:00" .
-	:le_2CvQUViGiCNw5aSQKuCbzi dct:modified "2023-04-08T13:00+02:00" .
+	:le_2CvQUViGiCNw5aSQKuCbzi dct:created "2023-04-08T17:53+02:00" .
+	:le_2CvQUViGiCNw5aSQKuCbzi dct:modified "2023-04-08T17:53+02:00" .
 	:le_2CvQUViGiCNw5aSQKuCbzi ontolex:sense :le_2CvQUViGiCNw5aSQKuCbzi_sense .
 	:le_2CvQUViGiCNw5aSQKuCbzi_sense rdf:type ontolex:LexicalSense .
 	:le_2CvQUViGiCNw5aSQKuCbzi_sense ontolex:reference :concept_c18 .
 	:le_2CvQUViGiCNw5aSQKuCbzi_sense dct:creator "kicco" .
-	:le_2CvQUViGiCNw5aSQKuCbzi_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_2CvQUViGiCNw5aSQKuCbzi_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_2CvQUViGiCNw5aSQKuCbzi_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_2CvQUViGiCNw5aSQKuCbzi_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_2CvQUViGiCNw5aSQKuCbzi ontolex:canonicalForm :le_2CvQUViGiCNw5aSQKuCbzi_lemma .
 	:le_2CvQUViGiCNw5aSQKuCbzi_lemma rdf:type ontolex:Form .
 	:le_2CvQUViGiCNw5aSQKuCbzi_lemma ontolex:writtenRep "Cambridge2007"@zu .
 	:le_2CvQUViGiCNw5aSQKuCbzi_lemma dct:creator "kicco" .
-	:le_2CvQUViGiCNw5aSQKuCbzi_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_2CvQUViGiCNw5aSQKuCbzi_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_2CvQUViGiCNw5aSQKuCbzi_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_2CvQUViGiCNw5aSQKuCbzi_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_2CvQUViGiCNw5aSQKuCbzi skos:note "Author[s]: Mitton, Jaqueline" .
 	:concept_c19 rdf:type skos:Concept .
 	:concept_c19 skos:prefLabel "c19" .
@@ -990,20 +987,20 @@ INSERT DATA {
 	:le_4a8XsVxn5hP8lBHsaGkSTj rdfs:label "Merriam-Webster2002"@zu .
 	:le_4a8XsVxn5hP8lBHsaGkSTj vs:term_status "working" .
 	:le_4a8XsVxn5hP8lBHsaGkSTj dct:creator "kicco" .
-	:le_4a8XsVxn5hP8lBHsaGkSTj dct:created "2023-04-08T13:00+02:00" .
-	:le_4a8XsVxn5hP8lBHsaGkSTj dct:modified "2023-04-08T13:00+02:00" .
+	:le_4a8XsVxn5hP8lBHsaGkSTj dct:created "2023-04-08T17:53+02:00" .
+	:le_4a8XsVxn5hP8lBHsaGkSTj dct:modified "2023-04-08T17:53+02:00" .
 	:le_4a8XsVxn5hP8lBHsaGkSTj ontolex:sense :le_4a8XsVxn5hP8lBHsaGkSTj_sense .
 	:le_4a8XsVxn5hP8lBHsaGkSTj_sense rdf:type ontolex:LexicalSense .
 	:le_4a8XsVxn5hP8lBHsaGkSTj_sense ontolex:reference :concept_c19 .
 	:le_4a8XsVxn5hP8lBHsaGkSTj_sense dct:creator "kicco" .
-	:le_4a8XsVxn5hP8lBHsaGkSTj_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_4a8XsVxn5hP8lBHsaGkSTj_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_4a8XsVxn5hP8lBHsaGkSTj_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_4a8XsVxn5hP8lBHsaGkSTj_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_4a8XsVxn5hP8lBHsaGkSTj ontolex:canonicalForm :le_4a8XsVxn5hP8lBHsaGkSTj_lemma .
 	:le_4a8XsVxn5hP8lBHsaGkSTj_lemma rdf:type ontolex:Form .
 	:le_4a8XsVxn5hP8lBHsaGkSTj_lemma ontolex:writtenRep "Merriam-Webster2002"@zu .
 	:le_4a8XsVxn5hP8lBHsaGkSTj_lemma dct:creator "kicco" .
-	:le_4a8XsVxn5hP8lBHsaGkSTj_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_4a8XsVxn5hP8lBHsaGkSTj_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_4a8XsVxn5hP8lBHsaGkSTj_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_4a8XsVxn5hP8lBHsaGkSTj_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_4a8XsVxn5hP8lBHsaGkSTj skos:note "Book Title: Webster's Third New International Dictionary" .
 	:concept_c20 rdf:type skos:Concept .
 	:concept_c20 skos:prefLabel "c20" .
@@ -1012,20 +1009,20 @@ INSERT DATA {
 	:le_1tOf1LamNgYSOBOmAgIiw2 rdfs:label "Oxford2007"@zu .
 	:le_1tOf1LamNgYSOBOmAgIiw2 vs:term_status "working" .
 	:le_1tOf1LamNgYSOBOmAgIiw2 dct:creator "kicco" .
-	:le_1tOf1LamNgYSOBOmAgIiw2 dct:created "2023-04-08T13:00+02:00" .
-	:le_1tOf1LamNgYSOBOmAgIiw2 dct:modified "2023-04-08T13:00+02:00" .
+	:le_1tOf1LamNgYSOBOmAgIiw2 dct:created "2023-04-08T17:53+02:00" .
+	:le_1tOf1LamNgYSOBOmAgIiw2 dct:modified "2023-04-08T17:53+02:00" .
 	:le_1tOf1LamNgYSOBOmAgIiw2 ontolex:sense :le_1tOf1LamNgYSOBOmAgIiw2_sense .
 	:le_1tOf1LamNgYSOBOmAgIiw2_sense rdf:type ontolex:LexicalSense .
 	:le_1tOf1LamNgYSOBOmAgIiw2_sense ontolex:reference :concept_c20 .
 	:le_1tOf1LamNgYSOBOmAgIiw2_sense dct:creator "kicco" .
-	:le_1tOf1LamNgYSOBOmAgIiw2_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1tOf1LamNgYSOBOmAgIiw2_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1tOf1LamNgYSOBOmAgIiw2_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1tOf1LamNgYSOBOmAgIiw2_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1tOf1LamNgYSOBOmAgIiw2 ontolex:canonicalForm :le_1tOf1LamNgYSOBOmAgIiw2_lemma .
 	:le_1tOf1LamNgYSOBOmAgIiw2_lemma rdf:type ontolex:Form .
 	:le_1tOf1LamNgYSOBOmAgIiw2_lemma ontolex:writtenRep "Oxford2007"@zu .
 	:le_1tOf1LamNgYSOBOmAgIiw2_lemma dct:creator "kicco" .
-	:le_1tOf1LamNgYSOBOmAgIiw2_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1tOf1LamNgYSOBOmAgIiw2_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1tOf1LamNgYSOBOmAgIiw2_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1tOf1LamNgYSOBOmAgIiw2_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_1tOf1LamNgYSOBOmAgIiw2 skos:note "Book Title: Oxford Dictionary of Astronomy" .
 	:concept_c21 rdf:type skos:Concept .
 	:concept_c21 skos:prefLabel "c21" .
@@ -1034,39 +1031,39 @@ INSERT DATA {
 	:le_6kwqKlevhBnRAYCfbkwaVc rdfs:label "supernova"@en .
 	:le_6kwqKlevhBnRAYCfbkwaVc vs:term_status "working" .
 	:le_6kwqKlevhBnRAYCfbkwaVc dct:creator "kicco" .
-	:le_6kwqKlevhBnRAYCfbkwaVc dct:created "2023-04-08T13:00+02:00" .
-	:le_6kwqKlevhBnRAYCfbkwaVc dct:modified "2023-04-08T13:00+02:00" .
+	:le_6kwqKlevhBnRAYCfbkwaVc dct:created "2023-04-08T17:53+02:00" .
+	:le_6kwqKlevhBnRAYCfbkwaVc dct:modified "2023-04-08T17:53+02:00" .
 	:le_6kwqKlevhBnRAYCfbkwaVc ontolex:sense :le_6kwqKlevhBnRAYCfbkwaVc_sense .
 	:le_6kwqKlevhBnRAYCfbkwaVc_sense rdf:type ontolex:LexicalSense .
 	:le_6kwqKlevhBnRAYCfbkwaVc_sense ontolex:reference :concept_c21 .
 	:le_6kwqKlevhBnRAYCfbkwaVc_sense dct:creator "kicco" .
-	:le_6kwqKlevhBnRAYCfbkwaVc_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_6kwqKlevhBnRAYCfbkwaVc_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_6kwqKlevhBnRAYCfbkwaVc_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_6kwqKlevhBnRAYCfbkwaVc_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_6kwqKlevhBnRAYCfbkwaVc ontolex:canonicalForm :le_6kwqKlevhBnRAYCfbkwaVc_lemma .
 	:le_6kwqKlevhBnRAYCfbkwaVc_lemma rdf:type ontolex:Form .
 	:le_6kwqKlevhBnRAYCfbkwaVc_lemma ontolex:writtenRep "supernova"@en .
 	:le_6kwqKlevhBnRAYCfbkwaVc_lemma dct:creator "kicco" .
-	:le_6kwqKlevhBnRAYCfbkwaVc_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_6kwqKlevhBnRAYCfbkwaVc_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_6kwqKlevhBnRAYCfbkwaVc_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_6kwqKlevhBnRAYCfbkwaVc_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_6kwqKlevhBnRAYCfbkwaVc .
 	:le_6kwqKlevhBnRAYCfbkwaVc rdf:type ontolex:LexicalEntry .
 	:le_6kwqKlevhBnRAYCfbkwaVc rdfs:label "supernova"@es .
 	:le_6kwqKlevhBnRAYCfbkwaVc vs:term_status "working" .
 	:le_6kwqKlevhBnRAYCfbkwaVc dct:creator "kicco" .
-	:le_6kwqKlevhBnRAYCfbkwaVc dct:created "2023-04-08T13:00+02:00" .
-	:le_6kwqKlevhBnRAYCfbkwaVc dct:modified "2023-04-08T13:00+02:00" .
+	:le_6kwqKlevhBnRAYCfbkwaVc dct:created "2023-04-08T17:53+02:00" .
+	:le_6kwqKlevhBnRAYCfbkwaVc dct:modified "2023-04-08T17:53+02:00" .
 	:le_6kwqKlevhBnRAYCfbkwaVc ontolex:sense :le_6kwqKlevhBnRAYCfbkwaVc_sense .
 	:le_6kwqKlevhBnRAYCfbkwaVc_sense rdf:type ontolex:LexicalSense .
 	:le_6kwqKlevhBnRAYCfbkwaVc_sense ontolex:reference :concept_c21 .
 	:le_6kwqKlevhBnRAYCfbkwaVc_sense dct:creator "kicco" .
-	:le_6kwqKlevhBnRAYCfbkwaVc_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_6kwqKlevhBnRAYCfbkwaVc_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_6kwqKlevhBnRAYCfbkwaVc_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_6kwqKlevhBnRAYCfbkwaVc_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_6kwqKlevhBnRAYCfbkwaVc ontolex:canonicalForm :le_6kwqKlevhBnRAYCfbkwaVc_lemma .
 	:le_6kwqKlevhBnRAYCfbkwaVc_lemma rdf:type ontolex:Form .
 	:le_6kwqKlevhBnRAYCfbkwaVc_lemma ontolex:writtenRep "supernova"@es .
 	:le_6kwqKlevhBnRAYCfbkwaVc_lemma dct:creator "kicco" .
-	:le_6kwqKlevhBnRAYCfbkwaVc_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_6kwqKlevhBnRAYCfbkwaVc_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_6kwqKlevhBnRAYCfbkwaVc_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_6kwqKlevhBnRAYCfbkwaVc_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c22 rdf:type skos:Concept .
 	:concept_c22 skos:prefLabel "c22" .
 	:tbx_zu lime:entry :le_13E8khlqzoYEJRg0r2uJyX .
@@ -1074,20 +1071,20 @@ INSERT DATA {
 	:le_13E8khlqzoYEJRg0r2uJyX rdfs:label "Moore2003"@zu .
 	:le_13E8khlqzoYEJRg0r2uJyX vs:term_status "working" .
 	:le_13E8khlqzoYEJRg0r2uJyX dct:creator "kicco" .
-	:le_13E8khlqzoYEJRg0r2uJyX dct:created "2023-04-08T13:00+02:00" .
-	:le_13E8khlqzoYEJRg0r2uJyX dct:modified "2023-04-08T13:00+02:00" .
+	:le_13E8khlqzoYEJRg0r2uJyX dct:created "2023-04-08T17:53+02:00" .
+	:le_13E8khlqzoYEJRg0r2uJyX dct:modified "2023-04-08T17:53+02:00" .
 	:le_13E8khlqzoYEJRg0r2uJyX ontolex:sense :le_13E8khlqzoYEJRg0r2uJyX_sense .
 	:le_13E8khlqzoYEJRg0r2uJyX_sense rdf:type ontolex:LexicalSense .
 	:le_13E8khlqzoYEJRg0r2uJyX_sense ontolex:reference :concept_c22 .
 	:le_13E8khlqzoYEJRg0r2uJyX_sense dct:creator "kicco" .
-	:le_13E8khlqzoYEJRg0r2uJyX_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_13E8khlqzoYEJRg0r2uJyX_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_13E8khlqzoYEJRg0r2uJyX_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_13E8khlqzoYEJRg0r2uJyX_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_13E8khlqzoYEJRg0r2uJyX ontolex:canonicalForm :le_13E8khlqzoYEJRg0r2uJyX_lemma .
 	:le_13E8khlqzoYEJRg0r2uJyX_lemma rdf:type ontolex:Form .
 	:le_13E8khlqzoYEJRg0r2uJyX_lemma ontolex:writtenRep "Moore2003"@zu .
 	:le_13E8khlqzoYEJRg0r2uJyX_lemma dct:creator "kicco" .
-	:le_13E8khlqzoYEJRg0r2uJyX_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_13E8khlqzoYEJRg0r2uJyX_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_13E8khlqzoYEJRg0r2uJyX_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_13E8khlqzoYEJRg0r2uJyX_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_13E8khlqzoYEJRg0r2uJyX skos:note "Author[s]: Moore, Patrick" .
 	:concept_c23 rdf:type skos:Concept .
 	:concept_c23 skos:prefLabel "c23" .
@@ -1096,39 +1093,39 @@ INSERT DATA {
 	:le_XpBDIggXssr4Yde33RANx rdfs:label "red giant"@en .
 	:le_XpBDIggXssr4Yde33RANx vs:term_status "working" .
 	:le_XpBDIggXssr4Yde33RANx dct:creator "kicco" .
-	:le_XpBDIggXssr4Yde33RANx dct:created "2023-04-08T13:00+02:00" .
-	:le_XpBDIggXssr4Yde33RANx dct:modified "2023-04-08T13:00+02:00" .
+	:le_XpBDIggXssr4Yde33RANx dct:created "2023-04-08T17:53+02:00" .
+	:le_XpBDIggXssr4Yde33RANx dct:modified "2023-04-08T17:53+02:00" .
 	:le_XpBDIggXssr4Yde33RANx ontolex:sense :le_XpBDIggXssr4Yde33RANx_sense .
 	:le_XpBDIggXssr4Yde33RANx_sense rdf:type ontolex:LexicalSense .
 	:le_XpBDIggXssr4Yde33RANx_sense ontolex:reference :concept_c23 .
 	:le_XpBDIggXssr4Yde33RANx_sense dct:creator "kicco" .
-	:le_XpBDIggXssr4Yde33RANx_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_XpBDIggXssr4Yde33RANx_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_XpBDIggXssr4Yde33RANx_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_XpBDIggXssr4Yde33RANx_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_XpBDIggXssr4Yde33RANx ontolex:canonicalForm :le_XpBDIggXssr4Yde33RANx_lemma .
 	:le_XpBDIggXssr4Yde33RANx_lemma rdf:type ontolex:Form .
 	:le_XpBDIggXssr4Yde33RANx_lemma ontolex:writtenRep "red giant"@en .
 	:le_XpBDIggXssr4Yde33RANx_lemma dct:creator "kicco" .
-	:le_XpBDIggXssr4Yde33RANx_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_XpBDIggXssr4Yde33RANx_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_XpBDIggXssr4Yde33RANx_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_XpBDIggXssr4Yde33RANx_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_3Nui4nVZKLtmavMesbf4kJ .
 	:le_3Nui4nVZKLtmavMesbf4kJ rdf:type ontolex:LexicalEntry .
 	:le_3Nui4nVZKLtmavMesbf4kJ rdfs:label "gigante roja"@es .
 	:le_3Nui4nVZKLtmavMesbf4kJ vs:term_status "working" .
 	:le_3Nui4nVZKLtmavMesbf4kJ dct:creator "kicco" .
-	:le_3Nui4nVZKLtmavMesbf4kJ dct:created "2023-04-08T13:00+02:00" .
-	:le_3Nui4nVZKLtmavMesbf4kJ dct:modified "2023-04-08T13:00+02:00" .
+	:le_3Nui4nVZKLtmavMesbf4kJ dct:created "2023-04-08T17:53+02:00" .
+	:le_3Nui4nVZKLtmavMesbf4kJ dct:modified "2023-04-08T17:53+02:00" .
 	:le_3Nui4nVZKLtmavMesbf4kJ ontolex:sense :le_3Nui4nVZKLtmavMesbf4kJ_sense .
 	:le_3Nui4nVZKLtmavMesbf4kJ_sense rdf:type ontolex:LexicalSense .
 	:le_3Nui4nVZKLtmavMesbf4kJ_sense ontolex:reference :concept_c23 .
 	:le_3Nui4nVZKLtmavMesbf4kJ_sense dct:creator "kicco" .
-	:le_3Nui4nVZKLtmavMesbf4kJ_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_3Nui4nVZKLtmavMesbf4kJ_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_3Nui4nVZKLtmavMesbf4kJ_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_3Nui4nVZKLtmavMesbf4kJ_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_3Nui4nVZKLtmavMesbf4kJ ontolex:canonicalForm :le_3Nui4nVZKLtmavMesbf4kJ_lemma .
 	:le_3Nui4nVZKLtmavMesbf4kJ_lemma rdf:type ontolex:Form .
 	:le_3Nui4nVZKLtmavMesbf4kJ_lemma ontolex:writtenRep "gigante roja"@es .
 	:le_3Nui4nVZKLtmavMesbf4kJ_lemma dct:creator "kicco" .
-	:le_3Nui4nVZKLtmavMesbf4kJ_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_3Nui4nVZKLtmavMesbf4kJ_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_3Nui4nVZKLtmavMesbf4kJ_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_3Nui4nVZKLtmavMesbf4kJ_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c24 rdf:type skos:Concept .
 	:concept_c24 skos:prefLabel "c24" .
 	:tbx_en lime:entry :le_iK4tPk9LDhT86Guh3PxWc .
@@ -1136,39 +1133,39 @@ INSERT DATA {
 	:le_iK4tPk9LDhT86Guh3PxWc rdfs:label "red dwarf"@en .
 	:le_iK4tPk9LDhT86Guh3PxWc vs:term_status "working" .
 	:le_iK4tPk9LDhT86Guh3PxWc dct:creator "kicco" .
-	:le_iK4tPk9LDhT86Guh3PxWc dct:created "2023-04-08T13:00+02:00" .
-	:le_iK4tPk9LDhT86Guh3PxWc dct:modified "2023-04-08T13:00+02:00" .
+	:le_iK4tPk9LDhT86Guh3PxWc dct:created "2023-04-08T17:53+02:00" .
+	:le_iK4tPk9LDhT86Guh3PxWc dct:modified "2023-04-08T17:53+02:00" .
 	:le_iK4tPk9LDhT86Guh3PxWc ontolex:sense :le_iK4tPk9LDhT86Guh3PxWc_sense .
 	:le_iK4tPk9LDhT86Guh3PxWc_sense rdf:type ontolex:LexicalSense .
 	:le_iK4tPk9LDhT86Guh3PxWc_sense ontolex:reference :concept_c24 .
 	:le_iK4tPk9LDhT86Guh3PxWc_sense dct:creator "kicco" .
-	:le_iK4tPk9LDhT86Guh3PxWc_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_iK4tPk9LDhT86Guh3PxWc_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_iK4tPk9LDhT86Guh3PxWc_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_iK4tPk9LDhT86Guh3PxWc_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_iK4tPk9LDhT86Guh3PxWc ontolex:canonicalForm :le_iK4tPk9LDhT86Guh3PxWc_lemma .
 	:le_iK4tPk9LDhT86Guh3PxWc_lemma rdf:type ontolex:Form .
 	:le_iK4tPk9LDhT86Guh3PxWc_lemma ontolex:writtenRep "red dwarf"@en .
 	:le_iK4tPk9LDhT86Guh3PxWc_lemma dct:creator "kicco" .
-	:le_iK4tPk9LDhT86Guh3PxWc_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_iK4tPk9LDhT86Guh3PxWc_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_iK4tPk9LDhT86Guh3PxWc_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_iK4tPk9LDhT86Guh3PxWc_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_2LZQqcAzUx0onEjqoVrvOT .
 	:le_2LZQqcAzUx0onEjqoVrvOT rdf:type ontolex:LexicalEntry .
 	:le_2LZQqcAzUx0onEjqoVrvOT rdfs:label "enana roja"@es .
 	:le_2LZQqcAzUx0onEjqoVrvOT vs:term_status "working" .
 	:le_2LZQqcAzUx0onEjqoVrvOT dct:creator "kicco" .
-	:le_2LZQqcAzUx0onEjqoVrvOT dct:created "2023-04-08T13:00+02:00" .
-	:le_2LZQqcAzUx0onEjqoVrvOT dct:modified "2023-04-08T13:00+02:00" .
+	:le_2LZQqcAzUx0onEjqoVrvOT dct:created "2023-04-08T17:53+02:00" .
+	:le_2LZQqcAzUx0onEjqoVrvOT dct:modified "2023-04-08T17:53+02:00" .
 	:le_2LZQqcAzUx0onEjqoVrvOT ontolex:sense :le_2LZQqcAzUx0onEjqoVrvOT_sense .
 	:le_2LZQqcAzUx0onEjqoVrvOT_sense rdf:type ontolex:LexicalSense .
 	:le_2LZQqcAzUx0onEjqoVrvOT_sense ontolex:reference :concept_c24 .
 	:le_2LZQqcAzUx0onEjqoVrvOT_sense dct:creator "kicco" .
-	:le_2LZQqcAzUx0onEjqoVrvOT_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_2LZQqcAzUx0onEjqoVrvOT_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_2LZQqcAzUx0onEjqoVrvOT_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_2LZQqcAzUx0onEjqoVrvOT_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_2LZQqcAzUx0onEjqoVrvOT ontolex:canonicalForm :le_2LZQqcAzUx0onEjqoVrvOT_lemma .
 	:le_2LZQqcAzUx0onEjqoVrvOT_lemma rdf:type ontolex:Form .
 	:le_2LZQqcAzUx0onEjqoVrvOT_lemma ontolex:writtenRep "enana roja"@es .
 	:le_2LZQqcAzUx0onEjqoVrvOT_lemma dct:creator "kicco" .
-	:le_2LZQqcAzUx0onEjqoVrvOT_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_2LZQqcAzUx0onEjqoVrvOT_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_2LZQqcAzUx0onEjqoVrvOT_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_2LZQqcAzUx0onEjqoVrvOT_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c25 rdf:type skos:Concept .
 	:concept_c25 skos:prefLabel "c25" .
 	:tbx_en lime:entry :le_5fR0p9EIkCEOUh7DKUgsmX .
@@ -1176,39 +1173,39 @@ INSERT DATA {
 	:le_5fR0p9EIkCEOUh7DKUgsmX rdfs:label "spectral type"@en .
 	:le_5fR0p9EIkCEOUh7DKUgsmX vs:term_status "working" .
 	:le_5fR0p9EIkCEOUh7DKUgsmX dct:creator "kicco" .
-	:le_5fR0p9EIkCEOUh7DKUgsmX dct:created "2023-04-08T13:00+02:00" .
-	:le_5fR0p9EIkCEOUh7DKUgsmX dct:modified "2023-04-08T13:00+02:00" .
+	:le_5fR0p9EIkCEOUh7DKUgsmX dct:created "2023-04-08T17:53+02:00" .
+	:le_5fR0p9EIkCEOUh7DKUgsmX dct:modified "2023-04-08T17:53+02:00" .
 	:le_5fR0p9EIkCEOUh7DKUgsmX ontolex:sense :le_5fR0p9EIkCEOUh7DKUgsmX_sense .
 	:le_5fR0p9EIkCEOUh7DKUgsmX_sense rdf:type ontolex:LexicalSense .
 	:le_5fR0p9EIkCEOUh7DKUgsmX_sense ontolex:reference :concept_c25 .
 	:le_5fR0p9EIkCEOUh7DKUgsmX_sense dct:creator "kicco" .
-	:le_5fR0p9EIkCEOUh7DKUgsmX_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5fR0p9EIkCEOUh7DKUgsmX_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5fR0p9EIkCEOUh7DKUgsmX_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5fR0p9EIkCEOUh7DKUgsmX_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5fR0p9EIkCEOUh7DKUgsmX ontolex:canonicalForm :le_5fR0p9EIkCEOUh7DKUgsmX_lemma .
 	:le_5fR0p9EIkCEOUh7DKUgsmX_lemma rdf:type ontolex:Form .
 	:le_5fR0p9EIkCEOUh7DKUgsmX_lemma ontolex:writtenRep "spectral type"@en .
 	:le_5fR0p9EIkCEOUh7DKUgsmX_lemma dct:creator "kicco" .
-	:le_5fR0p9EIkCEOUh7DKUgsmX_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5fR0p9EIkCEOUh7DKUgsmX_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5fR0p9EIkCEOUh7DKUgsmX_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5fR0p9EIkCEOUh7DKUgsmX_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_ZA5Y73Y12VFcxRdBoVIw4 .
 	:le_ZA5Y73Y12VFcxRdBoVIw4 rdf:type ontolex:LexicalEntry .
 	:le_ZA5Y73Y12VFcxRdBoVIw4 rdfs:label "tipo espectral"@es .
 	:le_ZA5Y73Y12VFcxRdBoVIw4 vs:term_status "working" .
 	:le_ZA5Y73Y12VFcxRdBoVIw4 dct:creator "kicco" .
-	:le_ZA5Y73Y12VFcxRdBoVIw4 dct:created "2023-04-08T13:00+02:00" .
-	:le_ZA5Y73Y12VFcxRdBoVIw4 dct:modified "2023-04-08T13:00+02:00" .
+	:le_ZA5Y73Y12VFcxRdBoVIw4 dct:created "2023-04-08T17:53+02:00" .
+	:le_ZA5Y73Y12VFcxRdBoVIw4 dct:modified "2023-04-08T17:53+02:00" .
 	:le_ZA5Y73Y12VFcxRdBoVIw4 ontolex:sense :le_ZA5Y73Y12VFcxRdBoVIw4_sense .
 	:le_ZA5Y73Y12VFcxRdBoVIw4_sense rdf:type ontolex:LexicalSense .
 	:le_ZA5Y73Y12VFcxRdBoVIw4_sense ontolex:reference :concept_c25 .
 	:le_ZA5Y73Y12VFcxRdBoVIw4_sense dct:creator "kicco" .
-	:le_ZA5Y73Y12VFcxRdBoVIw4_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_ZA5Y73Y12VFcxRdBoVIw4_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_ZA5Y73Y12VFcxRdBoVIw4_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_ZA5Y73Y12VFcxRdBoVIw4_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_ZA5Y73Y12VFcxRdBoVIw4 ontolex:canonicalForm :le_ZA5Y73Y12VFcxRdBoVIw4_lemma .
 	:le_ZA5Y73Y12VFcxRdBoVIw4_lemma rdf:type ontolex:Form .
 	:le_ZA5Y73Y12VFcxRdBoVIw4_lemma ontolex:writtenRep "tipo espectral"@es .
 	:le_ZA5Y73Y12VFcxRdBoVIw4_lemma dct:creator "kicco" .
-	:le_ZA5Y73Y12VFcxRdBoVIw4_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_ZA5Y73Y12VFcxRdBoVIw4_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_ZA5Y73Y12VFcxRdBoVIw4_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_ZA5Y73Y12VFcxRdBoVIw4_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c26 rdf:type skos:Concept .
 	:concept_c26 skos:prefLabel "c26" .
 	:tbx_en lime:entry :le_1glHdqwsAEXlUh6rk7C5uM .
@@ -1216,40 +1213,40 @@ INSERT DATA {
 	:le_1glHdqwsAEXlUh6rk7C5uM rdfs:label "white dwarf"@en .
 	:le_1glHdqwsAEXlUh6rk7C5uM vs:term_status "working" .
 	:le_1glHdqwsAEXlUh6rk7C5uM dct:creator "kicco" .
-	:le_1glHdqwsAEXlUh6rk7C5uM dct:created "2023-04-08T13:00+02:00" .
-	:le_1glHdqwsAEXlUh6rk7C5uM dct:modified "2023-04-08T13:00+02:00" .
+	:le_1glHdqwsAEXlUh6rk7C5uM dct:created "2023-04-08T17:53+02:00" .
+	:le_1glHdqwsAEXlUh6rk7C5uM dct:modified "2023-04-08T17:53+02:00" .
 	:le_1glHdqwsAEXlUh6rk7C5uM ontolex:sense :le_1glHdqwsAEXlUh6rk7C5uM_sense .
 	:le_1glHdqwsAEXlUh6rk7C5uM_sense rdf:type ontolex:LexicalSense .
 	:le_1glHdqwsAEXlUh6rk7C5uM_sense ontolex:reference :concept_c26 .
 	:le_1glHdqwsAEXlUh6rk7C5uM_sense dct:creator "kicco" .
-	:le_1glHdqwsAEXlUh6rk7C5uM_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1glHdqwsAEXlUh6rk7C5uM_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1glHdqwsAEXlUh6rk7C5uM_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1glHdqwsAEXlUh6rk7C5uM_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1glHdqwsAEXlUh6rk7C5uM ontolex:canonicalForm :le_1glHdqwsAEXlUh6rk7C5uM_lemma .
 	:le_1glHdqwsAEXlUh6rk7C5uM_lemma rdf:type ontolex:Form .
 	:le_1glHdqwsAEXlUh6rk7C5uM_lemma ontolex:writtenRep "white dwarf"@en .
 	:le_1glHdqwsAEXlUh6rk7C5uM_lemma dct:creator "kicco" .
-	:le_1glHdqwsAEXlUh6rk7C5uM_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1glHdqwsAEXlUh6rk7C5uM_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1glHdqwsAEXlUh6rk7C5uM_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1glHdqwsAEXlUh6rk7C5uM_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c26 skos:note "This is the end-result of all but the most massive of stars."@en .
 	:tbx_es lime:entry :le_2H13oIydJszFw1IBhJrSNA .
 	:le_2H13oIydJszFw1IBhJrSNA rdf:type ontolex:LexicalEntry .
 	:le_2H13oIydJszFw1IBhJrSNA rdfs:label "enana blanca"@es .
 	:le_2H13oIydJszFw1IBhJrSNA vs:term_status "working" .
 	:le_2H13oIydJszFw1IBhJrSNA dct:creator "kicco" .
-	:le_2H13oIydJszFw1IBhJrSNA dct:created "2023-04-08T13:00+02:00" .
-	:le_2H13oIydJszFw1IBhJrSNA dct:modified "2023-04-08T13:00+02:00" .
+	:le_2H13oIydJszFw1IBhJrSNA dct:created "2023-04-08T17:53+02:00" .
+	:le_2H13oIydJszFw1IBhJrSNA dct:modified "2023-04-08T17:53+02:00" .
 	:le_2H13oIydJszFw1IBhJrSNA ontolex:sense :le_2H13oIydJszFw1IBhJrSNA_sense .
 	:le_2H13oIydJszFw1IBhJrSNA_sense rdf:type ontolex:LexicalSense .
 	:le_2H13oIydJszFw1IBhJrSNA_sense ontolex:reference :concept_c26 .
 	:le_2H13oIydJszFw1IBhJrSNA_sense dct:creator "kicco" .
-	:le_2H13oIydJszFw1IBhJrSNA_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_2H13oIydJszFw1IBhJrSNA_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_2H13oIydJszFw1IBhJrSNA_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_2H13oIydJszFw1IBhJrSNA_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_2H13oIydJszFw1IBhJrSNA ontolex:canonicalForm :le_2H13oIydJszFw1IBhJrSNA_lemma .
 	:le_2H13oIydJszFw1IBhJrSNA_lemma rdf:type ontolex:Form .
 	:le_2H13oIydJszFw1IBhJrSNA_lemma ontolex:writtenRep "enana blanca"@es .
 	:le_2H13oIydJszFw1IBhJrSNA_lemma dct:creator "kicco" .
-	:le_2H13oIydJszFw1IBhJrSNA_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_2H13oIydJszFw1IBhJrSNA_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_2H13oIydJszFw1IBhJrSNA_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_2H13oIydJszFw1IBhJrSNA_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c27 rdf:type skos:Concept .
 	:concept_c27 skos:prefLabel "c27" .
 	:tbx_en lime:entry :le_I8yoJgiRU4XSPqJQBM7MU .
@@ -1257,40 +1254,40 @@ INSERT DATA {
 	:le_I8yoJgiRU4XSPqJQBM7MU rdfs:label "planetary nebula"@en .
 	:le_I8yoJgiRU4XSPqJQBM7MU vs:term_status "working" .
 	:le_I8yoJgiRU4XSPqJQBM7MU dct:creator "kicco" .
-	:le_I8yoJgiRU4XSPqJQBM7MU dct:created "2023-04-08T13:00+02:00" .
-	:le_I8yoJgiRU4XSPqJQBM7MU dct:modified "2023-04-08T13:00+02:00" .
+	:le_I8yoJgiRU4XSPqJQBM7MU dct:created "2023-04-08T17:53+02:00" .
+	:le_I8yoJgiRU4XSPqJQBM7MU dct:modified "2023-04-08T17:53+02:00" .
 	:le_I8yoJgiRU4XSPqJQBM7MU ontolex:sense :le_I8yoJgiRU4XSPqJQBM7MU_sense .
 	:le_I8yoJgiRU4XSPqJQBM7MU_sense rdf:type ontolex:LexicalSense .
 	:le_I8yoJgiRU4XSPqJQBM7MU_sense ontolex:reference :concept_c27 .
 	:le_I8yoJgiRU4XSPqJQBM7MU_sense dct:creator "kicco" .
-	:le_I8yoJgiRU4XSPqJQBM7MU_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_I8yoJgiRU4XSPqJQBM7MU_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_I8yoJgiRU4XSPqJQBM7MU_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_I8yoJgiRU4XSPqJQBM7MU_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_I8yoJgiRU4XSPqJQBM7MU ontolex:canonicalForm :le_I8yoJgiRU4XSPqJQBM7MU_lemma .
 	:le_I8yoJgiRU4XSPqJQBM7MU_lemma rdf:type ontolex:Form .
 	:le_I8yoJgiRU4XSPqJQBM7MU_lemma ontolex:writtenRep "planetary nebula"@en .
 	:le_I8yoJgiRU4XSPqJQBM7MU_lemma dct:creator "kicco" .
-	:le_I8yoJgiRU4XSPqJQBM7MU_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_I8yoJgiRU4XSPqJQBM7MU_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_I8yoJgiRU4XSPqJQBM7MU_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_I8yoJgiRU4XSPqJQBM7MU_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c27 skos:note "As mass is gradually lost, the core of the star becomes more exposed, ultimately becoming a white dwarf. Also, planetary nebulae have nothing to do with planets, and are not true nebulae."@en .
 	:tbx_es lime:entry :le_37kmwaqI0hUx16iBMe4Hya .
 	:le_37kmwaqI0hUx16iBMe4Hya rdf:type ontolex:LexicalEntry .
 	:le_37kmwaqI0hUx16iBMe4Hya rdfs:label "nebulosa planetaria"@es .
 	:le_37kmwaqI0hUx16iBMe4Hya vs:term_status "working" .
 	:le_37kmwaqI0hUx16iBMe4Hya dct:creator "kicco" .
-	:le_37kmwaqI0hUx16iBMe4Hya dct:created "2023-04-08T13:00+02:00" .
-	:le_37kmwaqI0hUx16iBMe4Hya dct:modified "2023-04-08T13:00+02:00" .
+	:le_37kmwaqI0hUx16iBMe4Hya dct:created "2023-04-08T17:53+02:00" .
+	:le_37kmwaqI0hUx16iBMe4Hya dct:modified "2023-04-08T17:53+02:00" .
 	:le_37kmwaqI0hUx16iBMe4Hya ontolex:sense :le_37kmwaqI0hUx16iBMe4Hya_sense .
 	:le_37kmwaqI0hUx16iBMe4Hya_sense rdf:type ontolex:LexicalSense .
 	:le_37kmwaqI0hUx16iBMe4Hya_sense ontolex:reference :concept_c27 .
 	:le_37kmwaqI0hUx16iBMe4Hya_sense dct:creator "kicco" .
-	:le_37kmwaqI0hUx16iBMe4Hya_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_37kmwaqI0hUx16iBMe4Hya_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_37kmwaqI0hUx16iBMe4Hya_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_37kmwaqI0hUx16iBMe4Hya_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_37kmwaqI0hUx16iBMe4Hya ontolex:canonicalForm :le_37kmwaqI0hUx16iBMe4Hya_lemma .
 	:le_37kmwaqI0hUx16iBMe4Hya_lemma rdf:type ontolex:Form .
 	:le_37kmwaqI0hUx16iBMe4Hya_lemma ontolex:writtenRep "nebulosa planetaria"@es .
 	:le_37kmwaqI0hUx16iBMe4Hya_lemma dct:creator "kicco" .
-	:le_37kmwaqI0hUx16iBMe4Hya_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_37kmwaqI0hUx16iBMe4Hya_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_37kmwaqI0hUx16iBMe4Hya_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_37kmwaqI0hUx16iBMe4Hya_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c28 rdf:type skos:Concept .
 	:concept_c28 skos:prefLabel "c28" .
 	:tbx_en lime:entry :le_2HA3XpRZI9XGOXlGvysyf8 .
@@ -1298,40 +1295,40 @@ INSERT DATA {
 	:le_2HA3XpRZI9XGOXlGvysyf8 rdfs:label "emission nebula"@en .
 	:le_2HA3XpRZI9XGOXlGvysyf8 vs:term_status "working" .
 	:le_2HA3XpRZI9XGOXlGvysyf8 dct:creator "kicco" .
-	:le_2HA3XpRZI9XGOXlGvysyf8 dct:created "2023-04-08T13:00+02:00" .
-	:le_2HA3XpRZI9XGOXlGvysyf8 dct:modified "2023-04-08T13:00+02:00" .
+	:le_2HA3XpRZI9XGOXlGvysyf8 dct:created "2023-04-08T17:53+02:00" .
+	:le_2HA3XpRZI9XGOXlGvysyf8 dct:modified "2023-04-08T17:53+02:00" .
 	:le_2HA3XpRZI9XGOXlGvysyf8 ontolex:sense :le_2HA3XpRZI9XGOXlGvysyf8_sense .
 	:le_2HA3XpRZI9XGOXlGvysyf8_sense rdf:type ontolex:LexicalSense .
 	:le_2HA3XpRZI9XGOXlGvysyf8_sense ontolex:reference :concept_c28 .
 	:le_2HA3XpRZI9XGOXlGvysyf8_sense dct:creator "kicco" .
-	:le_2HA3XpRZI9XGOXlGvysyf8_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_2HA3XpRZI9XGOXlGvysyf8_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_2HA3XpRZI9XGOXlGvysyf8_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_2HA3XpRZI9XGOXlGvysyf8_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_2HA3XpRZI9XGOXlGvysyf8 ontolex:canonicalForm :le_2HA3XpRZI9XGOXlGvysyf8_lemma .
 	:le_2HA3XpRZI9XGOXlGvysyf8_lemma rdf:type ontolex:Form .
 	:le_2HA3XpRZI9XGOXlGvysyf8_lemma ontolex:writtenRep "emission nebula"@en .
 	:le_2HA3XpRZI9XGOXlGvysyf8_lemma dct:creator "kicco" .
-	:le_2HA3XpRZI9XGOXlGvysyf8_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_2HA3XpRZI9XGOXlGvysyf8_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_2HA3XpRZI9XGOXlGvysyf8_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_2HA3XpRZI9XGOXlGvysyf8_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c28 skos:note "Ultraviolet radiation, gas cloud collisions, and synchrotron radiation can all cause the emission nebula to shine."@en .
 	:tbx_es lime:entry :le_YhrBfbYDOq8W1swlOifzp .
 	:le_YhrBfbYDOq8W1swlOifzp rdf:type ontolex:LexicalEntry .
 	:le_YhrBfbYDOq8W1swlOifzp rdfs:label "nebulosa de emisión"@es .
 	:le_YhrBfbYDOq8W1swlOifzp vs:term_status "working" .
 	:le_YhrBfbYDOq8W1swlOifzp dct:creator "kicco" .
-	:le_YhrBfbYDOq8W1swlOifzp dct:created "2023-04-08T13:00+02:00" .
-	:le_YhrBfbYDOq8W1swlOifzp dct:modified "2023-04-08T13:00+02:00" .
+	:le_YhrBfbYDOq8W1swlOifzp dct:created "2023-04-08T17:53+02:00" .
+	:le_YhrBfbYDOq8W1swlOifzp dct:modified "2023-04-08T17:53+02:00" .
 	:le_YhrBfbYDOq8W1swlOifzp ontolex:sense :le_YhrBfbYDOq8W1swlOifzp_sense .
 	:le_YhrBfbYDOq8W1swlOifzp_sense rdf:type ontolex:LexicalSense .
 	:le_YhrBfbYDOq8W1swlOifzp_sense ontolex:reference :concept_c28 .
 	:le_YhrBfbYDOq8W1swlOifzp_sense dct:creator "kicco" .
-	:le_YhrBfbYDOq8W1swlOifzp_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_YhrBfbYDOq8W1swlOifzp_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_YhrBfbYDOq8W1swlOifzp_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_YhrBfbYDOq8W1swlOifzp_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_YhrBfbYDOq8W1swlOifzp ontolex:canonicalForm :le_YhrBfbYDOq8W1swlOifzp_lemma .
 	:le_YhrBfbYDOq8W1swlOifzp_lemma rdf:type ontolex:Form .
 	:le_YhrBfbYDOq8W1swlOifzp_lemma ontolex:writtenRep "nebulosa de emisión"@es .
 	:le_YhrBfbYDOq8W1swlOifzp_lemma dct:creator "kicco" .
-	:le_YhrBfbYDOq8W1swlOifzp_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_YhrBfbYDOq8W1swlOifzp_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_YhrBfbYDOq8W1swlOifzp_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_YhrBfbYDOq8W1swlOifzp_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c29 rdf:type skos:Concept .
 	:concept_c29 skos:prefLabel "c29" .
 	:tbx_en lime:entry :le_1E5Z0azIu1qyj03SEbB5eM .
@@ -1339,40 +1336,40 @@ INSERT DATA {
 	:le_1E5Z0azIu1qyj03SEbB5eM rdfs:label "nebula"@en .
 	:le_1E5Z0azIu1qyj03SEbB5eM vs:term_status "working" .
 	:le_1E5Z0azIu1qyj03SEbB5eM dct:creator "kicco" .
-	:le_1E5Z0azIu1qyj03SEbB5eM dct:created "2023-04-08T13:00+02:00" .
-	:le_1E5Z0azIu1qyj03SEbB5eM dct:modified "2023-04-08T13:00+02:00" .
+	:le_1E5Z0azIu1qyj03SEbB5eM dct:created "2023-04-08T17:53+02:00" .
+	:le_1E5Z0azIu1qyj03SEbB5eM dct:modified "2023-04-08T17:53+02:00" .
 	:le_1E5Z0azIu1qyj03SEbB5eM ontolex:sense :le_1E5Z0azIu1qyj03SEbB5eM_sense .
 	:le_1E5Z0azIu1qyj03SEbB5eM_sense rdf:type ontolex:LexicalSense .
 	:le_1E5Z0azIu1qyj03SEbB5eM_sense ontolex:reference :concept_c29 .
 	:le_1E5Z0azIu1qyj03SEbB5eM_sense dct:creator "kicco" .
-	:le_1E5Z0azIu1qyj03SEbB5eM_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1E5Z0azIu1qyj03SEbB5eM_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1E5Z0azIu1qyj03SEbB5eM_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1E5Z0azIu1qyj03SEbB5eM_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1E5Z0azIu1qyj03SEbB5eM ontolex:canonicalForm :le_1E5Z0azIu1qyj03SEbB5eM_lemma .
 	:le_1E5Z0azIu1qyj03SEbB5eM_lemma rdf:type ontolex:Form .
 	:le_1E5Z0azIu1qyj03SEbB5eM_lemma ontolex:writtenRep "nebula"@en .
 	:le_1E5Z0azIu1qyj03SEbB5eM_lemma dct:creator "kicco" .
-	:le_1E5Z0azIu1qyj03SEbB5eM_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1E5Z0azIu1qyj03SEbB5eM_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1E5Z0azIu1qyj03SEbB5eM_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1E5Z0azIu1qyj03SEbB5eM_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_1E5Z0azIu1qyj03SEbB5eM skos:note "Grammatical Number: singular" .
 	:tbx_en lime:entry :le_1BuMCtYAihVTZ7isPX8R2u .
 	:le_1BuMCtYAihVTZ7isPX8R2u rdf:type ontolex:LexicalEntry .
 	:le_1BuMCtYAihVTZ7isPX8R2u rdfs:label "nebulae"@en .
 	:le_1BuMCtYAihVTZ7isPX8R2u vs:term_status "working" .
 	:le_1BuMCtYAihVTZ7isPX8R2u dct:creator "kicco" .
-	:le_1BuMCtYAihVTZ7isPX8R2u dct:created "2023-04-08T13:00+02:00" .
-	:le_1BuMCtYAihVTZ7isPX8R2u dct:modified "2023-04-08T13:00+02:00" .
+	:le_1BuMCtYAihVTZ7isPX8R2u dct:created "2023-04-08T17:53+02:00" .
+	:le_1BuMCtYAihVTZ7isPX8R2u dct:modified "2023-04-08T17:53+02:00" .
 	:le_1BuMCtYAihVTZ7isPX8R2u ontolex:sense :le_1BuMCtYAihVTZ7isPX8R2u_sense .
 	:le_1BuMCtYAihVTZ7isPX8R2u_sense rdf:type ontolex:LexicalSense .
 	:le_1BuMCtYAihVTZ7isPX8R2u_sense ontolex:reference :concept_c29 .
 	:le_1BuMCtYAihVTZ7isPX8R2u_sense dct:creator "kicco" .
-	:le_1BuMCtYAihVTZ7isPX8R2u_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1BuMCtYAihVTZ7isPX8R2u_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1BuMCtYAihVTZ7isPX8R2u_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1BuMCtYAihVTZ7isPX8R2u_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1BuMCtYAihVTZ7isPX8R2u ontolex:canonicalForm :le_1BuMCtYAihVTZ7isPX8R2u_lemma .
 	:le_1BuMCtYAihVTZ7isPX8R2u_lemma rdf:type ontolex:Form .
 	:le_1BuMCtYAihVTZ7isPX8R2u_lemma ontolex:writtenRep "nebulae"@en .
 	:le_1BuMCtYAihVTZ7isPX8R2u_lemma dct:creator "kicco" .
-	:le_1BuMCtYAihVTZ7isPX8R2u_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1BuMCtYAihVTZ7isPX8R2u_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1BuMCtYAihVTZ7isPX8R2u_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1BuMCtYAihVTZ7isPX8R2u_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_1BuMCtYAihVTZ7isPX8R2u skos:note "Grammatical Number: plural" .
 	:concept_c29 skos:note "The term was originally applied to any object with a fuzzy telescopic appearance, but with the advent of larger instruments many 'nebulae' were found to consist of faint stars."@en .
 	:tbx_es lime:entry :le_78Zc9zw5yParZFljUNrMpW .
@@ -1380,20 +1377,20 @@ INSERT DATA {
 	:le_78Zc9zw5yParZFljUNrMpW rdfs:label "nebulosa"@es .
 	:le_78Zc9zw5yParZFljUNrMpW vs:term_status "working" .
 	:le_78Zc9zw5yParZFljUNrMpW dct:creator "kicco" .
-	:le_78Zc9zw5yParZFljUNrMpW dct:created "2023-04-08T13:00+02:00" .
-	:le_78Zc9zw5yParZFljUNrMpW dct:modified "2023-04-08T13:00+02:00" .
+	:le_78Zc9zw5yParZFljUNrMpW dct:created "2023-04-08T17:53+02:00" .
+	:le_78Zc9zw5yParZFljUNrMpW dct:modified "2023-04-08T17:53+02:00" .
 	:le_78Zc9zw5yParZFljUNrMpW ontolex:sense :le_78Zc9zw5yParZFljUNrMpW_sense .
 	:le_78Zc9zw5yParZFljUNrMpW_sense rdf:type ontolex:LexicalSense .
 	:le_78Zc9zw5yParZFljUNrMpW_sense ontolex:reference :concept_c29 .
 	:le_78Zc9zw5yParZFljUNrMpW_sense dct:creator "kicco" .
-	:le_78Zc9zw5yParZFljUNrMpW_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_78Zc9zw5yParZFljUNrMpW_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_78Zc9zw5yParZFljUNrMpW_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_78Zc9zw5yParZFljUNrMpW_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_78Zc9zw5yParZFljUNrMpW ontolex:canonicalForm :le_78Zc9zw5yParZFljUNrMpW_lemma .
 	:le_78Zc9zw5yParZFljUNrMpW_lemma rdf:type ontolex:Form .
 	:le_78Zc9zw5yParZFljUNrMpW_lemma ontolex:writtenRep "nebulosa"@es .
 	:le_78Zc9zw5yParZFljUNrMpW_lemma dct:creator "kicco" .
-	:le_78Zc9zw5yParZFljUNrMpW_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_78Zc9zw5yParZFljUNrMpW_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_78Zc9zw5yParZFljUNrMpW_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_78Zc9zw5yParZFljUNrMpW_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c30 rdf:type skos:Concept .
 	:concept_c30 skos:prefLabel "c30" .
 	:tbx_en lime:entry :le_1eT75VesXM3skz3APbzsRX .
@@ -1401,77 +1398,77 @@ INSERT DATA {
 	:le_1eT75VesXM3skz3APbzsRX rdfs:label "dark nebula"@en .
 	:le_1eT75VesXM3skz3APbzsRX vs:term_status "working" .
 	:le_1eT75VesXM3skz3APbzsRX dct:creator "kicco" .
-	:le_1eT75VesXM3skz3APbzsRX dct:created "2023-04-08T13:00+02:00" .
-	:le_1eT75VesXM3skz3APbzsRX dct:modified "2023-04-08T13:00+02:00" .
+	:le_1eT75VesXM3skz3APbzsRX dct:created "2023-04-08T17:53+02:00" .
+	:le_1eT75VesXM3skz3APbzsRX dct:modified "2023-04-08T17:53+02:00" .
 	:le_1eT75VesXM3skz3APbzsRX ontolex:sense :le_1eT75VesXM3skz3APbzsRX_sense .
 	:le_1eT75VesXM3skz3APbzsRX_sense rdf:type ontolex:LexicalSense .
 	:le_1eT75VesXM3skz3APbzsRX_sense ontolex:reference :concept_c30 .
 	:le_1eT75VesXM3skz3APbzsRX_sense dct:creator "kicco" .
-	:le_1eT75VesXM3skz3APbzsRX_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1eT75VesXM3skz3APbzsRX_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1eT75VesXM3skz3APbzsRX_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1eT75VesXM3skz3APbzsRX_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1eT75VesXM3skz3APbzsRX ontolex:canonicalForm :le_1eT75VesXM3skz3APbzsRX_lemma .
 	:le_1eT75VesXM3skz3APbzsRX_lemma rdf:type ontolex:Form .
 	:le_1eT75VesXM3skz3APbzsRX_lemma ontolex:writtenRep "dark nebula"@en .
 	:le_1eT75VesXM3skz3APbzsRX_lemma dct:creator "kicco" .
-	:le_1eT75VesXM3skz3APbzsRX_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1eT75VesXM3skz3APbzsRX_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1eT75VesXM3skz3APbzsRX_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1eT75VesXM3skz3APbzsRX_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_E0WHtBoHi4KiX61aYterC .
 	:le_E0WHtBoHi4KiX61aYterC rdf:type ontolex:LexicalEntry .
 	:le_E0WHtBoHi4KiX61aYterC rdfs:label "absorbtion nebula"@en .
 	:le_E0WHtBoHi4KiX61aYterC vs:term_status "working" .
 	:le_E0WHtBoHi4KiX61aYterC dct:creator "kicco" .
-	:le_E0WHtBoHi4KiX61aYterC dct:created "2023-04-08T13:00+02:00" .
-	:le_E0WHtBoHi4KiX61aYterC dct:modified "2023-04-08T13:00+02:00" .
+	:le_E0WHtBoHi4KiX61aYterC dct:created "2023-04-08T17:53+02:00" .
+	:le_E0WHtBoHi4KiX61aYterC dct:modified "2023-04-08T17:53+02:00" .
 	:le_E0WHtBoHi4KiX61aYterC ontolex:sense :le_E0WHtBoHi4KiX61aYterC_sense .
 	:le_E0WHtBoHi4KiX61aYterC_sense rdf:type ontolex:LexicalSense .
 	:le_E0WHtBoHi4KiX61aYterC_sense ontolex:reference :concept_c30 .
 	:le_E0WHtBoHi4KiX61aYterC_sense dct:creator "kicco" .
-	:le_E0WHtBoHi4KiX61aYterC_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_E0WHtBoHi4KiX61aYterC_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_E0WHtBoHi4KiX61aYterC_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_E0WHtBoHi4KiX61aYterC_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_E0WHtBoHi4KiX61aYterC ontolex:canonicalForm :le_E0WHtBoHi4KiX61aYterC_lemma .
 	:le_E0WHtBoHi4KiX61aYterC_lemma rdf:type ontolex:Form .
 	:le_E0WHtBoHi4KiX61aYterC_lemma ontolex:writtenRep "absorbtion nebula"@en .
 	:le_E0WHtBoHi4KiX61aYterC_lemma dct:creator "kicco" .
-	:le_E0WHtBoHi4KiX61aYterC_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_E0WHtBoHi4KiX61aYterC_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_E0WHtBoHi4KiX61aYterC_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_E0WHtBoHi4KiX61aYterC_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_7KZGZ56sElHYzaQFbTCU2M .
 	:le_7KZGZ56sElHYzaQFbTCU2M rdf:type ontolex:LexicalEntry .
 	:le_7KZGZ56sElHYzaQFbTCU2M rdfs:label "nebulosa oscura"@es .
 	:le_7KZGZ56sElHYzaQFbTCU2M vs:term_status "working" .
 	:le_7KZGZ56sElHYzaQFbTCU2M dct:creator "kicco" .
-	:le_7KZGZ56sElHYzaQFbTCU2M dct:created "2023-04-08T13:00+02:00" .
-	:le_7KZGZ56sElHYzaQFbTCU2M dct:modified "2023-04-08T13:00+02:00" .
+	:le_7KZGZ56sElHYzaQFbTCU2M dct:created "2023-04-08T17:53+02:00" .
+	:le_7KZGZ56sElHYzaQFbTCU2M dct:modified "2023-04-08T17:53+02:00" .
 	:le_7KZGZ56sElHYzaQFbTCU2M ontolex:sense :le_7KZGZ56sElHYzaQFbTCU2M_sense .
 	:le_7KZGZ56sElHYzaQFbTCU2M_sense rdf:type ontolex:LexicalSense .
 	:le_7KZGZ56sElHYzaQFbTCU2M_sense ontolex:reference :concept_c30 .
 	:le_7KZGZ56sElHYzaQFbTCU2M_sense dct:creator "kicco" .
-	:le_7KZGZ56sElHYzaQFbTCU2M_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_7KZGZ56sElHYzaQFbTCU2M_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_7KZGZ56sElHYzaQFbTCU2M_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_7KZGZ56sElHYzaQFbTCU2M_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_7KZGZ56sElHYzaQFbTCU2M ontolex:canonicalForm :le_7KZGZ56sElHYzaQFbTCU2M_lemma .
 	:le_7KZGZ56sElHYzaQFbTCU2M_lemma rdf:type ontolex:Form .
 	:le_7KZGZ56sElHYzaQFbTCU2M_lemma ontolex:writtenRep "nebulosa oscura"@es .
 	:le_7KZGZ56sElHYzaQFbTCU2M_lemma dct:creator "kicco" .
-	:le_7KZGZ56sElHYzaQFbTCU2M_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_7KZGZ56sElHYzaQFbTCU2M_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_7KZGZ56sElHYzaQFbTCU2M_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_7KZGZ56sElHYzaQFbTCU2M_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_7dR0ATZSmtjjFPRgAvClNL .
 	:le_7dR0ATZSmtjjFPRgAvClNL rdf:type ontolex:LexicalEntry .
 	:le_7dR0ATZSmtjjFPRgAvClNL rdfs:label "nebulosa de absorción"@es .
 	:le_7dR0ATZSmtjjFPRgAvClNL vs:term_status "working" .
 	:le_7dR0ATZSmtjjFPRgAvClNL dct:creator "kicco" .
-	:le_7dR0ATZSmtjjFPRgAvClNL dct:created "2023-04-08T13:00+02:00" .
-	:le_7dR0ATZSmtjjFPRgAvClNL dct:modified "2023-04-08T13:00+02:00" .
+	:le_7dR0ATZSmtjjFPRgAvClNL dct:created "2023-04-08T17:53+02:00" .
+	:le_7dR0ATZSmtjjFPRgAvClNL dct:modified "2023-04-08T17:53+02:00" .
 	:le_7dR0ATZSmtjjFPRgAvClNL ontolex:sense :le_7dR0ATZSmtjjFPRgAvClNL_sense .
 	:le_7dR0ATZSmtjjFPRgAvClNL_sense rdf:type ontolex:LexicalSense .
 	:le_7dR0ATZSmtjjFPRgAvClNL_sense ontolex:reference :concept_c30 .
 	:le_7dR0ATZSmtjjFPRgAvClNL_sense dct:creator "kicco" .
-	:le_7dR0ATZSmtjjFPRgAvClNL_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_7dR0ATZSmtjjFPRgAvClNL_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_7dR0ATZSmtjjFPRgAvClNL_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_7dR0ATZSmtjjFPRgAvClNL_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_7dR0ATZSmtjjFPRgAvClNL ontolex:canonicalForm :le_7dR0ATZSmtjjFPRgAvClNL_lemma .
 	:le_7dR0ATZSmtjjFPRgAvClNL_lemma rdf:type ontolex:Form .
 	:le_7dR0ATZSmtjjFPRgAvClNL_lemma ontolex:writtenRep "nebulosa de absorción"@es .
 	:le_7dR0ATZSmtjjFPRgAvClNL_lemma dct:creator "kicco" .
-	:le_7dR0ATZSmtjjFPRgAvClNL_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_7dR0ATZSmtjjFPRgAvClNL_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_7dR0ATZSmtjjFPRgAvClNL_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_7dR0ATZSmtjjFPRgAvClNL_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c31 rdf:type skos:Concept .
 	:concept_c31 skos:prefLabel "c31" .
 	:tbx_en lime:entry :le_74nFesQINiHzBkrY5l1WA2 .
@@ -1479,39 +1476,39 @@ INSERT DATA {
 	:le_74nFesQINiHzBkrY5l1WA2 rdfs:label "reflection nebula"@en .
 	:le_74nFesQINiHzBkrY5l1WA2 vs:term_status "working" .
 	:le_74nFesQINiHzBkrY5l1WA2 dct:creator "kicco" .
-	:le_74nFesQINiHzBkrY5l1WA2 dct:created "2023-04-08T13:00+02:00" .
-	:le_74nFesQINiHzBkrY5l1WA2 dct:modified "2023-04-08T13:00+02:00" .
+	:le_74nFesQINiHzBkrY5l1WA2 dct:created "2023-04-08T17:53+02:00" .
+	:le_74nFesQINiHzBkrY5l1WA2 dct:modified "2023-04-08T17:53+02:00" .
 	:le_74nFesQINiHzBkrY5l1WA2 ontolex:sense :le_74nFesQINiHzBkrY5l1WA2_sense .
 	:le_74nFesQINiHzBkrY5l1WA2_sense rdf:type ontolex:LexicalSense .
 	:le_74nFesQINiHzBkrY5l1WA2_sense ontolex:reference :concept_c31 .
 	:le_74nFesQINiHzBkrY5l1WA2_sense dct:creator "kicco" .
-	:le_74nFesQINiHzBkrY5l1WA2_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_74nFesQINiHzBkrY5l1WA2_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_74nFesQINiHzBkrY5l1WA2_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_74nFesQINiHzBkrY5l1WA2_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_74nFesQINiHzBkrY5l1WA2 ontolex:canonicalForm :le_74nFesQINiHzBkrY5l1WA2_lemma .
 	:le_74nFesQINiHzBkrY5l1WA2_lemma rdf:type ontolex:Form .
 	:le_74nFesQINiHzBkrY5l1WA2_lemma ontolex:writtenRep "reflection nebula"@en .
 	:le_74nFesQINiHzBkrY5l1WA2_lemma dct:creator "kicco" .
-	:le_74nFesQINiHzBkrY5l1WA2_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_74nFesQINiHzBkrY5l1WA2_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_74nFesQINiHzBkrY5l1WA2_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_74nFesQINiHzBkrY5l1WA2_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_7QPQqhEg8Gym6k0lLDIJv6 .
 	:le_7QPQqhEg8Gym6k0lLDIJv6 rdf:type ontolex:LexicalEntry .
 	:le_7QPQqhEg8Gym6k0lLDIJv6 rdfs:label "nebulosa de reflexión"@es .
 	:le_7QPQqhEg8Gym6k0lLDIJv6 vs:term_status "working" .
 	:le_7QPQqhEg8Gym6k0lLDIJv6 dct:creator "kicco" .
-	:le_7QPQqhEg8Gym6k0lLDIJv6 dct:created "2023-04-08T13:00+02:00" .
-	:le_7QPQqhEg8Gym6k0lLDIJv6 dct:modified "2023-04-08T13:00+02:00" .
+	:le_7QPQqhEg8Gym6k0lLDIJv6 dct:created "2023-04-08T17:53+02:00" .
+	:le_7QPQqhEg8Gym6k0lLDIJv6 dct:modified "2023-04-08T17:53+02:00" .
 	:le_7QPQqhEg8Gym6k0lLDIJv6 ontolex:sense :le_7QPQqhEg8Gym6k0lLDIJv6_sense .
 	:le_7QPQqhEg8Gym6k0lLDIJv6_sense rdf:type ontolex:LexicalSense .
 	:le_7QPQqhEg8Gym6k0lLDIJv6_sense ontolex:reference :concept_c31 .
 	:le_7QPQqhEg8Gym6k0lLDIJv6_sense dct:creator "kicco" .
-	:le_7QPQqhEg8Gym6k0lLDIJv6_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_7QPQqhEg8Gym6k0lLDIJv6_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_7QPQqhEg8Gym6k0lLDIJv6_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_7QPQqhEg8Gym6k0lLDIJv6_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_7QPQqhEg8Gym6k0lLDIJv6 ontolex:canonicalForm :le_7QPQqhEg8Gym6k0lLDIJv6_lemma .
 	:le_7QPQqhEg8Gym6k0lLDIJv6_lemma rdf:type ontolex:Form .
 	:le_7QPQqhEg8Gym6k0lLDIJv6_lemma ontolex:writtenRep "nebulosa de reflexión"@es .
 	:le_7QPQqhEg8Gym6k0lLDIJv6_lemma dct:creator "kicco" .
-	:le_7QPQqhEg8Gym6k0lLDIJv6_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_7QPQqhEg8Gym6k0lLDIJv6_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_7QPQqhEg8Gym6k0lLDIJv6_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_7QPQqhEg8Gym6k0lLDIJv6_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c32 rdf:type skos:Concept .
 	:concept_c32 skos:prefLabel "c32" .
 	:tbx_en lime:entry :le_61aBvQxXw6hJy2rH1Nwbv6 .
@@ -1519,39 +1516,39 @@ INSERT DATA {
 	:le_61aBvQxXw6hJy2rH1Nwbv6 rdfs:label "neutron star"@en .
 	:le_61aBvQxXw6hJy2rH1Nwbv6 vs:term_status "working" .
 	:le_61aBvQxXw6hJy2rH1Nwbv6 dct:creator "kicco" .
-	:le_61aBvQxXw6hJy2rH1Nwbv6 dct:created "2023-04-08T13:00+02:00" .
-	:le_61aBvQxXw6hJy2rH1Nwbv6 dct:modified "2023-04-08T13:00+02:00" .
+	:le_61aBvQxXw6hJy2rH1Nwbv6 dct:created "2023-04-08T17:53+02:00" .
+	:le_61aBvQxXw6hJy2rH1Nwbv6 dct:modified "2023-04-08T17:53+02:00" .
 	:le_61aBvQxXw6hJy2rH1Nwbv6 ontolex:sense :le_61aBvQxXw6hJy2rH1Nwbv6_sense .
 	:le_61aBvQxXw6hJy2rH1Nwbv6_sense rdf:type ontolex:LexicalSense .
 	:le_61aBvQxXw6hJy2rH1Nwbv6_sense ontolex:reference :concept_c32 .
 	:le_61aBvQxXw6hJy2rH1Nwbv6_sense dct:creator "kicco" .
-	:le_61aBvQxXw6hJy2rH1Nwbv6_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_61aBvQxXw6hJy2rH1Nwbv6_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_61aBvQxXw6hJy2rH1Nwbv6_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_61aBvQxXw6hJy2rH1Nwbv6_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_61aBvQxXw6hJy2rH1Nwbv6 ontolex:canonicalForm :le_61aBvQxXw6hJy2rH1Nwbv6_lemma .
 	:le_61aBvQxXw6hJy2rH1Nwbv6_lemma rdf:type ontolex:Form .
 	:le_61aBvQxXw6hJy2rH1Nwbv6_lemma ontolex:writtenRep "neutron star"@en .
 	:le_61aBvQxXw6hJy2rH1Nwbv6_lemma dct:creator "kicco" .
-	:le_61aBvQxXw6hJy2rH1Nwbv6_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_61aBvQxXw6hJy2rH1Nwbv6_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_61aBvQxXw6hJy2rH1Nwbv6_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_61aBvQxXw6hJy2rH1Nwbv6_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_7lvdvELnncwKbXCkuXvCYi .
 	:le_7lvdvELnncwKbXCkuXvCYi rdf:type ontolex:LexicalEntry .
 	:le_7lvdvELnncwKbXCkuXvCYi rdfs:label "estrella de neutrones"@es .
 	:le_7lvdvELnncwKbXCkuXvCYi vs:term_status "working" .
 	:le_7lvdvELnncwKbXCkuXvCYi dct:creator "kicco" .
-	:le_7lvdvELnncwKbXCkuXvCYi dct:created "2023-04-08T13:00+02:00" .
-	:le_7lvdvELnncwKbXCkuXvCYi dct:modified "2023-04-08T13:00+02:00" .
+	:le_7lvdvELnncwKbXCkuXvCYi dct:created "2023-04-08T17:53+02:00" .
+	:le_7lvdvELnncwKbXCkuXvCYi dct:modified "2023-04-08T17:53+02:00" .
 	:le_7lvdvELnncwKbXCkuXvCYi ontolex:sense :le_7lvdvELnncwKbXCkuXvCYi_sense .
 	:le_7lvdvELnncwKbXCkuXvCYi_sense rdf:type ontolex:LexicalSense .
 	:le_7lvdvELnncwKbXCkuXvCYi_sense ontolex:reference :concept_c32 .
 	:le_7lvdvELnncwKbXCkuXvCYi_sense dct:creator "kicco" .
-	:le_7lvdvELnncwKbXCkuXvCYi_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_7lvdvELnncwKbXCkuXvCYi_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_7lvdvELnncwKbXCkuXvCYi_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_7lvdvELnncwKbXCkuXvCYi_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_7lvdvELnncwKbXCkuXvCYi ontolex:canonicalForm :le_7lvdvELnncwKbXCkuXvCYi_lemma .
 	:le_7lvdvELnncwKbXCkuXvCYi_lemma rdf:type ontolex:Form .
 	:le_7lvdvELnncwKbXCkuXvCYi_lemma ontolex:writtenRep "estrella de neutrones"@es .
 	:le_7lvdvELnncwKbXCkuXvCYi_lemma dct:creator "kicco" .
-	:le_7lvdvELnncwKbXCkuXvCYi_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_7lvdvELnncwKbXCkuXvCYi_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_7lvdvELnncwKbXCkuXvCYi_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_7lvdvELnncwKbXCkuXvCYi_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c33 rdf:type skos:Concept .
 	:concept_c33 skos:prefLabel "c33" .
 	:tbx_en lime:entry :le_OwJ8ZmhfGPAppSrCg1bsL .
@@ -1559,40 +1556,40 @@ INSERT DATA {
 	:le_OwJ8ZmhfGPAppSrCg1bsL rdfs:label "Chandrasekhar limit"@en .
 	:le_OwJ8ZmhfGPAppSrCg1bsL vs:term_status "working" .
 	:le_OwJ8ZmhfGPAppSrCg1bsL dct:creator "kicco" .
-	:le_OwJ8ZmhfGPAppSrCg1bsL dct:created "2023-04-08T13:00+02:00" .
-	:le_OwJ8ZmhfGPAppSrCg1bsL dct:modified "2023-04-08T13:00+02:00" .
+	:le_OwJ8ZmhfGPAppSrCg1bsL dct:created "2023-04-08T17:53+02:00" .
+	:le_OwJ8ZmhfGPAppSrCg1bsL dct:modified "2023-04-08T17:53+02:00" .
 	:le_OwJ8ZmhfGPAppSrCg1bsL ontolex:sense :le_OwJ8ZmhfGPAppSrCg1bsL_sense .
 	:le_OwJ8ZmhfGPAppSrCg1bsL_sense rdf:type ontolex:LexicalSense .
 	:le_OwJ8ZmhfGPAppSrCg1bsL_sense ontolex:reference :concept_c33 .
 	:le_OwJ8ZmhfGPAppSrCg1bsL_sense dct:creator "kicco" .
-	:le_OwJ8ZmhfGPAppSrCg1bsL_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_OwJ8ZmhfGPAppSrCg1bsL_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_OwJ8ZmhfGPAppSrCg1bsL_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_OwJ8ZmhfGPAppSrCg1bsL_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_OwJ8ZmhfGPAppSrCg1bsL ontolex:canonicalForm :le_OwJ8ZmhfGPAppSrCg1bsL_lemma .
 	:le_OwJ8ZmhfGPAppSrCg1bsL_lemma rdf:type ontolex:Form .
 	:le_OwJ8ZmhfGPAppSrCg1bsL_lemma ontolex:writtenRep "Chandrasekhar limit"@en .
 	:le_OwJ8ZmhfGPAppSrCg1bsL_lemma dct:creator "kicco" .
-	:le_OwJ8ZmhfGPAppSrCg1bsL_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_OwJ8ZmhfGPAppSrCg1bsL_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_OwJ8ZmhfGPAppSrCg1bsL_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_OwJ8ZmhfGPAppSrCg1bsL_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c33 skos:note "For a star with no hydrogen content the limit is 1.44 solar masses, which is thus the maximum possible for a white dwarf."@en .
 	:tbx_es lime:entry :le_NjncBU08QqsJCAr4QgaKA .
 	:le_NjncBU08QqsJCAr4QgaKA rdf:type ontolex:LexicalEntry .
 	:le_NjncBU08QqsJCAr4QgaKA rdfs:label "límite de Chandrasekhar"@es .
 	:le_NjncBU08QqsJCAr4QgaKA vs:term_status "working" .
 	:le_NjncBU08QqsJCAr4QgaKA dct:creator "kicco" .
-	:le_NjncBU08QqsJCAr4QgaKA dct:created "2023-04-08T13:00+02:00" .
-	:le_NjncBU08QqsJCAr4QgaKA dct:modified "2023-04-08T13:00+02:00" .
+	:le_NjncBU08QqsJCAr4QgaKA dct:created "2023-04-08T17:53+02:00" .
+	:le_NjncBU08QqsJCAr4QgaKA dct:modified "2023-04-08T17:53+02:00" .
 	:le_NjncBU08QqsJCAr4QgaKA ontolex:sense :le_NjncBU08QqsJCAr4QgaKA_sense .
 	:le_NjncBU08QqsJCAr4QgaKA_sense rdf:type ontolex:LexicalSense .
 	:le_NjncBU08QqsJCAr4QgaKA_sense ontolex:reference :concept_c33 .
 	:le_NjncBU08QqsJCAr4QgaKA_sense dct:creator "kicco" .
-	:le_NjncBU08QqsJCAr4QgaKA_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_NjncBU08QqsJCAr4QgaKA_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_NjncBU08QqsJCAr4QgaKA_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_NjncBU08QqsJCAr4QgaKA_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_NjncBU08QqsJCAr4QgaKA ontolex:canonicalForm :le_NjncBU08QqsJCAr4QgaKA_lemma .
 	:le_NjncBU08QqsJCAr4QgaKA_lemma rdf:type ontolex:Form .
 	:le_NjncBU08QqsJCAr4QgaKA_lemma ontolex:writtenRep "límite de Chandrasekhar"@es .
 	:le_NjncBU08QqsJCAr4QgaKA_lemma dct:creator "kicco" .
-	:le_NjncBU08QqsJCAr4QgaKA_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_NjncBU08QqsJCAr4QgaKA_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_NjncBU08QqsJCAr4QgaKA_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_NjncBU08QqsJCAr4QgaKA_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c34 rdf:type skos:Concept .
 	:concept_c34 skos:prefLabel "c34" .
 	:tbx_en lime:entry :le_LLFQ8tIyFHGgb1CAN63GV .
@@ -1600,40 +1597,40 @@ INSERT DATA {
 	:le_LLFQ8tIyFHGgb1CAN63GV rdfs:label "neutron degeneracy"@en .
 	:le_LLFQ8tIyFHGgb1CAN63GV vs:term_status "working" .
 	:le_LLFQ8tIyFHGgb1CAN63GV dct:creator "kicco" .
-	:le_LLFQ8tIyFHGgb1CAN63GV dct:created "2023-04-08T13:00+02:00" .
-	:le_LLFQ8tIyFHGgb1CAN63GV dct:modified "2023-04-08T13:00+02:00" .
+	:le_LLFQ8tIyFHGgb1CAN63GV dct:created "2023-04-08T17:53+02:00" .
+	:le_LLFQ8tIyFHGgb1CAN63GV dct:modified "2023-04-08T17:53+02:00" .
 	:le_LLFQ8tIyFHGgb1CAN63GV ontolex:sense :le_LLFQ8tIyFHGgb1CAN63GV_sense .
 	:le_LLFQ8tIyFHGgb1CAN63GV_sense rdf:type ontolex:LexicalSense .
 	:le_LLFQ8tIyFHGgb1CAN63GV_sense ontolex:reference :concept_c34 .
 	:le_LLFQ8tIyFHGgb1CAN63GV_sense dct:creator "kicco" .
-	:le_LLFQ8tIyFHGgb1CAN63GV_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_LLFQ8tIyFHGgb1CAN63GV_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_LLFQ8tIyFHGgb1CAN63GV_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_LLFQ8tIyFHGgb1CAN63GV_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_LLFQ8tIyFHGgb1CAN63GV ontolex:canonicalForm :le_LLFQ8tIyFHGgb1CAN63GV_lemma .
 	:le_LLFQ8tIyFHGgb1CAN63GV_lemma rdf:type ontolex:Form .
 	:le_LLFQ8tIyFHGgb1CAN63GV_lemma ontolex:writtenRep "neutron degeneracy"@en .
 	:le_LLFQ8tIyFHGgb1CAN63GV_lemma dct:creator "kicco" .
-	:le_LLFQ8tIyFHGgb1CAN63GV_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_LLFQ8tIyFHGgb1CAN63GV_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_LLFQ8tIyFHGgb1CAN63GV_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_LLFQ8tIyFHGgb1CAN63GV_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c34 skos:note "Encountered on in neutron stars."@en .
 	:tbx_es lime:entry :le_1eOlU5W5t69khQ4fCp7Efv .
 	:le_1eOlU5W5t69khQ4fCp7Efv rdf:type ontolex:LexicalEntry .
 	:le_1eOlU5W5t69khQ4fCp7Efv rdfs:label "degeneración de neutrones"@es .
 	:le_1eOlU5W5t69khQ4fCp7Efv vs:term_status "working" .
 	:le_1eOlU5W5t69khQ4fCp7Efv dct:creator "kicco" .
-	:le_1eOlU5W5t69khQ4fCp7Efv dct:created "2023-04-08T13:00+02:00" .
-	:le_1eOlU5W5t69khQ4fCp7Efv dct:modified "2023-04-08T13:00+02:00" .
+	:le_1eOlU5W5t69khQ4fCp7Efv dct:created "2023-04-08T17:53+02:00" .
+	:le_1eOlU5W5t69khQ4fCp7Efv dct:modified "2023-04-08T17:53+02:00" .
 	:le_1eOlU5W5t69khQ4fCp7Efv ontolex:sense :le_1eOlU5W5t69khQ4fCp7Efv_sense .
 	:le_1eOlU5W5t69khQ4fCp7Efv_sense rdf:type ontolex:LexicalSense .
 	:le_1eOlU5W5t69khQ4fCp7Efv_sense ontolex:reference :concept_c34 .
 	:le_1eOlU5W5t69khQ4fCp7Efv_sense dct:creator "kicco" .
-	:le_1eOlU5W5t69khQ4fCp7Efv_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1eOlU5W5t69khQ4fCp7Efv_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1eOlU5W5t69khQ4fCp7Efv_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1eOlU5W5t69khQ4fCp7Efv_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1eOlU5W5t69khQ4fCp7Efv ontolex:canonicalForm :le_1eOlU5W5t69khQ4fCp7Efv_lemma .
 	:le_1eOlU5W5t69khQ4fCp7Efv_lemma rdf:type ontolex:Form .
 	:le_1eOlU5W5t69khQ4fCp7Efv_lemma ontolex:writtenRep "degeneración de neutrones"@es .
 	:le_1eOlU5W5t69khQ4fCp7Efv_lemma dct:creator "kicco" .
-	:le_1eOlU5W5t69khQ4fCp7Efv_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1eOlU5W5t69khQ4fCp7Efv_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1eOlU5W5t69khQ4fCp7Efv_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1eOlU5W5t69khQ4fCp7Efv_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c35 rdf:type skos:Concept .
 	:concept_c35 skos:prefLabel "c35" .
 	:tbx_en lime:entry :le_5rJg3FuLIm3BgqBiWoZM1t .
@@ -1641,40 +1638,40 @@ INSERT DATA {
 	:le_5rJg3FuLIm3BgqBiWoZM1t rdfs:label "Schwarzschild radius"@en .
 	:le_5rJg3FuLIm3BgqBiWoZM1t vs:term_status "working" .
 	:le_5rJg3FuLIm3BgqBiWoZM1t dct:creator "kicco" .
-	:le_5rJg3FuLIm3BgqBiWoZM1t dct:created "2023-04-08T13:00+02:00" .
-	:le_5rJg3FuLIm3BgqBiWoZM1t dct:modified "2023-04-08T13:00+02:00" .
+	:le_5rJg3FuLIm3BgqBiWoZM1t dct:created "2023-04-08T17:53+02:00" .
+	:le_5rJg3FuLIm3BgqBiWoZM1t dct:modified "2023-04-08T17:53+02:00" .
 	:le_5rJg3FuLIm3BgqBiWoZM1t ontolex:sense :le_5rJg3FuLIm3BgqBiWoZM1t_sense .
 	:le_5rJg3FuLIm3BgqBiWoZM1t_sense rdf:type ontolex:LexicalSense .
 	:le_5rJg3FuLIm3BgqBiWoZM1t_sense ontolex:reference :concept_c35 .
 	:le_5rJg3FuLIm3BgqBiWoZM1t_sense dct:creator "kicco" .
-	:le_5rJg3FuLIm3BgqBiWoZM1t_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5rJg3FuLIm3BgqBiWoZM1t_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5rJg3FuLIm3BgqBiWoZM1t_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5rJg3FuLIm3BgqBiWoZM1t_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5rJg3FuLIm3BgqBiWoZM1t ontolex:canonicalForm :le_5rJg3FuLIm3BgqBiWoZM1t_lemma .
 	:le_5rJg3FuLIm3BgqBiWoZM1t_lemma rdf:type ontolex:Form .
 	:le_5rJg3FuLIm3BgqBiWoZM1t_lemma ontolex:writtenRep "Schwarzschild radius"@en .
 	:le_5rJg3FuLIm3BgqBiWoZM1t_lemma dct:creator "kicco" .
-	:le_5rJg3FuLIm3BgqBiWoZM1t_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5rJg3FuLIm3BgqBiWoZM1t_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5rJg3FuLIm3BgqBiWoZM1t_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5rJg3FuLIm3BgqBiWoZM1t_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_5rJg3FuLIm3BgqBiWoZM1t skos:note "Related Term: event horizon" .
 	:tbx_es lime:entry :le_4rrazjS5m6jNc3qGSaoJ8I .
 	:le_4rrazjS5m6jNc3qGSaoJ8I rdf:type ontolex:LexicalEntry .
 	:le_4rrazjS5m6jNc3qGSaoJ8I rdfs:label "radio de Schwarzschild"@es .
 	:le_4rrazjS5m6jNc3qGSaoJ8I vs:term_status "working" .
 	:le_4rrazjS5m6jNc3qGSaoJ8I dct:creator "kicco" .
-	:le_4rrazjS5m6jNc3qGSaoJ8I dct:created "2023-04-08T13:00+02:00" .
-	:le_4rrazjS5m6jNc3qGSaoJ8I dct:modified "2023-04-08T13:00+02:00" .
+	:le_4rrazjS5m6jNc3qGSaoJ8I dct:created "2023-04-08T17:53+02:00" .
+	:le_4rrazjS5m6jNc3qGSaoJ8I dct:modified "2023-04-08T17:53+02:00" .
 	:le_4rrazjS5m6jNc3qGSaoJ8I ontolex:sense :le_4rrazjS5m6jNc3qGSaoJ8I_sense .
 	:le_4rrazjS5m6jNc3qGSaoJ8I_sense rdf:type ontolex:LexicalSense .
 	:le_4rrazjS5m6jNc3qGSaoJ8I_sense ontolex:reference :concept_c35 .
 	:le_4rrazjS5m6jNc3qGSaoJ8I_sense dct:creator "kicco" .
-	:le_4rrazjS5m6jNc3qGSaoJ8I_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_4rrazjS5m6jNc3qGSaoJ8I_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_4rrazjS5m6jNc3qGSaoJ8I_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_4rrazjS5m6jNc3qGSaoJ8I_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_4rrazjS5m6jNc3qGSaoJ8I ontolex:canonicalForm :le_4rrazjS5m6jNc3qGSaoJ8I_lemma .
 	:le_4rrazjS5m6jNc3qGSaoJ8I_lemma rdf:type ontolex:Form .
 	:le_4rrazjS5m6jNc3qGSaoJ8I_lemma ontolex:writtenRep "radio de Schwarzschild"@es .
 	:le_4rrazjS5m6jNc3qGSaoJ8I_lemma dct:creator "kicco" .
-	:le_4rrazjS5m6jNc3qGSaoJ8I_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_4rrazjS5m6jNc3qGSaoJ8I_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_4rrazjS5m6jNc3qGSaoJ8I_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_4rrazjS5m6jNc3qGSaoJ8I_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_4rrazjS5m6jNc3qGSaoJ8I skos:note "Related Term: horizonte de sucesos, horizonte de eventos" .
 	:concept_c36 rdf:type skos:Concept .
 	:concept_c36 skos:prefLabel "c36" .
@@ -1683,58 +1680,58 @@ INSERT DATA {
 	:le_1oa6F61ajvrtntOQ5iL61M rdfs:label "event horizon"@en .
 	:le_1oa6F61ajvrtntOQ5iL61M vs:term_status "working" .
 	:le_1oa6F61ajvrtntOQ5iL61M dct:creator "kicco" .
-	:le_1oa6F61ajvrtntOQ5iL61M dct:created "2023-04-08T13:00+02:00" .
-	:le_1oa6F61ajvrtntOQ5iL61M dct:modified "2023-04-08T13:00+02:00" .
+	:le_1oa6F61ajvrtntOQ5iL61M dct:created "2023-04-08T17:53+02:00" .
+	:le_1oa6F61ajvrtntOQ5iL61M dct:modified "2023-04-08T17:53+02:00" .
 	:le_1oa6F61ajvrtntOQ5iL61M ontolex:sense :le_1oa6F61ajvrtntOQ5iL61M_sense .
 	:le_1oa6F61ajvrtntOQ5iL61M_sense rdf:type ontolex:LexicalSense .
 	:le_1oa6F61ajvrtntOQ5iL61M_sense ontolex:reference :concept_c36 .
 	:le_1oa6F61ajvrtntOQ5iL61M_sense dct:creator "kicco" .
-	:le_1oa6F61ajvrtntOQ5iL61M_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1oa6F61ajvrtntOQ5iL61M_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1oa6F61ajvrtntOQ5iL61M_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1oa6F61ajvrtntOQ5iL61M_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1oa6F61ajvrtntOQ5iL61M ontolex:canonicalForm :le_1oa6F61ajvrtntOQ5iL61M_lemma .
 	:le_1oa6F61ajvrtntOQ5iL61M_lemma rdf:type ontolex:Form .
 	:le_1oa6F61ajvrtntOQ5iL61M_lemma ontolex:writtenRep "event horizon"@en .
 	:le_1oa6F61ajvrtntOQ5iL61M_lemma dct:creator "kicco" .
-	:le_1oa6F61ajvrtntOQ5iL61M_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1oa6F61ajvrtntOQ5iL61M_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1oa6F61ajvrtntOQ5iL61M_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1oa6F61ajvrtntOQ5iL61M_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_5VPYjUvBQ0kWmtqlL0uuBZ .
 	:le_5VPYjUvBQ0kWmtqlL0uuBZ rdf:type ontolex:LexicalEntry .
 	:le_5VPYjUvBQ0kWmtqlL0uuBZ rdfs:label "horizonte de sucesos"@es .
 	:le_5VPYjUvBQ0kWmtqlL0uuBZ vs:term_status "working" .
 	:le_5VPYjUvBQ0kWmtqlL0uuBZ dct:creator "kicco" .
-	:le_5VPYjUvBQ0kWmtqlL0uuBZ dct:created "2023-04-08T13:00+02:00" .
-	:le_5VPYjUvBQ0kWmtqlL0uuBZ dct:modified "2023-04-08T13:00+02:00" .
+	:le_5VPYjUvBQ0kWmtqlL0uuBZ dct:created "2023-04-08T17:53+02:00" .
+	:le_5VPYjUvBQ0kWmtqlL0uuBZ dct:modified "2023-04-08T17:53+02:00" .
 	:le_5VPYjUvBQ0kWmtqlL0uuBZ ontolex:sense :le_5VPYjUvBQ0kWmtqlL0uuBZ_sense .
 	:le_5VPYjUvBQ0kWmtqlL0uuBZ_sense rdf:type ontolex:LexicalSense .
 	:le_5VPYjUvBQ0kWmtqlL0uuBZ_sense ontolex:reference :concept_c36 .
 	:le_5VPYjUvBQ0kWmtqlL0uuBZ_sense dct:creator "kicco" .
-	:le_5VPYjUvBQ0kWmtqlL0uuBZ_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5VPYjUvBQ0kWmtqlL0uuBZ_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5VPYjUvBQ0kWmtqlL0uuBZ_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5VPYjUvBQ0kWmtqlL0uuBZ_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5VPYjUvBQ0kWmtqlL0uuBZ ontolex:canonicalForm :le_5VPYjUvBQ0kWmtqlL0uuBZ_lemma .
 	:le_5VPYjUvBQ0kWmtqlL0uuBZ_lemma rdf:type ontolex:Form .
 	:le_5VPYjUvBQ0kWmtqlL0uuBZ_lemma ontolex:writtenRep "horizonte de sucesos"@es .
 	:le_5VPYjUvBQ0kWmtqlL0uuBZ_lemma dct:creator "kicco" .
-	:le_5VPYjUvBQ0kWmtqlL0uuBZ_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5VPYjUvBQ0kWmtqlL0uuBZ_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5VPYjUvBQ0kWmtqlL0uuBZ_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5VPYjUvBQ0kWmtqlL0uuBZ_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_3dINBTd674GZzxyT6eyK5O .
 	:le_3dINBTd674GZzxyT6eyK5O rdf:type ontolex:LexicalEntry .
 	:le_3dINBTd674GZzxyT6eyK5O rdfs:label "horizonte de eventos"@es .
 	:le_3dINBTd674GZzxyT6eyK5O vs:term_status "working" .
 	:le_3dINBTd674GZzxyT6eyK5O dct:creator "kicco" .
-	:le_3dINBTd674GZzxyT6eyK5O dct:created "2023-04-08T13:00+02:00" .
-	:le_3dINBTd674GZzxyT6eyK5O dct:modified "2023-04-08T13:00+02:00" .
+	:le_3dINBTd674GZzxyT6eyK5O dct:created "2023-04-08T17:53+02:00" .
+	:le_3dINBTd674GZzxyT6eyK5O dct:modified "2023-04-08T17:53+02:00" .
 	:le_3dINBTd674GZzxyT6eyK5O ontolex:sense :le_3dINBTd674GZzxyT6eyK5O_sense .
 	:le_3dINBTd674GZzxyT6eyK5O_sense rdf:type ontolex:LexicalSense .
 	:le_3dINBTd674GZzxyT6eyK5O_sense ontolex:reference :concept_c36 .
 	:le_3dINBTd674GZzxyT6eyK5O_sense dct:creator "kicco" .
-	:le_3dINBTd674GZzxyT6eyK5O_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_3dINBTd674GZzxyT6eyK5O_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_3dINBTd674GZzxyT6eyK5O_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_3dINBTd674GZzxyT6eyK5O_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_3dINBTd674GZzxyT6eyK5O ontolex:canonicalForm :le_3dINBTd674GZzxyT6eyK5O_lemma .
 	:le_3dINBTd674GZzxyT6eyK5O_lemma rdf:type ontolex:Form .
 	:le_3dINBTd674GZzxyT6eyK5O_lemma ontolex:writtenRep "horizonte de eventos"@es .
 	:le_3dINBTd674GZzxyT6eyK5O_lemma dct:creator "kicco" .
-	:le_3dINBTd674GZzxyT6eyK5O_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_3dINBTd674GZzxyT6eyK5O_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_3dINBTd674GZzxyT6eyK5O_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_3dINBTd674GZzxyT6eyK5O_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c37 rdf:type skos:Concept .
 	:concept_c37 skos:prefLabel "c37" .
 	:tbx_en lime:entry :le_5mj3D2lkj8xRCCEfjuVcWv .
@@ -1742,77 +1739,77 @@ INSERT DATA {
 	:le_5mj3D2lkj8xRCCEfjuVcWv rdfs:label "proton-proton chain reaction"@en .
 	:le_5mj3D2lkj8xRCCEfjuVcWv vs:term_status "working" .
 	:le_5mj3D2lkj8xRCCEfjuVcWv dct:creator "kicco" .
-	:le_5mj3D2lkj8xRCCEfjuVcWv dct:created "2023-04-08T13:00+02:00" .
-	:le_5mj3D2lkj8xRCCEfjuVcWv dct:modified "2023-04-08T13:00+02:00" .
+	:le_5mj3D2lkj8xRCCEfjuVcWv dct:created "2023-04-08T17:53+02:00" .
+	:le_5mj3D2lkj8xRCCEfjuVcWv dct:modified "2023-04-08T17:53+02:00" .
 	:le_5mj3D2lkj8xRCCEfjuVcWv ontolex:sense :le_5mj3D2lkj8xRCCEfjuVcWv_sense .
 	:le_5mj3D2lkj8xRCCEfjuVcWv_sense rdf:type ontolex:LexicalSense .
 	:le_5mj3D2lkj8xRCCEfjuVcWv_sense ontolex:reference :concept_c37 .
 	:le_5mj3D2lkj8xRCCEfjuVcWv_sense dct:creator "kicco" .
-	:le_5mj3D2lkj8xRCCEfjuVcWv_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5mj3D2lkj8xRCCEfjuVcWv_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5mj3D2lkj8xRCCEfjuVcWv_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5mj3D2lkj8xRCCEfjuVcWv_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5mj3D2lkj8xRCCEfjuVcWv ontolex:canonicalForm :le_5mj3D2lkj8xRCCEfjuVcWv_lemma .
 	:le_5mj3D2lkj8xRCCEfjuVcWv_lemma rdf:type ontolex:Form .
 	:le_5mj3D2lkj8xRCCEfjuVcWv_lemma ontolex:writtenRep "proton-proton chain reaction"@en .
 	:le_5mj3D2lkj8xRCCEfjuVcWv_lemma dct:creator "kicco" .
-	:le_5mj3D2lkj8xRCCEfjuVcWv_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5mj3D2lkj8xRCCEfjuVcWv_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5mj3D2lkj8xRCCEfjuVcWv_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5mj3D2lkj8xRCCEfjuVcWv_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_36GHml5bx5oyoUoJ4OjDpC .
 	:le_36GHml5bx5oyoUoJ4OjDpC rdf:type ontolex:LexicalEntry .
 	:le_36GHml5bx5oyoUoJ4OjDpC rdfs:label "PP chain"@en .
 	:le_36GHml5bx5oyoUoJ4OjDpC vs:term_status "working" .
 	:le_36GHml5bx5oyoUoJ4OjDpC dct:creator "kicco" .
-	:le_36GHml5bx5oyoUoJ4OjDpC dct:created "2023-04-08T13:00+02:00" .
-	:le_36GHml5bx5oyoUoJ4OjDpC dct:modified "2023-04-08T13:00+02:00" .
+	:le_36GHml5bx5oyoUoJ4OjDpC dct:created "2023-04-08T17:53+02:00" .
+	:le_36GHml5bx5oyoUoJ4OjDpC dct:modified "2023-04-08T17:53+02:00" .
 	:le_36GHml5bx5oyoUoJ4OjDpC ontolex:sense :le_36GHml5bx5oyoUoJ4OjDpC_sense .
 	:le_36GHml5bx5oyoUoJ4OjDpC_sense rdf:type ontolex:LexicalSense .
 	:le_36GHml5bx5oyoUoJ4OjDpC_sense ontolex:reference :concept_c37 .
 	:le_36GHml5bx5oyoUoJ4OjDpC_sense dct:creator "kicco" .
-	:le_36GHml5bx5oyoUoJ4OjDpC_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_36GHml5bx5oyoUoJ4OjDpC_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_36GHml5bx5oyoUoJ4OjDpC_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_36GHml5bx5oyoUoJ4OjDpC_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_36GHml5bx5oyoUoJ4OjDpC ontolex:canonicalForm :le_36GHml5bx5oyoUoJ4OjDpC_lemma .
 	:le_36GHml5bx5oyoUoJ4OjDpC_lemma rdf:type ontolex:Form .
 	:le_36GHml5bx5oyoUoJ4OjDpC_lemma ontolex:writtenRep "PP chain"@en .
 	:le_36GHml5bx5oyoUoJ4OjDpC_lemma dct:creator "kicco" .
-	:le_36GHml5bx5oyoUoJ4OjDpC_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_36GHml5bx5oyoUoJ4OjDpC_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_36GHml5bx5oyoUoJ4OjDpC_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_36GHml5bx5oyoUoJ4OjDpC_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_26gQjaXKXTHUVCqKMv6gSY .
 	:le_26gQjaXKXTHUVCqKMv6gSY rdf:type ontolex:LexicalEntry .
 	:le_26gQjaXKXTHUVCqKMv6gSY rdfs:label "proton-proton reaction"@en .
 	:le_26gQjaXKXTHUVCqKMv6gSY vs:term_status "working" .
 	:le_26gQjaXKXTHUVCqKMv6gSY dct:creator "kicco" .
-	:le_26gQjaXKXTHUVCqKMv6gSY dct:created "2023-04-08T13:00+02:00" .
-	:le_26gQjaXKXTHUVCqKMv6gSY dct:modified "2023-04-08T13:00+02:00" .
+	:le_26gQjaXKXTHUVCqKMv6gSY dct:created "2023-04-08T17:53+02:00" .
+	:le_26gQjaXKXTHUVCqKMv6gSY dct:modified "2023-04-08T17:53+02:00" .
 	:le_26gQjaXKXTHUVCqKMv6gSY ontolex:sense :le_26gQjaXKXTHUVCqKMv6gSY_sense .
 	:le_26gQjaXKXTHUVCqKMv6gSY_sense rdf:type ontolex:LexicalSense .
 	:le_26gQjaXKXTHUVCqKMv6gSY_sense ontolex:reference :concept_c37 .
 	:le_26gQjaXKXTHUVCqKMv6gSY_sense dct:creator "kicco" .
-	:le_26gQjaXKXTHUVCqKMv6gSY_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_26gQjaXKXTHUVCqKMv6gSY_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_26gQjaXKXTHUVCqKMv6gSY_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_26gQjaXKXTHUVCqKMv6gSY_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_26gQjaXKXTHUVCqKMv6gSY ontolex:canonicalForm :le_26gQjaXKXTHUVCqKMv6gSY_lemma .
 	:le_26gQjaXKXTHUVCqKMv6gSY_lemma rdf:type ontolex:Form .
 	:le_26gQjaXKXTHUVCqKMv6gSY_lemma ontolex:writtenRep "proton-proton reaction"@en .
 	:le_26gQjaXKXTHUVCqKMv6gSY_lemma dct:creator "kicco" .
-	:le_26gQjaXKXTHUVCqKMv6gSY_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_26gQjaXKXTHUVCqKMv6gSY_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_26gQjaXKXTHUVCqKMv6gSY_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_26gQjaXKXTHUVCqKMv6gSY_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_7QGEEqhSmWICjZOJqZdNW8 .
 	:le_7QGEEqhSmWICjZOJqZdNW8 rdf:type ontolex:LexicalEntry .
 	:le_7QGEEqhSmWICjZOJqZdNW8 rdfs:label "cadena protón-protón"@es .
 	:le_7QGEEqhSmWICjZOJqZdNW8 vs:term_status "working" .
 	:le_7QGEEqhSmWICjZOJqZdNW8 dct:creator "kicco" .
-	:le_7QGEEqhSmWICjZOJqZdNW8 dct:created "2023-04-08T13:00+02:00" .
-	:le_7QGEEqhSmWICjZOJqZdNW8 dct:modified "2023-04-08T13:00+02:00" .
+	:le_7QGEEqhSmWICjZOJqZdNW8 dct:created "2023-04-08T17:53+02:00" .
+	:le_7QGEEqhSmWICjZOJqZdNW8 dct:modified "2023-04-08T17:53+02:00" .
 	:le_7QGEEqhSmWICjZOJqZdNW8 ontolex:sense :le_7QGEEqhSmWICjZOJqZdNW8_sense .
 	:le_7QGEEqhSmWICjZOJqZdNW8_sense rdf:type ontolex:LexicalSense .
 	:le_7QGEEqhSmWICjZOJqZdNW8_sense ontolex:reference :concept_c37 .
 	:le_7QGEEqhSmWICjZOJqZdNW8_sense dct:creator "kicco" .
-	:le_7QGEEqhSmWICjZOJqZdNW8_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_7QGEEqhSmWICjZOJqZdNW8_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_7QGEEqhSmWICjZOJqZdNW8_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_7QGEEqhSmWICjZOJqZdNW8_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_7QGEEqhSmWICjZOJqZdNW8 ontolex:canonicalForm :le_7QGEEqhSmWICjZOJqZdNW8_lemma .
 	:le_7QGEEqhSmWICjZOJqZdNW8_lemma rdf:type ontolex:Form .
 	:le_7QGEEqhSmWICjZOJqZdNW8_lemma ontolex:writtenRep "cadena protón-protón"@es .
 	:le_7QGEEqhSmWICjZOJqZdNW8_lemma dct:creator "kicco" .
-	:le_7QGEEqhSmWICjZOJqZdNW8_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_7QGEEqhSmWICjZOJqZdNW8_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_7QGEEqhSmWICjZOJqZdNW8_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_7QGEEqhSmWICjZOJqZdNW8_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c38 rdf:type skos:Concept .
 	:concept_c38 skos:prefLabel "c38" .
 	:tbx_en lime:entry :le_3brIzenZE8VaiC1e57VGiP .
@@ -1820,193 +1817,193 @@ INSERT DATA {
 	:le_3brIzenZE8VaiC1e57VGiP rdfs:label "carbon-nitrogen cycle"@en .
 	:le_3brIzenZE8VaiC1e57VGiP vs:term_status "working" .
 	:le_3brIzenZE8VaiC1e57VGiP dct:creator "kicco" .
-	:le_3brIzenZE8VaiC1e57VGiP dct:created "2023-04-08T13:00+02:00" .
-	:le_3brIzenZE8VaiC1e57VGiP dct:modified "2023-04-08T13:00+02:00" .
+	:le_3brIzenZE8VaiC1e57VGiP dct:created "2023-04-08T17:53+02:00" .
+	:le_3brIzenZE8VaiC1e57VGiP dct:modified "2023-04-08T17:53+02:00" .
 	:le_3brIzenZE8VaiC1e57VGiP ontolex:sense :le_3brIzenZE8VaiC1e57VGiP_sense .
 	:le_3brIzenZE8VaiC1e57VGiP_sense rdf:type ontolex:LexicalSense .
 	:le_3brIzenZE8VaiC1e57VGiP_sense ontolex:reference :concept_c38 .
 	:le_3brIzenZE8VaiC1e57VGiP_sense dct:creator "kicco" .
-	:le_3brIzenZE8VaiC1e57VGiP_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_3brIzenZE8VaiC1e57VGiP_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_3brIzenZE8VaiC1e57VGiP_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_3brIzenZE8VaiC1e57VGiP_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_3brIzenZE8VaiC1e57VGiP ontolex:canonicalForm :le_3brIzenZE8VaiC1e57VGiP_lemma .
 	:le_3brIzenZE8VaiC1e57VGiP_lemma rdf:type ontolex:Form .
 	:le_3brIzenZE8VaiC1e57VGiP_lemma ontolex:writtenRep "carbon-nitrogen cycle"@en .
 	:le_3brIzenZE8VaiC1e57VGiP_lemma dct:creator "kicco" .
-	:le_3brIzenZE8VaiC1e57VGiP_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_3brIzenZE8VaiC1e57VGiP_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_3brIzenZE8VaiC1e57VGiP_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_3brIzenZE8VaiC1e57VGiP_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_5XE317dlyIn8LUGIdlhMOI .
 	:le_5XE317dlyIn8LUGIdlhMOI rdf:type ontolex:LexicalEntry .
 	:le_5XE317dlyIn8LUGIdlhMOI rdfs:label "CNO cycle"@en .
 	:le_5XE317dlyIn8LUGIdlhMOI vs:term_status "working" .
 	:le_5XE317dlyIn8LUGIdlhMOI dct:creator "kicco" .
-	:le_5XE317dlyIn8LUGIdlhMOI dct:created "2023-04-08T13:00+02:00" .
-	:le_5XE317dlyIn8LUGIdlhMOI dct:modified "2023-04-08T13:00+02:00" .
+	:le_5XE317dlyIn8LUGIdlhMOI dct:created "2023-04-08T17:53+02:00" .
+	:le_5XE317dlyIn8LUGIdlhMOI dct:modified "2023-04-08T17:53+02:00" .
 	:le_5XE317dlyIn8LUGIdlhMOI ontolex:sense :le_5XE317dlyIn8LUGIdlhMOI_sense .
 	:le_5XE317dlyIn8LUGIdlhMOI_sense rdf:type ontolex:LexicalSense .
 	:le_5XE317dlyIn8LUGIdlhMOI_sense ontolex:reference :concept_c38 .
 	:le_5XE317dlyIn8LUGIdlhMOI_sense dct:creator "kicco" .
-	:le_5XE317dlyIn8LUGIdlhMOI_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5XE317dlyIn8LUGIdlhMOI_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5XE317dlyIn8LUGIdlhMOI_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5XE317dlyIn8LUGIdlhMOI_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5XE317dlyIn8LUGIdlhMOI ontolex:canonicalForm :le_5XE317dlyIn8LUGIdlhMOI_lemma .
 	:le_5XE317dlyIn8LUGIdlhMOI_lemma rdf:type ontolex:Form .
 	:le_5XE317dlyIn8LUGIdlhMOI_lemma ontolex:writtenRep "CNO cycle"@en .
 	:le_5XE317dlyIn8LUGIdlhMOI_lemma dct:creator "kicco" .
-	:le_5XE317dlyIn8LUGIdlhMOI_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5XE317dlyIn8LUGIdlhMOI_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5XE317dlyIn8LUGIdlhMOI_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5XE317dlyIn8LUGIdlhMOI_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_2i2TwL9NgWvhz8Bn2JFg50 .
 	:le_2i2TwL9NgWvhz8Bn2JFg50 rdf:type ontolex:LexicalEntry .
 	:le_2i2TwL9NgWvhz8Bn2JFg50 rdfs:label "carbon-nitrogen-oxygen cycle"@en .
 	:le_2i2TwL9NgWvhz8Bn2JFg50 vs:term_status "working" .
 	:le_2i2TwL9NgWvhz8Bn2JFg50 dct:creator "kicco" .
-	:le_2i2TwL9NgWvhz8Bn2JFg50 dct:created "2023-04-08T13:00+02:00" .
-	:le_2i2TwL9NgWvhz8Bn2JFg50 dct:modified "2023-04-08T13:00+02:00" .
+	:le_2i2TwL9NgWvhz8Bn2JFg50 dct:created "2023-04-08T17:53+02:00" .
+	:le_2i2TwL9NgWvhz8Bn2JFg50 dct:modified "2023-04-08T17:53+02:00" .
 	:le_2i2TwL9NgWvhz8Bn2JFg50 ontolex:sense :le_2i2TwL9NgWvhz8Bn2JFg50_sense .
 	:le_2i2TwL9NgWvhz8Bn2JFg50_sense rdf:type ontolex:LexicalSense .
 	:le_2i2TwL9NgWvhz8Bn2JFg50_sense ontolex:reference :concept_c38 .
 	:le_2i2TwL9NgWvhz8Bn2JFg50_sense dct:creator "kicco" .
-	:le_2i2TwL9NgWvhz8Bn2JFg50_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_2i2TwL9NgWvhz8Bn2JFg50_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_2i2TwL9NgWvhz8Bn2JFg50_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_2i2TwL9NgWvhz8Bn2JFg50_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_2i2TwL9NgWvhz8Bn2JFg50 ontolex:canonicalForm :le_2i2TwL9NgWvhz8Bn2JFg50_lemma .
 	:le_2i2TwL9NgWvhz8Bn2JFg50_lemma rdf:type ontolex:Form .
 	:le_2i2TwL9NgWvhz8Bn2JFg50_lemma ontolex:writtenRep "carbon-nitrogen-oxygen cycle"@en .
 	:le_2i2TwL9NgWvhz8Bn2JFg50_lemma dct:creator "kicco" .
-	:le_2i2TwL9NgWvhz8Bn2JFg50_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_2i2TwL9NgWvhz8Bn2JFg50_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_2i2TwL9NgWvhz8Bn2JFg50_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_2i2TwL9NgWvhz8Bn2JFg50_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_5nlqqfRhLMhiobUu5KEEiC .
 	:le_5nlqqfRhLMhiobUu5KEEiC rdf:type ontolex:LexicalEntry .
 	:le_5nlqqfRhLMhiobUu5KEEiC rdfs:label "Bethe-Weizsäcker-cycle"@en .
 	:le_5nlqqfRhLMhiobUu5KEEiC vs:term_status "working" .
 	:le_5nlqqfRhLMhiobUu5KEEiC dct:creator "kicco" .
-	:le_5nlqqfRhLMhiobUu5KEEiC dct:created "2023-04-08T13:00+02:00" .
-	:le_5nlqqfRhLMhiobUu5KEEiC dct:modified "2023-04-08T13:00+02:00" .
+	:le_5nlqqfRhLMhiobUu5KEEiC dct:created "2023-04-08T17:53+02:00" .
+	:le_5nlqqfRhLMhiobUu5KEEiC dct:modified "2023-04-08T17:53+02:00" .
 	:le_5nlqqfRhLMhiobUu5KEEiC ontolex:sense :le_5nlqqfRhLMhiobUu5KEEiC_sense .
 	:le_5nlqqfRhLMhiobUu5KEEiC_sense rdf:type ontolex:LexicalSense .
 	:le_5nlqqfRhLMhiobUu5KEEiC_sense ontolex:reference :concept_c38 .
 	:le_5nlqqfRhLMhiobUu5KEEiC_sense dct:creator "kicco" .
-	:le_5nlqqfRhLMhiobUu5KEEiC_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5nlqqfRhLMhiobUu5KEEiC_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5nlqqfRhLMhiobUu5KEEiC_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5nlqqfRhLMhiobUu5KEEiC_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5nlqqfRhLMhiobUu5KEEiC ontolex:canonicalForm :le_5nlqqfRhLMhiobUu5KEEiC_lemma .
 	:le_5nlqqfRhLMhiobUu5KEEiC_lemma rdf:type ontolex:Form .
 	:le_5nlqqfRhLMhiobUu5KEEiC_lemma ontolex:writtenRep "Bethe-Weizsäcker-cycle"@en .
 	:le_5nlqqfRhLMhiobUu5KEEiC_lemma dct:creator "kicco" .
-	:le_5nlqqfRhLMhiobUu5KEEiC_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5nlqqfRhLMhiobUu5KEEiC_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5nlqqfRhLMhiobUu5KEEiC_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5nlqqfRhLMhiobUu5KEEiC_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_en lime:entry :le_5WsyrhmQMiQI9Owh19oqDM .
 	:le_5WsyrhmQMiQI9Owh19oqDM rdf:type ontolex:LexicalEntry .
 	:le_5WsyrhmQMiQI9Owh19oqDM rdfs:label "carbon cycle"@en .
 	:le_5WsyrhmQMiQI9Owh19oqDM vs:term_status "working" .
 	:le_5WsyrhmQMiQI9Owh19oqDM dct:creator "kicco" .
-	:le_5WsyrhmQMiQI9Owh19oqDM dct:created "2023-04-08T13:00+02:00" .
-	:le_5WsyrhmQMiQI9Owh19oqDM dct:modified "2023-04-08T13:00+02:00" .
+	:le_5WsyrhmQMiQI9Owh19oqDM dct:created "2023-04-08T17:53+02:00" .
+	:le_5WsyrhmQMiQI9Owh19oqDM dct:modified "2023-04-08T17:53+02:00" .
 	:le_5WsyrhmQMiQI9Owh19oqDM ontolex:sense :le_5WsyrhmQMiQI9Owh19oqDM_sense .
 	:le_5WsyrhmQMiQI9Owh19oqDM_sense rdf:type ontolex:LexicalSense .
 	:le_5WsyrhmQMiQI9Owh19oqDM_sense ontolex:reference :concept_c38 .
 	:le_5WsyrhmQMiQI9Owh19oqDM_sense dct:creator "kicco" .
-	:le_5WsyrhmQMiQI9Owh19oqDM_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5WsyrhmQMiQI9Owh19oqDM_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5WsyrhmQMiQI9Owh19oqDM_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5WsyrhmQMiQI9Owh19oqDM_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5WsyrhmQMiQI9Owh19oqDM ontolex:canonicalForm :le_5WsyrhmQMiQI9Owh19oqDM_lemma .
 	:le_5WsyrhmQMiQI9Owh19oqDM_lemma rdf:type ontolex:Form .
 	:le_5WsyrhmQMiQI9Owh19oqDM_lemma ontolex:writtenRep "carbon cycle"@en .
 	:le_5WsyrhmQMiQI9Owh19oqDM_lemma dct:creator "kicco" .
-	:le_5WsyrhmQMiQI9Owh19oqDM_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5WsyrhmQMiQI9Owh19oqDM_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5WsyrhmQMiQI9Owh19oqDM_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5WsyrhmQMiQI9Owh19oqDM_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_5WsyrhmQMiQI9Owh19oqDM skos:note "The carbon cycle can also refer to the biogeochemical cycle by which carbon is exchanged among the biosphere, pedosphere, geosphere, hydrosphere, and atmosphere of the Earth." .
 	:tbx_en lime:entry :le_1LZZbhfIRXOplxeRb3AYYR .
 	:le_1LZZbhfIRXOplxeRb3AYYR rdf:type ontolex:LexicalEntry .
 	:le_1LZZbhfIRXOplxeRb3AYYR rdfs:label "CN cycle"@en .
 	:le_1LZZbhfIRXOplxeRb3AYYR vs:term_status "working" .
 	:le_1LZZbhfIRXOplxeRb3AYYR dct:creator "kicco" .
-	:le_1LZZbhfIRXOplxeRb3AYYR dct:created "2023-04-08T13:00+02:00" .
-	:le_1LZZbhfIRXOplxeRb3AYYR dct:modified "2023-04-08T13:00+02:00" .
+	:le_1LZZbhfIRXOplxeRb3AYYR dct:created "2023-04-08T17:53+02:00" .
+	:le_1LZZbhfIRXOplxeRb3AYYR dct:modified "2023-04-08T17:53+02:00" .
 	:le_1LZZbhfIRXOplxeRb3AYYR ontolex:sense :le_1LZZbhfIRXOplxeRb3AYYR_sense .
 	:le_1LZZbhfIRXOplxeRb3AYYR_sense rdf:type ontolex:LexicalSense .
 	:le_1LZZbhfIRXOplxeRb3AYYR_sense ontolex:reference :concept_c38 .
 	:le_1LZZbhfIRXOplxeRb3AYYR_sense dct:creator "kicco" .
-	:le_1LZZbhfIRXOplxeRb3AYYR_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1LZZbhfIRXOplxeRb3AYYR_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1LZZbhfIRXOplxeRb3AYYR_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1LZZbhfIRXOplxeRb3AYYR_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1LZZbhfIRXOplxeRb3AYYR ontolex:canonicalForm :le_1LZZbhfIRXOplxeRb3AYYR_lemma .
 	:le_1LZZbhfIRXOplxeRb3AYYR_lemma rdf:type ontolex:Form .
 	:le_1LZZbhfIRXOplxeRb3AYYR_lemma ontolex:writtenRep "CN cycle"@en .
 	:le_1LZZbhfIRXOplxeRb3AYYR_lemma dct:creator "kicco" .
-	:le_1LZZbhfIRXOplxeRb3AYYR_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1LZZbhfIRXOplxeRb3AYYR_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1LZZbhfIRXOplxeRb3AYYR_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1LZZbhfIRXOplxeRb3AYYR_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_1nnUb3eMAC9bzVha4wslMs .
 	:le_1nnUb3eMAC9bzVha4wslMs rdf:type ontolex:LexicalEntry .
 	:le_1nnUb3eMAC9bzVha4wslMs rdfs:label "ciclo CNO"@es .
 	:le_1nnUb3eMAC9bzVha4wslMs vs:term_status "working" .
 	:le_1nnUb3eMAC9bzVha4wslMs dct:creator "kicco" .
-	:le_1nnUb3eMAC9bzVha4wslMs dct:created "2023-04-08T13:00+02:00" .
-	:le_1nnUb3eMAC9bzVha4wslMs dct:modified "2023-04-08T13:00+02:00" .
+	:le_1nnUb3eMAC9bzVha4wslMs dct:created "2023-04-08T17:53+02:00" .
+	:le_1nnUb3eMAC9bzVha4wslMs dct:modified "2023-04-08T17:53+02:00" .
 	:le_1nnUb3eMAC9bzVha4wslMs ontolex:sense :le_1nnUb3eMAC9bzVha4wslMs_sense .
 	:le_1nnUb3eMAC9bzVha4wslMs_sense rdf:type ontolex:LexicalSense .
 	:le_1nnUb3eMAC9bzVha4wslMs_sense ontolex:reference :concept_c38 .
 	:le_1nnUb3eMAC9bzVha4wslMs_sense dct:creator "kicco" .
-	:le_1nnUb3eMAC9bzVha4wslMs_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1nnUb3eMAC9bzVha4wslMs_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1nnUb3eMAC9bzVha4wslMs_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1nnUb3eMAC9bzVha4wslMs_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1nnUb3eMAC9bzVha4wslMs ontolex:canonicalForm :le_1nnUb3eMAC9bzVha4wslMs_lemma .
 	:le_1nnUb3eMAC9bzVha4wslMs_lemma rdf:type ontolex:Form .
 	:le_1nnUb3eMAC9bzVha4wslMs_lemma ontolex:writtenRep "ciclo CNO"@es .
 	:le_1nnUb3eMAC9bzVha4wslMs_lemma dct:creator "kicco" .
-	:le_1nnUb3eMAC9bzVha4wslMs_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1nnUb3eMAC9bzVha4wslMs_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1nnUb3eMAC9bzVha4wslMs_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1nnUb3eMAC9bzVha4wslMs_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_2r0mvMYP7Mtt1i5EztqVUV .
 	:le_2r0mvMYP7Mtt1i5EztqVUV rdf:type ontolex:LexicalEntry .
 	:le_2r0mvMYP7Mtt1i5EztqVUV rdfs:label "ciclo del carbono-nitrógeno-oxígeno"@es .
 	:le_2r0mvMYP7Mtt1i5EztqVUV vs:term_status "working" .
 	:le_2r0mvMYP7Mtt1i5EztqVUV dct:creator "kicco" .
-	:le_2r0mvMYP7Mtt1i5EztqVUV dct:created "2023-04-08T13:00+02:00" .
-	:le_2r0mvMYP7Mtt1i5EztqVUV dct:modified "2023-04-08T13:00+02:00" .
+	:le_2r0mvMYP7Mtt1i5EztqVUV dct:created "2023-04-08T17:53+02:00" .
+	:le_2r0mvMYP7Mtt1i5EztqVUV dct:modified "2023-04-08T17:53+02:00" .
 	:le_2r0mvMYP7Mtt1i5EztqVUV ontolex:sense :le_2r0mvMYP7Mtt1i5EztqVUV_sense .
 	:le_2r0mvMYP7Mtt1i5EztqVUV_sense rdf:type ontolex:LexicalSense .
 	:le_2r0mvMYP7Mtt1i5EztqVUV_sense ontolex:reference :concept_c38 .
 	:le_2r0mvMYP7Mtt1i5EztqVUV_sense dct:creator "kicco" .
-	:le_2r0mvMYP7Mtt1i5EztqVUV_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_2r0mvMYP7Mtt1i5EztqVUV_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_2r0mvMYP7Mtt1i5EztqVUV_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_2r0mvMYP7Mtt1i5EztqVUV_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_2r0mvMYP7Mtt1i5EztqVUV ontolex:canonicalForm :le_2r0mvMYP7Mtt1i5EztqVUV_lemma .
 	:le_2r0mvMYP7Mtt1i5EztqVUV_lemma rdf:type ontolex:Form .
 	:le_2r0mvMYP7Mtt1i5EztqVUV_lemma ontolex:writtenRep "ciclo del carbono-nitrógeno-oxígeno"@es .
 	:le_2r0mvMYP7Mtt1i5EztqVUV_lemma dct:creator "kicco" .
-	:le_2r0mvMYP7Mtt1i5EztqVUV_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_2r0mvMYP7Mtt1i5EztqVUV_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_2r0mvMYP7Mtt1i5EztqVUV_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_2r0mvMYP7Mtt1i5EztqVUV_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_350ZfbKg91wPf6CFe6fr6h .
 	:le_350ZfbKg91wPf6CFe6fr6h rdf:type ontolex:LexicalEntry .
 	:le_350ZfbKg91wPf6CFe6fr6h rdfs:label "ciclo del carbono"@es .
 	:le_350ZfbKg91wPf6CFe6fr6h vs:term_status "working" .
 	:le_350ZfbKg91wPf6CFe6fr6h dct:creator "kicco" .
-	:le_350ZfbKg91wPf6CFe6fr6h dct:created "2023-04-08T13:00+02:00" .
-	:le_350ZfbKg91wPf6CFe6fr6h dct:modified "2023-04-08T13:00+02:00" .
+	:le_350ZfbKg91wPf6CFe6fr6h dct:created "2023-04-08T17:53+02:00" .
+	:le_350ZfbKg91wPf6CFe6fr6h dct:modified "2023-04-08T17:53+02:00" .
 	:le_350ZfbKg91wPf6CFe6fr6h ontolex:sense :le_350ZfbKg91wPf6CFe6fr6h_sense .
 	:le_350ZfbKg91wPf6CFe6fr6h_sense rdf:type ontolex:LexicalSense .
 	:le_350ZfbKg91wPf6CFe6fr6h_sense ontolex:reference :concept_c38 .
 	:le_350ZfbKg91wPf6CFe6fr6h_sense dct:creator "kicco" .
-	:le_350ZfbKg91wPf6CFe6fr6h_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_350ZfbKg91wPf6CFe6fr6h_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_350ZfbKg91wPf6CFe6fr6h_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_350ZfbKg91wPf6CFe6fr6h_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_350ZfbKg91wPf6CFe6fr6h ontolex:canonicalForm :le_350ZfbKg91wPf6CFe6fr6h_lemma .
 	:le_350ZfbKg91wPf6CFe6fr6h_lemma rdf:type ontolex:Form .
 	:le_350ZfbKg91wPf6CFe6fr6h_lemma ontolex:writtenRep "ciclo del carbono"@es .
 	:le_350ZfbKg91wPf6CFe6fr6h_lemma dct:creator "kicco" .
-	:le_350ZfbKg91wPf6CFe6fr6h_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_350ZfbKg91wPf6CFe6fr6h_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_350ZfbKg91wPf6CFe6fr6h_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_350ZfbKg91wPf6CFe6fr6h_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_350ZfbKg91wPf6CFe6fr6h skos:note "También este término puede referirse a la formación de las moléculas de carbohidratos, lípidos, proteínas y ácidos nucleicos." .
 	:tbx_es lime:entry :le_7WuJfFLjAVR3Qc2t6a16Fh .
 	:le_7WuJfFLjAVR3Qc2t6a16Fh rdf:type ontolex:LexicalEntry .
 	:le_7WuJfFLjAVR3Qc2t6a16Fh rdfs:label "ciclo del carbono-nitrógeno"@es .
 	:le_7WuJfFLjAVR3Qc2t6a16Fh vs:term_status "working" .
 	:le_7WuJfFLjAVR3Qc2t6a16Fh dct:creator "kicco" .
-	:le_7WuJfFLjAVR3Qc2t6a16Fh dct:created "2023-04-08T13:00+02:00" .
-	:le_7WuJfFLjAVR3Qc2t6a16Fh dct:modified "2023-04-08T13:00+02:00" .
+	:le_7WuJfFLjAVR3Qc2t6a16Fh dct:created "2023-04-08T17:53+02:00" .
+	:le_7WuJfFLjAVR3Qc2t6a16Fh dct:modified "2023-04-08T17:53+02:00" .
 	:le_7WuJfFLjAVR3Qc2t6a16Fh ontolex:sense :le_7WuJfFLjAVR3Qc2t6a16Fh_sense .
 	:le_7WuJfFLjAVR3Qc2t6a16Fh_sense rdf:type ontolex:LexicalSense .
 	:le_7WuJfFLjAVR3Qc2t6a16Fh_sense ontolex:reference :concept_c38 .
 	:le_7WuJfFLjAVR3Qc2t6a16Fh_sense dct:creator "kicco" .
-	:le_7WuJfFLjAVR3Qc2t6a16Fh_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_7WuJfFLjAVR3Qc2t6a16Fh_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_7WuJfFLjAVR3Qc2t6a16Fh_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_7WuJfFLjAVR3Qc2t6a16Fh_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_7WuJfFLjAVR3Qc2t6a16Fh ontolex:canonicalForm :le_7WuJfFLjAVR3Qc2t6a16Fh_lemma .
 	:le_7WuJfFLjAVR3Qc2t6a16Fh_lemma rdf:type ontolex:Form .
 	:le_7WuJfFLjAVR3Qc2t6a16Fh_lemma ontolex:writtenRep "ciclo del carbono-nitrógeno"@es .
 	:le_7WuJfFLjAVR3Qc2t6a16Fh_lemma dct:creator "kicco" .
-	:le_7WuJfFLjAVR3Qc2t6a16Fh_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_7WuJfFLjAVR3Qc2t6a16Fh_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_7WuJfFLjAVR3Qc2t6a16Fh_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_7WuJfFLjAVR3Qc2t6a16Fh_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c39 rdf:type skos:Concept .
 	:concept_c39 skos:prefLabel "c39" .
 	:tbx_en lime:entry :le_30cJoLCADI3F3GYvYWEbKB .
@@ -2014,39 +2011,39 @@ INSERT DATA {
 	:le_30cJoLCADI3F3GYvYWEbKB rdfs:label "degeneracy"@en .
 	:le_30cJoLCADI3F3GYvYWEbKB vs:term_status "working" .
 	:le_30cJoLCADI3F3GYvYWEbKB dct:creator "kicco" .
-	:le_30cJoLCADI3F3GYvYWEbKB dct:created "2023-04-08T13:00+02:00" .
-	:le_30cJoLCADI3F3GYvYWEbKB dct:modified "2023-04-08T13:00+02:00" .
+	:le_30cJoLCADI3F3GYvYWEbKB dct:created "2023-04-08T17:53+02:00" .
+	:le_30cJoLCADI3F3GYvYWEbKB dct:modified "2023-04-08T17:53+02:00" .
 	:le_30cJoLCADI3F3GYvYWEbKB ontolex:sense :le_30cJoLCADI3F3GYvYWEbKB_sense .
 	:le_30cJoLCADI3F3GYvYWEbKB_sense rdf:type ontolex:LexicalSense .
 	:le_30cJoLCADI3F3GYvYWEbKB_sense ontolex:reference :concept_c39 .
 	:le_30cJoLCADI3F3GYvYWEbKB_sense dct:creator "kicco" .
-	:le_30cJoLCADI3F3GYvYWEbKB_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_30cJoLCADI3F3GYvYWEbKB_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_30cJoLCADI3F3GYvYWEbKB_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_30cJoLCADI3F3GYvYWEbKB_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_30cJoLCADI3F3GYvYWEbKB ontolex:canonicalForm :le_30cJoLCADI3F3GYvYWEbKB_lemma .
 	:le_30cJoLCADI3F3GYvYWEbKB_lemma rdf:type ontolex:Form .
 	:le_30cJoLCADI3F3GYvYWEbKB_lemma ontolex:writtenRep "degeneracy"@en .
 	:le_30cJoLCADI3F3GYvYWEbKB_lemma dct:creator "kicco" .
-	:le_30cJoLCADI3F3GYvYWEbKB_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_30cJoLCADI3F3GYvYWEbKB_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_30cJoLCADI3F3GYvYWEbKB_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_30cJoLCADI3F3GYvYWEbKB_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_5w4p5XXC77bSAOQWJlW1Hw .
 	:le_5w4p5XXC77bSAOQWJlW1Hw rdf:type ontolex:LexicalEntry .
 	:le_5w4p5XXC77bSAOQWJlW1Hw rdfs:label "degeneración"@es .
 	:le_5w4p5XXC77bSAOQWJlW1Hw vs:term_status "working" .
 	:le_5w4p5XXC77bSAOQWJlW1Hw dct:creator "kicco" .
-	:le_5w4p5XXC77bSAOQWJlW1Hw dct:created "2023-04-08T13:00+02:00" .
-	:le_5w4p5XXC77bSAOQWJlW1Hw dct:modified "2023-04-08T13:00+02:00" .
+	:le_5w4p5XXC77bSAOQWJlW1Hw dct:created "2023-04-08T17:53+02:00" .
+	:le_5w4p5XXC77bSAOQWJlW1Hw dct:modified "2023-04-08T17:53+02:00" .
 	:le_5w4p5XXC77bSAOQWJlW1Hw ontolex:sense :le_5w4p5XXC77bSAOQWJlW1Hw_sense .
 	:le_5w4p5XXC77bSAOQWJlW1Hw_sense rdf:type ontolex:LexicalSense .
 	:le_5w4p5XXC77bSAOQWJlW1Hw_sense ontolex:reference :concept_c39 .
 	:le_5w4p5XXC77bSAOQWJlW1Hw_sense dct:creator "kicco" .
-	:le_5w4p5XXC77bSAOQWJlW1Hw_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5w4p5XXC77bSAOQWJlW1Hw_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5w4p5XXC77bSAOQWJlW1Hw_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5w4p5XXC77bSAOQWJlW1Hw_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5w4p5XXC77bSAOQWJlW1Hw ontolex:canonicalForm :le_5w4p5XXC77bSAOQWJlW1Hw_lemma .
 	:le_5w4p5XXC77bSAOQWJlW1Hw_lemma rdf:type ontolex:Form .
 	:le_5w4p5XXC77bSAOQWJlW1Hw_lemma ontolex:writtenRep "degeneración"@es .
 	:le_5w4p5XXC77bSAOQWJlW1Hw_lemma dct:creator "kicco" .
-	:le_5w4p5XXC77bSAOQWJlW1Hw_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5w4p5XXC77bSAOQWJlW1Hw_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5w4p5XXC77bSAOQWJlW1Hw_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5w4p5XXC77bSAOQWJlW1Hw_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c40 rdf:type skos:Concept .
 	:concept_c40 skos:prefLabel "c40" .
 	:tbx_zu lime:entry :le_QssPy5Y5fSjJzXzBYlGpk .
@@ -2054,20 +2051,20 @@ INSERT DATA {
 	:le_QssPy5Y5fSjJzXzBYlGpk rdfs:label "Oxford2003"@zu .
 	:le_QssPy5Y5fSjJzXzBYlGpk vs:term_status "working" .
 	:le_QssPy5Y5fSjJzXzBYlGpk dct:creator "kicco" .
-	:le_QssPy5Y5fSjJzXzBYlGpk dct:created "2023-04-08T13:00+02:00" .
-	:le_QssPy5Y5fSjJzXzBYlGpk dct:modified "2023-04-08T13:00+02:00" .
+	:le_QssPy5Y5fSjJzXzBYlGpk dct:created "2023-04-08T17:53+02:00" .
+	:le_QssPy5Y5fSjJzXzBYlGpk dct:modified "2023-04-08T17:53+02:00" .
 	:le_QssPy5Y5fSjJzXzBYlGpk ontolex:sense :le_QssPy5Y5fSjJzXzBYlGpk_sense .
 	:le_QssPy5Y5fSjJzXzBYlGpk_sense rdf:type ontolex:LexicalSense .
 	:le_QssPy5Y5fSjJzXzBYlGpk_sense ontolex:reference :concept_c40 .
 	:le_QssPy5Y5fSjJzXzBYlGpk_sense dct:creator "kicco" .
-	:le_QssPy5Y5fSjJzXzBYlGpk_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_QssPy5Y5fSjJzXzBYlGpk_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_QssPy5Y5fSjJzXzBYlGpk_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_QssPy5Y5fSjJzXzBYlGpk_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_QssPy5Y5fSjJzXzBYlGpk ontolex:canonicalForm :le_QssPy5Y5fSjJzXzBYlGpk_lemma .
 	:le_QssPy5Y5fSjJzXzBYlGpk_lemma rdf:type ontolex:Form .
 	:le_QssPy5Y5fSjJzXzBYlGpk_lemma ontolex:writtenRep "Oxford2003"@zu .
 	:le_QssPy5Y5fSjJzXzBYlGpk_lemma dct:creator "kicco" .
-	:le_QssPy5Y5fSjJzXzBYlGpk_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_QssPy5Y5fSjJzXzBYlGpk_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_QssPy5Y5fSjJzXzBYlGpk_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_QssPy5Y5fSjJzXzBYlGpk_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_QssPy5Y5fSjJzXzBYlGpk skos:note "Author[s]: Ridpath, Ian" .
 	:concept_c41 rdf:type skos:Concept .
 	:concept_c41 skos:prefLabel "c41" .
@@ -2076,59 +2073,59 @@ INSERT DATA {
 	:le_5ikkaP5XpIGzSP8rUdtP91 rdfs:label "electron degeneracy"@en .
 	:le_5ikkaP5XpIGzSP8rUdtP91 vs:term_status "working" .
 	:le_5ikkaP5XpIGzSP8rUdtP91 dct:creator "kicco" .
-	:le_5ikkaP5XpIGzSP8rUdtP91 dct:created "2023-04-08T13:00+02:00" .
-	:le_5ikkaP5XpIGzSP8rUdtP91 dct:modified "2023-04-08T13:00+02:00" .
+	:le_5ikkaP5XpIGzSP8rUdtP91 dct:created "2023-04-08T17:53+02:00" .
+	:le_5ikkaP5XpIGzSP8rUdtP91 dct:modified "2023-04-08T17:53+02:00" .
 	:le_5ikkaP5XpIGzSP8rUdtP91 ontolex:sense :le_5ikkaP5XpIGzSP8rUdtP91_sense .
 	:le_5ikkaP5XpIGzSP8rUdtP91_sense rdf:type ontolex:LexicalSense .
 	:le_5ikkaP5XpIGzSP8rUdtP91_sense ontolex:reference :concept_c41 .
 	:le_5ikkaP5XpIGzSP8rUdtP91_sense dct:creator "kicco" .
-	:le_5ikkaP5XpIGzSP8rUdtP91_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5ikkaP5XpIGzSP8rUdtP91_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5ikkaP5XpIGzSP8rUdtP91_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5ikkaP5XpIGzSP8rUdtP91_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5ikkaP5XpIGzSP8rUdtP91 ontolex:canonicalForm :le_5ikkaP5XpIGzSP8rUdtP91_lemma .
 	:le_5ikkaP5XpIGzSP8rUdtP91_lemma rdf:type ontolex:Form .
 	:le_5ikkaP5XpIGzSP8rUdtP91_lemma ontolex:writtenRep "electron degeneracy"@en .
 	:le_5ikkaP5XpIGzSP8rUdtP91_lemma dct:creator "kicco" .
-	:le_5ikkaP5XpIGzSP8rUdtP91_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5ikkaP5XpIGzSP8rUdtP91_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5ikkaP5XpIGzSP8rUdtP91_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5ikkaP5XpIGzSP8rUdtP91_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c41 skos:note "Electron degeneracy supports white dwarf stars against further collapse."@en .
 	:tbx_es lime:entry :le_abolTkE52z27wxEYfJzJj .
 	:le_abolTkE52z27wxEYfJzJj rdf:type ontolex:LexicalEntry .
 	:le_abolTkE52z27wxEYfJzJj rdfs:label "degeneración de electrones"@es .
 	:le_abolTkE52z27wxEYfJzJj vs:term_status "working" .
 	:le_abolTkE52z27wxEYfJzJj dct:creator "kicco" .
-	:le_abolTkE52z27wxEYfJzJj dct:created "2023-04-08T13:00+02:00" .
-	:le_abolTkE52z27wxEYfJzJj dct:modified "2023-04-08T13:00+02:00" .
+	:le_abolTkE52z27wxEYfJzJj dct:created "2023-04-08T17:53+02:00" .
+	:le_abolTkE52z27wxEYfJzJj dct:modified "2023-04-08T17:53+02:00" .
 	:le_abolTkE52z27wxEYfJzJj ontolex:sense :le_abolTkE52z27wxEYfJzJj_sense .
 	:le_abolTkE52z27wxEYfJzJj_sense rdf:type ontolex:LexicalSense .
 	:le_abolTkE52z27wxEYfJzJj_sense ontolex:reference :concept_c41 .
 	:le_abolTkE52z27wxEYfJzJj_sense dct:creator "kicco" .
-	:le_abolTkE52z27wxEYfJzJj_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_abolTkE52z27wxEYfJzJj_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_abolTkE52z27wxEYfJzJj_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_abolTkE52z27wxEYfJzJj_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_abolTkE52z27wxEYfJzJj ontolex:canonicalForm :le_abolTkE52z27wxEYfJzJj_lemma .
 	:le_abolTkE52z27wxEYfJzJj_lemma rdf:type ontolex:Form .
 	:le_abolTkE52z27wxEYfJzJj_lemma ontolex:writtenRep "degeneración de electrones"@es .
 	:le_abolTkE52z27wxEYfJzJj_lemma dct:creator "kicco" .
-	:le_abolTkE52z27wxEYfJzJj_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_abolTkE52z27wxEYfJzJj_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_abolTkE52z27wxEYfJzJj_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_abolTkE52z27wxEYfJzJj_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_4CQTp5kQVh2dJQfXKkUN6J .
 	:le_4CQTp5kQVh2dJQfXKkUN6J rdf:type ontolex:LexicalEntry .
 	:le_4CQTp5kQVh2dJQfXKkUN6J rdfs:label "degeneración electrónica"@es .
 	:le_4CQTp5kQVh2dJQfXKkUN6J vs:term_status "working" .
 	:le_4CQTp5kQVh2dJQfXKkUN6J dct:creator "kicco" .
-	:le_4CQTp5kQVh2dJQfXKkUN6J dct:created "2023-04-08T13:00+02:00" .
-	:le_4CQTp5kQVh2dJQfXKkUN6J dct:modified "2023-04-08T13:00+02:00" .
+	:le_4CQTp5kQVh2dJQfXKkUN6J dct:created "2023-04-08T17:53+02:00" .
+	:le_4CQTp5kQVh2dJQfXKkUN6J dct:modified "2023-04-08T17:53+02:00" .
 	:le_4CQTp5kQVh2dJQfXKkUN6J ontolex:sense :le_4CQTp5kQVh2dJQfXKkUN6J_sense .
 	:le_4CQTp5kQVh2dJQfXKkUN6J_sense rdf:type ontolex:LexicalSense .
 	:le_4CQTp5kQVh2dJQfXKkUN6J_sense ontolex:reference :concept_c41 .
 	:le_4CQTp5kQVh2dJQfXKkUN6J_sense dct:creator "kicco" .
-	:le_4CQTp5kQVh2dJQfXKkUN6J_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_4CQTp5kQVh2dJQfXKkUN6J_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_4CQTp5kQVh2dJQfXKkUN6J_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_4CQTp5kQVh2dJQfXKkUN6J_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_4CQTp5kQVh2dJQfXKkUN6J ontolex:canonicalForm :le_4CQTp5kQVh2dJQfXKkUN6J_lemma .
 	:le_4CQTp5kQVh2dJQfXKkUN6J_lemma rdf:type ontolex:Form .
 	:le_4CQTp5kQVh2dJQfXKkUN6J_lemma ontolex:writtenRep "degeneración electrónica"@es .
 	:le_4CQTp5kQVh2dJQfXKkUN6J_lemma dct:creator "kicco" .
-	:le_4CQTp5kQVh2dJQfXKkUN6J_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_4CQTp5kQVh2dJQfXKkUN6J_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_4CQTp5kQVh2dJQfXKkUN6J_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_4CQTp5kQVh2dJQfXKkUN6J_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c42 rdf:type skos:Concept .
 	:concept_c42 skos:prefLabel "c42" .
 	:tbx_en lime:entry :le_58DIaGWlA7apPIvcCYRGDK .
@@ -2136,40 +2133,40 @@ INSERT DATA {
 	:le_58DIaGWlA7apPIvcCYRGDK rdfs:label "singularity"@en .
 	:le_58DIaGWlA7apPIvcCYRGDK vs:term_status "working" .
 	:le_58DIaGWlA7apPIvcCYRGDK dct:creator "kicco" .
-	:le_58DIaGWlA7apPIvcCYRGDK dct:created "2023-04-08T13:00+02:00" .
-	:le_58DIaGWlA7apPIvcCYRGDK dct:modified "2023-04-08T13:00+02:00" .
+	:le_58DIaGWlA7apPIvcCYRGDK dct:created "2023-04-08T17:53+02:00" .
+	:le_58DIaGWlA7apPIvcCYRGDK dct:modified "2023-04-08T17:53+02:00" .
 	:le_58DIaGWlA7apPIvcCYRGDK ontolex:sense :le_58DIaGWlA7apPIvcCYRGDK_sense .
 	:le_58DIaGWlA7apPIvcCYRGDK_sense rdf:type ontolex:LexicalSense .
 	:le_58DIaGWlA7apPIvcCYRGDK_sense ontolex:reference :concept_c42 .
 	:le_58DIaGWlA7apPIvcCYRGDK_sense dct:creator "kicco" .
-	:le_58DIaGWlA7apPIvcCYRGDK_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_58DIaGWlA7apPIvcCYRGDK_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_58DIaGWlA7apPIvcCYRGDK_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_58DIaGWlA7apPIvcCYRGDK_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_58DIaGWlA7apPIvcCYRGDK ontolex:canonicalForm :le_58DIaGWlA7apPIvcCYRGDK_lemma .
 	:le_58DIaGWlA7apPIvcCYRGDK_lemma rdf:type ontolex:Form .
 	:le_58DIaGWlA7apPIvcCYRGDK_lemma ontolex:writtenRep "singularity"@en .
 	:le_58DIaGWlA7apPIvcCYRGDK_lemma dct:creator "kicco" .
-	:le_58DIaGWlA7apPIvcCYRGDK_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_58DIaGWlA7apPIvcCYRGDK_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_58DIaGWlA7apPIvcCYRGDK_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_58DIaGWlA7apPIvcCYRGDK_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_58DIaGWlA7apPIvcCYRGDK skos:note "Related Term: black hole, event horizon, Schwarzschild radius" .
 	:tbx_es lime:entry :le_53DiIN3mGHRkHftH9Sdw6K .
 	:le_53DiIN3mGHRkHftH9Sdw6K rdf:type ontolex:LexicalEntry .
 	:le_53DiIN3mGHRkHftH9Sdw6K rdfs:label "singularidad"@es .
 	:le_53DiIN3mGHRkHftH9Sdw6K vs:term_status "working" .
 	:le_53DiIN3mGHRkHftH9Sdw6K dct:creator "kicco" .
-	:le_53DiIN3mGHRkHftH9Sdw6K dct:created "2023-04-08T13:00+02:00" .
-	:le_53DiIN3mGHRkHftH9Sdw6K dct:modified "2023-04-08T13:00+02:00" .
+	:le_53DiIN3mGHRkHftH9Sdw6K dct:created "2023-04-08T17:53+02:00" .
+	:le_53DiIN3mGHRkHftH9Sdw6K dct:modified "2023-04-08T17:53+02:00" .
 	:le_53DiIN3mGHRkHftH9Sdw6K ontolex:sense :le_53DiIN3mGHRkHftH9Sdw6K_sense .
 	:le_53DiIN3mGHRkHftH9Sdw6K_sense rdf:type ontolex:LexicalSense .
 	:le_53DiIN3mGHRkHftH9Sdw6K_sense ontolex:reference :concept_c42 .
 	:le_53DiIN3mGHRkHftH9Sdw6K_sense dct:creator "kicco" .
-	:le_53DiIN3mGHRkHftH9Sdw6K_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_53DiIN3mGHRkHftH9Sdw6K_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_53DiIN3mGHRkHftH9Sdw6K_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_53DiIN3mGHRkHftH9Sdw6K_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_53DiIN3mGHRkHftH9Sdw6K ontolex:canonicalForm :le_53DiIN3mGHRkHftH9Sdw6K_lemma .
 	:le_53DiIN3mGHRkHftH9Sdw6K_lemma rdf:type ontolex:Form .
 	:le_53DiIN3mGHRkHftH9Sdw6K_lemma ontolex:writtenRep "singularidad"@es .
 	:le_53DiIN3mGHRkHftH9Sdw6K_lemma dct:creator "kicco" .
-	:le_53DiIN3mGHRkHftH9Sdw6K_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_53DiIN3mGHRkHftH9Sdw6K_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_53DiIN3mGHRkHftH9Sdw6K_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_53DiIN3mGHRkHftH9Sdw6K_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:le_53DiIN3mGHRkHftH9Sdw6K skos:note "Related Term: agujero negro, horizonte de sucesos, radio de Schwarzschild" .
 	:concept_c43 rdf:type skos:Concept .
 	:concept_c43 skos:prefLabel "c43" .
@@ -2178,39 +2175,39 @@ INSERT DATA {
 	:le_1W2raacwwI4s3gBg3dMy5K rdfs:label "solar mass"@en .
 	:le_1W2raacwwI4s3gBg3dMy5K vs:term_status "working" .
 	:le_1W2raacwwI4s3gBg3dMy5K dct:creator "kicco" .
-	:le_1W2raacwwI4s3gBg3dMy5K dct:created "2023-04-08T13:00+02:00" .
-	:le_1W2raacwwI4s3gBg3dMy5K dct:modified "2023-04-08T13:00+02:00" .
+	:le_1W2raacwwI4s3gBg3dMy5K dct:created "2023-04-08T17:53+02:00" .
+	:le_1W2raacwwI4s3gBg3dMy5K dct:modified "2023-04-08T17:53+02:00" .
 	:le_1W2raacwwI4s3gBg3dMy5K ontolex:sense :le_1W2raacwwI4s3gBg3dMy5K_sense .
 	:le_1W2raacwwI4s3gBg3dMy5K_sense rdf:type ontolex:LexicalSense .
 	:le_1W2raacwwI4s3gBg3dMy5K_sense ontolex:reference :concept_c43 .
 	:le_1W2raacwwI4s3gBg3dMy5K_sense dct:creator "kicco" .
-	:le_1W2raacwwI4s3gBg3dMy5K_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_1W2raacwwI4s3gBg3dMy5K_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_1W2raacwwI4s3gBg3dMy5K_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_1W2raacwwI4s3gBg3dMy5K_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_1W2raacwwI4s3gBg3dMy5K ontolex:canonicalForm :le_1W2raacwwI4s3gBg3dMy5K_lemma .
 	:le_1W2raacwwI4s3gBg3dMy5K_lemma rdf:type ontolex:Form .
 	:le_1W2raacwwI4s3gBg3dMy5K_lemma ontolex:writtenRep "solar mass"@en .
 	:le_1W2raacwwI4s3gBg3dMy5K_lemma dct:creator "kicco" .
-	:le_1W2raacwwI4s3gBg3dMy5K_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_1W2raacwwI4s3gBg3dMy5K_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_1W2raacwwI4s3gBg3dMy5K_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_1W2raacwwI4s3gBg3dMy5K_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_14HrqvnoPzLWjLS2B6hkqx .
 	:le_14HrqvnoPzLWjLS2B6hkqx rdf:type ontolex:LexicalEntry .
 	:le_14HrqvnoPzLWjLS2B6hkqx rdfs:label "masa solar"@es .
 	:le_14HrqvnoPzLWjLS2B6hkqx vs:term_status "working" .
 	:le_14HrqvnoPzLWjLS2B6hkqx dct:creator "kicco" .
-	:le_14HrqvnoPzLWjLS2B6hkqx dct:created "2023-04-08T13:00+02:00" .
-	:le_14HrqvnoPzLWjLS2B6hkqx dct:modified "2023-04-08T13:00+02:00" .
+	:le_14HrqvnoPzLWjLS2B6hkqx dct:created "2023-04-08T17:53+02:00" .
+	:le_14HrqvnoPzLWjLS2B6hkqx dct:modified "2023-04-08T17:53+02:00" .
 	:le_14HrqvnoPzLWjLS2B6hkqx ontolex:sense :le_14HrqvnoPzLWjLS2B6hkqx_sense .
 	:le_14HrqvnoPzLWjLS2B6hkqx_sense rdf:type ontolex:LexicalSense .
 	:le_14HrqvnoPzLWjLS2B6hkqx_sense ontolex:reference :concept_c43 .
 	:le_14HrqvnoPzLWjLS2B6hkqx_sense dct:creator "kicco" .
-	:le_14HrqvnoPzLWjLS2B6hkqx_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_14HrqvnoPzLWjLS2B6hkqx_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_14HrqvnoPzLWjLS2B6hkqx_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_14HrqvnoPzLWjLS2B6hkqx_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_14HrqvnoPzLWjLS2B6hkqx ontolex:canonicalForm :le_14HrqvnoPzLWjLS2B6hkqx_lemma .
 	:le_14HrqvnoPzLWjLS2B6hkqx_lemma rdf:type ontolex:Form .
 	:le_14HrqvnoPzLWjLS2B6hkqx_lemma ontolex:writtenRep "masa solar"@es .
 	:le_14HrqvnoPzLWjLS2B6hkqx_lemma dct:creator "kicco" .
-	:le_14HrqvnoPzLWjLS2B6hkqx_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_14HrqvnoPzLWjLS2B6hkqx_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_14HrqvnoPzLWjLS2B6hkqx_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_14HrqvnoPzLWjLS2B6hkqx_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c43 skos:note "In this graphic, the M with a subscript is the symbol for a solar mass." .
 	:concept_c44 rdf:type skos:Concept .
 	:concept_c44 skos:prefLabel "c44" .
@@ -2219,39 +2216,39 @@ INSERT DATA {
 	:le_16hSYcjEoLJNMNr3GsNLeQ rdfs:label "triple-alpha process"@en .
 	:le_16hSYcjEoLJNMNr3GsNLeQ vs:term_status "working" .
 	:le_16hSYcjEoLJNMNr3GsNLeQ dct:creator "kicco" .
-	:le_16hSYcjEoLJNMNr3GsNLeQ dct:created "2023-04-08T13:00+02:00" .
-	:le_16hSYcjEoLJNMNr3GsNLeQ dct:modified "2023-04-08T13:00+02:00" .
+	:le_16hSYcjEoLJNMNr3GsNLeQ dct:created "2023-04-08T17:53+02:00" .
+	:le_16hSYcjEoLJNMNr3GsNLeQ dct:modified "2023-04-08T17:53+02:00" .
 	:le_16hSYcjEoLJNMNr3GsNLeQ ontolex:sense :le_16hSYcjEoLJNMNr3GsNLeQ_sense .
 	:le_16hSYcjEoLJNMNr3GsNLeQ_sense rdf:type ontolex:LexicalSense .
 	:le_16hSYcjEoLJNMNr3GsNLeQ_sense ontolex:reference :concept_c44 .
 	:le_16hSYcjEoLJNMNr3GsNLeQ_sense dct:creator "kicco" .
-	:le_16hSYcjEoLJNMNr3GsNLeQ_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_16hSYcjEoLJNMNr3GsNLeQ_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_16hSYcjEoLJNMNr3GsNLeQ_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_16hSYcjEoLJNMNr3GsNLeQ_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_16hSYcjEoLJNMNr3GsNLeQ ontolex:canonicalForm :le_16hSYcjEoLJNMNr3GsNLeQ_lemma .
 	:le_16hSYcjEoLJNMNr3GsNLeQ_lemma rdf:type ontolex:Form .
 	:le_16hSYcjEoLJNMNr3GsNLeQ_lemma ontolex:writtenRep "triple-alpha process"@en .
 	:le_16hSYcjEoLJNMNr3GsNLeQ_lemma dct:creator "kicco" .
-	:le_16hSYcjEoLJNMNr3GsNLeQ_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_16hSYcjEoLJNMNr3GsNLeQ_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_16hSYcjEoLJNMNr3GsNLeQ_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_16hSYcjEoLJNMNr3GsNLeQ_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_5PF0kdvh6xX218viPTqftm .
 	:le_5PF0kdvh6xX218viPTqftm rdf:type ontolex:LexicalEntry .
 	:le_5PF0kdvh6xX218viPTqftm rdfs:label "proceso triple-alfa"@es .
 	:le_5PF0kdvh6xX218viPTqftm vs:term_status "working" .
 	:le_5PF0kdvh6xX218viPTqftm dct:creator "kicco" .
-	:le_5PF0kdvh6xX218viPTqftm dct:created "2023-04-08T13:00+02:00" .
-	:le_5PF0kdvh6xX218viPTqftm dct:modified "2023-04-08T13:00+02:00" .
+	:le_5PF0kdvh6xX218viPTqftm dct:created "2023-04-08T17:53+02:00" .
+	:le_5PF0kdvh6xX218viPTqftm dct:modified "2023-04-08T17:53+02:00" .
 	:le_5PF0kdvh6xX218viPTqftm ontolex:sense :le_5PF0kdvh6xX218viPTqftm_sense .
 	:le_5PF0kdvh6xX218viPTqftm_sense rdf:type ontolex:LexicalSense .
 	:le_5PF0kdvh6xX218viPTqftm_sense ontolex:reference :concept_c44 .
 	:le_5PF0kdvh6xX218viPTqftm_sense dct:creator "kicco" .
-	:le_5PF0kdvh6xX218viPTqftm_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_5PF0kdvh6xX218viPTqftm_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_5PF0kdvh6xX218viPTqftm_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_5PF0kdvh6xX218viPTqftm_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_5PF0kdvh6xX218viPTqftm ontolex:canonicalForm :le_5PF0kdvh6xX218viPTqftm_lemma .
 	:le_5PF0kdvh6xX218viPTqftm_lemma rdf:type ontolex:Form .
 	:le_5PF0kdvh6xX218viPTqftm_lemma ontolex:writtenRep "proceso triple-alfa"@es .
 	:le_5PF0kdvh6xX218viPTqftm_lemma dct:creator "kicco" .
-	:le_5PF0kdvh6xX218viPTqftm_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_5PF0kdvh6xX218viPTqftm_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_5PF0kdvh6xX218viPTqftm_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_5PF0kdvh6xX218viPTqftm_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:concept_c45 rdf:type skos:Concept .
 	:concept_c45 skos:prefLabel "c45" .
 	:tbx_en lime:entry :le_6dbEFxt8grDorGSEBTaXbp .
@@ -2259,38 +2256,38 @@ INSERT DATA {
 	:le_6dbEFxt8grDorGSEBTaXbp rdfs:label "black dwarf"@en .
 	:le_6dbEFxt8grDorGSEBTaXbp vs:term_status "working" .
 	:le_6dbEFxt8grDorGSEBTaXbp dct:creator "kicco" .
-	:le_6dbEFxt8grDorGSEBTaXbp dct:created "2023-04-08T13:00+02:00" .
-	:le_6dbEFxt8grDorGSEBTaXbp dct:modified "2023-04-08T13:00+02:00" .
+	:le_6dbEFxt8grDorGSEBTaXbp dct:created "2023-04-08T17:53+02:00" .
+	:le_6dbEFxt8grDorGSEBTaXbp dct:modified "2023-04-08T17:53+02:00" .
 	:le_6dbEFxt8grDorGSEBTaXbp ontolex:sense :le_6dbEFxt8grDorGSEBTaXbp_sense .
 	:le_6dbEFxt8grDorGSEBTaXbp_sense rdf:type ontolex:LexicalSense .
 	:le_6dbEFxt8grDorGSEBTaXbp_sense ontolex:reference :concept_c45 .
 	:le_6dbEFxt8grDorGSEBTaXbp_sense dct:creator "kicco" .
-	:le_6dbEFxt8grDorGSEBTaXbp_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_6dbEFxt8grDorGSEBTaXbp_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_6dbEFxt8grDorGSEBTaXbp_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_6dbEFxt8grDorGSEBTaXbp_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_6dbEFxt8grDorGSEBTaXbp ontolex:canonicalForm :le_6dbEFxt8grDorGSEBTaXbp_lemma .
 	:le_6dbEFxt8grDorGSEBTaXbp_lemma rdf:type ontolex:Form .
 	:le_6dbEFxt8grDorGSEBTaXbp_lemma ontolex:writtenRep "black dwarf"@en .
 	:le_6dbEFxt8grDorGSEBTaXbp_lemma dct:creator "kicco" .
-	:le_6dbEFxt8grDorGSEBTaXbp_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_6dbEFxt8grDorGSEBTaXbp_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_6dbEFxt8grDorGSEBTaXbp_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_6dbEFxt8grDorGSEBTaXbp_lemma dct:modified "2023-04-08T17:53+02:00" .
 	:tbx_es lime:entry :le_3lU4uS7cL0wtH2Hqk2xcrd .
 	:le_3lU4uS7cL0wtH2Hqk2xcrd rdf:type ontolex:LexicalEntry .
 	:le_3lU4uS7cL0wtH2Hqk2xcrd rdfs:label "enana negra"@es .
 	:le_3lU4uS7cL0wtH2Hqk2xcrd vs:term_status "working" .
 	:le_3lU4uS7cL0wtH2Hqk2xcrd dct:creator "kicco" .
-	:le_3lU4uS7cL0wtH2Hqk2xcrd dct:created "2023-04-08T13:00+02:00" .
-	:le_3lU4uS7cL0wtH2Hqk2xcrd dct:modified "2023-04-08T13:00+02:00" .
+	:le_3lU4uS7cL0wtH2Hqk2xcrd dct:created "2023-04-08T17:53+02:00" .
+	:le_3lU4uS7cL0wtH2Hqk2xcrd dct:modified "2023-04-08T17:53+02:00" .
 	:le_3lU4uS7cL0wtH2Hqk2xcrd ontolex:sense :le_3lU4uS7cL0wtH2Hqk2xcrd_sense .
 	:le_3lU4uS7cL0wtH2Hqk2xcrd_sense rdf:type ontolex:LexicalSense .
 	:le_3lU4uS7cL0wtH2Hqk2xcrd_sense ontolex:reference :concept_c45 .
 	:le_3lU4uS7cL0wtH2Hqk2xcrd_sense dct:creator "kicco" .
-	:le_3lU4uS7cL0wtH2Hqk2xcrd_sense dct:created "2023-04-08T13:00+02:00" .
-	:le_3lU4uS7cL0wtH2Hqk2xcrd_sense dct:modified "2023-04-08T13:00+02:00" .
+	:le_3lU4uS7cL0wtH2Hqk2xcrd_sense dct:created "2023-04-08T17:53+02:00" .
+	:le_3lU4uS7cL0wtH2Hqk2xcrd_sense dct:modified "2023-04-08T17:53+02:00" .
 	:le_3lU4uS7cL0wtH2Hqk2xcrd ontolex:canonicalForm :le_3lU4uS7cL0wtH2Hqk2xcrd_lemma .
 	:le_3lU4uS7cL0wtH2Hqk2xcrd_lemma rdf:type ontolex:Form .
 	:le_3lU4uS7cL0wtH2Hqk2xcrd_lemma ontolex:writtenRep "enana negra"@es .
 	:le_3lU4uS7cL0wtH2Hqk2xcrd_lemma dct:creator "kicco" .
-	:le_3lU4uS7cL0wtH2Hqk2xcrd_lemma dct:created "2023-04-08T13:00+02:00" .
-	:le_3lU4uS7cL0wtH2Hqk2xcrd_lemma dct:modified "2023-04-08T13:00+02:00" .
+	:le_3lU4uS7cL0wtH2Hqk2xcrd_lemma dct:created "2023-04-08T17:53+02:00" .
+	:le_3lU4uS7cL0wtH2Hqk2xcrd_lemma dct:modified "2023-04-08T17:53+02:00" .
 }
 

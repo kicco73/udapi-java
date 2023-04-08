@@ -14,101 +14,103 @@ INSERT DATA {
 	:tbx_en rdf:type lime:Lexicon .
 	:tbx_en lime:language "en" .
 	:tbx_en dct:creator "kicco" .
-	:tbx_en dct:created "2023-04-08T12:50+02:00" .
-	:tbx_en dct:modified "2023-04-08T12:50+02:00" .
+	:tbx_en dct:created "2023-04-08T17:52+02:00" .
+	:tbx_en dct:modified "2023-04-08T17:52+02:00" .
 	:tbx_en lime:entry :le_4lJxIDqsufDObBux3v8z7l_noun .
 	:le_4lJxIDqsufDObBux3v8z7l_noun rdf:type ontolex:LexicalEntry .
 	:le_4lJxIDqsufDObBux3v8z7l_noun rdfs:label "neighborhood electric vehicle"@en .
 	:le_4lJxIDqsufDObBux3v8z7l_noun lexinfo:partOfSpeech lexinfo:noun .
 	:le_4lJxIDqsufDObBux3v8z7l_noun vs:term_status "working" .
 	:le_4lJxIDqsufDObBux3v8z7l_noun dct:creator "kicco" .
-	:le_4lJxIDqsufDObBux3v8z7l_noun dct:created "2023-04-08T12:50+02:00" .
-	:le_4lJxIDqsufDObBux3v8z7l_noun dct:modified "2023-04-08T12:50+02:00" .
+	:le_4lJxIDqsufDObBux3v8z7l_noun dct:created "2023-04-08T17:52+02:00" .
+	:le_4lJxIDqsufDObBux3v8z7l_noun dct:modified "2023-04-08T17:52+02:00" .
 	:le_4lJxIDqsufDObBux3v8z7l_noun ontolex:sense :le_4lJxIDqsufDObBux3v8z7l_noun_sense .
 	:le_4lJxIDqsufDObBux3v8z7l_noun_sense rdf:type ontolex:LexicalSense .
 	:le_4lJxIDqsufDObBux3v8z7l_noun_sense ontolex:reference :concept_c1 .
 	:le_4lJxIDqsufDObBux3v8z7l_noun_sense dct:creator "kicco" .
-	:le_4lJxIDqsufDObBux3v8z7l_noun_sense dct:created "2023-04-08T12:50+02:00" .
-	:le_4lJxIDqsufDObBux3v8z7l_noun_sense dct:modified "2023-04-08T12:50+02:00" .
+	:le_4lJxIDqsufDObBux3v8z7l_noun_sense dct:created "2023-04-08T17:52+02:00" .
+	:le_4lJxIDqsufDObBux3v8z7l_noun_sense dct:modified "2023-04-08T17:52+02:00" .
 	:le_4lJxIDqsufDObBux3v8z7l_noun ontolex:canonicalForm :le_4lJxIDqsufDObBux3v8z7l_noun_lemma .
 	:le_4lJxIDqsufDObBux3v8z7l_noun_lemma rdf:type ontolex:Form .
 	:le_4lJxIDqsufDObBux3v8z7l_noun_lemma ontolex:writtenRep "neighborhood electric vehicle"@en .
 	:le_4lJxIDqsufDObBux3v8z7l_noun_lemma dct:creator "kicco" .
-	:le_4lJxIDqsufDObBux3v8z7l_noun_lemma dct:created "2023-04-08T12:50+02:00" .
-	:le_4lJxIDqsufDObBux3v8z7l_noun_lemma dct:modified "2023-04-08T12:50+02:00" .
+	:le_4lJxIDqsufDObBux3v8z7l_noun_lemma dct:created "2023-04-08T17:52+02:00" .
+	:le_4lJxIDqsufDObBux3v8z7l_noun_lemma dct:modified "2023-04-08T17:52+02:00" .
 	:le_4lJxIDqsufDObBux3v8z7l_noun lexinfo:termType lexinfo:fullForm .
 	:le_4lJxIDqsufDObBux3v8z7l_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
+	:le_4lJxIDqsufDObBux3v8z7l_noun_sense ontolex:usage [ dct:identifier <https://en.wikipedia.org/wiki/Neighborhood_Electric_Vehicle> ; dct:source "Wikipedia" ; rdf:value "A Neighborhood Electric Vehicle (NEV) is a U.S. category for battery electric vehicles that are usually built to have a top speed of 25 miles per hour (40 km/h), and have a maximum loaded weight of 3,000 lb (1,400 kg)."@en ] .
 	:tbx_en lime:entry :le_70BmRK1ZflbqYZW7CAP7dC_noun .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun rdf:type ontolex:LexicalEntry .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun rdfs:label "NEV"@en .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun lexinfo:partOfSpeech lexinfo:noun .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun vs:term_status "working" .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:creator "kicco" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:created "2023-04-08T12:50+02:00" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:modified "2023-04-08T12:50+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:created "2023-04-08T17:52+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:modified "2023-04-08T17:52+02:00" .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun ontolex:sense :le_70BmRK1ZflbqYZW7CAP7dC_noun_sense .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense rdf:type ontolex:LexicalSense .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense ontolex:reference :concept_c1 .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:creator "kicco" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:created "2023-04-08T12:50+02:00" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:modified "2023-04-08T12:50+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:created "2023-04-08T17:52+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:modified "2023-04-08T17:52+02:00" .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun ontolex:canonicalForm :le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma rdf:type ontolex:Form .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma ontolex:writtenRep "NEV"@en .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:creator "kicco" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:created "2023-04-08T12:50+02:00" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:modified "2023-04-08T12:50+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:created "2023-04-08T17:52+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:modified "2023-04-08T17:52+02:00" .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun lexinfo:termType lexinfo:acronym .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
 	:concept_c1 skos:definition [ dct:identifier <https://www.techtarget.com/whatis/definition/neighborhood-electric-vehicle-NEV> ; dct:source "TechTarget" ; rdf:value "A battery-electric car that is capable of traveling at a maximum speed of 25 miles per hour (mph) and has a maximum loaded weight of 3,000 lbs."@en ] .
 	:tbx_fr rdf:type lime:Lexicon .
 	:tbx_fr lime:language "fr" .
 	:tbx_fr dct:creator "kicco" .
-	:tbx_fr dct:created "2023-04-08T12:50+02:00" .
-	:tbx_fr dct:modified "2023-04-08T12:50+02:00" .
+	:tbx_fr dct:created "2023-04-08T17:52+02:00" .
+	:tbx_fr dct:modified "2023-04-08T17:52+02:00" .
 	:tbx_fr lime:entry :le_79Sv3ebS35i1PwG4cTWLaV_noun .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun rdf:type ontolex:LexicalEntry .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun rdfs:label "véhicule électrique de proximité"@fr .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun lexinfo:partOfSpeech lexinfo:noun .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun vs:term_status "working" .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun dct:creator "kicco" .
-	:le_79Sv3ebS35i1PwG4cTWLaV_noun dct:created "2023-04-08T12:50+02:00" .
-	:le_79Sv3ebS35i1PwG4cTWLaV_noun dct:modified "2023-04-08T12:50+02:00" .
+	:le_79Sv3ebS35i1PwG4cTWLaV_noun dct:created "2023-04-08T17:52+02:00" .
+	:le_79Sv3ebS35i1PwG4cTWLaV_noun dct:modified "2023-04-08T17:52+02:00" .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun ontolex:sense :le_79Sv3ebS35i1PwG4cTWLaV_noun_sense .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun_sense rdf:type ontolex:LexicalSense .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun_sense ontolex:reference :concept_c1 .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun_sense dct:creator "kicco" .
-	:le_79Sv3ebS35i1PwG4cTWLaV_noun_sense dct:created "2023-04-08T12:50+02:00" .
-	:le_79Sv3ebS35i1PwG4cTWLaV_noun_sense dct:modified "2023-04-08T12:50+02:00" .
+	:le_79Sv3ebS35i1PwG4cTWLaV_noun_sense dct:created "2023-04-08T17:52+02:00" .
+	:le_79Sv3ebS35i1PwG4cTWLaV_noun_sense dct:modified "2023-04-08T17:52+02:00" .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun ontolex:canonicalForm :le_79Sv3ebS35i1PwG4cTWLaV_noun_lemma .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun_lemma rdf:type ontolex:Form .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun_lemma ontolex:writtenRep "véhicule électrique de proximité"@fr .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun_lemma dct:creator "kicco" .
-	:le_79Sv3ebS35i1PwG4cTWLaV_noun_lemma dct:created "2023-04-08T12:50+02:00" .
-	:le_79Sv3ebS35i1PwG4cTWLaV_noun_lemma dct:modified "2023-04-08T12:50+02:00" .
+	:le_79Sv3ebS35i1PwG4cTWLaV_noun_lemma dct:created "2023-04-08T17:52+02:00" .
+	:le_79Sv3ebS35i1PwG4cTWLaV_noun_lemma dct:modified "2023-04-08T17:52+02:00" .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun_lemma lexinfo:gender lexinfo:masculine .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun lexinfo:termType lexinfo:fullForm .
 	:le_79Sv3ebS35i1PwG4cTWLaV_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
+	:le_79Sv3ebS35i1PwG4cTWLaV_noun_sense ontolex:usage [ dct:identifier <https://definir-tech.com/vehicule-electrique-de-proximite-nev/> ; dct:source "Definir Tech" ; rdf:value "Un véhicule électrique de proximité (NEV) est une voiture électrique à batterie capable de se déplacer à une vitesse maximale de 25 miles par heure (mph) et dont le poids maximal en charge est de 3 000 livres."@fr ] .
 	:tbx_fr lime:entry :le_52psnJ3MsqeqlzQTj3yDTL_noun .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun rdf:type ontolex:LexicalEntry .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun rdfs:label "véhicule de proximité"@fr .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun lexinfo:partOfSpeech lexinfo:noun .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun vs:term_status "working" .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun dct:creator "kicco" .
-	:le_52psnJ3MsqeqlzQTj3yDTL_noun dct:created "2023-04-08T12:50+02:00" .
-	:le_52psnJ3MsqeqlzQTj3yDTL_noun dct:modified "2023-04-08T12:50+02:00" .
+	:le_52psnJ3MsqeqlzQTj3yDTL_noun dct:created "2023-04-08T17:52+02:00" .
+	:le_52psnJ3MsqeqlzQTj3yDTL_noun dct:modified "2023-04-08T17:52+02:00" .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun ontolex:sense :le_52psnJ3MsqeqlzQTj3yDTL_noun_sense .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun_sense rdf:type ontolex:LexicalSense .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun_sense ontolex:reference :concept_c1 .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun_sense dct:creator "kicco" .
-	:le_52psnJ3MsqeqlzQTj3yDTL_noun_sense dct:created "2023-04-08T12:50+02:00" .
-	:le_52psnJ3MsqeqlzQTj3yDTL_noun_sense dct:modified "2023-04-08T12:50+02:00" .
+	:le_52psnJ3MsqeqlzQTj3yDTL_noun_sense dct:created "2023-04-08T17:52+02:00" .
+	:le_52psnJ3MsqeqlzQTj3yDTL_noun_sense dct:modified "2023-04-08T17:52+02:00" .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun ontolex:canonicalForm :le_52psnJ3MsqeqlzQTj3yDTL_noun_lemma .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun_lemma rdf:type ontolex:Form .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun_lemma ontolex:writtenRep "véhicule de proximité"@fr .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun_lemma dct:creator "kicco" .
-	:le_52psnJ3MsqeqlzQTj3yDTL_noun_lemma dct:created "2023-04-08T12:50+02:00" .
-	:le_52psnJ3MsqeqlzQTj3yDTL_noun_lemma dct:modified "2023-04-08T12:50+02:00" .
+	:le_52psnJ3MsqeqlzQTj3yDTL_noun_lemma dct:created "2023-04-08T17:52+02:00" .
+	:le_52psnJ3MsqeqlzQTj3yDTL_noun_lemma dct:modified "2023-04-08T17:52+02:00" .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun_lemma lexinfo:gender lexinfo:masculine .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun lexinfo:termType lexinfo:fullForm .
 	:le_52psnJ3MsqeqlzQTj3yDTL_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
@@ -118,20 +120,20 @@ INSERT DATA {
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun lexinfo:partOfSpeech lexinfo:noun .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun vs:term_status "working" .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun dct:creator "kicco" .
-	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun dct:created "2023-04-08T12:50+02:00" .
-	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun dct:modified "2023-04-08T12:50+02:00" .
+	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun dct:created "2023-04-08T17:52+02:00" .
+	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun dct:modified "2023-04-08T17:52+02:00" .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun ontolex:sense :le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense rdf:type ontolex:LexicalSense .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense ontolex:reference :concept_c1 .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense dct:creator "kicco" .
-	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense dct:created "2023-04-08T12:50+02:00" .
-	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense dct:modified "2023-04-08T12:50+02:00" .
+	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense dct:created "2023-04-08T17:52+02:00" .
+	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense dct:modified "2023-04-08T17:52+02:00" .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun ontolex:canonicalForm :le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma rdf:type ontolex:Form .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma ontolex:writtenRep "VEP"@fr .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma dct:creator "kicco" .
-	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma dct:created "2023-04-08T12:50+02:00" .
-	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma dct:modified "2023-04-08T12:50+02:00" .
+	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma dct:created "2023-04-08T17:52+02:00" .
+	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma dct:modified "2023-04-08T17:52+02:00" .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma lexinfo:gender lexinfo:masculine .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun lexinfo:termType lexinfo:acronym .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
@@ -141,80 +143,76 @@ INSERT DATA {
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun lexinfo:partOfSpeech lexinfo:noun .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun vs:term_status "working" .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:creator "kicco" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:created "2023-04-08T12:50+02:00" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:modified "2023-04-08T12:50+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:created "2023-04-08T17:52+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:modified "2023-04-08T17:52+02:00" .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun ontolex:sense :le_70BmRK1ZflbqYZW7CAP7dC_noun_sense .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense rdf:type ontolex:LexicalSense .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense ontolex:reference :concept_c1 .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:creator "kicco" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:created "2023-04-08T12:50+02:00" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:modified "2023-04-08T12:50+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:created "2023-04-08T17:52+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:modified "2023-04-08T17:52+02:00" .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun ontolex:canonicalForm :le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma rdf:type ontolex:Form .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma ontolex:writtenRep "NEV"@fr .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:creator "kicco" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:created "2023-04-08T12:50+02:00" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:modified "2023-04-08T12:50+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:created "2023-04-08T17:52+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:modified "2023-04-08T17:52+02:00" .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun lexinfo:termType lexinfo:acronym .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun lexinfo:normativeAuthorization lexinfo:deprecatedTerm .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun skos:note "Il semble inutile d'emprunter l'acronyme anglais NEV puisque la dénomination française produit par siglaison une appellation aussi efficace et aussi brève." .
-	:concept_c1 skos:note "Il semble inutile d'emprunter l'acronyme anglais NEV puisque la dénomination française produit par siglaison une appellation aussi efficace et aussi brève."@fr .
 	:concept_c1 skos:definition [ dct:identifier <https://gdt.oqlf.gouv.qc.ca/ficheOqlf.aspx?Id_Fiche=2069944> ; dct:source "Office québécois de la langue française, 2002" ; rdf:value "Véhicule à deux places, activé par un moteur électrique à courant continu alimenté par des batteries au plomb rechargeables à partir d'une prise de courant résidentielle de 110 volts."@fr ] .
 	:tbx_it rdf:type lime:Lexicon .
 	:tbx_it lime:language "it" .
 	:tbx_it dct:creator "kicco" .
-	:tbx_it dct:created "2023-04-08T12:50+02:00" .
-	:tbx_it dct:modified "2023-04-08T12:50+02:00" .
+	:tbx_it dct:created "2023-04-08T17:52+02:00" .
+	:tbx_it dct:modified "2023-04-08T17:52+02:00" .
 	:tbx_it lime:entry :le_18rw9zxjYMmyUYhgFkE7TI_noun .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun rdf:type ontolex:LexicalEntry .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun rdfs:label "veicoli elettrici di prossimità urbana"@it .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun lexinfo:partOfSpeech lexinfo:noun .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun vs:term_status "working" .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun dct:creator "kicco" .
-	:le_18rw9zxjYMmyUYhgFkE7TI_noun dct:created "2023-04-08T12:50+02:00" .
-	:le_18rw9zxjYMmyUYhgFkE7TI_noun dct:modified "2023-04-08T12:50+02:00" .
+	:le_18rw9zxjYMmyUYhgFkE7TI_noun dct:created "2023-04-08T17:52+02:00" .
+	:le_18rw9zxjYMmyUYhgFkE7TI_noun dct:modified "2023-04-08T17:52+02:00" .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun ontolex:sense :le_18rw9zxjYMmyUYhgFkE7TI_noun_sense .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun_sense rdf:type ontolex:LexicalSense .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun_sense ontolex:reference :concept_c1 .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun_sense dct:creator "kicco" .
-	:le_18rw9zxjYMmyUYhgFkE7TI_noun_sense dct:created "2023-04-08T12:50+02:00" .
-	:le_18rw9zxjYMmyUYhgFkE7TI_noun_sense dct:modified "2023-04-08T12:50+02:00" .
+	:le_18rw9zxjYMmyUYhgFkE7TI_noun_sense dct:created "2023-04-08T17:52+02:00" .
+	:le_18rw9zxjYMmyUYhgFkE7TI_noun_sense dct:modified "2023-04-08T17:52+02:00" .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun ontolex:canonicalForm :le_18rw9zxjYMmyUYhgFkE7TI_noun_lemma .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun_lemma rdf:type ontolex:Form .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun_lemma ontolex:writtenRep "veicoli elettrici di prossimità urbana"@it .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun_lemma dct:creator "kicco" .
-	:le_18rw9zxjYMmyUYhgFkE7TI_noun_lemma dct:created "2023-04-08T12:50+02:00" .
-	:le_18rw9zxjYMmyUYhgFkE7TI_noun_lemma dct:modified "2023-04-08T12:50+02:00" .
+	:le_18rw9zxjYMmyUYhgFkE7TI_noun_lemma dct:created "2023-04-08T17:52+02:00" .
+	:le_18rw9zxjYMmyUYhgFkE7TI_noun_lemma dct:modified "2023-04-08T17:52+02:00" .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun_lemma lexinfo:gender lexinfo:masculine .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun lexinfo:termType lexinfo:fullForm .
 	:le_18rw9zxjYMmyUYhgFkE7TI_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
+	:le_18rw9zxjYMmyUYhgFkE7TI_noun_sense ontolex:usage [ dct:identifier <https://www.exelentia.it/veicoli-elettrici-urbani-nev/> ; dct:source "Exelentia" ; rdf:value "Mobilità in spazi chiusi, aree sensibili e protette? La risposta è NEV – Neighborhood Electric Vehicles, veicoli elettrici di prossimità urbana, idonei ad andare dove altri si fermano."@it ] .
 	:tbx_it lime:entry :le_70BmRK1ZflbqYZW7CAP7dC_noun .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun rdf:type ontolex:LexicalEntry .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun rdfs:label "NEV"@it .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun lexinfo:partOfSpeech lexinfo:noun .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun vs:term_status "working" .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:creator "kicco" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:created "2023-04-08T12:50+02:00" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:modified "2023-04-08T12:50+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:created "2023-04-08T17:52+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun dct:modified "2023-04-08T17:52+02:00" .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun ontolex:sense :le_70BmRK1ZflbqYZW7CAP7dC_noun_sense .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense rdf:type ontolex:LexicalSense .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense ontolex:reference :concept_c1 .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:creator "kicco" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:created "2023-04-08T12:50+02:00" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:modified "2023-04-08T12:50+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:created "2023-04-08T17:52+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun_sense dct:modified "2023-04-08T17:52+02:00" .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun ontolex:canonicalForm :le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma rdf:type ontolex:Form .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma ontolex:writtenRep "NEV"@it .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:creator "kicco" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:created "2023-04-08T12:50+02:00" .
-	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:modified "2023-04-08T12:50+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:created "2023-04-08T17:52+02:00" .
+	:le_70BmRK1ZflbqYZW7CAP7dC_noun_lemma dct:modified "2023-04-08T17:52+02:00" .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun lexinfo:termType lexinfo:acronym .
 	:le_70BmRK1ZflbqYZW7CAP7dC_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:concept_c1 skos:definition [ dct:identifier <https://it.wikipedia.org/wiki/Neighborhood_Electric_Vehicle> ; dct:source "Wikipedia" ; rdf:value "Un Neighborhood Electric Vehicle (NEV) è una denominazione USA per i veicoli elettrici di prossimità urbana che solitamente sono costruiti per avere una velocità non superiori a 50 km/h (70 km/h per categoria N1) e hanno un peso massimo caricato di circa 1.000 kg. I NEV rientrano nella classificazione dei quadricicli leggeri."@it ] .
-	:concept_c1 skos:note "Il semble inutile d'emprunter l'acronyme anglais NEV puisque la dénomination française produit par siglaison une appellation aussi efficace et aussi brève." .
-	:concept_c1 rdf:seeAlso <https://gdt.oqlf.gouv.qc.ca/ficheOqlf.aspx?Id_Fiche=2069944> .
-	:concept_c1 skos:definition "Véhicule à deux places, activé par un moteur électrique à courant continu alimenté par des batteries au plomb rechargeables à partir d'une prise de courant résidentielle de 110 volts." .
-	:concept_c1 dct:source "Office québécois de la langue française, 2002" .
 	:concept_c1_OdeYA0FHeFFB1DVUMqdMw rdf:type skos:ConceptScheme .
 	:concept_c1_OdeYA0FHeFFB1DVUMqdMw skos:prefLabel "e-mobility" .
 	:concept_c1 skos:inScheme :concept_c1_OdeYA0FHeFFB1DVUMqdMw .
@@ -226,43 +224,44 @@ INSERT DATA {
 	:le_Bn0YrA9WIgaShmS7RLmwo_noun lexinfo:partOfSpeech lexinfo:noun .
 	:le_Bn0YrA9WIgaShmS7RLmwo_noun vs:term_status "working" .
 	:le_Bn0YrA9WIgaShmS7RLmwo_noun dct:creator "kicco" .
-	:le_Bn0YrA9WIgaShmS7RLmwo_noun dct:created "2023-04-08T12:50+02:00" .
-	:le_Bn0YrA9WIgaShmS7RLmwo_noun dct:modified "2023-04-08T12:50+02:00" .
+	:le_Bn0YrA9WIgaShmS7RLmwo_noun dct:created "2023-04-08T17:52+02:00" .
+	:le_Bn0YrA9WIgaShmS7RLmwo_noun dct:modified "2023-04-08T17:52+02:00" .
 	:le_Bn0YrA9WIgaShmS7RLmwo_noun ontolex:sense :le_Bn0YrA9WIgaShmS7RLmwo_noun_sense .
 	:le_Bn0YrA9WIgaShmS7RLmwo_noun_sense rdf:type ontolex:LexicalSense .
 	:le_Bn0YrA9WIgaShmS7RLmwo_noun_sense ontolex:reference :concept_c2 .
 	:le_Bn0YrA9WIgaShmS7RLmwo_noun_sense dct:creator "kicco" .
-	:le_Bn0YrA9WIgaShmS7RLmwo_noun_sense dct:created "2023-04-08T12:50+02:00" .
-	:le_Bn0YrA9WIgaShmS7RLmwo_noun_sense dct:modified "2023-04-08T12:50+02:00" .
+	:le_Bn0YrA9WIgaShmS7RLmwo_noun_sense dct:created "2023-04-08T17:52+02:00" .
+	:le_Bn0YrA9WIgaShmS7RLmwo_noun_sense dct:modified "2023-04-08T17:52+02:00" .
 	:le_Bn0YrA9WIgaShmS7RLmwo_noun ontolex:canonicalForm :le_Bn0YrA9WIgaShmS7RLmwo_noun_lemma .
 	:le_Bn0YrA9WIgaShmS7RLmwo_noun_lemma rdf:type ontolex:Form .
 	:le_Bn0YrA9WIgaShmS7RLmwo_noun_lemma ontolex:writtenRep "véhicule électrique personnel"@fr .
 	:le_Bn0YrA9WIgaShmS7RLmwo_noun_lemma dct:creator "kicco" .
-	:le_Bn0YrA9WIgaShmS7RLmwo_noun_lemma dct:created "2023-04-08T12:50+02:00" .
-	:le_Bn0YrA9WIgaShmS7RLmwo_noun_lemma dct:modified "2023-04-08T12:50+02:00" .
+	:le_Bn0YrA9WIgaShmS7RLmwo_noun_lemma dct:created "2023-04-08T17:52+02:00" .
+	:le_Bn0YrA9WIgaShmS7RLmwo_noun_lemma dct:modified "2023-04-08T17:52+02:00" .
 	:le_Bn0YrA9WIgaShmS7RLmwo_noun_lemma lexinfo:gender lexinfo:masculine .
 	:le_Bn0YrA9WIgaShmS7RLmwo_noun lexinfo:termType lexinfo:fullForm .
 	:le_Bn0YrA9WIgaShmS7RLmwo_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
+	:le_Bn0YrA9WIgaShmS7RLmwo_noun_sense ontolex:usage [ dct:identifier <https://www.carbone4.com/decryptage-mobilite-recharge-electrique> ; dct:source "Carbone 4" ; rdf:value "C’est une solution alternative adaptée à l’usage peu fréquent du véhicule électrique personnel sur les longues distances et qui peut se révéler très vertueuse sur le plan environnemental"@fr ] .
 	:tbx_fr lime:entry :le_3VcqWb2LQs2G6y0ZV3hhIJ_noun .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun rdf:type ontolex:LexicalEntry .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun rdfs:label "VEP"@fr .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun lexinfo:partOfSpeech lexinfo:noun .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun vs:term_status "working" .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun dct:creator "kicco" .
-	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun dct:created "2023-04-08T12:50+02:00" .
-	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun dct:modified "2023-04-08T12:50+02:00" .
+	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun dct:created "2023-04-08T17:52+02:00" .
+	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun dct:modified "2023-04-08T17:52+02:00" .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun ontolex:sense :le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense rdf:type ontolex:LexicalSense .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense ontolex:reference :concept_c2 .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense dct:creator "kicco" .
-	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense dct:created "2023-04-08T12:50+02:00" .
-	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense dct:modified "2023-04-08T12:50+02:00" .
+	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense dct:created "2023-04-08T17:52+02:00" .
+	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_sense dct:modified "2023-04-08T17:52+02:00" .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun ontolex:canonicalForm :le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma rdf:type ontolex:Form .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma ontolex:writtenRep "VEP"@fr .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma dct:creator "kicco" .
-	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma dct:created "2023-04-08T12:50+02:00" .
-	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma dct:modified "2023-04-08T12:50+02:00" .
+	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma dct:created "2023-04-08T17:52+02:00" .
+	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma dct:modified "2023-04-08T17:52+02:00" .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun_lemma lexinfo:gender lexinfo:masculine .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun lexinfo:termType lexinfo:acronym .
 	:le_3VcqWb2LQs2G6y0ZV3hhIJ_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .

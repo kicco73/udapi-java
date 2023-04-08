@@ -4,6 +4,8 @@
 
 package cnr.ilc.rut;
 
+import java.io.PrintWriter;
+
 import cnr.ilc.conllu.Connlu2Sparql;
 import cnr.ilc.tbx.Tbx2Sparql;
 
@@ -17,7 +19,8 @@ public class Main {
     int chunkSize = 15000;
     String namespace = "http://txt2rdf/test#";
     String exportConll = null;
-    boolean isStdOutEnabled = false;
+    String outSparql = null;
+    boolean isOutEnabled = false;
 
     public static void main(String[] args) throws Exception {
         new Main().run(args);
@@ -30,10 +33,14 @@ public class Main {
                 case "-i":
                 case "--input-conll":
                     inCoNLL = args[startIndex++];
+                    int index = inCoNLL.lastIndexOf(".");
+                    outSparql = inCoNLL.substring(0, index)+".sparql"; 
                     break;
                 case "-t":
                 case "--input-tbx":
                     inTbx = args[startIndex++];
+                    index = inTbx.lastIndexOf(".");
+                    outSparql = inTbx.substring(0, index)+".sparql"; 
                     break;
                 case "-c":
                 case "--creator":
@@ -64,8 +71,8 @@ public class Main {
                     namespace = args[startIndex++];
                     break;
                 case "-o":
-                case "--stdout":
-                    isStdOutEnabled = true;
+                case "--outfile":
+                    isOutEnabled = true;
                     break;
                 default:
                     System.err.println(String.format("Unknown option: %s", args[startIndex-1]));
@@ -94,12 +101,16 @@ public class Main {
             System.err.println(String.format("Number of terms: %d", sparqlConverter.getNumberOfTerms()));
         }
 
-        if (isStdOutEnabled) {
-            System.out.println(statements);
+        if (isOutEnabled && outSparql != null) {
+            PrintWriter writer = new PrintWriter(outSparql, "UTF-8");
+            writer.println(statements);
+            writer.close();
         }
 
         if (graphURL != null) {
             uploadStatements(graphURL, repository, statements);
+        } else if (!isOutEnabled) {
+            System.out.println(statements);
         }
     }
 

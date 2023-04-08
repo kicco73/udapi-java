@@ -9,9 +9,27 @@ public class Nodes {
 		return element == null? null : element.getTextContent();
 	}
 
+	static public String getTextOfTagWithAttribute(Element root, String tagName, String attributeName, String attributeValue) {
+		NodeList elements = root.getElementsByTagNameNS("*", tagName);
+		for (int k = 0; k < elements.getLength(); ++k) {
+			Element element = (Element) elements.item(k);
+			String value = element.getAttribute(attributeName);
+			if (value.equals(attributeValue)) return element.getTextContent();
+		}
+		return null;
+	}
+
+	static public String getTextOfTagOrAlternateTagWithAttribute(Element root, String tagName, String alternateTagName, String attributeName) {
+		String text = getTextOfTag(root, tagName);
+		if (text == null) {
+			text = getTextOfTagWithAttribute(root, alternateTagName, attributeName, tagName);
+		}
+		return text;
+	}
+
 	static public void removeNodesFromParsingTree(NodeList nodes) {
-		for (int k = 0; k < nodes.getLength(); ++k)  {
-			Node node = nodes.item(k);
+		for (int k = nodes.getLength(); k > 0; --k)  {
+			Node node = nodes.item(k-1);
 			node.getParentNode().removeChild(node);
 		}
 	}
