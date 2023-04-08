@@ -17,6 +17,7 @@ public class Main {
     int chunkSize = 15000;
     String namespace = "http://txt2rdf/test#";
     String exportConll = null;
+    boolean isStdOutEnabled = false;
 
     public static void main(String[] args) throws Exception {
         new Main().run(args);
@@ -38,7 +39,7 @@ public class Main {
                 case "--creator":
                     creator = args[startIndex++];     
                     break;   
-                case "-o":
+                case "-g":
                 case "--graphdb-url":
                     graphURL = args[startIndex++];
                     break;
@@ -61,6 +62,10 @@ public class Main {
                 case "-n":
                 case "--namespace":
                     namespace = args[startIndex++];
+                    break;
+                case "-o":
+                case "--stdout":
+                    isStdOutEnabled = true;
                     break;
                 default:
                     System.err.println(String.format("Unknown option: %s", args[startIndex-1]));
@@ -89,10 +94,12 @@ public class Main {
             System.err.println(String.format("Number of terms: %d", sparqlConverter.getNumberOfTerms()));
         }
 
+        if (isStdOutEnabled) {
+            System.out.println(statements);
+        }
+
         if (graphURL != null) {
             uploadStatements(graphURL, repository, statements);
-        } else {
-            System.out.println(statements);
         }
     }
 
@@ -101,10 +108,10 @@ public class Main {
         String[] chunks = statements.split(SPARQLWriter.separator, 0);
         int n = 0;
         for (String chunk: chunks) {
-            System.out.print(String.format("\rPosting... %.0f%%", ++n * 100.0/chunks.length));
+            System.err.print(String.format("\rPosting... %.0f%%", ++n * 100.0/chunks.length));
             client.post(chunk);
         }
-        System.out.println();
+        System.err.println();
     }
     
 }

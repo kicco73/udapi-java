@@ -1,0 +1,187 @@
+PREFIX : <http://txt2rdf/test#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX lexinfo: <http://www.lexinfo.net/ontology/3.0/lexinfo#>
+PREFIX ontolex: <http://www.w3.org/ns/lemon/ontolex#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX lime: <http://www.w3.org/ns/lemon/lime#>
+PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
+INSERT DATA {
+	:concept_c1 rdf:type skos:Concept .
+	:concept_c1 skos:prefLabel "c1" .
+	:tbx_en rdf:type lime:Lexicon .
+	:tbx_en lime:language "en" .
+	:tbx_en dct:creator "kicco" .
+	:tbx_en dct:created "2023-04-08T12:54+02:00" .
+	:tbx_en dct:modified "2023-04-08T12:54+02:00" .
+	:tbx_en lime:entry :le_4yY2TeLlFGkRHxT7HzzIhT .
+	:le_4yY2TeLlFGkRHxT7HzzIhT rdf:type ontolex:LexicalEntry .
+	:le_4yY2TeLlFGkRHxT7HzzIhT rdfs:label "goods vehicle"@en .
+	:le_4yY2TeLlFGkRHxT7HzzIhT vs:term_status "working" .
+	:le_4yY2TeLlFGkRHxT7HzzIhT dct:creator "kicco" .
+	:le_4yY2TeLlFGkRHxT7HzzIhT dct:created "2023-04-08T12:54+02:00" .
+	:le_4yY2TeLlFGkRHxT7HzzIhT dct:modified "2023-04-08T12:54+02:00" .
+	:le_4yY2TeLlFGkRHxT7HzzIhT ontolex:sense :le_4yY2TeLlFGkRHxT7HzzIhT_sense .
+	:le_4yY2TeLlFGkRHxT7HzzIhT_sense rdf:type ontolex:LexicalSense .
+	:le_4yY2TeLlFGkRHxT7HzzIhT_sense ontolex:reference :concept_c1 .
+	:le_4yY2TeLlFGkRHxT7HzzIhT_sense dct:creator "kicco" .
+	:le_4yY2TeLlFGkRHxT7HzzIhT_sense dct:created "2023-04-08T12:54+02:00" .
+	:le_4yY2TeLlFGkRHxT7HzzIhT_sense dct:modified "2023-04-08T12:54+02:00" .
+	:le_4yY2TeLlFGkRHxT7HzzIhT ontolex:canonicalForm :le_4yY2TeLlFGkRHxT7HzzIhT_lemma .
+	:le_4yY2TeLlFGkRHxT7HzzIhT_lemma rdf:type ontolex:Form .
+	:le_4yY2TeLlFGkRHxT7HzzIhT_lemma ontolex:writtenRep "goods vehicle"@en .
+	:le_4yY2TeLlFGkRHxT7HzzIhT_lemma dct:creator "kicco" .
+	:le_4yY2TeLlFGkRHxT7HzzIhT_lemma dct:created "2023-04-08T12:54+02:00" .
+	:le_4yY2TeLlFGkRHxT7HzzIhT_lemma dct:modified "2023-04-08T12:54+02:00" .
+	:tbx_en lime:entry :le_67RDz21OB5AvT0IQcuxpVw .
+	:le_67RDz21OB5AvT0IQcuxpVw rdf:type ontolex:LexicalEntry .
+	:le_67RDz21OB5AvT0IQcuxpVw rdfs:label "utility vehicle"@en .
+	:le_67RDz21OB5AvT0IQcuxpVw vs:term_status "working" .
+	:le_67RDz21OB5AvT0IQcuxpVw dct:creator "kicco" .
+	:le_67RDz21OB5AvT0IQcuxpVw dct:created "2023-04-08T12:54+02:00" .
+	:le_67RDz21OB5AvT0IQcuxpVw dct:modified "2023-04-08T12:54+02:00" .
+	:le_67RDz21OB5AvT0IQcuxpVw ontolex:sense :le_67RDz21OB5AvT0IQcuxpVw_sense .
+	:le_67RDz21OB5AvT0IQcuxpVw_sense rdf:type ontolex:LexicalSense .
+	:le_67RDz21OB5AvT0IQcuxpVw_sense ontolex:reference :concept_c1 .
+	:le_67RDz21OB5AvT0IQcuxpVw_sense dct:creator "kicco" .
+	:le_67RDz21OB5AvT0IQcuxpVw_sense dct:created "2023-04-08T12:54+02:00" .
+	:le_67RDz21OB5AvT0IQcuxpVw_sense dct:modified "2023-04-08T12:54+02:00" .
+	:le_67RDz21OB5AvT0IQcuxpVw ontolex:canonicalForm :le_67RDz21OB5AvT0IQcuxpVw_lemma .
+	:le_67RDz21OB5AvT0IQcuxpVw_lemma rdf:type ontolex:Form .
+	:le_67RDz21OB5AvT0IQcuxpVw_lemma ontolex:writtenRep "utility vehicle"@en .
+	:le_67RDz21OB5AvT0IQcuxpVw_lemma dct:creator "kicco" .
+	:le_67RDz21OB5AvT0IQcuxpVw_lemma dct:created "2023-04-08T12:54+02:00" .
+	:le_67RDz21OB5AvT0IQcuxpVw_lemma dct:modified "2023-04-08T12:54+02:00" .
+	:tbx_fr rdf:type lime:Lexicon .
+	:tbx_fr lime:language "fr" .
+	:tbx_fr dct:creator "kicco" .
+	:tbx_fr dct:created "2023-04-08T12:54+02:00" .
+	:tbx_fr dct:modified "2023-04-08T12:54+02:00" .
+	:tbx_fr lime:entry :le_4F9CdFL484dM1GADQj3FIY .
+	:le_4F9CdFL484dM1GADQj3FIY rdf:type ontolex:LexicalEntry .
+	:le_4F9CdFL484dM1GADQj3FIY rdfs:label "véhicule utilitaire"@fr .
+	:le_4F9CdFL484dM1GADQj3FIY vs:term_status "working" .
+	:le_4F9CdFL484dM1GADQj3FIY dct:creator "kicco" .
+	:le_4F9CdFL484dM1GADQj3FIY dct:created "2023-04-08T12:54+02:00" .
+	:le_4F9CdFL484dM1GADQj3FIY dct:modified "2023-04-08T12:54+02:00" .
+	:le_4F9CdFL484dM1GADQj3FIY ontolex:sense :le_4F9CdFL484dM1GADQj3FIY_sense .
+	:le_4F9CdFL484dM1GADQj3FIY_sense rdf:type ontolex:LexicalSense .
+	:le_4F9CdFL484dM1GADQj3FIY_sense ontolex:reference :concept_c1 .
+	:le_4F9CdFL484dM1GADQj3FIY_sense dct:creator "kicco" .
+	:le_4F9CdFL484dM1GADQj3FIY_sense dct:created "2023-04-08T12:54+02:00" .
+	:le_4F9CdFL484dM1GADQj3FIY_sense dct:modified "2023-04-08T12:54+02:00" .
+	:le_4F9CdFL484dM1GADQj3FIY ontolex:canonicalForm :le_4F9CdFL484dM1GADQj3FIY_lemma .
+	:le_4F9CdFL484dM1GADQj3FIY_lemma rdf:type ontolex:Form .
+	:le_4F9CdFL484dM1GADQj3FIY_lemma ontolex:writtenRep "véhicule utilitaire"@fr .
+	:le_4F9CdFL484dM1GADQj3FIY_lemma dct:creator "kicco" .
+	:le_4F9CdFL484dM1GADQj3FIY_lemma dct:created "2023-04-08T12:54+02:00" .
+	:le_4F9CdFL484dM1GADQj3FIY_lemma dct:modified "2023-04-08T12:54+02:00" .
+	:le_4F9CdFL484dM1GADQj3FIY skos:note "On distingue le véhicule utilitaire léger, aussi appelé VUL, défini par son PTAC (poids total autorisé en charge) qui ne doit pas ex-céder 3,5 tonnes et le véhicule utilitaire poids lourd (aussi appelé camion poids lourd) sont quant à eux définis par un PTAC supérieur à 3,5 tonnes." .
+	:tbx_it rdf:type lime:Lexicon .
+	:tbx_it lime:language "it" .
+	:tbx_it dct:creator "kicco" .
+	:tbx_it dct:created "2023-04-08T12:54+02:00" .
+	:tbx_it dct:modified "2023-04-08T12:54+02:00" .
+	:tbx_it lime:entry :le_3AS9r8YV2ECLSw2bzq5Q5q .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q rdf:type ontolex:LexicalEntry .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q rdfs:label "veicolo commerciale"@it .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q vs:term_status "working" .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q dct:creator "kicco" .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q dct:created "2023-04-08T12:54+02:00" .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q dct:modified "2023-04-08T12:54+02:00" .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q ontolex:sense :le_3AS9r8YV2ECLSw2bzq5Q5q_sense .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q_sense rdf:type ontolex:LexicalSense .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q_sense ontolex:reference :concept_c1 .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q_sense dct:creator "kicco" .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q_sense dct:created "2023-04-08T12:54+02:00" .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q_sense dct:modified "2023-04-08T12:54+02:00" .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q ontolex:canonicalForm :le_3AS9r8YV2ECLSw2bzq5Q5q_lemma .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q_lemma rdf:type ontolex:Form .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q_lemma ontolex:writtenRep "veicolo commerciale"@it .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q_lemma dct:creator "kicco" .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q_lemma dct:created "2023-04-08T12:54+02:00" .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q_lemma dct:modified "2023-04-08T12:54+02:00" .
+	:le_3AS9r8YV2ECLSw2bzq5Q5q skos:note "Si distingue tra veicolo commerciale leggero (LCV) e veicolo commerciale pesante (veicolo industriale, che superano le 3,5 t)" .
+	:concept_c2 rdf:type skos:Concept .
+	:concept_c2 skos:prefLabel "c2" .
+	:tbx_en lime:entry :le_6klZoPdDsxtetXA66GjDC0 .
+	:le_6klZoPdDsxtetXA66GjDC0 rdf:type ontolex:LexicalEntry .
+	:le_6klZoPdDsxtetXA66GjDC0 rdfs:label "storage"@en .
+	:le_6klZoPdDsxtetXA66GjDC0 vs:term_status "working" .
+	:le_6klZoPdDsxtetXA66GjDC0 dct:creator "kicco" .
+	:le_6klZoPdDsxtetXA66GjDC0 dct:created "2023-04-08T12:54+02:00" .
+	:le_6klZoPdDsxtetXA66GjDC0 dct:modified "2023-04-08T12:54+02:00" .
+	:le_6klZoPdDsxtetXA66GjDC0 ontolex:sense :le_6klZoPdDsxtetXA66GjDC0_sense .
+	:le_6klZoPdDsxtetXA66GjDC0_sense rdf:type ontolex:LexicalSense .
+	:le_6klZoPdDsxtetXA66GjDC0_sense ontolex:reference :concept_c2 .
+	:le_6klZoPdDsxtetXA66GjDC0_sense dct:creator "kicco" .
+	:le_6klZoPdDsxtetXA66GjDC0_sense dct:created "2023-04-08T12:54+02:00" .
+	:le_6klZoPdDsxtetXA66GjDC0_sense dct:modified "2023-04-08T12:54+02:00" .
+	:le_6klZoPdDsxtetXA66GjDC0 ontolex:canonicalForm :le_6klZoPdDsxtetXA66GjDC0_lemma .
+	:le_6klZoPdDsxtetXA66GjDC0_lemma rdf:type ontolex:Form .
+	:le_6klZoPdDsxtetXA66GjDC0_lemma ontolex:writtenRep "storage"@en .
+	:le_6klZoPdDsxtetXA66GjDC0_lemma dct:creator "kicco" .
+	:le_6klZoPdDsxtetXA66GjDC0_lemma dct:created "2023-04-08T12:54+02:00" .
+	:le_6klZoPdDsxtetXA66GjDC0_lemma dct:modified "2023-04-08T12:54+02:00" .
+	:tbx_en lime:entry :le_4HltnTkOwjzMqHXFQGB35I .
+	:le_4HltnTkOwjzMqHXFQGB35I rdf:type ontolex:LexicalEntry .
+	:le_4HltnTkOwjzMqHXFQGB35I rdfs:label "store"@en .
+	:le_4HltnTkOwjzMqHXFQGB35I vs:term_status "working" .
+	:le_4HltnTkOwjzMqHXFQGB35I dct:creator "kicco" .
+	:le_4HltnTkOwjzMqHXFQGB35I dct:created "2023-04-08T12:54+02:00" .
+	:le_4HltnTkOwjzMqHXFQGB35I dct:modified "2023-04-08T12:54+02:00" .
+	:le_4HltnTkOwjzMqHXFQGB35I ontolex:sense :le_4HltnTkOwjzMqHXFQGB35I_sense .
+	:le_4HltnTkOwjzMqHXFQGB35I_sense rdf:type ontolex:LexicalSense .
+	:le_4HltnTkOwjzMqHXFQGB35I_sense ontolex:reference :concept_c2 .
+	:le_4HltnTkOwjzMqHXFQGB35I_sense dct:creator "kicco" .
+	:le_4HltnTkOwjzMqHXFQGB35I_sense dct:created "2023-04-08T12:54+02:00" .
+	:le_4HltnTkOwjzMqHXFQGB35I_sense dct:modified "2023-04-08T12:54+02:00" .
+	:le_4HltnTkOwjzMqHXFQGB35I ontolex:canonicalForm :le_4HltnTkOwjzMqHXFQGB35I_lemma .
+	:le_4HltnTkOwjzMqHXFQGB35I_lemma rdf:type ontolex:Form .
+	:le_4HltnTkOwjzMqHXFQGB35I_lemma ontolex:writtenRep "store"@en .
+	:le_4HltnTkOwjzMqHXFQGB35I_lemma dct:creator "kicco" .
+	:le_4HltnTkOwjzMqHXFQGB35I_lemma dct:created "2023-04-08T12:54+02:00" .
+	:le_4HltnTkOwjzMqHXFQGB35I_lemma dct:modified "2023-04-08T12:54+02:00" .
+	:tbx_fr lime:entry :le_1KMUPvPixYsia4V7BRyvNL .
+	:le_1KMUPvPixYsia4V7BRyvNL rdf:type ontolex:LexicalEntry .
+	:le_1KMUPvPixYsia4V7BRyvNL rdfs:label "stockage"@fr .
+	:le_1KMUPvPixYsia4V7BRyvNL vs:term_status "working" .
+	:le_1KMUPvPixYsia4V7BRyvNL dct:creator "kicco" .
+	:le_1KMUPvPixYsia4V7BRyvNL dct:created "2023-04-08T12:54+02:00" .
+	:le_1KMUPvPixYsia4V7BRyvNL dct:modified "2023-04-08T12:54+02:00" .
+	:le_1KMUPvPixYsia4V7BRyvNL ontolex:sense :le_1KMUPvPixYsia4V7BRyvNL_sense .
+	:le_1KMUPvPixYsia4V7BRyvNL_sense rdf:type ontolex:LexicalSense .
+	:le_1KMUPvPixYsia4V7BRyvNL_sense ontolex:reference :concept_c2 .
+	:le_1KMUPvPixYsia4V7BRyvNL_sense dct:creator "kicco" .
+	:le_1KMUPvPixYsia4V7BRyvNL_sense dct:created "2023-04-08T12:54+02:00" .
+	:le_1KMUPvPixYsia4V7BRyvNL_sense dct:modified "2023-04-08T12:54+02:00" .
+	:le_1KMUPvPixYsia4V7BRyvNL ontolex:canonicalForm :le_1KMUPvPixYsia4V7BRyvNL_lemma .
+	:le_1KMUPvPixYsia4V7BRyvNL_lemma rdf:type ontolex:Form .
+	:le_1KMUPvPixYsia4V7BRyvNL_lemma ontolex:writtenRep "stockage"@fr .
+	:le_1KMUPvPixYsia4V7BRyvNL_lemma dct:creator "kicco" .
+	:le_1KMUPvPixYsia4V7BRyvNL_lemma dct:created "2023-04-08T12:54+02:00" .
+	:le_1KMUPvPixYsia4V7BRyvNL_lemma dct:modified "2023-04-08T12:54+02:00" .
+	:le_1KMUPvPixYsia4V7BRyvNL skos:note "Les méthodes de stockage dépendent du type d’énergie. Les sources d’énergies fossiles (charbon, gaz, pétrole), sous forme de réservoirs à l’état naturel, remplissent naturellement la fonction de stocks. Une fois extraites, elles peuvent facilement être isolées, hébergées et transportées d’un point de vue technique. Le stockage s’avère plus complexe pour les énergies intermittentes : leur production est relayée par des vecteurs énergétiques tels que l’électricité, la chaleur ou l’hydrogène, nécessitant des systèmes spécifiques de stockage." .
+	:tbx_it lime:entry :le_4cxOultvp9JsIEgSwEec8Y .
+	:le_4cxOultvp9JsIEgSwEec8Y rdf:type ontolex:LexicalEntry .
+	:le_4cxOultvp9JsIEgSwEec8Y rdfs:label "stoccaggio"@it .
+	:le_4cxOultvp9JsIEgSwEec8Y vs:term_status "working" .
+	:le_4cxOultvp9JsIEgSwEec8Y dct:creator "kicco" .
+	:le_4cxOultvp9JsIEgSwEec8Y dct:created "2023-04-08T12:54+02:00" .
+	:le_4cxOultvp9JsIEgSwEec8Y dct:modified "2023-04-08T12:54+02:00" .
+	:le_4cxOultvp9JsIEgSwEec8Y ontolex:sense :le_4cxOultvp9JsIEgSwEec8Y_sense .
+	:le_4cxOultvp9JsIEgSwEec8Y_sense rdf:type ontolex:LexicalSense .
+	:le_4cxOultvp9JsIEgSwEec8Y_sense ontolex:reference :concept_c2 .
+	:le_4cxOultvp9JsIEgSwEec8Y_sense dct:creator "kicco" .
+	:le_4cxOultvp9JsIEgSwEec8Y_sense dct:created "2023-04-08T12:54+02:00" .
+	:le_4cxOultvp9JsIEgSwEec8Y_sense dct:modified "2023-04-08T12:54+02:00" .
+	:le_4cxOultvp9JsIEgSwEec8Y ontolex:canonicalForm :le_4cxOultvp9JsIEgSwEec8Y_lemma .
+	:le_4cxOultvp9JsIEgSwEec8Y_lemma rdf:type ontolex:Form .
+	:le_4cxOultvp9JsIEgSwEec8Y_lemma ontolex:writtenRep "stoccaggio"@it .
+	:le_4cxOultvp9JsIEgSwEec8Y_lemma dct:creator "kicco" .
+	:le_4cxOultvp9JsIEgSwEec8Y_lemma dct:created "2023-04-08T12:54+02:00" .
+	:le_4cxOultvp9JsIEgSwEec8Y_lemma dct:modified "2023-04-08T12:54+02:00" .
+}
+

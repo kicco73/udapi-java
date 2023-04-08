@@ -43,8 +43,8 @@ public class GraphDBClient {
 				.thenApply(HttpResponse::body)
 				.thenAccept((String responseBody) -> {
 					if (responseBody.length() > 0) {
-						System.out.println("GRAPHDB: " + responseBody);
-						//System.out.println(body);
+						System.err.println("GRAPHDB: " + responseBody);
+						//System.err.println(body);
 					}
 				})
 				.join();

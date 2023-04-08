@@ -1,0 +1,161 @@
+PREFIX : <http://txt2rdf/test#>
+PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX dct: <http://purl.org/dc/terms/>
+PREFIX lexinfo: <http://www.lexinfo.net/ontology/3.0/lexinfo#>
+PREFIX ontolex: <http://www.w3.org/ns/lemon/ontolex#>
+PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+PREFIX lime: <http://www.w3.org/ns/lemon/lime#>
+PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
+PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
+INSERT DATA {
+	:concept_c1 rdf:type skos:Concept .
+	:concept_c1 skos:prefLabel "c1" .
+	:tbx_en rdf:type lime:Lexicon .
+	:tbx_en lime:language "en" .
+	:tbx_en dct:creator "kicco" .
+	:tbx_en dct:created "2023-04-08T13:02+02:00" .
+	:tbx_en dct:modified "2023-04-08T13:02+02:00" .
+	:tbx_en lime:entry :le_39q0YbyzjjaEKHIt7GCSor_noun .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun rdf:type ontolex:LexicalEntry .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun rdfs:label "carsharing"@en .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun lexinfo:partOfSpeech lexinfo:noun .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun vs:term_status "working" .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun dct:creator "kicco" .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun dct:created "2023-04-08T13:02+02:00" .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun dct:modified "2023-04-08T13:02+02:00" .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun ontolex:sense :le_39q0YbyzjjaEKHIt7GCSor_noun_sense .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun_sense rdf:type ontolex:LexicalSense .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun_sense ontolex:reference :concept_c1 .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun_sense dct:creator "kicco" .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun_sense dct:created "2023-04-08T13:02+02:00" .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun_sense dct:modified "2023-04-08T13:02+02:00" .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun ontolex:canonicalForm :le_39q0YbyzjjaEKHIt7GCSor_noun_lemma .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun_lemma rdf:type ontolex:Form .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun_lemma ontolex:writtenRep "carsharing"@en .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun_lemma dct:creator "kicco" .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun_lemma dct:created "2023-04-08T13:02+02:00" .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun_lemma dct:modified "2023-04-08T13:02+02:00" .
+	:le_39q0YbyzjjaEKHIt7GCSor_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
+	:tbx_en lime:entry :le_5myJK8kQDWJpYhGnF5Fsfh_noun .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun rdf:type ontolex:LexicalEntry .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun rdfs:label "car sharing"@en .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun lexinfo:partOfSpeech lexinfo:noun .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun vs:term_status "working" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun dct:creator "kicco" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun dct:created "2023-04-08T13:02+02:00" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun dct:modified "2023-04-08T13:02+02:00" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun ontolex:sense :le_5myJK8kQDWJpYhGnF5Fsfh_noun_sense .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_sense rdf:type ontolex:LexicalSense .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_sense ontolex:reference :concept_c1 .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_sense dct:creator "kicco" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_sense dct:created "2023-04-08T13:02+02:00" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_sense dct:modified "2023-04-08T13:02+02:00" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun ontolex:canonicalForm :le_5myJK8kQDWJpYhGnF5Fsfh_noun_lemma .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_lemma rdf:type ontolex:Form .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_lemma ontolex:writtenRep "car sharing"@en .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_lemma dct:creator "kicco" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_lemma dct:created "2023-04-08T13:02+02:00" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_lemma dct:modified "2023-04-08T13:02+02:00" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun skos:note "terminological variant in AU, NZ, CA, TH, and US" .
+	:tbx_en lime:entry :le_1C3T41D3I3hoDdG1DH9RIh_noun .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun rdf:type ontolex:LexicalEntry .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun rdfs:label "car clubs"@en .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun lexinfo:partOfSpeech lexinfo:noun .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun vs:term_status "working" .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun dct:creator "kicco" .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun dct:created "2023-04-08T13:02+02:00" .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun dct:modified "2023-04-08T13:02+02:00" .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun ontolex:sense :le_1C3T41D3I3hoDdG1DH9RIh_noun_sense .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun_sense rdf:type ontolex:LexicalSense .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun_sense ontolex:reference :concept_c1 .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun_sense dct:creator "kicco" .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun_sense dct:created "2023-04-08T13:02+02:00" .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun_sense dct:modified "2023-04-08T13:02+02:00" .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun ontolex:canonicalForm :le_1C3T41D3I3hoDdG1DH9RIh_noun_lemma .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun_lemma rdf:type ontolex:Form .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun_lemma ontolex:writtenRep "car clubs"@en .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun_lemma dct:creator "kicco" .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun_lemma dct:created "2023-04-08T13:02+02:00" .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun_lemma dct:modified "2023-04-08T13:02+02:00" .
+	:le_1C3T41D3I3hoDdG1DH9RIh_noun skos:note "terminological variant in UK" .
+	:concept_c1 skos:note "terminological variant in AU, NZ, CA, TH, and US"@en .
+	:tbx_fr rdf:type lime:Lexicon .
+	:tbx_fr lime:language "fr" .
+	:tbx_fr dct:creator "kicco" .
+	:tbx_fr dct:created "2023-04-08T13:02+02:00" .
+	:tbx_fr dct:modified "2023-04-08T13:02+02:00" .
+	:tbx_fr lime:entry :le_7O80BegxoYZy4w1QapeiyZ_noun .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun rdf:type ontolex:LexicalEntry .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun rdfs:label "autopartage"@fr .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun lexinfo:partOfSpeech lexinfo:noun .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun vs:term_status "working" .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun dct:creator "kicco" .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun dct:created "2023-04-08T13:02+02:00" .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun dct:modified "2023-04-08T13:02+02:00" .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun ontolex:sense :le_7O80BegxoYZy4w1QapeiyZ_noun_sense .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun_sense rdf:type ontolex:LexicalSense .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun_sense ontolex:reference :concept_c1 .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun_sense dct:creator "kicco" .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun_sense dct:created "2023-04-08T13:02+02:00" .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun_sense dct:modified "2023-04-08T13:02+02:00" .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun ontolex:canonicalForm :le_7O80BegxoYZy4w1QapeiyZ_noun_lemma .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun_lemma rdf:type ontolex:Form .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun_lemma ontolex:writtenRep "autopartage"@fr .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun_lemma dct:creator "kicco" .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun_lemma dct:created "2023-04-08T13:02+02:00" .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun_lemma dct:modified "2023-04-08T13:02+02:00" .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
+	:le_7O80BegxoYZy4w1QapeiyZ_noun skos:note "Il faut distinguer le terme analysé de \"service de partage de véhicules\" et \"partage de véhicules\". Ces derniers sont souvent utilisés comme synonymes, mais il s'agit en réalité de concepts plus généraux qui englobent tous les types de véhicules, tandis que l'autopartage ne concerne que les voitures." .
+	:tbx_fr lime:entry :le_6ZQtvJG2536xWCtYE1Ighh_noun .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun rdf:type ontolex:LexicalEntry .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun rdfs:label "voitures en libre-service"@fr .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun lexinfo:partOfSpeech lexinfo:noun .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun vs:term_status "working" .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun dct:creator "kicco" .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun dct:created "2023-04-08T13:02+02:00" .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun dct:modified "2023-04-08T13:02+02:00" .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun ontolex:sense :le_6ZQtvJG2536xWCtYE1Ighh_noun_sense .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun_sense rdf:type ontolex:LexicalSense .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun_sense ontolex:reference :concept_c1 .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun_sense dct:creator "kicco" .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun_sense dct:created "2023-04-08T13:02+02:00" .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun_sense dct:modified "2023-04-08T13:02+02:00" .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun ontolex:canonicalForm :le_6ZQtvJG2536xWCtYE1Ighh_noun_lemma .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun_lemma rdf:type ontolex:Form .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun_lemma ontolex:writtenRep "voitures en libre-service"@fr .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun_lemma dct:creator "kicco" .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun_lemma dct:created "2023-04-08T13:02+02:00" .
+	:le_6ZQtvJG2536xWCtYE1Ighh_noun_lemma dct:modified "2023-04-08T13:02+02:00" .
+	:tbx_it rdf:type lime:Lexicon .
+	:tbx_it lime:language "it" .
+	:tbx_it dct:creator "kicco" .
+	:tbx_it dct:created "2023-04-08T13:02+02:00" .
+	:tbx_it dct:modified "2023-04-08T13:02+02:00" .
+	:tbx_it lime:entry :le_5myJK8kQDWJpYhGnF5Fsfh_noun .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun rdf:type ontolex:LexicalEntry .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun rdfs:label "car sharing"@it .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun lexinfo:partOfSpeech lexinfo:noun .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun vs:term_status "working" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun dct:creator "kicco" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun dct:created "2023-04-08T13:02+02:00" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun dct:modified "2023-04-08T13:02+02:00" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun ontolex:sense :le_5myJK8kQDWJpYhGnF5Fsfh_noun_sense .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_sense rdf:type ontolex:LexicalSense .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_sense ontolex:reference :concept_c1 .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_sense dct:creator "kicco" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_sense dct:created "2023-04-08T13:02+02:00" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_sense dct:modified "2023-04-08T13:02+02:00" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun ontolex:canonicalForm :le_5myJK8kQDWJpYhGnF5Fsfh_noun_lemma .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_lemma rdf:type ontolex:Form .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_lemma ontolex:writtenRep "car sharing"@it .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_lemma dct:creator "kicco" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_lemma dct:created "2023-04-08T13:02+02:00" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun_lemma dct:modified "2023-04-08T13:02+02:00" .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
+	:le_5myJK8kQDWJpYhGnF5Fsfh_noun skos:note "Generalmente in italiano si utilizza l'anglicismo sebbene la variante \"auto condivisa\" sia attestata." .
+	:concept_c1_OdeYA0FHeFFB1DVUMqdMw rdf:type skos:ConceptScheme .
+	:concept_c1_OdeYA0FHeFFB1DVUMqdMw skos:prefLabel "e-mobility" .
+	:concept_c1 skos:inScheme :concept_c1_OdeYA0FHeFFB1DVUMqdMw .
+}
+

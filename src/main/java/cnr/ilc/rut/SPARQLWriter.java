@@ -33,14 +33,20 @@ public class SPARQLWriter {
 		""";
 
 	public void insertTriple(String subject, String link, String object) {
-		if (chunkSize > 0 && ++numberOfTriples % chunkSize == 0) {
-			buffer.append(String.format("}\n%s\n%s", separator, prefixes));
+		boolean isEndOfChunk = chunkSize > 0 && numberOfTriples % chunkSize == 0;
+
+		if (isEndOfChunk && numberOfTriples > 0) {
+			if (numberOfTriples > 0)
+				buffer.append(String.format("}\n%s\n%s", separator, prefixes));
+		}
+		if (numberOfTriples == 0 || isEndOfChunk) {
 			buffer.append("INSERT DATA {\n");	
 		}
 
 		object = object.replaceAll("[\n\t ]+", " ");
 		String query = String.format("\t%s %s %s .\n", subject, link, object);
 		buffer.append(query);
+		numberOfTriples++;
 	}
 
 	public void insertTriple(String subject, String link, Map<String, String> anon) {
