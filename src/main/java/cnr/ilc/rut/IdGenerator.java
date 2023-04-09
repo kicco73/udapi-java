@@ -8,13 +8,13 @@ import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;
 import java.util.Arrays;
 
-public class BaseEncoder {
+public class IdGenerator {
     private final static String alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
     private final static int divisor = alphabet.length();
     private final static char encodedZero = alphabet.charAt(0);
     private final int[] indexes;
 
-    public BaseEncoder() {
+    public IdGenerator() {
         this.indexes = new int[128];
         Arrays.fill(indexes, -1);
         for (int i = 0; i < divisor; i++) {
@@ -22,7 +22,7 @@ public class BaseEncoder {
         }
     }
 
-	public String getHash(String string) {
+	public String getId(String string) {
 		byte[] hash;
 		string = string.toLowerCase();
 		try {

@@ -1,7 +1,7 @@
 package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
-import cnr.ilc.common.RutException;
+import cnr.ilc.rut.RutException;
 import cnr.ilc.rut.SPARQLWriter;
 import cnr.ilc.rut.Word;
 
@@ -12,6 +12,7 @@ import java.util.stream.Stream;
 
 public class TermSec {
 	private SPARQLWriter sparql;
+	private Word word = new Word();
 
     public TermSec(SPARQLWriter sparql) {
 		this.sparql = sparql;
@@ -29,9 +30,13 @@ public class TermSec {
 		String status = Nodes.getTextOfTagOrAlternateTagWithAttribute(termSec, "administrativeStatus", "termNote", "type");
 		if (status != null) {
 			String translatedStatus = statuses.get(status);
-			if (translatedStatus == null) 
-				System.err.println("Warning: unknown administrative status "+ status);
+			if (translatedStatus == null) {
+				final String ANSI_YELLOW = "\u001B[33m";
+				final String ANSI_RESET = "\u001B[0m";
+
+				System.err.println(ANSI_YELLOW+"Warning: unknown administrative status "+ status + ANSI_RESET);
 				//throw new RutException(String.format("Unknown administrative status: %s", status));
+			}
 			else
 				sparql.insertTriple(word.FQName, "lexinfo:normativeAuthorization", translatedStatus);
 		}
@@ -101,7 +106,7 @@ public class TermSec {
 		
 		String grammaticalGenderFQN = String.format("lexinfo:%s", grammaticalGender);
 
-		Word word = new Word(lemma, partOfSpeechFQN, language);
+		word.reuse(lemma, partOfSpeechFQN, language);
 		word.conceptFQN = conceptFQN;
 		if (grammaticalGender != null)
 			word.canonicalForm.features.put(grammaticalGenderFQN, "lexinfo:gender");

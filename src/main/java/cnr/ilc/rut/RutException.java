@@ -1,4 +1,4 @@
-package cnr.ilc.common;
+package cnr.ilc.rut;
 
 /**
  * General Udapi exception.

@@ -4,14 +4,16 @@
 
 package cnr.ilc.rut;
 
+import java.io.File;
 import java.io.PrintWriter;
+import java.util.Arrays;
 
 import cnr.ilc.conllu.Connlu2Sparql;
 import cnr.ilc.tbx.Tbx2Sparql;
 
 public class Main {
-    String inCoNLL = null;
-    String inTbx = null;
+    boolean isConnlu = false;
+    boolean isTbx = false;
     String graphURL = null;
     String repository = "LexO";
     String language = "it";
@@ -20,29 +22,28 @@ public class Main {
     String namespace = "http://txt2rdf/test#";
     String exportConll = null;
     String outSparql = null;
-    boolean isOutEnabled = false;
+    String outDir = null;
+    String[] fileNames = null;
 
     public static void main(String[] args) throws Exception {
-        new Main().run(args);
+        new Main()
+            .parse(args)
+            .run();
     }
 
-    private void run(String[] args) throws Exception {
-        int startIndex = 0; 
+    private Main parse(String[] args) {
+        int startIndex = 0;
         while (startIndex < args.length) {
             switch (args[startIndex++]) {
-                case "-i":
-                case "--input-conll":
-                    inCoNLL = args[startIndex++];
-                    int index = inCoNLL.lastIndexOf(".");
-                    outSparql = inCoNLL.substring(0, index)+".sparql"; 
+                case "-c":
+                case "--conllu":
+                    isConnlu = true;
                     break;
                 case "-t":
-                case "--input-tbx":
-                    inTbx = args[startIndex++];
-                    index = inTbx.lastIndexOf(".");
-                    outSparql = inTbx.substring(0, index)+".sparql"; 
+                case "--tbx":
+                    isTbx = true;
                     break;
-                case "-c":
+                case "-a":
                 case "--creator":
                     creator = args[startIndex++];     
                     break;   
@@ -71,47 +72,74 @@ public class Main {
                     namespace = args[startIndex++];
                     break;
                 case "-o":
-                case "--outfile":
-                    isOutEnabled = true;
+                case "--output-dir":
+                    outDir = args[startIndex++];
+                    break;
+                case "--":
+                    fileNames = Arrays.copyOfRange(args, startIndex, args.length);
+                    startIndex = args.length;
                     break;
                 default:
-                    System.err.println(String.format("Unknown option: %s", args[startIndex-1]));
-                    break;
+                    throw new IllegalArgumentException(String.format("Unknown option: %s", args[startIndex-1]));
             }
         }
+        if (!(isConnlu ^ isTbx))
+            throw new IllegalArgumentException("Either --tbx or --conllu switch must be set.");
+        if (fileNames == null)
+           throw new IllegalArgumentException("End of option marker (--) must be present");
+        return this;
+    }
+
+    private void run() throws Exception {
+        for(String fileName: fileNames) {
+            System.err.println(String.format("\nCompiling: %s", fileName));
+            runOneFile(fileName);
+        }
+    }
+
+    private void runOneFile(String inputFileName) throws Exception {
         String statements = null;
         SPARQLWriter sparql = new SPARQLWriter(namespace, creator, chunkSize);
 
-        if (inCoNLL != null) {
-            Connlu2Sparql sparqlConverter = new Connlu2Sparql(inCoNLL, sparql);
+        if (isConnlu) {
+            Connlu2Sparql sparqlConverter = new Connlu2Sparql(inputFileName, sparql);
             statements = sparqlConverter.createSPARQL();
-    
+            saveStatementsUsingInFileName(inputFileName, outDir, statements);
+
             if (exportConll != null) {
                 sparqlConverter.writeConll(exportConll);
             }    
         }
 
-        if (inTbx != null) {
-            Tbx2Sparql sparqlConverter = new Tbx2Sparql(inTbx, sparql);
+        if (isTbx) {
+            Tbx2Sparql sparqlConverter = new Tbx2Sparql(inputFileName, sparql);
             statements = sparqlConverter.createSPARQL();
             System.err.println(String.format("File size: %d", sparqlConverter.fileSize));
             System.err.println(String.format("TBX dialect: %s", sparqlConverter.tbxType));
             System.err.println(String.format("Number of concepts: %d", sparqlConverter.getNumberOfConcepts()));
             System.err.println(String.format("Number of languages: %d", sparqlConverter.getNumberOfLanguages()));
             System.err.println(String.format("Number of terms: %d", sparqlConverter.getNumberOfTerms()));
-        }
-
-        if (isOutEnabled && outSparql != null) {
-            PrintWriter writer = new PrintWriter(outSparql, "UTF-8");
-            writer.println(statements);
-            writer.close();
+            saveStatementsUsingInFileName(inputFileName, outDir, statements);
         }
 
         if (graphURL != null) {
             uploadStatements(graphURL, repository, statements);
-        } else if (!isOutEnabled) {
+        } else if (outDir == null) {
             System.out.println(statements);
         }
+    }
+
+    private static void saveStatementsUsingInFileName(String inFile, String outDir, String statements) throws Exception {
+        if (outDir == null) return;
+
+        String fileName = new File(inFile).getName();
+        int endIndex = fileName.lastIndexOf(".");
+        fileName = fileName.substring(0, endIndex)+".sparql"; 
+        String pathName = new File(outDir, fileName).getAbsolutePath();
+    
+        PrintWriter writer = new PrintWriter(pathName, "UTF-8");
+        writer.println(statements);
+        writer.close();
     }
 
     private static void uploadStatements(String graphURL, String repository, String statements) throws Exception {

@@ -1,6 +1,6 @@
 package cnr.ilc.conllu.core.io;
 
-import cnr.ilc.common.RutException;
+import cnr.ilc.rut.RutException;
 
 /**
  * Exception encapsulating any exception occured during read/write operations.

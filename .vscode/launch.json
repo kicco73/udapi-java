@@ -10,8 +10,7 @@
 			"request": "launch",
 			"mainClass": "cnr.ilc.rut.Main",
 			"projectName": "udapi",
-			"args": "--namespace http://txt2rdf/test# --creator kicco --language en --graphdb-url http://localhost:7200 --repository LexO -t demo/tbx/basic-esempio.tbx > demo.sparql"
-			//"args": "-i demo/conll-u_example.tsv --namespace http://txt2rdf/test# --creator kicco --language en --export-conll enriched.conllu --graphdb-url http://localhost:7200 --repository LexO"
+			"args": "--namespace http://txt2rdf/test# --creator kicco --language en --graphdb-url http://localhost:7200 --repository LexO --output-dir demo/sparql --tbx -- demo/tbx/basic-esempio.tbx"
 		},
 		{
 			"type": "java",

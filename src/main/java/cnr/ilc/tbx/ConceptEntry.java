@@ -1,12 +1,13 @@
 package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
-import cnr.ilc.common.RutException;
-import cnr.ilc.rut.BaseEncoder;
+import cnr.ilc.rut.IdGenerator;
+import cnr.ilc.rut.RutException;
 import cnr.ilc.rut.SPARQLWriter;
 
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Random;
 import java.util.Set;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
@@ -14,7 +15,7 @@ import java.util.stream.Stream;
 
 
 public class ConceptEntry {
-	static private BaseEncoder baseEncoder = new BaseEncoder();
+	static private IdGenerator idGenerator = new IdGenerator();
 	private SPARQLWriter sparql;
 	private LangSec langSecParser;
 	private Set<String> subjectFields = new HashSet<>();
@@ -36,7 +37,7 @@ public class ConceptEntry {
 		};
 
 		String subjectField = subjectFieldNode.getTextContent();
-		String subjectFieldFQN = String.format("%s_%s", conceptFQN, baseEncoder.getHash(subjectField));
+		String subjectFieldFQN = String.format("%s_%s", conceptFQN, idGenerator.getId(subjectField));
 		
 		if (!subjectFields.contains(subjectFieldFQN)) {
 			subjectFields.add(subjectFieldFQN);
@@ -68,12 +69,13 @@ public class ConceptEntry {
 
 	public String parseConceptEntry(Element conceptEntry) {
 		String id = conceptEntry.getAttribute("id");
-		String conceptFQN = String.format(":concept_%s", id);
 
 		if (id == null) {
-			// TODO:
-			throw new RutException("TODO -- ConceptEntry must have an id");
+			Random random = new Random();
+			id = Long.toString(random.nextLong());
 		}
+
+		String conceptFQN = String.format(":concept_%s", id);
 
 		sparql.insertTriple(conceptFQN, "rdf:type", "skos:Concept");
 		sparql.insertTripleWithString(conceptFQN, "skos:prefLabel", id);

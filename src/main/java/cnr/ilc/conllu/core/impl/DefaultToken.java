@@ -2,8 +2,8 @@ package cnr.ilc.conllu.core.impl;
 
 import java.util.*;
 
-import cnr.ilc.common.RutException;
 import cnr.ilc.conllu.core.*;
+import cnr.ilc.rut.RutException;
 
 /**
  * Default implementation of node.

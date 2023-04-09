@@ -9,19 +9,25 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Word {
-	public final String FQName;
-	public final Form canonicalForm;
-	public final String partOfSpeech;
-	public final String language;
+	public String FQName;
+	public Form canonicalForm;
+	public String partOfSpeech;
+	public String language;
 	public String conceptFQN;
 	final private Map<String, Form> otherForms = new HashMap<>();
-	static final private BaseEncoder baseEncoder = new BaseEncoder();
+	static final private IdGenerator idGenerator = new IdGenerator();
+
+	public Word() {}
 
 	public Word(String lemma, String partOfSpeech, String language) {
+		reuse(lemma, partOfSpeech, language);
+	}
+
+	public void reuse(String lemma, String partOfSpeech, String language) {
 		this.partOfSpeech = partOfSpeech;
 		this.language = language;
 
-		String FQName = baseEncoder.getHash(lemma);
+		String FQName = idGenerator.getId(String.format("%s+%s+%s", lemma, partOfSpeech, language));
 
 		if (partOfSpeech != null) {
 			this.FQName = String.format(":le_%s_%s", FQName, partOfSpeech.split(":")[1]);
@@ -31,6 +37,7 @@ public class Word {
 
 		String canonicalFormFQN = String.format("%s_lemma", this.FQName);
 		canonicalForm = new Form(canonicalFormFQN, lemma);
+		otherForms.clear();
 	}
 
 	public void addOtherForm(Form form) {

@@ -1,7 +1,7 @@
 package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
-import cnr.ilc.common.RutException;
+import cnr.ilc.rut.RutException;
 import cnr.ilc.rut.SPARQLWriter;
 
 import javax.xml.parsers.*;
