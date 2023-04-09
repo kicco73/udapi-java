@@ -86,25 +86,24 @@ public class Main {
         if (!(isConnlu ^ isTbx))
             throw new IllegalArgumentException("Either --tbx or --conllu switch must be set.");
         if (fileNames == null)
-           throw new IllegalArgumentException("End of option marker (--) must be present");
+           throw new IllegalArgumentException("End of option marker (--) must be present.");
         return this;
     }
 
     private void run() throws Exception {
         for(String fileName: fileNames) {
             System.err.println(String.format("\nCompiling: %s", fileName));
-            runOneFile(fileName);
+            processFile(fileName);
         }
     }
 
-    private void runOneFile(String inputFileName) throws Exception {
+    private void processFile(String inputFileName) throws Exception {
         String statements = null;
         SPARQLWriter sparql = new SPARQLWriter(namespace, creator, chunkSize);
 
         if (isConnlu) {
             Connlu2Sparql sparqlConverter = new Connlu2Sparql(inputFileName, sparql);
             statements = sparqlConverter.createSPARQL();
-            saveStatementsUsingInFileName(inputFileName, outDir, statements);
 
             if (exportConll != null) {
                 sparqlConverter.writeConll(exportConll);
@@ -119,8 +118,9 @@ public class Main {
             System.err.println(String.format("Number of concepts: %d", sparqlConverter.getNumberOfConcepts()));
             System.err.println(String.format("Number of languages: %d", sparqlConverter.getNumberOfLanguages()));
             System.err.println(String.format("Number of terms: %d", sparqlConverter.getNumberOfTerms()));
-            saveStatementsUsingInFileName(inputFileName, outDir, statements);
         }
+
+        saveStatementsUsingInFileName(inputFileName, outDir, statements);
 
         if (graphURL != null) {
             uploadStatements(graphURL, repository, statements);
