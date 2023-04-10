@@ -156,6 +156,7 @@ public class SPARQLWriter {
 
 	private String formatObject(String object) {
 		object = object.replaceAll("\"", "\\\\\"");
+		object = object.replaceAll("\n", "\\\\n");
 		object = String.format("\"%s\"", object.trim());
 		return object;
 	}

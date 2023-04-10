@@ -61,8 +61,10 @@ public class TermSec {
 		}
 	}
 
-	private void parseDescriptGrp(Element termSec, Word word, String language) {
-		Element descripGrp = (Element) termSec.getElementsByTagNameNS("*", "descripGrp").item(0);
+	private void parseDescripGrp(Element termSec, Word word, String language) {
+		//Element descripGrp = (Element) termSec.getElementsByTagNameNS("*", "descripGrp").item(0);
+		Element descripGrp = termSec;
+		
 		String externalCrossReference = Nodes.getTextOfTag(descripGrp, "externalCrossReference");
 		String crossReference = Nodes.getTextOfTag(descripGrp, "crossReference");
 		String source = Nodes.getTextOfTag(descripGrp, "source");
@@ -114,7 +116,7 @@ public class TermSec {
 		sparql.addWord(word, lexiconFQN, "ontolex:LexicalEntry");
 		parseTermType(termSec, word);
 		parseAdministrativeStatus(termSec, word);
-		parseDescriptGrp(termSec, word, language);
+		parseDescripGrp(termSec, word, language);
 
 		String note = Nodes.getTextOfTag(termSec, "note");
 		if (note != null) {

@@ -5,8 +5,14 @@ public class Nodes {
 
 	static public String getTextOfTag(Element root, String tagName) {
 		if (root == null) return null;
-		Element element = (Element) root.getElementsByTagNameNS("*", tagName).item(0);
-		return element == null? null : element.getTextContent();
+
+		String text = "";
+		NodeList nodeList = root.getElementsByTagNameNS("*", tagName);
+		for (int k = 0; k < nodeList.getLength(); ++k) {
+			Element element = (Element) nodeList.item(k);
+			text += (text.length() > 0? "\n" : "") + element.getTextContent();		
+		}
+		return text.length() == 0? null : text;
 	}
 
 	static public String getTextOfTagWithAttribute(Element root, String tagName, String attributeName, String attributeValue) {
