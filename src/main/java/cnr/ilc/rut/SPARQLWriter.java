@@ -61,7 +61,7 @@ public class SPARQLWriter {
 	}
 
 	private void addMetaData(String entryFQN) {
-		Date now = new Date();
+		Date now = DateProvider.getInstance().getDate();
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmX"); // Quoted "Z" to indicate UTC, no timezone offset
 		String date = df.format(now);
 

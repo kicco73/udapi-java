@@ -10,7 +10,7 @@
 			"request": "launch",
 			"mainClass": "cnr.ilc.rut.Main",
 			"projectName": "udapi",
-			"args": "--namespace http://txt2rdf/test# --creator kicco --language en --graphdb-url http://localhost:7200 --repository LexO --output-dir demo/sparql --tbx -- demo/tbx/basic-esempio.tbx"
+			"args": "--namespace http://txt2rdf/test# --datetime 2023-04-10T10:02+02:00 --creator kicco --language en --graphdb-url http://localhost:7200 --repository LexO --output-dir demo/sparql --tbx -- demo/tbx/basic-esempio.tbx"
 		},
 		{
 			"type": "java",

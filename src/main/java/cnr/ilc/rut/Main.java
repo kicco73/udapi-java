@@ -6,7 +6,10 @@ package cnr.ilc.rut;
 
 import java.io.File;
 import java.io.PrintWriter;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.Arrays;
+import java.util.Date;
 
 import cnr.ilc.conllu.Connlu2Sparql;
 import cnr.ilc.tbx.Tbx2Sparql;
@@ -31,7 +34,7 @@ public class Main {
             .run();
     }
 
-    private Main parse(String[] args) {
+    private Main parse(String[] args) throws ParseException {
         int startIndex = 0;
         while (startIndex < args.length) {
             switch (args[startIndex++]) {
@@ -42,6 +45,12 @@ public class Main {
                 case "-t":
                 case "--tbx":
                     isTbx = true;
+                    break;
+                case "-d":
+                case "--datetime":
+                    SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmXXX");      
+                    Date date = formatter.parse(args[startIndex++]);      
+                    DateProvider.getInstance(date);
                     break;
                 case "-a":
                 case "--creator":

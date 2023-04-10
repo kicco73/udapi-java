@@ -27,16 +27,9 @@ public class ConceptEntry {
 	}
 	
 	private void parseSubjectField(Element conceptEntry, String conceptFQN, String conceptId) {
-		Node subjectFieldNode = conceptEntry.getElementsByTagNameNS("*", "subjectField").item(0);
-
-		if (subjectFieldNode == null) {
-			subjectFieldNode = conceptEntry.getElementsByTagNameNS("*", "descrip").item(0);
-			if (subjectFieldNode == null) return;
-			Node typeNode = subjectFieldNode.getAttributes().getNamedItem("type");
-			if (typeNode == null || !typeNode.getTextContent().equals("subjectField")) return;
-		};
-
-		String subjectField = subjectFieldNode.getTextContent();
+		String subjectField = Nodes.getTextOfTagOrAlternateTagWithAttribute(conceptEntry, "subjectField", "descrip", "type");
+		if (subjectField == null) return;
+		
 		String subjectFieldFQN = String.format("%s_%s", conceptFQN, idGenerator.getId(subjectField));
 		
 		if (!subjectFields.contains(subjectFieldFQN)) {

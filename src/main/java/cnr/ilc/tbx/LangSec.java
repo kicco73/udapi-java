@@ -52,7 +52,7 @@ public class LangSec {
 
 		if (!lexicons.contains(lang)) {
 			lexicons.add(lang);
-			sparql.createLexicon(lexiconFQN, lang);
+			lexiconFQN = sparql.createLexicon(lexiconFQN, lang);
 		}
 
 		NodeList termSecs = langSec.getElementsByTagNameNS("*", "termSec");
