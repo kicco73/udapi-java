@@ -25,8 +25,9 @@ public class Connlu2Sparql {
     String namespace;
     private SPARQLWriter sparql;
 
-    public Connlu2Sparql(String inCoNLL, SPARQLWriter sparql) throws Exception {
+    public Connlu2Sparql(String inCoNLL, SPARQLWriter sparql, String language) throws Exception {
         this.sparql = sparql;
+        this.language = language;
         document = parseCoNLL(inCoNLL);
     }
 

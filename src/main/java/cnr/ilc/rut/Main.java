@@ -95,7 +95,7 @@ public class Main {
         if (!(isConnlu ^ isTbx))
             throw new IllegalArgumentException("Either --tbx or --conllu switch must be set.");
         if (fileNames == null)
-           throw new IllegalArgumentException("End of option marker (--) must be present.");
+           throw new IllegalArgumentException("End of options delimiter (--) must be present.");
         return this;
     }
 
@@ -111,7 +111,7 @@ public class Main {
         SPARQLWriter sparql = new SPARQLWriter(namespace, creator, chunkSize);
 
         if (isConnlu) {
-            Connlu2Sparql sparqlConverter = new Connlu2Sparql(inputFileName, sparql);
+            Connlu2Sparql sparqlConverter = new Connlu2Sparql(inputFileName, sparql, language);
             statements = sparqlConverter.createSPARQL();
 
             if (exportConll != null) {

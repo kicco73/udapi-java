@@ -72,21 +72,39 @@ public class SPARQLWriter {
 
 	private void createWordEntry(String lexiconFQN, Word word, String rdfType) {
 		insertTriple(lexiconFQN, "lime:entry", word.FQName);       
-		insertTriple(word.FQName, "rdf:type", rdfType);        
+		
+		insertTriple(word.FQName, "rdf:type", rdfType);   
 		insertTripleWithLanguage(word.FQName, "rdfs:label", word.canonicalForm.text, word.language);        
 		if (word.partOfSpeech != null)
 			insertTriple(word.FQName, "lexinfo:partOfSpeech", word.partOfSpeech);
 		insertTripleWithString(word.FQName, "vs:term_status", "working");
+
+		for (Entry<String,String> entry: word.additionalInfo.entrySet()) {
+			insertTripleWithString(word.FQName, entry.getKey(), entry.getValue());
+		}
+	
 		addMetaData(word.FQName); 
 	}
 
-	private void createLexicalSense(Word word) {
-		String lexicalSenseFQN = String.format("%s_sense", word.FQName);
+	private void createLexicalSense(Word word, String lexicalSenseFQN, String definition) {
 		insertTriple(word.FQName, "ontolex:sense", lexicalSenseFQN);        
 		insertTriple(lexicalSenseFQN, "rdf:type", "ontolex:LexicalSense"); 
+		if (definition != null)
+			insertTripleWithString(lexicalSenseFQN, "skos:definition", definition);
 		if (word.conceptFQN != null)
 			insertTriple(lexicalSenseFQN, "ontolex:reference", word.conceptFQN); 
 		addMetaData(lexicalSenseFQN); 
+	}
+
+	private void createLexicalSenses(Word word) {
+		if (word.senses.isEmpty()) {
+			word.senses.put("", null);
+		} 
+
+		for(Entry<String, String> sense: word.senses.entrySet()) {
+			String lexicalSenseFQN = String.format("%s_sense%s", word.FQName, sense.getKey());
+			createLexicalSense(word, lexicalSenseFQN, sense.getValue());
+		}
 	}
 
 	private void createCanonicalForm(Word word) {
@@ -133,7 +151,7 @@ public class SPARQLWriter {
 
 	public void addWord(Word word, String lexiconFQN, String rdfType) {
 		createWordEntry(lexiconFQN, word, rdfType);
-		createLexicalSense(word);
+		createLexicalSenses(word);
 		createCanonicalForm(word);
 		createOtherForms(word);
 	}

@@ -14,6 +14,8 @@ public class Word {
 	public String partOfSpeech;
 	public String language;
 	public String conceptFQN;
+	final public Map<String, String> senses = new HashMap<>();
+	final public Map<String, String> additionalInfo = new HashMap<>();
 	final private Map<String, Form> otherForms = new HashMap<>();
 	static final private IdGenerator idGenerator = new IdGenerator();
 
@@ -38,6 +40,8 @@ public class Word {
 		String canonicalFormFQN = String.format("%s_lemma", this.FQName);
 		canonicalForm = new Form(canonicalFormFQN, lemma);
 		otherForms.clear();
+		senses.clear();
+		additionalInfo.clear();
 	}
 
 	public void addOtherForm(Form form) {

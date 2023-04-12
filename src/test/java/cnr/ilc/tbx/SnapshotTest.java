@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Set;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -63,9 +64,9 @@ public class SnapshotTest {
     }
 
     @Test
-    public void testMain() throws Exception {
-        String inFileDir = "demo/tbx";
-        String snapshotDir = "demo/sparql";
+    public void testGivenTbxFilesThenOutputMatchesSnapshots() throws Exception {
+        String inFileDir =  Paths.get(getClass().getResource("input").toURI()).toString();
+        String snapshotDir =  Paths.get(getClass().getResource("sparql").toURI()).toString();
 
         for(String inFileName: listFiles(inFileDir)) {
             String inPath = new File(inFileDir, inFileName).getAbsolutePath();

@@ -5,6 +5,7 @@
 package cnr.ilc.conllu;
 
 import java.util.*;
+import java.util.Map.Entry;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Collectors;
@@ -22,8 +23,54 @@ public class Compiler {
         return form;
     }
 
+    private static Map<String, String> getMapFromFieldString(String fieldString) {
+        final Pattern fieldPattern = Pattern.compile("(?<key>[^|=]+)=(?<value>[^|]+)");
+        Matcher field = fieldPattern.matcher(fieldString);
+        Map<String, String> output = new HashMap<>();
+
+        while (field.find()) {
+            String key = field.group("key");
+            String value = field.group("value");
+            output.put(key, value);
+        }    
+
+        return output;
+    }
+
+    private static Map<String, String> compileField(String fieldString, Map<String, String> keyMap, Map<String, String> valueMap) {
+        Map<String, String> output = new HashMap<>();
+        Map<String, String> input = getMapFromFieldString(fieldString);
+
+        for(Entry<String,String> entry: input.entrySet()) {
+            String mappedKey = keyMap.get(entry.getKey());
+            if (mappedKey == null) {
+                System.err.println(String.format("Key %s not defined, skipping", entry.getKey()));
+                continue;
+            }
+
+            String value = entry.getValue();
+            String mappedValue = valueMap.getOrDefault(value, "<http://nomapping>");
+            if (!valueMap.containsKey(value)) {
+                System.err.println(String.format("Value %s not defined, using %s", value, mappedValue));
+            }
+            output.put(mappedKey, mappedValue);
+        }    
+
+        return output;
+    }
+    private static void compileMisc(String miscString, Word word) {        
+        if (miscString != null  && miscString.length() > 0)
+            word.additionalInfo.put("skos:note", miscString);
+            
+        Map<String,String> misc = getMapFromFieldString(miscString);
+        if (!misc.containsKey("SENSE")) return;
+    
+        String definition = misc.get("DEFINITION").replaceAll("\"", "");
+        Map<String,String> senses = getMapFromFieldString(definition);
+        word.senses.putAll(senses);
+    }
+
     private static void compileFeatures(String featuresString, Form form) {
-        
         final Map<String, String> mapping = Stream.of(new String[][] {
             {"1", "lexinfo:firstPerson"},
             {"2", "lexinfo:secondPerson"},
@@ -48,21 +95,8 @@ public class Compiler {
             {"VerbForm", "lexinfo:verbForm"},
         }).collect(Collectors.toMap(data -> data[0], data -> data[1]));
         
-        final Pattern featuresPattern = Pattern.compile("(?<key>[^|=]+)=(?<value>[^|]+)");
-        Matcher features = featuresPattern.matcher(featuresString);
-        while (features.find()) {
-            String key = mapping.getOrDefault(features.group("key"), "<http://nomapping>");
-            String value = mapping.getOrDefault(features.group("value"), "<http://nomapping>");
-
-            if (mapping.get(features.group("key")) == null) {
-                System.err.println(String.format("Feature key %s not defined, using null", features.group("key")));
-            }
-            if (mapping.get(features.group("value")) == null) {
-                System.err.println(String.format("Feature value %s not defined, using null", features.group("value")));
-            }
-
-            form.features.put(key, value);
-        }    
+        Map<String,String> features = compileField(featuresString, mapping, mapping);
+        form.features.putAll(features);   
     }
 
     static public Collection<Word> compileLexicon(Document document, String namespace, String language) {
@@ -92,31 +126,36 @@ public class Compiler {
                 String writtenRep = token.getForm().toLowerCase();
                 String partOfSpeech = parts.get(token.getUpos());
                 String features = token.getFeats();
+                String misc = token.getMisc();
 
                 String key = String.format("%s+%s", lemma, partOfSpeech);
                 Word word = lemmas.get(key);
                 Form form = null;
+                boolean needsCompile = true;
 
                 if (word == null) {
                     word = new Word(lemma, partOfSpeech, language);
                     lemmas.put(key, word);
 
                     if (lemma.equals(writtenRep)) {
-                        compileFeatures(features, word.canonicalForm);
                         form = word.canonicalForm;
                     } else {
                         form = createOtherForm(word, writtenRep);
+                        needsCompile = false;
                     }
 
                 } else if ((form = word.findForm(writtenRep)) == null) {
                     form = createOtherForm(word, writtenRep);
                     word.addOtherForm(form);
-                    compileFeatures(features, form);
                 } else if (word.canonicalForm.features.isEmpty()) {
-                    compileFeatures(features, word.canonicalForm);
-                }     
+                    form = word.canonicalForm;
+                }
 
-                token.addMisc("annotation", namespace + form.FQName.substring(1));
+            if (needsCompile) {
+                compileMisc(misc, word);
+                compileFeatures(features, form);
+            }
+            token.addMisc("annotation", namespace + form.FQName.substring(1));
         }
         }
         return lemmas.values();
