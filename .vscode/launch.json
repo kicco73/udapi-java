@@ -8,10 +8,9 @@
 			"type": "java",
 			"name": "Main",
 			"request": "launch",
-			"mainClass": "cnr.ilc.rut.Main",
+			"mainClass": "cnr.ilc.Main",
 			"projectName": "udapi",
-			//"args": "--namespace http://txt2rdf/test# --datetime 2023-04-10T10:02+02:00 --creator kicco --language som --graphdb-url http://localhost:7200 --repository LexO --output-dir src/test/resources/cnr/ilc/conllu/sparql --conllu -- src/test/resources/cnr/ilc/conllu/input/UgoFerrandi.tsv"
-			"args": "--namespace http://txt2rdf/test# --datetime 2023-04-10T10:02+02:00 --creator kicco --language en --graphdb-url http://localhost:7200 --repository LexO --output-dir src/test/resources/cnr/ilc/tbx/sparql --tbx -- src/test/resources/cnr/ilc/tbx/input/basic-esempio.tbx"
+			"args": "--namespace http://txt2rdf/test# --datetime 2023-04-10T10:02+02:00 --creator kicco --language som --graphdb-url http://localhost:7200 --repository LexO --output-dir src/test/resources/cnr/ilc/conllu/sparql --conllu -- src/test/resources/cnr/ilc/conllu/input/UgoFerrandi.tsv"
 		},
 		{
 			"type": "java",

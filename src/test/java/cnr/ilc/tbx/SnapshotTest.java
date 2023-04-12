@@ -4,7 +4,7 @@ import org.junit.AfterClass;
 import org.junit.BeforeClass;
 import org.junit.Test;
 
-import cnr.ilc.rut.Main;
+import cnr.ilc.Main;
 
 import java.io.File;
 import java.io.IOException;

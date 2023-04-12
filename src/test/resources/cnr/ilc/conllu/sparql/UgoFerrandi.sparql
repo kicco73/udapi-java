@@ -23,6 +23,18 @@ INSERT DATA {
 	:le_6M357P5ljbyjxQAcxkoJsT_verb dct:creator "kicco" .
 	:le_6M357P5ljbyjxQAcxkoJsT_verb dct:created "2023-04-10T10:02+02:00" .
 	:le_6M357P5ljbyjxQAcxkoJsT_verb dct:modified "2023-04-10T10:02+02:00" .
+	:le_6M357P5ljbyjxQAcxkoJsT_verb ontolex:sense :le_6M357P5ljbyjxQAcxkoJsT_verb_sense2_45216 .
+	:le_6M357P5ljbyjxQAcxkoJsT_verb_sense2_45216 rdf:type ontolex:LexicalSense .
+	:le_6M357P5ljbyjxQAcxkoJsT_verb_sense2_45216 skos:definition "(-aayo, m.dh) (c.fal.) Loolka dhexe, waa xilliga ku xiga guga, xiddigis ahaanna waxa loo tixgeliyaa inuu ku beegan yahay kubbad badhka min hornaqa xagaaga (21 juun) ilaa caano maallada isle eg ee dayrta (21 sebtember)." .
+	:le_6M357P5ljbyjxQAcxkoJsT_verb_sense2_45216 dct:creator "kicco" .
+	:le_6M357P5ljbyjxQAcxkoJsT_verb_sense2_45216 dct:created "2023-04-10T10:02+02:00" .
+	:le_6M357P5ljbyjxQAcxkoJsT_verb_sense2_45216 dct:modified "2023-04-10T10:02+02:00" .
+	:le_6M357P5ljbyjxQAcxkoJsT_verb ontolex:sense :le_6M357P5ljbyjxQAcxkoJsT_verb_sense1_45215 .
+	:le_6M357P5ljbyjxQAcxkoJsT_verb_sense1_45215 rdf:type ontolex:LexicalSense .
+	:le_6M357P5ljbyjxQAcxkoJsT_verb_sense1_45215 skos:definition "(-aayo, m.dh) 1. Afarta nur oo sanada midkood; wuxuu u dhexeeyaa guga iyo dayrta; xilliga xagaayadu da'do. ld xa-gaay." .
+	:le_6M357P5ljbyjxQAcxkoJsT_verb_sense1_45215 dct:creator "kicco" .
+	:le_6M357P5ljbyjxQAcxkoJsT_verb_sense1_45215 dct:created "2023-04-10T10:02+02:00" .
+	:le_6M357P5ljbyjxQAcxkoJsT_verb_sense1_45215 dct:modified "2023-04-10T10:02+02:00" .
 	:le_6M357P5ljbyjxQAcxkoJsT_verb ontolex:sense :le_6M357P5ljbyjxQAcxkoJsT_verb_sense3_45214 .
 	:le_6M357P5ljbyjxQAcxkoJsT_verb_sense3_45214 rdf:type ontolex:LexicalSense .
 	:le_6M357P5ljbyjxQAcxkoJsT_verb_sense3_45214 skos:definition "(-gay, -gtay) Ciddiyaha, ilkaha iwm cid wax ku yeelid (xagasho). ld xago." .
@@ -44,6 +56,18 @@ INSERT DATA {
 	:le_4aePCEEgmAK7RCvGQ7wzCh_noun dct:creator "kicco" .
 	:le_4aePCEEgmAK7RCvGQ7wzCh_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_4aePCEEgmAK7RCvGQ7wzCh_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_4aePCEEgmAK7RCvGQ7wzCh_noun ontolex:sense :le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense1_18001 .
+	:le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense1_18001 rdf:type ontolex:LexicalSense .
+	:le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense1_18001 skos:definition "(-llo, m.dh) 1. Geed weyn, qaydarka la bah ah, laf adag, mayrax adag iyo asal wanaagsan leh. 2. Duub wareegsan oo liifad, tubaako iwm ka sameysan. 3. Xidid hab gaar ah loo wareejiyay oo sagaarada lagu dabo." .
+	:le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense1_18001 dct:creator "kicco" .
+	:le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense1_18001 dct:created "2023-04-10T10:02+02:00" .
+	:le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense1_18001 dct:modified "2023-04-10T10:02+02:00" .
+	:le_4aePCEEgmAK7RCvGQ7wzCh_noun ontolex:sense :le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense3_18003 .
+	:le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense3_18003 rdf:type ontolex:LexicalSense .
+	:le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense3_18003 skos:definition "(-oolay, -ooshay) Xarig iwm dhawr jeer isku wareejin si duub looga dhigo." .
+	:le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense3_18003 dct:creator "kicco" .
+	:le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense3_18003 dct:created "2023-04-10T10:02+02:00" .
+	:le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense3_18003 dct:modified "2023-04-10T10:02+02:00" .
 	:le_4aePCEEgmAK7RCvGQ7wzCh_noun ontolex:sense :le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense2_18002 .
 	:le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense2_18002 rdf:type ontolex:LexicalSense .
 	:le_4aePCEEgmAK7RCvGQ7wzCh_noun_sense2_18002 skos:definition "1. Qayb ka mid ah mindhicirta nafleyda. 2. Qayb ka mid ah debinka ugaarta loo dhigo." .
@@ -156,6 +180,12 @@ INSERT DATA {
 	:le_zLQBPInDraWH2zwMlvJsn_noun_sense1_1720 dct:creator "kicco" .
 	:le_zLQBPInDraWH2zwMlvJsn_noun_sense1_1720 dct:created "2023-04-10T10:02+02:00" .
 	:le_zLQBPInDraWH2zwMlvJsn_noun_sense1_1720 dct:modified "2023-04-10T10:02+02:00" .
+	:le_zLQBPInDraWH2zwMlvJsn_noun ontolex:sense :le_zLQBPInDraWH2zwMlvJsn_noun_sense2_1721 .
+	:le_zLQBPInDraWH2zwMlvJsn_noun_sense2_1721 rdf:type ontolex:LexicalSense .
+	:le_zLQBPInDraWH2zwMlvJsn_noun_sense2_1721 skos:definition "(-say, -stay) 1. (f.g) Laba qof oo isguursaday xaflad iyo damaashaad samayn. 2. (f.mg) Nin, naag guursasho." .
+	:le_zLQBPInDraWH2zwMlvJsn_noun_sense2_1721 dct:creator "kicco" .
+	:le_zLQBPInDraWH2zwMlvJsn_noun_sense2_1721 dct:created "2023-04-10T10:02+02:00" .
+	:le_zLQBPInDraWH2zwMlvJsn_noun_sense2_1721 dct:modified "2023-04-10T10:02+02:00" .
 	:le_zLQBPInDraWH2zwMlvJsn_noun ontolex:canonicalForm :le_zLQBPInDraWH2zwMlvJsn_noun_lemma .
 	:le_zLQBPInDraWH2zwMlvJsn_noun_lemma rdf:type ontolex:Form .
 	:le_zLQBPInDraWH2zwMlvJsn_noun_lemma ontolex:writtenRep "aroos"@som .

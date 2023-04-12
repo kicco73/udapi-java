@@ -2,7 +2,7 @@
  * @author Enrico Carniani
  */
 
-package cnr.ilc.rut;
+package cnr.ilc;
 
 import java.io.File;
 import java.io.PrintWriter;
@@ -12,6 +12,9 @@ import java.util.Arrays;
 import java.util.Date;
 
 import cnr.ilc.conllu.Connlu2Sparql;
+import cnr.ilc.rut.DateProvider;
+import cnr.ilc.rut.GraphDBClient;
+import cnr.ilc.rut.SPARQLWriter;
 import cnr.ilc.tbx.Tbx2Sparql;
 
 public class Main {

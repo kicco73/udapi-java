@@ -24,7 +24,7 @@ public class Compiler {
     }
 
     private static Map<String, String> getMapFromFieldString(String fieldString) {
-        final Pattern fieldPattern = Pattern.compile("(?<key>[^|=]+)=(?<value>[^|]+)");
+        final Pattern fieldPattern = Pattern.compile("(?<key>[^|=]+)=(?<value>([^\\\"|]+|(\\\"[^\\\"]+\\\")))");
         Matcher field = fieldPattern.matcher(fieldString);
         Map<String, String> output = new HashMap<>();
 
@@ -71,31 +71,34 @@ public class Compiler {
     }
 
     private static void compileFeatures(String featuresString, Form form) {
-        final Map<String, String> mapping = Stream.of(new String[][] {
+        final Map<String, String> keyMap = Stream.of(new String[][] {
+            {"Definite", "lexinfo:definite"},
+            {"Degree", "lexinfo:degree"},
+            {"Gender", "lexinfo:gender"},
+            {"Mood", "lexinfo:mood"},
+            {"Neg",	"lexinfo:negative"},
+            {"Number", "lexinfo:number"},
+            {"Person", "lexinfo:person"},
+            {"Tense", "lexinfo:tense"},
+            {"VerbForm", "lexinfo:verbForm"},
+        }).collect(Collectors.toMap(data -> data[0], data -> data[1]));
+
+        final Map<String, String> valueMap = Stream.of(new String[][] {
             {"1", "lexinfo:firstPerson"},
             {"2", "lexinfo:secondPerson"},
             {"3", "lexinfo:thirdPerson"},
-            {"Definite", "lexinfo:definite"},
-            {"Degree", "lexinfo:degree"},
             {"Fem", "lexinfo:feminine"},
-            {"Gender", "lexinfo:gender"},
             {"Ger", "lexinfo:gerund"},
             {"Imp", "lexinfo:imperative"},
             {"Ind", "lexinfo:indicative"},
             {"Inf", "lexinfo:infinite"},
             {"Masc", "lexinfo:masculine"},
-            {"Mood", "lexinfo:mood"},
-            {"Neg",	"lexinfo:negative"},
-            {"Number", "lexinfo:number"},
             {"Past", "lexinfo:past"},
-            {"Person", "lexinfo:person"},
             {"Plur", "lexinfo:plural"},
             {"Sing", "lexinfo:singular"},
-            {"Tense", "lexinfo:tense"},
-            {"VerbForm", "lexinfo:verbForm"},
         }).collect(Collectors.toMap(data -> data[0], data -> data[1]));
         
-        Map<String,String> features = compileField(featuresString, mapping, mapping);
+        Map<String,String> features = compileField(featuresString, keyMap, valueMap);
         form.features.putAll(features);   
     }
 

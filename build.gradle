@@ -11,7 +11,7 @@ repositories {
 
 jar {
     manifest {
-        attributes 'Main-Class': 'cnr.ilc.rut.Main'
+        attributes 'Main-Class': 'cnr.ilc.Main'
     }
 }
 
