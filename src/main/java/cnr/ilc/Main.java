@@ -10,6 +10,10 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
+
+import org.json.simple.JSONValue;
 
 import cnr.ilc.conllu.Connlu2Sparql;
 import cnr.ilc.rut.DateProvider;
@@ -20,6 +24,7 @@ import cnr.ilc.tbx.Tbx2Sparql;
 public class Main {
     boolean isConnlu = false;
     boolean isTbx = false;
+    boolean isJson = false;
     String graphURL = null;
     String repository = "LexO";
     String language = "it";
@@ -29,7 +34,7 @@ public class Main {
     String exportConll = null;
     String outSparql = null;
     String outDir = null;
-    String[] fileNames = null;
+    String[] fileNames = new String[0];
 
     public static void main(String[] args) throws Exception {
         new Main()
@@ -62,6 +67,10 @@ public class Main {
                 case "-g":
                 case "--graphdb-url":
                     graphURL = args[startIndex++];
+                    break;
+                case "-j":
+                case "--json":
+                    isJson = true;
                     break;
                 case "-r":
                 case "--repository":
@@ -97,21 +106,25 @@ public class Main {
         }
         if (!(isConnlu ^ isTbx))
             throw new IllegalArgumentException("Either --tbx or --conllu switch must be set.");
-        if (fileNames == null)
-           throw new IllegalArgumentException("End of options delimiter (--) must be present.");
+
         return this;
     }
 
     private void run() throws Exception {
-        for(String fileName: fileNames) {
-            System.err.println(String.format("\nCompiling: %s", fileName));
-            processFile(fileName);
+        if (fileNames.length > 0)
+            for(String fileName: fileNames) {
+                System.err.println(String.format("\nCompiling: %s", fileName));
+                processFile(fileName);
+            }
+        else {
+            processFile(null);
         }
     }
 
     private void processFile(String inputFileName) throws Exception {
         String statements = null;
         SPARQLWriter sparql = new SPARQLWriter(namespace, creator, chunkSize);
+        Map<String, Object> metadata = new HashMap<>();
 
         if (isConnlu) {
             Connlu2Sparql sparqlConverter = new Connlu2Sparql(inputFileName, sparql, language);
@@ -125,19 +138,26 @@ public class Main {
         if (isTbx) {
             Tbx2Sparql sparqlConverter = new Tbx2Sparql(inputFileName, sparql);
             statements = sparqlConverter.createSPARQL();
-            System.err.println(String.format("File size: %d", sparqlConverter.fileSize));
-            System.err.println(String.format("TBX dialect: %s", sparqlConverter.tbxType));
-            System.err.println(String.format("Number of concepts: %d", sparqlConverter.getNumberOfConcepts()));
-            System.err.println(String.format("Number of languages: %d", sparqlConverter.getNumberOfLanguages()));
-            System.err.println(String.format("Number of terms: %d", sparqlConverter.getNumberOfTerms()));
+            metadata.put("fileSize", sparqlConverter.fileSize);
+            metadata.put("tbxType", sparqlConverter.tbxType);
+            metadata.put("numberOfConcepts", sparqlConverter.getNumberOfConcepts());
+            metadata.put("numberOfLanguages", sparqlConverter.getNumberOfLanguages());
+            metadata.put("numberOfTerms", sparqlConverter.getNumberOfTerms());
         }
 
-        saveStatementsUsingInFileName(inputFileName, outDir, statements);
+        String output = statements;
+
+        if (isJson) {
+            metadata.put("content", statements);
+            output = JSONValue.toJSONString(metadata); 
+        }
+        
+        saveStatementsUsingInFileName(inputFileName, outDir, output);
 
         if (graphURL != null) {
             uploadStatements(graphURL, repository, statements);
         } else if (outDir == null) {
-            System.out.println(statements);
+            System.out.println(output);
         }
     }
 

@@ -2,6 +2,7 @@
 apply plugin: 'java'
 compileJava.options.encoding = 'UTF-8'
 project.buildDir = 'bin'
+
 // In this section you declare where to find the dependencies of your project
 repositories {
     // Use 'jcenter' for resolving your dependencies.
@@ -16,6 +17,8 @@ jar {
 }
 
 dependencies {
+    implementation 'com.googlecode.json-simple:json-simple:1.1.1'
+
     testImplementation 'junit:junit:4+'
     testImplementation 'org.mockito:mockito-core:3.+'
     testImplementation 'org.mockito:mockito-inline:3.+'

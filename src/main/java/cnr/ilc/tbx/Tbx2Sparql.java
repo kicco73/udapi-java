@@ -1,6 +1,8 @@
 package cnr.ilc.tbx;
 import org.w3c.dom.*;
+import org.xml.sax.InputSource;
 
+import cnr.ilc.rut.CountingInputStream;
 import cnr.ilc.rut.RutException;
 import cnr.ilc.rut.SPARQLWriter;
 
@@ -25,21 +27,24 @@ public class Tbx2Sparql {
 		this.sparql = sparql;
 		conceptEntryParser = new ConceptEntry(sparql);
 
-		Path path = Paths.get(fileName);
-		fileSize = Files.size(path);
+		InputStream inputStream = fileName != null? new FileInputStream(fileName) : System.in;
+		CountingInputStream countingInputStream = new CountingInputStream(inputStream);
 
-		document = parseTbx(fileName);
+		document = parseTbx(countingInputStream);
 		document.getDocumentElement().normalize();
 		Element tbx = (Element) document.getElementsByTagName("tbx").item(0);
+
+		fileSize = countingInputStream.getCount();
 		tbxType = tbx.getAttribute("type");
 	}
 	
-	static private Document parseTbx(String fileName) throws RutException {
+	static private Document parseTbx(InputStream inputStream) throws RutException {
+		InputSource inputSource = new InputSource(inputStream);
 		DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
 		factory.setNamespaceAware(true);
 		try {
 			DocumentBuilder builder = factory.newDocumentBuilder();
-			Document document = builder.parse(new File(fileName));
+			Document document = builder.parse(inputSource);
 			return document;
 		}
 		catch(Exception e) {
