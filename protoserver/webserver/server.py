@@ -19,15 +19,14 @@ from webserver import notifier
 class WebServer(object):
 
 	def __init__(self):
-		template_folder = os.path.abspath(os.path.join(os.path.dirname(__file__), 'views'))
-
 		app = self.app = Flask('GoFunQ Web Server')
 		CORS(app)
 
 		app.secret_key = 'super secret key'
-		app.template_folder = template_folder
 		app.config['SESSION_TYPE'] = 'filesystem'
-		app.config['ASSETS_FOLDER'] = 'webserver/assets'
+		app.config['RESOURCES_FOLDER'] = 'resources'
+
+		os.makedirs(app.config['RESOURCES_FOLDER'], exist_ok=True)
 
 		self.socketio = SocketIO(app)
 		

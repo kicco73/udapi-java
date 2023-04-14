@@ -124,7 +124,7 @@ public class Main {
     private void processFile(String inputFileName) throws Exception {
         String statements = null;
         SPARQLWriter sparql = new SPARQLWriter(namespace, creator, chunkSize);
-        Map<String, Object> metadata = new HashMap<>();
+        Map<String, Object> metadata = null;
 
         if (isConnlu) {
             Connlu2Sparql sparqlConverter = new Connlu2Sparql(inputFileName, sparql, language);
@@ -138,18 +138,16 @@ public class Main {
         if (isTbx) {
             Tbx2Sparql sparqlConverter = new Tbx2Sparql(inputFileName, sparql);
             statements = sparqlConverter.createSPARQL();
-            metadata.put("fileSize", sparqlConverter.fileSize);
-            metadata.put("tbxType", sparqlConverter.tbxType);
-            metadata.put("numberOfConcepts", sparqlConverter.getNumberOfConcepts());
-            metadata.put("numberOfLanguages", sparqlConverter.getNumberOfLanguages());
-            metadata.put("numberOfTerms", sparqlConverter.getNumberOfTerms());
+            metadata = sparqlConverter.metadata;
         }
 
         String output = statements;
 
         if (isJson) {
-            metadata.put("content", statements);
-            output = JSONValue.toJSONString(metadata); 
+            Map<String, Object> response = new HashMap<>();
+            response.put("metadata", metadata);
+            response.put("sparql", statements);
+            output = JSONValue.toJSONString(response); 
         }
         
         saveStatementsUsingInFileName(inputFileName, outDir, output);

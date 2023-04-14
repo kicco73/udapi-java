@@ -3,25 +3,24 @@ import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 
 import cnr.ilc.rut.CountingInputStream;
+import cnr.ilc.rut.IdGenerator;
 import cnr.ilc.rut.RutException;
 import cnr.ilc.rut.SPARQLWriter;
 
 import javax.xml.parsers.*;
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 import java.util.Set;
 
 public class Tbx2Sparql {
-	public final String tbxType;
-	public final long fileSize;
+	final public Map<String, Object> metadata = new HashMap<>();
 
 	private Document document;
 	private SPARQLWriter sparql;
 	private ConceptEntry conceptEntryParser;
-	protected Set<String> concepts = new HashSet<>();
+	private Set<String> concepts = new HashSet<>();
 	
     public Tbx2Sparql(String fileName, SPARQLWriter sparql) throws Exception {
 		this.sparql = sparql;
@@ -34,8 +33,11 @@ public class Tbx2Sparql {
 		document.getDocumentElement().normalize();
 		Element tbx = (Element) document.getElementsByTagName("tbx").item(0);
 
-		fileSize = countingInputStream.getCount();
-		tbxType = tbx.getAttribute("type");
+		IdGenerator idGenerator = new IdGenerator();
+		metadata.put("id", idGenerator.getId(fileName == null? "stdin" : fileName));
+		metadata.put("fileSize", countingInputStream.getCount());
+		metadata.put("fileType", "tbx");
+		metadata.put("variant", tbx.getAttribute("type"));
 	}
 	
 	static private Document parseTbx(InputStream inputStream) throws RutException {
@@ -60,19 +62,10 @@ public class Tbx2Sparql {
 			String conceptId = conceptEntryParser.parseConceptEntry(conceptEntry);
 			concepts.add(conceptId);
 		}
+		metadata.put("numberOfConcepts", concepts.size());
+		metadata.put("numberOfLanguages", conceptEntryParser.getNumberOfLanguages());
+		metadata.put("numberOfTerms", conceptEntryParser.numberOfTerms);
 
 		return sparql.toString();
-	}
-
-	public int getNumberOfConcepts() {
-		return concepts.size();
-	}
-
-	public int getNumberOfLanguages() {
-		return conceptEntryParser.getNumberOfLanguages();
-	}
-
-	public int getNumberOfTerms() {
-		return conceptEntryParser.numberOfTerms;
 	}
 }
