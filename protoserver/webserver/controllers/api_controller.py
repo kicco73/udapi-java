@@ -19,18 +19,17 @@ class ApiController(controller.Controller):
 			operation = analyse.Analyse(tbx)
 			resource_string = operation.execute()
 			resource = json.loads(resource_string)
-			self.save_resource(tbx, resource['metadata']['id'], 'tbx')
-			self.save_resource(resource['sparql'], resource['metadata']['id'], 'sparql')
-			self.save_resource(json.dumps(resource['metadata']), resource['metadata']['id'], 'metadata')
+			self.save_resource(tbx, resource['id'], 'tbx')
+			self.save_resource(resource['sparql'], resource['id'], 'sparql')
+			self.save_resource(json.dumps(resource['metadata']), resource['id'], 'metadata')
 
 			return Response(resource_string, mimetype='application/json')
 
 		@app.route('/resources/<id>/submit', methods = ['POST'])
 		def resources_id(id: str):
 			repository = request.json.get('repository')
-			infilename = os.path.join(self.app.config['RESOURCES_FOLDER'], id, 'tbx')
-			outfilename = os.path.join(self.app.config['RESOURCES_FOLDER'], id, 'sparql')
-			operation = submit.Submit(infilename, repository, outfilename)
+			infilename = os.path.join(self.app.config['RESOURCES_FOLDER'], id, 'sparql')
+			operation = submit.Submit(infilename, repository)
 			operation.execute()
 			return Response(json.dumps({"repository": repository}), mimetype='application/json')
 

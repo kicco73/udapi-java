@@ -4,48 +4,43 @@
 
 package cnr.ilc.conllu;
 
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.nio.file.Paths;
 import java.util.*;
 
 import cnr.ilc.conllu.core.*;
 import cnr.ilc.conllu.core.io.DocumentReader;
 import cnr.ilc.conllu.core.io.DocumentWriter;
-import cnr.ilc.conllu.core.io.UdapiIOException;
 import cnr.ilc.conllu.core.io.impl.CoNLLUReader;
 import cnr.ilc.conllu.core.io.impl.CoNLLUWriter;
+import cnr.ilc.rut.BaseCompiler;
 import cnr.ilc.rut.SPARQLWriter;
 import cnr.ilc.rut.Word;
 
-public class Connlu2Sparql {
+public class ConnluCompiler extends BaseCompiler {
     Document document;
     String language;
     String creator;
     String namespace;
-    private SPARQLWriter sparql;
 
-    public Connlu2Sparql(String inCoNLL, SPARQLWriter sparql, String language) throws Exception {
-        this.sparql = sparql;
+    public ConnluCompiler(InputStream inputStream, SPARQLWriter sparql, String language) throws Exception {
+        super(inputStream, sparql);
         this.language = language;
-        document = parseCoNLL(inCoNLL);
+        document = parseCoNLL(inputStream);
     }
 
-    private static Document parseCoNLL(String inCoNLL) {
-        FileReader fileReader;
-        try {
-            fileReader = new FileReader(Paths.get(inCoNLL).toFile());
-        } catch (FileNotFoundException e) {
-            throw new UdapiIOException("Provided CoNLL file '" + inCoNLL + "' not found.");
-        }
-
-        DocumentReader coNLLUReader = new CoNLLUReader(fileReader);
+    private static Document parseCoNLL(InputStream inputStream) {
+        InputStreamReader inputStreamReader;
+        inputStreamReader = new InputStreamReader(inputStream);
+        DocumentReader coNLLUReader = new CoNLLUReader(inputStreamReader);
         Document document = coNLLUReader.readDocument();
         return document;
     }
 
-    public String createSPARQL() throws Exception {
-        Collection<Word> words = Compiler.compileLexicon(document, namespace, language);
+    @Override
+    public String toSPARQL() throws Exception {
+        Collection<Word> words = CompilerHelper.compileLexicon(document, namespace, language);
         String lexiconFQN = sparql.createLexicon(":connll-u", language);
      
         for (Word word: words) {
