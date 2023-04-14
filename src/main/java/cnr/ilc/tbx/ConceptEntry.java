@@ -6,6 +6,7 @@ import cnr.ilc.rut.RutException;
 import cnr.ilc.rut.SPARQLWriter;
 
 import java.util.HashSet;
+import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
@@ -87,8 +88,8 @@ public class ConceptEntry {
 		return id;
 	}
 
-	public int getNumberOfLanguages() {
-		return langSecParser.lexicons.size();
+	public Set<String> getLanguages() {
+		return langSecParser.lexicons;
 	}
 
 }

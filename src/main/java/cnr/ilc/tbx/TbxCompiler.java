@@ -1,4 +1,5 @@
 package cnr.ilc.tbx;
+import org.json.simple.JSONArray;
 import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 
@@ -55,8 +56,12 @@ public class TbxCompiler extends BaseCompiler {
 			String conceptId = conceptEntryParser.parseConceptEntry(conceptEntry);
 			concepts.add(conceptId);
 		}
+
+		JSONArray array = new JSONArray();
+		Set<String> languages = conceptEntryParser.getLanguages();
+		array.addAll(languages);
+		metadata.put("languages", array);
 		metadata.put("numberOfConcepts", concepts.size());
-		metadata.put("numberOfLanguages", conceptEntryParser.getNumberOfLanguages());
 		metadata.put("numberOfTerms", conceptEntryParser.numberOfTerms);
 
 		return sparql.toString();
