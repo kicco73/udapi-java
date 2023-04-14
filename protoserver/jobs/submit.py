@@ -19,10 +19,13 @@ class Submit(Operation):
 			'--repository', self.repository,
 			'--graphdb-url', 'http://localhost:7200',
 			'--sparql',
-			'--', self.infilename
+			#'--', self.infilename
 		]
 
-		process = subprocess.run(args, stderr=subprocess.PIPE)
+		with open(self.infilename) as file:
+			input = 'CLEAR DEFAULT;\n' + file.read()
+
+		process = subprocess.run(args, input=input.encode('utf-8'), stderr=subprocess.PIPE)
 		return process.stderr.decode('utf-8')
 
 	def __str__(self):
