@@ -15,7 +15,7 @@ import cnr.ilc.conllu.core.*;
 import cnr.ilc.rut.Form;
 import cnr.ilc.rut.Word;
 
-public class CompilerHelper {
+public class ParserHelper {
 
     private static Form createOtherForm(Word word, String writtenRep) {
         String FQName = String.format("%s_form_%s", word.FQName, writtenRep);

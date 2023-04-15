@@ -8,6 +8,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.InputStream;
 import java.io.PrintWriter;
+import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
@@ -17,14 +18,13 @@ import java.util.Map;
 
 import org.json.simple.JSONValue;
 
-import cnr.ilc.conllu.ConnluCompiler;
-import cnr.ilc.rut.BaseCompiler;
-import cnr.ilc.rut.CompilerInterface;
+import cnr.ilc.conllu.ConnluParser;
+import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.DateProvider;
 import cnr.ilc.rut.GraphDBClient;
 import cnr.ilc.rut.IdGenerator;
 import cnr.ilc.rut.SPARQLWriter;
-import cnr.ilc.tbx.TbxCompiler;
+import cnr.ilc.tbx.TbxParser;
 
 public class Main {
     boolean isSparql = false;
@@ -132,23 +132,26 @@ public class Main {
     }
 
     private void processFile(String fileName) throws Exception {
-        String statements = null;
         SPARQLWriter sparql = new SPARQLWriter(namespace, creator, chunkSize);
-        Map<String, Object> metadata = null;
         InputStream inputStream = fileName == null? System.in : new FileInputStream(fileName);
-        CompilerInterface compiler = null;
+        Map<String, Object> metadata = null;
+        ParserInterface parser = null;
+        String statements = null;
         
-        if (isConnlu) {
-            compiler = new ConnluCompiler(inputStream, sparql, language);
-        } else if (isTbx) {
-            compiler = new TbxCompiler(inputStream, sparql);
-        } else if (isSparql) {
-            compiler = new BaseCompiler(inputStream, sparql);
+        if (isSparql) {
+            statements = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+        } else {
+            if (isTbx) {
+                parser = new TbxParser(inputStream);
+            } else if (isConnlu) {
+                parser = new ConnluParser(inputStream, language);
+            }
+    
+            parser.parse();
+            metadata = parser.getMetadata();
+            statements = sparql.serialise(parser);    
         }
-
-        statements = compiler.toSPARQL();
-        metadata = compiler.getMetadata();
-
+        
         String output = statements;
 
         if (isJson) {
@@ -160,19 +163,19 @@ public class Main {
             output = JSONValue.toJSONString(response); 
         }
 
-        if (exportConll != null && compiler instanceof ConnluCompiler) {
-            ((ConnluCompiler)compiler).writeConll(exportConll);
+        if (exportConll != null && parser instanceof ConnluParser) {
+            ((ConnluParser)parser).writeConll(exportConll);
         }  
 
-        if (graphURL != null) {
-            uploadStatements(graphURL, repository, statements);
-        }
-        
         if (outDir == null || fileName == null) {
             if (!isSparql) System.out.println(output);
         } else {
             saveStatementsUsingInFileName(fileName, outDir, statements);            
         }
+
+        if (graphURL != null) {
+            uploadStatements(graphURL, repository, statements);
+        }        
     }
 
     private static void saveStatementsUsingInFileName(String inFile, String outDir, String statements) throws Exception {

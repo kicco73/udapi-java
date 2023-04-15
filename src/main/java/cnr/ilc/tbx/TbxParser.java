@@ -5,12 +5,9 @@ import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 
 import cnr.ilc.rut.CountingInputStream;
-import cnr.ilc.rut.IdGenerator;
-import cnr.ilc.rut.Pair;
-import cnr.ilc.rut.BaseCompiler;
+import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.Concept;
 import cnr.ilc.rut.RutException;
-import cnr.ilc.rut.SPARQLWriter;
 import cnr.ilc.rut.Word;
 
 import javax.xml.parsers.*;
@@ -20,18 +17,15 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
-import java.util.Map.Entry;
 
-public class TbxCompiler extends BaseCompiler {
+public class TbxParser implements ParserInterface {
 	private Document document;
-	private ConceptEntry conceptEntryParser;
+	private ConceptEntry conceptEntryParser = new ConceptEntry();
 	private Map<String, String> lexicons = new HashMap<>();
-	private IdGenerator idGenerator = new IdGenerator();
+	private Map<String,Object> metadata = new HashMap<>();
+	private Collection<Concept> concepts = new ArrayList<>();
 
-    public TbxCompiler(InputStream inputStream, SPARQLWriter sparql) throws Exception {
-		super(inputStream, sparql);
-		conceptEntryParser = new ConceptEntry();
-
+    public TbxParser(InputStream inputStream) throws Exception {
 		CountingInputStream countingInputStream = new CountingInputStream(inputStream);
 
 		document = parseTbx(countingInputStream);
@@ -57,9 +51,7 @@ public class TbxCompiler extends BaseCompiler {
 		}
 	}
 
-	private Collection<Concept> parseConcepts() {
-		Collection<Concept> concepts = new ArrayList<>();
-
+	private void parseConcepts() {
 		NodeList conceptEntries = document.getElementsByTagName("conceptEntry");
 		for (int i = 0; i < conceptEntries.getLength(); ++i)  {
 			Element conceptEntry = (Element) conceptEntries.item(i);
@@ -67,8 +59,6 @@ public class TbxCompiler extends BaseCompiler {
 			concepts.add(concept);
 			lexicons.putAll(conceptEntryParser.getLexicons());
 		}		
-
-		return concepts;
 	}
 
 	private JSONObject convertConceptsToJSONObject(Collection<Concept> concepts) {
@@ -92,29 +82,9 @@ public class TbxCompiler extends BaseCompiler {
 		return jsonConcepts;
 	}
 
-	private void addLexicons() {
-		for (Entry<String, String> lexicon: lexicons.entrySet()) {
-			String language = lexicon.getKey();
-			String lexiconFQN = lexicon.getValue();
-			lexiconFQN = sparql.createLexicon(lexiconFQN, language);
-		}
-	}
-
-	private void writeConcepts(Collection<Concept> concepts) {
-		addLexicons();
-		for (Concept concept: concepts) {
-			sparql.addConcept(concept);
-			for (Word word: concept.words) {
-				sparql.addWord(word, "ontolex:LexicalEntry");
-			}
-		}
-	}
-
 	@Override
-	public String toSPARQL() throws Exception {
-		Collection<Concept> concepts = parseConcepts();
-
-		writeConcepts(concepts);
+	public void parse() throws Exception {
+		parseConcepts();
 
 		JSONArray jsonLanguages = new JSONArray();
 		Set<String> languages = conceptEntryParser.getLanguages();
@@ -124,7 +94,30 @@ public class TbxCompiler extends BaseCompiler {
 		metadata.put("concepts", convertConceptsToJSONObject(concepts));
 		metadata.put("numberOfTerms", conceptEntryParser.numberOfTerms);
 		metadata.put("numberOfConcepts", concepts.size());
+	}
 
-		return sparql.toString();
+	@Override
+	public Map<String, Object> getMetadata() {
+		return metadata;
+	}
+
+	@Override
+	public Map<String, String> getLexicons() {
+		return lexicons;
+	}
+
+	@Override
+	public Collection<Concept> getConcepts() {
+		return concepts;
+	}
+
+	@Override
+	public Collection<Word> getWords() {
+		return new ArrayList<Word>();
+	}
+
+	@Override
+	public String getRdfType() {
+		return "ontolex:LexicalEntry";
 	}
 }

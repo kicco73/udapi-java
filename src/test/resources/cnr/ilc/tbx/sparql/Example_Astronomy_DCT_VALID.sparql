@@ -1457,8 +1457,7 @@ INSERT DATA {
 	:le_5BChz4gcGX9oQ7IZcIG60d_noun_sense ontolex:usage [ dct:source <http://www.astrosurf.com/astronosur/estrellas.htm> ; rdf:value "En el gráfico superior se muestra la intensidad\n de las líneas espectrales según la temperatura de la estrella (tipo\n espectral)"@es ] .
 	:concept_c26 rdf:type skos:Concept .
 	:concept_c26 skos:prefLabel "c26" .
-	:concept_c26 This is the end-result of all but the most massive of stars.
-N-Source: Oxford2007 "This is the end-result of all but the most massive of stars.\nN-Source: Oxford2007"@en .
+	:concept_c26 skos:note "This is the end-result of all but the most massive of stars.\nN-Source: Oxford2007"@en .
 	:concept_c26 skos:note "G-Source: http://www.stsci.edu/~inr/thisweek1/thisweek/WhiteDwarf.gif" .
 	:concept_c26 skos:definition [ dct:source "Based on Oxford2007 and Cambridge2007" ; rdf:value "A small dense star that is has run out of fuel\n for nuclear fusion, collapsing under its own gravity and blowing off its\n outer layers to form a planetary nebula in the process."@en ] .
 	:concept_c26 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Enana_blanca> ; rdf:value "Un remanente estelar que se genera cuando una\n estrella de masa menor a 9-10 masas solares ha agotado su combustible\n nuclear."@es ] .
@@ -1509,10 +1508,7 @@ N-Source: Oxford2007 "This is the end-result of all but the most massive of star
 	:le_3vKgEwDgnW9MEr7sHtPUO7_noun_sense ontolex:usage [ dct:source <http://astroverada.com/_/Main/T_evolucion.html> ; rdf:value "Cuando el material fusionable se agota la\n estrella pierde la presión interna producida por la fusión nuclear y\n puede colapsar inmediatamente terminando en una enana\n blanca."@es ] .
 	:concept_c27 rdf:type skos:Concept .
 	:concept_c27 skos:prefLabel "c27" .
-	:concept_c27 As mass is gradually lost, the core of the star becomes more exposed,
-						ultimately becoming a white dwarf. Also, planetary nebulae have nothing to
-						do with planets, and are not true nebulae.
-N-Source: Based on Oxford2007 and Moore2003, 186 "As mass is gradually lost, the core of the star becomes more exposed,\n ultimately becoming a white dwarf. Also, planetary nebulae have nothing to\n do with planets, and are not true nebulae.\nN-Source: Based on Oxford2007 and Moore2003, 186"@en .
+	:concept_c27 skos:note "As mass is gradually lost, the core of the star becomes more exposed,\n ultimately becoming a white dwarf. Also, planetary nebulae have nothing to\n do with planets, and are not true nebulae.\nN-Source: Based on Oxford2007 and Moore2003, 186"@en .
 	:concept_c27 skos:note "G-Source:\n http://www.phys.ncku.edu.tw/~astrolab/mirrors/apod_e/image/0901/ngc2818_hheritage_800.jpg" .
 	:concept_c27 skos:definition [ dct:source "Oxford2007" ; rdf:value "A bright cloud of glowing gas and dust\n surrounding a highly evolved star."@en ] .
 	:concept_c27 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Nebulosa_planetaria> ; rdf:value "Una nebulosa de emisión consistente en una\n envoltura brillante en expansión de plasma y gas ionizado, expulsada\n durante la fase de rama asintótica gigante que atraviesan las estrellas\n gigantes rojas en los últimos momentos de sus vidas."@es ] .
@@ -1563,9 +1559,7 @@ N-Source: Based on Oxford2007 and Moore2003, 186 "As mass is gradually lost, the
 	:le_13h6HZY2SOjy9nE5tnzLAo_noun_sense ontolex:usage [ dct:source <http://www.astromia.com/glosario/nebulosaplanetaria.htm> ; rdf:value "Las nebulosas planetarias resultan objetos muy\n espectaculares si se observan con un telescopio de media o gran\n potencia."@es ] .
 	:concept_c28 rdf:type skos:Concept .
 	:concept_c28 skos:prefLabel "c28" .
-	:concept_c28 Ultraviolet radiation, gas cloud collisions, and synchrotron radiation can
-						all cause the emission nebula to shine.
-N-Source: Oxford2007 "Ultraviolet radiation, gas cloud collisions, and synchrotron radiation can\n all cause the emission nebula to shine.\nN-Source: Oxford2007"@en .
+	:concept_c28 skos:note "Ultraviolet radiation, gas cloud collisions, and synchrotron radiation can\n all cause the emission nebula to shine.\nN-Source: Oxford2007"@en .
 	:concept_c28 skos:note "G-Source: http://apod.nasa.gov/apod/image/0612/NGC2174_lrg.jpg" .
 	:concept_c28 skos:definition [ dct:source "Oxford2007" ; rdf:value "A luminous cloud of gas and sust in space which\n shines with its own light, which can be generated in several\n ways."@en ] .
 	:concept_c28 skos:definition [ dct:source <http://www.diclib.com/Nebulosa%20de%20emisi%C3%B3n/show/en/es_astronomia/726> ; rdf:value "Una nube de gas interestelar que brilla por la\n excitación del gas, causado por radiación ultravioleta emitida por\n estrellas inmersas en la nube o por calentamiento debido a otro\n mecanismos."@es ] .
@@ -1617,10 +1611,7 @@ N-Source: Oxford2007 "Ultraviolet radiation, gas cloud collisions, and synchrotr
 	:le_6Cem0WXarBzw9ujxrmtDpT_noun_sense ontolex:usage [ dct:source <http://www.astrored.net/nebulosaweb/types.html> ; rdf:value "Las nebulosas de emisión estan normalmente en\n los lugares de formación de estrellas."@es ] .
 	:concept_c29 rdf:type skos:Concept .
 	:concept_c29 skos:prefLabel "c29" .
-	:concept_c29 The term was originally applied to any object with a fuzzy telescopic
-						appearance, but with the advent of larger instruments many 'nebulae' were
-						found to consist of faint stars.
-N-Source: Oxford2007 "The term was originally applied to any object with a fuzzy telescopic\n appearance, but with the advent of larger instruments many 'nebulae' were\n found to consist of faint stars.\nN-Source: Oxford2007"@en .
+	:concept_c29 skos:note "The term was originally applied to any object with a fuzzy telescopic\n appearance, but with the advent of larger instruments many 'nebulae' were\n found to consist of faint stars.\nN-Source: Oxford2007"@en .
 	:concept_c29 skos:note "G-Source:\n http://my-blackberry.net/wallpapers/49/m/NASA_-_The_Horsehead_Nebula%2C_B33%2C_Orion_Nebula.jpg" .
 	:concept_c29 skos:definition [ dct:source "Cambridge2007" ; rdf:value "A cloud of interstellar gas and dust."@en ] .
 	:concept_c29 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Nebulosa> ; rdf:value "Regiones del medio interestelar constituidas por\n gases (principalmente hidrógeno y helio) y polvo."@es ] .
@@ -1889,9 +1880,7 @@ N-Source: Oxford2007 "The term was originally applied to any object with a fuzzy
 	:le_4PGxN3x4ksnP3UsEiDcPj_noun_sense ontolex:usage [ dct:source <http://www.rtve.es/noticias/20100301/imagen-unica-estrella-neutrones-cazada-canarias/321412.shtml> ; rdf:value "El Gran Telescopio Canarias (GTC), instalado en\n el Observatorio del Roque de los Muchachos (La Palma), ha obtenido\n imágenes de una profundidad \"sin precedentes\" de una estrella de\n neutrones del tipo magnetar, de las que se conocen seis, según ha\n informado el Instituto de Astrofísica de Canarias (IAC)."@es ] .
 	:concept_c33 rdf:type skos:Concept .
 	:concept_c33 skos:prefLabel "c33" .
-	:concept_c33 For a star with no hydrogen content the limit is 1.44 solar masses, which
-						is thus the maximum possible for a white dwarf.
-N-Source: Oxford2007 "For a star with no hydrogen content the limit is 1.44 solar masses, which\n is thus the maximum possible for a white dwarf.\nN-Source: Oxford2007"@en .
+	:concept_c33 skos:note "For a star with no hydrogen content the limit is 1.44 solar masses, which\n is thus the maximum possible for a white dwarf.\nN-Source: Oxford2007"@en .
 	:concept_c33 skos:definition [ dct:source "Oxford2007" ; rdf:value "The maximum possible mass of a degenerate star,\n above which it will be unable to support itself against the inward pull\n of its own gravity."@en ] .
 	:concept_c33 skos:definition [ dct:source <http://es.wikipedia.org/wiki/L%C3%ADmite_de_Chandrasekhar> ; rdf:value "El límite de masa más allá del cual la\n degeneración de electrones no es capaz de contrarrestar la fuerza de\n gravedad en un remanente estelar, produciéndose un colapso que origina\n una estrella de neutrones o un agujero negro."@es ] .
 	:concept_c33_6dLpuXjfy5d3rR4CTeHmy5 rdf:type skos:ConceptScheme .
@@ -1941,8 +1930,7 @@ N-Source: Oxford2007 "For a star with no hydrogen content the limit is 1.44 sola
 	:le_6fpKZJCdHa523F6Tc8PQlM_noun_sense ontolex:usage [ dct:source <http://html.rincondelvago.com/agujeros-negros_5.html> ; rdf:value "Descubrió una masa (aproximadamente 1.5 veces la\n masa del Sol) en la que una estrella fría no podría soportar su\n gravedad. Esto es lo que se conoce como el límite de\n Chandrasekhar."@es ] .
 	:concept_c34 rdf:type skos:Concept .
 	:concept_c34 skos:prefLabel "c34" .
-	:concept_c34 Encountered on in neutron stars.
-N-Source: Oxford2007 "Encountered on in neutron stars.\nN-Source: Oxford2007"@en .
+	:concept_c34 skos:note "Encountered on in neutron stars.\nN-Source: Oxford2007"@en .
 	:concept_c34 skos:definition [ dct:source "Oxford2007" ; rdf:value "The state of degeneracy attained when the density\n of matter is so high that neutrons cannot be packed any more closely\n together."@en ] .
 	:concept_c34 skos:definition [ dct:source "Oxford2003" ; rdf:value "El estado de degeneración alcanzado cuando la\n densidad de materia es tan alta, que los neutrones no pueden juntarse\n más."@es ] .
 	:concept_c34_6dLpuXjfy5d3rR4CTeHmy5 rdf:type skos:ConceptScheme .
@@ -2519,9 +2507,7 @@ N-Source: Oxford2007 "Encountered on in neutron stars.\nN-Source: Oxford2007"@en
 	:le_1hPLh5KawVRtIHQov0SgnO skos:note "Author[s]: Ridpath, Ian\nBook Title: Astronomía\nPublication Place: Spain\nPublisher: Oxford University Press\nPublication Year: 2003" .
 	:concept_c41 rdf:type skos:Concept .
 	:concept_c41 skos:prefLabel "c41" .
-	:concept_c41 Electron degeneracy supports white dwarf stars against further
-						collapse.
-N-Source: Oxford2007 "Electron degeneracy supports white dwarf stars against further\n collapse.\nN-Source: Oxford2007"@en .
+	:concept_c41 skos:note "Electron degeneracy supports white dwarf stars against further\n collapse.\nN-Source: Oxford2007"@en .
 	:concept_c41 skos:definition [ dct:source "Oxford2007" ; rdf:value "The state of degeneracy attained when the density\n of matter is so high that electrons cannot be packed any closer\n together."@en ] .
 	:concept_c41 skos:definition [ dct:source "Oxford2003" ; rdf:value "El estado de degeneración alcanzado cuando la\n densidad de materia es tan grande, que los electrones no pueden\n empaquetarse más."@es ] .
 	:concept_c41_6dLpuXjfy5d3rR4CTeHmy5 rdf:type skos:ConceptScheme .

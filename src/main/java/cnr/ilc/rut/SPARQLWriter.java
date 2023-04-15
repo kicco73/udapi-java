@@ -6,11 +6,12 @@ package cnr.ilc.rut;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.util.Collection;
 import java.util.Date;
 import java.util.Map;
 import java.util.Map.Entry;
 
-public class SPARQLWriter {
+public class SPARQLWriter implements TripleStoreInterface {
 	static final public String separator = "# data-chunk";
 	final private StringBuffer buffer = new StringBuffer();
 	final private String creator;
@@ -31,7 +32,7 @@ public class SPARQLWriter {
 		PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 		""";
 
-	public void insertTriple(String subject, String link, String object) {
+	private void insertTriple(String subject, String link, String object) {
 		boolean isEndOfChunk = chunkSize > 0 && numberOfTriples % chunkSize == 0;
 
 		if (isEndOfChunk && numberOfTriples > 0) {
@@ -48,7 +49,7 @@ public class SPARQLWriter {
 		numberOfTriples++;
 	}
 
-	public void insertTriple(String subject, String link, Map<String, String> anon) {
+	private void insertTriple(String subject, String link, Map<String, String> anon) {
 		String object = "[ ";
 		int count = anon.size();
 		for (Entry<String,String> entry: anon.entrySet()) {
@@ -132,21 +133,6 @@ public class SPARQLWriter {
 			}
 		}
 	}
-	// Hi-level interface
-
-	public SPARQLWriter(String namespace, String creator, int chunkSize) {
-		this.creator = creator;
-		this.chunkSize = chunkSize;
-		prefixes = String.format(prefixes, namespace);
-		buffer.append(prefixes);
-	}
-
-	public String createLexicon(String lexiconFQN, String language) {		
-		insertTriple(lexiconFQN, "rdf:type", "lime:Lexicon");
-        insertTripleWithString(lexiconFQN, "lime:language", language);   
-		addMetaData(lexiconFQN);     
-		return lexiconFQN;
-	}
 
 	private void createFeatures(Word word) {		
 		for (Triple<String, String, String> feature: word.triples) {
@@ -158,15 +144,22 @@ public class SPARQLWriter {
 		}
 	}
 
-	public void addWord(Word word, String rdfType) {
-		createWordEntry(word, rdfType);
-		createLexicalSenses(word);
-		createCanonicalForm(word);
-		createOtherForms(word);
-		createFeatures(word);
+	private void insertTripleWithLanguage(String subject, String link, String object, String language) {
+		insertTriple(subject, link, SPARQLFormatter.formatObjectWithLanguage(object, language));
 	}
 
-	public void addConcept(Concept concept) {
+	private void insertTripleWithString(String subject, String link, String object) {
+		insertTriple(subject, link, SPARQLFormatter.formatObject(object));
+	}
+
+	private String createLexicon(String lexiconFQN, String language) {		
+		insertTriple(lexiconFQN, "rdf:type", "lime:Lexicon");
+        insertTripleWithString(lexiconFQN, "lime:language", language);   
+		addMetaData(lexiconFQN);     
+		return lexiconFQN;
+	}
+
+	private void addConcept(Concept concept) {
 		insertTriple(concept.FQName, "rdf:type", "skos:Concept");
 		insertTripleWithString(concept.FQName, "skos:prefLabel", concept.id);
 
@@ -186,23 +179,64 @@ public class SPARQLWriter {
 		}
 	}
 
-	public void insertTripleWithUrlIfPossible(String subject, String link, String object) {
-		insertTriple(subject, link, SPARQLFormatter.formatObjectWithUrlIfPossible(object));
+	private void addWord(Word word, String rdfType) {
+		createWordEntry(word, rdfType);
+		createLexicalSenses(word);
+		createCanonicalForm(word);
+		createOtherForms(word);
+		createFeatures(word);
 	}
 
-	public void insertTripleWithLanguage(String subject, String link, String object, String language) {
-		insertTriple(subject, link, SPARQLFormatter.formatObjectWithLanguage(object, language));
+	private void addLexicons(Map<String, String> lexicons) {
+		for (Entry<String, String> lexicon: lexicons.entrySet()) {
+			String language = lexicon.getKey();
+			String lexiconFQN = lexicon.getValue();
+			lexiconFQN = createLexicon(lexiconFQN, language);
+		}
 	}
 
-	public void insertTripleWithString(String subject, String link, String object) {
-		insertTriple(subject, link, SPARQLFormatter.formatObject(object));
-	}
-
-	@Override
-	public String toString() {
+	private String readBuffer() {
 		if (numberOfTriples % chunkSize != 0) {
 			buffer.append("}\n");
 		}
 		return buffer.toString();
 	}
+
+	private String serialiseConcepts(Map<String,String> lexicons, Collection<Concept> concepts, String rdfType) {
+		addLexicons(lexicons);
+		for (Concept concept: concepts) {
+			addConcept(concept);
+			for (Word word: concept.words) 
+				addWord(word, rdfType);
+		}
+		return readBuffer();
+	}
+
+	private String serialiseWords(Map<String,String> lexicons, Collection<Word> words, String rdfType) {
+		addLexicons(lexicons);
+		for (Word word: words) {
+			addWord(word, rdfType);
+		}
+		return readBuffer();
+	}
+
+	// Hi-level interface
+
+	public SPARQLWriter(String namespace, String creator, int chunkSize) {
+		this.creator = creator;
+		this.chunkSize = chunkSize;
+		prefixes = String.format(prefixes, namespace);
+		buffer.append(prefixes);
+	}
+
+	public String serialise(ParserInterface parser) {
+        Collection<Concept> concepts = parser.getConcepts();
+        
+        if (!concepts.isEmpty())
+            return serialiseConcepts(parser.getLexicons(), concepts, parser.getRdfType());
+
+		Collection<Word> words = parser.getWords();
+		return serialiseWords(parser.getLexicons(), words, parser.getRdfType());
+	}
+
 }

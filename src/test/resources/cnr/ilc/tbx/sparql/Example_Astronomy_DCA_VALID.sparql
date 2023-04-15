@@ -1208,8 +1208,7 @@ INSERT DATA {
 	:le_1XzPpqt5I7yJCnqScbGgko_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:concept_c26 rdf:type skos:Concept .
 	:concept_c26 skos:prefLabel "c26" .
-	:concept_c26 This is the end-result of all but the most massive of stars.
-N-Source: Oxford2007 "This is the end-result of all but the most massive of stars.\nN-Source: Oxford2007"@en .
+	:concept_c26 skos:note "This is the end-result of all but the most massive of stars.\nN-Source: Oxford2007"@en .
 	:tbx_en lime:entry :le_2ojcLpAym6qmWqadwPzaPv .
 	:le_2ojcLpAym6qmWqadwPzaPv rdf:type ontolex:LexicalEntry .
 	:le_2ojcLpAym6qmWqadwPzaPv rdfs:label "white dwarf"@en .
@@ -1250,10 +1249,7 @@ N-Source: Oxford2007 "This is the end-result of all but the most massive of star
 	:le_GHLRVuYGRtN9JnC7TssOs_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:concept_c27 rdf:type skos:Concept .
 	:concept_c27 skos:prefLabel "c27" .
-	:concept_c27 As mass is gradually lost, the core of the star becomes more exposed,
-						ultimately becoming a white dwarf. Also, planetary nebulae have nothing to
-						do with planets, and are not true nebulae.
-N-Source: Based on Oxford2007 and Moore2003, 186 "As mass is gradually lost, the core of the star becomes more exposed,\n ultimately becoming a white dwarf. Also, planetary nebulae have nothing to\n do with planets, and are not true nebulae.\nN-Source: Based on Oxford2007 and Moore2003, 186"@en .
+	:concept_c27 skos:note "As mass is gradually lost, the core of the star becomes more exposed,\n ultimately becoming a white dwarf. Also, planetary nebulae have nothing to\n do with planets, and are not true nebulae.\nN-Source: Based on Oxford2007 and Moore2003, 186"@en .
 	:tbx_en lime:entry :le_DCCpECao5sf8wCBjfzZEO .
 	:le_DCCpECao5sf8wCBjfzZEO rdf:type ontolex:LexicalEntry .
 	:le_DCCpECao5sf8wCBjfzZEO rdfs:label "planetary nebula"@en .
@@ -1294,9 +1290,7 @@ N-Source: Based on Oxford2007 and Moore2003, 186 "As mass is gradually lost, the
 	:le_9TGIOtCmYOBSSERPypug6_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:concept_c28 rdf:type skos:Concept .
 	:concept_c28 skos:prefLabel "c28" .
-	:concept_c28 Ultraviolet radiation, gas cloud collisions, and synchrotron radiation can
-						all cause the emission nebula to shine.
-N-Source: Oxford2007 "Ultraviolet radiation, gas cloud collisions, and synchrotron radiation can\n all cause the emission nebula to shine.\nN-Source: Oxford2007"@en .
+	:concept_c28 skos:note "Ultraviolet radiation, gas cloud collisions, and synchrotron radiation can\n all cause the emission nebula to shine.\nN-Source: Oxford2007"@en .
 	:tbx_en lime:entry :le_2csG3iUBkk9W6050I94yBA .
 	:le_2csG3iUBkk9W6050I94yBA rdf:type ontolex:LexicalEntry .
 	:le_2csG3iUBkk9W6050I94yBA rdfs:label "emission nebula"@en .
@@ -1337,10 +1331,7 @@ N-Source: Oxford2007 "Ultraviolet radiation, gas cloud collisions, and synchrotr
 	:le_4AqCjRkV90bTZ1dUuhxEat_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:concept_c29 rdf:type skos:Concept .
 	:concept_c29 skos:prefLabel "c29" .
-	:concept_c29 The term was originally applied to any object with a fuzzy telescopic
-						appearance, but with the advent of larger instruments many 'nebulae' were
-						found to consist of faint stars.
-N-Source: Oxford2007 "The term was originally applied to any object with a fuzzy telescopic\n appearance, but with the advent of larger instruments many 'nebulae' were\n found to consist of faint stars.\nN-Source: Oxford2007"@en .
+	:concept_c29 skos:note "The term was originally applied to any object with a fuzzy telescopic\n appearance, but with the advent of larger instruments many 'nebulae' were\n found to consist of faint stars.\nN-Source: Oxford2007"@en .
 	:tbx_en lime:entry :le_5mXBohzdWrSTMdpd6rABbp .
 	:le_5mXBohzdWrSTMdpd6rABbp rdf:type ontolex:LexicalEntry .
 	:le_5mXBohzdWrSTMdpd6rABbp rdfs:label "nebula"@en .
@@ -1560,9 +1551,7 @@ N-Source: Oxford2007 "The term was originally applied to any object with a fuzzy
 	:le_p2m0JVNCMEIaEVYN20y86_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:concept_c33 rdf:type skos:Concept .
 	:concept_c33 skos:prefLabel "c33" .
-	:concept_c33 For a star with no hydrogen content the limit is 1.44 solar masses, which
-						is thus the maximum possible for a white dwarf.
-N-Source: Oxford2007 "For a star with no hydrogen content the limit is 1.44 solar masses, which\n is thus the maximum possible for a white dwarf.\nN-Source: Oxford2007"@en .
+	:concept_c33 skos:note "For a star with no hydrogen content the limit is 1.44 solar masses, which\n is thus the maximum possible for a white dwarf.\nN-Source: Oxford2007"@en .
 	:tbx_en lime:entry :le_2v8SgyBGvh4RcpeNvHMfYL .
 	:le_2v8SgyBGvh4RcpeNvHMfYL rdf:type ontolex:LexicalEntry .
 	:le_2v8SgyBGvh4RcpeNvHMfYL rdfs:label "Chandrasekhar limit"@en .
@@ -1603,8 +1592,7 @@ N-Source: Oxford2007 "For a star with no hydrogen content the limit is 1.44 sola
 	:le_7Pvl72x5ldIWyM98rQigfl_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:concept_c34 rdf:type skos:Concept .
 	:concept_c34 skos:prefLabel "c34" .
-	:concept_c34 Encountered on in neutron stars.
-N-Source: Oxford2007 "Encountered on in neutron stars.\nN-Source: Oxford2007"@en .
+	:concept_c34 skos:note "Encountered on in neutron stars.\nN-Source: Oxford2007"@en .
 	:tbx_en lime:entry :le_6FALe7hOPUW7ZnoYg4wi82 .
 	:le_6FALe7hOPUW7ZnoYg4wi82 rdf:type ontolex:LexicalEntry .
 	:le_6FALe7hOPUW7ZnoYg4wi82 rdfs:label "neutron degeneracy"@en .
@@ -2080,9 +2068,7 @@ N-Source: Oxford2007 "Encountered on in neutron stars.\nN-Source: Oxford2007"@en
 	:le_1hPLh5KawVRtIHQov0SgnO skos:note "Author[s]: Ridpath, Ian\nBook Title: Astronomía\nPublication Place: Spain\nPublisher: Oxford University Press\nPublication Year: 2003" .
 	:concept_c41 rdf:type skos:Concept .
 	:concept_c41 skos:prefLabel "c41" .
-	:concept_c41 Electron degeneracy supports white dwarf stars against further
-						collapse.
-N-Source: Oxford2007 "Electron degeneracy supports white dwarf stars against further\n collapse.\nN-Source: Oxford2007"@en .
+	:concept_c41 skos:note "Electron degeneracy supports white dwarf stars against further\n collapse.\nN-Source: Oxford2007"@en .
 	:tbx_en lime:entry :le_3yByVtrxoex3ekXvCgH8tg .
 	:le_3yByVtrxoex3ekXvCgH8tg rdf:type ontolex:LexicalEntry .
 	:le_3yByVtrxoex3ekXvCgH8tg rdfs:label "electron degeneracy"@en .

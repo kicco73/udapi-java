@@ -31,7 +31,7 @@ public class Concept {
 
 	public void addFeatureAsStringWithLanguage(String link, String description, String language) {
 		String string = SPARQLFormatter.formatObjectWithLanguage(description, language);
-		addFeature(description, string);
+		addFeature(link, string);
 	}
 
 	public void addFeature(String link, String object) {
