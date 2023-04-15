@@ -11,27 +11,23 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Word {
-	public String FQName;
-	public Form canonicalForm;
-	public String partOfSpeech;
-	public String language;
-	public WeakReference<Concept> concept;
-	public final Collection<Triple<String, String, String>> triples = new ArrayList<>();
-	public final Collection<Triple<String, String, Map<String,String>>> tripleObjects = new ArrayList<>();
-	public String lexiconFQN;
+	final public String FQName;
+	final public Form canonicalForm;
+	final public String partOfSpeech;
+	final public String language;
+	final public WeakReference<Concept> concept;
+	final public Collection<Triple<String, String, String>> triples = new ArrayList<>();
+	final public Collection<Triple<String, String, Map<String,String>>> tripleObjects = new ArrayList<>();
+	final public String lexiconFQN;
 	final public Map<String, String> senses = new HashMap<>();
-	final public Map<String, String> additionalInfo = new HashMap<>();
 	final private Map<String, Form> otherForms = new HashMap<>();
 	static final private IdGenerator idGenerator = new IdGenerator();
 
 	public Word(String lemma, String partOfSpeech, String language, Concept concept, String lexiconFQN) {
-		reuse(lemma, partOfSpeech, language, concept, lexiconFQN);
-	}
-
-	public void reuse(String lemma, String partOfSpeech, String language, Concept concept, String lexiconFQN) {
 		this.partOfSpeech = partOfSpeech;
 		this.language = language;
 		this.lexiconFQN = lexiconFQN;
+		this.concept = concept == null? null : new WeakReference<Concept>(concept);
 
 		String FQName = idGenerator.getId(String.format("%s+%s+%s", lemma, partOfSpeech, language));
 
@@ -43,10 +39,6 @@ public class Word {
 
 		String canonicalFormFQN = String.format("%s_lemma", this.FQName);
 		canonicalForm = new Form(canonicalFormFQN, lemma);
-		otherForms.clear();
-		senses.clear();
-		additionalInfo.clear();
-		this.concept = concept == null? null : new WeakReference<Concept>(concept);
 	}
 
 	public void addOtherForm(Form form) {

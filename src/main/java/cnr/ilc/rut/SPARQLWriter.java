@@ -78,10 +78,6 @@ public class SPARQLWriter implements TripleStoreInterface {
 		if (word.partOfSpeech != null)
 			insertTriple(word.FQName, "lexinfo:partOfSpeech", word.partOfSpeech);
 		insertTripleWithString(word.FQName, "vs:term_status", "working");
-
-		for (Entry<String,String> entry: word.additionalInfo.entrySet()) {
-			insertTripleWithString(word.FQName, entry.getKey(), entry.getValue());
-		}
 	
 		addMetaData(word.FQName); 
 	}
