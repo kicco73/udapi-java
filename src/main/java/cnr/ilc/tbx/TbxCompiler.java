@@ -1,22 +1,27 @@
 package cnr.ilc.tbx;
 import org.json.simple.JSONArray;
+import org.json.simple.JSONObject;
 import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 
 import cnr.ilc.rut.CountingInputStream;
 import cnr.ilc.rut.BaseCompiler;
+import cnr.ilc.rut.Concept;
 import cnr.ilc.rut.RutException;
 import cnr.ilc.rut.SPARQLWriter;
+import cnr.ilc.rut.Word;
 
 import javax.xml.parsers.*;
 import java.io.*;
-import java.util.HashSet;
+import java.util.ArrayList;
+import java.util.Collection;
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Set;
 
 public class TbxCompiler extends BaseCompiler {
 	private Document document;
 	private ConceptEntry conceptEntryParser;
-	private Set<String> concepts = new HashSet<>();
 	
     public TbxCompiler(InputStream inputStream, SPARQLWriter sparql) throws Exception {
 		super(inputStream, sparql);
@@ -47,22 +52,52 @@ public class TbxCompiler extends BaseCompiler {
 		}
 	}
 
-	@Override
-	public String toSPARQL() throws Exception {
+	private Collection<Concept> parseConcepts() {
+		Collection<Concept> concepts = new ArrayList<>();
+
 		NodeList conceptEntries = document.getElementsByTagName("conceptEntry");
-		
 		for (int i = 0; i < conceptEntries.getLength(); ++i)  {
 			Element conceptEntry = (Element) conceptEntries.item(i);
-			String conceptId = conceptEntryParser.parseConceptEntry(conceptEntry);
-			concepts.add(conceptId);
+			Concept concept = conceptEntryParser.parseConceptEntry(conceptEntry);
+			concepts.add(concept);
+		}		
+
+		return concepts;
+	}
+
+	private JSONObject convertConceptsToJSONObject(Collection<Concept> concepts) {
+		JSONObject jsonConcepts = new JSONObject();
+
+
+		for(Concept concept: concepts) {
+			Map<String, JSONArray> languages = new HashMap<>();
+			
+			for (Word word: concept.words) {
+				JSONArray wordsByLanguage = languages.get(word.language);
+				if (wordsByLanguage == null) {
+					wordsByLanguage = new JSONArray();
+					languages.put(word.language, wordsByLanguage);
+				}
+				wordsByLanguage.add(word.canonicalForm.text);
+			}
+			jsonConcepts.put(concept.id, languages);
 		}
 
-		JSONArray array = new JSONArray();
+		return jsonConcepts;
+	}
+
+	@Override
+	public String toSPARQL() throws Exception {
+		Collection<Concept> concepts = parseConcepts();
+
+		JSONArray jsonLanguages = new JSONArray();
 		Set<String> languages = conceptEntryParser.getLanguages();
-		array.addAll(languages);
-		metadata.put("languages", array);
-		metadata.put("numberOfConcepts", concepts.size());
+		jsonLanguages.addAll(languages);
+
+		metadata.put("languages", jsonLanguages);
+		metadata.put("concepts", convertConceptsToJSONObject(concepts));
 		metadata.put("numberOfTerms", conceptEntryParser.numberOfTerms);
+		metadata.put("numberOfConcepts", concepts.size());
 
 		return sparql.toString();
 	}

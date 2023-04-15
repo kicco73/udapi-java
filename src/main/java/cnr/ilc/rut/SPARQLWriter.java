@@ -91,8 +91,8 @@ public class SPARQLWriter {
 		insertTriple(lexicalSenseFQN, "rdf:type", "ontolex:LexicalSense"); 
 		if (definition != null)
 			insertTripleWithString(lexicalSenseFQN, "skos:definition", definition);
-		if (word.conceptFQN != null)
-			insertTriple(lexicalSenseFQN, "ontolex:reference", word.conceptFQN); 
+		if (word.concept != null)
+			insertTriple(lexicalSenseFQN, "ontolex:reference", word.concept.get().FQName); 
 		addMetaData(lexicalSenseFQN); 
 	}
 

@@ -1,6 +1,7 @@
 package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
+import cnr.ilc.rut.Concept;
 import cnr.ilc.rut.RutException;
 import cnr.ilc.rut.SPARQLWriter;
 import cnr.ilc.rut.Word;
@@ -18,7 +19,7 @@ public class TermSec {
 		this.sparql = sparql;
 	}
 	
-	private void parseAdministrativeStatus(Element termSec, Word word) {
+	private void parseAdministrativeStatus(Element termSec) {
 		final Map<String, String> statuses = Stream.of(new String[][] {
 			{ "admittedTerm-admn-sts", "lexinfo:admittedTerm" },
 			{ "deprecatedTerm-admn-sts", "lexinfo:deprecatedTerm" },
@@ -42,7 +43,7 @@ public class TermSec {
 		}
 	}
 
-	private void parseTermType(Element termSec, Word word) {
+	private void parseTermType(Element termSec) {
 		final Map<String, String> termTypes = Stream.of(new String[][] {
 			{ "acronym", "lexinfo:acronym" },
 			{ "fullForm", "lexinfo:fullForm" },
@@ -61,7 +62,7 @@ public class TermSec {
 		}
 	}
 
-	private void parseDescripGrp(Element termSec, Word word, String language) {
+	private void parseDescripGrp(Element termSec, String language) {
 		//Element descripGrp = (Element) termSec.getElementsByTagNameNS("*", "descripGrp").item(0);
 		Element descripGrp = termSec;
 		
@@ -96,33 +97,35 @@ public class TermSec {
 		}
 	}
 
-	public void parseTermSec(Element termSec, String lexiconFQN, String language, String conceptFQN) {
+	private void parseNote(Element termSec) {
+		String note = Nodes.getTextOfTag(termSec, "note");
+		if (note != null) {
+			sparql.insertTripleWithString(word.FQName, "skos:note", note);
+		}
+	}
+
+	public Word parseTermSec(Element termSec, String lexiconFQN, String language, Concept concept) {
 
 		String lemma = Nodes.getTextOfTag(termSec, "term");
 		String grammaticalGender = Nodes.getTextOfTag(termSec, "grammaticalGender");
-
-		if (lemma == null) return;
 
 		String partOfSpeech = Nodes.getTextOfTagOrAlternateTagWithAttribute(termSec, "partOfSpeech", "termNote", "type");
 		String partOfSpeechFQN = partOfSpeech != null? String.format("lexinfo:%s", partOfSpeech) : null;
 		
 		String grammaticalGenderFQN = String.format("lexinfo:%s", grammaticalGender);
 
-		word.reuse(lemma, partOfSpeechFQN, language);
-		word.conceptFQN = conceptFQN;
+		word = concept.newWord(lemma, partOfSpeechFQN, language);
 		if (grammaticalGender != null)
 			word.canonicalForm.features.put(grammaticalGenderFQN, "lexinfo:gender");
 
 		sparql.addWord(word, lexiconFQN, "ontolex:LexicalEntry");
-		parseTermType(termSec, word);
-		parseAdministrativeStatus(termSec, word);
-		parseDescripGrp(termSec, word, language);
 
-		String note = Nodes.getTextOfTag(termSec, "note");
-		if (note != null) {
-			sparql.insertTripleWithString(word.FQName, "skos:note", note);
-		}
+		parseTermType(termSec);
+		parseAdministrativeStatus(termSec);
+		parseDescripGrp(termSec, language);
+		parseNote(termSec);
 
+		return word;
 	}
 
 }

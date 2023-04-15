@@ -1,12 +1,13 @@
 package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
+import cnr.ilc.rut.Concept;
 import cnr.ilc.rut.IdGenerator;
-import cnr.ilc.rut.RutException;
 import cnr.ilc.rut.SPARQLWriter;
+import cnr.ilc.rut.Word;
 
+import java.util.Collection;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
@@ -27,11 +28,11 @@ public class ConceptEntry {
 		langSecParser = new LangSec(sparql);
 	}
 	
-	private void parseSubjectField(Element conceptEntry, String conceptFQN, String conceptId) {
+	private void parseSubjectField(Element conceptEntry, Concept concept, String conceptId) {
 		String subjectField = Nodes.getTextOfTagOrAlternateTagWithAttribute(conceptEntry, "subjectField", "descrip", "type");
 		if (subjectField == null) return;
 		
-		String subjectFieldFQN = String.format("%s_%s", conceptFQN, idGenerator.getId(subjectField));
+		String subjectFieldFQN = String.format("%s_%s", concept.FQName, idGenerator.getId(subjectField));
 		
 		if (!subjectFields.contains(subjectFieldFQN)) {
 			subjectFields.add(subjectFieldFQN);
@@ -39,10 +40,10 @@ public class ConceptEntry {
 			sparql.insertTripleWithString(subjectFieldFQN, "skos:prefLabel", subjectField);
 		}
 
-		sparql.insertTriple(conceptFQN, "skos:inScheme", subjectFieldFQN);
+		sparql.insertTriple(concept.FQName, "skos:inScheme", subjectFieldFQN);
 	}
 
-	private void parseConceptEntryChildren(Element root, String FQN) {
+	private void parseConceptEntryChildren(Element root, Concept concept) {
 		final Map<String, String> links = Stream.of(new String[][] {
 			{ "definition", "skos:definition" },
 			{ "note", "skos:note" },
@@ -56,12 +57,25 @@ public class ConceptEntry {
 			String link = entry.getValue();
 			String content = Nodes.getTextOfTag(root, key);
 			if (content != null) {
-				sparql.insertTripleWithUrlIfPossible(FQN, link, content);
+				sparql.insertTripleWithUrlIfPossible(concept.FQName, link, content);
 			}
 		}
 	}
 
-	public String parseConceptEntry(Element conceptEntry) {
+	private void parseLangSecs(Element conceptEntry, Concept concept) {
+
+		NodeList langSecs = conceptEntry.getElementsByTagNameNS("*", "langSec");
+		
+		for (int j = 0; j < langSecs.getLength(); ++j)  {
+			Element langSec = (Element) langSecs.item(j);
+			Collection<Word> terms = langSecParser.parseLangSec(langSec, concept);
+			numberOfTerms += terms.size();
+		}
+		
+		Nodes.removeNodesFromParsingTree(langSecs);
+	}
+
+	public Concept parseConceptEntry(Element conceptEntry) {
 		String id = conceptEntry.getAttribute("id");
 
 		if (id == null) {
@@ -69,23 +83,15 @@ public class ConceptEntry {
 			id = Long.toString(random.nextLong());
 		}
 
-		String conceptFQN = String.format(":concept_%s", id);
+		Concept concept = new Concept(id);
+		sparql.insertTriple(concept.FQName, "rdf:type", "skos:Concept");
+		sparql.insertTripleWithString(concept.FQName, "skos:prefLabel", id);
 
-		sparql.insertTriple(conceptFQN, "rdf:type", "skos:Concept");
-		sparql.insertTripleWithString(conceptFQN, "skos:prefLabel", id);
+		parseLangSecs(conceptEntry, concept);
+		parseConceptEntryChildren(conceptEntry, concept);	
+		parseSubjectField(conceptEntry, concept, id);
 
-		NodeList langSecs = conceptEntry.getElementsByTagNameNS("*", "langSec");
-
-		for (int j = 0; j < langSecs.getLength(); ++j)  {
-			Element langSec = (Element) langSecs.item(j);
-			numberOfTerms += langSecParser.parseLangSec(langSec, conceptFQN);
-		}
-
-		Nodes.removeNodesFromParsingTree(langSecs);
-		parseConceptEntryChildren(conceptEntry, conceptFQN);	
-		parseSubjectField(conceptEntry, conceptFQN, id);
-
-		return id;
+		return concept;
 	}
 
 	public Set<String> getLanguages() {

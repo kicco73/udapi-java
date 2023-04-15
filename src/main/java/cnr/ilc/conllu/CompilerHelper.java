@@ -15,7 +15,7 @@ import cnr.ilc.conllu.core.*;
 import cnr.ilc.rut.Form;
 import cnr.ilc.rut.Word;
 
-public class Compiler {
+public class CompilerHelper {
 
     private static Form createOtherForm(Word word, String writtenRep) {
         String FQName = String.format("%s_form_%s", word.FQName, writtenRep);
@@ -137,7 +137,7 @@ public class Compiler {
                 boolean needsCompile = true;
 
                 if (word == null) {
-                    word = new Word(lemma, partOfSpeech, language);
+                    word = new Word(lemma, partOfSpeech, language, null);
                     lemmas.put(key, word);
 
                     if (lemma.equals(writtenRep)) {

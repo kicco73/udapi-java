@@ -4,6 +4,7 @@
 
 package cnr.ilc.rut;
 
+import java.lang.ref.WeakReference;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -13,7 +14,7 @@ public class Word {
 	public Form canonicalForm;
 	public String partOfSpeech;
 	public String language;
-	public String conceptFQN;
+	public WeakReference<Concept> concept;
 	final public Map<String, String> senses = new HashMap<>();
 	final public Map<String, String> additionalInfo = new HashMap<>();
 	final private Map<String, Form> otherForms = new HashMap<>();
@@ -21,11 +22,11 @@ public class Word {
 
 	public Word() {}
 
-	public Word(String lemma, String partOfSpeech, String language) {
-		reuse(lemma, partOfSpeech, language);
+	public Word(String lemma, String partOfSpeech, String language, Concept concept) {
+		reuse(lemma, partOfSpeech, language, concept);
 	}
 
-	public void reuse(String lemma, String partOfSpeech, String language) {
+	public void reuse(String lemma, String partOfSpeech, String language, Concept concept) {
 		this.partOfSpeech = partOfSpeech;
 		this.language = language;
 
@@ -42,6 +43,7 @@ public class Word {
 		otherForms.clear();
 		senses.clear();
 		additionalInfo.clear();
+		this.concept = concept == null? null : new WeakReference<Concept>(concept);
 	}
 
 	public void addOtherForm(Form form) {
