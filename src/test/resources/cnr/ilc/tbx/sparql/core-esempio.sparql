@@ -9,13 +9,23 @@ PREFIX lime: <http://www.w3.org/ns/lemon/lime#>
 PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
-	:concept_c1 rdf:type skos:Concept .
-	:concept_c1 skos:prefLabel "c1" .
 	:tbx_en rdf:type lime:Lexicon .
 	:tbx_en lime:language "en" .
 	:tbx_en dct:creator "kicco" .
 	:tbx_en dct:created "2023-04-10T10:02+02:00" .
 	:tbx_en dct:modified "2023-04-10T10:02+02:00" .
+	:tbx_it rdf:type lime:Lexicon .
+	:tbx_it lime:language "it" .
+	:tbx_it dct:creator "kicco" .
+	:tbx_it dct:created "2023-04-10T10:02+02:00" .
+	:tbx_it dct:modified "2023-04-10T10:02+02:00" .
+	:tbx_fr rdf:type lime:Lexicon .
+	:tbx_fr lime:language "fr" .
+	:tbx_fr dct:creator "kicco" .
+	:tbx_fr dct:created "2023-04-10T10:02+02:00" .
+	:tbx_fr dct:modified "2023-04-10T10:02+02:00" .
+	:concept_c1 rdf:type skos:Concept .
+	:concept_c1 skos:prefLabel "c1" .
 	:tbx_en lime:entry :le_7KRZyjSSMokrQpr2Kq8HtF .
 	:le_7KRZyjSSMokrQpr2Kq8HtF rdf:type ontolex:LexicalEntry .
 	:le_7KRZyjSSMokrQpr2Kq8HtF rdfs:label "goods vehicle"@en .
@@ -54,11 +64,6 @@ INSERT DATA {
 	:le_3W2XxrhsggXVPPhAqGsFS9_lemma dct:creator "kicco" .
 	:le_3W2XxrhsggXVPPhAqGsFS9_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_3W2XxrhsggXVPPhAqGsFS9_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:tbx_fr rdf:type lime:Lexicon .
-	:tbx_fr lime:language "fr" .
-	:tbx_fr dct:creator "kicco" .
-	:tbx_fr dct:created "2023-04-10T10:02+02:00" .
-	:tbx_fr dct:modified "2023-04-10T10:02+02:00" .
 	:tbx_fr lime:entry :le_577oPcUnQ1vPTclUBY0HE6 .
 	:le_577oPcUnQ1vPTclUBY0HE6 rdf:type ontolex:LexicalEntry .
 	:le_577oPcUnQ1vPTclUBY0HE6 rdfs:label "véhicule utilitaire"@fr .
@@ -79,11 +84,6 @@ INSERT DATA {
 	:le_577oPcUnQ1vPTclUBY0HE6_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_577oPcUnQ1vPTclUBY0HE6_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:le_577oPcUnQ1vPTclUBY0HE6 skos:note "On distingue le véhicule utilitaire léger, aussi appelé VUL, défini par son PTAC (poids total autorisé en charge)\n qui ne doit pas ex-céder 3,5 tonnes et le véhicule utilitaire poids lourd (aussi appelé camion poids lourd)\n sont quant à eux définis par un PTAC supérieur à 3,5 tonnes." .
-	:tbx_it rdf:type lime:Lexicon .
-	:tbx_it lime:language "it" .
-	:tbx_it dct:creator "kicco" .
-	:tbx_it dct:created "2023-04-10T10:02+02:00" .
-	:tbx_it dct:modified "2023-04-10T10:02+02:00" .
 	:tbx_it lime:entry :le_NjeZd1t4MbZinUNMDUVH8 .
 	:le_NjeZd1t4MbZinUNMDUVH8 rdf:type ontolex:LexicalEntry .
 	:le_NjeZd1t4MbZinUNMDUVH8 rdfs:label "veicolo commerciale"@it .

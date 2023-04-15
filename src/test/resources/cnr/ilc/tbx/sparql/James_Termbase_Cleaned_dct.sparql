@@ -9,13 +9,33 @@ PREFIX lime: <http://www.w3.org/ns/lemon/lime#>
 PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
-	:concept_c9680bce6-2c85-47ed-913a-68e64b427708 rdf:type skos:Concept .
-	:concept_c9680bce6-2c85-47ed-913a-68e64b427708 skos:prefLabel "c9680bce6-2c85-47ed-913a-68e64b427708" .
+	:tbx_de rdf:type lime:Lexicon .
+	:tbx_de lime:language "de" .
+	:tbx_de dct:creator "kicco" .
+	:tbx_de dct:created "2023-04-10T10:02+02:00" .
+	:tbx_de dct:modified "2023-04-10T10:02+02:00" .
 	:tbx_en rdf:type lime:Lexicon .
 	:tbx_en lime:language "en" .
 	:tbx_en dct:creator "kicco" .
 	:tbx_en dct:created "2023-04-10T10:02+02:00" .
 	:tbx_en dct:modified "2023-04-10T10:02+02:00" .
+	:tbx_ko rdf:type lime:Lexicon .
+	:tbx_ko lime:language "ko" .
+	:tbx_ko dct:creator "kicco" .
+	:tbx_ko dct:created "2023-04-10T10:02+02:00" .
+	:tbx_ko dct:modified "2023-04-10T10:02+02:00" .
+	:tbx_hu rdf:type lime:Lexicon .
+	:tbx_hu lime:language "hu" .
+	:tbx_hu dct:creator "kicco" .
+	:tbx_hu dct:created "2023-04-10T10:02+02:00" .
+	:tbx_hu dct:modified "2023-04-10T10:02+02:00" .
+	:tbx_es rdf:type lime:Lexicon .
+	:tbx_es lime:language "es" .
+	:tbx_es dct:creator "kicco" .
+	:tbx_es dct:created "2023-04-10T10:02+02:00" .
+	:tbx_es dct:modified "2023-04-10T10:02+02:00" .
+	:concept_c9680bce6-2c85-47ed-913a-68e64b427708 rdf:type skos:Concept .
+	:concept_c9680bce6-2c85-47ed-913a-68e64b427708 skos:prefLabel "c9680bce6-2c85-47ed-913a-68e64b427708" .
 	:tbx_en lime:entry :le_2Qb3H8sa1SfH1sGbqfRTWJ_noun .
 	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun rdf:type ontolex:LexicalEntry .
 	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun rdfs:label "mouse"@en .
@@ -37,11 +57,6 @@ INSERT DATA {
 	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	:tbx_de rdf:type lime:Lexicon .
-	:tbx_de lime:language "de" .
-	:tbx_de dct:creator "kicco" .
-	:tbx_de dct:created "2023-04-10T10:02+02:00" .
-	:tbx_de dct:modified "2023-04-10T10:02+02:00" .
 	:tbx_de lime:entry :le_6Han44sibupa7x0jPUq8BP_noun .
 	:le_6Han44sibupa7x0jPUq8BP_noun rdf:type ontolex:LexicalEntry .
 	:le_6Han44sibupa7x0jPUq8BP_noun rdfs:label "Maus"@de .
@@ -65,6 +80,9 @@ INSERT DATA {
 	:le_6Han44sibupa7x0jPUq8BP_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f rdf:type skos:Concept .
 	:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f skos:prefLabel "ca60e0cb9-30d3-466f-aba8-323294edcb4f" .
+	:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f_2SU1vPZE67x7OQ2keemVas rdf:type skos:ConceptScheme .
+	:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f_2SU1vPZE67x7OQ2keemVas skos:prefLabel "clothing" .
+	:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f skos:inScheme :concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f_2SU1vPZE67x7OQ2keemVas .
 	:tbx_en lime:entry :le_5PhpMjASPJuEGEjWQzFRoD_noun .
 	:le_5PhpMjASPJuEGEjWQzFRoD_noun rdf:type ontolex:LexicalEntry .
 	:le_5PhpMjASPJuEGEjWQzFRoD_noun rdfs:label "shoe"@en .
@@ -86,11 +104,6 @@ INSERT DATA {
 	:le_5PhpMjASPJuEGEjWQzFRoD_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_5PhpMjASPJuEGEjWQzFRoD_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:le_5PhpMjASPJuEGEjWQzFRoD_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	:tbx_es rdf:type lime:Lexicon .
-	:tbx_es lime:language "es" .
-	:tbx_es dct:creator "kicco" .
-	:tbx_es dct:created "2023-04-10T10:02+02:00" .
-	:tbx_es dct:modified "2023-04-10T10:02+02:00" .
 	:tbx_es lime:entry :le_3Y9UyvanjP1ACqwPy3ysne_noun .
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun rdf:type ontolex:LexicalEntry .
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun rdfs:label "zapato"@es .
@@ -112,11 +125,12 @@ INSERT DATA {
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f_2SU1vPZE67x7OQ2keemVas rdf:type skos:ConceptScheme .
-	:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f_2SU1vPZE67x7OQ2keemVas skos:prefLabel "clothing" .
-	:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f skos:inScheme :concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f_2SU1vPZE67x7OQ2keemVas .
 	:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a rdf:type skos:Concept .
 	:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a skos:prefLabel "c7f4dde5b-7930-40bf-8eee-f14545933a0a" .
+	:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a skos:note "this is a note\nthis is also a note" .
+	:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a_4q02ThPHBUQVAX9bMGj5jq rdf:type skos:ConceptScheme .
+	:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a_4q02ThPHBUQVAX9bMGj5jq skos:prefLabel "---" .
+	:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a skos:inScheme :concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a_4q02ThPHBUQVAX9bMGj5jq .
 	:tbx_en lime:entry :le_6IGu2I1G5Xq5khSTcONslT_noun .
 	:le_6IGu2I1G5Xq5khSTcONslT_noun rdf:type ontolex:LexicalEntry .
 	:le_6IGu2I1G5Xq5khSTcONslT_noun rdfs:label "worm"@en .
@@ -201,11 +215,6 @@ INSERT DATA {
 	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	:tbx_hu rdf:type lime:Lexicon .
-	:tbx_hu lime:language "hu" .
-	:tbx_hu dct:creator "kicco" .
-	:tbx_hu dct:created "2023-04-10T10:02+02:00" .
-	:tbx_hu dct:modified "2023-04-10T10:02+02:00" .
 	:tbx_hu lime:entry :le_12LR32yX4GlBIvt6D3RXpW_noun .
 	:le_12LR32yX4GlBIvt6D3RXpW_noun rdf:type ontolex:LexicalEntry .
 	:le_12LR32yX4GlBIvt6D3RXpW_noun rdfs:label "kukak"@hu .
@@ -227,17 +236,11 @@ INSERT DATA {
 	:le_12LR32yX4GlBIvt6D3RXpW_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_12LR32yX4GlBIvt6D3RXpW_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:le_12LR32yX4GlBIvt6D3RXpW_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a skos:note "this is a note\nthis is also a note" .
-	:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a_4q02ThPHBUQVAX9bMGj5jq rdf:type skos:ConceptScheme .
-	:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a_4q02ThPHBUQVAX9bMGj5jq skos:prefLabel "---" .
-	:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a skos:inScheme :concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a_4q02ThPHBUQVAX9bMGj5jq .
 	:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 rdf:type skos:Concept .
 	:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 skos:prefLabel "c7a541f0f-09e8-48a6-b346-8371f80800d0" .
-	:tbx_ko rdf:type lime:Lexicon .
-	:tbx_ko lime:language "ko" .
-	:tbx_ko dct:creator "kicco" .
-	:tbx_ko dct:created "2023-04-10T10:02+02:00" .
-	:tbx_ko dct:modified "2023-04-10T10:02+02:00" .
+	:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0_2zW02rM8gJs4PlBii1YtRp rdf:type skos:ConceptScheme .
+	:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0_2zW02rM8gJs4PlBii1YtRp skos:prefLabel "food" .
+	:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 skos:inScheme :concept_c7a541f0f-09e8-48a6-b346-8371f80800d0_2zW02rM8gJs4PlBii1YtRp .
 	:tbx_ko lime:entry :le_4lBMEyLLVz4IWVk8UvjnSI_noun .
 	:le_4lBMEyLLVz4IWVk8UvjnSI_noun rdf:type ontolex:LexicalEntry .
 	:le_4lBMEyLLVz4IWVk8UvjnSI_noun rdfs:label "수박"@ko .
@@ -280,8 +283,5 @@ INSERT DATA {
 	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0_2zW02rM8gJs4PlBii1YtRp rdf:type skos:ConceptScheme .
-	:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0_2zW02rM8gJs4PlBii1YtRp skos:prefLabel "food" .
-	:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 skos:inScheme :concept_c7a541f0f-09e8-48a6-b346-8371f80800d0_2zW02rM8gJs4PlBii1YtRp .
 }
 

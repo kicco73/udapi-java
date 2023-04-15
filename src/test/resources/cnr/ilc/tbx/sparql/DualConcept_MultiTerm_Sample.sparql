@@ -9,13 +9,21 @@ PREFIX lime: <http://www.w3.org/ns/lemon/lime#>
 PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
-	:concept_C001 rdf:type skos:Concept .
-	:concept_C001 skos:prefLabel "C001" .
+	:tbx_de rdf:type lime:Lexicon .
+	:tbx_de lime:language "de" .
+	:tbx_de dct:creator "kicco" .
+	:tbx_de dct:created "2023-04-10T10:02+02:00" .
+	:tbx_de dct:modified "2023-04-10T10:02+02:00" .
 	:tbx_en rdf:type lime:Lexicon .
 	:tbx_en lime:language "en" .
 	:tbx_en dct:creator "kicco" .
 	:tbx_en dct:created "2023-04-10T10:02+02:00" .
 	:tbx_en dct:modified "2023-04-10T10:02+02:00" .
+	:concept_C001 rdf:type skos:Concept .
+	:concept_C001 skos:prefLabel "C001" .
+	:concept_C001_opa4aSDlpMCpGKFg8OQJW rdf:type skos:ConceptScheme .
+	:concept_C001_opa4aSDlpMCpGKFg8OQJW skos:prefLabel "Currency" .
+	:concept_C001 skos:inScheme :concept_C001_opa4aSDlpMCpGKFg8OQJW .
 	:tbx_en lime:entry :le_7iEdguI84Wvl0gzQ9Z5SrZ_noun .
 	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun rdf:type ontolex:LexicalEntry .
 	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun rdfs:label "money"@en .
@@ -104,11 +112,6 @@ INSERT DATA {
 	:le_574aZuyaTYkQrFAbE5x404_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:le_574aZuyaTYkQrFAbE5x404_noun lexinfo:normativeAuthorization lexinfo:deprecatedTerm .
 	:le_574aZuyaTYkQrFAbE5x404_noun skos:note "a older slang synonym" .
-	:tbx_de rdf:type lime:Lexicon .
-	:tbx_de lime:language "de" .
-	:tbx_de dct:creator "kicco" .
-	:tbx_de dct:created "2023-04-10T10:02+02:00" .
-	:tbx_de dct:modified "2023-04-10T10:02+02:00" .
 	:tbx_de lime:entry :le_4gZKsCKkBWHnzw3ufyJrjP_noun .
 	:le_4gZKsCKkBWHnzw3ufyJrjP_noun rdf:type ontolex:LexicalEntry .
 	:le_4gZKsCKkBWHnzw3ufyJrjP_noun rdfs:label "Geld"@de .
@@ -197,11 +200,11 @@ INSERT DATA {
 	:le_5OUyZj4CLzkRjNPxZZwMSM_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:le_5OUyZj4CLzkRjNPxZZwMSM_noun lexinfo:normativeAuthorization lexinfo:deprecatedTerm .
 	:le_5OUyZj4CLzkRjNPxZZwMSM_noun skos:note "an older slang form used shortly after WW2" .
-	:concept_C001_opa4aSDlpMCpGKFg8OQJW rdf:type skos:ConceptScheme .
-	:concept_C001_opa4aSDlpMCpGKFg8OQJW skos:prefLabel "Currency" .
-	:concept_C001 skos:inScheme :concept_C001_opa4aSDlpMCpGKFg8OQJW .
 	:concept_C002 rdf:type skos:Concept .
 	:concept_C002 skos:prefLabel "C002" .
+	:concept_C002_krpCWEW7cxlH0Qa75sfpI rdf:type skos:ConceptScheme .
+	:concept_C002_krpCWEW7cxlH0Qa75sfpI skos:prefLabel "Music" .
+	:concept_C002 skos:inScheme :concept_C002_krpCWEW7cxlH0Qa75sfpI .
 	:tbx_en lime:entry :le_2vTRVrhRrs2dhlUu2Dpi5_noun .
 	:le_2vTRVrhRrs2dhlUu2Dpi5_noun rdf:type ontolex:LexicalEntry .
 	:le_2vTRVrhRrs2dhlUu2Dpi5_noun rdfs:label "music"@en .
@@ -289,8 +292,5 @@ INSERT DATA {
 	:le_39ZSiP3gZjMNU0Nww336q1_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:le_39ZSiP3gZjMNU0Nww336q1_noun lexinfo:normativeAuthorization lexinfo:deprecatedTerm .
 	:le_39ZSiP3gZjMNU0Nww336q1_noun skos:note "slang term for music, specifically the making of, used mostly by musicians (i.e.\n \"Haben wir 'ne Mucke!\")" .
-	:concept_C002_krpCWEW7cxlH0Qa75sfpI rdf:type skos:ConceptScheme .
-	:concept_C002_krpCWEW7cxlH0Qa75sfpI skos:prefLabel "Music" .
-	:concept_C002 skos:inScheme :concept_C002_krpCWEW7cxlH0Qa75sfpI .
 }
 

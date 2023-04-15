@@ -2,24 +2,17 @@ package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
 import cnr.ilc.rut.Concept;
-import cnr.ilc.rut.SPARQLWriter;
+import cnr.ilc.rut.SPARQLFormatter;
 import cnr.ilc.rut.Word;
 
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 
 public class LangSec {
-	private SPARQLWriter sparql;
-	protected final Set<String> lexicons = new HashSet<>();
-	TermSec termSecParser;
-
-	public LangSec(SPARQLWriter sparql) {
-		this.sparql = sparql;
-		termSecParser = new TermSec(sparql);
-	}
+	protected final Map<String, String> lexicons = new HashMap<>();
+	TermSec termSecParser = new TermSec();
 
 	private void parseLangSecChildren(Element langSec, Concept concept, String language) {
 
@@ -29,35 +22,31 @@ public class LangSec {
 		String externalCrossReference = Nodes.getTextOfTag(langSec, "externalCrossReference");
 
 		if (note != null) {
-			sparql.insertTripleWithLanguage(concept.FQName, "skos:note", note, language);
+			concept.addFeatureAsStringWithLanguage("skos:note", note, language);		
 		}
+		
 		if (definition == null) return;
 
-		String value = sparql.formatObjectWithLanguage(definition, language);
-
 		if (source == null && externalCrossReference == null) {
-			sparql.insertTriple(concept.FQName, "skos:definition", value);
+			concept.addFeatureAsStringWithLanguage("skos:definition", definition, language);
 		} else {
-			Map<String, String> content = new HashMap<>();
-			content.put("rdf:value", value);
+			Map<String, String> object = new HashMap<>();
+			object.put("rdf:value", SPARQLFormatter.formatObjectWithLanguage(definition, language));
+		
+			if (source != null) 
+				object.put("dct:source", SPARQLFormatter.formatObjectWithUrlIfPossible(source));
 			
-			if (source != null)
-				content.put("dct:source", sparql.formatObjectWithUrlIfPossible(source));
-			if (externalCrossReference != null)
-				content.put("dct:identifier", sparql.formatObjectWithUrlIfPossible(externalCrossReference));
+			if (externalCrossReference != null) 
+				object.put("dct:identifier", SPARQLFormatter.formatObjectWithUrlIfPossible(externalCrossReference));
 	
-			sparql.insertTriple(concept.FQName, "skos:definition", content);	
+			concept.addFeature("skos:definition", object);
 		}
 	}
 
 	public Collection<Word> parseLangSec(Element langSec, Concept concept) {
 		String lang = langSec.getAttribute("xml:lang");
 		String lexiconFQN = String.format(":tbx_%s", lang);
-
-		if (!lexicons.contains(lang)) {
-			lexicons.add(lang);
-			lexiconFQN = sparql.createLexicon(lexiconFQN, lang);
-		}
+		lexicons.put(lang, lexiconFQN);
 
 		Collection<Word> terms = new HashSet<>();
 		NodeList termSecs = langSec.getElementsByTagNameNS("*", "termSec");

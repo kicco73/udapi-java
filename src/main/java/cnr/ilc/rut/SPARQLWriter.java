@@ -4,8 +4,6 @@
 
 package cnr.ilc.rut;
 
-import java.net.MalformedURLException;
-import java.net.URL;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -17,6 +15,7 @@ public class SPARQLWriter {
 	final private StringBuffer buffer = new StringBuffer();
 	final private String creator;
 	final private int chunkSize;
+	final private IdGenerator idGenerator = new IdGenerator();
 	private int numberOfTriples = 0;
 	private String prefixes =
 		"""		
@@ -70,8 +69,8 @@ public class SPARQLWriter {
 		insertTripleWithString(entryFQN, "dct:modified", date + ":00");
 	}
 
-	private void createWordEntry(String lexiconFQN, Word word, String rdfType) {
-		insertTriple(lexiconFQN, "lime:entry", word.FQName);       
+	private void createWordEntry(Word word, String rdfType) {
+		insertTriple(word.lexiconFQN, "lime:entry", word.FQName);       
 		
 		insertTriple(word.FQName, "rdf:type", rdfType);   
 		insertTripleWithLanguage(word.FQName, "rdfs:label", word.canonicalForm.text, word.language);        
@@ -149,46 +148,54 @@ public class SPARQLWriter {
 		return lexiconFQN;
 	}
 
-	public void addWord(Word word, String lexiconFQN, String rdfType) {
-		createWordEntry(lexiconFQN, word, rdfType);
+	private void createFeatures(Word word) {		
+		for (Triple<String, String, String> feature: word.triples) {
+			insertTriple(feature.first, feature.second, (String) feature.third);
+		}
+		for (Triple<String, String, Map<String,String>> feature: word.tripleObjects) {
+			if (feature.third instanceof Map)
+			insertTriple(feature.first, feature.second, feature.third);
+		}
+	}
+
+	public void addWord(Word word, String rdfType) {
+		createWordEntry(word, rdfType);
 		createLexicalSenses(word);
 		createCanonicalForm(word);
 		createOtherForms(word);
+		createFeatures(word);
 	}
 
-	public String formatObjectWithUrlIfPossible(String object) {
-		try {
-			new URL(object);
-			object = String.format("<%s>", object);
+	public void addConcept(Concept concept) {
+		insertTriple(concept.FQName, "rdf:type", "skos:Concept");
+		insertTripleWithString(concept.FQName, "skos:prefLabel", concept.id);
+
+		for (Pair<String, String> feature: concept.features) {
+			insertTriple(concept.FQName, feature.first, feature.second);
 		}
-		catch (MalformedURLException e) {
-			object = formatObject(object);
+
+		for (Pair<String, Map<String,String>> feature: concept.featureObjects) {
+			insertTriple(concept.FQName, feature.first, (Map<String,String>) feature.second);
 		}
-		return object;
-	}
 
-	public String formatObjectWithLanguage(String object, String language) {
-		object = String.format("%s@%s", formatObject(object), language);
-		return object;
-	}
-
-	private String formatObject(String object) {
-		object = object.replaceAll("\"", "\\\\\"");
-		object = object.replaceAll("\n", "\\\\n");
-		object = String.format("\"%s\"", object.trim());
-		return object;
+		for (String subjectField: concept.subjectFields) {
+			String subjectFieldFQN = String.format("%s_%s", concept.FQName, idGenerator.getId(subjectField));
+			insertTriple(subjectFieldFQN, "rdf:type", "skos:ConceptScheme");
+			insertTripleWithString(subjectFieldFQN, "skos:prefLabel", subjectField);
+			insertTriple(concept.FQName, "skos:inScheme", subjectFieldFQN);
+		}
 	}
 
 	public void insertTripleWithUrlIfPossible(String subject, String link, String object) {
-		insertTriple(subject, link, formatObjectWithUrlIfPossible(object));
+		insertTriple(subject, link, SPARQLFormatter.formatObjectWithUrlIfPossible(object));
 	}
 
 	public void insertTripleWithLanguage(String subject, String link, String object, String language) {
-		insertTriple(subject, link, formatObjectWithLanguage(object, language));
+		insertTriple(subject, link, SPARQLFormatter.formatObjectWithLanguage(object, language));
 	}
 
 	public void insertTripleWithString(String subject, String link, String object) {
-		insertTriple(subject, link, formatObject(object));
+		insertTriple(subject, link, SPARQLFormatter.formatObject(object));
 	}
 
 	@Override

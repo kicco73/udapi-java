@@ -40,11 +40,11 @@ public class ConnluCompiler extends BaseCompiler {
 
     @Override
     public String toSPARQL() throws Exception {
-        Collection<Word> words = CompilerHelper.compileLexicon(document, namespace, language);
         String lexiconFQN = sparql.createLexicon(":connll-u", language);
+        Collection<Word> words = CompilerHelper.compileLexicon(document, namespace, language, lexiconFQN);
      
         for (Word word: words) {
-            sparql.addWord(word, lexiconFQN, "ontolex:Word");
+            sparql.addWord(word, "ontolex:Word");
         }
 
         return sparql.toString();

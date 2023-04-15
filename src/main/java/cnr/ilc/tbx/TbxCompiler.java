@@ -5,6 +5,8 @@ import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 
 import cnr.ilc.rut.CountingInputStream;
+import cnr.ilc.rut.IdGenerator;
+import cnr.ilc.rut.Pair;
 import cnr.ilc.rut.BaseCompiler;
 import cnr.ilc.rut.Concept;
 import cnr.ilc.rut.RutException;
@@ -18,14 +20,17 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
+import java.util.Map.Entry;
 
 public class TbxCompiler extends BaseCompiler {
 	private Document document;
 	private ConceptEntry conceptEntryParser;
-	
+	private Map<String, String> lexicons = new HashMap<>();
+	private IdGenerator idGenerator = new IdGenerator();
+
     public TbxCompiler(InputStream inputStream, SPARQLWriter sparql) throws Exception {
 		super(inputStream, sparql);
-		conceptEntryParser = new ConceptEntry(sparql);
+		conceptEntryParser = new ConceptEntry();
 
 		CountingInputStream countingInputStream = new CountingInputStream(inputStream);
 
@@ -60,6 +65,7 @@ public class TbxCompiler extends BaseCompiler {
 			Element conceptEntry = (Element) conceptEntries.item(i);
 			Concept concept = conceptEntryParser.parseConceptEntry(conceptEntry);
 			concepts.add(concept);
+			lexicons.putAll(conceptEntryParser.getLexicons());
 		}		
 
 		return concepts;
@@ -86,9 +92,29 @@ public class TbxCompiler extends BaseCompiler {
 		return jsonConcepts;
 	}
 
+	private void addLexicons() {
+		for (Entry<String, String> lexicon: lexicons.entrySet()) {
+			String language = lexicon.getKey();
+			String lexiconFQN = lexicon.getValue();
+			lexiconFQN = sparql.createLexicon(lexiconFQN, language);
+		}
+	}
+
+	private void writeConcepts(Collection<Concept> concepts) {
+		addLexicons();
+		for (Concept concept: concepts) {
+			sparql.addConcept(concept);
+			for (Word word: concept.words) {
+				sparql.addWord(word, "ontolex:LexicalEntry");
+			}
+		}
+	}
+
 	@Override
 	public String toSPARQL() throws Exception {
 		Collection<Concept> concepts = parseConcepts();
+
+		writeConcepts(concepts);
 
 		JSONArray jsonLanguages = new JSONArray();
 		Set<String> languages = conceptEntryParser.getLanguages();

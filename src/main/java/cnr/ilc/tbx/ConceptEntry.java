@@ -2,12 +2,9 @@ package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
 import cnr.ilc.rut.Concept;
-import cnr.ilc.rut.IdGenerator;
-import cnr.ilc.rut.SPARQLWriter;
 import cnr.ilc.rut.Word;
 
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
@@ -17,30 +14,17 @@ import java.util.stream.Stream;
 
 
 public class ConceptEntry {
-	static private IdGenerator idGenerator = new IdGenerator();
-	private SPARQLWriter sparql;
 	private LangSec langSecParser;
-	private Set<String> subjectFields = new HashSet<>();
 	protected int numberOfTerms = 0;
 
-    public ConceptEntry(SPARQLWriter sparql) throws Exception {
-		this.sparql = sparql;
-		langSecParser = new LangSec(sparql);
+    public ConceptEntry() throws Exception {
+		langSecParser = new LangSec();
 	}
 	
 	private void parseSubjectField(Element conceptEntry, Concept concept, String conceptId) {
 		String subjectField = Nodes.getTextOfTagOrAlternateTagWithAttribute(conceptEntry, "subjectField", "descrip", "type");
 		if (subjectField == null) return;
-		
-		String subjectFieldFQN = String.format("%s_%s", concept.FQName, idGenerator.getId(subjectField));
-		
-		if (!subjectFields.contains(subjectFieldFQN)) {
-			subjectFields.add(subjectFieldFQN);
-			sparql.insertTriple(subjectFieldFQN, "rdf:type", "skos:ConceptScheme");
-			sparql.insertTripleWithString(subjectFieldFQN, "skos:prefLabel", subjectField);
-		}
-
-		sparql.insertTriple(concept.FQName, "skos:inScheme", subjectFieldFQN);
+		concept.subjectFields.add(subjectField);
 	}
 
 	private void parseConceptEntryChildren(Element root, Concept concept) {
@@ -57,7 +41,7 @@ public class ConceptEntry {
 			String link = entry.getValue();
 			String content = Nodes.getTextOfTag(root, key);
 			if (content != null) {
-				sparql.insertTripleWithUrlIfPossible(concept.FQName, link, content);
+				concept.addFeatureAsPossibleUrl(link, content);
 			}
 		}
 	}
@@ -84,8 +68,6 @@ public class ConceptEntry {
 		}
 
 		Concept concept = new Concept(id);
-		sparql.insertTriple(concept.FQName, "rdf:type", "skos:Concept");
-		sparql.insertTripleWithString(concept.FQName, "skos:prefLabel", id);
 
 		parseLangSecs(conceptEntry, concept);
 		parseConceptEntryChildren(conceptEntry, concept);	
@@ -95,7 +77,10 @@ public class ConceptEntry {
 	}
 
 	public Set<String> getLanguages() {
-		return langSecParser.lexicons;
+		return langSecParser.lexicons.keySet();
 	}
 
+	public Map<String, String> getLexicons() {
+		return langSecParser.lexicons;
+	}
 }

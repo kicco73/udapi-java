@@ -102,7 +102,7 @@ public class CompilerHelper {
         form.features.putAll(features);   
     }
 
-    static public Collection<Word> compileLexicon(Document document, String namespace, String language) {
+    static public Collection<Word> compileLexicon(Document document, String namespace, String language, String lexiconFQN) {
 
         final Map<String, String> parts = Stream.of(new String[][] {
                 { "ADV", "lexinfo:adverb" },
@@ -137,7 +137,7 @@ public class CompilerHelper {
                 boolean needsCompile = true;
 
                 if (word == null) {
-                    word = new Word(lemma, partOfSpeech, language, null);
+                    word = new Word(lemma, partOfSpeech, language, null, lexiconFQN);
                     lemmas.put(key, word);
 
                     if (lemma.equals(writtenRep)) {

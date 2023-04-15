@@ -3,7 +3,7 @@ import org.w3c.dom.*;
 
 import cnr.ilc.rut.Concept;
 import cnr.ilc.rut.RutException;
-import cnr.ilc.rut.SPARQLWriter;
+import cnr.ilc.rut.SPARQLFormatter;
 import cnr.ilc.rut.Word;
 
 import java.util.HashMap;
@@ -12,12 +12,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class TermSec {
-	private SPARQLWriter sparql;
-	private Word word = new Word();
-
-    public TermSec(SPARQLWriter sparql) {
-		this.sparql = sparql;
-	}
+	private Word word;
 	
 	private void parseAdministrativeStatus(Element termSec) {
 		final Map<String, String> statuses = Stream.of(new String[][] {
@@ -37,9 +32,10 @@ public class TermSec {
 
 				System.err.println(ANSI_YELLOW+"Warning: unknown administrative status "+ status + ANSI_RESET);
 				//throw new RutException(String.format("Unknown administrative status: %s", status));
+				return;
 			}
-			else
-				sparql.insertTriple(word.FQName, "lexinfo:normativeAuthorization", translatedStatus);
+			
+			word.addFeature("lexinfo:normativeAuthorization", translatedStatus);
 		}
 	}
 
@@ -58,7 +54,7 @@ public class TermSec {
 			String translatedType = termTypes.get(termType);
 			if (translatedType == null) 
 				throw new RutException(String.format("Unknown term type: %s", translatedType));
-			sparql.insertTriple(word.FQName, "lexinfo:termType", translatedType);
+				word.addFeature("lexinfo:termType", translatedType);
 		}
 	}
 
@@ -73,34 +69,35 @@ public class TermSec {
 
 		if (context != null) {
 			Map<String, String> object = new HashMap<>();
-			object.put("rdf:value", sparql.formatObjectWithLanguage(context, language));
-
+			object.put("rdf:value", SPARQLFormatter.formatObjectWithLanguage(context, language));
+		
 			if (source != null) 
-				object.put("dct:source", sparql.formatObjectWithUrlIfPossible(source));
+				object.put("dct:source", SPARQLFormatter.formatObjectWithUrlIfPossible(source));
 			
 			if (externalCrossReference != null) 
-				object.put("dct:identifier", sparql.formatObjectWithUrlIfPossible(externalCrossReference));
-
+				object.put("dct:identifier", SPARQLFormatter.formatObjectWithUrlIfPossible(externalCrossReference));
+	
 			if (crossReference != null) 
-				object.put("rdf:seeAlso", sparql.formatObjectWithUrlIfPossible(crossReference));
-
-			sparql.insertTriple(word.FQName+"_sense", "ontolex:usage", object);
+				object.put("rdf:seeAlso", SPARQLFormatter.formatObjectWithUrlIfPossible(crossReference));
+	
+			word.addFeature(word.FQName+"_sense", "ontolex:usage", object);
+			
 		} else {
 			if (source != null)
-				sparql.insertTripleWithUrlIfPossible(word.FQName, "dct:source", source);
+				word.addFeatureAsUrlIfPossible("dct:source", source);
 
 			if (externalCrossReference != null)
-				sparql.insertTripleWithUrlIfPossible(word.FQName, "rdf:seeAlso", externalCrossReference);
+				word.addFeatureAsUrlIfPossible("rdf:seeAlso", externalCrossReference);
 
 			if (crossReference != null)
-				sparql.insertTripleWithUrlIfPossible(word.FQName, "rdf:seeAlso", crossReference);
+				word.addFeatureAsUrlIfPossible("rdf:seeAlso", crossReference);
 		}
 	}
 
 	private void parseNote(Element termSec) {
 		String note = Nodes.getTextOfTag(termSec, "note");
 		if (note != null) {
-			sparql.insertTripleWithString(word.FQName, "skos:note", note);
+			word.addFeatureAsString("skos:note", note);
 		}
 	}
 
@@ -114,11 +111,9 @@ public class TermSec {
 		
 		String grammaticalGenderFQN = String.format("lexinfo:%s", grammaticalGender);
 
-		word = concept.newWord(lemma, partOfSpeechFQN, language);
+		word = concept.newWord(lemma, partOfSpeechFQN, language, lexiconFQN);
 		if (grammaticalGender != null)
 			word.canonicalForm.features.put(grammaticalGenderFQN, "lexinfo:gender");
-
-		sparql.addWord(word, lexiconFQN, "ontolex:LexicalEntry");
 
 		parseTermType(termSec);
 		parseAdministrativeStatus(termSec);

@@ -9,13 +9,26 @@ PREFIX lime: <http://www.w3.org/ns/lemon/lime#>
 PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
-	:concept_c1 rdf:type skos:Concept .
-	:concept_c1 skos:prefLabel "c1" .
 	:tbx_en rdf:type lime:Lexicon .
 	:tbx_en lime:language "en" .
 	:tbx_en dct:creator "kicco" .
 	:tbx_en dct:created "2023-04-10T10:02+02:00" .
 	:tbx_en dct:modified "2023-04-10T10:02+02:00" .
+	:tbx_it rdf:type lime:Lexicon .
+	:tbx_it lime:language "it" .
+	:tbx_it dct:creator "kicco" .
+	:tbx_it dct:created "2023-04-10T10:02+02:00" .
+	:tbx_it dct:modified "2023-04-10T10:02+02:00" .
+	:tbx_fr rdf:type lime:Lexicon .
+	:tbx_fr lime:language "fr" .
+	:tbx_fr dct:creator "kicco" .
+	:tbx_fr dct:created "2023-04-10T10:02+02:00" .
+	:tbx_fr dct:modified "2023-04-10T10:02+02:00" .
+	:concept_c1 rdf:type skos:Concept .
+	:concept_c1 skos:prefLabel "c1" .
+	:concept_c1_OdeYA0FHeFFB1DVUMqdMw rdf:type skos:ConceptScheme .
+	:concept_c1_OdeYA0FHeFFB1DVUMqdMw skos:prefLabel "e-mobility" .
+	:concept_c1 skos:inScheme :concept_c1_OdeYA0FHeFFB1DVUMqdMw .
 	:tbx_en lime:entry :le_7OxhhZzHnoAbFCbvYtk1Cd_noun .
 	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun rdf:type ontolex:LexicalEntry .
 	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun rdfs:label "carsharing"@en .
@@ -80,11 +93,6 @@ INSERT DATA {
 	:le_2qtl9zuTssWXwKguQH423y_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_2qtl9zuTssWXwKguQH423y_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:le_2qtl9zuTssWXwKguQH423y_noun skos:note "terminological variant in UK" .
-	:tbx_fr rdf:type lime:Lexicon .
-	:tbx_fr lime:language "fr" .
-	:tbx_fr dct:creator "kicco" .
-	:tbx_fr dct:created "2023-04-10T10:02+02:00" .
-	:tbx_fr dct:modified "2023-04-10T10:02+02:00" .
 	:tbx_fr lime:entry :le_4fMgHWGEhhKnqdnjKsQt8Z_noun .
 	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun rdf:type ontolex:LexicalEntry .
 	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun rdfs:label "autopartage"@fr .
@@ -128,11 +136,6 @@ INSERT DATA {
 	:le_R17APqtXAdlWRud1xPrPQ_noun_lemma dct:creator "kicco" .
 	:le_R17APqtXAdlWRud1xPrPQ_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_R17APqtXAdlWRud1xPrPQ_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:tbx_it rdf:type lime:Lexicon .
-	:tbx_it lime:language "it" .
-	:tbx_it dct:creator "kicco" .
-	:tbx_it dct:created "2023-04-10T10:02+02:00" .
-	:tbx_it dct:modified "2023-04-10T10:02+02:00" .
 	:tbx_it lime:entry :le_25QFMWwLeNpDJrEVjzkvYZ_noun .
 	:le_25QFMWwLeNpDJrEVjzkvYZ_noun rdf:type ontolex:LexicalEntry .
 	:le_25QFMWwLeNpDJrEVjzkvYZ_noun rdfs:label "car sharing"@it .
@@ -156,8 +159,5 @@ INSERT DATA {
 	:le_25QFMWwLeNpDJrEVjzkvYZ_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:le_25QFMWwLeNpDJrEVjzkvYZ_noun rdf:seeAlso <https://it.wikipedia.org/wiki/Car_sharing> .
 	:le_25QFMWwLeNpDJrEVjzkvYZ_noun skos:note "Generalmente in italiano si utilizza l'anglicismo sebbene la variante \"auto condivisa\" sia attestata." .
-	:concept_c1_OdeYA0FHeFFB1DVUMqdMw rdf:type skos:ConceptScheme .
-	:concept_c1_OdeYA0FHeFFB1DVUMqdMw skos:prefLabel "e-mobility" .
-	:concept_c1 skos:inScheme :concept_c1_OdeYA0FHeFFB1DVUMqdMw .
 }
 

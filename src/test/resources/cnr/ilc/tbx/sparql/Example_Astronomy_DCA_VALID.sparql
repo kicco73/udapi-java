@@ -9,13 +9,23 @@ PREFIX lime: <http://www.w3.org/ns/lemon/lime#>
 PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
-	:concept_c1 rdf:type skos:Concept .
-	:concept_c1 skos:prefLabel "c1" .
 	:tbx_en rdf:type lime:Lexicon .
 	:tbx_en lime:language "en" .
 	:tbx_en dct:creator "kicco" .
 	:tbx_en dct:created "2023-04-10T10:02+02:00" .
 	:tbx_en dct:modified "2023-04-10T10:02+02:00" .
+	:tbx_es rdf:type lime:Lexicon .
+	:tbx_es lime:language "es" .
+	:tbx_es dct:creator "kicco" .
+	:tbx_es dct:created "2023-04-10T10:02+02:00" .
+	:tbx_es dct:modified "2023-04-10T10:02+02:00" .
+	:tbx_zu rdf:type lime:Lexicon .
+	:tbx_zu lime:language "zu" .
+	:tbx_zu dct:creator "kicco" .
+	:tbx_zu dct:created "2023-04-10T10:02+02:00" .
+	:tbx_zu dct:modified "2023-04-10T10:02+02:00" .
+	:concept_c1 rdf:type skos:Concept .
+	:concept_c1 skos:prefLabel "c1" .
 	:tbx_en lime:entry :le_6kflZx9kaEP1xpxZq2e5qO .
 	:le_6kflZx9kaEP1xpxZq2e5qO rdf:type ontolex:LexicalEntry .
 	:le_6kflZx9kaEP1xpxZq2e5qO rdfs:label "open cluster"@en .
@@ -55,11 +65,6 @@ INSERT DATA {
 	:le_4Sik966BeQHefcL1Fjplu4_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_4Sik966BeQHefcL1Fjplu4_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:le_4Sik966BeQHefcL1Fjplu4 skos:note "Another name for an open star cluster. They are often termed Galactic\n Clusters because they are found mainly in the plane of our galaxy. If\n you were to view our galaxy from afar, you would find that all the\n open/galactic clusters lie within the spiral arms of the galaxy.\nN-Source:\n http://www.delscope.demon.co.uk/astronomy/glossary.htm#G" .
-	:tbx_es rdf:type lime:Lexicon .
-	:tbx_es lime:language "es" .
-	:tbx_es dct:creator "kicco" .
-	:tbx_es dct:created "2023-04-10T10:02+02:00" .
-	:tbx_es dct:modified "2023-04-10T10:02+02:00" .
 	:tbx_es lime:entry :le_ez9HfOqRi6Eojq5cp2u4N .
 	:le_ez9HfOqRi6Eojq5cp2u4N rdf:type ontolex:LexicalEntry .
 	:le_ez9HfOqRi6Eojq5cp2u4N rdfs:label "cúmulo abierto"@es .
@@ -892,6 +897,7 @@ INSERT DATA {
 	:le_5l69VP3vYE95NuLPx0Rruj_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:concept_c16 rdf:type skos:Concept .
 	:concept_c16 skos:prefLabel "c16" .
+	:concept_c16 skos:note "This figure compares the IMFs by ploting mass fraction per dex versus mass,\n i.e., normalized so that the integral under each curve is unity. They are\n assumed to be valid from 0.1 to 120 solar masses.\nN-Source:\n http://www.astro.ljmu.ac.uk/~ikb/research/imf-use-in-cosmology.html" .
 	:tbx_en lime:entry :le_57oUEhfhm3NV1ZKFPssGtZ .
 	:le_57oUEhfhm3NV1ZKFPssGtZ rdf:type ontolex:LexicalEntry .
 	:le_57oUEhfhm3NV1ZKFPssGtZ rdfs:label "initial mass function"@en .
@@ -930,14 +936,8 @@ INSERT DATA {
 	:le_1TSAfu4NaPkKFtdq3Nuhuy_lemma dct:creator "kicco" .
 	:le_1TSAfu4NaPkKFtdq3Nuhuy_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_1TSAfu4NaPkKFtdq3Nuhuy_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:concept_c16 skos:note "This figure compares the IMFs by ploting mass fraction per dex versus mass,\n i.e., normalized so that the integral under each curve is unity. They are\n assumed to be valid from 0.1 to 120 solar masses.\nN-Source:\n http://www.astro.ljmu.ac.uk/~ikb/research/imf-use-in-cosmology.html" .
 	:concept_c17 rdf:type skos:Concept .
 	:concept_c17 skos:prefLabel "c17" .
-	:tbx_zu rdf:type lime:Lexicon .
-	:tbx_zu lime:language "zu" .
-	:tbx_zu dct:creator "kicco" .
-	:tbx_zu dct:created "2023-04-10T10:02+02:00" .
-	:tbx_zu dct:modified "2023-04-10T10:02+02:00" .
 	:tbx_zu lime:entry :le_4Ge4fe0dTrkWaIhwGGP9mo .
 	:le_4Ge4fe0dTrkWaIhwGGP9mo rdf:type ontolex:LexicalEntry .
 	:le_4Ge4fe0dTrkWaIhwGGP9mo rdfs:label "Bally2005"@zu .
@@ -1208,6 +1208,8 @@ INSERT DATA {
 	:le_1XzPpqt5I7yJCnqScbGgko_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:concept_c26 rdf:type skos:Concept .
 	:concept_c26 skos:prefLabel "c26" .
+	:concept_c26 This is the end-result of all but the most massive of stars.
+N-Source: Oxford2007 "This is the end-result of all but the most massive of stars.\nN-Source: Oxford2007"@en .
 	:tbx_en lime:entry :le_2ojcLpAym6qmWqadwPzaPv .
 	:le_2ojcLpAym6qmWqadwPzaPv rdf:type ontolex:LexicalEntry .
 	:le_2ojcLpAym6qmWqadwPzaPv rdfs:label "white dwarf"@en .
@@ -1227,7 +1229,6 @@ INSERT DATA {
 	:le_2ojcLpAym6qmWqadwPzaPv_lemma dct:creator "kicco" .
 	:le_2ojcLpAym6qmWqadwPzaPv_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_2ojcLpAym6qmWqadwPzaPv_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:concept_c26 skos:note "This is the end-result of all but the most massive of stars.\nN-Source: Oxford2007"@en .
 	:tbx_es lime:entry :le_GHLRVuYGRtN9JnC7TssOs .
 	:le_GHLRVuYGRtN9JnC7TssOs rdf:type ontolex:LexicalEntry .
 	:le_GHLRVuYGRtN9JnC7TssOs rdfs:label "enana blanca"@es .
@@ -1249,6 +1250,10 @@ INSERT DATA {
 	:le_GHLRVuYGRtN9JnC7TssOs_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:concept_c27 rdf:type skos:Concept .
 	:concept_c27 skos:prefLabel "c27" .
+	:concept_c27 As mass is gradually lost, the core of the star becomes more exposed,
+						ultimately becoming a white dwarf. Also, planetary nebulae have nothing to
+						do with planets, and are not true nebulae.
+N-Source: Based on Oxford2007 and Moore2003, 186 "As mass is gradually lost, the core of the star becomes more exposed,\n ultimately becoming a white dwarf. Also, planetary nebulae have nothing to\n do with planets, and are not true nebulae.\nN-Source: Based on Oxford2007 and Moore2003, 186"@en .
 	:tbx_en lime:entry :le_DCCpECao5sf8wCBjfzZEO .
 	:le_DCCpECao5sf8wCBjfzZEO rdf:type ontolex:LexicalEntry .
 	:le_DCCpECao5sf8wCBjfzZEO rdfs:label "planetary nebula"@en .
@@ -1268,7 +1273,6 @@ INSERT DATA {
 	:le_DCCpECao5sf8wCBjfzZEO_lemma dct:creator "kicco" .
 	:le_DCCpECao5sf8wCBjfzZEO_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_DCCpECao5sf8wCBjfzZEO_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:concept_c27 skos:note "As mass is gradually lost, the core of the star becomes more exposed,\n ultimately becoming a white dwarf. Also, planetary nebulae have nothing to\n do with planets, and are not true nebulae.\nN-Source: Based on Oxford2007 and Moore2003, 186"@en .
 	:tbx_es lime:entry :le_9TGIOtCmYOBSSERPypug6 .
 	:le_9TGIOtCmYOBSSERPypug6 rdf:type ontolex:LexicalEntry .
 	:le_9TGIOtCmYOBSSERPypug6 rdfs:label "nebulosa planetaria"@es .
@@ -1290,6 +1294,9 @@ INSERT DATA {
 	:le_9TGIOtCmYOBSSERPypug6_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:concept_c28 rdf:type skos:Concept .
 	:concept_c28 skos:prefLabel "c28" .
+	:concept_c28 Ultraviolet radiation, gas cloud collisions, and synchrotron radiation can
+						all cause the emission nebula to shine.
+N-Source: Oxford2007 "Ultraviolet radiation, gas cloud collisions, and synchrotron radiation can\n all cause the emission nebula to shine.\nN-Source: Oxford2007"@en .
 	:tbx_en lime:entry :le_2csG3iUBkk9W6050I94yBA .
 	:le_2csG3iUBkk9W6050I94yBA rdf:type ontolex:LexicalEntry .
 	:le_2csG3iUBkk9W6050I94yBA rdfs:label "emission nebula"@en .
@@ -1309,7 +1316,6 @@ INSERT DATA {
 	:le_2csG3iUBkk9W6050I94yBA_lemma dct:creator "kicco" .
 	:le_2csG3iUBkk9W6050I94yBA_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_2csG3iUBkk9W6050I94yBA_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:concept_c28 skos:note "Ultraviolet radiation, gas cloud collisions, and synchrotron radiation can\n all cause the emission nebula to shine.\nN-Source: Oxford2007"@en .
 	:tbx_es lime:entry :le_4AqCjRkV90bTZ1dUuhxEat .
 	:le_4AqCjRkV90bTZ1dUuhxEat rdf:type ontolex:LexicalEntry .
 	:le_4AqCjRkV90bTZ1dUuhxEat rdfs:label "nebulosa de emisión"@es .
@@ -1331,6 +1337,10 @@ INSERT DATA {
 	:le_4AqCjRkV90bTZ1dUuhxEat_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:concept_c29 rdf:type skos:Concept .
 	:concept_c29 skos:prefLabel "c29" .
+	:concept_c29 The term was originally applied to any object with a fuzzy telescopic
+						appearance, but with the advent of larger instruments many 'nebulae' were
+						found to consist of faint stars.
+N-Source: Oxford2007 "The term was originally applied to any object with a fuzzy telescopic\n appearance, but with the advent of larger instruments many 'nebulae' were\n found to consist of faint stars.\nN-Source: Oxford2007"@en .
 	:tbx_en lime:entry :le_5mXBohzdWrSTMdpd6rABbp .
 	:le_5mXBohzdWrSTMdpd6rABbp rdf:type ontolex:LexicalEntry .
 	:le_5mXBohzdWrSTMdpd6rABbp rdfs:label "nebula"@en .
@@ -1371,7 +1381,6 @@ INSERT DATA {
 	:le_6yApTHFZHyR5AhYGPR4P3O_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_6yApTHFZHyR5AhYGPR4P3O_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:le_6yApTHFZHyR5AhYGPR4P3O skos:note "Grammatical Number: plural" .
-	:concept_c29 skos:note "The term was originally applied to any object with a fuzzy telescopic\n appearance, but with the advent of larger instruments many 'nebulae' were\n found to consist of faint stars.\nN-Source: Oxford2007"@en .
 	:tbx_es lime:entry :le_286fczA4uSKLCn0mJYYY93 .
 	:le_286fczA4uSKLCn0mJYYY93 rdf:type ontolex:LexicalEntry .
 	:le_286fczA4uSKLCn0mJYYY93 rdfs:label "nebulosa"@es .
@@ -1551,6 +1560,9 @@ INSERT DATA {
 	:le_p2m0JVNCMEIaEVYN20y86_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:concept_c33 rdf:type skos:Concept .
 	:concept_c33 skos:prefLabel "c33" .
+	:concept_c33 For a star with no hydrogen content the limit is 1.44 solar masses, which
+						is thus the maximum possible for a white dwarf.
+N-Source: Oxford2007 "For a star with no hydrogen content the limit is 1.44 solar masses, which\n is thus the maximum possible for a white dwarf.\nN-Source: Oxford2007"@en .
 	:tbx_en lime:entry :le_2v8SgyBGvh4RcpeNvHMfYL .
 	:le_2v8SgyBGvh4RcpeNvHMfYL rdf:type ontolex:LexicalEntry .
 	:le_2v8SgyBGvh4RcpeNvHMfYL rdfs:label "Chandrasekhar limit"@en .
@@ -1570,7 +1582,6 @@ INSERT DATA {
 	:le_2v8SgyBGvh4RcpeNvHMfYL_lemma dct:creator "kicco" .
 	:le_2v8SgyBGvh4RcpeNvHMfYL_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_2v8SgyBGvh4RcpeNvHMfYL_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:concept_c33 skos:note "For a star with no hydrogen content the limit is 1.44 solar masses, which\n is thus the maximum possible for a white dwarf.\nN-Source: Oxford2007"@en .
 	:tbx_es lime:entry :le_7Pvl72x5ldIWyM98rQigfl .
 	:le_7Pvl72x5ldIWyM98rQigfl rdf:type ontolex:LexicalEntry .
 	:le_7Pvl72x5ldIWyM98rQigfl rdfs:label "límite de Chandrasekhar"@es .
@@ -1592,6 +1603,8 @@ INSERT DATA {
 	:le_7Pvl72x5ldIWyM98rQigfl_lemma dct:modified "2023-04-10T10:02+02:00" .
 	:concept_c34 rdf:type skos:Concept .
 	:concept_c34 skos:prefLabel "c34" .
+	:concept_c34 Encountered on in neutron stars.
+N-Source: Oxford2007 "Encountered on in neutron stars.\nN-Source: Oxford2007"@en .
 	:tbx_en lime:entry :le_6FALe7hOPUW7ZnoYg4wi82 .
 	:le_6FALe7hOPUW7ZnoYg4wi82 rdf:type ontolex:LexicalEntry .
 	:le_6FALe7hOPUW7ZnoYg4wi82 rdfs:label "neutron degeneracy"@en .
@@ -1611,7 +1624,6 @@ INSERT DATA {
 	:le_6FALe7hOPUW7ZnoYg4wi82_lemma dct:creator "kicco" .
 	:le_6FALe7hOPUW7ZnoYg4wi82_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_6FALe7hOPUW7ZnoYg4wi82_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:concept_c34 skos:note "Encountered on in neutron stars.\nN-Source: Oxford2007"@en .
 	:tbx_es lime:entry :le_3w5MlD7SYwbftgEGgiIzAz .
 	:le_3w5MlD7SYwbftgEGgiIzAz rdf:type ontolex:LexicalEntry .
 	:le_3w5MlD7SYwbftgEGgiIzAz rdfs:label "degeneración de neutrones"@es .
@@ -2068,6 +2080,9 @@ INSERT DATA {
 	:le_1hPLh5KawVRtIHQov0SgnO skos:note "Author[s]: Ridpath, Ian\nBook Title: Astronomía\nPublication Place: Spain\nPublisher: Oxford University Press\nPublication Year: 2003" .
 	:concept_c41 rdf:type skos:Concept .
 	:concept_c41 skos:prefLabel "c41" .
+	:concept_c41 Electron degeneracy supports white dwarf stars against further
+						collapse.
+N-Source: Oxford2007 "Electron degeneracy supports white dwarf stars against further\n collapse.\nN-Source: Oxford2007"@en .
 	:tbx_en lime:entry :le_3yByVtrxoex3ekXvCgH8tg .
 	:le_3yByVtrxoex3ekXvCgH8tg rdf:type ontolex:LexicalEntry .
 	:le_3yByVtrxoex3ekXvCgH8tg rdfs:label "electron degeneracy"@en .
@@ -2087,7 +2102,6 @@ INSERT DATA {
 	:le_3yByVtrxoex3ekXvCgH8tg_lemma dct:creator "kicco" .
 	:le_3yByVtrxoex3ekXvCgH8tg_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_3yByVtrxoex3ekXvCgH8tg_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:concept_c41 skos:note "Electron degeneracy supports white dwarf stars against further\n collapse.\nN-Source: Oxford2007"@en .
 	:tbx_es lime:entry :le_4f7jcBBzclPcYBATWuUhlI .
 	:le_4f7jcBBzclPcYBATWuUhlI rdf:type ontolex:LexicalEntry .
 	:le_4f7jcBBzclPcYBATWuUhlI rdfs:label "degeneración de electrones"@es .
@@ -2170,6 +2184,7 @@ INSERT DATA {
 	:le_2o433iME0TWf5q0yo2koJv skos:note "Related Term: agujero negro, horizonte de sucesos, radio de\n Schwarzschild" .
 	:concept_c43 rdf:type skos:Concept .
 	:concept_c43 skos:prefLabel "c43" .
+	:concept_c43 skos:note "In this graphic, the M with a subscript is the symbol for a solar mass.\nN-Source: Jonathan Tomolonis" .
 	:tbx_en lime:entry :le_32wTsiwXLTZxbGv14Hpgie .
 	:le_32wTsiwXLTZxbGv14Hpgie rdf:type ontolex:LexicalEntry .
 	:le_32wTsiwXLTZxbGv14Hpgie rdfs:label "solar mass"@en .
@@ -2208,7 +2223,6 @@ INSERT DATA {
 	:le_1HXQpWfI6DJqAd2tOx3c8V_lemma dct:creator "kicco" .
 	:le_1HXQpWfI6DJqAd2tOx3c8V_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_1HXQpWfI6DJqAd2tOx3c8V_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:concept_c43 skos:note "In this graphic, the M with a subscript is the symbol for a solar mass.\nN-Source: Jonathan Tomolonis" .
 	:concept_c44 rdf:type skos:Concept .
 	:concept_c44 skos:prefLabel "c44" .
 	:tbx_en lime:entry :le_1Hs5QfUjHYrKe9MLOORgms .
