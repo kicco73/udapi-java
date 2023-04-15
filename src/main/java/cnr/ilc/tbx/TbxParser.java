@@ -6,6 +6,7 @@ import org.xml.sax.InputSource;
 
 import cnr.ilc.rut.CountingInputStream;
 import cnr.ilc.rut.ParserInterface;
+import cnr.ilc.rut.ResourceInterface;
 import cnr.ilc.rut.Concept;
 import cnr.ilc.rut.RutException;
 import cnr.ilc.rut.Word;
@@ -18,7 +19,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Set;
 
-public class TbxParser implements ParserInterface {
+public class TbxParser implements ParserInterface, ResourceInterface {
 	private Document document;
 	private ConceptEntry conceptEntryParser = new ConceptEntry();
 	private Map<String, String> lexicons = new HashMap<>();
@@ -83,7 +84,7 @@ public class TbxParser implements ParserInterface {
 	}
 
 	@Override
-	public void parse() throws Exception {
+	public ResourceInterface parse() throws Exception {
 		parseConcepts();
 
 		JSONArray jsonLanguages = new JSONArray();
@@ -94,6 +95,8 @@ public class TbxParser implements ParserInterface {
 		metadata.put("concepts", convertConceptsToJSONObject(concepts));
 		metadata.put("numberOfTerms", conceptEntryParser.numberOfTerms);
 		metadata.put("numberOfConcepts", concepts.size());
+
+		return this;
 	}
 
 	@Override
@@ -113,7 +116,7 @@ public class TbxParser implements ParserInterface {
 
 	@Override
 	public Collection<Word> getWords() {
-		return new ArrayList<Word>();
+		return null;
 	}
 
 	@Override

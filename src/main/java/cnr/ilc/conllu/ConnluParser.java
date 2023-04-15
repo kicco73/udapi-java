@@ -16,9 +16,10 @@ import cnr.ilc.conllu.core.io.impl.CoNLLUReader;
 import cnr.ilc.conllu.core.io.impl.CoNLLUWriter;
 import cnr.ilc.rut.Concept;
 import cnr.ilc.rut.ParserInterface;
+import cnr.ilc.rut.ResourceInterface;
 import cnr.ilc.rut.Word;
 
-public class ConnluParser implements ParserInterface {
+public class ConnluParser implements ParserInterface, ResourceInterface {
     private Document document;
     private String language;
     private String namespace;
@@ -38,9 +39,10 @@ public class ConnluParser implements ParserInterface {
     }
 
     @Override
-    public void parse() throws Exception {
+    public ResourceInterface parse() throws Exception {
         String lexiconFQN = ":connll-u";
         words = ParserHelper.compileLexicon(document, namespace, language, lexiconFQN);
+        return this;
     }
 
     public void writeConll(String fileName) {
@@ -62,7 +64,7 @@ public class ConnluParser implements ParserInterface {
 
     @Override
     public Collection<Concept> getConcepts() {
-        return new ArrayList<Concept>();
+        return null;
     }
 
     @Override

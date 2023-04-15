@@ -202,20 +202,18 @@ public class SPARQLWriter implements TripleStoreInterface {
 		return buffer.toString();
 	}
 
-	private String serialiseConcepts(Map<String,String> lexicons, Collection<Concept> concepts, String rdfType) {
-		addLexicons(lexicons);
-		for (Concept concept: concepts) {
+	private String serialiseConcepts(ResourceInterface resource) {
+		for (Concept concept: resource.getConcepts()) {
 			addConcept(concept);
 			for (Word word: concept.words) 
-				addWord(word, rdfType);
+				addWord(word, resource.getRdfType());
 		}
 		return readBuffer();
 	}
 
-	private String serialiseWords(Map<String,String> lexicons, Collection<Word> words, String rdfType) {
-		addLexicons(lexicons);
-		for (Word word: words) {
-			addWord(word, rdfType);
+	private String serialiseWords(ResourceInterface resource) {
+		for (Word word: resource.getWords()) {
+			addWord(word, resource.getRdfType());
 		}
 		return readBuffer();
 	}
@@ -229,14 +227,13 @@ public class SPARQLWriter implements TripleStoreInterface {
 		buffer.append(prefixes);
 	}
 
-	public String serialise(ParserInterface parser) {
-        Collection<Concept> concepts = parser.getConcepts();
+	public String serialise(ResourceInterface resource) {
+		addLexicons(resource.getLexicons());
         
-        if (!concepts.isEmpty())
-            return serialiseConcepts(parser.getLexicons(), concepts, parser.getRdfType());
+        if (resource.getConcepts() != null)
+            return serialiseConcepts(resource);
 
-		Collection<Word> words = parser.getWords();
-		return serialiseWords(parser.getLexicons(), words, parser.getRdfType());
+		return serialiseWords(resource);
 	}
 
 }

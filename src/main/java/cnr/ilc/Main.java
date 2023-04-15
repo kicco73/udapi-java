@@ -20,6 +20,7 @@ import org.json.simple.JSONValue;
 
 import cnr.ilc.conllu.ConnluParser;
 import cnr.ilc.rut.ParserInterface;
+import cnr.ilc.rut.ResourceInterface;
 import cnr.ilc.rut.DateProvider;
 import cnr.ilc.rut.GraphDBClient;
 import cnr.ilc.rut.IdGenerator;
@@ -136,6 +137,7 @@ public class Main {
         InputStream inputStream = fileName == null? System.in : new FileInputStream(fileName);
         Map<String, Object> metadata = null;
         ParserInterface parser = null;
+        ResourceInterface resource = null;
         String statements = null;
         
         if (isSparql) {
@@ -147,9 +149,9 @@ public class Main {
                 parser = new ConnluParser(inputStream, language);
             }
     
-            parser.parse();
+            resource = parser.parse();
             metadata = parser.getMetadata();
-            statements = sparql.serialise(parser);    
+            statements = sparql.serialise(resource);    
         }
         
         String output = statements;
