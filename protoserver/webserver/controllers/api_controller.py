@@ -21,8 +21,6 @@ class ApiController(controller.Controller):
 			resource_string = operation.execute()
 			resource = json.loads(resource_string)
 
-			del resource['sparql']	# FIXME: should not be produced
-
 			self.delete_resource(resource['id'])
 			self.save_resource_property(tbx, resource['id'], 'tbx')
 			self.save_resource_property(json.dumps(resource['metadata']), resource['id'], 'metadata')

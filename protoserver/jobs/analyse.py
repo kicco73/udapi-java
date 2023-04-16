@@ -15,7 +15,7 @@ class Analyse(Operation):
    			'-cp', '/Users/enricocarniani/Documents/udapi-java/bin/main', "@/var/folders/vw/clt3dc494hg0bcmvk_1pkwdw0000gn/T/cp_ccox37emu87o6ww09penhgt93.argfile", 'cnr.ilc.Main',
 			'--namespace', 'http://txt2rdf/test#',
 			'--creator', 'kicco',
-			'--tbx', '--json'
+			'--tbx', '--json', '--metadata-only'
 		]
 
 		process = subprocess.run(args, input=self.tbx.encode('utf-8'), stdout=subprocess.PIPE)

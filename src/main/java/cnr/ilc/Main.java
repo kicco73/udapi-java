@@ -25,6 +25,7 @@ import cnr.ilc.rut.DateProvider;
 import cnr.ilc.rut.GraphDBClient;
 import cnr.ilc.rut.IdGenerator;
 import cnr.ilc.rut.SPARQLWriter;
+import cnr.ilc.rut.TripleStoreInterface;
 import cnr.ilc.tbx.TbxParser;
 
 public class Main {
@@ -32,6 +33,7 @@ public class Main {
     boolean isConnlu = false;
     boolean isTbx = false;
     boolean isJson = false;
+    boolean isMetaDataOnly = false;
     String graphURL = null;
     String repository = "LexO";
     String language = "it";
@@ -107,6 +109,10 @@ public class Main {
                 case "--sparql":
                     isSparql = true;
                     break;
+                case "-X":
+                case "--metadata-only":
+                    isMetaDataOnly = true;
+                    break;
                 case "--":
                     fileNames = Arrays.copyOfRange(args, startIndex, args.length);
                     startIndex = args.length;
@@ -132,26 +138,37 @@ public class Main {
         }
     }
 
+    private ParserInterface makeParser(InputStream inputStream) throws Exception {
+        if (isTbx) {
+            return new TbxParser(inputStream);
+        } else if (isConnlu) {
+            return new ConnluParser(inputStream, language);
+        }
+        return null;
+    }
+
     private void processFile(String fileName) throws Exception {
-        SPARQLWriter sparql = new SPARQLWriter(namespace, creator, chunkSize);
         InputStream inputStream = fileName == null? System.in : new FileInputStream(fileName);
         Map<String, Object> metadata = null;
-        ParserInterface parser = null;
         ResourceInterface resource = null;
         String statements = null;
-        
+
         if (isSparql) {
             statements = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
         } else {
-            if (isTbx) {
-                parser = new TbxParser(inputStream);
-            } else if (isConnlu) {
-                parser = new ConnluParser(inputStream, language);
-            }
-    
+            ParserInterface parser = makeParser(inputStream);
             resource = parser.parse();
             metadata = parser.getMetadata();
-            statements = sparql.serialise(resource);    
+    
+            if (!isMetaDataOnly) {
+                TripleStoreInterface tripleStore = new SPARQLWriter(namespace, creator, chunkSize);
+                statements = tripleStore.serialise(resource);  
+            }  
+
+            if (exportConll != null && parser instanceof ConnluParser) {
+                ((ConnluParser)parser).writeConll(exportConll);
+            }  
+        
         }
         
         String output = statements;
@@ -165,17 +182,13 @@ public class Main {
             output = JSONValue.toJSONString(response); 
         }
 
-        if (exportConll != null && parser instanceof ConnluParser) {
-            ((ConnluParser)parser).writeConll(exportConll);
-        }  
-
         if (outDir == null || fileName == null) {
             if (!isSparql) System.out.println(output);
-        } else {
+        } else if (statements != null) {
             saveStatementsUsingInFileName(fileName, outDir, statements);            
         }
 
-        if (graphURL != null) {
+        if (graphURL != null && statements != null) {
             uploadStatements(graphURL, repository, statements);
         }        
     }
