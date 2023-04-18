@@ -27,6 +27,7 @@ import cnr.ilc.rut.IdGenerator;
 import cnr.ilc.rut.SPARQLWriter;
 import cnr.ilc.rut.TripleStoreInterface;
 import cnr.ilc.tbx.TbxParser;
+import cnr.ilc.db.SqliteStore;
 
 public class Main {
     boolean isSparql = false;
@@ -38,7 +39,7 @@ public class Main {
     String repository = "LexO";
     String language = "it";
     String creator = "bot";
-    int chunkSize = 15000;
+    int chunkSize = 1500 * 1024;
     String namespace = "http://txt2rdf/test#";
     String exportConll = null;
     String outSparql = null;
@@ -159,10 +160,12 @@ public class Main {
             ParserInterface parser = makeParser(inputStream);
             resource = parser.parse();
             metadata = parser.getMetadata();
-    
+
             if (!isMetaDataOnly) {
+                //TripleStoreInterface tripleStore = new SqliteStore(namespace, creator, chunkSize, "sqlite.db");
                 TripleStoreInterface tripleStore = new SPARQLWriter(namespace, creator, chunkSize);
-                statements = tripleStore.serialise(resource);  
+                tripleStore.serialise(resource); 
+                statements = tripleStore.serialised();
             }  
 
             if (exportConll != null && parser instanceof ConnluParser) {

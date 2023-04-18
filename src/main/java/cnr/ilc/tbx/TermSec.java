@@ -35,7 +35,7 @@ public class TermSec {
 				return;
 			}
 			
-			word.addFeature("lexinfo:normativeAuthorization", translatedStatus);
+			word.addFeature(word.FQName, "lexinfo:normativeAuthorization", translatedStatus);
 		}
 	}
 
@@ -54,7 +54,7 @@ public class TermSec {
 			String translatedType = termTypes.get(termType);
 			if (translatedType == null) 
 				throw new RutException(String.format("Unknown term type: %s", translatedType));
-				word.addFeature("lexinfo:termType", translatedType);
+				word.addFeature(word.FQName, "lexinfo:termType", translatedType);
 		}
 	}
 
@@ -84,20 +84,20 @@ public class TermSec {
 			
 		} else {
 			if (source != null)
-				word.addFeatureAsUrlIfPossible("dct:source", source);
+				word.addFeatureAsUrlOrString(word.FQName, "dct:source", source);
 
 			if (externalCrossReference != null)
-				word.addFeatureAsUrlIfPossible("rdf:seeAlso", externalCrossReference);
+				word.addFeatureAsUrlOrString(word.FQName, "rdf:seeAlso", externalCrossReference);
 
 			if (crossReference != null)
-				word.addFeatureAsUrlIfPossible("rdf:seeAlso", crossReference);
+				word.addFeatureAsUrlOrString(word.FQName, "rdf:seeAlso", crossReference);
 		}
 	}
 
 	private void parseNote(Element termSec) {
 		String note = Nodes.getTextOfTag(termSec, "note");
 		if (note != null) {
-			word.addFeatureAsString("skos:note", note);
+			word.addFeatureAsString(word.FQName, "skos:note", note);
 		}
 	}
 

@@ -24,7 +24,7 @@ public class ConceptEntry {
 	private void parseSubjectField(Element conceptEntry, Concept concept, String conceptId) {
 		String subjectField = Nodes.getTextOfTagOrAlternateTagWithAttribute(conceptEntry, "subjectField", "descrip", "type");
 		if (subjectField == null) return;
-		concept.subjectFields.add(subjectField);
+		concept.addSubjectField(subjectField);
 	}
 
 	private void parseConceptEntryChildren(Element root, Concept concept) {
@@ -41,7 +41,7 @@ public class ConceptEntry {
 			String link = entry.getValue();
 			String content = Nodes.getTextOfTag(root, key);
 			if (content != null) {
-				concept.addFeatureAsPossibleUrl(link, content);
+				concept.addFeatureAsUrlOrString(concept.FQName, link, content);
 			}
 		}
 	}

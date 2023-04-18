@@ -60,7 +60,7 @@ public class ParserHelper {
     }
     private static void compileMisc(String miscString, Word word) {        
         if (miscString != null  && miscString.length() > 0)
-            word.addFeature("skos:note", miscString);
+            word.addFeatureAsString(word.FQName, "skos:note", miscString);
             
         Map<String,String> misc = getMapFromFieldString(miscString);
         if (!misc.containsKey("SENSE")) return;
@@ -137,7 +137,7 @@ public class ParserHelper {
                 boolean needsCompile = true;
 
                 if (word == null) {
-                    word = new Word(lemma, partOfSpeech, language, null, lexiconFQN);
+                    word = new Word(lemma, partOfSpeech, language, null, lexiconFQN, "ontolex:Word");
                     lemmas.put(key, word);
 
                     if (lemma.equals(writtenRep)) {

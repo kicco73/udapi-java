@@ -22,13 +22,13 @@ public class LangSec {
 		String externalCrossReference = Nodes.getTextOfTag(langSec, "externalCrossReference");
 
 		if (note != null) {
-			concept.addFeatureAsStringWithLanguage("skos:note", note, language);		
+			concept.addFeatureAsStringWithLanguage(concept.FQName, "skos:note", note, language);		
 		}
 		
 		if (definition == null) return;
 
 		if (source == null && externalCrossReference == null) {
-			concept.addFeatureAsStringWithLanguage("skos:definition", definition, language);
+			concept.addFeatureAsStringWithLanguage(concept.FQName, "skos:definition", definition, language);
 		} else {
 			Map<String, String> object = new HashMap<>();
 			object.put("rdf:value", SPARQLFormatter.formatObjectWithLanguage(definition, language));
@@ -39,7 +39,7 @@ public class LangSec {
 			if (externalCrossReference != null) 
 				object.put("dct:identifier", SPARQLFormatter.formatObjectWithUrlIfPossible(externalCrossReference));
 	
-			concept.addFeature("skos:definition", object);
+			concept.addFeature(concept.FQName, "skos:definition", object);
 		}
 	}
 

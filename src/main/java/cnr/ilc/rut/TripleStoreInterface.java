@@ -1,5 +1,6 @@
 package cnr.ilc.rut;
 
 public interface TripleStoreInterface {
-	public String serialise(ResourceInterface resource);
+	public void serialise(ResourceInterface resource);
+	public String serialised();
 }

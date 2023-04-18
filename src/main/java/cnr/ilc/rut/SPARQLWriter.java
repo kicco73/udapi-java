@@ -13,10 +13,10 @@ import java.util.Map.Entry;
 public class SPARQLWriter implements TripleStoreInterface {
 	static final public String separator = "# data-chunk";
 	final private StringBuffer buffer = new StringBuffer();
-	final private String creator;
+	final protected String creator;
 	final private int chunkSize;
-	final private IdGenerator idGenerator = new IdGenerator();
-	private int numberOfTriples = 0;
+	private int charsWritten = 0;
+	private boolean blockStarted = false;
 	private String prefixes =
 		"""		
 		PREFIX : <%s>
@@ -31,32 +31,33 @@ public class SPARQLWriter implements TripleStoreInterface {
 		PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 		""";
 
-	private void insertTriple(String subject, String link, String object) {
-		boolean isEndOfChunk = chunkSize > 0 && numberOfTriples % chunkSize == 0;
+	private void appendLine(String block) {
+		boolean isEndOfChunk = charsWritten > chunkSize;
 
-		if (isEndOfChunk && numberOfTriples > 0) {
-			if (numberOfTriples > 0)
-				buffer.append(String.format("}\n%s\n%s", separator, prefixes));
+		if (isEndOfChunk) {
+			buffer.append(String.format("}\n%s\n%s", separator, prefixes));
+			charsWritten = 0;
+			blockStarted = false;
 		}
-		if (numberOfTriples == 0 || isEndOfChunk) {
+		if (charsWritten == 0 || isEndOfChunk) {
 			buffer.append("INSERT DATA {\n");	
+			blockStarted = true;
 		}
 
-		object = object.replaceAll("[\n\t ]+", " ");
-		String query = String.format("\t%s %s %s .\n", subject, link, object);
-		buffer.append(query);
-		numberOfTriples++;
+		buffer.append(block);
+		charsWritten += block.length();
 	}
 
-	private void insertTriple(String subject, String link, Map<String, String> anon) {
-		String object = "[ ";
-		int count = anon.size();
-		for (Entry<String,String> entry: anon.entrySet()) {
-			object += entry.getKey() + " " + entry.getValue();
-			if (--count > 0) object += " ; ";
+	protected void append(String block) {
+		for (String line: block.split("\n")) {
+			appendLine(line+"\n");
 		}
-		object += " ]";
-		insertTriple(subject, link, object);
+	}
+	
+	private void insertTriple(String subject, String link, String object) {
+		object = object.replaceAll("[\n\t ]+", " ");
+		String query = String.format("\t%s %s %s .\n", subject, link, object);
+		append(query);
 	}
 
 	private void addMetaData(String entryFQN) {
@@ -129,49 +130,19 @@ public class SPARQLWriter implements TripleStoreInterface {
 		}
 	}
 
-	private void createFeatures(Word word) {		
-		for (Triple<String, String, String> feature: word.triples) {
-			insertTriple(feature.first, feature.second, (String) feature.third);
-		}
-		for (Triple<String, String, Map<String,String>> feature: word.tripleObjects) {
-			if (feature.third instanceof Map)
-			insertTriple(feature.first, feature.second, feature.third);
-		}
-	}
-
 	private void insertTripleWithLanguage(String subject, String link, String object, String language) {
 		insertTriple(subject, link, SPARQLFormatter.formatObjectWithLanguage(object, language));
 	}
 
 	private void insertTripleWithString(String subject, String link, String object) {
-		insertTriple(subject, link, SPARQLFormatter.formatObject(object));
+		insertTriple(subject, link, SPARQLFormatter.formatObjectAsString(object));
 	}
 
-	private String createLexicon(String lexiconFQN, String language) {		
+	public String createLexicon(String lexiconFQN, String language) {		
 		insertTriple(lexiconFQN, "rdf:type", "lime:Lexicon");
         insertTripleWithString(lexiconFQN, "lime:language", language);   
 		addMetaData(lexiconFQN);     
 		return lexiconFQN;
-	}
-
-	private void addConcept(Concept concept) {
-		insertTriple(concept.FQName, "rdf:type", "skos:Concept");
-		insertTripleWithString(concept.FQName, "skos:prefLabel", concept.id);
-
-		for (Pair<String, String> feature: concept.features) {
-			insertTriple(concept.FQName, feature.first, feature.second);
-		}
-
-		for (Pair<String, Map<String,String>> feature: concept.featureObjects) {
-			insertTriple(concept.FQName, feature.first, (Map<String,String>) feature.second);
-		}
-
-		for (String subjectField: concept.subjectFields) {
-			String subjectFieldFQN = String.format("%s_%s", concept.FQName, idGenerator.getId(subjectField));
-			insertTriple(subjectFieldFQN, "rdf:type", "skos:ConceptScheme");
-			insertTripleWithString(subjectFieldFQN, "skos:prefLabel", subjectField);
-			insertTriple(concept.FQName, "skos:inScheme", subjectFieldFQN);
-		}
 	}
 
 	private void addWord(Word word, String rdfType) {
@@ -179,7 +150,7 @@ public class SPARQLWriter implements TripleStoreInterface {
 		createLexicalSenses(word);
 		createCanonicalForm(word);
 		createOtherForms(word);
-		createFeatures(word);
+		buffer.append(word.serialise());
 	}
 
 	private void addLexicons(Map<String, String> lexicons) {
@@ -190,27 +161,20 @@ public class SPARQLWriter implements TripleStoreInterface {
 		}
 	}
 
-	private String readBuffer() {
-		if (numberOfTriples % chunkSize != 0) {
-			buffer.append("}\n");
-		}
-		return buffer.toString();
-	}
-
-	private String serialiseConcepts(ResourceInterface resource) {
+	private void serialiseConcepts(ResourceInterface resource) {
+		if (resource.getConcepts() == null) return;
 		for (Concept concept: resource.getConcepts()) {
-			addConcept(concept);
+			buffer.append(concept.serialise());
 			for (Word word: concept.words) 
 				addWord(word, resource.getRdfType());
 		}
-		return readBuffer();
 	}
 
-	private String serialiseWords(ResourceInterface resource) {
+	private void serialiseWords(ResourceInterface resource) {
+		if (resource.getWords() == null) return;
 		for (Word word: resource.getWords()) {
 			addWord(word, resource.getRdfType());
 		}
-		return readBuffer();
 	}
 
 	// Hi-level interface
@@ -222,13 +186,19 @@ public class SPARQLWriter implements TripleStoreInterface {
 		buffer.append(prefixes);
 	}
 
-	public String serialise(ResourceInterface resource) {
+	@Override
+	public void serialise(ResourceInterface resource) {
 		addLexicons(resource.getLexicons());
-        
-        if (resource.getConcepts() != null)
-            return serialiseConcepts(resource);
-
-		return serialiseWords(resource);
+        serialiseConcepts(resource);
+		serialiseWords(resource);
+	}
+	
+	@Override
+	public String serialised() {
+		if (blockStarted) {
+			buffer.append("}\n");
+		}
+		return buffer.toString();
 	}
 
 }
