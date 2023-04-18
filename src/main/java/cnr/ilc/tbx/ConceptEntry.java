@@ -41,25 +41,25 @@ public class ConceptEntry {
 			String link = entry.getValue();
 			String content = Nodes.getTextOfTag(root, key);
 			if (content != null) {
-				concept.addFeatureAsUrlOrString(concept.FQName, link, content);
+				concept.triples.addAsUrlOrString(concept.FQName, link, content);
 			}
 		}
 	}
 
-	private void parseLangSecs(Element conceptEntry, Concept concept) {
+	private void parseLangSecs(Element conceptEntry, Concept concept, String creator) {
 
 		NodeList langSecs = conceptEntry.getElementsByTagNameNS("*", "langSec");
 		
 		for (int j = 0; j < langSecs.getLength(); ++j)  {
 			Element langSec = (Element) langSecs.item(j);
-			Collection<Word> terms = langSecParser.parseLangSec(langSec, concept);
+			Collection<Word> terms = langSecParser.parseLangSec(langSec, concept, creator);
 			numberOfTerms += terms.size();
 		}
 		
 		Nodes.removeNodesFromParsingTree(langSecs);
 	}
 
-	public Concept parseConceptEntry(Element conceptEntry) {
+	public Concept parseConceptEntry(Element conceptEntry, String creator) {
 		String id = conceptEntry.getAttribute("id");
 
 		if (id == null) {
@@ -69,7 +69,7 @@ public class ConceptEntry {
 
 		Concept concept = new Concept(id);
 
-		parseLangSecs(conceptEntry, concept);
+		parseLangSecs(conceptEntry, concept, creator);
 		parseConceptEntryChildren(conceptEntry, concept);	
 		parseSubjectField(conceptEntry, concept, id);
 

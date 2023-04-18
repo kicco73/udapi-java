@@ -2,8 +2,8 @@ package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
 import cnr.ilc.rut.Concept;
-import cnr.ilc.rut.SPARQLFormatter;
 import cnr.ilc.rut.Word;
+import cnr.ilc.sparql.SPARQLFormatter;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -22,13 +22,13 @@ public class LangSec {
 		String externalCrossReference = Nodes.getTextOfTag(langSec, "externalCrossReference");
 
 		if (note != null) {
-			concept.addFeatureAsStringWithLanguage(concept.FQName, "skos:note", note, language);		
+			concept.triples.addAsStringWithLanguage(concept.FQName, "skos:note", note, language);		
 		}
 		
 		if (definition == null) return;
 
 		if (source == null && externalCrossReference == null) {
-			concept.addFeatureAsStringWithLanguage(concept.FQName, "skos:definition", definition, language);
+			concept.triples.addAsStringWithLanguage(concept.FQName, "skos:definition", definition, language);
 		} else {
 			Map<String, String> object = new HashMap<>();
 			object.put("rdf:value", SPARQLFormatter.formatObjectWithLanguage(definition, language));
@@ -39,11 +39,11 @@ public class LangSec {
 			if (externalCrossReference != null) 
 				object.put("dct:identifier", SPARQLFormatter.formatObjectWithUrlIfPossible(externalCrossReference));
 	
-			concept.addFeature(concept.FQName, "skos:definition", object);
+			concept.triples.add(concept.FQName, "skos:definition", object);
 		}
 	}
 
-	public Collection<Word> parseLangSec(Element langSec, Concept concept) {
+	public Collection<Word> parseLangSec(Element langSec, Concept concept, String creator) {
 		String lang = langSec.getAttribute("xml:lang");
 		String lexiconFQN = String.format(":tbx_%s", lang);
 		lexicons.put(lang, lexiconFQN);
@@ -52,7 +52,7 @@ public class LangSec {
 		NodeList termSecs = langSec.getElementsByTagNameNS("*", "termSec");
 		for (int k = 0; k < termSecs.getLength(); ++k)  {
 			Element termSec = (Element) termSecs.item(k);
-			Word word = termSecParser.parseTermSec(termSec, lexiconFQN, lang, concept);
+			Word word = termSecParser.parseTermSec(termSec, lexiconFQN, lang, concept, creator);
 			terms.add(word);
 		}
 

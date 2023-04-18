@@ -32,6 +32,8 @@ INSERT DATA {
 	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun dct:creator "kicco" .
 	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
+	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun skos:note "may refer to physical or banked currency" .
 	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun ontolex:sense :le_7iEdguI84Wvl0gzQ9Z5SrZ_noun_sense .
 	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun_sense rdf:type ontolex:LexicalSense .
 	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun_sense ontolex:reference :concept_C001 .
@@ -44,8 +46,6 @@ INSERT DATA {
 	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun_lemma dct:creator "kicco" .
 	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	:le_7iEdguI84Wvl0gzQ9Z5SrZ_noun skos:note "may refer to physical or banked currency" .
 	:tbx_en lime:entry :le_1yQNWvktXa5JNxZTQv107C_noun .
 	:le_1yQNWvktXa5JNxZTQv107C_noun rdf:type ontolex:LexicalEntry .
 	:le_1yQNWvktXa5JNxZTQv107C_noun rdfs:label "cash"@en .
@@ -54,6 +54,8 @@ INSERT DATA {
 	:le_1yQNWvktXa5JNxZTQv107C_noun dct:creator "kicco" .
 	:le_1yQNWvktXa5JNxZTQv107C_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_1yQNWvktXa5JNxZTQv107C_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_1yQNWvktXa5JNxZTQv107C_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
+	:le_1yQNWvktXa5JNxZTQv107C_noun skos:note "refers to physical currency" .
 	:le_1yQNWvktXa5JNxZTQv107C_noun ontolex:sense :le_1yQNWvktXa5JNxZTQv107C_noun_sense .
 	:le_1yQNWvktXa5JNxZTQv107C_noun_sense rdf:type ontolex:LexicalSense .
 	:le_1yQNWvktXa5JNxZTQv107C_noun_sense ontolex:reference :concept_C001 .
@@ -66,8 +68,6 @@ INSERT DATA {
 	:le_1yQNWvktXa5JNxZTQv107C_noun_lemma dct:creator "kicco" .
 	:le_1yQNWvktXa5JNxZTQv107C_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_1yQNWvktXa5JNxZTQv107C_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_1yQNWvktXa5JNxZTQv107C_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
-	:le_1yQNWvktXa5JNxZTQv107C_noun skos:note "refers to physical currency" .
 	:tbx_en lime:entry :le_2m6F2fkIK8higbuNKy2boZ_noun .
 	:le_2m6F2fkIK8higbuNKy2boZ_noun rdf:type ontolex:LexicalEntry .
 	:le_2m6F2fkIK8higbuNKy2boZ_noun rdfs:label "dough"@en .
@@ -76,6 +76,8 @@ INSERT DATA {
 	:le_2m6F2fkIK8higbuNKy2boZ_noun dct:creator "kicco" .
 	:le_2m6F2fkIK8higbuNKy2boZ_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_2m6F2fkIK8higbuNKy2boZ_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_2m6F2fkIK8higbuNKy2boZ_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
+	:le_2m6F2fkIK8higbuNKy2boZ_noun skos:note "a more recent slang synonym" .
 	:le_2m6F2fkIK8higbuNKy2boZ_noun ontolex:sense :le_2m6F2fkIK8higbuNKy2boZ_noun_sense .
 	:le_2m6F2fkIK8higbuNKy2boZ_noun_sense rdf:type ontolex:LexicalSense .
 	:le_2m6F2fkIK8higbuNKy2boZ_noun_sense ontolex:reference :concept_C001 .
@@ -88,8 +90,6 @@ INSERT DATA {
 	:le_2m6F2fkIK8higbuNKy2boZ_noun_lemma dct:creator "kicco" .
 	:le_2m6F2fkIK8higbuNKy2boZ_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_2m6F2fkIK8higbuNKy2boZ_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_2m6F2fkIK8higbuNKy2boZ_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
-	:le_2m6F2fkIK8higbuNKy2boZ_noun skos:note "a more recent slang synonym" .
 	:tbx_en lime:entry :le_574aZuyaTYkQrFAbE5x404_noun .
 	:le_574aZuyaTYkQrFAbE5x404_noun rdf:type ontolex:LexicalEntry .
 	:le_574aZuyaTYkQrFAbE5x404_noun rdfs:label "bread"@en .
@@ -98,6 +98,8 @@ INSERT DATA {
 	:le_574aZuyaTYkQrFAbE5x404_noun dct:creator "kicco" .
 	:le_574aZuyaTYkQrFAbE5x404_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_574aZuyaTYkQrFAbE5x404_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_574aZuyaTYkQrFAbE5x404_noun lexinfo:normativeAuthorization lexinfo:deprecatedTerm .
+	:le_574aZuyaTYkQrFAbE5x404_noun skos:note "a older slang synonym" .
 	:le_574aZuyaTYkQrFAbE5x404_noun ontolex:sense :le_574aZuyaTYkQrFAbE5x404_noun_sense .
 	:le_574aZuyaTYkQrFAbE5x404_noun_sense rdf:type ontolex:LexicalSense .
 	:le_574aZuyaTYkQrFAbE5x404_noun_sense ontolex:reference :concept_C001 .
@@ -110,8 +112,6 @@ INSERT DATA {
 	:le_574aZuyaTYkQrFAbE5x404_noun_lemma dct:creator "kicco" .
 	:le_574aZuyaTYkQrFAbE5x404_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_574aZuyaTYkQrFAbE5x404_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_574aZuyaTYkQrFAbE5x404_noun lexinfo:normativeAuthorization lexinfo:deprecatedTerm .
-	:le_574aZuyaTYkQrFAbE5x404_noun skos:note "a older slang synonym" .
 	:tbx_de lime:entry :le_4gZKsCKkBWHnzw3ufyJrjP_noun .
 	:le_4gZKsCKkBWHnzw3ufyJrjP_noun rdf:type ontolex:LexicalEntry .
 	:le_4gZKsCKkBWHnzw3ufyJrjP_noun rdfs:label "Geld"@de .
@@ -120,6 +120,8 @@ INSERT DATA {
 	:le_4gZKsCKkBWHnzw3ufyJrjP_noun dct:creator "kicco" .
 	:le_4gZKsCKkBWHnzw3ufyJrjP_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_4gZKsCKkBWHnzw3ufyJrjP_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_4gZKsCKkBWHnzw3ufyJrjP_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
+	:le_4gZKsCKkBWHnzw3ufyJrjP_noun skos:note "may refer to physical or banked currency" .
 	:le_4gZKsCKkBWHnzw3ufyJrjP_noun ontolex:sense :le_4gZKsCKkBWHnzw3ufyJrjP_noun_sense .
 	:le_4gZKsCKkBWHnzw3ufyJrjP_noun_sense rdf:type ontolex:LexicalSense .
 	:le_4gZKsCKkBWHnzw3ufyJrjP_noun_sense ontolex:reference :concept_C001 .
@@ -132,8 +134,6 @@ INSERT DATA {
 	:le_4gZKsCKkBWHnzw3ufyJrjP_noun_lemma dct:creator "kicco" .
 	:le_4gZKsCKkBWHnzw3ufyJrjP_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_4gZKsCKkBWHnzw3ufyJrjP_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_4gZKsCKkBWHnzw3ufyJrjP_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	:le_4gZKsCKkBWHnzw3ufyJrjP_noun skos:note "may refer to physical or banked currency" .
 	:tbx_de lime:entry :le_6tiCeIKGJWYm4ZEJ7MLV8W_noun .
 	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun rdf:type ontolex:LexicalEntry .
 	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun rdfs:label "Bargeld"@de .
@@ -142,6 +142,8 @@ INSERT DATA {
 	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun dct:creator "kicco" .
 	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
+	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun skos:note "refers to physical currency" .
 	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun ontolex:sense :le_6tiCeIKGJWYm4ZEJ7MLV8W_noun_sense .
 	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun_sense rdf:type ontolex:LexicalSense .
 	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun_sense ontolex:reference :concept_C001 .
@@ -154,8 +156,6 @@ INSERT DATA {
 	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun_lemma dct:creator "kicco" .
 	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
-	:le_6tiCeIKGJWYm4ZEJ7MLV8W_noun skos:note "refers to physical currency" .
 	:tbx_de lime:entry :le_1sPiWbAWgAEmz5YKOM7xpJ_noun .
 	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun rdf:type ontolex:LexicalEntry .
 	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun rdfs:label "Knete"@de .
@@ -164,6 +164,8 @@ INSERT DATA {
 	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun dct:creator "kicco" .
 	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
+	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun skos:note "a slang term for Geld, has no plural" .
 	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun ontolex:sense :le_1sPiWbAWgAEmz5YKOM7xpJ_noun_sense .
 	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun_sense rdf:type ontolex:LexicalSense .
 	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun_sense ontolex:reference :concept_C001 .
@@ -176,8 +178,6 @@ INSERT DATA {
 	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun_lemma dct:creator "kicco" .
 	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
-	:le_1sPiWbAWgAEmz5YKOM7xpJ_noun skos:note "a slang term for Geld, has no plural" .
 	:tbx_de lime:entry :le_5OUyZj4CLzkRjNPxZZwMSM_noun .
 	:le_5OUyZj4CLzkRjNPxZZwMSM_noun rdf:type ontolex:LexicalEntry .
 	:le_5OUyZj4CLzkRjNPxZZwMSM_noun rdfs:label "Kohle"@de .
@@ -186,6 +186,8 @@ INSERT DATA {
 	:le_5OUyZj4CLzkRjNPxZZwMSM_noun dct:creator "kicco" .
 	:le_5OUyZj4CLzkRjNPxZZwMSM_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_5OUyZj4CLzkRjNPxZZwMSM_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_5OUyZj4CLzkRjNPxZZwMSM_noun lexinfo:normativeAuthorization lexinfo:deprecatedTerm .
+	:le_5OUyZj4CLzkRjNPxZZwMSM_noun skos:note "an older slang form used shortly after WW2" .
 	:le_5OUyZj4CLzkRjNPxZZwMSM_noun ontolex:sense :le_5OUyZj4CLzkRjNPxZZwMSM_noun_sense .
 	:le_5OUyZj4CLzkRjNPxZZwMSM_noun_sense rdf:type ontolex:LexicalSense .
 	:le_5OUyZj4CLzkRjNPxZZwMSM_noun_sense ontolex:reference :concept_C001 .
@@ -198,8 +200,6 @@ INSERT DATA {
 	:le_5OUyZj4CLzkRjNPxZZwMSM_noun_lemma dct:creator "kicco" .
 	:le_5OUyZj4CLzkRjNPxZZwMSM_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_5OUyZj4CLzkRjNPxZZwMSM_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_5OUyZj4CLzkRjNPxZZwMSM_noun lexinfo:normativeAuthorization lexinfo:deprecatedTerm .
-	:le_5OUyZj4CLzkRjNPxZZwMSM_noun skos:note "an older slang form used shortly after WW2" .
 	:concept_C002 rdf:type skos:Concept .
 	:concept_C002 skos:prefLabel "C002" .
 	:concept_C002_krpCWEW7cxlH0Qa75sfpI rdf:type skos:ConceptScheme .
@@ -213,6 +213,8 @@ INSERT DATA {
 	:le_2vTRVrhRrs2dhlUu2Dpi5_noun dct:creator "kicco" .
 	:le_2vTRVrhRrs2dhlUu2Dpi5_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_2vTRVrhRrs2dhlUu2Dpi5_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_2vTRVrhRrs2dhlUu2Dpi5_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
+	:le_2vTRVrhRrs2dhlUu2Dpi5_noun skos:note "may mean music in general or may mean an instance of music (\"Let's play music\")" .
 	:le_2vTRVrhRrs2dhlUu2Dpi5_noun ontolex:sense :le_2vTRVrhRrs2dhlUu2Dpi5_noun_sense .
 	:le_2vTRVrhRrs2dhlUu2Dpi5_noun_sense rdf:type ontolex:LexicalSense .
 	:le_2vTRVrhRrs2dhlUu2Dpi5_noun_sense ontolex:reference :concept_C002 .
@@ -225,8 +227,6 @@ INSERT DATA {
 	:le_2vTRVrhRrs2dhlUu2Dpi5_noun_lemma dct:creator "kicco" .
 	:le_2vTRVrhRrs2dhlUu2Dpi5_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_2vTRVrhRrs2dhlUu2Dpi5_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_2vTRVrhRrs2dhlUu2Dpi5_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	:le_2vTRVrhRrs2dhlUu2Dpi5_noun skos:note "may mean music in general or may mean an instance of music (\"Let's play music\")" .
 	:tbx_en lime:entry :le_5uiPX6lXq9zZpbk967Kgfh_noun .
 	:le_5uiPX6lXq9zZpbk967Kgfh_noun rdf:type ontolex:LexicalEntry .
 	:le_5uiPX6lXq9zZpbk967Kgfh_noun rdfs:label "jam"@en .
@@ -235,6 +235,8 @@ INSERT DATA {
 	:le_5uiPX6lXq9zZpbk967Kgfh_noun dct:creator "kicco" .
 	:le_5uiPX6lXq9zZpbk967Kgfh_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_5uiPX6lXq9zZpbk967Kgfh_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_5uiPX6lXq9zZpbk967Kgfh_noun lexinfo:normativeAuthorization lexinfo:deprecatedTerm .
+	:le_5uiPX6lXq9zZpbk967Kgfh_noun skos:note "slang for music, specifically the making of, used mostly by musicians (i.e.\n \"Let's have a jam!\")" .
 	:le_5uiPX6lXq9zZpbk967Kgfh_noun ontolex:sense :le_5uiPX6lXq9zZpbk967Kgfh_noun_sense .
 	:le_5uiPX6lXq9zZpbk967Kgfh_noun_sense rdf:type ontolex:LexicalSense .
 	:le_5uiPX6lXq9zZpbk967Kgfh_noun_sense ontolex:reference :concept_C002 .
@@ -247,8 +249,6 @@ INSERT DATA {
 	:le_5uiPX6lXq9zZpbk967Kgfh_noun_lemma dct:creator "kicco" .
 	:le_5uiPX6lXq9zZpbk967Kgfh_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_5uiPX6lXq9zZpbk967Kgfh_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_5uiPX6lXq9zZpbk967Kgfh_noun lexinfo:normativeAuthorization lexinfo:deprecatedTerm .
-	:le_5uiPX6lXq9zZpbk967Kgfh_noun skos:note "slang for music, specifically the making of, used mostly by musicians (i.e.\n \"Let's have a jam!\")" .
 	:tbx_de lime:entry :le_kV4EMKZso25EF5tSvUK0O_noun .
 	:le_kV4EMKZso25EF5tSvUK0O_noun rdf:type ontolex:LexicalEntry .
 	:le_kV4EMKZso25EF5tSvUK0O_noun rdfs:label "Musik"@de .
@@ -257,6 +257,7 @@ INSERT DATA {
 	:le_kV4EMKZso25EF5tSvUK0O_noun dct:creator "kicco" .
 	:le_kV4EMKZso25EF5tSvUK0O_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_kV4EMKZso25EF5tSvUK0O_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_kV4EMKZso25EF5tSvUK0O_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:le_kV4EMKZso25EF5tSvUK0O_noun ontolex:sense :le_kV4EMKZso25EF5tSvUK0O_noun_sense .
 	:le_kV4EMKZso25EF5tSvUK0O_noun_sense rdf:type ontolex:LexicalSense .
 	:le_kV4EMKZso25EF5tSvUK0O_noun_sense ontolex:reference :concept_C002 .
@@ -269,7 +270,6 @@ INSERT DATA {
 	:le_kV4EMKZso25EF5tSvUK0O_noun_lemma dct:creator "kicco" .
 	:le_kV4EMKZso25EF5tSvUK0O_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_kV4EMKZso25EF5tSvUK0O_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_kV4EMKZso25EF5tSvUK0O_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:tbx_de lime:entry :le_39ZSiP3gZjMNU0Nww336q1_noun .
 	:le_39ZSiP3gZjMNU0Nww336q1_noun rdf:type ontolex:LexicalEntry .
 	:le_39ZSiP3gZjMNU0Nww336q1_noun rdfs:label "Mucke"@de .
@@ -278,6 +278,8 @@ INSERT DATA {
 	:le_39ZSiP3gZjMNU0Nww336q1_noun dct:creator "kicco" .
 	:le_39ZSiP3gZjMNU0Nww336q1_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_39ZSiP3gZjMNU0Nww336q1_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_39ZSiP3gZjMNU0Nww336q1_noun lexinfo:normativeAuthorization lexinfo:deprecatedTerm .
+	:le_39ZSiP3gZjMNU0Nww336q1_noun skos:note "slang term for music, specifically the making of, used mostly by musicians (i.e.\n \"Haben wir 'ne Mucke!\")" .
 	:le_39ZSiP3gZjMNU0Nww336q1_noun ontolex:sense :le_39ZSiP3gZjMNU0Nww336q1_noun_sense .
 	:le_39ZSiP3gZjMNU0Nww336q1_noun_sense rdf:type ontolex:LexicalSense .
 	:le_39ZSiP3gZjMNU0Nww336q1_noun_sense ontolex:reference :concept_C002 .
@@ -290,7 +292,5 @@ INSERT DATA {
 	:le_39ZSiP3gZjMNU0Nww336q1_noun_lemma dct:creator "kicco" .
 	:le_39ZSiP3gZjMNU0Nww336q1_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_39ZSiP3gZjMNU0Nww336q1_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_39ZSiP3gZjMNU0Nww336q1_noun lexinfo:normativeAuthorization lexinfo:deprecatedTerm .
-	:le_39ZSiP3gZjMNU0Nww336q1_noun skos:note "slang term for music, specifically the making of, used mostly by musicians (i.e.\n \"Haben wir 'ne Mucke!\")" .
 }
 

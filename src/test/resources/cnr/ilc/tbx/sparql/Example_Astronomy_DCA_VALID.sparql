@@ -52,6 +52,7 @@ INSERT DATA {
 	:le_4Sik966BeQHefcL1Fjplu4 dct:creator "kicco" .
 	:le_4Sik966BeQHefcL1Fjplu4 dct:created "2023-04-10T10:02+02:00" .
 	:le_4Sik966BeQHefcL1Fjplu4 dct:modified "2023-04-10T10:02+02:00" .
+	:le_4Sik966BeQHefcL1Fjplu4 skos:note "Another name for an open star cluster. They are often termed Galactic\n Clusters because they are found mainly in the plane of our galaxy. If\n you were to view our galaxy from afar, you would find that all the\n open/galactic clusters lie within the spiral arms of the galaxy.\nN-Source:\n http://www.delscope.demon.co.uk/astronomy/glossary.htm#G" .
 	:le_4Sik966BeQHefcL1Fjplu4 ontolex:sense :le_4Sik966BeQHefcL1Fjplu4_sense .
 	:le_4Sik966BeQHefcL1Fjplu4_sense rdf:type ontolex:LexicalSense .
 	:le_4Sik966BeQHefcL1Fjplu4_sense ontolex:reference :concept_c1 .
@@ -64,7 +65,6 @@ INSERT DATA {
 	:le_4Sik966BeQHefcL1Fjplu4_lemma dct:creator "kicco" .
 	:le_4Sik966BeQHefcL1Fjplu4_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_4Sik966BeQHefcL1Fjplu4_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_4Sik966BeQHefcL1Fjplu4 skos:note "Another name for an open star cluster. They are often termed Galactic\n Clusters because they are found mainly in the plane of our galaxy. If\n you were to view our galaxy from afar, you would find that all the\n open/galactic clusters lie within the spiral arms of the galaxy.\nN-Source:\n http://www.delscope.demon.co.uk/astronomy/glossary.htm#G" .
 	:tbx_es lime:entry :le_ez9HfOqRi6Eojq5cp2u4N .
 	:le_ez9HfOqRi6Eojq5cp2u4N rdf:type ontolex:LexicalEntry .
 	:le_ez9HfOqRi6Eojq5cp2u4N rdfs:label "cúmulo abierto"@es .
@@ -308,6 +308,7 @@ INSERT DATA {
 	:le_1FVV5ZSQF2un7HfTzRTBC6 dct:creator "kicco" .
 	:le_1FVV5ZSQF2un7HfTzRTBC6 dct:created "2023-04-10T10:02+02:00" .
 	:le_1FVV5ZSQF2un7HfTzRTBC6 dct:modified "2023-04-10T10:02+02:00" .
+	:le_1FVV5ZSQF2un7HfTzRTBC6 skos:note "Related Term: star cluster" .
 	:le_1FVV5ZSQF2un7HfTzRTBC6 ontolex:sense :le_1FVV5ZSQF2un7HfTzRTBC6_sense .
 	:le_1FVV5ZSQF2un7HfTzRTBC6_sense rdf:type ontolex:LexicalSense .
 	:le_1FVV5ZSQF2un7HfTzRTBC6_sense ontolex:reference :concept_c5 .
@@ -320,7 +321,6 @@ INSERT DATA {
 	:le_1FVV5ZSQF2un7HfTzRTBC6_lemma dct:creator "kicco" .
 	:le_1FVV5ZSQF2un7HfTzRTBC6_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_1FVV5ZSQF2un7HfTzRTBC6_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_1FVV5ZSQF2un7HfTzRTBC6 skos:note "Related Term: star cluster" .
 	:tbx_es lime:entry :le_10HTc4FVmdZ3dj85n6UW7t .
 	:le_10HTc4FVmdZ3dj85n6UW7t rdf:type ontolex:LexicalEntry .
 	:le_10HTc4FVmdZ3dj85n6UW7t rdfs:label "cúmulo globular"@es .
@@ -328,6 +328,7 @@ INSERT DATA {
 	:le_10HTc4FVmdZ3dj85n6UW7t dct:creator "kicco" .
 	:le_10HTc4FVmdZ3dj85n6UW7t dct:created "2023-04-10T10:02+02:00" .
 	:le_10HTc4FVmdZ3dj85n6UW7t dct:modified "2023-04-10T10:02+02:00" .
+	:le_10HTc4FVmdZ3dj85n6UW7t skos:note "Related Term: cúmulo estelar" .
 	:le_10HTc4FVmdZ3dj85n6UW7t ontolex:sense :le_10HTc4FVmdZ3dj85n6UW7t_sense .
 	:le_10HTc4FVmdZ3dj85n6UW7t_sense rdf:type ontolex:LexicalSense .
 	:le_10HTc4FVmdZ3dj85n6UW7t_sense ontolex:reference :concept_c5 .
@@ -340,7 +341,6 @@ INSERT DATA {
 	:le_10HTc4FVmdZ3dj85n6UW7t_lemma dct:creator "kicco" .
 	:le_10HTc4FVmdZ3dj85n6UW7t_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_10HTc4FVmdZ3dj85n6UW7t_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_10HTc4FVmdZ3dj85n6UW7t skos:note "Related Term: cúmulo estelar" .
 	:concept_c6 rdf:type skos:Concept .
 	:concept_c6 skos:prefLabel "c6" .
 	:tbx_en lime:entry :le_5OlS58aZZR561E4Qtiw1ws .
@@ -430,6 +430,7 @@ INSERT DATA {
 	:le_6uoORjIcbvvnuPBcPQYxsC dct:creator "kicco" .
 	:le_6uoORjIcbvvnuPBcPQYxsC dct:created "2023-04-10T10:02+02:00" .
 	:le_6uoORjIcbvvnuPBcPQYxsC dct:modified "2023-04-10T10:02+02:00" .
+	:le_6uoORjIcbvvnuPBcPQYxsC skos:note "Related Term: globular cluster\nRelated Term: open cluster" .
 	:le_6uoORjIcbvvnuPBcPQYxsC ontolex:sense :le_6uoORjIcbvvnuPBcPQYxsC_sense .
 	:le_6uoORjIcbvvnuPBcPQYxsC_sense rdf:type ontolex:LexicalSense .
 	:le_6uoORjIcbvvnuPBcPQYxsC_sense ontolex:reference :concept_c8 .
@@ -442,7 +443,6 @@ INSERT DATA {
 	:le_6uoORjIcbvvnuPBcPQYxsC_lemma dct:creator "kicco" .
 	:le_6uoORjIcbvvnuPBcPQYxsC_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_6uoORjIcbvvnuPBcPQYxsC_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_6uoORjIcbvvnuPBcPQYxsC skos:note "Related Term: globular cluster\nRelated Term: open cluster" .
 	:tbx_es lime:entry :le_6BGSY7ioMIw03En8Hrb86Q .
 	:le_6BGSY7ioMIw03En8Hrb86Q rdf:type ontolex:LexicalEntry .
 	:le_6BGSY7ioMIw03En8Hrb86Q rdfs:label "cúmulo estelar"@es .
@@ -469,6 +469,7 @@ INSERT DATA {
 	:le_Awzr2wQsjkRPYIneL09TP dct:creator "kicco" .
 	:le_Awzr2wQsjkRPYIneL09TP dct:created "2023-04-10T10:02+02:00" .
 	:le_Awzr2wQsjkRPYIneL09TP dct:modified "2023-04-10T10:02+02:00" .
+	:le_Awzr2wQsjkRPYIneL09TP skos:note "Related Term: cúmulo globular\nRelated Term: cúmulo abierto" .
 	:le_Awzr2wQsjkRPYIneL09TP ontolex:sense :le_Awzr2wQsjkRPYIneL09TP_sense .
 	:le_Awzr2wQsjkRPYIneL09TP_sense rdf:type ontolex:LexicalSense .
 	:le_Awzr2wQsjkRPYIneL09TP_sense ontolex:reference :concept_c8 .
@@ -481,7 +482,6 @@ INSERT DATA {
 	:le_Awzr2wQsjkRPYIneL09TP_lemma dct:creator "kicco" .
 	:le_Awzr2wQsjkRPYIneL09TP_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_Awzr2wQsjkRPYIneL09TP_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_Awzr2wQsjkRPYIneL09TP skos:note "Related Term: cúmulo globular\nRelated Term: cúmulo abierto" .
 	:concept_c9 rdf:type skos:Concept .
 	:concept_c9 skos:prefLabel "c9" .
 	:tbx_en lime:entry :le_1uLRqgSgjnkCHgYMbju4Yp .
@@ -945,6 +945,7 @@ INSERT DATA {
 	:le_4Ge4fe0dTrkWaIhwGGP9mo dct:creator "kicco" .
 	:le_4Ge4fe0dTrkWaIhwGGP9mo dct:created "2023-04-10T10:02+02:00" .
 	:le_4Ge4fe0dTrkWaIhwGGP9mo dct:modified "2023-04-10T10:02+02:00" .
+	:le_4Ge4fe0dTrkWaIhwGGP9mo skos:note "Author[s]: Bally, John and Hans Zinnecker\nJournal Title: The Astronomical Journal\nArticle Title: The Birth of High-Mass Stars: Accertion and/or\n Mergers?\nVolume: 129\nPublication Place: U.S.A.\nPublisher: The American Astronomical Society\nPublication Year: May 2005\nPage(s): 2281-2293" .
 	:le_4Ge4fe0dTrkWaIhwGGP9mo ontolex:sense :le_4Ge4fe0dTrkWaIhwGGP9mo_sense .
 	:le_4Ge4fe0dTrkWaIhwGGP9mo_sense rdf:type ontolex:LexicalSense .
 	:le_4Ge4fe0dTrkWaIhwGGP9mo_sense ontolex:reference :concept_c17 .
@@ -957,7 +958,6 @@ INSERT DATA {
 	:le_4Ge4fe0dTrkWaIhwGGP9mo_lemma dct:creator "kicco" .
 	:le_4Ge4fe0dTrkWaIhwGGP9mo_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_4Ge4fe0dTrkWaIhwGGP9mo_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_4Ge4fe0dTrkWaIhwGGP9mo skos:note "Author[s]: Bally, John and Hans Zinnecker\nJournal Title: The Astronomical Journal\nArticle Title: The Birth of High-Mass Stars: Accertion and/or\n Mergers?\nVolume: 129\nPublication Place: U.S.A.\nPublisher: The American Astronomical Society\nPublication Year: May 2005\nPage(s): 2281-2293" .
 	:concept_c18 rdf:type skos:Concept .
 	:concept_c18 skos:prefLabel "c18" .
 	:tbx_zu lime:entry :le_68K3Ra75gpdZQknzxscQAI .
@@ -967,6 +967,7 @@ INSERT DATA {
 	:le_68K3Ra75gpdZQknzxscQAI dct:creator "kicco" .
 	:le_68K3Ra75gpdZQknzxscQAI dct:created "2023-04-10T10:02+02:00" .
 	:le_68K3Ra75gpdZQknzxscQAI dct:modified "2023-04-10T10:02+02:00" .
+	:le_68K3Ra75gpdZQknzxscQAI skos:note "Author[s]: Mitton, Jaqueline\nBook Title: Cambridge Illustrated Dictionary of Astronomy\nPublication Place: New York\nPublisher: Cambridge University Press\nPublication Year: 2007" .
 	:le_68K3Ra75gpdZQknzxscQAI ontolex:sense :le_68K3Ra75gpdZQknzxscQAI_sense .
 	:le_68K3Ra75gpdZQknzxscQAI_sense rdf:type ontolex:LexicalSense .
 	:le_68K3Ra75gpdZQknzxscQAI_sense ontolex:reference :concept_c18 .
@@ -979,7 +980,6 @@ INSERT DATA {
 	:le_68K3Ra75gpdZQknzxscQAI_lemma dct:creator "kicco" .
 	:le_68K3Ra75gpdZQknzxscQAI_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_68K3Ra75gpdZQknzxscQAI_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_68K3Ra75gpdZQknzxscQAI skos:note "Author[s]: Mitton, Jaqueline\nBook Title: Cambridge Illustrated Dictionary of Astronomy\nPublication Place: New York\nPublisher: Cambridge University Press\nPublication Year: 2007" .
 	:concept_c19 rdf:type skos:Concept .
 	:concept_c19 skos:prefLabel "c19" .
 	:tbx_zu lime:entry :le_3yOgIDrbQTXxxbWn1mkQUb .
@@ -989,6 +989,7 @@ INSERT DATA {
 	:le_3yOgIDrbQTXxxbWn1mkQUb dct:creator "kicco" .
 	:le_3yOgIDrbQTXxxbWn1mkQUb dct:created "2023-04-10T10:02+02:00" .
 	:le_3yOgIDrbQTXxxbWn1mkQUb dct:modified "2023-04-10T10:02+02:00" .
+	:le_3yOgIDrbQTXxxbWn1mkQUb skos:note "Book Title: Webster's Third New International Dictionary\nEditor[s]: Gove, Philip Babcock\nVolume: Third Edition\nPublication Place: Springfield, Massachusetts\nPublisher: Merriam-Webster INC.\nPublication Year: 2002" .
 	:le_3yOgIDrbQTXxxbWn1mkQUb ontolex:sense :le_3yOgIDrbQTXxxbWn1mkQUb_sense .
 	:le_3yOgIDrbQTXxxbWn1mkQUb_sense rdf:type ontolex:LexicalSense .
 	:le_3yOgIDrbQTXxxbWn1mkQUb_sense ontolex:reference :concept_c19 .
@@ -1001,7 +1002,6 @@ INSERT DATA {
 	:le_3yOgIDrbQTXxxbWn1mkQUb_lemma dct:creator "kicco" .
 	:le_3yOgIDrbQTXxxbWn1mkQUb_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_3yOgIDrbQTXxxbWn1mkQUb_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_3yOgIDrbQTXxxbWn1mkQUb skos:note "Book Title: Webster's Third New International Dictionary\nEditor[s]: Gove, Philip Babcock\nVolume: Third Edition\nPublication Place: Springfield, Massachusetts\nPublisher: Merriam-Webster INC.\nPublication Year: 2002" .
 	:concept_c20 rdf:type skos:Concept .
 	:concept_c20 skos:prefLabel "c20" .
 	:tbx_zu lime:entry :le_2I2X17UtuB6NqisHU4gzmf .
@@ -1011,6 +1011,7 @@ INSERT DATA {
 	:le_2I2X17UtuB6NqisHU4gzmf dct:creator "kicco" .
 	:le_2I2X17UtuB6NqisHU4gzmf dct:created "2023-04-10T10:02+02:00" .
 	:le_2I2X17UtuB6NqisHU4gzmf dct:modified "2023-04-10T10:02+02:00" .
+	:le_2I2X17UtuB6NqisHU4gzmf skos:note "Book Title: Oxford Dictionary of Astronomy\nEditor[s]: Ridpath, Ian\nVolume: Second Edition\nPublication Place: New York\nPublisher: Oxford University Press\nPublication Year: 2007" .
 	:le_2I2X17UtuB6NqisHU4gzmf ontolex:sense :le_2I2X17UtuB6NqisHU4gzmf_sense .
 	:le_2I2X17UtuB6NqisHU4gzmf_sense rdf:type ontolex:LexicalSense .
 	:le_2I2X17UtuB6NqisHU4gzmf_sense ontolex:reference :concept_c20 .
@@ -1023,7 +1024,6 @@ INSERT DATA {
 	:le_2I2X17UtuB6NqisHU4gzmf_lemma dct:creator "kicco" .
 	:le_2I2X17UtuB6NqisHU4gzmf_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_2I2X17UtuB6NqisHU4gzmf_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_2I2X17UtuB6NqisHU4gzmf skos:note "Book Title: Oxford Dictionary of Astronomy\nEditor[s]: Ridpath, Ian\nVolume: Second Edition\nPublication Place: New York\nPublisher: Oxford University Press\nPublication Year: 2007" .
 	:concept_c21 rdf:type skos:Concept .
 	:concept_c21 skos:prefLabel "c21" .
 	:tbx_en lime:entry :le_9XhHHYH8vOP0Y6uSFHPN0 .
@@ -1073,6 +1073,7 @@ INSERT DATA {
 	:le_7BrfMUzhQju2qTjpzHiIMB dct:creator "kicco" .
 	:le_7BrfMUzhQju2qTjpzHiIMB dct:created "2023-04-10T10:02+02:00" .
 	:le_7BrfMUzhQju2qTjpzHiIMB dct:modified "2023-04-10T10:02+02:00" .
+	:le_7BrfMUzhQju2qTjpzHiIMB skos:note "Author[s]: Moore, Patrick\nBook Title: Philip's Atlas of the Universe\nPublication Place: Heron Quays, London\nPublisher: Philip's\nPublication Year: 2003" .
 	:le_7BrfMUzhQju2qTjpzHiIMB ontolex:sense :le_7BrfMUzhQju2qTjpzHiIMB_sense .
 	:le_7BrfMUzhQju2qTjpzHiIMB_sense rdf:type ontolex:LexicalSense .
 	:le_7BrfMUzhQju2qTjpzHiIMB_sense ontolex:reference :concept_c22 .
@@ -1085,7 +1086,6 @@ INSERT DATA {
 	:le_7BrfMUzhQju2qTjpzHiIMB_lemma dct:creator "kicco" .
 	:le_7BrfMUzhQju2qTjpzHiIMB_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_7BrfMUzhQju2qTjpzHiIMB_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_7BrfMUzhQju2qTjpzHiIMB skos:note "Author[s]: Moore, Patrick\nBook Title: Philip's Atlas of the Universe\nPublication Place: Heron Quays, London\nPublisher: Philip's\nPublication Year: 2003" .
 	:concept_c23 rdf:type skos:Concept .
 	:concept_c23 skos:prefLabel "c23" .
 	:tbx_en lime:entry :le_13YT4DbRHf6rC36oUTT48h .
@@ -1339,6 +1339,7 @@ INSERT DATA {
 	:le_5mXBohzdWrSTMdpd6rABbp dct:creator "kicco" .
 	:le_5mXBohzdWrSTMdpd6rABbp dct:created "2023-04-10T10:02+02:00" .
 	:le_5mXBohzdWrSTMdpd6rABbp dct:modified "2023-04-10T10:02+02:00" .
+	:le_5mXBohzdWrSTMdpd6rABbp skos:note "Grammatical Number: singular" .
 	:le_5mXBohzdWrSTMdpd6rABbp ontolex:sense :le_5mXBohzdWrSTMdpd6rABbp_sense .
 	:le_5mXBohzdWrSTMdpd6rABbp_sense rdf:type ontolex:LexicalSense .
 	:le_5mXBohzdWrSTMdpd6rABbp_sense ontolex:reference :concept_c29 .
@@ -1351,7 +1352,6 @@ INSERT DATA {
 	:le_5mXBohzdWrSTMdpd6rABbp_lemma dct:creator "kicco" .
 	:le_5mXBohzdWrSTMdpd6rABbp_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_5mXBohzdWrSTMdpd6rABbp_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_5mXBohzdWrSTMdpd6rABbp skos:note "Grammatical Number: singular" .
 	:tbx_en lime:entry :le_6yApTHFZHyR5AhYGPR4P3O .
 	:le_6yApTHFZHyR5AhYGPR4P3O rdf:type ontolex:LexicalEntry .
 	:le_6yApTHFZHyR5AhYGPR4P3O rdfs:label "nebulae"@en .
@@ -1359,6 +1359,7 @@ INSERT DATA {
 	:le_6yApTHFZHyR5AhYGPR4P3O dct:creator "kicco" .
 	:le_6yApTHFZHyR5AhYGPR4P3O dct:created "2023-04-10T10:02+02:00" .
 	:le_6yApTHFZHyR5AhYGPR4P3O dct:modified "2023-04-10T10:02+02:00" .
+	:le_6yApTHFZHyR5AhYGPR4P3O skos:note "Grammatical Number: plural" .
 	:le_6yApTHFZHyR5AhYGPR4P3O ontolex:sense :le_6yApTHFZHyR5AhYGPR4P3O_sense .
 	:le_6yApTHFZHyR5AhYGPR4P3O_sense rdf:type ontolex:LexicalSense .
 	:le_6yApTHFZHyR5AhYGPR4P3O_sense ontolex:reference :concept_c29 .
@@ -1371,7 +1372,6 @@ INSERT DATA {
 	:le_6yApTHFZHyR5AhYGPR4P3O_lemma dct:creator "kicco" .
 	:le_6yApTHFZHyR5AhYGPR4P3O_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_6yApTHFZHyR5AhYGPR4P3O_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_6yApTHFZHyR5AhYGPR4P3O skos:note "Grammatical Number: plural" .
 	:tbx_es lime:entry :le_286fczA4uSKLCn0mJYYY93 .
 	:le_286fczA4uSKLCn0mJYYY93 rdf:type ontolex:LexicalEntry .
 	:le_286fczA4uSKLCn0mJYYY93 rdfs:label "nebulosa"@es .
@@ -1640,6 +1640,7 @@ INSERT DATA {
 	:le_4hhoYdsAyQEXXLw2KS0fTU dct:creator "kicco" .
 	:le_4hhoYdsAyQEXXLw2KS0fTU dct:created "2023-04-10T10:02+02:00" .
 	:le_4hhoYdsAyQEXXLw2KS0fTU dct:modified "2023-04-10T10:02+02:00" .
+	:le_4hhoYdsAyQEXXLw2KS0fTU skos:note "Related Term: event horizon" .
 	:le_4hhoYdsAyQEXXLw2KS0fTU ontolex:sense :le_4hhoYdsAyQEXXLw2KS0fTU_sense .
 	:le_4hhoYdsAyQEXXLw2KS0fTU_sense rdf:type ontolex:LexicalSense .
 	:le_4hhoYdsAyQEXXLw2KS0fTU_sense ontolex:reference :concept_c35 .
@@ -1652,7 +1653,6 @@ INSERT DATA {
 	:le_4hhoYdsAyQEXXLw2KS0fTU_lemma dct:creator "kicco" .
 	:le_4hhoYdsAyQEXXLw2KS0fTU_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_4hhoYdsAyQEXXLw2KS0fTU_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_4hhoYdsAyQEXXLw2KS0fTU skos:note "Related Term: event horizon" .
 	:tbx_es lime:entry :le_4r8zJ9rIfsWGolPTaZYeJg .
 	:le_4r8zJ9rIfsWGolPTaZYeJg rdf:type ontolex:LexicalEntry .
 	:le_4r8zJ9rIfsWGolPTaZYeJg rdfs:label "radio de Schwarzschild"@es .
@@ -1660,6 +1660,7 @@ INSERT DATA {
 	:le_4r8zJ9rIfsWGolPTaZYeJg dct:creator "kicco" .
 	:le_4r8zJ9rIfsWGolPTaZYeJg dct:created "2023-04-10T10:02+02:00" .
 	:le_4r8zJ9rIfsWGolPTaZYeJg dct:modified "2023-04-10T10:02+02:00" .
+	:le_4r8zJ9rIfsWGolPTaZYeJg skos:note "Related Term: horizonte de sucesos, horizonte de eventos" .
 	:le_4r8zJ9rIfsWGolPTaZYeJg ontolex:sense :le_4r8zJ9rIfsWGolPTaZYeJg_sense .
 	:le_4r8zJ9rIfsWGolPTaZYeJg_sense rdf:type ontolex:LexicalSense .
 	:le_4r8zJ9rIfsWGolPTaZYeJg_sense ontolex:reference :concept_c35 .
@@ -1672,7 +1673,6 @@ INSERT DATA {
 	:le_4r8zJ9rIfsWGolPTaZYeJg_lemma dct:creator "kicco" .
 	:le_4r8zJ9rIfsWGolPTaZYeJg_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_4r8zJ9rIfsWGolPTaZYeJg_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_4r8zJ9rIfsWGolPTaZYeJg skos:note "Related Term: horizonte de sucesos, horizonte de eventos" .
 	:concept_c36 rdf:type skos:Concept .
 	:concept_c36 skos:prefLabel "c36" .
 	:tbx_en lime:entry :le_77Ne5wy09Gvfg9fy6zujE8 .
@@ -1895,6 +1895,7 @@ INSERT DATA {
 	:le_1Jlx7xlyId1nq6Nl0WLeaI dct:creator "kicco" .
 	:le_1Jlx7xlyId1nq6Nl0WLeaI dct:created "2023-04-10T10:02+02:00" .
 	:le_1Jlx7xlyId1nq6Nl0WLeaI dct:modified "2023-04-10T10:02+02:00" .
+	:le_1Jlx7xlyId1nq6Nl0WLeaI skos:note "The carbon cycle can also refer to the biogeochemical cycle by which\n carbon is exchanged among the biosphere, pedosphere, geosphere,\n hydrosphere, and atmosphere of the Earth.\nN-Source: http://en.wikipedia.org/wiki/Carbon_cycle" .
 	:le_1Jlx7xlyId1nq6Nl0WLeaI ontolex:sense :le_1Jlx7xlyId1nq6Nl0WLeaI_sense .
 	:le_1Jlx7xlyId1nq6Nl0WLeaI_sense rdf:type ontolex:LexicalSense .
 	:le_1Jlx7xlyId1nq6Nl0WLeaI_sense ontolex:reference :concept_c38 .
@@ -1907,7 +1908,6 @@ INSERT DATA {
 	:le_1Jlx7xlyId1nq6Nl0WLeaI_lemma dct:creator "kicco" .
 	:le_1Jlx7xlyId1nq6Nl0WLeaI_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_1Jlx7xlyId1nq6Nl0WLeaI_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_1Jlx7xlyId1nq6Nl0WLeaI skos:note "The carbon cycle can also refer to the biogeochemical cycle by which\n carbon is exchanged among the biosphere, pedosphere, geosphere,\n hydrosphere, and atmosphere of the Earth.\nN-Source: http://en.wikipedia.org/wiki/Carbon_cycle" .
 	:tbx_en lime:entry :le_4mdKtPUdKa0iCjbBBHMYXk .
 	:le_4mdKtPUdKa0iCjbBBHMYXk rdf:type ontolex:LexicalEntry .
 	:le_4mdKtPUdKa0iCjbBBHMYXk rdfs:label "CN cycle"@en .
@@ -1972,6 +1972,7 @@ INSERT DATA {
 	:le_3qBYlSN1PDaOustHVJRgC dct:creator "kicco" .
 	:le_3qBYlSN1PDaOustHVJRgC dct:created "2023-04-10T10:02+02:00" .
 	:le_3qBYlSN1PDaOustHVJRgC dct:modified "2023-04-10T10:02+02:00" .
+	:le_3qBYlSN1PDaOustHVJRgC skos:note "También este término puede referirse a la formación de las moléculas\n de carbohidratos, lípidos, proteínas y ácidos nucleicos.\nN-Source: http://es.wikipedia.org/wiki/Ciclo_del_carbono" .
 	:le_3qBYlSN1PDaOustHVJRgC ontolex:sense :le_3qBYlSN1PDaOustHVJRgC_sense .
 	:le_3qBYlSN1PDaOustHVJRgC_sense rdf:type ontolex:LexicalSense .
 	:le_3qBYlSN1PDaOustHVJRgC_sense ontolex:reference :concept_c38 .
@@ -1984,7 +1985,6 @@ INSERT DATA {
 	:le_3qBYlSN1PDaOustHVJRgC_lemma dct:creator "kicco" .
 	:le_3qBYlSN1PDaOustHVJRgC_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_3qBYlSN1PDaOustHVJRgC_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_3qBYlSN1PDaOustHVJRgC skos:note "También este término puede referirse a la formación de las moléculas\n de carbohidratos, lípidos, proteínas y ácidos nucleicos.\nN-Source: http://es.wikipedia.org/wiki/Ciclo_del_carbono" .
 	:tbx_es lime:entry :le_59tinNpppmD6OdwHVwd9ca .
 	:le_59tinNpppmD6OdwHVwd9ca rdf:type ontolex:LexicalEntry .
 	:le_59tinNpppmD6OdwHVwd9ca rdfs:label "ciclo del carbono-nitrógeno"@es .
@@ -2053,6 +2053,7 @@ INSERT DATA {
 	:le_1hPLh5KawVRtIHQov0SgnO dct:creator "kicco" .
 	:le_1hPLh5KawVRtIHQov0SgnO dct:created "2023-04-10T10:02+02:00" .
 	:le_1hPLh5KawVRtIHQov0SgnO dct:modified "2023-04-10T10:02+02:00" .
+	:le_1hPLh5KawVRtIHQov0SgnO skos:note "Author[s]: Ridpath, Ian\nBook Title: Astronomía\nPublication Place: Spain\nPublisher: Oxford University Press\nPublication Year: 2003" .
 	:le_1hPLh5KawVRtIHQov0SgnO ontolex:sense :le_1hPLh5KawVRtIHQov0SgnO_sense .
 	:le_1hPLh5KawVRtIHQov0SgnO_sense rdf:type ontolex:LexicalSense .
 	:le_1hPLh5KawVRtIHQov0SgnO_sense ontolex:reference :concept_c40 .
@@ -2065,7 +2066,6 @@ INSERT DATA {
 	:le_1hPLh5KawVRtIHQov0SgnO_lemma dct:creator "kicco" .
 	:le_1hPLh5KawVRtIHQov0SgnO_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_1hPLh5KawVRtIHQov0SgnO_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_1hPLh5KawVRtIHQov0SgnO skos:note "Author[s]: Ridpath, Ian\nBook Title: Astronomía\nPublication Place: Spain\nPublisher: Oxford University Press\nPublication Year: 2003" .
 	:concept_c41 rdf:type skos:Concept .
 	:concept_c41 skos:prefLabel "c41" .
 	:concept_c41 skos:note "Electron degeneracy supports white dwarf stars against further\n collapse.\nN-Source: Oxford2007"@en .
@@ -2135,6 +2135,7 @@ INSERT DATA {
 	:le_3hGuWmU5SbECCuvyl49h2h dct:creator "kicco" .
 	:le_3hGuWmU5SbECCuvyl49h2h dct:created "2023-04-10T10:02+02:00" .
 	:le_3hGuWmU5SbECCuvyl49h2h dct:modified "2023-04-10T10:02+02:00" .
+	:le_3hGuWmU5SbECCuvyl49h2h skos:note "Related Term: black hole, event horizon, Schwarzschild radius" .
 	:le_3hGuWmU5SbECCuvyl49h2h ontolex:sense :le_3hGuWmU5SbECCuvyl49h2h_sense .
 	:le_3hGuWmU5SbECCuvyl49h2h_sense rdf:type ontolex:LexicalSense .
 	:le_3hGuWmU5SbECCuvyl49h2h_sense ontolex:reference :concept_c42 .
@@ -2147,7 +2148,6 @@ INSERT DATA {
 	:le_3hGuWmU5SbECCuvyl49h2h_lemma dct:creator "kicco" .
 	:le_3hGuWmU5SbECCuvyl49h2h_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_3hGuWmU5SbECCuvyl49h2h_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_3hGuWmU5SbECCuvyl49h2h skos:note "Related Term: black hole, event horizon, Schwarzschild radius" .
 	:tbx_es lime:entry :le_2o433iME0TWf5q0yo2koJv .
 	:le_2o433iME0TWf5q0yo2koJv rdf:type ontolex:LexicalEntry .
 	:le_2o433iME0TWf5q0yo2koJv rdfs:label "singularidad"@es .
@@ -2155,6 +2155,7 @@ INSERT DATA {
 	:le_2o433iME0TWf5q0yo2koJv dct:creator "kicco" .
 	:le_2o433iME0TWf5q0yo2koJv dct:created "2023-04-10T10:02+02:00" .
 	:le_2o433iME0TWf5q0yo2koJv dct:modified "2023-04-10T10:02+02:00" .
+	:le_2o433iME0TWf5q0yo2koJv skos:note "Related Term: agujero negro, horizonte de sucesos, radio de\n Schwarzschild" .
 	:le_2o433iME0TWf5q0yo2koJv ontolex:sense :le_2o433iME0TWf5q0yo2koJv_sense .
 	:le_2o433iME0TWf5q0yo2koJv_sense rdf:type ontolex:LexicalSense .
 	:le_2o433iME0TWf5q0yo2koJv_sense ontolex:reference :concept_c42 .
@@ -2167,7 +2168,6 @@ INSERT DATA {
 	:le_2o433iME0TWf5q0yo2koJv_lemma dct:creator "kicco" .
 	:le_2o433iME0TWf5q0yo2koJv_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_2o433iME0TWf5q0yo2koJv_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_2o433iME0TWf5q0yo2koJv skos:note "Related Term: agujero negro, horizonte de sucesos, radio de\n Schwarzschild" .
 	:concept_c43 rdf:type skos:Concept .
 	:concept_c43 skos:prefLabel "c43" .
 	:concept_c43 skos:note "In this graphic, the M with a subscript is the symbol for a solar mass.\nN-Source: Jonathan Tomolonis" .

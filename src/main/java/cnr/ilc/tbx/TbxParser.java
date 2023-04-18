@@ -25,8 +25,10 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 	private Map<String, String> lexicons = new HashMap<>();
 	private Map<String,Object> metadata = new HashMap<>();
 	private Collection<Concept> concepts = new ArrayList<>();
+	private String creator;
 
-    public TbxParser(InputStream inputStream) throws Exception {
+    public TbxParser(InputStream inputStream, String creator) throws Exception {
+		this.creator = creator;
 		CountingInputStream countingInputStream = new CountingInputStream(inputStream);
 
 		document = parseTbx(countingInputStream);
@@ -56,7 +58,7 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 		NodeList conceptEntries = document.getElementsByTagName("conceptEntry");
 		for (int i = 0; i < conceptEntries.getLength(); ++i)  {
 			Element conceptEntry = (Element) conceptEntries.item(i);
-			Concept concept = conceptEntryParser.parseConceptEntry(conceptEntry);
+			Concept concept = conceptEntryParser.parseConceptEntry(conceptEntry, creator);
 			concepts.add(concept);
 			lexicons.putAll(conceptEntryParser.getLexicons());
 		}		
@@ -119,8 +121,4 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 		return null;
 	}
 
-	@Override
-	public String getRdfType() {
-		return "ontolex:LexicalEntry";
-	}
 }

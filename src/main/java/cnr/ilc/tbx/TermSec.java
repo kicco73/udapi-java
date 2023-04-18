@@ -3,8 +3,8 @@ import org.w3c.dom.*;
 
 import cnr.ilc.rut.Concept;
 import cnr.ilc.rut.RutException;
-import cnr.ilc.rut.SPARQLFormatter;
 import cnr.ilc.rut.Word;
+import cnr.ilc.sparql.SPARQLFormatter;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -35,7 +35,7 @@ public class TermSec {
 				return;
 			}
 			
-			word.addFeature(word.FQName, "lexinfo:normativeAuthorization", translatedStatus);
+			word.triples.add(word.FQName, "lexinfo:normativeAuthorization", translatedStatus);
 		}
 	}
 
@@ -54,7 +54,7 @@ public class TermSec {
 			String translatedType = termTypes.get(termType);
 			if (translatedType == null) 
 				throw new RutException(String.format("Unknown term type: %s", translatedType));
-				word.addFeature(word.FQName, "lexinfo:termType", translatedType);
+				word.triples.add(word.FQName, "lexinfo:termType", translatedType);
 		}
 	}
 
@@ -80,28 +80,28 @@ public class TermSec {
 			if (crossReference != null) 
 				object.put("rdf:seeAlso", SPARQLFormatter.formatObjectWithUrlIfPossible(crossReference));
 	
-			word.addFeature(word.FQName+"_sense", "ontolex:usage", object);
+			word.triples.add(word.FQName+"_sense", "ontolex:usage", object);
 			
 		} else {
 			if (source != null)
-				word.addFeatureAsUrlOrString(word.FQName, "dct:source", source);
+				word.triples.addAsUrlOrString(word.FQName, "dct:source", source);
 
 			if (externalCrossReference != null)
-				word.addFeatureAsUrlOrString(word.FQName, "rdf:seeAlso", externalCrossReference);
+				word.triples.addAsUrlOrString(word.FQName, "rdf:seeAlso", externalCrossReference);
 
 			if (crossReference != null)
-				word.addFeatureAsUrlOrString(word.FQName, "rdf:seeAlso", crossReference);
+				word.triples.addAsUrlOrString(word.FQName, "rdf:seeAlso", crossReference);
 		}
 	}
 
 	private void parseNote(Element termSec) {
 		String note = Nodes.getTextOfTag(termSec, "note");
 		if (note != null) {
-			word.addFeatureAsString(word.FQName, "skos:note", note);
+			word.triples.addAsString(word.FQName, "skos:note", note);
 		}
 	}
 
-	public Word parseTermSec(Element termSec, String lexiconFQN, String language, Concept concept) {
+	public Word parseTermSec(Element termSec, String lexiconFQN, String language, Concept concept, String creator) {
 
 		String lemma = Nodes.getTextOfTag(termSec, "term");
 		String grammaticalGender = Nodes.getTextOfTag(termSec, "grammaticalGender");
@@ -111,7 +111,7 @@ public class TermSec {
 		
 		String grammaticalGenderFQN = String.format("lexinfo:%s", grammaticalGender);
 
-		word = concept.newWord(lemma, partOfSpeechFQN, language, lexiconFQN);
+		word = concept.newWord(lemma, partOfSpeechFQN, language, lexiconFQN, creator);
 		if (grammaticalGender != null)
 			word.canonicalForm.features.put(grammaticalGenderFQN, "lexinfo:gender");
 

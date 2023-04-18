@@ -1,0 +1,58 @@
+package cnr.ilc.sparql;
+
+import java.util.Date;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Map;
+
+import cnr.ilc.rut.DateProvider;
+
+public class TripleSerialiser {
+	private String features = "";
+
+	public void add(String subject, String link, String object) {
+		object = object.replaceAll("[\n\t ]+", " ");
+		features += String.format("\t%s %s %s .\n", subject, link, object);
+	}
+
+	public void addAsString(String subject, String link, String object) {
+		String objectString = SPARQLFormatter.formatObjectAsString(object);
+		add(subject, link, objectString);
+	}
+
+	public void addAsUrlOrString(String subject, String link, String possibleUrl) {
+		String object = SPARQLFormatter.formatObjectWithUrlIfPossible(possibleUrl);
+		add(subject, link, object);
+	}
+
+	public void addAsStringWithLanguage(String subject, String link, String description, String language) {
+		String object = SPARQLFormatter.formatObjectWithLanguage(description, language);
+		add(subject, link, object);
+	}
+
+	public void add(String subject, String link, Map<String,String> anonObject) {
+		String description = SPARQLFormatter.formatObject(anonObject);
+		add(subject, link, description);
+	}
+
+	public void addMetaData(String entryFQN, String creator) {
+		Date now = DateProvider.getInstance().getDate();
+		DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmX"); // Quoted "Z" to indicate UTC, no timezone offset
+		String date = df.format(now);
+
+		addAsString(entryFQN, "dct:creator", creator);
+		addAsString(entryFQN, "dct:created", date + ":00");
+		addAsString(entryFQN, "dct:modified", date + ":00");
+	}
+
+	public void addLexicon(String lexiconFQN, String language, String creator) {		
+		add(lexiconFQN, "rdf:type", "lime:Lexicon");
+        addAsString(lexiconFQN, "lime:language", language);   
+		addMetaData(lexiconFQN, creator);     
+	}
+
+	public String serialise() {
+		return features;
+	}
+
+}

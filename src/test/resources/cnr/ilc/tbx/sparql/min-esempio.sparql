@@ -37,6 +37,8 @@ INSERT DATA {
 	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun dct:creator "kicco" .
 	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
+	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun rdf:seeAlso <https://en.wikipedia.org/wiki/Carsharing> .
 	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun ontolex:sense :le_7OxhhZzHnoAbFCbvYtk1Cd_noun_sense .
 	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun_sense rdf:type ontolex:LexicalSense .
 	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun_sense ontolex:reference :concept_c1 .
@@ -49,8 +51,6 @@ INSERT DATA {
 	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun_lemma dct:creator "kicco" .
 	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	:le_7OxhhZzHnoAbFCbvYtk1Cd_noun rdf:seeAlso <https://en.wikipedia.org/wiki/Carsharing> .
 	:tbx_en lime:entry :le_F6vvbs0kcwnN5sxhBSmoF_noun .
 	:le_F6vvbs0kcwnN5sxhBSmoF_noun rdf:type ontolex:LexicalEntry .
 	:le_F6vvbs0kcwnN5sxhBSmoF_noun rdfs:label "car sharing"@en .
@@ -59,6 +59,7 @@ INSERT DATA {
 	:le_F6vvbs0kcwnN5sxhBSmoF_noun dct:creator "kicco" .
 	:le_F6vvbs0kcwnN5sxhBSmoF_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_F6vvbs0kcwnN5sxhBSmoF_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_F6vvbs0kcwnN5sxhBSmoF_noun skos:note "terminological variant in AU, NZ, CA, TH, and US" .
 	:le_F6vvbs0kcwnN5sxhBSmoF_noun ontolex:sense :le_F6vvbs0kcwnN5sxhBSmoF_noun_sense .
 	:le_F6vvbs0kcwnN5sxhBSmoF_noun_sense rdf:type ontolex:LexicalSense .
 	:le_F6vvbs0kcwnN5sxhBSmoF_noun_sense ontolex:reference :concept_c1 .
@@ -71,7 +72,6 @@ INSERT DATA {
 	:le_F6vvbs0kcwnN5sxhBSmoF_noun_lemma dct:creator "kicco" .
 	:le_F6vvbs0kcwnN5sxhBSmoF_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_F6vvbs0kcwnN5sxhBSmoF_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_F6vvbs0kcwnN5sxhBSmoF_noun skos:note "terminological variant in AU, NZ, CA, TH, and US" .
 	:tbx_en lime:entry :le_2qtl9zuTssWXwKguQH423y_noun .
 	:le_2qtl9zuTssWXwKguQH423y_noun rdf:type ontolex:LexicalEntry .
 	:le_2qtl9zuTssWXwKguQH423y_noun rdfs:label "car clubs"@en .
@@ -80,6 +80,7 @@ INSERT DATA {
 	:le_2qtl9zuTssWXwKguQH423y_noun dct:creator "kicco" .
 	:le_2qtl9zuTssWXwKguQH423y_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_2qtl9zuTssWXwKguQH423y_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_2qtl9zuTssWXwKguQH423y_noun skos:note "terminological variant in UK" .
 	:le_2qtl9zuTssWXwKguQH423y_noun ontolex:sense :le_2qtl9zuTssWXwKguQH423y_noun_sense .
 	:le_2qtl9zuTssWXwKguQH423y_noun_sense rdf:type ontolex:LexicalSense .
 	:le_2qtl9zuTssWXwKguQH423y_noun_sense ontolex:reference :concept_c1 .
@@ -92,7 +93,6 @@ INSERT DATA {
 	:le_2qtl9zuTssWXwKguQH423y_noun_lemma dct:creator "kicco" .
 	:le_2qtl9zuTssWXwKguQH423y_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_2qtl9zuTssWXwKguQH423y_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_2qtl9zuTssWXwKguQH423y_noun skos:note "terminological variant in UK" .
 	:tbx_fr lime:entry :le_4fMgHWGEhhKnqdnjKsQt8Z_noun .
 	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun rdf:type ontolex:LexicalEntry .
 	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun rdfs:label "autopartage"@fr .
@@ -101,6 +101,9 @@ INSERT DATA {
 	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun dct:creator "kicco" .
 	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
+	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun rdf:seeAlso <https://fr.wikipedia.org/wiki/Autopartage> .
+	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun skos:note "Il faut distinguer le terme analysé de \"service de partage de véhicules\" et \"partage de véhicules\".\n Ces derniers sont souvent utilisés comme synonymes, mais il s'agit en réalité de concepts plus généraux qui englobent\n tous les types de véhicules, tandis que l'autopartage ne concerne que les voitures." .
 	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun ontolex:sense :le_4fMgHWGEhhKnqdnjKsQt8Z_noun_sense .
 	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun_sense rdf:type ontolex:LexicalSense .
 	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun_sense ontolex:reference :concept_c1 .
@@ -113,9 +116,6 @@ INSERT DATA {
 	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun_lemma dct:creator "kicco" .
 	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun rdf:seeAlso <https://fr.wikipedia.org/wiki/Autopartage> .
-	:le_4fMgHWGEhhKnqdnjKsQt8Z_noun skos:note "Il faut distinguer le terme analysé de \"service de partage de véhicules\" et \"partage de véhicules\".\n Ces derniers sont souvent utilisés comme synonymes, mais il s'agit en réalité de concepts plus généraux qui englobent\n tous les types de véhicules, tandis que l'autopartage ne concerne que les voitures." .
 	:tbx_fr lime:entry :le_R17APqtXAdlWRud1xPrPQ_noun .
 	:le_R17APqtXAdlWRud1xPrPQ_noun rdf:type ontolex:LexicalEntry .
 	:le_R17APqtXAdlWRud1xPrPQ_noun rdfs:label "voitures en libre-service"@fr .
@@ -144,6 +144,9 @@ INSERT DATA {
 	:le_25QFMWwLeNpDJrEVjzkvYZ_noun dct:creator "kicco" .
 	:le_25QFMWwLeNpDJrEVjzkvYZ_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_25QFMWwLeNpDJrEVjzkvYZ_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_25QFMWwLeNpDJrEVjzkvYZ_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
+	:le_25QFMWwLeNpDJrEVjzkvYZ_noun rdf:seeAlso <https://it.wikipedia.org/wiki/Car_sharing> .
+	:le_25QFMWwLeNpDJrEVjzkvYZ_noun skos:note "Generalmente in italiano si utilizza l'anglicismo sebbene la variante \"auto condivisa\" sia attestata." .
 	:le_25QFMWwLeNpDJrEVjzkvYZ_noun ontolex:sense :le_25QFMWwLeNpDJrEVjzkvYZ_noun_sense .
 	:le_25QFMWwLeNpDJrEVjzkvYZ_noun_sense rdf:type ontolex:LexicalSense .
 	:le_25QFMWwLeNpDJrEVjzkvYZ_noun_sense ontolex:reference :concept_c1 .
@@ -156,8 +159,5 @@ INSERT DATA {
 	:le_25QFMWwLeNpDJrEVjzkvYZ_noun_lemma dct:creator "kicco" .
 	:le_25QFMWwLeNpDJrEVjzkvYZ_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_25QFMWwLeNpDJrEVjzkvYZ_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_25QFMWwLeNpDJrEVjzkvYZ_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	:le_25QFMWwLeNpDJrEVjzkvYZ_noun rdf:seeAlso <https://it.wikipedia.org/wiki/Car_sharing> .
-	:le_25QFMWwLeNpDJrEVjzkvYZ_noun skos:note "Generalmente in italiano si utilizza l'anglicismo sebbene la variante \"auto condivisa\" sia attestata." .
 }
 

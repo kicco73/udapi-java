@@ -18,14 +18,14 @@ import java.util.Map;
 
 import org.json.simple.JSONValue;
 
-import cnr.ilc.conllu.ConnluParser;
+import cnr.ilc.conllu.ConlluParser;
 import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.ResourceInterface;
 import cnr.ilc.rut.DateProvider;
 import cnr.ilc.rut.GraphDBClient;
 import cnr.ilc.rut.IdGenerator;
-import cnr.ilc.rut.SPARQLWriter;
-import cnr.ilc.rut.TripleStoreInterface;
+import cnr.ilc.sparql.SPARQLWriter;
+import cnr.ilc.sparql.TripleStoreInterface;
 import cnr.ilc.tbx.TbxParser;
 import cnr.ilc.db.SqliteStore;
 
@@ -141,9 +141,9 @@ public class Main {
 
     private ParserInterface makeParser(InputStream inputStream) throws Exception {
         if (isTbx) {
-            return new TbxParser(inputStream);
+            return new TbxParser(inputStream, creator);
         } else if (isConnlu) {
-            return new ConnluParser(inputStream, language);
+            return new ConlluParser(inputStream, creator, language);
         }
         return null;
     }
@@ -168,8 +168,8 @@ public class Main {
                 statements = tripleStore.serialised();
             }  
 
-            if (exportConll != null && parser instanceof ConnluParser) {
-                ((ConnluParser)parser).writeConll(exportConll);
+            if (exportConll != null && parser instanceof ConlluParser) {
+                ((ConlluParser)parser).writeConll(exportConll);
             }  
         
         }

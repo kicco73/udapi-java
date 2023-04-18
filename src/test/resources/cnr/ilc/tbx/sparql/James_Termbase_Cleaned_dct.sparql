@@ -44,6 +44,7 @@ INSERT DATA {
 	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun dct:creator "kicco" .
 	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun ontolex:sense :le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_sense .
 	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_sense rdf:type ontolex:LexicalSense .
 	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_sense ontolex:reference :concept_c9680bce6-2c85-47ed-913a-68e64b427708 .
@@ -56,7 +57,6 @@ INSERT DATA {
 	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_lemma dct:creator "kicco" .
 	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:tbx_de lime:entry :le_6Han44sibupa7x0jPUq8BP_noun .
 	:le_6Han44sibupa7x0jPUq8BP_noun rdf:type ontolex:LexicalEntry .
 	:le_6Han44sibupa7x0jPUq8BP_noun rdfs:label "Maus"@de .
@@ -65,6 +65,7 @@ INSERT DATA {
 	:le_6Han44sibupa7x0jPUq8BP_noun dct:creator "kicco" .
 	:le_6Han44sibupa7x0jPUq8BP_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_6Han44sibupa7x0jPUq8BP_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_6Han44sibupa7x0jPUq8BP_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:le_6Han44sibupa7x0jPUq8BP_noun ontolex:sense :le_6Han44sibupa7x0jPUq8BP_noun_sense .
 	:le_6Han44sibupa7x0jPUq8BP_noun_sense rdf:type ontolex:LexicalSense .
 	:le_6Han44sibupa7x0jPUq8BP_noun_sense ontolex:reference :concept_c9680bce6-2c85-47ed-913a-68e64b427708 .
@@ -77,7 +78,6 @@ INSERT DATA {
 	:le_6Han44sibupa7x0jPUq8BP_noun_lemma dct:creator "kicco" .
 	:le_6Han44sibupa7x0jPUq8BP_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_6Han44sibupa7x0jPUq8BP_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_6Han44sibupa7x0jPUq8BP_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f rdf:type skos:Concept .
 	:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f skos:prefLabel "ca60e0cb9-30d3-466f-aba8-323294edcb4f" .
 	:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f_2SU1vPZE67x7OQ2keemVas rdf:type skos:ConceptScheme .
@@ -91,6 +91,7 @@ INSERT DATA {
 	:le_5PhpMjASPJuEGEjWQzFRoD_noun dct:creator "kicco" .
 	:le_5PhpMjASPJuEGEjWQzFRoD_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_5PhpMjASPJuEGEjWQzFRoD_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_5PhpMjASPJuEGEjWQzFRoD_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:le_5PhpMjASPJuEGEjWQzFRoD_noun ontolex:sense :le_5PhpMjASPJuEGEjWQzFRoD_noun_sense .
 	:le_5PhpMjASPJuEGEjWQzFRoD_noun_sense rdf:type ontolex:LexicalSense .
 	:le_5PhpMjASPJuEGEjWQzFRoD_noun_sense ontolex:reference :concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f .
@@ -103,7 +104,6 @@ INSERT DATA {
 	:le_5PhpMjASPJuEGEjWQzFRoD_noun_lemma dct:creator "kicco" .
 	:le_5PhpMjASPJuEGEjWQzFRoD_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_5PhpMjASPJuEGEjWQzFRoD_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_5PhpMjASPJuEGEjWQzFRoD_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:tbx_es lime:entry :le_3Y9UyvanjP1ACqwPy3ysne_noun .
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun rdf:type ontolex:LexicalEntry .
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun rdfs:label "zapato"@es .
@@ -112,6 +112,7 @@ INSERT DATA {
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun dct:creator "kicco" .
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_3Y9UyvanjP1ACqwPy3ysne_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun ontolex:sense :le_3Y9UyvanjP1ACqwPy3ysne_noun_sense .
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun_sense rdf:type ontolex:LexicalSense .
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun_sense ontolex:reference :concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f .
@@ -124,7 +125,6 @@ INSERT DATA {
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun_lemma dct:creator "kicco" .
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_3Y9UyvanjP1ACqwPy3ysne_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_3Y9UyvanjP1ACqwPy3ysne_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a rdf:type skos:Concept .
 	:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a skos:prefLabel "c7f4dde5b-7930-40bf-8eee-f14545933a0a" .
 	:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a skos:note "this is a note\nthis is also a note" .
@@ -139,6 +139,7 @@ INSERT DATA {
 	:le_6IGu2I1G5Xq5khSTcONslT_noun dct:creator "kicco" .
 	:le_6IGu2I1G5Xq5khSTcONslT_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_6IGu2I1G5Xq5khSTcONslT_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_6IGu2I1G5Xq5khSTcONslT_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:le_6IGu2I1G5Xq5khSTcONslT_noun ontolex:sense :le_6IGu2I1G5Xq5khSTcONslT_noun_sense .
 	:le_6IGu2I1G5Xq5khSTcONslT_noun_sense rdf:type ontolex:LexicalSense .
 	:le_6IGu2I1G5Xq5khSTcONslT_noun_sense ontolex:reference :concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
@@ -151,7 +152,6 @@ INSERT DATA {
 	:le_6IGu2I1G5Xq5khSTcONslT_noun_lemma dct:creator "kicco" .
 	:le_6IGu2I1G5Xq5khSTcONslT_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_6IGu2I1G5Xq5khSTcONslT_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_6IGu2I1G5Xq5khSTcONslT_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:tbx_en lime:entry :le_1VMiyL7FYf7h5Yj7kJM2vR_noun .
 	:le_1VMiyL7FYf7h5Yj7kJM2vR_noun rdf:type ontolex:LexicalEntry .
 	:le_1VMiyL7FYf7h5Yj7kJM2vR_noun rdfs:label "earthworm"@en .
@@ -160,6 +160,7 @@ INSERT DATA {
 	:le_1VMiyL7FYf7h5Yj7kJM2vR_noun dct:creator "kicco" .
 	:le_1VMiyL7FYf7h5Yj7kJM2vR_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_1VMiyL7FYf7h5Yj7kJM2vR_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_1VMiyL7FYf7h5Yj7kJM2vR_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
 	:le_1VMiyL7FYf7h5Yj7kJM2vR_noun ontolex:sense :le_1VMiyL7FYf7h5Yj7kJM2vR_noun_sense .
 	:le_1VMiyL7FYf7h5Yj7kJM2vR_noun_sense rdf:type ontolex:LexicalSense .
 	:le_1VMiyL7FYf7h5Yj7kJM2vR_noun_sense ontolex:reference :concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
@@ -172,7 +173,6 @@ INSERT DATA {
 	:le_1VMiyL7FYf7h5Yj7kJM2vR_noun_lemma dct:creator "kicco" .
 	:le_1VMiyL7FYf7h5Yj7kJM2vR_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_1VMiyL7FYf7h5Yj7kJM2vR_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_1VMiyL7FYf7h5Yj7kJM2vR_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
 	:tbx_de lime:entry :le_Mqnr20F8H7t633nORk4NE_noun .
 	:le_Mqnr20F8H7t633nORk4NE_noun rdf:type ontolex:LexicalEntry .
 	:le_Mqnr20F8H7t633nORk4NE_noun rdfs:label "Wurm"@de .
@@ -181,6 +181,7 @@ INSERT DATA {
 	:le_Mqnr20F8H7t633nORk4NE_noun dct:creator "kicco" .
 	:le_Mqnr20F8H7t633nORk4NE_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_Mqnr20F8H7t633nORk4NE_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_Mqnr20F8H7t633nORk4NE_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:le_Mqnr20F8H7t633nORk4NE_noun ontolex:sense :le_Mqnr20F8H7t633nORk4NE_noun_sense .
 	:le_Mqnr20F8H7t633nORk4NE_noun_sense rdf:type ontolex:LexicalSense .
 	:le_Mqnr20F8H7t633nORk4NE_noun_sense ontolex:reference :concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
@@ -193,7 +194,6 @@ INSERT DATA {
 	:le_Mqnr20F8H7t633nORk4NE_noun_lemma dct:creator "kicco" .
 	:le_Mqnr20F8H7t633nORk4NE_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_Mqnr20F8H7t633nORk4NE_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_Mqnr20F8H7t633nORk4NE_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:tbx_de lime:entry :le_5cr2Mm5ei3mMZMFnPLyHOn_noun .
 	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun rdf:type ontolex:LexicalEntry .
 	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun rdfs:label "Erdwurm"@de .
@@ -202,6 +202,7 @@ INSERT DATA {
 	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun dct:creator "kicco" .
 	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun ontolex:sense :le_5cr2Mm5ei3mMZMFnPLyHOn_noun_sense .
 	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_sense rdf:type ontolex:LexicalSense .
 	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_sense ontolex:reference :concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
@@ -214,7 +215,6 @@ INSERT DATA {
 	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_lemma dct:creator "kicco" .
 	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_5cr2Mm5ei3mMZMFnPLyHOn_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:tbx_hu lime:entry :le_12LR32yX4GlBIvt6D3RXpW_noun .
 	:le_12LR32yX4GlBIvt6D3RXpW_noun rdf:type ontolex:LexicalEntry .
 	:le_12LR32yX4GlBIvt6D3RXpW_noun rdfs:label "kukak"@hu .
@@ -223,6 +223,7 @@ INSERT DATA {
 	:le_12LR32yX4GlBIvt6D3RXpW_noun dct:creator "kicco" .
 	:le_12LR32yX4GlBIvt6D3RXpW_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_12LR32yX4GlBIvt6D3RXpW_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_12LR32yX4GlBIvt6D3RXpW_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:le_12LR32yX4GlBIvt6D3RXpW_noun ontolex:sense :le_12LR32yX4GlBIvt6D3RXpW_noun_sense .
 	:le_12LR32yX4GlBIvt6D3RXpW_noun_sense rdf:type ontolex:LexicalSense .
 	:le_12LR32yX4GlBIvt6D3RXpW_noun_sense ontolex:reference :concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
@@ -235,7 +236,6 @@ INSERT DATA {
 	:le_12LR32yX4GlBIvt6D3RXpW_noun_lemma dct:creator "kicco" .
 	:le_12LR32yX4GlBIvt6D3RXpW_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_12LR32yX4GlBIvt6D3RXpW_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_12LR32yX4GlBIvt6D3RXpW_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 rdf:type skos:Concept .
 	:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 skos:prefLabel "c7a541f0f-09e8-48a6-b346-8371f80800d0" .
 	:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0_2zW02rM8gJs4PlBii1YtRp rdf:type skos:ConceptScheme .
@@ -249,6 +249,7 @@ INSERT DATA {
 	:le_4lBMEyLLVz4IWVk8UvjnSI_noun dct:creator "kicco" .
 	:le_4lBMEyLLVz4IWVk8UvjnSI_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_4lBMEyLLVz4IWVk8UvjnSI_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_4lBMEyLLVz4IWVk8UvjnSI_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:le_4lBMEyLLVz4IWVk8UvjnSI_noun ontolex:sense :le_4lBMEyLLVz4IWVk8UvjnSI_noun_sense .
 	:le_4lBMEyLLVz4IWVk8UvjnSI_noun_sense rdf:type ontolex:LexicalSense .
 	:le_4lBMEyLLVz4IWVk8UvjnSI_noun_sense ontolex:reference :concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 .
@@ -261,7 +262,6 @@ INSERT DATA {
 	:le_4lBMEyLLVz4IWVk8UvjnSI_noun_lemma dct:creator "kicco" .
 	:le_4lBMEyLLVz4IWVk8UvjnSI_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_4lBMEyLLVz4IWVk8UvjnSI_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_4lBMEyLLVz4IWVk8UvjnSI_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:tbx_en lime:entry :le_2wBBjpjyr7R6g0Ssmh02Zk_noun .
 	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun rdf:type ontolex:LexicalEntry .
 	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun rdfs:label "watermelon"@en .
@@ -270,6 +270,7 @@ INSERT DATA {
 	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun dct:creator "kicco" .
 	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun dct:created "2023-04-10T10:02+02:00" .
 	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun dct:modified "2023-04-10T10:02+02:00" .
+	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun ontolex:sense :le_2wBBjpjyr7R6g0Ssmh02Zk_noun_sense .
 	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_sense rdf:type ontolex:LexicalSense .
 	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_sense ontolex:reference :concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 .
@@ -282,6 +283,5 @@ INSERT DATA {
 	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_lemma dct:creator "kicco" .
 	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_lemma dct:created "2023-04-10T10:02+02:00" .
 	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_lemma dct:modified "2023-04-10T10:02+02:00" .
-	:le_2wBBjpjyr7R6g0Ssmh02Zk_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
 }
 

@@ -6,17 +6,14 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
 import cnr.ilc.rut.Concept;
 import cnr.ilc.rut.ResourceInterface;
-import cnr.ilc.rut.SPARQLEntity;
-import cnr.ilc.rut.SPARQLFormatter;
-import cnr.ilc.rut.SPARQLWriter;
-import cnr.ilc.rut.TripleStoreInterface;
 import cnr.ilc.rut.Word;
+import cnr.ilc.sparql.SPARQLWriter;
+import cnr.ilc.sparql.TripleSerialiser;
 
 public class SqliteStore extends SPARQLWriter {
 	private Connection connection;
@@ -46,42 +43,11 @@ public class SqliteStore extends SPARQLWriter {
 
 	private void createSchema() throws SQLException {
 		executeUpdate("drop table if exists lexicon");
-		executeUpdate("create table lexicon (id string, FQName string, serialised string)");
+		executeUpdate("create table lexicon (language string, FQName string, serialised string)");
 		executeUpdate("drop table if exists word");
 		executeUpdate("create table word (lemma string, partOfSpeech string, language string, concept string, serialised string)");
 		executeUpdate("drop table if exists concept");
 		executeUpdate("create table concept (id string, serialised string)");
-	}
-
-	private void writeLexicons(Map<String, String> lexicons) {
-		for (Entry<String, String> lexicon: lexicons.entrySet()) {
-			SPARQLEntity formatter = new SPARQLEntity();
-			formatter.addLexicon(lexicon.getValue(), lexicon.getKey(), creator);
-			executeUpdate("insert into lexicon (id, FQName, serialised) values ('%s', '%s', '%s')", 
-				lexicon.getKey(), lexicon.getValue(), formatter.serialise());
-		}
-	}
-
-	private void writeWords(Collection<Word> words) {
-		if (words == null) return;
-		for (Word word: words) {
-			String conceptId = word.concept == null? "null" : "'" + word.concept.get().id + "'";
-			String serialised = word.serialise();
-			serialised = serialised.replaceAll("'", "''");
-			executeUpdate("insert into word (lemma, partOfSpeech, language, concept, serialised) values ('%s', '%s', '%s', %s, '%s')", 
-				word.canonicalForm.text, word.partOfSpeech, word.language, conceptId,  serialised);
-		}
-	}
-
-	private void writeConcepts(Collection<Concept> concepts) {
-		if (concepts == null) return;
-		for (Concept concept: concepts) {
-			String serialised = concept.serialise();
-			serialised = serialised.replaceAll("'", "''");
-			executeUpdate("insert into concept (id, serialised) values ('%s', '%s')", 
-				concept.id, serialised);
-			writeWords(concept.words);
-		}
 	}
 
 	private void assembleEntity(String entityName) {
@@ -95,6 +61,33 @@ public class SqliteStore extends SPARQLWriter {
 		catch(SQLException e) {
 			System.err.println(e.getMessage());
 		}
+	}
+	
+	@Override
+	protected void appendLexicon(String lexiconFQN, String language) {
+		TripleSerialiser triples = new TripleSerialiser();
+		triples.addLexicon(lexiconFQN, language, creator);
+		String serialised = triples.serialise();
+		serialised = serialised.replaceAll("'", "''");
+		executeUpdate("insert into lexicon (language, FQName, serialised) values ('%s', '%s', '%s')", 
+			language, lexiconFQN, serialised);
+	}
+
+	@Override
+	protected void appendConcept(Concept concept) {
+		String serialised = concept.triples.serialise();
+		serialised = serialised.replaceAll("'", "''");
+		executeUpdate("insert into concept (id, serialised) values ('%s', '%s')", 
+			concept.id, serialised);
+	}
+
+	@Override
+	protected void appendWord(Word word) {
+		String conceptId = word.concept == null? "null" : "'" + word.concept.get().id + "'";
+		String serialised = word.triples.serialise();
+		serialised = serialised.replaceAll("'", "''");
+		executeUpdate("insert into word (lemma, partOfSpeech, language, concept, serialised) values ('%s', '%s', '%s', %s, '%s')", 
+			word.canonicalForm.text, word.partOfSpeech, word.language, conceptId,  serialised);
 	}
 
 	public SqliteStore(String namespace, String creator, int chunkSize, String fileName) {
@@ -114,20 +107,10 @@ public class SqliteStore extends SPARQLWriter {
 	}
 
 	@Override
-	public void serialise(ResourceInterface resource) {
-		writeLexicons(resource.getLexicons());
-		writeConcepts(resource.getConcepts());
-		writeWords(resource.getWords());
-
-	}
-
-	@Override
 	public String serialised() {
-		append("INSERT DATA {\n");
 		assembleEntity("lexicon");
 		assembleEntity("concept");
 		assembleEntity("word");
-		append("}");
 		return super.serialised();
 	}
 

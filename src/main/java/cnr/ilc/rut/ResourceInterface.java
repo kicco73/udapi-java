@@ -7,5 +7,4 @@ public interface ResourceInterface {
 	Map<String, String> getLexicons();
 	Collection<Concept> getConcepts();
 	Collection<Word> getWords();
-	String getRdfType();
 }

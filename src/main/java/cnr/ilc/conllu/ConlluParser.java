@@ -19,13 +19,15 @@ import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.ResourceInterface;
 import cnr.ilc.rut.Word;
 
-public class ConnluParser implements ParserInterface, ResourceInterface {
+public class ConlluParser implements ParserInterface, ResourceInterface {
     private Document document;
     private String language;
+    private String creator;
     private String namespace;
     private Collection<Word> words;
 
-    public ConnluParser(InputStream inputStream, String language) throws Exception {
+    public ConlluParser(InputStream inputStream, String creator, String language) throws Exception {
+        this.creator = creator;
         this.language = language;
         document = parseCoNLL(inputStream);
     }
@@ -41,7 +43,7 @@ public class ConnluParser implements ParserInterface, ResourceInterface {
     @Override
     public ResourceInterface parse() throws Exception {
         String lexiconFQN = ":connll-u";
-        words = ParserHelper.compileLexicon(document, namespace, language, lexiconFQN);
+        words = ParserHelper.compileLexicon(document, namespace, language, lexiconFQN, creator);
         return this;
     }
 
@@ -71,11 +73,6 @@ public class ConnluParser implements ParserInterface, ResourceInterface {
     public Collection<Word> getWords() {
         return words;
     }
-
-    @Override
-	public String getRdfType() {
-		return "ontolex:Word";
-	}
 }
 
 

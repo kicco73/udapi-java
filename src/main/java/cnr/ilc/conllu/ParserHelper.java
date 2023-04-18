@@ -60,7 +60,7 @@ public class ParserHelper {
     }
     private static void compileMisc(String miscString, Word word) {        
         if (miscString != null  && miscString.length() > 0)
-            word.addFeatureAsString(word.FQName, "skos:note", miscString);
+            word.triples.addAsString(word.FQName, "skos:note", miscString);
             
         Map<String,String> misc = getMapFromFieldString(miscString);
         if (!misc.containsKey("SENSE")) return;
@@ -102,7 +102,7 @@ public class ParserHelper {
         form.features.putAll(features);   
     }
 
-    static public Collection<Word> compileLexicon(Document document, String namespace, String language, String lexiconFQN) {
+    static public Collection<Word> compileLexicon(Document document, String namespace, String language, String lexiconFQN, String creator) {
 
         final Map<String, String> parts = Stream.of(new String[][] {
                 { "ADV", "lexinfo:adverb" },
@@ -137,7 +137,7 @@ public class ParserHelper {
                 boolean needsCompile = true;
 
                 if (word == null) {
-                    word = new Word(lemma, partOfSpeech, language, null, lexiconFQN, "ontolex:Word");
+                    word = new Word(lemma, partOfSpeech, language, null, lexiconFQN, "ontolex:Word", creator);
                     lemmas.put(key, word);
 
                     if (lemma.equals(writtenRep)) {
