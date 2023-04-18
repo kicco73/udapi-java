@@ -5,12 +5,8 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.Collection;
-import java.util.Map;
-import java.util.Map.Entry;
 
 import cnr.ilc.rut.Concept;
-import cnr.ilc.rut.ResourceInterface;
 import cnr.ilc.rut.Word;
 import cnr.ilc.sparql.SPARQLWriter;
 import cnr.ilc.sparql.TripleSerialiser;

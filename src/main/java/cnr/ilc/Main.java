@@ -30,11 +30,12 @@ import cnr.ilc.tbx.TbxParser;
 import cnr.ilc.db.SqliteStore;
 
 public class Main {
-    boolean isSparql = false;
     boolean isConnlu = false;
     boolean isTbx = false;
+    boolean isDb = false;
+    boolean isSparql = false;
     boolean isJson = false;
-    boolean isMetaDataOnly = false;
+    boolean isAnalyse = false;
     String graphURL = null;
     String repository = "LexO";
     String language = "it";
@@ -45,6 +46,7 @@ public class Main {
     String outSparql = null;
     String outDir = null;
     String[] fileNames = new String[0];
+    String format = null;
 
     public static void main(String[] args) throws Exception {
         new Main()
@@ -56,14 +58,6 @@ public class Main {
         int startIndex = 0;
         while (startIndex < args.length) {
             switch (args[startIndex++]) {
-                case "-c":
-                case "--conllu":
-                    isConnlu = true;
-                    break;
-                case "-t":
-                case "--tbx":
-                    isTbx = true;
-                    break;
                 case "-d":
                 case "--datetime":
                     SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmXXX");      
@@ -77,6 +71,20 @@ public class Main {
                 case "-g":
                 case "--graphdb-url":
                     graphURL = args[startIndex++];
+                    break;
+                case "-i":
+                case "--input-format":
+                    format = args[startIndex++];
+                    if (format.equals("conllu")) 
+                        isConnlu = true;
+                    else if (format.equals("tbx")) 
+                        isTbx = true;
+                    else if (format.equals("sparql")) 
+                        isSparql = true;
+                    else if (format.equals("sqlite")) 
+                        isDb = true;
+                    else
+                        throw new IllegalArgumentException(String.format("Unknown format %s: must be one of conllu, tbx, sparql, sqlite", format));
                     break;
                 case "-j":
                 case "--json":
@@ -102,17 +110,13 @@ public class Main {
                 case "--namespace":
                     namespace = args[startIndex++];
                     break;
-                case "-o":
+                case "-O":
                 case "--output-dir":
                     outDir = args[startIndex++];
                     break;
                 case "-s":
-                case "--sparql":
-                    isSparql = true;
-                    break;
-                case "-X":
-                case "--metadata-only":
-                    isMetaDataOnly = true;
+                case "--analyse":
+                    isAnalyse = true;
                     break;
                 case "--":
                     fileNames = Arrays.copyOfRange(args, startIndex, args.length);
@@ -122,8 +126,8 @@ public class Main {
                     throw new IllegalArgumentException(String.format("Unknown option: %s", args[startIndex-1]));
             }
         }
-        if ((isTbx? 1 : 0) + (isConnlu? 1 : 0) + (isSparql? 1 : 0) != 1) 
-            throw new IllegalArgumentException("One (and one only) of the --tbx, --conllu, --sparql switches must be set.");
+        if ((isTbx? 1 : 0) + (isConnlu? 1 : 0) + (isSparql? 1 : 0) + (isDb? 1 : 0) != 1) 
+            throw new IllegalArgumentException("--input-format option must be specified once (and once only).");
 
         return this;
     }
@@ -151,27 +155,39 @@ public class Main {
     private void processFile(String fileName) throws Exception {
         InputStream inputStream = fileName == null? System.in : new FileInputStream(fileName);
         Map<String, Object> metadata = null;
-        ResourceInterface resource = null;
         String statements = null;
+
+        if (isAnalyse) {
+            String input = new String(inputStream.readAllBytes());
+            if (outDir != null) Services.outDir = outDir;
+            String response = Services.createResource(input, fileName == null? "stdin" : fileName, format, creator, language, namespace);
+            System.out.println(response);
+            return;
+        }
+
 
         if (isSparql) {
             statements = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
         } else {
-            ParserInterface parser = makeParser(inputStream);
-            resource = parser.parse();
-            metadata = parser.getMetadata();
+            TripleStoreInterface tripleStore;
 
-            if (!isMetaDataOnly) {
-                //TripleStoreInterface tripleStore = new SqliteStore(namespace, creator, chunkSize, "sqlite.db");
-                TripleStoreInterface tripleStore = new SPARQLWriter(namespace, creator, chunkSize);
-                tripleStore.serialise(resource); 
+            if (isDb) {
+                tripleStore = new SqliteStore(namespace, creator, chunkSize, fileName);
+            } else {
+                tripleStore = new SPARQLWriter(namespace, creator, chunkSize);
+                ParserInterface parser = makeParser(inputStream);
+                ResourceInterface resource = parser.parse();
+                metadata = parser.getMetadata();
+                tripleStore.serialise(resource);
+    
+                if (isConnlu && exportConll != null && parser instanceof ConlluParser) {
+                    ((ConlluParser)parser).writeConll(exportConll);
+                }  
+            }
+
+            if (!isAnalyse) {
                 statements = tripleStore.serialised();
-            }  
-
-            if (exportConll != null && parser instanceof ConlluParser) {
-                ((ConlluParser)parser).writeConll(exportConll);
-            }  
-        
+            }
         }
         
         String output = statements;
@@ -188,7 +204,7 @@ public class Main {
         if (outDir == null || fileName == null) {
             if (!isSparql) System.out.println(output);
         } else if (statements != null) {
-            saveStatementsUsingInFileName(fileName, outDir, statements);            
+            saveStatementsUsingInFileName(fileName, outDir, ".sparql", statements);            
         }
 
         if (graphURL != null && statements != null) {
@@ -196,15 +212,19 @@ public class Main {
         }        
     }
 
-    private static void saveStatementsUsingInFileName(String inFile, String outDir, String statements) throws Exception {
-        String fileName = new File(inFile).getName();
-        int endIndex = fileName.lastIndexOf(".");
-        fileName = fileName.substring(0, endIndex)+".sparql"; 
-        String pathName = new File(outDir, fileName).getAbsolutePath();
-    
-        PrintWriter writer = new PrintWriter(pathName, "UTF-8");
+    private static void saveStatementsUsingInFileName(String inFile, String outDir, String extension, String statements) throws Exception {
+        String pathName = getOutFileNameUsingInFileName(inFile, outDir, extension);
+            PrintWriter writer = new PrintWriter(pathName, "UTF-8");
         writer.println(statements);
         writer.close();
+    }
+
+    private static String getOutFileNameUsingInFileName(String inFile, String outDir, String extension) throws Exception {
+        String fileName = new File(inFile).getName();
+        int endIndex = fileName.lastIndexOf(".");
+        fileName = fileName.substring(0, endIndex)+extension; 
+        String pathName = new File(outDir, fileName).getAbsolutePath();
+        return pathName;
     }
 
     private static void uploadStatements(String graphURL, String repository, String statements) throws Exception {
