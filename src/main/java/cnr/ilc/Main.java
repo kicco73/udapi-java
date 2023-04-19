@@ -185,7 +185,6 @@ public class Main {
         } else if (isSubmit) {
             Services.submitResource(fileName);
             return;
-
         }
 
         if (fileName != null) inputStream = new FileInputStream(fileName);
@@ -208,10 +207,7 @@ public class Main {
                     ((ConlluParser)parser).writeConll(exportConll);
                 }  
             }
-
-            if (!isAnalyse) {
-                statements = tripleStore.serialised();
-            }
+            statements = tripleStore.serialised();
         }
         
         String output = statements;

@@ -71,7 +71,7 @@ public class SnapshotTest {
         for(String inFileName: listFiles(inFileDir)) {
             String inPath = new File(inFileDir, inFileName).getAbsolutePath();
             System.out.println(inPath);
-            String output = exec("--tbx --creator kicco --datetime 2023-04-10T10:02+02:00", inPath);
+            String output = exec("--input-format tbx --creator kicco --datetime 2023-04-10T10:02+02:00", inPath);
             String snapshotFileName = replaceExtension(inFileName, "sparql");
             snapshotFileName = new File(snapshotDir, snapshotFileName).getAbsolutePath();
             assertIsSameSnapshot(snapshotFileName, output);
