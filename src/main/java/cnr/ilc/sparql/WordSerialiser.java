@@ -15,10 +15,10 @@ public class WordSerialiser extends TripleSerialiser {
 		add(word.lexiconFQN, "lime:entry", word.FQName);       
 		
 		add(word.FQName, "rdf:type", word.rdfType);   
-		addAsStringWithLanguage(word.FQName, "rdfs:label", word.canonicalForm.text, word.language);        
+		addStringWithLanguage(word.FQName, "rdfs:label", word.canonicalForm.text, word.language);        
 		if (word.partOfSpeech != null)
 			add(word.FQName, "lexinfo:partOfSpeech", word.partOfSpeech);
-		addAsString(word.FQName, "vs:term_status", "working");
+		addString(word.FQName, "vs:term_status", "working");
 		addMetaData(word.FQName, word.creator); 
 		}
 
@@ -26,7 +26,7 @@ public class WordSerialiser extends TripleSerialiser {
 		add(word.FQName, "ontolex:sense", lexicalSenseFQN);        
 		add(lexicalSenseFQN, "rdf:type", "ontolex:LexicalSense"); 
 		if (definition != null)
-			addAsString(lexicalSenseFQN, "skos:definition", definition);
+			addString(lexicalSenseFQN, "skos:definition", definition);
 		if (word.concept != null)
 			add(lexicalSenseFQN, "ontolex:reference", word.concept.get().FQName); 
 		addMetaData(lexicalSenseFQN, word.creator); 
@@ -47,7 +47,7 @@ public class WordSerialiser extends TripleSerialiser {
 		String canonicalFormFQN = word.canonicalForm.FQName;
 		add(word.FQName, "ontolex:canonicalForm", canonicalFormFQN);        
 		add(canonicalFormFQN, "rdf:type", "ontolex:Form");        
-		addAsStringWithLanguage(canonicalFormFQN, "ontolex:writtenRep", word.canonicalForm.text, word.language);
+		addStringWithLanguage(canonicalFormFQN, "ontolex:writtenRep", word.canonicalForm.text, word.language);
 		addMetaData(canonicalFormFQN, word.creator); 
 
 		for (Entry<String,String> entry: word.canonicalForm.features.entrySet()) {
@@ -61,11 +61,11 @@ public class WordSerialiser extends TripleSerialiser {
 			String otherFormFQN = otherForm.FQName;
 			add(word.FQName, "ontolex:otherForm", otherFormFQN);
 			add(otherFormFQN, "rdf:type", "ontolex:Form");        
-			addAsStringWithLanguage(otherFormFQN, "ontolex:writtenRep", otherForm.text, word.language);        
+			addStringWithLanguage(otherFormFQN, "ontolex:writtenRep", otherForm.text, word.language);        
 			addMetaData(otherFormFQN, word.creator); 
 
 			for (Entry<String,String> entry: otherForm.features.entrySet()) {
-				addAsString(otherFormFQN, entry.getValue(), entry.getKey());
+				addString(otherFormFQN, entry.getValue(), entry.getKey());
 			}
 		}
 	}

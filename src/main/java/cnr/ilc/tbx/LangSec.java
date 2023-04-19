@@ -22,13 +22,14 @@ public class LangSec {
 		String externalCrossReference = Nodes.getTextOfTag(langSec, "externalCrossReference");
 
 		if (note != null) {
-			concept.triples.addAsStringWithLanguage(concept.FQName, "skos:note", note, language);		
+			concept.triples.addStringWithLanguage(concept.FQName, "skos:note", note, language);		
 		}
 		
 		if (definition == null) return;
+		concept.definition.put(language, definition);
 
 		if (source == null && externalCrossReference == null) {
-			concept.triples.addAsStringWithLanguage(concept.FQName, "skos:definition", definition, language);
+			concept.triples.addStringWithLanguage(concept.FQName, "skos:definition", definition, language);
 		} else {
 			Map<String, String> object = new HashMap<>();
 			object.put("rdf:value", SPARQLFormatter.formatObjectWithLanguage(definition, language));

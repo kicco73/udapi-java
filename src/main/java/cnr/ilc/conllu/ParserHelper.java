@@ -60,7 +60,7 @@ public class ParserHelper {
     }
     private static void compileMisc(String miscString, Word word) {        
         if (miscString != null  && miscString.length() > 0)
-            word.triples.addAsString(word.FQName, "skos:note", miscString);
+            word.triples.addString(word.FQName, "skos:note", miscString);
             
         Map<String,String> misc = getMapFromFieldString(miscString);
         if (!misc.containsKey("SENSE")) return;

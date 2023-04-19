@@ -27,17 +27,17 @@ public class TripleSerialiser {
 		add(subject, link, object, "*");
 	}
 
-	public void addAsString(String subject, String link, String object) {
+	public void addString(String subject, String link, String object) {
 		String objectString = SPARQLFormatter.formatObjectAsString(object);
 		add(subject, link, objectString);
 	}
 
-	public void addAsUrlOrString(String subject, String link, String possibleUrl) {
+	public void addUrlOrString(String subject, String link, String possibleUrl) {
 		String object = SPARQLFormatter.formatObjectWithUrlIfPossible(possibleUrl);
 		add(subject, link, object);
 	}
 
-	public void addAsStringWithLanguage(String subject, String link, String description, String language) {
+	public void addStringWithLanguage(String subject, String link, String description, String language) {
 		String object = SPARQLFormatter.formatObjectWithLanguage(description, language);
 		add(subject, link, object);
 	}
@@ -52,14 +52,14 @@ public class TripleSerialiser {
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmX"); // Quoted "Z" to indicate UTC, no timezone offset
 		String date = df.format(now);
 
-		addAsString(entryFQN, "dct:creator", creator);
-		addAsString(entryFQN, "dct:created", date + ":00");
-		addAsString(entryFQN, "dct:modified", date + ":00");
+		addString(entryFQN, "dct:creator", creator);
+		addString(entryFQN, "dct:created", date + ":00");
+		addString(entryFQN, "dct:modified", date + ":00");
 	}
 
 	public void addLexicon(String lexiconFQN, String language, String creator) {	
 		add(lexiconFQN, "rdf:type", "lime:Lexicon");
-        addAsString(lexiconFQN, "lime:language", language);   
+        addString(lexiconFQN, "lime:language", language);   
 		addMetaData(lexiconFQN, creator);     
 	}
 

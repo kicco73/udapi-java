@@ -2,7 +2,9 @@ package cnr.ilc.rut;
 
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.HashSet;
+import java.util.Map;
 
 import cnr.ilc.sparql.TripleSerialiser;
 
@@ -11,6 +13,7 @@ public class Concept {
 	final public String FQName;
 	final public Collection<Word> words = new ArrayList<>();
 	final public TripleSerialiser triples = new TripleSerialiser();
+	final public Map<String,String> definition = new HashMap<>();
 	private Collection<String> subjectFields = new HashSet<>();
 	static IdGenerator idGenerator = new IdGenerator();
 
@@ -18,7 +21,7 @@ public class Concept {
 		id = conceptId;
 		FQName = String.format(":concept_%s", conceptId);
 		triples.add(FQName, "rdf:type", "skos:Concept");
-		triples.addAsString(FQName, "skos:prefLabel", id);
+		triples.addString(FQName, "skos:prefLabel", id);
 	}
 
 	public Word newWord(String lemma, String partOfSpeech, String language, String lexiconFQN, String creator) {
@@ -32,7 +35,7 @@ public class Concept {
 			subjectFields.add(subjectField);
 			String subjectFieldFQN = String.format("%s_%s", FQName, idGenerator.getId(subjectField));
 			triples.add(subjectFieldFQN, "rdf:type", "skos:ConceptScheme");
-			triples.addAsString(subjectFieldFQN, "skos:prefLabel", subjectField);
+			triples.addString(subjectFieldFQN, "skos:prefLabel", subjectField);
 			triples.add(FQName, "skos:inScheme", subjectFieldFQN);
 		}
 	}

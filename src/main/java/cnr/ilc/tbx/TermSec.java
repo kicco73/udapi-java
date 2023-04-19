@@ -84,20 +84,20 @@ public class TermSec {
 			
 		} else {
 			if (source != null)
-				word.triples.addAsUrlOrString(word.FQName, "dct:source", source);
+				word.triples.addUrlOrString(word.FQName, "dct:source", source);
 
 			if (externalCrossReference != null)
-				word.triples.addAsUrlOrString(word.FQName, "rdf:seeAlso", externalCrossReference);
+				word.triples.addUrlOrString(word.FQName, "rdf:seeAlso", externalCrossReference);
 
 			if (crossReference != null)
-				word.triples.addAsUrlOrString(word.FQName, "rdf:seeAlso", crossReference);
+				word.triples.addUrlOrString(word.FQName, "rdf:seeAlso", crossReference);
 		}
 	}
 
-	private void parseNote(Element termSec) {
+	private void parseNote(Element termSec, String language) {
 		String note = Nodes.getTextOfTag(termSec, "note");
 		if (note != null) {
-			word.triples.addAsString(word.FQName, "skos:note", note);
+			word.triples.addStringWithLanguage(word.FQName, "skos:note", note, language);
 		}
 	}
 
@@ -118,7 +118,7 @@ public class TermSec {
 		parseTermType(termSec);
 		parseAdministrativeStatus(termSec);
 		parseDescripGrp(termSec, language);
-		parseNote(termSec);
+		parseNote(termSec, language);
 
 		return word;
 	}

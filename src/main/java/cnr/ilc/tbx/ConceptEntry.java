@@ -41,7 +41,9 @@ public class ConceptEntry {
 			String link = entry.getValue();
 			String content = Nodes.getTextOfTag(root, key);
 			if (content != null) {
-				concept.triples.addAsUrlOrString(concept.FQName, link, content);
+				concept.triples.addUrlOrString(concept.FQName, link, content);
+				if (key.equals("definition"))
+					concept.definition.put("*", content);
 			}
 		}
 	}
