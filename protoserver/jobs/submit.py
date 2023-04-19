@@ -6,9 +6,9 @@ import subprocess
 from engine.operation import Operation
 
 class Submit(Operation):
-	def __init__(self, infilename: str, repository: str):
+	def __init__(self, resourcedir: str, repository: str):
 		super().__init__()
-		self.infilename = infilename
+		self.resourcedir = resourcedir
 		self.repository = repository
 
 	def execute(self) -> str:
@@ -18,13 +18,12 @@ class Submit(Operation):
 			'--creator', 'kicco',
 			'--repository', self.repository,
 			'--graphdb-url', 'http://localhost:7200',
-			'--sparql',
-			'--', self.infilename
+			'--submit',
+			'--', self.resourcedir
 		]
 
-		process = subprocess.run(args, input='CLEAR DEFAULT'.encode('utf-8')) # FIXME: temporary hack
-		process = subprocess.run(args, stderr=subprocess.PIPE)
-		return process.stderr.decode('utf-8')
+		subprocess.run(args)
+		return ""
 
 	def __str__(self):
 		return f'{self.__class__.__name__}'

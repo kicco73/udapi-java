@@ -36,6 +36,8 @@ public class Main {
     boolean isSparql = false;
     boolean isJson = false;
     boolean isAnalyse = false;
+    boolean isAssemble = false;
+    boolean isSubmit = false;
     String graphURL = null;
     String repository = "LexO";
     String language = "it";
@@ -118,6 +120,16 @@ public class Main {
                 case "--analyse":
                     isAnalyse = true;
                     break;
+                case "-A":
+                case "--assemble":
+                    isAssemble = true;
+                    isDb = true;
+                    break;
+                case "-u":
+                case "--submit":
+                    isSubmit = true;
+                    isSparql = true;
+                    break;
                 case "--":
                     fileNames = Arrays.copyOfRange(args, startIndex, args.length);
                     startIndex = args.length;
@@ -153,18 +165,30 @@ public class Main {
     }
 
     private void processFile(String fileName) throws Exception {
-        InputStream inputStream = fileName == null? System.in : new FileInputStream(fileName);
+        InputStream inputStream = System.in;
         Map<String, Object> metadata = null;
         String statements = null;
 
+        if (outDir != null) Services.outDir = outDir;
+        Services.graphURL = graphURL;
+        Services.repository = repository;
+
         if (isAnalyse) {
             String input = new String(inputStream.readAllBytes());
-            if (outDir != null) Services.outDir = outDir;
             String response = Services.createResource(input, fileName == null? "stdin" : fileName, format, creator, language, namespace);
             System.out.println(response);
             return;
+        } else if (isAssemble) {
+            String response = Services.assembleResource(fileName, namespace, creator);
+            System.out.println(response);
+            return;
+        } else if (isSubmit) {
+            Services.submitResource(fileName);
+            return;
+
         }
 
+        if (fileName != null) inputStream = new FileInputStream(fileName);
 
         if (isSparql) {
             statements = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);

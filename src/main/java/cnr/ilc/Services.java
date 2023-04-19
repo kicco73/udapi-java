@@ -2,12 +2,11 @@ package cnr.ilc;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
+import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
+import java.nio.charset.StandardCharsets;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -15,16 +14,20 @@ import org.json.simple.JSONObject;
 
 import cnr.ilc.conllu.ConlluParser;
 import cnr.ilc.db.SqliteStore;
+import cnr.ilc.rut.GraphDBClient;
 import cnr.ilc.rut.IdGenerator;
 import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.ResourceInterface;
-import cnr.ilc.sparql.TripleStoreInterface;
+import cnr.ilc.sparql.SPARQLWriter;
 import cnr.ilc.tbx.TbxParser;
 
 public class Services {
-	static String outDir = "resources";
-	static int chunkSize = 1500 * 1024;
-	static IdGenerator idGenerator = new IdGenerator();
+	static public String outDir = "resources";
+	static public String repository = "LexO";
+	static public String graphURL = "http://localhost:7200";
+
+	static public int chunkSize = 1500 * 1024;
+	static private IdGenerator idGenerator = new IdGenerator();
 
 	private static void deleteDir(File file) {
 		File[] contents = file.listFiles();
@@ -48,13 +51,30 @@ public class Services {
 		String outName = getPathToResourceProperty(id, property);
 		byte[] buffer = content.getBytes();
 	
-		deleteResource(id);
 		new File(outDir, id).mkdirs();
 		File targetFile = new File(outName);
 		OutputStream outStream = new FileOutputStream(targetFile);
 		outStream.write(buffer);
 		outStream.close();
 	}
+
+	private static String loadFromResourceProperty(String id, String property) throws Exception {
+		String inName = getPathToResourceProperty(id, property);
+		InputStream inputStream = new FileInputStream(inName);
+		String content = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
+		inputStream.close();
+		return content;
+	}
+
+	private static SqliteStore getStore(String resourceId, String namespace, String creator, boolean isNew) throws Exception {
+		String dbFile = getPathToResourceProperty(resourceId, "sqlite.db");
+		
+		dbFile = "resources/"+resourceId+".db";// FIXME: HACK
+
+		if (isNew) new File(dbFile).delete();
+		return new SqliteStore(namespace, creator, chunkSize, dbFile);
+	}
+
 
 	static public String createResource(String input, String inputFileName, String fileType, String creator, String language, String namespace) throws Exception {
 		ParserInterface parser = null;
@@ -70,20 +90,14 @@ public class Services {
 		if (parser != null) {
 			String basename = new File(inputFileName).getName();
 			String id = idGenerator.getId(basename);
+			deleteResource(id);
 			saveToResourceProperty(id, "input."+fileType, input);			
 
 			ResourceInterface resource = parser.parse();
-			Map<String,Object> metadata = parser.getMetadata();
-
-			String dbFile = getPathToResourceProperty(id, "sqlite.db");
-			
-			// FIXME: HACK
-			dbFile = "resources/"+id+".db";
-			new File(dbFile).delete();
-
-			TripleStoreInterface tripleStore = new SqliteStore(namespace, creator, chunkSize, dbFile);
+			SqliteStore tripleStore = getStore(id, namespace, creator, true);
 			tripleStore.serialise(resource);
 			
+			Map<String,Object> metadata = parser.getMetadata();
             response.put("id", id);
             response.put("metadata", metadata);
 			saveToResourceProperty(id, "metadata.json", JSONObject.toJSONString(response));
@@ -91,4 +105,30 @@ public class Services {
 
 		return JSONObject.toJSONString(response);
 	}
+
+	static public String assembleResource(String inputDir, String namespace, String creator) throws Exception {
+		String resourceId = new File(inputDir).getName();
+		SqliteStore tripleStore = getStore(resourceId, namespace, creator, false);
+		//tripleStore.setLanguages(Arrays.asList("it"));
+		String sparql = tripleStore.serialised();
+		saveToResourceProperty(resourceId, "sparql", sparql);
+		return sparql;
+	}
+
+	static public void submitResource(String inputDir) throws Exception {
+		String resourceId = new File(inputDir).getName();
+		String statements = loadFromResourceProperty(resourceId, "sparql");
+		GraphDBClient client = new GraphDBClient(graphURL, repository);
+
+		client.post("CLEAR DEFAULT\n"); // FIXME: temporary hack
+
+        String[] chunks = statements.split(SPARQLWriter.separator, 0);
+        int n = 0;
+        for (String chunk: chunks) {
+            System.err.print(String.format("\rPosting... %.0f%%", ++n * 100.0/chunks.length));
+            client.post(chunk);
+        }
+        System.err.println();
+	}
+
 }

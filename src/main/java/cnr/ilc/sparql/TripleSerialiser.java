@@ -1,6 +1,8 @@
 package cnr.ilc.sparql;
 
+import java.util.Collection;
 import java.util.Date;
+import java.util.LinkedHashMap;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Map;
@@ -8,11 +10,21 @@ import java.util.Map;
 import cnr.ilc.rut.DateProvider;
 
 public class TripleSerialiser {
-	private String features = "";
+	private Map<String, String> features = new LinkedHashMap<>();
+	
+	public TripleSerialiser() {
+		features.put("*", "");
+	}
+
+	private void add(String subject, String link, String object, String language) {
+		object = object.replaceAll("[\n\t ]+", " ");
+		String languageSpecific = features.getOrDefault(language, "");
+		languageSpecific += String.format("\t%s %s %s .\n", subject, link, object);
+		features.put(language, languageSpecific);
+	} 
 
 	public void add(String subject, String link, String object) {
-		object = object.replaceAll("[\n\t ]+", " ");
-		features += String.format("\t%s %s %s .\n", subject, link, object);
+		add(subject, link, object, "*");
 	}
 
 	public void addAsString(String subject, String link, String object) {
@@ -45,14 +57,26 @@ public class TripleSerialiser {
 		addAsString(entryFQN, "dct:modified", date + ":00");
 	}
 
-	public void addLexicon(String lexiconFQN, String language, String creator) {		
+	public void addLexicon(String lexiconFQN, String language, String creator) {	
 		add(lexiconFQN, "rdf:type", "lime:Lexicon");
         addAsString(lexiconFQN, "lime:language", language);   
 		addMetaData(lexiconFQN, creator);     
 	}
 
+	public String serialise(String language) {
+		return features.get(language);
+	}
+
+	public Collection<String> getLanguages() {
+		return features.keySet();
+	}
+
 	public String serialise() {
-		return features;
+		String serialised = "";
+		for (String languageSpecific: features.values()) {
+			serialised += languageSpecific;
+		}
+		return serialised;
 	}
 
 }

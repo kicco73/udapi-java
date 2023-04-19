@@ -6,24 +6,21 @@ import subprocess
 from engine.operation import Operation
 
 class Convert(Operation):
-	def __init__(self, infilename: str, outfilename: str):
+	def __init__(self, resourcedir: str):
 		super().__init__()
-		self.infilename = infilename
-		self.outfilename = outfilename
+		self.resourcedir = resourcedir
 
 	def execute(self) -> str:
 		args = ['/usr/bin/env', '/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java',
    			'-cp', '/Users/enricocarniani/Documents/udapi-java/bin/main', "@/var/folders/vw/clt3dc494hg0bcmvk_1pkwdw0000gn/T/cp_747zl4waewrm1vf9nuzgcr49f.argfile", 'cnr.ilc.Main',
 			'--namespace', 'http://txt2rdf/test#',
 			'--creator', 'kicco',
-			'--tbx',
-			'--', self.infilename
+			'--assemble',
+			'--', self.resourcedir
 		]
 
-		with open(self.infilename) as input:
-			with open(self.outfilename, mode='w') as output:
-				process = subprocess.run(args, stdin=input, stdout=output, stderr=subprocess.PIPE)
-		return process.stderr.decode('utf-8')
+		process = subprocess.run(args, stdout=subprocess.PIPE)
+		return process.stdout.decode('utf-8')
 
 	def __str__(self):
 		return f'{self.__class__.__name__}'

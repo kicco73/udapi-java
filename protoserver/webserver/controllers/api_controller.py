@@ -20,11 +20,6 @@ class ApiController(controller.Controller):
 			operation = analyse.Analyse(tbx)
 			resource_string = operation.execute()
 			resource = json.loads(resource_string)
-
-			self.delete_resource(resource['id'])
-			self.save_resource_property(tbx, resource['id'], 'tbx')
-			self.save_resource_property(json.dumps(resource['metadata']), resource['id'], 'metadata')
-
 			return Response(json.dumps(resource), mimetype='application/json')
 
 		@app.route('/resources/<resource_id>/sparql', methods = ['GET'])
@@ -36,11 +31,9 @@ class ApiController(controller.Controller):
 
 		@app.route('/resources/<resource_id>/submit', methods = ['POST'])
 		def submit_resource_id(resource_id: str):
-			filename = self.get_resource_path(resource_id, 'sparql')
-			if not os.path.exists(filename):
-				self.create_resource_sparql(resource_id)
+			inputdir = self.get_resource_path(resource_id)
 			repository = request.json.get('repository')
-			operation = submit.Submit(filename, repository)
+			operation = submit.Submit(inputdir, repository)
 			operation.execute()
 			return Response(json.dumps({}), mimetype='application/json')
 
@@ -62,12 +55,8 @@ class ApiController(controller.Controller):
 				return file.read()
 			
 	def create_resource_sparql(self, resource_id):
-		infilename = self.get_resource_path(resource_id, 'tbx')
-		outfilename = self.get_resource_path(resource_id, 'sparql')
-		operation = convert.Convert(infilename, outfilename)
-		operation.execute()
-		content = self.read_resource_property(resource_id, 'sparql')
-		return content
+		operation = convert.Convert(resource_id)
+		return operation.execute()
 
 	def get_resource_path(self, resource_id: str, *args) -> str:
 		return os.path.join(self.app.config['RESOURCES_FOLDER'], resource_id, *args)
