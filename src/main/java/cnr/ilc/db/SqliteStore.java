@@ -6,22 +6,27 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 import java.util.stream.Collectors;
 
 import org.json.simple.JSONObject;
+import org.json.simple.parser.JSONParser;
 
 import cnr.ilc.rut.Concept;
+import cnr.ilc.rut.Metadata;
 import cnr.ilc.rut.Word;
 import cnr.ilc.sparql.SPARQLWriter;
 import cnr.ilc.sparql.TripleSerialiser;
 
+@SuppressWarnings("unchecked")
 public class SqliteStore extends SPARQLWriter {
 	private Connection connection;
 	private Statement statement;
 	private Collection<String> languages = new ArrayList<>();
+	private JSONParser jsonParser = new JSONParser();
 
 	private void executeUpdate(String query, Object ...args) {
 		try {
@@ -63,13 +68,13 @@ public class SqliteStore extends SPARQLWriter {
 		return where;
 	}
 
-	private void assembleEntity(String entityName) {
+	private void assembleEntity(String columnName, String entityName) {
 		try {
 			String where = buildWhere(entityName);
-			String query = String.format("select serialised from %s where %s", entityName, where);
+			String query = String.format("select %s from %s where %s", columnName, entityName, where);
 			ResultSet rs = executeQuery(query);
 			while (rs.next()) {
-				String serialised = rs.getString("serialised");
+				String serialised = rs.getString(columnName);
 				append(serialised);
 			}
 		}
@@ -77,7 +82,23 @@ public class SqliteStore extends SPARQLWriter {
 			System.err.println(e.getMessage());
 		}
 	}
-	
+
+	private void mergeJson(Metadata metadata, String columnName, String entityName) throws Exception {
+		try {
+			String where = buildWhere(entityName);
+			String query = String.format("select %s from %s where %s", columnName, entityName, where);
+			ResultSet rs = executeQuery(query);
+			while (rs.next()) {
+				String jsonString = rs.getString(columnName);
+				Map<String, Object> json = (Map<String, Object>) jsonParser.parse(jsonString);
+				metadata.merge(json);
+			}
+		}
+		catch(SQLException e) {
+			System.err.println(e.getMessage());
+		}
+	}
+
 	@Override
 	protected void appendLexicon(String lexiconFQN, String language) {
 		TripleSerialiser triples = new TripleSerialiser();
@@ -132,10 +153,25 @@ public class SqliteStore extends SPARQLWriter {
 
 	@Override
 	public String serialised() {
-		assembleEntity("lexicon");
-		assembleEntity("concept");
-		assembleEntity("word");
+		assembleEntity("serialised", "lexicon");
+		assembleEntity("serialised", "concept");
+		assembleEntity("serialised", "word");
 		return super.serialised();
+	}
+
+	@Override
+	public String getMetadata() {
+		Metadata metadata = new Metadata();
+		try {
+			mergeJson(metadata, "metadata", "lexicon");
+			mergeJson(metadata, "metadata", "concept");
+			mergeJson(metadata, "metadata", "word");	
+		}
+		catch(Exception e) {
+			System.err.println("Error: cannot merge metadata");
+			return "{}";
+		}
+		return metadata.serialise();
 	}
 
 	public void setLanguages(Collection<String> languages) {

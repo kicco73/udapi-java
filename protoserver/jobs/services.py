@@ -21,4 +21,4 @@ class Submit(BaseOperation):
 		self.repository = repository
 
 	def execute(self) -> str:
-		return self.run_java('--repository', self.repository, '--service', 'submit', '--', self.resource_dir)
+		return self.run_java('--service', 'submit', '--repository', self.repository, '--', self.resource_dir)

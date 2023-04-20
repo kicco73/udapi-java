@@ -89,20 +89,28 @@ public class Services {
 
 		if (parser != null) {
 			String basename = new File(inputFileName).getName();
-			String id = idGenerator.getId(basename);
-			deleteResource(id);
-			saveToResourceProperty(id, "input."+fileType, input);			
+			String resourceId = idGenerator.getId(basename);
+			deleteResource(resourceId);
+			saveToResourceProperty(resourceId, "input."+fileType, input);			
 
 			ResourceInterface resource = parser.parse();
-			SqliteStore tripleStore = getStore(id, namespace, creator, true);
+			SqliteStore tripleStore = getStore(resourceId, namespace, creator, true);
 			tripleStore.serialise(resource);
 			
 			response = parser.getMetadata();
-            response.put("id", id);
-			saveToResourceProperty(id, "metadata.json", JSONObject.toJSONString(response));
+            response.put("id", resourceId);
+			//saveToResourceProperty(resourceId, "metadata.json", JSONObject.toJSONString(response));
 		}
 
 		return JSONObject.toJSONString(response);
+	}
+
+	static public String filterResource(String inputDir, String namespace, String creator) throws Exception {
+		String resourceId = new File(inputDir).getName();
+		SqliteStore tripleStore = getStore(resourceId, namespace, creator, false);
+		String response = tripleStore.getMetadata();
+		saveToResourceProperty(resourceId, "metadata.json", response);
+		return response;
 	}
 
 	static public String assembleResource(String inputDir, String namespace, String creator) throws Exception {

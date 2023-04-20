@@ -157,6 +157,9 @@ public class Main {
                 String input = new String(System.in.readAllBytes());
                 response = Services.createResource(input, fileName == null? "stdin" : fileName, format, creator, language, namespace);
                 break;
+            case "filter":
+                response = Services.filterResource(fileName, namespace, creator);
+                break;
             case "assemble":
                 response = Services.assembleResource(fileName, namespace, creator);
                 break;

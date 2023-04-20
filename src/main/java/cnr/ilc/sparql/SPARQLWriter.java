@@ -117,4 +117,8 @@ public class SPARQLWriter implements TripleStoreInterface {
 		return buffer.toString();
 	}
 
+	@Override
+	public String getMetadata() {
+		return "{}";
+	}
 }
