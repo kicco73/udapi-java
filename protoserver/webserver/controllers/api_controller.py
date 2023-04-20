@@ -19,8 +19,7 @@ class ApiController(controller.Controller):
 			tbx = request.json.get('tbx')
 			operation = analyse.Analyse(tbx)
 			resource_string = operation.execute()
-			resource = json.loads(resource_string)
-			return Response(json.dumps(resource), mimetype='application/json')
+			return Response(resource_string, mimetype='application/json')
 
 		@app.route('/resources/<resource_id>/sparql', methods = ['GET'])
 		def get_resource_sparql(resource_id: str):

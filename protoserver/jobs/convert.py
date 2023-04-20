@@ -15,7 +15,7 @@ class Convert(Operation):
    			'-cp', '/Users/enricocarniani/Documents/udapi-java/bin/main', "@/var/folders/vw/clt3dc494hg0bcmvk_1pkwdw0000gn/T/cp_747zl4waewrm1vf9nuzgcr49f.argfile", 'cnr.ilc.Main',
 			'--namespace', 'http://txt2rdf/test#',
 			'--creator', 'kicco',
-			'--assemble',
+			'--service', 'assemble',
 			'--', self.resourcedir
 		]
 

@@ -7,6 +7,7 @@ package cnr.ilc.rut;
 import java.lang.ref.WeakReference;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 import cnr.ilc.sparql.TripleSerialiser;
@@ -22,8 +23,9 @@ public class Word {
 	final public String rdfType;
 	final public String creator;
 	final public TripleSerialiser triples;
-	final public Map<String, String> senses = new HashMap<>();
-	final private Map<String, Form> otherForms = new HashMap<>();
+	final public Metadata metadata = new Metadata();
+	final public Map<String, String> senses = new LinkedHashMap<>();
+	final private Map<String, Form> otherForms = new LinkedHashMap<>();
 	static final private IdGenerator idGenerator = new IdGenerator();
 
 	public Word(String lemma, String partOfSpeech, String language, Concept concept, String lexiconFQN, String rdfType, String creator) {

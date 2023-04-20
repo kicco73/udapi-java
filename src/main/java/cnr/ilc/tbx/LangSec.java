@@ -26,7 +26,7 @@ public class LangSec {
 		}
 		
 		if (definition == null) return;
-		concept.definition.put(language, definition);
+		concept.setDefinition(definition, language);
 
 		if (source == null && externalCrossReference == null) {
 			concept.triples.addStringWithLanguage(concept.FQName, "skos:definition", definition, language);

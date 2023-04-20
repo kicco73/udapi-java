@@ -97,9 +97,8 @@ public class Services {
 			SqliteStore tripleStore = getStore(id, namespace, creator, true);
 			tripleStore.serialise(resource);
 			
-			Map<String,Object> metadata = parser.getMetadata();
+			response = parser.getMetadata();
             response.put("id", id);
-            response.put("metadata", metadata);
 			saveToResourceProperty(id, "metadata.json", JSONObject.toJSONString(response));
 		}
 
@@ -115,7 +114,7 @@ public class Services {
 		return sparql;
 	}
 
-	static public void submitResource(String inputDir) throws Exception {
+	static public String submitResource(String inputDir) throws Exception {
 		String resourceId = new File(inputDir).getName();
 		String statements = loadFromResourceProperty(resourceId, "sparql");
 		GraphDBClient client = new GraphDBClient(graphURL, repository);
@@ -129,6 +128,6 @@ public class Services {
             client.post(chunk);
         }
         System.err.println();
+		return "";
 	}
-
 }

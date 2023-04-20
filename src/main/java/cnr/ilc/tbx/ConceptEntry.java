@@ -43,7 +43,7 @@ public class ConceptEntry {
 			if (content != null) {
 				concept.triples.addUrlOrString(concept.FQName, link, content);
 				if (key.equals("definition"))
-					concept.definition.put("*", content);
+					concept.setDefinition(content, "*");
 			}
 		}
 	}

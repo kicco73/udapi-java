@@ -35,18 +35,13 @@ public class Main {
     boolean isDb = false;
     boolean isSparql = false;
     boolean isJson = false;
-    boolean isAnalyse = false;
-    boolean isAssemble = false;
-    boolean isSubmit = false;
-    String graphURL = null;
-    String repository = "LexO";
+    String service = null;
     String language = "it";
     String creator = "bot";
     int chunkSize = 1500 * 1024;
     String namespace = "http://txt2rdf/test#";
     String exportConll = null;
     String outSparql = null;
-    String outDir = null;
     String[] fileNames = new String[0];
     String format = null;
 
@@ -72,7 +67,7 @@ public class Main {
                     break;   
                 case "-g":
                 case "--graphdb-url":
-                    graphURL = args[startIndex++];
+                    Services.graphURL = args[startIndex++];
                     break;
                 case "-i":
                 case "--input-format":
@@ -94,7 +89,7 @@ public class Main {
                     break;
                 case "-r":
                 case "--repository":
-                    repository = args[startIndex++];
+                    Services.repository = args[startIndex++];
                     break;
                 case "-S":
                 case "--chunk-size":
@@ -114,21 +109,11 @@ public class Main {
                     break;
                 case "-O":
                 case "--output-dir":
-                    outDir = args[startIndex++];
+                    Services.outDir = args[startIndex++];
                     break;
                 case "-s":
-                case "--analyse":
-                    isAnalyse = true;
-                    break;
-                case "-A":
-                case "--assemble":
-                    isAssemble = true;
-                    isDb = true;
-                    break;
-                case "-u":
-                case "--submit":
-                    isSubmit = true;
-                    isSparql = true;
+                case "--service":
+                    service = args[startIndex++];
                     break;
                 case "--":
                     fileNames = Arrays.copyOfRange(args, startIndex, args.length);
@@ -138,7 +123,7 @@ public class Main {
                     throw new IllegalArgumentException(String.format("Unknown option: %s", args[startIndex-1]));
             }
         }
-        if ((isTbx? 1 : 0) + (isConnlu? 1 : 0) + (isSparql? 1 : 0) + (isDb? 1 : 0) != 1) 
+        if ((service == null || service.equals("analyse")) && (isTbx? 1 : 0) + (isConnlu? 1 : 0) + (isSparql? 1 : 0) + (isDb? 1 : 0) != 1) 
             throw new IllegalArgumentException("--input-format option must be specified once (and once only).");
 
         return this;
@@ -147,12 +132,12 @@ public class Main {
     private void run() throws Exception {
         if (fileNames.length > 0)
             for(String fileName: fileNames) {
-                System.err.println(String.format("\nCompiling: %s", fileName));
-                processFile(fileName);    
+                System.err.println(String.format("\nProcessing: %s", fileName));
+                if (service != null) runService(fileName);
+                else processFile(fileName);
             }
-        else {
-            processFile(null);
-        }
+        else if (service != null) runService(null);
+        else processFile(null);
     }
 
     private ParserInterface makeParser(InputStream inputStream) throws Exception {
@@ -164,30 +149,32 @@ public class Main {
         return null;
     }
 
-    private void processFile(String fileName) throws Exception {
-        InputStream inputStream = System.in;
-        Map<String, Object> metadata = null;
-        String statements = null;
+    private void runService(String fileName) throws Exception {
+        InputStream inputStream = fileName == null? System.in : new FileInputStream(fileName);
+        String response = "";
 
-        if (outDir != null) Services.outDir = outDir;
-        Services.graphURL = graphURL;
-        Services.repository = repository;
-
-        if (isAnalyse) {
-            String input = new String(inputStream.readAllBytes());
-            String response = Services.createResource(input, fileName == null? "stdin" : fileName, format, creator, language, namespace);
-            System.out.println(response);
-            return;
-        } else if (isAssemble) {
-            String response = Services.assembleResource(fileName, namespace, creator);
-            System.out.println(response);
-            return;
-        } else if (isSubmit) {
-            Services.submitResource(fileName);
-            return;
+        switch(service) {
+            case "analyse":
+                String input = new String(inputStream.readAllBytes());
+                response = Services.createResource(input, fileName == null? "stdin" : fileName, format, creator, language, namespace);
+                break;
+            case "assemble":
+                response = Services.assembleResource(fileName, namespace, creator);
+                break;
+            case "submit":
+                response = Services.submitResource(fileName);
+                break;
+            default:
+                throw new IllegalArgumentException(String.format("Unknown service: %s", service));
         }
 
-        if (fileName != null) inputStream = new FileInputStream(fileName);
+        System.out.println(response);
+    }
+
+    private void processFile(String fileName) throws Exception {
+        InputStream inputStream = fileName == null? System.in : new FileInputStream(fileName);
+        Map<String, Object> metadata = null;
+        String statements = null;
 
         if (isSparql) {
             statements = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
@@ -221,19 +208,19 @@ public class Main {
             output = JSONValue.toJSONString(response); 
         }
 
-        if (outDir == null || fileName == null) {
+        if (Services.outDir == null || fileName == null) {
             if (!isSparql) System.out.println(output);
         } else if (statements != null) {
-            saveStatementsUsingInFileName(fileName, outDir, ".sparql", statements);            
+            saveStatementsUsingInFileName(fileName, ".sparql", statements);            
         }
 
-        if (graphURL != null && statements != null) {
-            uploadStatements(graphURL, repository, statements);
+        if (Services.graphURL != null && statements != null) {
+            uploadStatements(Services.graphURL, Services.repository, statements);
         }        
     }
 
-    private static void saveStatementsUsingInFileName(String inFile, String outDir, String extension, String statements) throws Exception {
-        String pathName = getOutFileNameUsingInFileName(inFile, outDir, extension);
+    private static void saveStatementsUsingInFileName(String inFile, String extension, String statements) throws Exception {
+        String pathName = getOutFileNameUsingInFileName(inFile, Services.outDir, extension);
             PrintWriter writer = new PrintWriter(pathName, "UTF-8");
         writer.println(statements);
         writer.close();

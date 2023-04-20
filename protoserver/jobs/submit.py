@@ -18,7 +18,7 @@ class Submit(Operation):
 			'--creator', 'kicco',
 			'--repository', self.repository,
 			'--graphdb-url', 'http://localhost:7200',
-			'--submit',
+			'--service', 'submit',
 			'--', self.resourcedir
 		]
 
