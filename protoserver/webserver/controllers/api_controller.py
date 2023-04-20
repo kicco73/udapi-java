@@ -7,7 +7,7 @@ import json
 import os
 import shutil
 
-from jobs import analyse, convert, submit
+from jobs import services
 
 class ApiController(controller.Controller):
 
@@ -17,9 +17,15 @@ class ApiController(controller.Controller):
 		@app.route('/resources', methods = ['POST'])
 		def create_resource():
 			tbx = request.json.get('tbx')
-			operation = analyse.Analyse(tbx)
+			operation = services.Analyse(input=tbx)
 			resource_string = operation.execute()
 			return Response(resource_string, mimetype='application/json')
+
+		@app.route('/resources/<resource_id>', methods = ['GET'])
+		def get_resource_metadata(resource_id: str):
+			operation = services.Filter(resource_dir=resource_id)
+			content = operation.execute()
+			return Response(content, mimetype='application/json')
 
 		@app.route('/resources/<resource_id>/sparql', methods = ['GET'])
 		def get_resource_sparql(resource_id: str):
@@ -32,7 +38,7 @@ class ApiController(controller.Controller):
 		def submit_resource_id(resource_id: str):
 			inputdir = self.get_resource_path(resource_id)
 			repository = request.json.get('repository')
-			operation = submit.Submit(inputdir, repository)
+			operation = services.Submit(resource_dir=inputdir, repository=repository)
 			operation.execute()
 			return Response(json.dumps({}), mimetype='application/json')
 
@@ -54,7 +60,8 @@ class ApiController(controller.Controller):
 				return file.read()
 			
 	def create_resource_sparql(self, resource_id):
-		operation = convert.Convert(resource_id)
+		resource_dir = os.path.abspath(self.get_resource_path(resource_id))
+		operation = services.Convert(resource_dir=resource_dir)
 		return operation.execute()
 
 	def get_resource_path(self, resource_id: str, *args) -> str:

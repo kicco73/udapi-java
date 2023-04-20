@@ -150,12 +150,11 @@ public class Main {
     }
 
     private void runService(String fileName) throws Exception {
-        InputStream inputStream = fileName == null? System.in : new FileInputStream(fileName);
         String response = "";
 
         switch(service) {
             case "analyse":
-                String input = new String(inputStream.readAllBytes());
+                String input = new String(System.in.readAllBytes());
                 response = Services.createResource(input, fileName == null? "stdin" : fileName, format, creator, language, namespace);
                 break;
             case "assemble":

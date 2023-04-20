@@ -108,7 +108,6 @@ public class Services {
 	static public String assembleResource(String inputDir, String namespace, String creator) throws Exception {
 		String resourceId = new File(inputDir).getName();
 		SqliteStore tripleStore = getStore(resourceId, namespace, creator, false);
-		//tripleStore.setLanguages(Arrays.asList("it"));
 		String sparql = tripleStore.serialised();
 		saveToResourceProperty(resourceId, "sparql", sparql);
 		return sparql;
