@@ -23,7 +23,7 @@ class Convert(BaseOperation):
 
 class Submit(BaseOperation):
 	def __init__(self, resource_dir: str, repository: str):
-		super().__init__(resouorce_dir=resource_dir)
+		super().__init__(resource_dir=resource_dir)
 		self.repository = repository
 
 	def execute(self) -> str:

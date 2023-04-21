@@ -29,7 +29,7 @@ public class Metadata {
     }
 
 	public void merge(Map<String, Object> other) {
-		metadata = deepMerge(metadata, other);
+		deepMerge(metadata, other);
 	}
 
 	public void put(Object value, String ...path) {
