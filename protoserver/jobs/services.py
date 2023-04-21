@@ -8,8 +8,14 @@ class Analyse(BaseOperation):
 		return self.run_java('--service', 'analyse', '--input-format', 'tbx')
 
 class Filter(BaseOperation):
+	def __init__(self, resource_dir: str, languages: list):
+		super().__init__(resource_dir=resource_dir)
+		self.languages = languages
+
 	def execute(self) -> str:
-		return self.run_java('--service', 'filter', '--', self.resource_dir) 
+		return self.run_java('--service', 'filter', 
+		       '--filter-languages', ','.join(self.languages), 
+		       '--', self.resource_dir) 
 
 class Convert(BaseOperation):
 	def execute(self) -> str:

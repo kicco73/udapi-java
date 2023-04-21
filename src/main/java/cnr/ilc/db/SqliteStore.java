@@ -6,13 +6,11 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
 import cnr.ilc.rut.Concept;

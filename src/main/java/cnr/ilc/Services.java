@@ -7,6 +7,7 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -105,9 +106,10 @@ public class Services {
 		return JSONObject.toJSONString(response);
 	}
 
-	static public String filterResource(String inputDir, String namespace, String creator) throws Exception {
+	static public String filterResource(String inputDir, String namespace, String creator, Collection<String> filterLanguages) throws Exception {
 		String resourceId = new File(inputDir).getName();
 		SqliteStore tripleStore = getStore(resourceId, namespace, creator, false);
+		tripleStore.setLanguages(filterLanguages);
 		String response = tripleStore.getMetadata();
 		saveToResourceProperty(resourceId, "metadata.json", response);
 		return response;

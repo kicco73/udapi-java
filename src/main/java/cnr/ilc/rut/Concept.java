@@ -30,9 +30,6 @@ public class Concept {
 	public Word newWord(String lemma, String partOfSpeech, String language, String lexiconFQN, String creator) {
 		Word word = new Word(lemma, partOfSpeech, language, this, lexiconFQN, "ontolex:LexicalEntry", creator);
 		words.add(word);
-		Map<String, String> term = new LinkedHashMap<>();
-		term.put("t", lemma);
-		metadata.add(term, "concepts", id, "languages", language, "terms");
 		if (metadata.get("concepts", id, "description") == null)
 			metadata.add(word.canonicalForm.text, "concepts", id, "description");
 		return word;

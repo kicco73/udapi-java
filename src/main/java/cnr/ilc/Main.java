@@ -11,7 +11,9 @@ import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -44,6 +46,7 @@ public class Main {
     String outSparql = null;
     String[] fileNames = new String[0];
     String format = null;
+    Collection<String> filterLanguages = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
         new Main()
@@ -82,6 +85,10 @@ public class Main {
                         isDb = true;
                     else
                         throw new IllegalArgumentException(String.format("Unknown format %s: must be one of conllu, tbx, sparql, sqlite", format));
+                    break;
+                case "--filter-languages":
+                    if (args[startIndex++].length() > 0)
+                        filterLanguages = Arrays.asList(args[startIndex-1].split(","));
                     break;
                 case "-j":
                 case "--json":
@@ -158,7 +165,7 @@ public class Main {
                 response = Services.createResource(input, fileName == null? "stdin" : fileName, format, creator, language, namespace);
                 break;
             case "filter":
-                response = Services.filterResource(fileName, namespace, creator);
+                response = Services.filterResource(fileName, namespace, creator, filterLanguages);
                 break;
             case "assemble":
                 response = Services.assembleResource(fileName, namespace, creator);

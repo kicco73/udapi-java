@@ -33,12 +33,6 @@ class WebServer(object):
 		self.load_controllers(app, self.socketio, controllers)
 		self.load_services(app, self.socketio)
 
-		@app.after_request
-		def add_header(response):
-			if response.cache_control.max_age is None:
-				response.cache_control.max_age = 15
-			return response
-
 	def load_controllers(self, app, socketio, module):
 		for name in module.__all__:
 			importlib.import_module(f'.{name}', module.__name__)

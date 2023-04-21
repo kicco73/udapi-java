@@ -47,6 +47,13 @@ public class Word {
 		canonicalForm = new Form(canonicalFormFQN, lemma);
 
 		this.triples = new WordSerialiser(this);
+
+		Map<String, String> term = new LinkedHashMap<>();
+		term.put("t", lemma);
+		if (concept == null)
+			metadata.add(term, "words", "languages", language, "terms");
+		else
+			metadata.add(term, "concepts", concept.id, "languages", language, "terms");
 	}
 
 	public void addOtherForm(Form form) {

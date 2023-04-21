@@ -23,7 +23,8 @@ class ApiController(controller.Controller):
 
 		@app.route('/resources/<resource_id>', methods = ['GET'])
 		def get_resource_metadata(resource_id: str):
-			operation = services.Filter(resource_dir=resource_id)
+			languages = request.values.getlist('languages')
+			operation = services.Filter(resource_dir=resource_id, languages=languages)
 			content = operation.execute()
 			return Response(content, mimetype='application/json')
 
