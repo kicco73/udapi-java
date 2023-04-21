@@ -1,5 +1,6 @@
 package cnr.ilc.rut;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -13,13 +14,16 @@ public class Metadata {
 
 	private static Map<String, Object> deepMerge(Map<String, Object> original, Map<String, Object> newMap) {
         for (String key : newMap.keySet()) {
-            if (newMap.get(key) instanceof Map && original.get(key) instanceof Map) {
-                Map<String, Object> originalChild = (Map<String, Object>) original.get(key);
-                Map<String, Object> newChild = (Map<String, Object>) newMap.get(key);
-                original.put(key, deepMerge(originalChild, newChild));
-            } else {
-                original.put(key, newMap.get(key));
-            }
+			Object originalChild = original.get(key);
+			Object newChild = newMap.get(key);
+            if (newChild instanceof Map && originalChild instanceof Map) {
+                original.put(key, deepMerge((Map<String, Object>) originalChild, (Map<String, Object>) newChild));
+			} else if (newChild instanceof Collection && originalChild instanceof Collection) {
+				Collection<Object> mergedCollection = (Collection<Object>)originalChild;
+				mergedCollection.addAll((Collection<Object>) newChild);
+			} else {
+				original.put(key, newMap.get(key));
+			}
         }
         return original;
     }
