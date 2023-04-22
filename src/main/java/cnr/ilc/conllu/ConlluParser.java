@@ -53,11 +53,6 @@ public class ConlluParser implements ParserInterface, ResourceInterface {
     }
 
     @Override
-    public Map<String, Object> getMetadata() {
-        return new HashMap<String, Object>();
-   }
-
-    @Override
     public Map<String, String> getLexicons() {
         Map<String, String> lexicons = new HashMap<>();
         lexicons.put(":connll-u", language);

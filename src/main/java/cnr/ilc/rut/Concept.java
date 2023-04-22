@@ -24,14 +24,14 @@ public class Concept {
 		FQName = String.format(":concept_%s", conceptId);
 		triples.add(FQName, "rdf:type", "skos:Concept");
 		triples.addString(FQName, "skos:prefLabel", id);
-		metadata.put(id, "concepts", id, "id");
+		metadata.putx("*", id, "concepts", id, "id");
 	}
 
 	public Word newWord(String lemma, String partOfSpeech, String language, String lexiconFQN, String creator) {
 		Word word = new Word(lemma, partOfSpeech, language, this, lexiconFQN, "ontolex:LexicalEntry", creator);
 		words.add(word);
-		if (metadata.get("concepts", id, "description") == null)
-			metadata.add(word.canonicalForm.text, "concepts", id, "description");
+		if (metadata.getx(language, "concepts", id, "languages", language, "description") == null)
+			metadata.putx(language, word.canonicalForm.text, "concepts", id, "languages", language, "description");
 		return word;
 	}
 
@@ -48,9 +48,9 @@ public class Concept {
 	public void setDefinition(String definition, String language) {
 		this.definition.put(language, definition);
 		if (language.equals("*"))
-			metadata.put(definition, "concepts", id, "definition");
+			metadata.putx(language, definition, "concepts", id, "definition");
 		else
-			metadata.put(definition, "concepts", id, "languages", language, "definition");
+			metadata.putx(language, definition, "concepts", id, "languages", language, "definition");
 	}
 
 	public String getDefinition(String language) {

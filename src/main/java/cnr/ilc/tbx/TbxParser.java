@@ -16,7 +16,9 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
+@SuppressWarnings("unchecked")
 public class TbxParser implements ParserInterface, ResourceInterface {
 	private Document document;
 	private ConceptEntry conceptEntryParser = new ConceptEntry();
@@ -33,9 +35,9 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 		document.getDocumentElement().normalize();
 		Element tbx = (Element) document.getElementsByTagName("tbx").item(0);
 
-		metadata.put(countingInputStream.getCount(), "fileSize");
-		metadata.put("tbx", "fileType");
-		metadata.put(tbx.getAttribute("type"), "variant");
+		metadata.putx("*", countingInputStream.getCount(), "fileSize");
+		metadata.putx("*", "tbx", "fileType");
+		metadata.putx("*", tbx.getAttribute("type"), "variant");
 	}
 	
 	static private Document parseTbx(InputStream inputStream) throws RutException {
@@ -65,28 +67,9 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 	@Override
 	public ResourceInterface parse() throws Exception {
 		parseConcepts();
-		metadata.put(conceptEntryParser.numberOfTerms, "numberOfTerms");
-		metadata.put(concepts.size(), "numberOfConcepts");
+		metadata.putx("*", conceptEntryParser.numberOfTerms, "numberOfTerms");
+		metadata.putx("*", concepts.size(), "numberOfConcepts");
 		return this;
-	}
-
-	@Override
-	public Map<String, Object> getMetadata() {
-		Metadata coalescedMetadata = new Metadata();
-
-		for (String language: getLexicons().keySet()) {
-			coalescedMetadata.add(language, "languages");
-		}
-
-		coalescedMetadata.merge(metadata.get());
-
-		for (Concept concept: concepts) {
-			coalescedMetadata.merge(concept.metadata.get());
-			for (Word word: concept.words) {
-				coalescedMetadata.merge(word.metadata.get());
-			}
-		}
-		return coalescedMetadata.get();
 	}
 
 	@Override

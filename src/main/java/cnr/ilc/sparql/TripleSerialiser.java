@@ -39,7 +39,7 @@ public class TripleSerialiser {
 
 	public void addStringWithLanguage(String subject, String link, String description, String language) {
 		String object = SPARQLFormatter.formatObjectWithLanguage(description, language);
-		add(subject, link, object);
+		add(subject, link, object, language);
 	}
 
 	public void add(String subject, String link, Map<String,String> anonObject) {
@@ -64,7 +64,7 @@ public class TripleSerialiser {
 	}
 
 	public String serialise(String language) {
-		return features.get(language);
+		return features.getOrDefault(language, "");
 	}
 
 	public Collection<String> getLanguages() {

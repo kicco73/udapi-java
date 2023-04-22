@@ -51,9 +51,9 @@ public class Word {
 		Map<String, String> term = new LinkedHashMap<>();
 		term.put("t", lemma);
 		if (concept == null)
-			metadata.add(term, "words", "languages", language, "terms");
+			metadata.addx(language, term, "words", "languages", language, "terms");
 		else
-			metadata.add(term, "concepts", concept.id, "languages", language, "terms");
+			metadata.addx(language, term, "concepts", concept.id, "languages", language, "terms");
 	}
 
 	public void addOtherForm(Form form) {

@@ -1,6 +1,6 @@
 package cnr.ilc.rut;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -28,18 +28,25 @@ public class Metadata {
         return original;
     }
 
-	public void merge(Map<String, Object> other) {
-		deepMerge(metadata, other);
+	public Metadata() {}
+
+	public Metadata(String language, Map<String, Object> map) {
+		putx(language, map);
 	}
 
-	public void put(Object value, String ...path) {
+	public void merge(String language, Map<String, Object> other) {
+		Map<String, Object> root = (Map<String, Object>) getx(language);
+		deepMerge(root, other);
+	}
+
+	private void put_(Object value, String ...path) {
 		Map<String, Object> root = metadata;
 		for (int index = 0; index < path.length-1; index++) {
 			String leg = path[index];
 			if (root.containsKey(leg)) {
 				root = (Map<String, Object>) root.get(leg);
 			} else {
-				Map<String, Object> legEntry = new LinkedHashMap<>();
+				Map<String, Object> legEntry = new JSONObject();
 				root.put(leg, legEntry);
 				root = legEntry;	
 			}
@@ -47,16 +54,25 @@ public class Metadata {
 		root.put(path[path.length-1], value);
 	}
 
-	public void add(Object value, String ...path) {
-		Collection<Object> collection = (Collection<Object>) get(path);
+
+	public void putx(String language, Object value, String ...path) {
+		String[] newArray = new String[path.length + 1];
+		newArray[0] = language;
+ 		System.arraycopy(path, 0, newArray, 1, path.length);
+		put_(value, newArray);
+	}
+
+
+	public void addx(String language, Object value, String ...path) {
+		Collection<Object> collection = (Collection<Object>) getx(language, path);
 		if (collection == null) {
 			collection = new JSONArray();
-			put(collection, path);
+			putx(language, collection, path);
 		}
 		collection.add(value);
 	}
 
-	public Object get(String ...path) {
+	private Object get_(String ...path) {
 		Map<String, Object> root = metadata;
 		for (int index = 0; index < path.length-1; index++) {
 			String leg = path[index];
@@ -66,12 +82,16 @@ public class Metadata {
 		return root.get(path[path.length-1]);
 	}
 
-	public Map<String, Object> get() {
-		return metadata;
+	public Object getx(String language, String ...path) {
+		String[] newArray = new String[path.length + 1];
+		newArray[0] = language;
+ 		System.arraycopy(path, 0, newArray, 1, path.length);
+		return get_(newArray);
 	}
 
-	public String serialise() {
-		return JSONObject.toJSONString(metadata);
+	public String serialise(String language) {
+		JSONObject data = (JSONObject) metadata.get(language);
+		return JSONObject.toJSONString(data);
 	}
 	
 }

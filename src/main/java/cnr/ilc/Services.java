@@ -97,8 +97,7 @@ public class Services {
 			ResourceInterface resource = parser.parse();
 			SqliteStore tripleStore = getStore(resourceId, namespace, creator, true);
 			tripleStore.serialise(resource);
-			
-			response = parser.getMetadata();
+			response = tripleStore.getMetadata(resource);
             response.put("id", resourceId);
 			//saveToResourceProperty(resourceId, "metadata.json", JSONObject.toJSONString(response));
 		}

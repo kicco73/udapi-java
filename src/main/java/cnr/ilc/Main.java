@@ -196,7 +196,7 @@ public class Main {
                 tripleStore = new SPARQLWriter(namespace, creator, chunkSize);
                 ParserInterface parser = makeParser(inputStream);
                 ResourceInterface resource = parser.parse();
-                metadata = parser.getMetadata();
+                metadata = tripleStore.getMetadata(resource);
                 tripleStore.serialise(resource);
     
                 if (isConnlu && exportConll != null && parser instanceof ConlluParser) {

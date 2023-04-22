@@ -4,13 +4,20 @@
 
 package cnr.ilc.sparql;
 
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 import java.util.Map.Entry;
 
+import org.json.simple.JSONObject;
+
 import cnr.ilc.rut.Concept;
+import cnr.ilc.rut.Metadata;
 import cnr.ilc.rut.ResourceInterface;
 import cnr.ilc.rut.Word;
 
+@SuppressWarnings("unchecked")
 public class SPARQLWriter implements TripleStoreInterface {
 	static final public String separator = "# data-chunk";
 	final private StringBuffer buffer = new StringBuffer();
@@ -66,7 +73,7 @@ public class SPARQLWriter implements TripleStoreInterface {
 	private void appendConcepts(ResourceInterface resource) {
 		if (resource.getConcepts() == null) return;
 		for (Concept concept: resource.getConcepts()) {
-			appendConcept(concept);
+			appendConcept(concept, resource.getLexicons().keySet());
 			for (Word word: concept.words) 
 				appendWord(word);
 		}
@@ -85,7 +92,7 @@ public class SPARQLWriter implements TripleStoreInterface {
 		append(triples.serialise());
 	}
 
-	protected void appendConcept(Concept concept) {
+	protected void appendConcept(Concept concept, Collection<String> languages) {
 		append(concept.triples.serialise());
 	}
 
@@ -118,7 +125,27 @@ public class SPARQLWriter implements TripleStoreInterface {
 	}
 
 	@Override
-	public String getMetadata() {
-		return "{}";
+	public Map<String, Object> getMetadata(ResourceInterface resource) {
+		Metadata coalescedMetadata = new Metadata();
+		Collection<String> languages = resource.getLexicons().keySet();
+
+		coalescedMetadata.addx("*", languages, "languages");
+		languages = new HashSet<>(languages);
+		languages.add("*");
+
+		for (Concept concept: resource.getConcepts()) {
+			for (String language: languages) {
+				Map<String,Object> conceptData = (Map<String, Object>) concept.metadata.getx(language);
+				if (conceptData != null)
+					coalescedMetadata.merge("*", conceptData);
+				for (Word word: concept.words) {
+					Map<String,Object> wordData = (Map<String, Object>) word.metadata.getx(language);
+					if (wordData != null)
+						coalescedMetadata.merge("*", wordData);
+				}
+			}
+		}
+		Map<String, Object> unwrapped = (Map<String, Object>) coalescedMetadata.getx("*");
+		return unwrapped;
 	}
 }
