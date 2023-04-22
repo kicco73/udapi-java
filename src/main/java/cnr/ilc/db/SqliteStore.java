@@ -6,16 +6,14 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
-import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
-import org.json.simple.parser.ParseException;
 
 import cnr.ilc.rut.Concept;
 import cnr.ilc.rut.Metadata;
@@ -56,11 +54,12 @@ public class SqliteStore extends SPARQLWriter {
 		executeUpdate("drop table if exists lexicon");
 		executeUpdate("create table lexicon (language string, metadata json, serialised string)");
 		executeUpdate("drop table if exists word");
-		executeUpdate("create table word (lemma string, partOfSpeech string, language string, conceptId string, metadata json, serialised string)");
+		executeUpdate("create table word (lemma string, language string, conceptId string, metadata json, serialised string)");
 		executeUpdate("create index word_lemma_idx on word (lemma)");
 		executeUpdate("create index word_language_idx on word (language)");
 		executeUpdate("drop table if exists concept");
 		executeUpdate("create table concept (conceptId string, language string, metadata json, serialised string)");
+		executeUpdate("create index concept_language_idx on concept (language)");
 	}
 
 	private String buildWhere(String entityName, Collection<String> languages) {
@@ -76,7 +75,7 @@ public class SqliteStore extends SPARQLWriter {
 			Collection<String> languages = new HashSet<String>(this.languages);
 			languages.add("*");
 			String where = buildWhere(entityName, languages);
-			String query = String.format("select %s from %s where %s", columnName, entityName, where);
+			String query = String.format("select %s from %s where %s order by language", columnName, entityName, where);
 			ResultSet rs = executeQuery(query);
 			while (rs.next()) {
 				String serialised = rs.getString(columnName);
@@ -88,15 +87,23 @@ public class SqliteStore extends SPARQLWriter {
 		}
 	}
 
-	private void mergeJson(Metadata metadata, String columnName, String entityName, Collection<String> languages) throws Exception {
+	private void mergeJson(Metadata metadata, String columnName, String entityName) throws Exception {
 		try {
-			String where = buildWhere(entityName, languages);
-			String query = String.format("select %s from %s where %s", columnName, entityName, where);
+			Collection<String> langs = new ArrayList<String>(languages);
+			if (langs.size() > 0) langs.add("*");
+			System.err.println(langs);
+			System.err.println(languages);
+			String where = buildWhere(entityName, langs);
+			String query = String.format("select %s, language from %s where %s", columnName, entityName, where);
 			ResultSet rs = executeQuery(query);
 			while (rs.next()) {
 				String jsonString = rs.getString(columnName);
+				System.err.println(jsonString);
 				Map<String, Object> json = (Map<String, Object>) jsonParser.parse(jsonString);
+				System.err.println("OK: "+ rs.getString("language") + entityName);
+
 				metadata.merge("*", json);
+				System.err.println("--: "+ JSONObject.toJSONString(metadata.getMap("*")));
 			}
 		}
 		catch(SQLException e) {
@@ -117,13 +124,13 @@ public class SqliteStore extends SPARQLWriter {
 
 	@Override
 	protected void appendConcept(Concept concept, Collection<String> languages) {
-		Collection<String> langs = new HashSet<>(languages);
-		System.err.println("QUI HO "+ langs);
+		Collection<String> langs = new HashSet<>();
 		langs.add("*");
+		langs.addAll(languages);
 		for (String language: langs) {
 			String serialised = concept.triples.serialise(language);
 			serialised = serialised.replaceAll("'", "''");
-			String metadata = concept.metadata.serialise(language);
+			String metadata = concept.metadata.toJson(language);
 			metadata = metadata.replaceAll("'", "''");
 			if (serialised.length() > 0 || !metadata.equals("null"))
 				executeUpdate("insert into concept (conceptId, language, metadata, serialised) values ('%s', '%s', '%s', '%s')", 
@@ -137,10 +144,10 @@ public class SqliteStore extends SPARQLWriter {
 		String serialised = word.triples.serialise();
 		serialised = serialised.replaceAll("'", "''");
 		String lemma = word.canonicalForm.text.replaceAll("'", "''");
-		String metadata = word.metadata.serialise(word.language);
+		String metadata = word.metadata.toJson(word.language);
 		metadata = metadata.replaceAll("'", "''");
-		executeUpdate("insert into word (lemma, partOfSpeech, language, conceptId, metadata, serialised) values ('%s', '%s', '%s', %s, '%s', '%s')", 
-			lemma, word.partOfSpeech, word.language, conceptId,  metadata, serialised);
+		executeUpdate("insert into word (lemma, language, conceptId, metadata, serialised) values ('%s', '%s', %s, '%s', '%s')", 
+			lemma, word.language, conceptId,  metadata, serialised);
 	}
 
 	public SqliteStore(String namespace, String creator, int chunkSize, String fileName) {
@@ -161,26 +168,26 @@ public class SqliteStore extends SPARQLWriter {
 	}
 
 	@Override
-	public String serialised() {
+	public String getSparql() {
 		assembleEntity("serialised", "lexicon");
 		assembleEntity("serialised", "concept");
 		assembleEntity("serialised", "word");
-		return super.serialised();
+		return super.getSparql();
 	}
 
-	public String getMetadata() {
+	@Override
+	public Map<String,Object> getMetadata() {
 		Metadata metadata = new Metadata();
 
 		try {
-			mergeJson(metadata, "metadata", "lexicon", languages);
-			mergeJson(metadata, "metadata", "concept", languages);
-			mergeJson(metadata, "metadata", "word", languages);	
+			mergeJson(metadata, "metadata", "lexicon");
+			mergeJson(metadata, "metadata", "concept");
+			mergeJson(metadata, "metadata", "word");	
 		}
 		catch(Exception e) {
 			System.err.println(String.format("Error: cannot merge metadata: %s", e.getMessage()));
-			return "{}";
 		}
-		return metadata.serialise("*");
+		return metadata.getMap("*");
 	}
 
 	public void setLanguages(Collection<String> languages) {

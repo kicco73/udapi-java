@@ -96,8 +96,8 @@ public class Services {
 
 			ResourceInterface resource = parser.parse();
 			SqliteStore tripleStore = getStore(resourceId, namespace, creator, true);
-			tripleStore.serialise(resource);
-			response = tripleStore.getMetadata(resource);
+			tripleStore.store(resource);
+			response = tripleStore.getMetadata();
             response.put("id", resourceId);
 			//saveToResourceProperty(resourceId, "metadata.json", JSONObject.toJSONString(response));
 		}
@@ -109,7 +109,7 @@ public class Services {
 		String resourceId = new File(inputDir).getName();
 		SqliteStore tripleStore = getStore(resourceId, namespace, creator, false);
 		tripleStore.setLanguages(filterLanguages);
-		String response = tripleStore.getMetadata();
+		String response = JSONObject.toJSONString(tripleStore.getMetadata());
 		saveToResourceProperty(resourceId, "metadata.json", response);
 		return response;
 	}
@@ -117,7 +117,7 @@ public class Services {
 	static public String assembleResource(String inputDir, String namespace, String creator) throws Exception {
 		String resourceId = new File(inputDir).getName();
 		SqliteStore tripleStore = getStore(resourceId, namespace, creator, false);
-		String sparql = tripleStore.serialised();
+		String sparql = tripleStore.getSparql();
 		saveToResourceProperty(resourceId, "sparql", sparql);
 		return sparql;
 	}

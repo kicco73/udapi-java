@@ -7,10 +7,7 @@ package cnr.ilc.sparql;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.Map;
-import java.util.Set;
 import java.util.Map.Entry;
-
-import org.json.simple.JSONObject;
 
 import cnr.ilc.rut.Concept;
 import cnr.ilc.rut.Metadata;
@@ -20,9 +17,10 @@ import cnr.ilc.rut.Word;
 @SuppressWarnings("unchecked")
 public class SPARQLWriter implements TripleStoreInterface {
 	static final public String separator = "# data-chunk";
-	final private StringBuffer buffer = new StringBuffer();
 	final protected String creator;
 	final private int chunkSize;
+	final private StringBuffer buffer = new StringBuffer();
+	private Map<String, Object> metadata = null;
 	private int charsWritten = 0;
 	private boolean blockStarted = false;
 	private String prefixes =
@@ -100,6 +98,32 @@ public class SPARQLWriter implements TripleStoreInterface {
 		append(word.triples.serialise());
 	}
 
+	private Map<String, Object> getMetadata(ResourceInterface resource) {
+		Metadata coalescedMetadata = new Metadata();
+		Collection<String> languages = resource.getLexicons().keySet();
+
+		for (String language: languages) {
+			coalescedMetadata.addToList("*", language, "languages");
+		}
+		
+		languages = new HashSet<>(languages);
+		languages.add("*");
+
+		for (Concept concept: resource.getConcepts()) {
+			for (String language: languages) {
+				Map<String,Object> conceptData = concept.metadata.getMap(language);
+				if (conceptData != null)
+					coalescedMetadata.merge("*", conceptData);
+				for (Word word: concept.words) {
+					Map<String,Object> wordData = word.metadata.getMap(language);
+					if (wordData != null)
+						coalescedMetadata.merge("*", wordData);
+				}
+			}
+		}
+		return coalescedMetadata.getMap("*");
+	}
+
 	// Hi-level interface
 
 	public SPARQLWriter(String namespace, String creator, int chunkSize) {
@@ -110,14 +134,15 @@ public class SPARQLWriter implements TripleStoreInterface {
 	}
 
 	@Override
-	public void serialise(ResourceInterface resource) {
+	public void store(ResourceInterface resource) {
 		appendLexicons(resource.getLexicons());
         appendConcepts(resource);
 		appendWords(resource);
+		metadata = getMetadata(resource);
 	}
 	
 	@Override
-	public String serialised() {
+	public String getSparql() {
 		if (blockStarted) {
 			buffer.append("}\n");
 		}
@@ -125,27 +150,7 @@ public class SPARQLWriter implements TripleStoreInterface {
 	}
 
 	@Override
-	public Map<String, Object> getMetadata(ResourceInterface resource) {
-		Metadata coalescedMetadata = new Metadata();
-		Collection<String> languages = resource.getLexicons().keySet();
-
-		coalescedMetadata.addx("*", languages, "languages");
-		languages = new HashSet<>(languages);
-		languages.add("*");
-
-		for (Concept concept: resource.getConcepts()) {
-			for (String language: languages) {
-				Map<String,Object> conceptData = (Map<String, Object>) concept.metadata.getx(language);
-				if (conceptData != null)
-					coalescedMetadata.merge("*", conceptData);
-				for (Word word: concept.words) {
-					Map<String,Object> wordData = (Map<String, Object>) word.metadata.getx(language);
-					if (wordData != null)
-						coalescedMetadata.merge("*", wordData);
-				}
-			}
-		}
-		Map<String, Object> unwrapped = (Map<String, Object>) coalescedMetadata.getx("*");
-		return unwrapped;
+	public Map<String, Object> getMetadata() {
+		return metadata;
 	}
 }

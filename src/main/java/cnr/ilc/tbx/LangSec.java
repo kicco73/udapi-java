@@ -40,7 +40,7 @@ public class LangSec {
 			if (externalCrossReference != null) 
 				object.put("dct:identifier", SPARQLFormatter.formatObjectWithUrlIfPossible(externalCrossReference));
 	
-			concept.triples.add(concept.FQName, "skos:definition", object);
+			concept.triples.add(concept.FQName, "skos:definition", object, language);
 		}
 	}
 

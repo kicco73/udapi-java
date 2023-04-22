@@ -35,9 +35,9 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 		document.getDocumentElement().normalize();
 		Element tbx = (Element) document.getElementsByTagName("tbx").item(0);
 
-		metadata.putx("*", countingInputStream.getCount(), "fileSize");
-		metadata.putx("*", "tbx", "fileType");
-		metadata.putx("*", tbx.getAttribute("type"), "variant");
+		metadata.putInMap("*", countingInputStream.getCount(), "fileSize");
+		metadata.putInMap("*", "tbx", "fileType");
+		metadata.putInMap("*", tbx.getAttribute("type"), "variant");
 	}
 	
 	static private Document parseTbx(InputStream inputStream) throws RutException {
@@ -67,8 +67,8 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 	@Override
 	public ResourceInterface parse() throws Exception {
 		parseConcepts();
-		metadata.putx("*", conceptEntryParser.numberOfTerms, "numberOfTerms");
-		metadata.putx("*", concepts.size(), "numberOfConcepts");
+		metadata.putInMap("*", conceptEntryParser.numberOfTerms, "numberOfTerms");
+		metadata.putInMap("*", concepts.size(), "numberOfConcepts");
 		return this;
 	}
 

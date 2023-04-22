@@ -31,11 +31,15 @@ public class Metadata {
 	public Metadata() {}
 
 	public Metadata(String language, Map<String, Object> map) {
-		putx(language, map);
+		putInMap(language, map);
 	}
 
 	public void merge(String language, Map<String, Object> other) {
-		Map<String, Object> root = (Map<String, Object>) getx(language);
+		Map<String, Object> root = getMap(language);
+		if(root == null) {
+			root = new JSONObject();
+			metadata.put(language, root);
+		}
 		deepMerge(root, other);
 	}
 
@@ -55,7 +59,7 @@ public class Metadata {
 	}
 
 
-	public void putx(String language, Object value, String ...path) {
+	public void putInMap(String language, Object value, String ...path) {
 		String[] newArray = new String[path.length + 1];
 		newArray[0] = language;
  		System.arraycopy(path, 0, newArray, 1, path.length);
@@ -63,11 +67,11 @@ public class Metadata {
 	}
 
 
-	public void addx(String language, Object value, String ...path) {
-		Collection<Object> collection = (Collection<Object>) getx(language, path);
+	public void addToList(String language, Object value, String ...path) {
+		Collection<Object> collection = getCollection(language, path);
 		if (collection == null) {
 			collection = new JSONArray();
-			putx(language, collection, path);
+			putInMap(language, collection, path);
 		}
 		collection.add(value);
 	}
@@ -82,14 +86,22 @@ public class Metadata {
 		return root.get(path[path.length-1]);
 	}
 
-	public Object getx(String language, String ...path) {
+	public Object getObject(String language, String ...path) {
 		String[] newArray = new String[path.length + 1];
 		newArray[0] = language;
  		System.arraycopy(path, 0, newArray, 1, path.length);
 		return get_(newArray);
 	}
 
-	public String serialise(String language) {
+	public Map<String,Object> getMap(String language, String ...path) {
+		return (Map<String,Object>) getObject(language, path);
+	}
+
+	public Collection<Object> getCollection(String language, String ...path) {
+		return (Collection<Object>) getObject(language, path);
+	}
+
+	public String toJson(String language) {
 		JSONObject data = (JSONObject) metadata.get(language);
 		return JSONObject.toJSONString(data);
 	}

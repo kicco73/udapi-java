@@ -80,7 +80,7 @@ public class TermSec {
 			if (crossReference != null) 
 				object.put("rdf:seeAlso", SPARQLFormatter.formatObjectWithUrlIfPossible(crossReference));
 	
-			word.triples.add(word.FQName+"_sense", "ontolex:usage", object);
+			word.triples.add(word.FQName+"_sense", "ontolex:usage", object, language);
 			
 		} else {
 			if (source != null)
@@ -112,6 +112,7 @@ public class TermSec {
 		String grammaticalGenderFQN = String.format("lexinfo:%s", grammaticalGender);
 
 		word = concept.newWord(lemma, partOfSpeechFQN, language, lexiconFQN, creator);
+
 		if (grammaticalGender != null)
 			word.canonicalForm.features.put(grammaticalGenderFQN, "lexinfo:gender");
 

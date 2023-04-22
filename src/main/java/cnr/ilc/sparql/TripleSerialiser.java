@@ -42,9 +42,9 @@ public class TripleSerialiser {
 		add(subject, link, object, language);
 	}
 
-	public void add(String subject, String link, Map<String,String> anonObject) {
+	public void add(String subject, String link, Map<String,String> anonObject, String language) {
 		String description = SPARQLFormatter.formatObject(anonObject);
-		add(subject, link, description);
+		add(subject, link, description, language);
 	}
 
 	public void addMetaData(String entryFQN, String creator) {

@@ -24,14 +24,15 @@ public class Concept {
 		FQName = String.format(":concept_%s", conceptId);
 		triples.add(FQName, "rdf:type", "skos:Concept");
 		triples.addString(FQName, "skos:prefLabel", id);
-		metadata.putx("*", id, "concepts", id, "id");
+		metadata.putInMap("*", id, "concepts", id, "id");
 	}
 
 	public Word newWord(String lemma, String partOfSpeech, String language, String lexiconFQN, String creator) {
 		Word word = new Word(lemma, partOfSpeech, language, this, lexiconFQN, "ontolex:LexicalEntry", creator);
 		words.add(word);
-		if (metadata.getx(language, "concepts", id, "languages", language, "description") == null)
-			metadata.putx(language, word.canonicalForm.text, "concepts", id, "languages", language, "description");
+		if (metadata.getObject(language, "concepts", id, "languages", language, "label") == null)
+			metadata.putInMap(language, word.canonicalForm.text, "concepts", id, "languages", language, "label");
+
 		return word;
 	}
 
@@ -48,9 +49,9 @@ public class Concept {
 	public void setDefinition(String definition, String language) {
 		this.definition.put(language, definition);
 		if (language.equals("*"))
-			metadata.putx(language, definition, "concepts", id, "definition");
+			metadata.putInMap(language, definition, "concepts", id, "definition");
 		else
-			metadata.putx(language, definition, "concepts", id, "languages", language, "definition");
+			metadata.putInMap(language, definition, "concepts", id, "languages", language, "definition");
 	}
 
 	public String getDefinition(String language) {
