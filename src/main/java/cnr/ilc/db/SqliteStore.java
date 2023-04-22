@@ -12,8 +12,8 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
+import org.json.simple.parser.ParseException;
 
 import cnr.ilc.rut.Concept;
 import cnr.ilc.rut.Metadata;
@@ -41,7 +41,8 @@ public class SqliteStore extends SPARQLWriter {
 
 	private ResultSet executeQuery(String query, Object ...args) {
 		try {
-			ResultSet rs = statement.executeQuery(String.format(query, args));
+			String fullQuery = String.format(query, args);
+			ResultSet rs = statement.executeQuery(fullQuery);
 			return rs;
 		} 
 		catch(SQLException e) {
@@ -70,13 +71,47 @@ public class SqliteStore extends SPARQLWriter {
 		return where;
 	}
 
+	private Collection<String> selectConcept(String columnName) {
+		Collection<String> result = new ArrayList<String>();
+		Collection<String> languages = new HashSet<String>(this.languages);
+		if (languages.size() > 0) languages.add("*");
+
+		String query = """
+			select %s from concept 
+			where %s and conceptId in (
+				select distinct concept.conceptId as conceptId
+				from concept
+				inner join word 
+				on concept.conceptId = word.conceptId
+				where concept.language = '*' and %s
+			) order by conceptId, language	
+		""";
+
+		try {
+			String whereConcept = buildWhere("concept", languages);
+			String whereWord = buildWhere("word", languages);
+			ResultSet rs = executeQuery(query, columnName, whereConcept, whereWord);
+			while (rs.next()) {
+				result.add(rs.getString(columnName));
+			}
+		}
+		catch(SQLException e) {
+			System.err.println(e.getMessage());
+		}
+		return result;
+	}
+
+	private void assembleConcept(String columnName) {
+		for (String serialised: selectConcept(columnName))
+			append(serialised);
+	}
+
 	private void assembleEntity(String columnName, String entityName) {
 		try {
 			Collection<String> languages = new HashSet<String>(this.languages);
-			languages.add("*");
+			if (languages.size() > 0) languages.add("*");
 			String where = buildWhere(entityName, languages);
-			String query = String.format("select %s from %s where %s order by language", columnName, entityName, where);
-			ResultSet rs = executeQuery(query);
+			ResultSet rs = executeQuery("select %s from %s where %s order by language", columnName, entityName, where);
 			while (rs.next()) {
 				String serialised = rs.getString(columnName);
 				append(serialised);
@@ -87,28 +122,33 @@ public class SqliteStore extends SPARQLWriter {
 		}
 	}
 
-	private void mergeJson(Metadata metadata, String columnName, String entityName) throws Exception {
+	private int mergeJson(Metadata metadata, String columnName, String entityName) throws Exception {
+		int result = 0;
 		try {
 			Collection<String> langs = new ArrayList<String>(languages);
 			if (langs.size() > 0) langs.add("*");
-			System.err.println(langs);
-			System.err.println(languages);
 			String where = buildWhere(entityName, langs);
-			String query = String.format("select %s, language from %s where %s", columnName, entityName, where);
-			ResultSet rs = executeQuery(query);
+			ResultSet rs = executeQuery("select %s from %s where %s", columnName, entityName, where);
 			while (rs.next()) {
+				result++;
 				String jsonString = rs.getString(columnName);
-				System.err.println(jsonString);
 				Map<String, Object> json = (Map<String, Object>) jsonParser.parse(jsonString);
-				System.err.println("OK: "+ rs.getString("language") + entityName);
-
 				metadata.merge("*", json);
-				System.err.println("--: "+ JSONObject.toJSONString(metadata.getMap("*")));
 			}
 		}
 		catch(SQLException e) {
 			System.err.println(e.getMessage());
 		}
+		return result;
+	}
+
+	private int mergeJsonConcept(Metadata metadata, String columnName) throws ParseException {
+		Collection<String> jsonStrings = selectConcept(columnName);
+		for (String jsonString: jsonStrings) {
+			Map<String, Object> json = (Map<String, Object>) jsonParser.parse(jsonString);
+			metadata.merge("*", json);
+		}
+		return jsonStrings.size();
 	}
 
 	@Override
@@ -170,7 +210,7 @@ public class SqliteStore extends SPARQLWriter {
 	@Override
 	public String getSparql() {
 		assembleEntity("serialised", "lexicon");
-		assembleEntity("serialised", "concept");
+		assembleConcept("serialised");
 		assembleEntity("serialised", "word");
 		return super.getSparql();
 	}
@@ -181,8 +221,11 @@ public class SqliteStore extends SPARQLWriter {
 
 		try {
 			mergeJson(metadata, "metadata", "lexicon");
-			mergeJson(metadata, "metadata", "concept");
-			mergeJson(metadata, "metadata", "word");	
+			int numberOfConcepts = mergeJsonConcept(metadata, "metadata");
+			int numberOfTerms = mergeJson(metadata, "metadata", "word");
+			metadata.putInMap("*", numberOfConcepts, "numberOfConcepts");
+			metadata.putInMap("*", numberOfTerms, "numberOfTerms");
+
 		}
 		catch(Exception e) {
 			System.err.println(String.format("Error: cannot merge metadata: %s", e.getMessage()));

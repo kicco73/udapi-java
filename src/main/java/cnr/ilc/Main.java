@@ -168,7 +168,7 @@ public class Main {
                 response = Services.filterResource(fileName, namespace, creator, filterLanguages);
                 break;
             case "assemble":
-                response = Services.assembleResource(fileName, namespace, creator);
+                response = Services.assembleResource(fileName, namespace, creator, filterLanguages);
                 break;
             case "submit":
                 response = Services.submitResource(fileName);
