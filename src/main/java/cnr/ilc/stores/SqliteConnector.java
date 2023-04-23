@@ -9,6 +9,8 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 public class SqliteConnector {
@@ -81,4 +83,22 @@ public class SqliteConnector {
 		}
 		return result;
 	}
+
+	public Map<String, Long> termsByLanguage(Collection<String> languages) throws SQLException {
+		Map<String, Long> results = new LinkedHashMap<>();
+		Collection<String> langs = new HashSet<String>(languages);
+
+		String where = buildWhere("word", langs);
+		String query = "select language, count(*) as n from word where %s group by language";
+		ResultSet rs = executeQuery(query, where);
+
+		while (rs.next()) {
+			String language = rs.getString("language");
+			long count = rs.getLong("n");
+			results.put(language, count);
+		}
+
+		return results;
+	}
+
 }	

@@ -34,6 +34,7 @@ public class MetadataManager {
 		while (rs.next()) {
 			results++;
 			String jsonString = rs.getString(columnName);
+			if (jsonString == null) continue;
 			Map<String, Object> json = (Map<String, Object>) jsonParser.parse(jsonString);
 			metadata.merge("*", json);
 		}
@@ -42,7 +43,8 @@ public class MetadataManager {
 
 	private int mergeJsonConcept(Metadata metadata, String columnName, Collection<String> languages) throws SQLException, ParseException {
 		Collection<String> jsonStrings = db.selectConcept(columnName, languages);
-		for (String jsonString: jsonStrings) {
+		for (String jsonString: jsonStrings) {			
+			if (jsonString == null) continue;
 			Map<String, Object> json = (Map<String, Object>) jsonParser.parse(jsonString);
 			metadata.merge("*", json);
 		}
@@ -63,6 +65,7 @@ public class MetadataManager {
 
 		metadata.putInMap("*", numberOfConcepts, "summary", "numberOfConcepts");
 		metadata.putInMap("*", numberOfTerms, "summary", "numberOfTerms");
+		metadata.putInMap("*", db.termsByLanguage(languages), "summary", "languages");
 
 		return metadata.getMap("*");
 	}

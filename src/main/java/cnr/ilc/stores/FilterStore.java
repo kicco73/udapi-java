@@ -48,9 +48,8 @@ public class FilterStore extends MemoryStore {
 		triples.addLexicon(lexiconFQN, language, creator);
 		String serialised = triples.serialise();
 		serialised = serialised.replaceAll("'", "''");
-		String metadata = String.format("{\"summary\": {\"languages\": [\"%s\"]}}", language);
-		db.executeUpdate("insert into lexicon (language, metadata, serialised) values ('%s', '%s', '%s')", 
-			language, metadata, serialised);
+		db.executeUpdate("insert into lexicon (language, serialised) values ('%s', '%s')", 
+			language, serialised);
 	}
 
 	@Override
