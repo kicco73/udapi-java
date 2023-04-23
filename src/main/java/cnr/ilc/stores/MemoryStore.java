@@ -2,20 +2,19 @@
  * @author Enrico Carniani
  */
 
-package cnr.ilc.sparql;
+package cnr.ilc.stores;
 
 import java.util.Collection;
-import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
 import cnr.ilc.rut.Concept;
-import cnr.ilc.rut.Metadata;
 import cnr.ilc.rut.ResourceInterface;
 import cnr.ilc.rut.Word;
+import cnr.ilc.sparql.TripleSerialiser;
 
-@SuppressWarnings("unchecked")
-public class SPARQLWriter implements TripleStoreInterface {
+public class MemoryStore implements TripleStoreInterface {
 	static final public String separator = "# data-chunk";
 	final protected String creator;
 	final private int chunkSize;
@@ -60,7 +59,7 @@ public class SPARQLWriter implements TripleStoreInterface {
 		}
 	}
 
-	private void appendLexicons(Map<String, String> lexicons) {
+	private void appendLexicons(Map<String, String> lexicons) throws Exception {
 		for (Entry<String, String> lexicon: lexicons.entrySet()) {
 			String language = lexicon.getKey();
 			String lexiconFQN = lexicon.getValue();
@@ -68,7 +67,7 @@ public class SPARQLWriter implements TripleStoreInterface {
 		}
 	}
 
-	private void appendConcepts(ResourceInterface resource) {
+	private void appendConcepts(ResourceInterface resource) throws Exception {
 		if (resource.getConcepts() == null) return;
 		for (Concept concept: resource.getConcepts()) {
 			appendConcept(concept, resource.getLexicons().keySet());
@@ -77,56 +76,30 @@ public class SPARQLWriter implements TripleStoreInterface {
 		}
 	}
 
-	private void appendWords(ResourceInterface resource) {
+	private void appendWords(ResourceInterface resource) throws Exception {
 		if (resource.getWords() == null) return;
 		for (Word word: resource.getWords()) {
 			appendWord(word);
 		}
 	}
 
-	protected void appendLexicon(String lexiconFQN, String language) {		
+	protected void appendLexicon(String lexiconFQN, String language) throws Exception {		
 		TripleSerialiser triples = new TripleSerialiser();
 		triples.addLexicon(lexiconFQN, language, creator);
 		append(triples.serialise());
 	}
 
-	protected void appendConcept(Concept concept, Collection<String> languages) {
+	protected void appendConcept(Concept concept, Collection<String> languages) throws Exception {
 		append(concept.triples.serialise());
 	}
 
-	protected void appendWord(Word word) {
+	protected void appendWord(Word word) throws Exception {
 		append(word.triples.serialise());
-	}
-
-	private Map<String, Object> getMetadata(ResourceInterface resource) {
-		Metadata coalescedMetadata = new Metadata();
-		Collection<String> languages = resource.getLexicons().keySet();
-
-		for (String language: languages) {
-			coalescedMetadata.addToList("*", language, "languages");
-		}
-		
-		languages = new HashSet<>(languages);
-		languages.add("*");
-
-		for (Concept concept: resource.getConcepts()) {
-			for (String language: languages) {
-				Map<String,Object> conceptData = concept.metadata.getMap(language);
-				if (conceptData != null)
-					coalescedMetadata.merge("*", conceptData);
-				for (Word word: concept.words) {
-					Map<String,Object> wordData = word.metadata.getMap(language);
-					if (wordData != null)
-						coalescedMetadata.merge("*", wordData);
-				}
-			}
-		}
-		return coalescedMetadata.getMap("*");
 	}
 
 	// Hi-level interface
 
-	public SPARQLWriter(String namespace, String creator, int chunkSize) {
+	public MemoryStore(String namespace, String creator, int chunkSize) {
 		this.creator = creator;
 		this.chunkSize = chunkSize;
 		prefixes = String.format(prefixes, namespace);
@@ -134,15 +107,16 @@ public class SPARQLWriter implements TripleStoreInterface {
 	}
 
 	@Override
-	public void store(ResourceInterface resource) {
+	public void store(ResourceInterface resource) throws Exception {
+		metadata = new LinkedHashMap<>();
+		metadata.put("summary", resource.getSummary());
 		appendLexicons(resource.getLexicons());
-        appendConcepts(resource);
+		appendConcepts(resource);
 		appendWords(resource);
-		metadata = getMetadata(resource);
 	}
 	
 	@Override
-	public String getSparql() {
+	public String getSparql() throws Exception {
 		if (blockStarted) {
 			buffer.append("}\n");
 		}
@@ -150,7 +124,7 @@ public class SPARQLWriter implements TripleStoreInterface {
 	}
 
 	@Override
-	public Map<String, Object> getMetadata() {
+	public Map<String, Object> getMetadata() throws Exception {
 		return metadata;
 	}
 }

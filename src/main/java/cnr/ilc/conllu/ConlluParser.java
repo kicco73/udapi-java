@@ -53,6 +53,13 @@ public class ConlluParser implements ParserInterface, ResourceInterface {
     }
 
     @Override
+    public Map<String, Object> getSummary() {
+        Map<String, Object> summary = new LinkedHashMap<>();
+        summary.put("fileType", "conllu");
+        return summary;
+    }
+
+    @Override
     public Map<String, String> getLexicons() {
         Map<String, String> lexicons = new HashMap<>();
         lexicons.put(":connll-u", language);

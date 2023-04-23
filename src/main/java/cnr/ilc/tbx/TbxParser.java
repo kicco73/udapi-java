@@ -1,9 +1,9 @@
 package cnr.ilc.tbx;
+import org.json.simple.JSONArray;
 import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 
 import cnr.ilc.rut.CountingInputStream;
-import cnr.ilc.rut.Metadata;
 import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.ResourceInterface;
 import cnr.ilc.rut.Concept;
@@ -15,15 +15,15 @@ import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
-import java.util.Set;
 
 @SuppressWarnings("unchecked")
 public class TbxParser implements ParserInterface, ResourceInterface {
 	private Document document;
 	private ConceptEntry conceptEntryParser = new ConceptEntry();
+	private Map<String, Object> summary = new LinkedHashMap<>();
 	private Map<String, String> lexicons = new HashMap<>();
-	private Metadata metadata = new Metadata();
 	private Collection<Concept> concepts = new ArrayList<>();
 	private String creator;
 
@@ -35,9 +35,9 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 		document.getDocumentElement().normalize();
 		Element tbx = (Element) document.getElementsByTagName("tbx").item(0);
 
-		metadata.putInMap("*", countingInputStream.getCount(), "fileSize");
-		metadata.putInMap("*", "tbx", "fileType");
-		metadata.putInMap("*", tbx.getAttribute("type"), "variant");
+		summary.put("fileSize", countingInputStream.getCount());
+		summary.put("fileType", "tbx");
+		summary.put("variant", tbx.getAttribute("type"));
 	}
 	
 	static private Document parseTbx(InputStream inputStream) throws RutException {
@@ -67,9 +67,12 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 	@Override
 	public ResourceInterface parse() throws Exception {
 		parseConcepts();
-		metadata.putInMap("*", conceptEntryParser.numberOfTerms, "numberOfTerms");
-		metadata.putInMap("*", concepts.size(), "numberOfConcepts");
 		return this;
+	}
+
+	@Override
+	public Map<String, Object> getSummary() {
+		return summary;
 	}
 
 	@Override

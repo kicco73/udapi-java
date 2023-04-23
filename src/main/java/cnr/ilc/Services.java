@@ -14,12 +14,12 @@ import java.util.Map;
 import org.json.simple.JSONObject;
 
 import cnr.ilc.conllu.ConlluParser;
-import cnr.ilc.db.SqliteStore;
 import cnr.ilc.rut.GraphDBClient;
 import cnr.ilc.rut.IdGenerator;
 import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.ResourceInterface;
-import cnr.ilc.sparql.SPARQLWriter;
+import cnr.ilc.stores.MemoryStore;
+import cnr.ilc.stores.FilterStore;
 import cnr.ilc.tbx.TbxParser;
 
 public class Services {
@@ -67,13 +67,13 @@ public class Services {
 		return content;
 	}
 
-	private static SqliteStore getStore(String resourceId, String namespace, String creator, boolean isNew) throws Exception {
+	private static FilterStore getStore(String resourceId, String namespace, String creator, boolean isNew) throws Exception {
 		String dbFile = getPathToResourceProperty(resourceId, "sqlite.db");
 		
 		dbFile = "resources/"+resourceId+".db";// FIXME: HACK
 
 		if (isNew) new File(dbFile).delete();
-		return new SqliteStore(namespace, creator, chunkSize, dbFile);
+		return new FilterStore(namespace, creator, chunkSize, dbFile);
 	}
 
 
@@ -95,7 +95,7 @@ public class Services {
 			saveToResourceProperty(resourceId, "input."+fileType, input);			
 
 			ResourceInterface resource = parser.parse();
-			SqliteStore tripleStore = getStore(resourceId, namespace, creator, true);
+			FilterStore tripleStore = getStore(resourceId, namespace, creator, true);
 			tripleStore.store(resource);
 			response = tripleStore.getMetadata();
             response.put("id", resourceId);
@@ -107,7 +107,7 @@ public class Services {
 
 	static public String filterResource(String inputDir, String namespace, String creator, Collection<String> filterLanguages) throws Exception {
 		String resourceId = new File(inputDir).getName();
-		SqliteStore tripleStore = getStore(resourceId, namespace, creator, false);
+		FilterStore tripleStore = getStore(resourceId, namespace, creator, false);
 		tripleStore.setLanguages(filterLanguages);
 		String response = JSONObject.toJSONString(tripleStore.getMetadata());
 		saveToResourceProperty(resourceId, "metadata.json", response);
@@ -116,7 +116,7 @@ public class Services {
 
 	static public String assembleResource(String inputDir, String namespace, String creator, Collection<String> filterLanguages) throws Exception {
 		String resourceId = new File(inputDir).getName();
-		SqliteStore tripleStore = getStore(resourceId, namespace, creator, false);
+		FilterStore tripleStore = getStore(resourceId, namespace, creator, false);
 		tripleStore.setLanguages(filterLanguages);
 		String sparql = tripleStore.getSparql();
 		saveToResourceProperty(resourceId, "sparql", sparql);
@@ -130,7 +130,7 @@ public class Services {
 
 		client.post("CLEAR DEFAULT\n"); // FIXME: temporary hack
 
-        String[] chunks = statements.split(SPARQLWriter.separator, 0);
+        String[] chunks = statements.split(MemoryStore.separator, 0);
         int n = 0;
         for (String chunk: chunks) {
             System.err.print(String.format("\rPosting... %.0f%%", ++n * 100.0/chunks.length));

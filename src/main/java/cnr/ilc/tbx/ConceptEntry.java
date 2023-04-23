@@ -15,7 +15,6 @@ import java.util.stream.Stream;
 
 public class ConceptEntry {
 	private LangSec langSecParser;
-	protected int numberOfTerms = 0;
 
     public ConceptEntry() throws Exception {
 		langSecParser = new LangSec();
@@ -54,8 +53,7 @@ public class ConceptEntry {
 		
 		for (int j = 0; j < langSecs.getLength(); ++j)  {
 			Element langSec = (Element) langSecs.item(j);
-			Collection<Word> terms = langSecParser.parseLangSec(langSec, concept, creator);
-			numberOfTerms += terms.size();
+			langSecParser.parseLangSec(langSec, concept, creator);
 		}
 		
 		Nodes.removeNodesFromParsingTree(langSecs);

@@ -1,8 +1,6 @@
 package cnr.ilc.rut;
 
-import java.util.Arrays;
 import java.util.Collection;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 import org.json.simple.JSONArray;
@@ -29,10 +27,6 @@ public class Metadata {
     }
 
 	public Metadata() {}
-
-	public Metadata(String language, Map<String, Object> map) {
-		putInMap(language, map);
-	}
 
 	public void merge(String language, Map<String, Object> other) {
 		Map<String, Object> root = getMap(language);
@@ -101,8 +95,8 @@ public class Metadata {
 		return (Collection<Object>) getObject(language, path);
 	}
 
-	public String toJson(String language) {
-		JSONObject data = (JSONObject) metadata.get(language);
+	public String toJson(String language, String...path) {
+		JSONObject data = (JSONObject) getMap(language, path);
 		return JSONObject.toJSONString(data);
 	}
 	

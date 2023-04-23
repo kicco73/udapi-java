@@ -23,13 +23,13 @@ import org.json.simple.JSONValue;
 import cnr.ilc.conllu.ConlluParser;
 import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.ResourceInterface;
+import cnr.ilc.stores.MemoryStore;
+import cnr.ilc.stores.FilterStore;
+import cnr.ilc.stores.TripleStoreInterface;
 import cnr.ilc.rut.DateProvider;
 import cnr.ilc.rut.GraphDBClient;
 import cnr.ilc.rut.IdGenerator;
-import cnr.ilc.sparql.SPARQLWriter;
-import cnr.ilc.sparql.TripleStoreInterface;
 import cnr.ilc.tbx.TbxParser;
-import cnr.ilc.db.SqliteStore;
 
 public class Main {
     boolean isConnlu = false;
@@ -191,9 +191,9 @@ public class Main {
             TripleStoreInterface tripleStore;
 
             if (isDb) {
-                tripleStore = new SqliteStore(namespace, creator, chunkSize, fileName);
+                tripleStore = new FilterStore(namespace, creator, chunkSize, fileName);
             } else {
-                tripleStore = new SPARQLWriter(namespace, creator, chunkSize);
+                tripleStore = new MemoryStore(namespace, creator, chunkSize);
                 ParserInterface parser = makeParser(inputStream);
                 ResourceInterface resource = parser.parse();
                 tripleStore.store(resource);
@@ -245,7 +245,7 @@ public class Main {
 
     private static void uploadStatements(String graphURL, String repository, String statements) throws Exception {
         GraphDBClient client = new GraphDBClient(graphURL, repository);
-        String[] chunks = statements.split(SPARQLWriter.separator, 0);
+        String[] chunks = statements.split(MemoryStore.separator, 0);
         int n = 0;
         for (String chunk: chunks) {
             System.err.print(String.format("\rPosting... %.0f%%", ++n * 100.0/chunks.length));
