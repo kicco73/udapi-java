@@ -4,7 +4,6 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
-import java.util.LinkedHashMap;
 import java.util.Map;
 
 import cnr.ilc.sparql.TripleSerialiser;
@@ -21,7 +20,7 @@ public class Concept {
 
 	public Concept(String conceptId) {
 		id = conceptId;
-		FQName = String.format(":concept_%s", conceptId);
+		FQName = String.format("conc:concept_%s", conceptId);
 		triples.add(FQName, "rdf:type", "skos:Concept");
 		triples.addString(FQName, "skos:prefLabel", id);
 		metadata.putInMap("*", id, "concepts", id, "id");

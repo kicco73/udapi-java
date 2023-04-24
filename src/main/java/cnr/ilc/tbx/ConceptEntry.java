@@ -2,9 +2,8 @@ package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
 import cnr.ilc.rut.Concept;
-import cnr.ilc.rut.Word;
+import cnr.ilc.rut.Logger;
 
-import java.util.Collection;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
@@ -59,6 +58,18 @@ public class ConceptEntry {
 		Nodes.removeNodesFromParsingTree(langSecs);
 	}
 
+	private void parseDate(Element conceptEntry, Concept concept) {
+
+		NodeList dates = conceptEntry.getElementsByTagNameNS("*", "date");
+		if (dates.getLength() == 0) return;
+		if (dates.getLength() > 1) 
+			Logger.warn("Concept %s has more than one date, picking the first one", concept.id); 
+		
+		Element dateElement = (Element)dates.item(0);
+		String date = dateElement.getTextContent();
+		concept.metadata.putInMap("*", date, "concepts", concept.id, "date");
+	}
+
 	public Concept parseConceptEntry(Element conceptEntry, String creator) {
 		String id = conceptEntry.getAttribute("id");
 
@@ -72,6 +83,7 @@ public class ConceptEntry {
 		parseLangSecs(conceptEntry, concept, creator);
 		parseConceptEntryChildren(conceptEntry, concept);	
 		parseSubjectField(conceptEntry, concept, id);
+		parseDate(conceptEntry, concept);
 
 		return concept;
 	}

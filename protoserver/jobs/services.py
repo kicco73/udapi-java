@@ -11,18 +11,20 @@ class Analyse(BaseOperation):
 		)
 
 class Filter(BaseOperation):
-	def __init__(self, resource_dir: str, languages: list):
+	def __init__(self, resource_dir: str, languages: list, dates: list):
 		super().__init__(resource_dir=resource_dir)
 		self.languages = languages
+		self.dates = dates
 
 	def execute(self) -> str:
 		return self.run_java(
 			'--service', 'filter', 
 			'--filter-languages', ','.join(self.languages), 
+			'--filter-dates', ','.join(self.dates), 
 			'--', self.resource_dir,
 		) 
 
-class Assembly(BaseOperation):
+class Assemble(BaseOperation):
 	def __init__(self, resource_dir: str, languages: list):
 		super().__init__(resource_dir=resource_dir)
 		self.languages = languages
@@ -30,7 +32,7 @@ class Assembly(BaseOperation):
 	def execute(self) -> str:
 		return self.run_java(
 			'--service', 'assemble', 
-			'--filter-languages', ','.join(self.languages), 		       
+			'--filter-languages', ','.join(self.languages),
 			'--', self.resource_dir,
 		)
 

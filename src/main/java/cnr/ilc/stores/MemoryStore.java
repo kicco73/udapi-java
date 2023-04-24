@@ -25,6 +25,8 @@ public class MemoryStore implements TripleStoreInterface {
 	private String prefixes =
 		"""		
 		PREFIX : <%s>
+		PREFIX conc: <%s>
+		PREFIX term: <%s>
 		PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
 		PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 		PREFIX dct: <http://purl.org/dc/terms/>
@@ -102,7 +104,7 @@ public class MemoryStore implements TripleStoreInterface {
 	public MemoryStore(String namespace, String creator, int chunkSize) {
 		this.creator = creator;
 		this.chunkSize = chunkSize;
-		prefixes = String.format(prefixes, namespace);
+		prefixes = String.format(prefixes, namespace, namespace, namespace);
 		buffer.append(prefixes);
 	}
 

@@ -38,9 +38,9 @@ public class Word {
 		String FQName = idGenerator.getId(String.format("%s+%s+%s", lemma, partOfSpeech, language));
 
 		if (partOfSpeech != null) {
-			this.FQName = String.format(":le_%s_%s", FQName, partOfSpeech.split(":")[1]);
+			this.FQName = String.format("term:le_%s_%s", FQName, partOfSpeech.split(":")[1]);
 		} else {
-			this.FQName = String.format(":le_%s", FQName);
+			this.FQName = String.format("term:le_%s", FQName);
 		}
 
 		String canonicalFormFQN = String.format("%s_lemma", this.FQName);
@@ -50,7 +50,7 @@ public class Word {
 
 		Map<String, String> term = new LinkedHashMap<>();
 		term.put("t", lemma);
-		term.put("p", partOfSpeech);
+		if (partOfSpeech != null) term.put("p", partOfSpeech);
 		if (concept == null)
 			metadata.addToList(language, term, "words", "languages", language, "terms");
 		else

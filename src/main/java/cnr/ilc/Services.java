@@ -7,10 +7,12 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import cnr.ilc.conllu.ConlluParser;
@@ -100,18 +102,16 @@ public class Services {
 			tripleStore.store(resource);
 			response = tripleStore.getMetadata();
             response.put("id", resourceId);
-			//saveToResourceProperty(resourceId, "metadata.json", JSONObject.toJSONString(response));
 		}
-
 		return JSONObject.toJSONString(response);
 	}
 
-	static public String filterResource(String inputDir, String namespace, String creator, Collection<String> filterLanguages) throws Exception {
+	static public String filterResource(String inputDir, String namespace, String creator, Collection<String> filterLanguages, Collection<String> filterDates) throws Exception {
 		String resourceId = new File(inputDir).getName();
 		FilterStore tripleStore = getStore(resourceId, namespace, creator, false);
 		tripleStore.setLanguages(filterLanguages);
+		tripleStore.setDates(filterDates);
 		String response = JSONObject.toJSONString(tripleStore.getMetadata());
-		saveToResourceProperty(resourceId, "metadata.json", response);
 		return response;
 	}
 
@@ -129,14 +129,18 @@ public class Services {
 		String statements = loadFromResourceProperty(resourceId, "sparql");
 		GraphDBClient client = new GraphDBClient(graphURL, repository);
 
+		Logger.warn("Cleaning GraphDB");
 		client.post("CLEAR DEFAULT\n"); // FIXME: temporary hack
 
         String[] chunks = statements.split(MemoryStore.separator, 0);
         int n = 0;
         for (String chunk: chunks) {
-            //Logger.progress(++n * 100/chunks.length, "Submitting");
+            Logger.progress(++n * 100/chunks.length, "Submitting to GraphDB");
             client.post(chunk);
         }
+		Logger.progress(100, "Done");
+		Logger.warn("Successfully submitted");
+
 		return "";
 	}
 }

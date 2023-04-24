@@ -7,6 +7,7 @@ import java.util.HashSet;
 import java.util.Map;
 
 import cnr.ilc.rut.Concept;
+import cnr.ilc.rut.Logger;
 import cnr.ilc.rut.Metadata;
 import cnr.ilc.rut.ResourceInterface;
 import cnr.ilc.rut.Word;
@@ -15,22 +16,28 @@ import cnr.ilc.sparql.TripleSerialiser;
 public class FilterStore extends MemoryStore {
 	private SqliteConnector db = new SqliteConnector();
 	private MetadataManager metadataManager = new MetadataManager(db);
-	private Collection<String> languages = new HashSet<>();
+	private Filter filter = new Filter();
 
 	private void assembleConcept(String columnName) throws SQLException {
-		for (String serialised: db.selectConcept(columnName, this.languages))
+		for (String serialised: db.selectConcept(columnName, filter))
 			append(serialised);
 	}
 
 	private void assembleEntity(String columnName, String entityName) throws SQLException {
-		Collection<String> languages = new HashSet<String>(this.languages);
+		Filter filter = new Filter(this.filter);
+		Collection<String> languages = filter.getLanguages();
 		if (languages.size() > 0) languages.add("*");
-		String where = db.buildWhere(entityName, languages);
-		ResultSet rs = db.executeQuery("select %s from %s where %s order by language", columnName, entityName, where);
+		String where = db.buildWhere(entityName, filter);
+		ResultSet rs = db.executeQuery("select count(*) as n from %s where %s", entityName, where);
+		int total = rs.getInt("n");
+		rs = db.executeQuery("select %s from %s where %s order by language", columnName, entityName, where);
+		int current = 0;
 		while (rs.next()) {
+			Logger.progress(++current * 100 / total, "Assembling %s entity", entityName);
 			String serialised = rs.getString(columnName);
 			append(serialised);
 		}
+		Logger.progress(100,  "Done");
 	}
 
 	@Override 
@@ -61,23 +68,33 @@ public class FilterStore extends MemoryStore {
 			String serialised = concept.triples.serialise(language);
 			serialised = serialised.replaceAll("'", "''");
 			String metadata = concept.metadata.toJson(language);
+			String date = (String) concept.metadata.getObject("*", "concepts", concept.id, "date");
+			if (date != null) date = "'"+date+"'";
 			metadata = metadata.replaceAll("'", "''");
 			if (serialised.length() > 0 || !metadata.equals("null"))
-				db.executeUpdate("insert into concept (conceptId, language, metadata, serialised) values ('%s', '%s', '%s', '%s')", 
-					concept.id, language, metadata, serialised);	
+				db.executeUpdate("insert into concept (conceptId, language, date, metadata, serialised) values ('%s', '%s', %s, '%s', '%s')", 
+					concept.id, language, date, metadata, serialised);	
 		}
 	}
 
 	@Override
 	protected void appendWord(Word word) throws SQLException {
-		String conceptId = word.concept == null? "null" : "'" + word.concept.get().id + "'";
+		String conceptId = null;
+		String date = null;
+		if (word.concept != null) {
+			Concept concept = word.concept.get();
+			conceptId = String.format("'%s'", concept.id);
+			date = (String) concept.metadata.getObject("*", "concepts", concept.id, "date");
+			date = date == null? null : String.format("'%s'", date);
+		}
+
 		String serialised = word.triples.serialise();
 		serialised = serialised.replaceAll("'", "''");
 		String lemma = word.canonicalForm.text.replaceAll("'", "''");
 		String metadata = word.metadata.toJson(word.language);
 		metadata = metadata.replaceAll("'", "''");
-		db.executeUpdate("insert into word (lemma, language, conceptId, metadata, serialised) values ('%s', '%s', %s, '%s', '%s')", 
-			lemma, word.language, conceptId,  metadata, serialised);
+		db.executeUpdate("insert into word (lemma, language, date, conceptId, metadata, serialised) values ('%s', '%s', %s, %s, '%s', '%s')", 
+			lemma, word.language, date, conceptId,  metadata, serialised);
 	}
 
 	public FilterStore(String namespace, String creator, int chunkSize, String fileName) throws Exception {
@@ -95,11 +112,15 @@ public class FilterStore extends MemoryStore {
 
 	@Override
 	public Map<String,Object> getMetadata() throws Exception {
-		return metadataManager.getMetadata(this.languages);
+		return metadataManager.getMetadata(filter);
 	}
 
 	public void setLanguages(Collection<String> languages) {
-		this.languages = languages;
+		filter.setLanguages(languages);
+	}
+
+	public void setDates(Collection<String> dates) {
+		filter.setDates(dates);
 	}
 
 }	

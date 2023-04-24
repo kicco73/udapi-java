@@ -48,6 +48,7 @@ public class Main {
     String[] fileNames = new String[0];
     String format = null;
     Collection<String> filterLanguages = new ArrayList<>();
+    Collection<String> filterDates = new ArrayList<>();
 
     public static void main(String[] args) throws Exception {
         new Main()
@@ -90,6 +91,10 @@ public class Main {
                 case "--filter-languages":
                     if (args[startIndex++].length() > 0)
                         filterLanguages = Arrays.asList(args[startIndex-1].split(","));
+                    break;
+                case "--filter-dates":
+                    if (args[startIndex++].length() > 0)
+                        filterDates = Arrays.asList(args[startIndex-1].split(","));
                     break;
                 case "-j":
                 case "--json":
@@ -166,7 +171,7 @@ public class Main {
                 response = Services.createResource(input, fileName == null? "stdin" : fileName, format, creator, language, namespace);
                 break;
             case "filter":
-                response = Services.filterResource(fileName, namespace, creator, filterLanguages);
+                response = Services.filterResource(fileName, namespace, creator, filterLanguages, filterDates);
                 break;
             case "assemble":
                 response = Services.assembleResource(fileName, namespace, creator, filterLanguages);
