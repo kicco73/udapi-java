@@ -22,13 +22,15 @@ class WebServer(object):
 		app = self.app = Flask('GoFunQ Web Server')
 		CORS(app)
 
+		template_folder = os.path.abspath(os.path.join(os.path.dirname(__file__), 'views'))
+		app.template_folder = template_folder
 		app.secret_key = 'super secret key'
 		app.config['SESSION_TYPE'] = 'filesystem'
 		app.config['RESOURCES_FOLDER'] = 'resources'
 
 		os.makedirs(app.config['RESOURCES_FOLDER'], exist_ok=True)
 
-		self.socketio = SocketIO(app)
+		self.socketio = SocketIO(app, cors_allowed_origins='*')
 		
 		self.load_controllers(app, self.socketio, controllers)
 		self.load_services(app, self.socketio)

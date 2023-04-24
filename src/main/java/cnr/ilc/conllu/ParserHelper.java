@@ -13,6 +13,7 @@ import java.util.stream.Stream;
 
 import cnr.ilc.conllu.core.*;
 import cnr.ilc.rut.Form;
+import cnr.ilc.rut.Logger;
 import cnr.ilc.rut.Word;
 
 public class ParserHelper {
@@ -44,14 +45,14 @@ public class ParserHelper {
         for(Entry<String,String> entry: input.entrySet()) {
             String mappedKey = keyMap.get(entry.getKey());
             if (mappedKey == null) {
-                System.err.println(String.format("Key %s not defined, skipping", entry.getKey()));
+                Logger.warn(String.format("Key %s not defined, skipping", entry.getKey()));
                 continue;
             }
 
             String value = entry.getValue();
             String mappedValue = valueMap.getOrDefault(value, "<http://nomapping>");
             if (!valueMap.containsKey(value)) {
-                System.err.println(String.format("Value %s not defined, using %s", value, mappedValue));
+                Logger.warn(String.format("Value %s not defined, using %s", value, mappedValue));
             }
             output.put(mappedKey, mappedValue);
         }    

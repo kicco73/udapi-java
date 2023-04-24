@@ -1,0 +1,16 @@
+{% from "table.jinja" import table with context %}
+<!doctype html>
+<html>
+	<head>
+		<title>{{ title }} | BEE</title>
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+		<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+	</head>
+	<body>
+
+	{{ table(*prediction_changes_table) }}
+	{{ table(*monitored_changes_table) }}
+
+	</body>
+</html>

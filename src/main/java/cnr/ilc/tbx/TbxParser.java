@@ -1,9 +1,9 @@
 package cnr.ilc.tbx;
-import org.json.simple.JSONArray;
 import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 
 import cnr.ilc.rut.CountingInputStream;
+import cnr.ilc.rut.Logger;
 import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.ResourceInterface;
 import cnr.ilc.rut.Concept;
@@ -18,7 +18,6 @@ import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
-@SuppressWarnings("unchecked")
 public class TbxParser implements ParserInterface, ResourceInterface {
 	private Document document;
 	private ConceptEntry conceptEntryParser = new ConceptEntry();
@@ -54,19 +53,24 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 		}
 	}
 
-	private void parseConcepts() {
+	@Override
+	public ResourceInterface parse() throws Exception {
 		NodeList conceptEntries = document.getElementsByTagName("conceptEntry");
+
+		int prevPercentage = 0;
 		for (int i = 0; i < conceptEntries.getLength(); ++i)  {
+			int newPrecentage = 100 * (i+1) / conceptEntries.getLength();
+			if (newPrecentage > prevPercentage) {
+				Logger.progress(newPrecentage, "Progress");
+				prevPercentage = newPrecentage;
+			}
+
 			Element conceptEntry = (Element) conceptEntries.item(i);
 			Concept concept = conceptEntryParser.parseConceptEntry(conceptEntry, creator);
 			concepts.add(concept);
 			lexicons.putAll(conceptEntryParser.getLexicons());
 		}		
-	}
-
-	@Override
-	public ResourceInterface parse() throws Exception {
-		parseConcepts();
+		Logger.progress(100, "Done");
 		return this;
 	}
 

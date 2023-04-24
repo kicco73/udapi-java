@@ -1,0 +1,8 @@
+{% extends "base.jinja" %}
+{% from "menu_with_images.jinja" import menu_with_images with context %}
+
+{% block content %}
+
+{{ menu_with_images(charts, image_class="previewImage") }}
+
+{% endblock %}

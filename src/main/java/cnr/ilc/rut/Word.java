@@ -50,6 +50,7 @@ public class Word {
 
 		Map<String, String> term = new LinkedHashMap<>();
 		term.put("t", lemma);
+		term.put("p", partOfSpeech);
 		if (concept == null)
 			metadata.addToList(language, term, "words", "languages", language, "terms");
 		else

@@ -1,0 +1,37 @@
+{% macro table(head, rows) %}
+
+<table>
+	<tr>
+
+	{% for th in head %}
+		<th>{{ th }}</th>
+	{% endfor %}
+
+	</tr>
+
+	{% for row in rows %}
+		{% set tr = row[:head|length] %}
+		{% set klass = row[head|length] if row|length > head|length else '' %}
+		{% set onclick ="location.href='{}'".format(row[head|length + 1]) if row|length > head|length + 1 else '' %}
+		{% set clickable_class = 'clickable' if row|length > head|length + 1 else '' %}
+
+		<tr class="{{ klass }} {{ clickable_class }}" onclick="{{ onclick }}">
+
+		{% for td in tr %}
+			<td>{{ td }}</td> 
+		{% endfor %}
+
+		{% if clickable_class %} 
+			<td style="width: 24px">
+				<span style="color: gray; width:24px" class="material-icons md-24">arrow_forward_ios_new</span>
+			</td>
+		{% endif %}
+		</tr>
+
+	{% endfor %}
+
+	</table>
+
+{% endmacro %}
+
+

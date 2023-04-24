@@ -1,0 +1,9 @@
+{% extends "base.jinja" %}
+{% from "menu_with_images.jinja" import menu_with_images with context %}
+
+{% block content %}
+<h3>DataSource allowances</h3>
+<ul>
+	<li><strong>Cryptowatch:</strong> {{ cryptowatch_allowance }}</li>
+</ul>
+{% endblock %}

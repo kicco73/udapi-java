@@ -2,6 +2,7 @@ package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
 import cnr.ilc.rut.Concept;
+import cnr.ilc.rut.Logger;
 import cnr.ilc.rut.RutException;
 import cnr.ilc.rut.Word;
 import cnr.ilc.sparql.SPARQLFormatter;
@@ -27,10 +28,7 @@ public class TermSec {
 		if (status != null) {
 			String translatedStatus = statuses.get(status);
 			if (translatedStatus == null) {
-				final String ANSI_YELLOW = "\u001B[33m";
-				final String ANSI_RESET = "\u001B[0m";
-
-				System.err.println(ANSI_YELLOW+"Warning: unknown administrative status "+ status + ANSI_RESET);
+				Logger.warn("Unknown administrative status %s", status);
 				//throw new RutException(String.format("Unknown administrative status: %s", status));
 				return;
 			}

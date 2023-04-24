@@ -1,0 +1,1 @@
+from webserver.views import component_renderer

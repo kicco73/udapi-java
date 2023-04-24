@@ -1,0 +1,16 @@
+{% from "macros.jinja" import header, footer with context %}
+
+{{ header(title) }}
+
+<div id="body">
+	<ol class="menu">{% for title, url in menu %}<li><a href="{{ url }}">► {{title}}</a></li>{% endfor %}</ol>
+	<ol class="menu">{% for title, url in async_menu %}<li><a onclick="fetch('{{ url }}')">► {{title}}</a></li>{% endfor %}</ol>
+	<div id="filter">{% block filter %}{% endblock %}</div>
+	<div id="content">
+		{% block content %}
+		{% endblock %}
+	</div>
+</div>
+
+
+{{ footer() }}

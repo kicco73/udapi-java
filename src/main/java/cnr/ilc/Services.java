@@ -16,6 +16,7 @@ import org.json.simple.JSONObject;
 import cnr.ilc.conllu.ConlluParser;
 import cnr.ilc.rut.GraphDBClient;
 import cnr.ilc.rut.IdGenerator;
+import cnr.ilc.rut.Logger;
 import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.ResourceInterface;
 import cnr.ilc.stores.MemoryStore;
@@ -133,10 +134,9 @@ public class Services {
         String[] chunks = statements.split(MemoryStore.separator, 0);
         int n = 0;
         for (String chunk: chunks) {
-            System.err.print(String.format("\rPosting... %.0f%%", ++n * 100.0/chunks.length));
+            //Logger.progress(++n * 100/chunks.length, "Submitting");
             client.post(chunk);
         }
-        System.err.println();
 		return "";
 	}
 }

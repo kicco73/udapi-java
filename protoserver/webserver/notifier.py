@@ -27,7 +27,7 @@ class Notifier(threading.Thread, metaclass=Singleton):
 
 		@EmitLogger.notification.on('event')
 		def send_log(extra: dict, message: str, level: str):
-			self.logger.info(f'Broadcasting message: {message}')
+			#self.logger.info(f'Broadcasting message: {message}')
 			self.send_notification(level=level.lower(), color='orange', title=extra.get('title', level), message=message)
 
 		@OperationResult.notification.on('aborted')
@@ -52,8 +52,11 @@ class Notifier(threading.Thread, metaclass=Singleton):
 
 	def send_notification(self, title, message, level, color):
 		with self.app.app_context():
-			html = render_template('jobs/notification.jinja', title=title, message=message, icon=level, color=color)
-			self.socketio.emit('notification', dict(html=html, level=level))
+			if isinstance(message, int):
+				self.socketio.emit('job update', dict(progress=message, job=title))
+			else:
+				level = dict(warning='info', info='info', error='error')[level]
+				self.socketio.emit('notification', dict(severity=level, summary=title, detail=message))
 
 	def job_table_data(self):
 		queues = Engine().queues()

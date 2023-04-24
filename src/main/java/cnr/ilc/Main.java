@@ -29,6 +29,7 @@ import cnr.ilc.stores.TripleStoreInterface;
 import cnr.ilc.rut.DateProvider;
 import cnr.ilc.rut.GraphDBClient;
 import cnr.ilc.rut.IdGenerator;
+import cnr.ilc.rut.Logger;
 import cnr.ilc.tbx.TbxParser;
 
 public class Main {
@@ -139,7 +140,7 @@ public class Main {
     private void run() throws Exception {
         if (fileNames.length > 0)
             for(String fileName: fileNames) {
-                System.err.println(String.format("\nProcessing: %s", fileName));
+                Logger.log(String.format("\nProcessing: %s", fileName));
                 if (service != null) runService(fileName);
                 else processFile(fileName);
             }
