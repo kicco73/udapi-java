@@ -9,11 +9,14 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
+
+import cnr.ilc.rut.Metadata;
 
 
 public class SqliteConnector {
@@ -118,6 +121,27 @@ public class SqliteConnector {
 			result.add(rs.getString(columnName));
 		}
 		return result;
+	}
+
+	public Object selectPolysemicEntries(Filter filter) throws SQLException {
+		Metadata result = new Metadata();
+
+		String query = """
+			select lemma, conceptId, language from word where lemma || ":" || language in (
+				select lemma || ":" || language from word where %s 
+				group by lemma, language having count(*) > 1
+			) order by lemma, language
+		""";
+		String where = buildWhere("word", filter);
+		ResultSet rs = executeQuery(query, where);
+		while (rs.next()) {
+			Map<String,String> term = new HashMap<>();
+			term.put("t", rs.getString("lemma"));
+			term.put("c", rs.getString("conceptId"));
+			term.put("l", rs.getString("language"));
+			result.addToList("*", term);
+		}
+		return result.getObject("*");
 	}
 
 	public Map<String, Long> selectTermStats(Filter filter) throws SQLException {

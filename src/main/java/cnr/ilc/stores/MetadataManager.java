@@ -61,6 +61,8 @@ public class MetadataManager {
 		metadata.putInMap("*", numberOfTerms, "summary", "numberOfTerms");
 		metadata.putInMap("*", db.selectTermStats(filter), "summary", "languages");
 		metadata.putInMap("*", db.selectConceptDates(filter), "summary", "dates");
+		metadata.putInMap("*", db.selectPolysemicEntries(filter), "summary", "polysemic");
+
 
 		return metadata.getMap("*");
 	}
