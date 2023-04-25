@@ -99,6 +99,7 @@ public class FilterStore extends MemoryStore {
 
 		if (globalFilter.isNoConcepts()) {
 			filterSubjectFields.clear();
+			filterSubjectFields.add(null);
 		} else {
 			if (filterSubjectFields.size() > 0)
 				filterSubjectFields.add(null);
@@ -106,10 +107,10 @@ public class FilterStore extends MemoryStore {
 			Collection<String> usedSubjectFields = db.selectConcept("subjectField", globalFilter);
 			filterSubjectFields.clear();
 			filterSubjectFields.addAll(usedSubjectFields);		
+			if (filterSubjectFields.size() > 0)
+				filterSubjectFields.add(null);
 		}
 
-		if (filterSubjectFields.size() > 0)
-			filterSubjectFields.add(null);
 		assembleEntity("global", globalFilter);
 	}
 
