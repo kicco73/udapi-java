@@ -9,6 +9,14 @@ public class Filter {
 	private Map<String, Collection<String>> map = new HashMap<>();
 	private boolean noConcepts = false;
 
+	private Collection<String> cloneCollection(Collection<String> original) {
+		Collection<String> clone = new HashSet<>();
+		for (String item: original) {
+			clone.add(item);
+		}
+		return clone;
+	}
+
 	public Filter() {
 		setLanguages(null);
 		setDates(null);
@@ -16,13 +24,15 @@ public class Filter {
 	}
 	
 	public Filter(Filter other) {
-		map = new HashMap<>(other.map);
 		noConcepts = other.noConcepts;
+		setLanguages(other.getLanguages());
+		setDates(other.getDates());
+		setSubjectFields(other.getSubjectFields());
 	}
 
 	public void setLanguages(Collection<String> languages) {
 		if (languages == null) map.put("language", new HashSet<>());
-		else map.put("language", new HashSet<>(languages));
+		else map.put("language", cloneCollection(languages));
 	}
 
 	public Collection<String> getLanguages() {
@@ -31,7 +41,7 @@ public class Filter {
 
 	public void setDates(Collection<String> dates) {
 		if (dates == null) map.put("date", new HashSet<>());
-		else map.put("date", new HashSet<>(dates));
+		else map.put("date", cloneCollection(dates));
 	}
 
 
@@ -41,7 +51,7 @@ public class Filter {
 
 	public void setSubjectFields(Collection<String> subjectFields) {
 		if (subjectFields == null) map.put("subjectField", new HashSet<>());
-		else map.put("subjectField", new HashSet<>(subjectFields));
+		else map.put("subjectField", cloneCollection(subjectFields));
 	}
 
 	public Collection<String> getSubjectFields() {
@@ -58,9 +68,5 @@ public class Filter {
 
 	public Map<String, Collection<String>> getMap() {
 		return map;
-	}
-
-	public void setMap(Map<String, Collection<String>> map) {
-		this.map = map;
 	}
 }

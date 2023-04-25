@@ -111,7 +111,7 @@ public class SqliteConnector {
 		if (langs.size() > 0) langs.add("*");
 
 		String query = """
-			select %s from concept 
+			select distinct %s from concept 
 			where %s and conceptId in (
 				select distinct concept.conceptId as conceptId
 				from concept

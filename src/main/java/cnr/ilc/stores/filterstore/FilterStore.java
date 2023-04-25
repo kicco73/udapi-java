@@ -18,7 +18,12 @@ public class FilterStore extends MemoryStore {
 	private Filter filter = new Filter();
 
 	private void assembleConcept() throws SQLException {
-		for (String serialised: db.selectConcept("serialised", filter))
+		Filter includeNullSubjectField = new Filter(filter);
+		Collection<String> subjectFields = includeNullSubjectField.getSubjectFields();
+		if (subjectFields.size() > 0)
+			subjectFields.add(null);
+
+		for (String serialised: db.selectConcept("serialised", includeNullSubjectField))
 			output.append(serialised);
 	}
 
@@ -88,17 +93,33 @@ public class FilterStore extends MemoryStore {
 		db.connect(fileName);
 	}
 
+	private void assembleGlobal() throws Exception {
+		Filter globalFilter = new Filter(filter);
+		Collection<String> filterSubjectFields = globalFilter.getSubjectFields();
+
+		if (globalFilter.isNoConcepts()) {
+			filterSubjectFields.clear();
+		} else {
+			if (filterSubjectFields.size() > 0)
+				filterSubjectFields.add(null);
+
+			Collection<String> usedSubjectFields = db.selectConcept("subjectField", globalFilter);
+			filterSubjectFields.clear();
+			filterSubjectFields.addAll(usedSubjectFields);		
+		}
+
+		if (filterSubjectFields.size() > 0)
+			filterSubjectFields.add(null);
+		assembleEntity("global", globalFilter);
+	}
+
 	@Override
 	public String getSparql() throws Exception {
-		Filter includeNullSubjectField = new Filter(filter);
-		Collection<String> subjectFields = includeNullSubjectField.getSubjectFields();
-		if (subjectFields.size() > 0)
-			subjectFields.add(null);
 
-		assembleEntity("global", includeNullSubjectField);
+		assembleGlobal();
 
 		if (!filter.isNoConcepts())
-			assembleConcept();
+			assembleConcept();		
 
 		assembleEntity("word", filter);
 		return super.getSparql();
