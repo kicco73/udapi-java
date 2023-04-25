@@ -2,7 +2,7 @@
  * @author Enrico Carniani
  */
 
-package cnr.ilc.rut;
+package cnr.ilc.rut.resource;
 
 import java.util.HashMap;
 import java.util.Map;

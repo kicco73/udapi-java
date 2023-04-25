@@ -9,9 +9,9 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import cnr.ilc.rut.Concept;
-import cnr.ilc.rut.ResourceInterface;
-import cnr.ilc.rut.Word;
+import cnr.ilc.rut.resource.Concept;
+import cnr.ilc.rut.resource.ResourceInterface;
+import cnr.ilc.rut.resource.Word;
 import cnr.ilc.sparql.TripleSerialiser;
 
 public class MemoryStore implements TripleStoreInterface {

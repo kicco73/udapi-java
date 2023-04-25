@@ -1,4 +1,4 @@
-package cnr.ilc.stores;
+package cnr.ilc.stores.filterstore;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -6,12 +6,13 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Map;
 
-import cnr.ilc.rut.Concept;
-import cnr.ilc.rut.Logger;
-import cnr.ilc.rut.Metadata;
-import cnr.ilc.rut.ResourceInterface;
-import cnr.ilc.rut.Word;
+import cnr.ilc.rut.utils.Metadata;
+import cnr.ilc.rut.resource.Concept;
+import cnr.ilc.rut.resource.ResourceInterface;
+import cnr.ilc.rut.resource.Word;
+import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.sparql.TripleSerialiser;
+import cnr.ilc.stores.MemoryStore;
 
 public class FilterStore extends MemoryStore {
 	private SqliteConnector db = new SqliteConnector();
@@ -118,7 +119,10 @@ public class FilterStore extends MemoryStore {
 			subjectFields.add(null);
 
 		assembleEntity("global", includeNullSubjectField);
-		assembleConcept();
+
+		if (!filter.isNoConcepts())
+			assembleConcept();
+
 		assembleEntity("word", filter);
 		return super.getSparql();
 	}
@@ -128,16 +132,8 @@ public class FilterStore extends MemoryStore {
 		return metadataManager.getMetadata(filter);
 	}
 
-	public void setLanguages(Collection<String> languages) {
-		filter.setLanguages(languages);
-	}
-
-	public void setDates(Collection<String> dates) {
-		filter.setDates(dates);
-	}
-
-	public void setSubjectFields(Collection<String> subjectFields) {
-		filter.setSubjectFields(subjectFields);
+	public void setFilter(Filter filter) {
+		this.filter = filter;
 	}
 
 }	

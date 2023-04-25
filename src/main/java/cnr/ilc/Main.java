@@ -11,9 +11,7 @@ import java.io.PrintWriter;
 import java.nio.charset.StandardCharsets;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -22,14 +20,16 @@ import org.json.simple.JSONValue;
 
 import cnr.ilc.conllu.ConlluParser;
 import cnr.ilc.rut.ParserInterface;
-import cnr.ilc.rut.ResourceInterface;
+import cnr.ilc.rut.Services;
+import cnr.ilc.rut.resource.ResourceInterface;
+import cnr.ilc.rut.utils.DateProvider;
+import cnr.ilc.rut.utils.IdGenerator;
+import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.stores.MemoryStore;
-import cnr.ilc.stores.FilterStore;
 import cnr.ilc.stores.TripleStoreInterface;
-import cnr.ilc.rut.DateProvider;
+import cnr.ilc.stores.filterstore.Filter;
+import cnr.ilc.stores.filterstore.FilterStore;
 import cnr.ilc.rut.GraphDBClient;
-import cnr.ilc.rut.IdGenerator;
-import cnr.ilc.rut.Logger;
 import cnr.ilc.tbx.TbxParser;
 
 public class Main {
@@ -47,9 +47,7 @@ public class Main {
     String outSparql = null;
     String[] fileNames = new String[0];
     String format = null;
-    Collection<String> filterLanguages = new ArrayList<>();
-    Collection<String> filterDates = new ArrayList<>();
-    Collection<String> filterSubjectFields = new ArrayList<>();
+    Filter filter = new Filter();
 
     public static void main(String[] args) throws Exception {
         new Main()
@@ -91,15 +89,18 @@ public class Main {
                     break;
                 case "--filter-languages":
                     if (args[startIndex++].length() > 0)
-                        filterLanguages = Arrays.asList(args[startIndex-1].split(","));
+                        filter.setLanguages(Arrays.asList(args[startIndex-1].split(",")));
                     break;
                 case "--filter-dates":
                     if (args[startIndex++].length() > 0)
-                        filterDates = Arrays.asList(args[startIndex-1].split(","));
+                        filter.setDates(Arrays.asList(args[startIndex-1].split(",")));
                     break;
                 case "--filter-subjectfields":
                     if (args[startIndex++].length() > 0)
-                        filterSubjectFields = Arrays.asList(args[startIndex-1].split(","));
+                        filter.setSubjectFields(Arrays.asList(args[startIndex-1].split(",")));
+                    break;
+                case "--filter-no-concepts":
+                    filter.setNoConcepts(true); 
                     break;
                 case "-j":
                 case "--json":
@@ -176,10 +177,10 @@ public class Main {
                 response = Services.createResource(input, fileName == null? "stdin" : fileName, format, creator, language, namespace);
                 break;
             case "filter":
-                response = Services.filterResource(fileName, namespace, creator, filterLanguages, filterDates, filterSubjectFields);
+                response = Services.filterResource(fileName, namespace, creator, filter);
                 break;
             case "assemble":
-                response = Services.assembleResource(fileName, namespace, creator, filterLanguages, filterSubjectFields);
+                response = Services.assembleResource(fileName, namespace, creator, filter);
                 break;
             case "submit":
                 response = Services.submitResource(fileName);

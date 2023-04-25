@@ -1,4 +1,4 @@
-package cnr.ilc.rut;
+package cnr.ilc.rut.utils;
 
 import java.util.Date;
 

@@ -7,7 +7,7 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Map;
 
-import cnr.ilc.rut.DateProvider;
+import cnr.ilc.rut.utils.DateProvider;
 
 public class TripleSerialiser {
 	private Map<String, String> features = new LinkedHashMap<>();

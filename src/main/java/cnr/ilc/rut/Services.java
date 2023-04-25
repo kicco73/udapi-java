@@ -1,4 +1,4 @@
-package cnr.ilc;
+package cnr.ilc.rut;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -7,20 +7,18 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
 import org.json.simple.JSONObject;
 
 import cnr.ilc.conllu.ConlluParser;
-import cnr.ilc.rut.GraphDBClient;
-import cnr.ilc.rut.IdGenerator;
-import cnr.ilc.rut.Logger;
-import cnr.ilc.rut.ParserInterface;
-import cnr.ilc.rut.ResourceInterface;
+import cnr.ilc.rut.resource.ResourceInterface;
+import cnr.ilc.rut.utils.IdGenerator;
+import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.stores.MemoryStore;
-import cnr.ilc.stores.FilterStore;
+import cnr.ilc.stores.filterstore.Filter;
+import cnr.ilc.stores.filterstore.FilterStore;
 import cnr.ilc.tbx.TbxParser;
 
 public class Services {
@@ -104,21 +102,19 @@ public class Services {
 		return JSONObject.toJSONString(response);
 	}
 
-	static public String filterResource(String inputDir, String namespace, String creator, Collection<String> filterLanguages, Collection<String> filterDates, Collection<String> filterSubjectFields) throws Exception {
+	static public String filterResource(String inputDir, String namespace, String creator, Filter filter) throws Exception {
 		String resourceId = new File(inputDir).getName();
 		FilterStore tripleStore = getStore(resourceId, namespace, creator, false);
-		tripleStore.setLanguages(filterLanguages);
-		tripleStore.setDates(filterDates);
-		tripleStore.setSubjectFields(filterSubjectFields);
+		tripleStore.setFilter(filter);
 		String response = JSONObject.toJSONString(tripleStore.getMetadata());
 		return response;
 	}
 
-	static public String assembleResource(String inputDir, String namespace, String creator, Collection<String> filterLanguages, Collection<String> filterSubjectFields) throws Exception {
+	static public String assembleResource(String inputDir, String namespace, String creator, Filter filter) throws Exception {
 		String resourceId = new File(inputDir).getName();
 		FilterStore tripleStore = getStore(resourceId, namespace, creator, false);
-		tripleStore.setLanguages(filterLanguages);
-		tripleStore.setSubjectFields(filterSubjectFields);
+		tripleStore.setFilter(filter);
+		Logger.warn("HO ::: %s", filter.isNoConcepts());
 		String sparql = tripleStore.getSparql();
 		saveToResourceProperty(resourceId, "sparql", sparql);
 		return sparql;

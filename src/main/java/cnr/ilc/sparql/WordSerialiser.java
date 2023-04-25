@@ -3,8 +3,8 @@ package cnr.ilc.sparql;
 import java.lang.ref.WeakReference;
 import java.util.Map.Entry;
 
-import cnr.ilc.rut.Form;
-import cnr.ilc.rut.Word;
+import cnr.ilc.rut.resource.Form;
+import cnr.ilc.rut.resource.Word;
 
 public class WordSerialiser extends TripleSerialiser {
 	final private WeakReference<Word> word;

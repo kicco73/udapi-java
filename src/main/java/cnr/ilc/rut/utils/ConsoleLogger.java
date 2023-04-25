@@ -1,4 +1,4 @@
-package cnr.ilc.rut;
+package cnr.ilc.rut.utils;
 
 public class ConsoleLogger {
 	private static final String ANSI_RESET = "\u001B[0m";

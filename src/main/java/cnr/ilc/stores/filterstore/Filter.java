@@ -1,4 +1,4 @@
-package cnr.ilc.stores;
+package cnr.ilc.stores.filterstore;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -7,14 +7,17 @@ import java.util.Map;
 
 public class Filter {
 	private Map<String, Collection<String>> map = new HashMap<>();
+	private boolean noConcepts = false;
 
 	public Filter() {
-		setLanguages(new HashSet<>());
-		setDates(new HashSet<>());
+		setLanguages(null);
+		setDates(null);
+		setSubjectFields(null);
 	}
-
+	
 	public Filter(Filter other) {
 		map = new HashMap<>(other.map);
+		noConcepts = other.noConcepts;
 	}
 
 	public void setLanguages(Collection<String> languages) {
@@ -41,13 +44,23 @@ public class Filter {
 		else map.put("subjectField", new HashSet<>(subjectFields));
 	}
 
-
 	public Collection<String> getSubjectFields() {
 		return map.get("subjectField");
 	}
 
-	public Map<String, Collection<String>> get() {
+	public boolean isNoConcepts() {
+		return noConcepts;
+	}
+
+	public void setNoConcepts(boolean noConcepts) {
+		this.noConcepts = noConcepts;
+	}
+
+	public Map<String, Collection<String>> getMap() {
 		return map;
 	}
 
+	public void setMap(Map<String, Collection<String>> map) {
+		this.map = map;
+	}
 }

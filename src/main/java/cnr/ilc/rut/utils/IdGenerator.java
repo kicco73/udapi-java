@@ -2,7 +2,7 @@
  * @author Enrico Carniani
  */
 
-package cnr.ilc.rut;
+package cnr.ilc.rut.utils;
 
 import java.nio.charset.StandardCharsets;
 import java.security.MessageDigest;

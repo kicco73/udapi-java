@@ -1,10 +1,12 @@
-package cnr.ilc.rut;
+package cnr.ilc.rut.resource;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
+import cnr.ilc.rut.utils.IdGenerator;
+import cnr.ilc.rut.utils.Metadata;
 import cnr.ilc.sparql.TripleSerialiser;
 
 public class Concept {

@@ -12,9 +12,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import cnr.ilc.conllu.core.*;
-import cnr.ilc.rut.Form;
-import cnr.ilc.rut.Logger;
-import cnr.ilc.rut.Word;
+import cnr.ilc.rut.resource.Form;
+import cnr.ilc.rut.resource.Word;
+import cnr.ilc.rut.utils.Logger;
 
 public class ParserHelper {
 

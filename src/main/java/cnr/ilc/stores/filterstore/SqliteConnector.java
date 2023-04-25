@@ -1,4 +1,4 @@
-package cnr.ilc.stores;
+package cnr.ilc.stores.filterstore;
 
 import java.io.File;
 import java.sql.Connection;
@@ -16,7 +16,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
-import cnr.ilc.rut.Metadata;
+import cnr.ilc.rut.utils.Metadata;
 
 
 public class SqliteConnector {
@@ -91,7 +91,7 @@ public class SqliteConnector {
 
 	public String buildWhere(String entityName, Filter filter) {
 		String where = "true";
-		for (Entry<String, Collection<String>> clause: filter.get().entrySet()) {
+		for (Entry<String, Collection<String>> clause: filter.getMap().entrySet()) {
 			where += whereValueInList(entityName, clause.getKey(), clause.getValue());			
 		}
 		return where;

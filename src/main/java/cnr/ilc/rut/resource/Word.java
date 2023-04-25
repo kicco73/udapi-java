@@ -2,13 +2,15 @@
  * @author Enrico Carniani
  */
 
-package cnr.ilc.rut;
+package cnr.ilc.rut.resource;
 
 import java.lang.ref.WeakReference;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
+import cnr.ilc.rut.utils.IdGenerator;
+import cnr.ilc.rut.utils.Metadata;
 import cnr.ilc.sparql.TripleSerialiser;
 import cnr.ilc.sparql.WordSerialiser;
 

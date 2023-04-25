@@ -1,10 +1,10 @@
 package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
-import cnr.ilc.rut.Concept;
-import cnr.ilc.rut.Logger;
 import cnr.ilc.rut.RutException;
-import cnr.ilc.rut.Word;
+import cnr.ilc.rut.resource.Concept;
+import cnr.ilc.rut.resource.Word;
+import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.sparql.SPARQLFormatter;
 
 import java.util.HashMap;

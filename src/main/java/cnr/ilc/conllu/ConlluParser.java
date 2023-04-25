@@ -14,10 +14,10 @@ import cnr.ilc.conllu.core.io.DocumentReader;
 import cnr.ilc.conllu.core.io.DocumentWriter;
 import cnr.ilc.conllu.core.io.impl.CoNLLUReader;
 import cnr.ilc.conllu.core.io.impl.CoNLLUWriter;
-import cnr.ilc.rut.Concept;
 import cnr.ilc.rut.ParserInterface;
-import cnr.ilc.rut.ResourceInterface;
-import cnr.ilc.rut.Word;
+import cnr.ilc.rut.resource.Concept;
+import cnr.ilc.rut.resource.ResourceInterface;
+import cnr.ilc.rut.resource.Word;
 
 public class ConlluParser implements ParserInterface, ResourceInterface {
     private Document document;

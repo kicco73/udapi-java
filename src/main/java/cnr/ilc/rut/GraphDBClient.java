@@ -15,6 +15,8 @@ import java.nio.charset.StandardCharsets;
 import java.time.Duration;
 import java.util.Map;
 
+import cnr.ilc.rut.utils.Logger;
+
 public class GraphDBClient {
 	final private URI api;
 

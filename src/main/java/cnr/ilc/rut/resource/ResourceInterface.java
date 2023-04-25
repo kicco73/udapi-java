@@ -1,4 +1,4 @@
-package cnr.ilc.rut;
+package cnr.ilc.rut.resource;
 
 import java.util.Collection;
 import java.util.Map;

@@ -34,7 +34,8 @@ class ApiController(controller.Controller):
 		def wrap_assemble_resource(resource_id: str):
 			languages = request.values.getlist('languages')
 			subject_fields = request.values.getlist('subjectFields')
-			operation = services.Assemble(resource_dir=resource_id, languages=languages, subject_fields=subject_fields)
+			no_concepts = request.values.get('noConcepts', default=False, type=json.loads)
+			operation = services.Assemble(resource_dir=resource_id, languages=languages, subject_fields=subject_fields, no_concepts=no_concepts)
 			content = operation.execute()
 			return Response(content, mimetype='application/sparql-query')
 

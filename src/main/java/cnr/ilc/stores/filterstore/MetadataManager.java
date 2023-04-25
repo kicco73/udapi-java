@@ -1,4 +1,4 @@
-package cnr.ilc.stores;
+package cnr.ilc.stores.filterstore;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -9,7 +9,7 @@ import java.util.Map;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
-import cnr.ilc.rut.Metadata;
+import cnr.ilc.rut.utils.Metadata;
 
 @SuppressWarnings("unchecked")
 public class MetadataManager {
@@ -62,7 +62,6 @@ public class MetadataManager {
 		metadata.putInMap("*", db.selectTermStats(filter), "summary", "languages");
 		metadata.putInMap("*", db.selectConceptDates(filter), "summary", "dates");
 		metadata.putInMap("*", db.selectPolysemicEntries(filter), "summary", "polysemic");
-
 
 		return metadata.getMap("*");
 	}

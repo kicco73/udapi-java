@@ -1,9 +1,9 @@
 package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
-import cnr.ilc.rut.Concept;
-import cnr.ilc.rut.IdGenerator;
-import cnr.ilc.rut.Logger;
+import cnr.ilc.rut.resource.Concept;
+import cnr.ilc.rut.utils.IdGenerator;
+import cnr.ilc.rut.utils.Logger;
 
 import java.util.Collection;
 import java.util.HashSet;
