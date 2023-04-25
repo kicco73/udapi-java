@@ -5,6 +5,7 @@ import org.xml.sax.InputSource;
 import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.RutException;
 import cnr.ilc.rut.resource.Concept;
+import cnr.ilc.rut.resource.Global;
 import cnr.ilc.rut.resource.ResourceInterface;
 import cnr.ilc.rut.resource.Word;
 import cnr.ilc.rut.utils.CountingInputStream;
@@ -14,17 +15,18 @@ import javax.xml.parsers.*;
 import java.io.*;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 public class TbxParser implements ParserInterface, ResourceInterface {
 	private Document document;
 	private ConceptEntry conceptEntryParser = new ConceptEntry();
-	private Map<String, Object> summary = new LinkedHashMap<>();
-	private Map<String, String> lexicons = new HashMap<>();
 	private Collection<Concept> concepts = new ArrayList<>();
+	private Map<String, String> subjectFields = new LinkedHashMap<>();
+	private Map<String, String> lexicons = new LinkedHashMap<>();
 	private String creator;
+	private Collection<Global> globals = new ArrayList<>();
 
     public TbxParser(InputStream inputStream, String creator) throws Exception {
 		this.creator = creator;
@@ -34,9 +36,11 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 		document.getDocumentElement().normalize();
 		Element tbx = (Element) document.getElementsByTagName("tbx").item(0);
 
-		summary.put("fileSize", countingInputStream.getCount());
-		summary.put("fileType", "tbx");
-		summary.put("variant", tbx.getAttribute("type"));
+		Global global = new Global();
+		global.metadata.putInMap("*", countingInputStream.getCount(), "summary", "fileSize");
+		global.metadata.putInMap("*", "tbx", "summary", "fileType");
+		global.metadata.putInMap("*", tbx.getAttribute("type"), "summary", "variant");
+		globals.add(global);
 	}
 	
 	static private Document parseTbx(InputStream inputStream) throws RutException {
@@ -53,8 +57,7 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 		}
 	}
 
-	@Override
-	public ResourceInterface parse() throws Exception {
+	private void parseConceptEntries() {
 		NodeList conceptEntries = document.getElementsByTagName("conceptEntry");
 
 		int prevPercentage = 0;
@@ -68,21 +71,55 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 			Element conceptEntry = (Element) conceptEntries.item(i);
 			Concept concept = conceptEntryParser.parseConceptEntry(conceptEntry, creator);
 			concepts.add(concept);
-			lexicons.putAll(conceptEntryParser.getLexicons());
-		}
 
+			lexicons.putAll(conceptEntryParser.getLexicons());
+
+			String subjectField = concept.getSubjectField();
+			if (subjectField != null)
+				subjectFields.put(subjectField, concept.getSubjectFieldFQN());
+		}
 		Logger.progress(100, "Done");
+	}
+
+	private void finaliseSubjectfields() {
+		for (Entry<String,String> entry: subjectFields.entrySet()) {
+			Global global = new Global();
+			global.subjectField = entry.getKey();
+			String subjectFieldFQN = entry.getValue();
+			global.metadata.addToList("*", global.subjectField, "summary", "subjectFields");
+			global.triples.add(subjectFieldFQN, "rdf:type", "skos:ConceptScheme");
+			global.triples.addString(subjectFieldFQN, "skos:prefLabel", global.subjectField);
+			globals.add(global);
+		}
+	}
+
+	private void finaliseLexicons() {
+		for (Entry<String,String> entry: lexicons.entrySet()) {
+			Global global = new Global();
+			global.language = entry.getKey();
+			String lexiconFQN = entry.getValue();
+			global.metadata.addToList(global.language, global.language, "summary", "languages");
+			global.triples.addLexicon(lexiconFQN, global.language, creator);
+			globals.add(global);
+		}
+	}
+
+	@Override
+	public ResourceInterface parse() throws Exception {
+		parseConceptEntries();
+		finaliseSubjectfields();
+		finaliseLexicons();
 		return this;
 	}
 
 	@Override
-	public Map<String, Object> getSummary() {
-		return summary;
+	public Collection<String> getLanguages() {
+		return lexicons.keySet();
 	}
 
 	@Override
-	public Map<String, String> getLexicons() {
-		return lexicons;
+	public Collection<Global> getGlobals() {
+		return globals;
 	}
 
 	@Override

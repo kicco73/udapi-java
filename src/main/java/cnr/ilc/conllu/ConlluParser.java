@@ -16,6 +16,7 @@ import cnr.ilc.conllu.core.io.impl.CoNLLUReader;
 import cnr.ilc.conllu.core.io.impl.CoNLLUWriter;
 import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.resource.Concept;
+import cnr.ilc.rut.resource.Global;
 import cnr.ilc.rut.resource.ResourceInterface;
 import cnr.ilc.rut.resource.Word;
 
@@ -25,6 +26,7 @@ public class ConlluParser implements ParserInterface, ResourceInterface {
     private String creator;
     private String namespace;
     private Collection<Word> words;
+    Global global = new Global();
 
     public ConlluParser(InputStream inputStream, String creator, String language) throws Exception {
         this.creator = creator;
@@ -43,6 +45,8 @@ public class ConlluParser implements ParserInterface, ResourceInterface {
     @Override
     public ResourceInterface parse() throws Exception {
         String lexiconFQN = ":connll-u";
+        global.triples.addLexicon(lexiconFQN, language, creator);
+        global.metadata.putInMap("*", "conllu", "fileType");
         words = ParserHelper.compileLexicon(document, namespace, language, lexiconFQN, creator);
         return this;
     }
@@ -53,17 +57,15 @@ public class ConlluParser implements ParserInterface, ResourceInterface {
     }
 
     @Override
-    public Map<String, Object> getSummary() {
-        Map<String, Object> summary = new LinkedHashMap<>();
-        summary.put("fileType", "conllu");
-        return summary;
+    public Collection<String> getLanguages() {
+        return Arrays.asList(new String[]{language});
     }
 
     @Override
-    public Map<String, String> getLexicons() {
-        Map<String, String> lexicons = new HashMap<>();
-        lexicons.put(":connll-u", language);
-        return lexicons;
+    public Collection<Global> getGlobals() {
+        Collection<Global> globals = new ArrayList<>();
+        globals.add(global);
+        return globals;
     }
 
     @Override

@@ -10,6 +10,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import cnr.ilc.rut.resource.Concept;
+import cnr.ilc.rut.resource.Global;
 import cnr.ilc.rut.resource.ResourceInterface;
 import cnr.ilc.rut.resource.Word;
 import cnr.ilc.sparql.TripleSerialiser;
@@ -61,18 +62,17 @@ public class MemoryStore implements TripleStoreInterface {
 		}
 	}
 
-	private void appendLexicons(Map<String, String> lexicons) throws Exception {
-		for (Entry<String, String> lexicon: lexicons.entrySet()) {
-			String language = lexicon.getKey();
-			String lexiconFQN = lexicon.getValue();
-			appendLexicon(lexiconFQN, language);
+	private void appendGlobals(ResourceInterface resource) throws Exception {
+		if (resource.getGlobals() == null) return;
+		for (Global global: resource.getGlobals()) {
+			appendGlobal(global);
 		}
 	}
 
 	private void appendConcepts(ResourceInterface resource) throws Exception {
 		if (resource.getConcepts() == null) return;
 		for (Concept concept: resource.getConcepts()) {
-			appendConcept(concept, resource.getLexicons().keySet());
+			appendConcept(concept, resource.getLanguages());
 			for (Word word: concept.words) 
 				appendWord(word);
 		}
@@ -85,10 +85,8 @@ public class MemoryStore implements TripleStoreInterface {
 		}
 	}
 
-	protected void appendLexicon(String lexiconFQN, String language) throws Exception {		
-		TripleSerialiser triples = new TripleSerialiser();
-		triples.addLexicon(lexiconFQN, language, creator);
-		append(triples.serialise());
+	protected void appendGlobal(Global global) throws Exception {		
+		append(global.triples.serialise());
 	}
 
 	protected void appendConcept(Concept concept, Collection<String> languages) throws Exception {
@@ -110,9 +108,7 @@ public class MemoryStore implements TripleStoreInterface {
 
 	@Override
 	public void store(ResourceInterface resource) throws Exception {
-		metadata = new LinkedHashMap<>();
-		metadata.put("summary", resource.getSummary());
-		appendLexicons(resource.getLexicons());
+		appendGlobals(resource);
 		appendConcepts(resource);
 		appendWords(resource);
 	}

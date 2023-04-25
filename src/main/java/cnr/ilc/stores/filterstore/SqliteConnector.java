@@ -66,9 +66,16 @@ public class SqliteConnector {
 	}
 
 	public ResultSet executeQuery(String query, Object ...args) throws SQLException {
-		String fullQuery = String.format(query, args);
-		ResultSet rs = statement.executeQuery(fullQuery);
+		query = String.format(query, args);
+		//System.err.println(query);
+		ResultSet rs = statement.executeQuery(query);
 		return rs;
+	}
+
+	public String quote(String s) {
+		if (s == null) return null;
+		s = "'" + s.replaceAll("'", "''") + "'";
+		return s;
 	}
 
 	private String whereValueInList(String entityName, String columnName, Collection<String> values) {
@@ -77,7 +84,7 @@ public class SqliteConnector {
 		if (values == null) return where;
 
 		if (values.contains(null)) {
-			where += String.format("%s %s.%s IS null", op, entityName, columnName);
+			where += String.format(" %s %s.%s IS null", op, entityName, columnName);
 			values.remove(null);
 			op = "OR";
 		}

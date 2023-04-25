@@ -6,12 +6,10 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Map;
 
-import cnr.ilc.rut.utils.Metadata;
 import cnr.ilc.rut.resource.Concept;
-import cnr.ilc.rut.resource.ResourceInterface;
+import cnr.ilc.rut.resource.Global;
 import cnr.ilc.rut.resource.Word;
 import cnr.ilc.rut.utils.Logger;
-import cnr.ilc.sparql.TripleSerialiser;
 import cnr.ilc.stores.MemoryStore;
 
 public class FilterStore extends MemoryStore {
@@ -41,23 +39,12 @@ public class FilterStore extends MemoryStore {
 		Logger.progress(100,  "Done");
 	}
 
-	@Override 
-	public void store(ResourceInterface resource) throws Exception {
-		super.store(resource);
-		Metadata metadata = new Metadata();
-		metadata.putInMap("*", resource.getSummary(), "summary");
-		String json = metadata.toJson("*").replaceAll("'", "''");
-		db.executeUpdate("insert into global (language, metadata) values ('*', '%s')", json);	
-	}
-
 	@Override
-	protected void appendLexicon(String lexiconFQN, String language) throws SQLException {
-		TripleSerialiser triples = new TripleSerialiser();
-		triples.addLexicon(lexiconFQN, language, creator);
-		String serialised = triples.serialise();
-		serialised = serialised.replaceAll("'", "''");
-		db.executeUpdate("insert into global (language, serialised) values ('%s', '%s')", 
-			language, serialised);
+	protected void appendGlobal(Global global) throws SQLException {
+		String serialised = global.triples.serialise();
+		String metadata = global.metadata.toJson(global.language);
+		db.executeUpdate("insert into global (language, subjectField, metadata, serialised) values ('%s', %s, %s, %s)", 
+			global.language, db.quote(global.subjectField), db.quote(metadata), db.quote(serialised));
 	}
 
 	@Override
@@ -67,20 +54,12 @@ public class FilterStore extends MemoryStore {
 		langs.addAll(languages);
 		for (String language: langs) {
 			String serialised = concept.triples.serialise(language);
-			serialised = serialised.replaceAll("'", "''");
-
 			String metadata = concept.metadata.toJson(language);
-			metadata = metadata.replaceAll("'", "''");
-
-			String date = (String) concept.metadata.getObject("*", "concepts", concept.id, "date");
-			if (date != null) date = "'"+date+"'";
-
 			String subjectField = concept.getSubjectField();
-			if (subjectField != null) subjectField = "'"+subjectField.replaceAll("'", "''") + "'";
 
 			if (serialised.length() > 0 || !metadata.equals("null"))
-				db.executeUpdate("insert into concept (conceptId, language, date, subjectField, metadata, serialised) values ('%s', '%s', %s, %s, '%s', '%s')", 
-					concept.id, language, date, subjectField, metadata, serialised);	
+				db.executeUpdate("insert into concept (conceptId, language, date, subjectField, metadata, serialised) values ('%s', '%s', %s, %s, %s, %s)", 
+					concept.id, language, db.quote(concept.date), db.quote(subjectField), db.quote(metadata), db.quote(serialised));	
 		}
 	}
 
@@ -91,19 +70,17 @@ public class FilterStore extends MemoryStore {
 		String date = null;
 		if (word.concept != null) {
 			Concept concept = word.concept.get();
-			conceptId = String.format("'%s'", concept.id);
-			date = (String) concept.metadata.getObject("*", "concepts", concept.id, "date");
-			date = date == null? null : String.format("'%s'", date);
-			subjectField = concept.getSubjectField() == null? null : String.format("'%s'", concept.getSubjectField());
+			date = concept.date;
+			conceptId = concept.id;
+			subjectField = concept.getSubjectField();
 		}
 
 		String serialised = word.triples.serialise();
-		serialised = serialised.replaceAll("'", "''");
-		String lemma = word.canonicalForm.text.replaceAll("'", "''");
+		String lemma = word.canonicalForm.text;
 		String metadata = word.metadata.toJson(word.language);
-		metadata = metadata.replaceAll("'", "''");
-		db.executeUpdate("insert into word (lemma, language, date, conceptId, subjectField, metadata, serialised) values ('%s', '%s', %s, %s, %s, '%s', '%s')", 
-			lemma, word.language, date, conceptId, subjectField, metadata, serialised);
+
+		db.executeUpdate("insert into word (lemma, language, date, conceptId, subjectField, metadata, serialised) values ('%s', '%s', %s, %s, %s, %s, %s)", 
+			lemma, word.language, db.quote(date), db.quote(conceptId), db.quote(subjectField), db.quote(metadata), db.quote(serialised));
 	}
 
 	public FilterStore(String namespace, String creator, int chunkSize, String fileName) throws Exception {

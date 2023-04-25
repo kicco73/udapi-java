@@ -16,7 +16,9 @@ public class Concept {
 	final public TripleSerialiser triples = new TripleSerialiser();
 	final private Map<String,String> definition = new HashMap<>();
 	private String subjectField = null;
+	private String subjectFieldFQN = null;
 	final public Metadata metadata = new Metadata();
+	public String date = null;
 	static IdGenerator idGenerator = new IdGenerator();
 
 	public Concept(String conceptId) {
@@ -50,10 +52,15 @@ public class Concept {
 
 	public void setSubjectField(String subjectField, String subjectFieldFQN) {
 		this.subjectField = subjectField;
+		this.subjectFieldFQN = subjectFieldFQN;
 		triples.add(FQName, "skos:inScheme", subjectFieldFQN);
 	}
 
 	public String getSubjectField() {
 		return subjectField;
+	}
+
+	public String getSubjectFieldFQN() {
+		return subjectFieldFQN;
 	}
 }

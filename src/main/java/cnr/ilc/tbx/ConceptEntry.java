@@ -17,7 +17,6 @@ import java.util.stream.Stream;
 
 public class ConceptEntry {
 	private LangSec langSecParser;
-	private Collection<String> subjectFields = new HashSet<>();
 	private static IdGenerator idGenerator = new IdGenerator();
 
     public ConceptEntry() throws Exception {
@@ -28,15 +27,7 @@ public class ConceptEntry {
 		String subjectField = Nodes.getTextOfTagOrAlternateTagWithAttribute(conceptEntry, "subjectField", "descrip", "type");
 		if (subjectField == null) return;
 
-		String subjectFieldFQN = String.format(":sf_%s", idGenerator.getId(subjectField));
-
-		if (!subjectFields.contains(subjectField)) {
-			subjectFields.add(subjectField);
-			concept.metadata.addToList("*", subjectField, "summary", "subjectFields");
-			concept.triples.add(subjectFieldFQN, "rdf:type", "skos:ConceptScheme");
-			concept.triples.addString(subjectFieldFQN, "skos:prefLabel", subjectField);
-		}
-		
+		String subjectFieldFQN = String.format(":sf_%s", idGenerator.getId(subjectField));		
 		concept.setSubjectField(subjectField, subjectFieldFQN);
 	}
 
@@ -83,6 +74,7 @@ public class ConceptEntry {
 		Element dateElement = (Element)dates.item(0);
 		String date = dateElement.getTextContent();
 		concept.metadata.putInMap("*", date, "concepts", concept.id, "date");
+		concept.date = date;
 	}
 
 	public Concept parseConceptEntry(Element conceptEntry, String creator) {

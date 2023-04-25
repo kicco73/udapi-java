@@ -114,7 +114,6 @@ public class Services {
 		String resourceId = new File(inputDir).getName();
 		FilterStore tripleStore = getStore(resourceId, namespace, creator, false);
 		tripleStore.setFilter(filter);
-		Logger.warn("HO ::: %s", filter.isNoConcepts());
 		String sparql = tripleStore.getSparql();
 		saveToResourceProperty(resourceId, "sparql", sparql);
 		return sparql;
