@@ -5,8 +5,6 @@ import cnr.ilc.rut.resource.Concept;
 import cnr.ilc.rut.utils.IdGenerator;
 import cnr.ilc.rut.utils.Logger;
 
-import java.util.Collection;
-import java.util.HashSet;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;

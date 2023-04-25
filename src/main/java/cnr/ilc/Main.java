@@ -25,6 +25,7 @@ import cnr.ilc.rut.resource.ResourceInterface;
 import cnr.ilc.rut.utils.DateProvider;
 import cnr.ilc.rut.utils.IdGenerator;
 import cnr.ilc.rut.utils.Logger;
+import cnr.ilc.sparql.SPARQLWriter;
 import cnr.ilc.stores.MemoryStore;
 import cnr.ilc.stores.TripleStoreInterface;
 import cnr.ilc.stores.filterstore.Filter;
@@ -257,7 +258,7 @@ public class Main {
 
     private static void uploadStatements(String graphURL, String repository, String statements) throws Exception {
         GraphDBClient client = new GraphDBClient(graphURL, repository);
-        String[] chunks = statements.split(MemoryStore.separator, 0);
+        String[] chunks = statements.split(SPARQLWriter.separator, 0);
         int n = 0;
         for (String chunk: chunks) {
             System.err.print(String.format("\rPosting... %.0f%%", ++n * 100.0/chunks.length));

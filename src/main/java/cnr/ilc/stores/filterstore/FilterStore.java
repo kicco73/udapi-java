@@ -19,7 +19,7 @@ public class FilterStore extends MemoryStore {
 
 	private void assembleConcept() throws SQLException {
 		for (String serialised: db.selectConcept("serialised", filter))
-			append(serialised);
+			output.append(serialised);
 	}
 
 	private void assembleEntity(String entityName, Filter filter) throws SQLException {
@@ -34,7 +34,7 @@ public class FilterStore extends MemoryStore {
 		while (rs.next()) {
 			Logger.progress(++current * 100 / total, "Assembling %s entity", entityName);
 			String serialised = rs.getString("serialised");
-			append(serialised);
+			output.append(serialised);
 		}
 		Logger.progress(100,  "Done");
 	}

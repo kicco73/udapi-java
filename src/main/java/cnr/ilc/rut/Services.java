@@ -16,7 +16,7 @@ import cnr.ilc.conllu.ConlluParser;
 import cnr.ilc.rut.resource.ResourceInterface;
 import cnr.ilc.rut.utils.IdGenerator;
 import cnr.ilc.rut.utils.Logger;
-import cnr.ilc.stores.MemoryStore;
+import cnr.ilc.sparql.SPARQLWriter;
 import cnr.ilc.stores.filterstore.Filter;
 import cnr.ilc.stores.filterstore.FilterStore;
 import cnr.ilc.tbx.TbxParser;
@@ -127,7 +127,7 @@ public class Services {
 		Logger.warn("Cleaning GraphDB");
 		client.post("CLEAR DEFAULT\n"); // FIXME: temporary hack
 
-        String[] chunks = statements.split(MemoryStore.separator, 0);
+        String[] chunks = statements.split(SPARQLWriter.separator, 0);
         int n = 0;
         for (String chunk: chunks) {
             Logger.progress(++n * 100/chunks.length, "Submitting to GraphDB");
