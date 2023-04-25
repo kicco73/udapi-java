@@ -53,8 +53,7 @@ public class MetadataManager {
 		Filter noDatesFilter = new Filter(filter);
 		noDatesFilter.setDates(null);
 
-		mergeJson(metadata, "metadata", "lexicon", noDatesFilter);
-		mergeJson(metadata, "metadata", "summary", noDatesFilter);
+		mergeJson(metadata, "metadata", "global", noDatesFilter);
 		int numberOfConcepts = mergeJsonConcept(metadata, "metadata", filter);
 		int numberOfTerms = mergeJson(metadata, "metadata", "word", filter);
 

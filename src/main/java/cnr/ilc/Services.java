@@ -7,12 +7,10 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 
 import cnr.ilc.conllu.ConlluParser;
@@ -106,19 +104,21 @@ public class Services {
 		return JSONObject.toJSONString(response);
 	}
 
-	static public String filterResource(String inputDir, String namespace, String creator, Collection<String> filterLanguages, Collection<String> filterDates) throws Exception {
+	static public String filterResource(String inputDir, String namespace, String creator, Collection<String> filterLanguages, Collection<String> filterDates, Collection<String> filterSubjectFields) throws Exception {
 		String resourceId = new File(inputDir).getName();
 		FilterStore tripleStore = getStore(resourceId, namespace, creator, false);
 		tripleStore.setLanguages(filterLanguages);
 		tripleStore.setDates(filterDates);
+		tripleStore.setSubjectFields(filterSubjectFields);
 		String response = JSONObject.toJSONString(tripleStore.getMetadata());
 		return response;
 	}
 
-	static public String assembleResource(String inputDir, String namespace, String creator, Collection<String> filterLanguages) throws Exception {
+	static public String assembleResource(String inputDir, String namespace, String creator, Collection<String> filterLanguages, Collection<String> filterSubjectFields) throws Exception {
 		String resourceId = new File(inputDir).getName();
 		FilterStore tripleStore = getStore(resourceId, namespace, creator, false);
 		tripleStore.setLanguages(filterLanguages);
+		tripleStore.setSubjectFields(filterSubjectFields);
 		String sparql = tripleStore.getSparql();
 		saveToResourceProperty(resourceId, "sparql", sparql);
 		return sparql;

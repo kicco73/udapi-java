@@ -2,8 +2,11 @@ package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
 import cnr.ilc.rut.Concept;
+import cnr.ilc.rut.IdGenerator;
 import cnr.ilc.rut.Logger;
 
+import java.util.Collection;
+import java.util.HashSet;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
@@ -14,6 +17,8 @@ import java.util.stream.Stream;
 
 public class ConceptEntry {
 	private LangSec langSecParser;
+	private Collection<String> subjectFields = new HashSet<>();
+	private static IdGenerator idGenerator = new IdGenerator();
 
     public ConceptEntry() throws Exception {
 		langSecParser = new LangSec();
@@ -22,7 +27,17 @@ public class ConceptEntry {
 	private void parseSubjectField(Element conceptEntry, Concept concept, String conceptId) {
 		String subjectField = Nodes.getTextOfTagOrAlternateTagWithAttribute(conceptEntry, "subjectField", "descrip", "type");
 		if (subjectField == null) return;
-		concept.addSubjectField(subjectField);
+
+		String subjectFieldFQN = String.format(":sf_%s", idGenerator.getId(subjectField));
+
+		if (!subjectFields.contains(subjectField)) {
+			subjectFields.add(subjectField);
+			concept.metadata.addToList("*", subjectField, "summary", "subjectFields");
+			concept.triples.add(subjectFieldFQN, "rdf:type", "skos:ConceptScheme");
+			concept.triples.addString(subjectFieldFQN, "skos:prefLabel", subjectField);
+		}
+		
+		concept.setSubjectField(subjectField, subjectFieldFQN);
 	}
 
 	private void parseConceptEntryChildren(Element root, Concept concept) {

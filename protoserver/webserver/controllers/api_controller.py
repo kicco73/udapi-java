@@ -25,14 +25,16 @@ class ApiController(controller.Controller):
 		def wrap_filter_resource(resource_id: str):
 			languages = request.values.getlist('languages')
 			dates = request.values.getlist('dates')
-			operation = services.Filter(resource_dir=resource_id, languages=languages, dates=dates)
+			subject_fields = request.values.getlist('subjectFields')
+			operation = services.Filter(resource_dir=resource_id, languages=languages, dates=dates, subject_fields=subject_fields)
 			content = operation.execute()
 			return Response(content, mimetype='application/json')
 
 		@app.route('/resources/<resource_id>/sparql', methods = ['GET'])
 		def wrap_assemble_resource(resource_id: str):
 			languages = request.values.getlist('languages')
-			operation = services.Assemble(resource_dir=resource_id, languages=languages)
+			subject_fields = request.values.getlist('subjectFields')
+			operation = services.Assemble(resource_dir=resource_id, languages=languages, subject_fields=subject_fields)
 			content = operation.execute()
 			return Response(content, mimetype='application/sparql-query')
 

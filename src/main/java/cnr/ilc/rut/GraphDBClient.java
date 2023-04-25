@@ -36,7 +36,7 @@ public class GraphDBClient {
 				.uri(this.api)
 				.POST(ofFormData(form))
 				.header("Content-Type", "application/x-www-form-urlencoded")
-				.timeout(Duration.ofSeconds(20))
+				.timeout(Duration.ofSeconds(60))
 				.build();
 
 		client.sendAsync(request, BodyHandlers.ofString())

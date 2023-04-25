@@ -23,18 +23,20 @@ class BaseOperation(Operation):
 		self.input = input
 		self.resource_dir = resource_dir
 
-	def process_stderr(self, message):
-		if len(message) < 2: return
+	def process_stderr(self, stderr):
+		message = stderr.readline()
+		if len(message) < 2: return len(message)
 		try:
 			dictionary = json.loads(message)					
 		except:
 			print("cannot parse json: %s", message)
-			print(process.stderr.read())
+			print(stderr.read())
 			return
 		if dictionary['event'] == 'notification':
 			self.logger.log(level=logging.WARNING, msg=dictionary['detail'])
 		elif dictionary['event'] == 'job update':
 			self.logger.log(level=logging.WARNING, msg=dictionary['progress'])
+		return len(message)
 
 	def run_java(self, *args) -> str:
 		output = ''
@@ -48,11 +50,13 @@ class BaseOperation(Operation):
 					output += process.stdout.readline()
 
 				if process.stderr in r:
-					message = process.stderr.readline()
-					self.process_stderr(message)
+					self.process_stderr(process.stderr)
 					
+			while True:
+				if self.process_stderr(process.stderr) == 0:
+					break
+
 			output += process.stdout.read()
-			self.process_stderr(process.stderr.read())
 			return output
 
 	def __str__(self):

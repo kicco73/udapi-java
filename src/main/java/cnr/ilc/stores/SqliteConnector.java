@@ -7,35 +7,45 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Collection;
-import java.util.HashSet;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 import java.util.Map.Entry;
 import java.util.stream.Collectors;
 
-import cnr.ilc.rut.Logger;
 
 public class SqliteConnector {
 	private Connection connection;
 	private Statement statement;
 
+	private void createIndices(String tableName, String... columnNames) throws SQLException {
+		for (String columnName: columnNames) {
+			executeUpdate("create index %s_%s_idx on %s (%s)", 
+				tableName, columnName, tableName, columnName
+			);
+		}
+	}
+
+	private void createTable(String tableName, String ...fields) throws SQLException {
+		List<String> defaultFields = new ArrayList<String>(
+			Arrays.asList("language string", "date string", "subjectField string", "metadata json", "serialised string default ''"))
+		;
+		defaultFields.addAll(Arrays.asList(fields));
+		String fieldsString = String.join(", ", defaultFields);
+		
+		executeUpdate("drop table if exists %s", tableName);
+		executeUpdate("create table %s (%s)", tableName, fieldsString);
+		createIndices(tableName, "language", "date", "subjectField");
+	}
+
 	private void createSchema() throws SQLException {
-		executeUpdate("drop table if exists summary");
-		executeUpdate("create table summary (language string, date string, metadata json)");
-		executeUpdate("drop table if exists lexicon");
-		executeUpdate("create table lexicon (language string, date string, metadata json, serialised string)");
-		executeUpdate("drop table if exists word");
-		executeUpdate("create table word (lemma string, language string, date string, conceptId string, metadata json, serialised string)");
-		executeUpdate("create index word_lemma_idx on word (lemma)");
-		executeUpdate("create index word_language_idx on word (language)");
-		executeUpdate("create index word_date_idx on word (date)");
-		executeUpdate("create index word_concept_idx on word (conceptId)");
-		executeUpdate("drop table if exists concept");
-		executeUpdate("create table concept (conceptId string, language string, date string, metadata json, serialised string)");
-		executeUpdate("create index concept_id_idx on concept (conceptId)");
-		executeUpdate("create index concept_language_idx on concept (language)");
-		executeUpdate("create index concept_date_idx on concept (date)");
+		createTable("global");
+		createTable("concept", "conceptId string");
+		createIndices("concept", "conceptId");
+		createTable("word", "conceptId string", "lemma string");
+		createIndices("word", "conceptId");
 	}
 
 	public void connect(String fileName) throws SQLException {
@@ -60,9 +70,18 @@ public class SqliteConnector {
 
 	private String whereValueInList(String entityName, String columnName, Collection<String> values) {
 		String where = "";
-		if (values != null && values.size() > 0) {
+		String op = "AND";
+		if (values == null) return where;
+
+		if (values.contains(null)) {
+			where += String.format("%s %s.%s IS null", op, entityName, columnName);
+			values.remove(null);
+			op = "OR";
+		}
+
+		if (values.size() > 0) {
 			String listString = values.stream().collect(Collectors.joining("', '"));
-			where += String.format(" AND %s.%s in ('%s')", entityName, columnName, listString);	
+			where += String.format(" %s %s.%s in ('%s')", op, entityName, columnName, listString);	
 		}
 		return where;
 	}

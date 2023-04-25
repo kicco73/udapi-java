@@ -36,6 +36,16 @@ public class Filter {
 		return map.get("date");
 	}
 
+	public void setSubjectFields(Collection<String> subjectFields) {
+		if (subjectFields == null) map.put("subjectField", new HashSet<>());
+		else map.put("subjectField", new HashSet<>(subjectFields));
+	}
+
+
+	public Collection<String> getSubjectFields() {
+		return map.get("subjectField");
+	}
+
 	public Map<String, Collection<String>> get() {
 		return map;
 	}

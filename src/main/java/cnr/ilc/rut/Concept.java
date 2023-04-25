@@ -3,7 +3,6 @@ package cnr.ilc.rut;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
-import java.util.HashSet;
 import java.util.Map;
 
 import cnr.ilc.sparql.TripleSerialiser;
@@ -14,7 +13,7 @@ public class Concept {
 	final public Collection<Word> words = new ArrayList<>();
 	final public TripleSerialiser triples = new TripleSerialiser();
 	final private Map<String,String> definition = new HashMap<>();
-	private Collection<String> subjectFields = new HashSet<>();
+	private String subjectField = null;
 	final public Metadata metadata = new Metadata();
 	static IdGenerator idGenerator = new IdGenerator();
 
@@ -35,16 +34,6 @@ public class Concept {
 		return word;
 	}
 
-	public void addSubjectField(String subjectField) {
-		if (!subjectFields.contains(subjectField)) {
-			subjectFields.add(subjectField);
-			String subjectFieldFQN = String.format("%s_%s", FQName, idGenerator.getId(subjectField));
-			triples.add(subjectFieldFQN, "rdf:type", "skos:ConceptScheme");
-			triples.addString(subjectFieldFQN, "skos:prefLabel", subjectField);
-			triples.add(FQName, "skos:inScheme", subjectFieldFQN);
-		}
-	}
-
 	public void setDefinition(String definition, String language) {
 		this.definition.put(language, definition);
 		if (language.equals("*"))
@@ -55,5 +44,14 @@ public class Concept {
 
 	public String getDefinition(String language) {
 		return definition.get(language);
+	}
+
+	public void setSubjectField(String subjectField, String subjectFieldFQN) {
+		this.subjectField = subjectField;
+		triples.add(FQName, "skos:inScheme", subjectFieldFQN);
+	}
+
+	public String getSubjectField() {
+		return subjectField;
 	}
 }

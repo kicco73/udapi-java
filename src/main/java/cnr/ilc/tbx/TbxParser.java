@@ -69,7 +69,8 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 			Concept concept = conceptEntryParser.parseConceptEntry(conceptEntry, creator);
 			concepts.add(concept);
 			lexicons.putAll(conceptEntryParser.getLexicons());
-		}		
+		}
+
 		Logger.progress(100, "Done");
 		return this;
 	}
