@@ -42,7 +42,7 @@ public class SqliteConnector {
         createTable("concept", "conceptId string");
         createIndices("concept", "conceptId");
         createTable("word", "conceptId string", "lemma string", "FQName string", "polysemicGroup integer");
-        createIndices("word", "conceptId", "lemma");
+        createIndices("word", "conceptId", "lemma", "polysemicGroup");
     }
 
     public void connect(String fileName) throws SQLException {

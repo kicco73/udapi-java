@@ -11,7 +11,6 @@ import cnr.ilc.lemon.PolysemicResolver;
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.rut.utils.Metadata;
 
-@SuppressWarnings("unchecked")
 public class PolysemicSupport {
     private SqliteConnector db;
     PolysemicResolver resolver = new PolysemicResolver();
@@ -58,7 +57,7 @@ public class PolysemicSupport {
         String where = filter.buildWhere("word");
         ResultSet rs = db.executeQuery(query, where);
         while (rs.next()) {
-            results.add(rs.getInt(0));
+            results.add(rs.getInt("polysemicGroup"));
         }
         return results;
     }
