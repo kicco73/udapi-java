@@ -19,7 +19,7 @@ public class TripleSerialiser {
 	private void add(String subject, String link, String object, String language) {
 		object = object.replaceAll("[\n\t ]+", " ");
 		String languageSpecific = features.getOrDefault(language, "");
-		languageSpecific += String.format("\t%s %s %s .\n", subject, link, object);
+		languageSpecific += SPARQLFormatter.formatStatement(subject, link, object);
 		features.put(language, languageSpecific);
 	} 
 

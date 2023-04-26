@@ -44,4 +44,8 @@ public class SPARQLFormatter {
 		object += " ]";
 		return object;
 	}
+
+	static public String formatStatement(String subject, String link, String object) {
+		return String.format("\t%s %s %s .\n", subject, link, object);
+	}
 }

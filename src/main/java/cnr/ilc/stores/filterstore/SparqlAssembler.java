@@ -3,11 +3,11 @@ package cnr.ilc.stores.filterstore;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.Collection;
-import java.util.Iterator;
 
 import cnr.ilc.lemon.PojoWord;
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.rut.utils.Logger;
+import cnr.ilc.sparql.SPARQLFormatter;
 import cnr.ilc.sparql.SPARQLWriter;
 import cnr.ilc.sparql.WordSerialiser;
 
@@ -32,10 +32,11 @@ public class SparqlAssembler {
 			output.append(serialised);
 	}
 
-	private void assembleEntity(String entityName, Filter filter, String ...columnNames) throws SQLException {
+	private Filter assembleEntity(String entityName, Filter filter, String ...columnNames) throws SQLException {
 		filter = new Filter(filter);
 		Collection<String> languages = filter.getLanguages();
 		if (languages.size() > 0) languages.add("*");
+
 		ResultSet rs = db.selectEntity(entityName, filter);
 		int total = rs.getFetchSize();
 		int current = 0;
@@ -47,6 +48,7 @@ public class SparqlAssembler {
 			}
 		}
 		Logger.progress(100,  "Done");
+		return filter;
 	}
 
 	private void assembleGlobal(Filter filter) throws Exception {
@@ -78,15 +80,33 @@ public class SparqlAssembler {
 			output.append(WordSerialiser.serialiseLexicalSenses(word));
 		}
 	}
+	private void assembleWordWithoutSenses(Filter filter) throws Exception {
+		filter = assembleEntity("word", filter, "serialised");
+
+		output.addComment("Synthesising ontolex:denotes relationship in place of senses");
+
+		ResultSet rs = db.selectEntity("word", filter);
+		while (rs.next()) {
+			String FQName = rs.getString("FQName");
+			String conceptId = rs.getString("conceptId");
+			String statement = SPARQLFormatter.formatStatement(FQName, "ontolex:denotes", conceptId);
+			output.append(statement);
+		}
+	}
 
 	private void assembleWord(Filter filter) throws Exception {
+		if (filter.isNoSenses()) {
+			assembleWordWithoutSenses(filter);
+			return;
+		}
+
 		Collection<WordInterface> replacingEntries = ps.findAndResolvePolysemicEntries(filter);
 
 		Filter filterOutPolysemicGroups = new Filter(filter);
 		filterOutPolysemicGroups.setNoPolysemicGroups(true);
 
 		assembleEntity("word", filterOutPolysemicGroups, "serialised", "serialisedSenses");
-		assembleWordReplacements(replacingEntries);
+		assembleWordReplacements(replacingEntries);	
 	}
 
 	public String getSparql(Filter filter) throws Exception {
