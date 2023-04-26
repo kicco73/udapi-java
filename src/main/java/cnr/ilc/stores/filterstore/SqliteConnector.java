@@ -12,9 +12,6 @@ import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Map.Entry;
-import java.util.stream.Collectors;
-
 
 public class SqliteConnector {
     private Connection connection;
@@ -44,7 +41,7 @@ public class SqliteConnector {
         createTable("global");
         createTable("concept", "conceptId string");
         createIndices("concept", "conceptId");
-        createTable("word", "conceptId string", "lemma string", "FQName string");
+        createTable("word", "conceptId string", "lemma string", "FQName string", "polysemicGroup integer");
         createIndices("word", "conceptId", "lemma");
     }
 
@@ -75,38 +72,6 @@ public class SqliteConnector {
         return s;
     }
 
-    private String whereValueInList(String entityName, String columnName, Collection<String> values) {
-        String where = "";
-        String op = "and";
-        if (values == null) return where;
-
-        if (values.contains(null)) {
-            where += String.format(" %s %s.%s IS null", op, entityName, columnName);
-            values.remove(null);
-            op = "or";
-        }
-
-        if (values.size() > 0) {
-            String listString = values.stream().collect(Collectors.joining("', '"));
-            where += String.format(" %s %s.%s in ('%s')", op, entityName, columnName, listString);  
-        }
-        return where;
-    }
-
-    public String buildWhere(String entityName, Filter filter) {
-        String where = "true";
-        for (Entry<String, Collection<String>> clause: filter.getMap().entrySet()) {
-            where += whereValueInList(entityName, clause.getKey(), clause.getValue());          
-        }
-        
-        String excludeClause = whereValueInList(entityName, "rowid", filter.getExcludeIds());
-        if (excludeClause.length() > 0) {
-            where += String.format(" and not (true %s)", excludeClause); // TODO:  
-			System.err.println("QUI HO: "+ where)     ;
-		}
-            return where;
-    }
-
     public Collection<String> selectConcept(String columnName, Filter filter) throws SQLException {
         Collection<String> result = new ArrayList<String>();
         filter = new Filter(filter);
@@ -124,8 +89,8 @@ public class SqliteConnector {
             ) order by conceptId, language  
         """;
 
-        String whereConcept = buildWhere("concept", filter);
-        String whereWord = buildWhere("word", filter);
+        String whereConcept = filter.buildWhere("concept");
+        String whereWord = filter.buildWhere("word");
         ResultSet rs = executeQuery(query, columnName, whereConcept, whereWord);
         while (rs.next()) {
             result.add(rs.getString(columnName));
@@ -137,7 +102,7 @@ public class SqliteConnector {
         filter = new Filter(filter);
         Collection<String> languages = filter.getLanguages();
         if (languages.size() > 0) languages.add("*");
-        String where = buildWhere(entityName, filter);
+        String where = filter.buildWhere(entityName);
 		System.err.println("XXXX " + entityName + " " + where);
         ResultSet rs = executeQuery("select count(*) as n from %s where %s order by language", entityName, where);
         rs.next();
@@ -151,7 +116,7 @@ public class SqliteConnector {
         Map<String, Long> results = new LinkedHashMap<>();
 
         String query = "select language, count(*) as n from word where %s group by language";
-        String where = buildWhere("word", filter);
+        String where = filter.buildWhere("word");
         ResultSet rs = executeQuery(query, where);
 
         while (rs.next()) {
@@ -167,7 +132,7 @@ public class SqliteConnector {
         Collection<String> results = new ArrayList<>();
 
         String query = "select distinct date from concept where date is not null and %s";
-        String where = buildWhere("concept", filter);
+        String where = filter.buildWhere("concept");
         ResultSet rs = executeQuery(query, where);
 
         while (rs.next()) {

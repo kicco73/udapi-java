@@ -7,6 +7,7 @@ import java.util.Map;
 
 import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.lemon.resource.Global;
+import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.stores.MemoryStore;
 
@@ -14,6 +15,7 @@ public class FilterStore extends MemoryStore {
 	private SqliteConnector db = new SqliteConnector();
 	private MetadataManager metadataManager = new MetadataManager(db);
 	private SparqlAssembler sparqlAssembler;
+	private PolysemicSupport polysemicSupport = new PolysemicSupport(db);
 	private Filter filter = new Filter();
 
 	@Override
@@ -66,6 +68,12 @@ public class FilterStore extends MemoryStore {
 		super(namespace, creator, chunkSize);
 		sparqlAssembler = new SparqlAssembler(db, output);
 		db.connect(fileName);
+	}
+
+	@Override
+	public void store(ResourceInterface resource) throws Exception  {
+		super.store(resource);
+		polysemicSupport.markPolysemicGroups();
 	}
 
 	@Override

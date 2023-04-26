@@ -4,11 +4,14 @@ import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 public class Filter {
 	private Map<String, Collection<String>> map = new HashMap<>();
 	private boolean noConcepts = false;
 	private boolean noSenses = false;
+	private boolean noPolysemicGroups = false;
 	private Collection<String> excludeIds = new HashSet<>();
 
 	private Collection<String> cloneCollection(Collection<String> original) {
@@ -26,11 +29,14 @@ public class Filter {
 	}
 	
 	public Filter(Filter other) {
-		noConcepts = other.noConcepts;
 		setLanguages(other.getLanguages());
 		setDates(other.getDates());
 		setSubjectFields(other.getSubjectFields());
+
 		excludeIds = cloneCollection(other.excludeIds);
+		noConcepts = other.noConcepts;
+		noSenses = other.noSenses;
+		noPolysemicGroups = other.noPolysemicGroups;
 	}
 
 	public void setLanguages(Collection<String> languages) {
@@ -80,6 +86,14 @@ public class Filter {
 		this.noSenses = noSenses;
 	}
 
+	public boolean isNoPolysemicGroups() {
+		return noPolysemicGroups;
+	}
+
+	public void setNoPolysemicGroups(boolean noPolysemicGroups) {
+		this.noPolysemicGroups = noPolysemicGroups;
+	}
+
 	public Collection<String> getExcludeIds() {
 		return excludeIds;
 	}
@@ -88,4 +102,39 @@ public class Filter {
 		excludeIds.clear();
 		excludeIds.addAll(ids);
 	}
+
+    private String whereValueInList(String entityName, String columnName, Collection<String> values) {
+        String where = "";
+        String op = "and";
+        if (values == null) return where;
+
+        if (values.contains(null)) {
+            where += String.format(" %s %s.%s IS null", op, entityName, columnName);
+            values.remove(null);
+            op = "or";
+        }
+
+        if (values.size() > 0) {
+            String listString = values.stream().collect(Collectors.joining("', '"));
+            where += String.format(" %s %s.%s in ('%s')", op, entityName, columnName, listString);  
+        }
+        return where;
+    }
+
+    public String buildWhere(String entityName) {
+        String where = "true";
+        for (Entry<String, Collection<String>> clause: getMap().entrySet()) {
+            where += whereValueInList(entityName, clause.getKey(), clause.getValue());          
+        }
+        
+        String excludeClause = whereValueInList(entityName, "rowid", getExcludeIds());
+        if (excludeClause.length() > 0) {
+            where += String.format(" and not (true %s)", excludeClause); // TODO:  
+		}
+
+		if (isNoPolysemicGroups()) {
+			where += " and polysemicGroup is null";
+		}
+		return where;
+    }
 }

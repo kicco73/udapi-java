@@ -81,7 +81,7 @@ public class TermSec {
 				object.put("rdf:seeAlso", SPARQLFormatter.formatObjectWithUrlIfPossible(crossReference));
 	
 			SenseInterface sense = new TbxSense(word, object);
-			word.addSense(sense);
+			word.getSenses().add(sense);
 			
 		} else {
 			if (source != null)
@@ -105,7 +105,7 @@ public class TermSec {
 	private void addDefaultSenseIfNoSenseFound(Word word) {
 		if (word.getSenses().size() == 0) {
 			SenseInterface defaultSense = new Sense(word, "_default", null);
-			word.addSense(defaultSense);
+			word.getSenses().add(defaultSense);
 		}
 	}
 

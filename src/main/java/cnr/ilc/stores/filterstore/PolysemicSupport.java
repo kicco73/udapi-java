@@ -32,30 +32,43 @@ public class PolysemicSupport {
         return word;
     }
 
-    private Collection<WordInterface> getPolysemicWords(Filter filter) throws SQLException {
-        Collection<WordInterface> results = new ArrayList<>();
-
+    public void markPolysemicGroups() throws SQLException {
         String query = """
-                select * from word where %s 
+                select rowid, lemma, language from word 
                 group by lemma, language having count(*) > 1
         """;
-        String where = db.buildWhere("word", filter);
+
+        String update = "update word set polysemicGroup = %d where lemma = '%s' and language ='%s' ";
+
+        ResultSet rs = db.executeQuery(query);
+        while (rs.next()) {
+            int groupId = rs.getInt("rowid");
+            String lemma = rs.getString("lemma");
+            String language = rs.getString("language");
+            db.executeUpdate(update, groupId, lemma, language);
+        }
+    }
+
+    private Collection<Integer> listPolysemicGroups(Filter filter) throws SQLException {
+        Collection<Integer> results = new ArrayList<>();
+
+        String query = """
+                select distinct polysemicGroup from word where polysemicGroup is not null and %s 
+        """;
+        String where = filter.buildWhere("word");
         ResultSet rs = db.executeQuery(query, where);
         while (rs.next()) {
-            WordInterface word = hydrateWord(rs);
-
-            System.err.println("POLYSEMIC WORD: " +  word.getLemma());
-            results.add(word);
+            results.add(rs.getInt(0));
         }
         return results;
     }
 
-    private Collection<WordInterface> getPolysemicWordSet(WordInterface polysemicWord, Filter filter) throws SQLException {
+    private Collection<WordInterface> getPolysemicGroup(int groupId, Filter filter) throws SQLException {
         Collection<WordInterface> results = new ArrayList<>();
 
-        String query = "select * from word where %s and lemma='%s' and language='%s'";
-        String where = db.buildWhere("word", filter);
-        ResultSet rs = db.executeQuery(query, where, polysemicWord.getLemma(), polysemicWord.getLanguage());
+        String query = "select * from word where %s and polysemicGroup = %d";
+        String where = filter.buildWhere("word");
+        ResultSet rs = db.executeQuery(query, where, groupId);
         while (rs.next()) {
             WordInterface word = hydrateWord(rs);
             results.add(word);
@@ -67,49 +80,31 @@ public class PolysemicSupport {
         Metadata result = new Metadata();
 
         String query = """
-            select lemma, conceptId, language from word where lemma || "@" || language in (
-                select lemma || "@" || language from word where %s 
-                group by lemma, language having count(*) > 1
-            ) order by lemma, language
+            select polysemicGroup, lemma, conceptId, language from word 
+                where polysemicGroup is not null and %s 
+                order by lemma, language
         """;
-        String where = db.buildWhere("word", filter);
+        String where = filter.buildWhere("word");
         ResultSet rs = db.executeQuery(query, where);
         while (rs.next()) {
             Map<String,String> term = new HashMap<>();
             term.put("t", rs.getString("lemma"));
             term.put("c", rs.getString("conceptId"));
             term.put("l", rs.getString("language"));
+            term.put("g", rs.getString("polysemicGroup"));
             result.addToList("*", term);
         }
         return result.getObject("*");
     }
 
-    public Filter filterOut(Collection<WordInterface> excludeWords, Filter filter) {
-        Filter newFilter = new Filter(filter);
-        Collection<String> excludedIds = new ArrayList<>();
-        for (WordInterface excludeWord: excludeWords) {
-            PojoWord pojoWord = (PojoWord) excludeWord;
-            excludedIds.add(String.format("%d", pojoWord.rowid));
-        }
-        System.err.println("NEW FILTER1 " + excludeWords);
-        newFilter.setExcludeIds(excludedIds);
-        System.err.println("NEW FILTER " + newFilter.getExcludeIds());
-        return newFilter;
-    }
-
-    public Collection<Collection<WordInterface>> findAndResolvePolysemicEntries(Filter filter) throws SQLException {
-        Collection<WordInterface> replacedWords = new ArrayList<>();
+    public Collection<WordInterface> findAndResolvePolysemicEntries(Filter filter) throws SQLException {
         Collection<WordInterface> replacementWords = new ArrayList<>();
-        Collection<Collection<WordInterface>> result = new ArrayList<>();
-        result.add(replacedWords);
-        result.add(replacementWords);
 
-		for (WordInterface word: getPolysemicWords(filter)) {
-			Collection<WordInterface> wordSet = getPolysemicWordSet(word, filter);
-            replacedWords.addAll(wordSet);
+		for (int groupId: listPolysemicGroups(filter)) {
+			Collection<WordInterface> wordSet = getPolysemicGroup(groupId, filter);
             Collection<WordInterface> replacementSet = resolver.resolve(wordSet);
             replacementWords.addAll(replacementSet);
 		}
-        return result;
+        return replacementWords;
     }
 }   

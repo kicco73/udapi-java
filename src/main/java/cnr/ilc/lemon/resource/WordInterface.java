@@ -17,6 +17,5 @@ public interface WordInterface {
 	public String getSerialised();
 	public String getFQName();
 	public String getCreator();
-	public void addSense(SenseInterface sense);
 	public Collection<SenseInterface> getSenses();
 }

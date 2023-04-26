@@ -47,11 +47,6 @@ public class PojoWord implements WordInterface {
 	}
 
 	@Override
-	public void addSense(SenseInterface sense) {
-		senses.add(sense);
-	}
-
-	@Override
 	public Metadata getMetadata() {
 		throw new UnsupportedOperationException("Unimplemented method 'getMetadata'");
 	}

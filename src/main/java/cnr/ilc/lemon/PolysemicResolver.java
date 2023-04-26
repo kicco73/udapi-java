@@ -19,7 +19,7 @@ public class PolysemicResolver {
 			String senseId = String.format("poly%s", ++n);
 			System.err.println(String.format("SONO ONE WORD: senseID %s", senseId));
 			SenseInterface sense = new Sense(ref, senseId, null);
-			ref.addSense(sense);
+			ref.getSenses().add(sense);
 		}
 		return ref;
 	}

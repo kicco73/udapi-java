@@ -76,13 +76,12 @@ public class SparqlAssembler {
 	}
 
 	private void assembleWord(Filter filter) throws Exception {
-		Collection<Collection<WordInterface>> processedEntries = ps.findAndResolvePolysemicEntries(filter);
-		Iterator<Collection<WordInterface>> iter = processedEntries.iterator();
-		Collection<WordInterface> removedEntries = iter.next();
-		Collection<WordInterface> replacingEntries = iter.next();
+		Collection<WordInterface> replacingEntries = ps.findAndResolvePolysemicEntries(filter);
 
-		Filter filterOutReplacedWords = ps.filterOut(removedEntries, filter);
-		assembleEntity("word", filterOutReplacedWords);
+		Filter filterOutPolysemicGroups = new Filter(filter);
+		filterOutPolysemicGroups.setNoPolysemicGroups(true);
+
+		assembleEntity("word", filterOutPolysemicGroups);
 		assembleWordReplacements(replacingEntries);
 	}
 

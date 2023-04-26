@@ -22,7 +22,7 @@ public class MetadataManager {
 		filter = new Filter(filter);
 		HashSet<String> langs = (HashSet<String>) filter.getLanguages();
 		if (langs.size() > 0) langs.add("*");
-		String where = db.buildWhere(entityName, filter);
+		String where = filter.buildWhere(entityName);
 		ResultSet rs = db.executeQuery("select %s from %s where %s", columnName, entityName, where);
 		while (rs.next()) {
 			results++;

@@ -104,11 +104,6 @@ public class Word implements WordInterface {
 	}
 
 	@Override
-	public void addSense(SenseInterface sense) {
-		senses.add(sense);
-	}
-
-	@Override
 	public Collection<SenseInterface> getSenses() {
 		return senses;
 	}

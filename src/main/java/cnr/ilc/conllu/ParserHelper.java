@@ -75,10 +75,10 @@ public class ParserHelper {
         String definition = misc.get("DEFINITION").replaceAll("\"", "");
         Map<String, String> senses = getMapFromFieldString(definition);
         if (senses.size() > 0)
-            word.senses.clear();
+            word.getSenses().clear();
         for (Entry<String, String> sense: senses.entrySet()) {
             SenseInterface s = new Sense(word, sense.getKey(), sense.getValue());
-            word.addSense(s);
+            word.getSenses().add(s);
         }
     }
 
@@ -154,7 +154,7 @@ public class ParserHelper {
                     lemmas.put(key, word);
 
                     SenseInterface defaultSense = new Sense(word, "", null);
-                    word.addSense(defaultSense);
+                    word.getSenses().add(defaultSense);
 
                     if (lemma.equals(writtenRep)) {
                         form = word.canonicalForm;
