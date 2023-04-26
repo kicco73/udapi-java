@@ -1,8 +1,8 @@
 package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
-import cnr.ilc.rut.resource.Concept;
-import cnr.ilc.rut.resource.Word;
+import cnr.ilc.lemon.resource.Concept;
+import cnr.ilc.lemon.resource.Word;
 import cnr.ilc.sparql.SPARQLFormatter;
 
 import java.util.Collection;
@@ -20,16 +20,17 @@ public class LangSec {
 		String definition = Nodes.getTextOfTag(langSec, "definition");
 		String source = Nodes.getTextOfTag(langSec, "source");
 		String externalCrossReference = Nodes.getTextOfTag(langSec, "externalCrossReference");
+		String FQName = concept.getFQName();
 
 		if (note != null) {
-			concept.triples.addStringWithLanguage(concept.FQName, "skos:note", note, language);		
+			concept.triples.addStringWithLanguage(FQName, "skos:note", note, language);		
 		}
 		
 		if (definition == null) return;
 		concept.setDefinition(definition, language);
 
 		if (source == null && externalCrossReference == null) {
-			concept.triples.addStringWithLanguage(concept.FQName, "skos:definition", definition, language);
+			concept.triples.addStringWithLanguage(FQName, "skos:definition", definition, language);
 		} else {
 			Map<String, String> object = new HashMap<>();
 			object.put("rdf:value", SPARQLFormatter.formatObjectWithLanguage(definition, language));
@@ -40,7 +41,7 @@ public class LangSec {
 			if (externalCrossReference != null) 
 				object.put("dct:identifier", SPARQLFormatter.formatObjectWithUrlIfPossible(externalCrossReference));
 	
-			concept.triples.add(concept.FQName, "skos:definition", object, language);
+			concept.triples.add(FQName, "skos:definition", object, language);
 		}
 	}
 

@@ -19,9 +19,9 @@ import java.util.Map;
 import org.json.simple.JSONValue;
 
 import cnr.ilc.conllu.ConlluParser;
+import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.Services;
-import cnr.ilc.rut.resource.ResourceInterface;
 import cnr.ilc.rut.utils.DateProvider;
 import cnr.ilc.rut.utils.IdGenerator;
 import cnr.ilc.rut.utils.Logger;
@@ -102,6 +102,9 @@ public class Main {
                     break;
                 case "--filter-no-concepts":
                     filter.setNoConcepts(true); 
+                    break;
+                    case "--filter-no-senses":
+                    filter.setNoSenses(true); 
                     break;
                 case "-j":
                 case "--json":

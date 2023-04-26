@@ -36,7 +36,8 @@ class ApiController(controller.Controller):
 			subject_fields = request.values.getlist('subjectFields')
 			dates = request.values.getlist('dates')
 			no_concepts = request.values.get('noConcepts', default=False, type=json.loads)
-			operation = services.Assemble(resource_dir=resource_id, languages=languages, subject_fields=subject_fields, dates=dates, no_concepts=no_concepts)
+			no_senses = request.values.get('noSenses', default=False, type=json.loads)
+			operation = services.Assemble(resource_dir=resource_id, languages=languages, subject_fields=subject_fields, dates=dates, no_concepts=no_concepts, no_senses=no_senses)
 			content = operation.execute()
 			return Response(content, mimetype='application/sparql-query')
 

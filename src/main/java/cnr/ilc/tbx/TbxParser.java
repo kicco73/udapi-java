@@ -2,12 +2,13 @@ package cnr.ilc.tbx;
 import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 
+import cnr.ilc.lemon.resource.Concept;
+import cnr.ilc.lemon.resource.ConceptInterface;
+import cnr.ilc.lemon.resource.Global;
+import cnr.ilc.lemon.resource.ResourceInterface;
+import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.RutException;
-import cnr.ilc.rut.resource.Concept;
-import cnr.ilc.rut.resource.Global;
-import cnr.ilc.rut.resource.ResourceInterface;
-import cnr.ilc.rut.resource.Word;
 import cnr.ilc.rut.utils.CountingInputStream;
 import cnr.ilc.rut.utils.Logger;
 
@@ -22,7 +23,7 @@ import java.util.Map.Entry;
 public class TbxParser implements ParserInterface, ResourceInterface {
 	private Document document;
 	private ConceptEntry conceptEntryParser = new ConceptEntry();
-	private Collection<Concept> concepts = new ArrayList<>();
+	private Collection<ConceptInterface> concepts = new ArrayList<>();
 	private Map<String, String> subjectFields = new LinkedHashMap<>();
 	private Map<String, String> lexicons = new LinkedHashMap<>();
 	private String creator;
@@ -123,12 +124,12 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 	}
 
 	@Override
-	public Collection<Concept> getConcepts() {
+	public Collection<ConceptInterface> getConcepts() {
 		return concepts;
 	}
 
 	@Override
-	public Collection<Word> getWords() {
+	public Collection<WordInterface> getWords() {
 		return null;
 	}
 

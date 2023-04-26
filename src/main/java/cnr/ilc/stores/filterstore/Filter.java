@@ -8,6 +8,8 @@ import java.util.Map;
 public class Filter {
 	private Map<String, Collection<String>> map = new HashMap<>();
 	private boolean noConcepts = false;
+	private boolean noSenses = false;
+	private Collection<String> excludeIds = new HashSet<>();
 
 	private Collection<String> cloneCollection(Collection<String> original) {
 		Collection<String> clone = new HashSet<>();
@@ -28,6 +30,7 @@ public class Filter {
 		setLanguages(other.getLanguages());
 		setDates(other.getDates());
 		setSubjectFields(other.getSubjectFields());
+		excludeIds = cloneCollection(other.excludeIds);
 	}
 
 	public void setLanguages(Collection<String> languages) {
@@ -43,7 +46,6 @@ public class Filter {
 		if (dates == null) map.put("date", new HashSet<>());
 		else map.put("date", cloneCollection(dates));
 	}
-
 
 	public Collection<String> getDates() {
 		return map.get("date");
@@ -68,5 +70,22 @@ public class Filter {
 
 	public Map<String, Collection<String>> getMap() {
 		return map;
+	}
+
+	public boolean isNoSenses() {
+		return noSenses;
+	}
+
+	public void setNoSenses(boolean noSenses) {
+		this.noSenses = noSenses;
+	}
+
+	public Collection<String> getExcludeIds() {
+		return excludeIds;
+	}
+
+	public void setExcludeIds(Collection<String> ids) {
+		excludeIds.clear();
+		excludeIds.addAll(ids);
 	}
 }

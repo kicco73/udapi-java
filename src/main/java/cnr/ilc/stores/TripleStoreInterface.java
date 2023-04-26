@@ -2,7 +2,7 @@ package cnr.ilc.stores;
 
 import java.util.Map;
 
-import cnr.ilc.rut.resource.ResourceInterface;
+import cnr.ilc.lemon.resource.ResourceInterface;
 
 public interface TripleStoreInterface {
 	public void store(ResourceInterface resource) throws Exception;

@@ -1,7 +1,7 @@
 package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
-import cnr.ilc.rut.resource.Concept;
+import cnr.ilc.lemon.resource.Concept;
 import cnr.ilc.rut.utils.IdGenerator;
 import cnr.ilc.rut.utils.Logger;
 
@@ -43,7 +43,7 @@ public class ConceptEntry {
 			String link = entry.getValue();
 			String content = Nodes.getTextOfTag(root, key);
 			if (content != null) {
-				concept.triples.addUrlOrString(concept.FQName, link, content);
+				concept.triples.addUrlOrString(concept.getFQName(), link, content);
 				if (key.equals("definition"))
 					concept.setDefinition(content, "*");
 			}
@@ -67,11 +67,11 @@ public class ConceptEntry {
 		NodeList dates = conceptEntry.getElementsByTagNameNS("*", "date");
 		if (dates.getLength() == 0) return;
 		if (dates.getLength() > 1) 
-			Logger.warn("Concept %s has more than one date, picking the first one", concept.id); 
+			Logger.warn("Concept %s has more than one date, picking the first one", concept.getId()); 
 		
 		Element dateElement = (Element)dates.item(0);
 		String date = dateElement.getTextContent();
-		concept.metadata.putInMap("*", date, "concepts", concept.id, "date");
+		concept.getMetadata().putInMap("*", date, "concepts", concept.getId(), "date");
 		concept.date = date;
 	}
 

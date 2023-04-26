@@ -13,7 +13,7 @@ import java.util.Map;
 import org.json.simple.JSONObject;
 
 import cnr.ilc.conllu.ConlluParser;
-import cnr.ilc.rut.resource.ResourceInterface;
+import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.rut.utils.IdGenerator;
 import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.sparql.SPARQLWriter;

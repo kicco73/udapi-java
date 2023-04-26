@@ -140,6 +140,8 @@
 			</conceptEntry>
 
 			<conceptEntry id="c2">
+				<min:subjectField>e-caz</min:subjectField>
+				<date>2022-11-12</date>
 
 				<langSec xml:lang="fr">
 					<descripGrp>

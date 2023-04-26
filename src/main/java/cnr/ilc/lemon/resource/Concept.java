@@ -1,25 +1,24 @@
-package cnr.ilc.rut.resource;
+package cnr.ilc.lemon.resource;
 
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
 
-import cnr.ilc.rut.utils.IdGenerator;
 import cnr.ilc.rut.utils.Metadata;
 import cnr.ilc.sparql.TripleSerialiser;
 
-public class Concept {
-	final public String id;
-	final public String FQName;
-	final public Collection<Word> words = new ArrayList<>();
+public class Concept implements ConceptInterface {
 	final public TripleSerialiser triples = new TripleSerialiser();
+	public String date = null;
+
+	final private String id;
+	final private String FQName;
+	final private Collection<WordInterface> words = new ArrayList<>();
 	final private Map<String,String> definition = new HashMap<>();
+	final private Metadata metadata = new Metadata();
 	private String subjectField = null;
 	private String subjectFieldFQN = null;
-	final public Metadata metadata = new Metadata();
-	public String date = null;
-	static IdGenerator idGenerator = new IdGenerator();
 
 	public Concept(String conceptId) {
 		id = conceptId;
@@ -32,8 +31,9 @@ public class Concept {
 	public Word newWord(String lemma, String partOfSpeech, String language, String lexiconFQN, String creator) {
 		Word word = new Word(lemma, partOfSpeech, language, this, lexiconFQN, "ontolex:LexicalEntry", creator);
 		words.add(word);
+
 		if (metadata.getObject(language, "concepts", id, "languages", language, "label") == null)
-			metadata.putInMap(language, word.canonicalForm.text, "concepts", id, "languages", language, "label");
+			metadata.putInMap(language, word.getLemma(), "concepts", id, "languages", language, "label");
 
 		return word;
 	}
@@ -62,5 +62,39 @@ public class Concept {
 
 	public String getSubjectFieldFQN() {
 		return subjectFieldFQN;
+	}
+
+	@Override
+	public String getId() {
+		return id;
+	}
+
+	@Override
+	public String getFQName() {
+		return FQName;
+	}
+	@Override
+	public String getDate() {
+		return date;
+	}
+
+	@Override
+	public String getSerialised(String language) {
+		return triples.serialise(language);
+	}
+
+	@Override
+	public String getSerialised() {
+		return triples.serialise();
+	}
+
+	@Override
+	public Metadata getMetadata() {
+		return metadata;
+	}
+
+	@Override
+	public Collection<WordInterface> getWords() {
+		return words;
 	}
 }

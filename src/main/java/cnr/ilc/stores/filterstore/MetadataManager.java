@@ -14,6 +14,7 @@ import cnr.ilc.rut.utils.Metadata;
 @SuppressWarnings("unchecked")
 public class MetadataManager {
 	private SqliteConnector db;
+	private PolysemicSupport ps;
 	private JSONParser jsonParser = new JSONParser();
 
 	private int mergeJson(Metadata metadata, String columnName, String entityName, Filter filter) throws Exception {
@@ -46,6 +47,7 @@ public class MetadataManager {
 
 	public MetadataManager(SqliteConnector db) {
 		this.db = db;
+		this.ps = new PolysemicSupport(db);
 	}
 
 	public Map<String,Object> getMetadata(Filter filter) throws Exception {
@@ -61,7 +63,7 @@ public class MetadataManager {
 		metadata.putInMap("*", numberOfTerms, "summary", "numberOfTerms");
 		metadata.putInMap("*", db.selectTermStats(filter), "summary", "languages");
 		metadata.putInMap("*", db.selectConceptDates(filter), "summary", "dates");
-		metadata.putInMap("*", db.selectPolysemicEntries(filter), "summary", "polysemic");
+		metadata.putInMap("*", ps.selectPolysemicEntries(filter), "summary", "polysemic");
 
 		return metadata.getMap("*");
 	}

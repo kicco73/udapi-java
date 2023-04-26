@@ -14,18 +14,18 @@ import cnr.ilc.conllu.core.io.DocumentReader;
 import cnr.ilc.conllu.core.io.DocumentWriter;
 import cnr.ilc.conllu.core.io.impl.CoNLLUReader;
 import cnr.ilc.conllu.core.io.impl.CoNLLUWriter;
+import cnr.ilc.lemon.resource.ConceptInterface;
+import cnr.ilc.lemon.resource.Global;
+import cnr.ilc.lemon.resource.ResourceInterface;
+import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.rut.ParserInterface;
-import cnr.ilc.rut.resource.Concept;
-import cnr.ilc.rut.resource.Global;
-import cnr.ilc.rut.resource.ResourceInterface;
-import cnr.ilc.rut.resource.Word;
 
 public class ConlluParser implements ParserInterface, ResourceInterface {
     private Document document;
     private String language;
     private String creator;
     private String namespace;
-    private Collection<Word> words;
+    private Collection<WordInterface> words;
     Global global = new Global();
 
     public ConlluParser(InputStream inputStream, String creator, String language) throws Exception {
@@ -69,12 +69,12 @@ public class ConlluParser implements ParserInterface, ResourceInterface {
     }
 
     @Override
-    public Collection<Concept> getConcepts() {
+    public Collection<ConceptInterface> getConcepts() {
         return null;
     }
 
     @Override
-    public Collection<Word> getWords() {
+    public Collection<WordInterface> getWords() {
         return words;
     }
 }

@@ -12,14 +12,17 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import cnr.ilc.conllu.core.*;
-import cnr.ilc.rut.resource.Form;
-import cnr.ilc.rut.resource.Word;
+import cnr.ilc.lemon.resource.Form;
+import cnr.ilc.lemon.resource.Sense;
+import cnr.ilc.lemon.resource.SenseInterface;
+import cnr.ilc.lemon.resource.Word;
+import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.rut.utils.Logger;
 
 public class ParserHelper {
 
-    private static Form createOtherForm(Word word, String writtenRep) {
-        String FQName = String.format("%s_form_%s", word.FQName, writtenRep);
+    private static Form createOtherForm(WordInterface word, String writtenRep) {
+        String FQName = String.format("%s_form_%s", word.getFQName(), writtenRep);
         Form form = new Form(FQName, writtenRep);
         return form;
     }
@@ -33,16 +36,17 @@ public class ParserHelper {
             String key = field.group("key");
             String value = field.group("value");
             output.put(key, value);
-        }    
+        }
 
         return output;
     }
 
-    private static Map<String, String> compileField(String fieldString, Map<String, String> keyMap, Map<String, String> valueMap) {
+    private static Map<String, String> compileField(String fieldString, Map<String, String> keyMap,
+            Map<String, String> valueMap) {
         Map<String, String> output = new HashMap<>();
         Map<String, String> input = getMapFromFieldString(fieldString);
 
-        for(Entry<String,String> entry: input.entrySet()) {
+        for (Entry<String, String> entry : input.entrySet()) {
             String mappedKey = keyMap.get(entry.getKey());
             if (mappedKey == null) {
                 Logger.warn(String.format("Key %s not defined, skipping", entry.getKey()));
@@ -55,55 +59,63 @@ public class ParserHelper {
                 Logger.warn(String.format("Value %s not defined, using %s", value, mappedValue));
             }
             output.put(mappedKey, mappedValue);
-        }    
+        }
 
         return output;
     }
-    private static void compileMisc(String miscString, Word word) {        
-        if (miscString != null  && miscString.length() > 0)
-            word.triples.addString(word.FQName, "skos:note", miscString);
-            
-        Map<String,String> misc = getMapFromFieldString(miscString);
-        if (!misc.containsKey("SENSE")) return;
-    
+
+    private static void compileMisc(String miscString, Word word) {
+        if (miscString != null && miscString.length() > 0)
+            word.triples.addString(word.getFQName(), "skos:note", miscString);
+
+        Map<String, String> misc = getMapFromFieldString(miscString);
+        if (!misc.containsKey("SENSE"))
+            return;
+
         String definition = misc.get("DEFINITION").replaceAll("\"", "");
-        Map<String,String> senses = getMapFromFieldString(definition);
-        word.senses.putAll(senses);
+        Map<String, String> senses = getMapFromFieldString(definition);
+        if (senses.size() > 0)
+            word.senses.clear();
+        for (Entry<String, String> sense: senses.entrySet()) {
+            SenseInterface s = new Sense(word, sense.getKey(), sense.getValue());
+            word.addSense(s);
+        }
     }
 
     private static void compileFeatures(String featuresString, Form form) {
         final Map<String, String> keyMap = Stream.of(new String[][] {
-            {"Definite", "lexinfo:definite"},
-            {"Degree", "lexinfo:degree"},
-            {"Gender", "lexinfo:gender"},
-            {"Mood", "lexinfo:mood"},
-            {"Neg",	"lexinfo:negative"},
-            {"Number", "lexinfo:number"},
-            {"Person", "lexinfo:person"},
-            {"Tense", "lexinfo:tense"},
-            {"VerbForm", "lexinfo:verbForm"},
+                { "Definite", "lexinfo:definite" },
+                { "Degree", "lexinfo:degree" },
+                { "Gender", "lexinfo:gender" },
+                { "Mood", "lexinfo:mood" },
+                { "Neg", "lexinfo:negative" },
+                { "Number", "lexinfo:number" },
+                { "Person", "lexinfo:person" },
+                { "Tense", "lexinfo:tense" },
+                { "VerbForm", "lexinfo:verbForm" },
         }).collect(Collectors.toMap(data -> data[0], data -> data[1]));
 
         final Map<String, String> valueMap = Stream.of(new String[][] {
-            {"1", "lexinfo:firstPerson"},
-            {"2", "lexinfo:secondPerson"},
-            {"3", "lexinfo:thirdPerson"},
-            {"Fem", "lexinfo:feminine"},
-            {"Ger", "lexinfo:gerund"},
-            {"Imp", "lexinfo:imperative"},
-            {"Ind", "lexinfo:indicative"},
-            {"Inf", "lexinfo:infinite"},
-            {"Masc", "lexinfo:masculine"},
-            {"Past", "lexinfo:past"},
-            {"Plur", "lexinfo:plural"},
-            {"Sing", "lexinfo:singular"},
+                { "1", "lexinfo:firstPerson" },
+                { "2", "lexinfo:secondPerson" },
+                { "3", "lexinfo:thirdPerson" },
+                { "Fem", "lexinfo:feminine" },
+                { "Ger", "lexinfo:gerund" },
+                { "Imp", "lexinfo:imperative" },
+                { "Ind", "lexinfo:indicative" },
+                { "Inf", "lexinfo:infinite" },
+                { "Masc", "lexinfo:masculine" },
+                { "Past", "lexinfo:past" },
+                { "Plur", "lexinfo:plural" },
+                { "Sing", "lexinfo:singular" },
         }).collect(Collectors.toMap(data -> data[0], data -> data[1]));
-        
-        Map<String,String> features = compileField(featuresString, keyMap, valueMap);
-        form.features.putAll(features);   
+
+        Map<String, String> features = compileField(featuresString, keyMap, valueMap);
+        form.features.putAll(features);
     }
 
-    static public Collection<Word> compileLexicon(Document document, String namespace, String language, String lexiconFQN, String creator) {
+    static public Collection<WordInterface> compileLexicon(Document document, String namespace, String language,
+            String lexiconFQN, String creator) {
 
         final Map<String, String> parts = Stream.of(new String[][] {
                 { "ADV", "lexinfo:adverb" },
@@ -113,7 +125,7 @@ public class ParserHelper {
                 { "PROPN", "lexinfo:properNoun" },
         }).collect(Collectors.toMap(data -> data[0], data -> data[1]));
 
-        Map<String, Word> lemmas = new HashMap<>();
+        Map<String, WordInterface> lemmas = new HashMap<>();
         List<Sentence> sentences = document.getSentences();
 
         for (Sentence sentence : sentences) {
@@ -123,9 +135,9 @@ public class ParserHelper {
                 if (mwt.isPresent() && mwt.get().getTokens().get(0) == token)
                     continue;
 
-                if (!parts.containsKey(token.getUpos())) 
+                if (!parts.containsKey(token.getUpos()))
                     continue;
-                    
+
                 String lemma = token.getLemma().toLowerCase();
                 String writtenRep = token.getForm().toLowerCase();
                 String partOfSpeech = parts.get(token.getUpos());
@@ -133,13 +145,16 @@ public class ParserHelper {
                 String misc = token.getMisc();
 
                 String key = String.format("%s+%s", lemma, partOfSpeech);
-                Word word = lemmas.get(key);
+                Word word = (Word) lemmas.get(key);
                 Form form = null;
                 boolean needsCompile = true;
 
                 if (word == null) {
                     word = new Word(lemma, partOfSpeech, language, null, lexiconFQN, "ontolex:Word", creator);
                     lemmas.put(key, word);
+
+                    SenseInterface defaultSense = new Sense(word, "", null);
+                    word.addSense(defaultSense);
 
                     if (lemma.equals(writtenRep)) {
                         form = word.canonicalForm;
@@ -155,13 +170,14 @@ public class ParserHelper {
                     form = word.canonicalForm;
                 }
 
-            if (needsCompile) {
-                compileMisc(misc, word);
-                compileFeatures(features, form);
+                if (needsCompile) {
+                    compileMisc(misc, word);
+                    compileFeatures(features, form);
+                }
+                token.addMisc("annotation", namespace + form.FQName.substring(1));
             }
-            token.addMisc("annotation", namespace + form.FQName.substring(1));
         }
-        }
+
         return lemmas.values();
     }
 }

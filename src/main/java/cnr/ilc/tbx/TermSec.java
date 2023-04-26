@@ -1,9 +1,11 @@
 package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
+import cnr.ilc.lemon.resource.Concept;
+import cnr.ilc.lemon.resource.Sense;
+import cnr.ilc.lemon.resource.SenseInterface;
+import cnr.ilc.lemon.resource.Word;
 import cnr.ilc.rut.RutException;
-import cnr.ilc.rut.resource.Concept;
-import cnr.ilc.rut.resource.Word;
 import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.sparql.SPARQLFormatter;
 
@@ -33,7 +35,7 @@ public class TermSec {
 				return;
 			}
 			
-			word.triples.add(word.FQName, "lexinfo:normativeAuthorization", translatedStatus);
+			word.triples.add(word.getFQName(), "lexinfo:normativeAuthorization", translatedStatus);
 		}
 	}
 
@@ -52,7 +54,7 @@ public class TermSec {
 			String translatedType = termTypes.get(termType);
 			if (translatedType == null) 
 				throw new RutException(String.format("Unknown term type: %s", translatedType));
-				word.triples.add(word.FQName, "lexinfo:termType", translatedType);
+				word.triples.add(word.getFQName(), "lexinfo:termType", translatedType);
 		}
 	}
 
@@ -78,24 +80,32 @@ public class TermSec {
 			if (crossReference != null) 
 				object.put("rdf:seeAlso", SPARQLFormatter.formatObjectWithUrlIfPossible(crossReference));
 	
-			word.triples.add(word.FQName+"_sense", "ontolex:usage", object, language);
+			SenseInterface sense = new TbxSense(word, object);
+			word.addSense(sense);
 			
 		} else {
 			if (source != null)
-				word.triples.addUrlOrString(word.FQName, "dct:source", source);
+				word.triples.addUrlOrString(word.getFQName(), "dct:source", source);
 
 			if (externalCrossReference != null)
-				word.triples.addUrlOrString(word.FQName, "rdf:seeAlso", externalCrossReference);
+				word.triples.addUrlOrString(word.getFQName(), "rdf:seeAlso", externalCrossReference);
 
 			if (crossReference != null)
-				word.triples.addUrlOrString(word.FQName, "rdf:seeAlso", crossReference);
+				word.triples.addUrlOrString(word.getFQName(), "rdf:seeAlso", crossReference);
 		}
 	}
 
 	private void parseNote(Element termSec, String language) {
 		String note = Nodes.getTextOfTag(termSec, "note");
 		if (note != null) {
-			word.triples.addStringWithLanguage(word.FQName, "skos:note", note, language);
+			word.triples.addStringWithLanguage(word.getFQName(), "skos:note", note, language);
+		}
+	}
+
+	private void addDefaultSenseIfNoSenseFound(Word word) {
+		if (word.getSenses().size() == 0) {
+			SenseInterface defaultSense = new Sense(word, "_default", null);
+			word.addSense(defaultSense);
 		}
 	}
 
@@ -118,6 +128,8 @@ public class TermSec {
 		parseAdministrativeStatus(termSec);
 		parseDescripGrp(termSec, language);
 		parseNote(termSec, language);
+
+		addDefaultSenseIfNoSenseFound(word);
 
 		return word;
 	}

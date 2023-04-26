@@ -1,4 +1,4 @@
-package cnr.ilc.rut.resource;
+package cnr.ilc.lemon.resource;
 
 import cnr.ilc.rut.utils.Metadata;
 import cnr.ilc.sparql.TripleSerialiser;

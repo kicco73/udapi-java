@@ -2,9 +2,10 @@
  * @author Enrico Carniani
  */
 
-package cnr.ilc.rut.resource;
+package cnr.ilc.lemon.resource;
 
 import java.lang.ref.WeakReference;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.LinkedHashMap;
 import java.util.Map;
@@ -14,28 +15,28 @@ import cnr.ilc.rut.utils.Metadata;
 import cnr.ilc.sparql.TripleSerialiser;
 import cnr.ilc.sparql.WordSerialiser;
 
-public class Word {
-	final public String FQName;
+public class Word implements WordInterface {
+	final private String FQName;
 	final public Form canonicalForm;
 	final public String partOfSpeech;
-	final public String language;
-	final public WeakReference<Concept> concept;
+	final private String language;
+	final private WeakReference<ConceptInterface> concept;
 	final public String lexiconFQN;
 	final public String rdfType;
-	final public String creator;
+	final private String creator;
 	final public TripleSerialiser triples;
 	final public Metadata metadata = new Metadata();
-	final public Map<String, String> senses = new LinkedHashMap<>();
+	final private Collection<SenseInterface> senses = new ArrayList<>();
 	final private Map<String, Form> otherForms = new LinkedHashMap<>();
 	static final private IdGenerator idGenerator = new IdGenerator();
 
-	public Word(String lemma, String partOfSpeech, String language, Concept concept, String lexiconFQN, String rdfType, String creator) {
+	public Word(String lemma, String partOfSpeech, String language, ConceptInterface concept, String lexiconFQN, String rdfType, String creator) {
 		this.partOfSpeech = partOfSpeech;
 		this.language = language;
 		this.lexiconFQN = lexiconFQN;
 		this.rdfType = rdfType;
 		this.creator = creator;
-		this.concept = concept == null? null : new WeakReference<Concept>(concept);
+		this.concept = concept == null? null : new WeakReference<ConceptInterface>(concept);
 
 		String FQName = idGenerator.getId(String.format("%s+%s+%s", lemma, partOfSpeech, language));
 
@@ -56,7 +57,7 @@ public class Word {
 		if (concept == null)
 			metadata.addToList(language, term, "words", "languages", language, "terms");
 		else
-			metadata.addToList(language, term, "concepts", concept.id, "languages", language, "terms");
+			metadata.addToList(language, term, "concepts", concept.getId(), "languages", language, "terms");
 	}
 
 	public void addOtherForm(Form form) {
@@ -70,5 +71,55 @@ public class Word {
 	public Form findForm(String text) {
 		if (canonicalForm.text.equals(text)) return canonicalForm;
 		return otherForms.get(text);
+	}
+
+	@Override
+	public String getLemma() {
+		return canonicalForm.text;
+	}
+
+	@Override
+	public String getPartOfSpeech() {
+		return partOfSpeech;
+	}
+
+	@Override
+	public String getLanguage() {
+		return language;
+	}
+
+	@Override
+	public ConceptInterface getConcept() {
+		return concept != null? concept.get() : null;
+	}
+
+	@Override
+	public Metadata getMetadata() {
+		return metadata;
+	}
+
+	@Override
+	public String getSerialised() {
+		return triples.serialise();
+	}
+
+	@Override
+	public void addSense(SenseInterface sense) {
+		senses.add(sense);
+	}
+
+	@Override
+	public Collection<SenseInterface> getSenses() {
+		return senses;
+	}
+
+	@Override
+	public String getFQName() {
+		return FQName;
+	}
+
+	@Override
+	public String getCreator() {
+		return creator;
 	}
 }
