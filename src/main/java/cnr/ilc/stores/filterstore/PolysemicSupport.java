@@ -26,8 +26,6 @@ public class PolysemicSupport {
         String serialised = rs.getString("serialised");
         PojoWord word = new PojoWord(lemma, language, fqName, serialised);
         word.rowid = rs.getInt("rowid");
-        System.err.println(String.format("POLYSEMIC HYD: %d", word.rowid));
-
         return word;
     }
 

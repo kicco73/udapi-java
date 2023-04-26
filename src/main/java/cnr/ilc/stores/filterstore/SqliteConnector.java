@@ -41,10 +41,10 @@ public class SqliteConnector {
         createTable("global");
         createTable("concept", "conceptId string");
         createIndices("concept", "conceptId");
-        createTable("word", "conceptId string", "lemma string", "FQName string", "polysemicGroup integer", "serialisedSenses");
+        createTable("word", "conceptId string", "lemma string", "FQName string", "polysemicGroup integer", "serialisedSenses string");
         createIndices("word", "conceptId", "lemma", "polysemicGroup");
     }
-    
+
     public void connect(String fileName) throws SQLException {
         boolean exists = new File(fileName).exists();
         String url = String.format("jdbc:sqlite:%s", fileName);
@@ -103,7 +103,6 @@ public class SqliteConnector {
         Collection<String> languages = filter.getLanguages();
         if (languages.size() > 0) languages.add("*");
         String where = filter.buildWhere(entityName);
-		System.err.println("XXXX " + entityName + " " + where);
         ResultSet rs = executeQuery("select count(*) as n from %s where %s order by language", entityName, where);
         rs.next();
         int rows = rs.getInt("n");

@@ -53,11 +53,7 @@ public class PojoWord implements WordInterface {
 
 	@Override
 	public String getSerialised() {
-		String result = serialised;
-		for (SenseInterface sense: senses) {
-			result += sense.getSerialised();
-		}
-		return result;
+		return serialised;
 	}
 
 	@Override
