@@ -9,6 +9,7 @@ import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.lemon.resource.Global;
 import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.sparql.WordSerialiser;
 import cnr.ilc.stores.MemoryStore;
 
 public class FilterStore extends MemoryStore {
@@ -55,13 +56,23 @@ public class FilterStore extends MemoryStore {
 		}
 
 		String serialised = word.getSerialised();
+		String serialisedSenses = WordSerialiser.serialiseLexicalSenses(word);
 		String lemma = word.getLemma();
 		String language = word.getLanguage();
 		String metadata = word.getMetadata().toJson(language);
 		String fqName = word.getFQName();
 
-		db.executeUpdate("insert into word (lemma, language, date, conceptId, subjectField, FQName, metadata, serialised) values ('%s', '%s', %s, %s, %s, %s, %s, %s)", 
-			lemma, language, db.quote(date), db.quote(conceptId), db.quote(subjectField), db.quote(fqName), db.quote(metadata), db.quote(serialised));
+		String query = """
+				insert into word (
+					lemma, language, date, conceptId, subjectField, FQName, 
+					metadata, serialised, serialisedSenses
+				) values ('%s', '%s', %s, %s, %s, %s, %s, %s, %s)
+		""";
+
+		db.executeUpdate(query, 
+			lemma, language, db.quote(date), db.quote(conceptId), db.quote(subjectField), db.quote(fqName), 
+			db.quote(metadata), db.quote(serialised), db.quote(serialisedSenses)
+		);
 	}
 
 	public FilterStore(String namespace, String creator, int chunkSize, String fileName) throws Exception {

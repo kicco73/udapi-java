@@ -12,6 +12,7 @@ import cnr.ilc.lemon.resource.Global;
 import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.sparql.SPARQLWriter;
+import cnr.ilc.sparql.WordSerialiser;
 
 public class MemoryStore implements TripleStoreInterface {
 	protected SPARQLWriter output;
@@ -49,6 +50,7 @@ public class MemoryStore implements TripleStoreInterface {
 
 	protected void appendWord(WordInterface word) throws Exception {
 		output.append(word.getSerialised());
+		output.append(WordSerialiser.serialiseLexicalSenses(word));
 	}
 
 	// Hi-level interface

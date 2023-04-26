@@ -25,7 +25,7 @@ public class WordSerialiser extends TripleSerialiser {
 		addMetaData(wordFQN, word.getCreator()); 
 	}
 
-	private String serialiseLexicalSenses(WordInterface word) {
+	static public String serialiseLexicalSenses(WordInterface word) {
 		String serialised = "";
 		for(SenseInterface sense: word.getSenses()) {
 			serialised += sense.getSerialised();
@@ -65,7 +65,7 @@ public class WordSerialiser extends TripleSerialiser {
 		Word word = this.word.get();
 		createCanonicalForm(word);
 		createOtherForms(word);
-		return super.serialise() + serialiseLexicalSenses(word);
+		return super.serialise();
 	}
 
 }

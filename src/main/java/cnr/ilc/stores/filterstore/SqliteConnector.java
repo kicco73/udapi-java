@@ -41,10 +41,10 @@ public class SqliteConnector {
         createTable("global");
         createTable("concept", "conceptId string");
         createIndices("concept", "conceptId");
-        createTable("word", "conceptId string", "lemma string", "FQName string", "polysemicGroup integer");
+        createTable("word", "conceptId string", "lemma string", "FQName string", "polysemicGroup integer", "serialisedSenses");
         createIndices("word", "conceptId", "lemma", "polysemicGroup");
     }
-
+    
     public void connect(String fileName) throws SQLException {
         boolean exists = new File(fileName).exists();
         String url = String.format("jdbc:sqlite:%s", fileName);

@@ -9,6 +9,7 @@ import cnr.ilc.lemon.PojoWord;
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.sparql.SPARQLWriter;
+import cnr.ilc.sparql.WordSerialiser;
 
 public class SparqlAssembler {
 	protected SPARQLWriter output;
@@ -31,7 +32,7 @@ public class SparqlAssembler {
 			output.append(serialised);
 	}
 
-	private void assembleEntity(String entityName, Filter filter) throws SQLException {
+	private void assembleEntity(String entityName, Filter filter, String ...columnNames) throws SQLException {
 		filter = new Filter(filter);
 		Collection<String> languages = filter.getLanguages();
 		if (languages.size() > 0) languages.add("*");
@@ -40,8 +41,10 @@ public class SparqlAssembler {
 		int current = 0;
 		while (rs.next()) {
 			Logger.progress(++current * 100 / total, "Assembling %s entity", entityName);
-			String serialised = rs.getString("serialised");
-			output.append(serialised);
+			for (String columnName: columnNames) {
+				String serialised = rs.getString(columnName);
+				output.append(serialised);
+			}
 		}
 		Logger.progress(100,  "Done");
 	}
@@ -64,7 +67,7 @@ public class SparqlAssembler {
 				filterSubjectFields.add(null);
 		}
 
-		assembleEntity("global", globalFilter);
+		assembleEntity("global", globalFilter, "serialised");
 	}
 
 	private void assembleWordReplacements(Collection<WordInterface> words) {
@@ -72,6 +75,7 @@ public class SparqlAssembler {
 			PojoWord p = (PojoWord) word;
 			output.addComment("Synthesised polysemic term `%s`@%s with %d senses", p.getLemma(), p.getLanguage(), p.senses.size());
 			output.append(word.getSerialised());
+			output.append(WordSerialiser.serialiseLexicalSenses(word));
 		}
 	}
 
@@ -81,7 +85,7 @@ public class SparqlAssembler {
 		Filter filterOutPolysemicGroups = new Filter(filter);
 		filterOutPolysemicGroups.setNoPolysemicGroups(true);
 
-		assembleEntity("word", filterOutPolysemicGroups);
+		assembleEntity("word", filterOutPolysemicGroups, "serialised", "serialisedSenses");
 		assembleWordReplacements(replacingEntries);
 	}
 
