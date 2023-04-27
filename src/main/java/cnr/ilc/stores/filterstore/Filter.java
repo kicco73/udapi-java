@@ -12,6 +12,7 @@ public class Filter {
 	private boolean noConcepts = false;
 	private boolean noSenses = false;
 	private boolean noPolysemicGroups = false;
+	private boolean synonyms = false;
 	private Collection<String> excludeIds = new HashSet<>();
 
 	private Collection<String> cloneCollection(Collection<String> original) {
@@ -102,6 +103,14 @@ public class Filter {
 		excludeIds.clear();
 		excludeIds.addAll(ids);
 	}
+	
+	public boolean isSynonyms() {
+		return synonyms;
+	}
+
+	public void setSynonyms(boolean synonyms) {
+		this.synonyms = synonyms;
+	}
 
     private String whereValueInList(String entityName, String columnName, Collection<String> values) {
         String where = "";
@@ -129,7 +138,7 @@ public class Filter {
         
         String excludeClause = whereValueInList(entityName, "rowid", getExcludeIds());
         if (excludeClause.length() > 0) {
-            where += String.format(" and not (true %s)", excludeClause); // TODO:  
+            where += String.format(" and not (true %s)", excludeClause);  
 		}
 
 		if (isNoPolysemicGroups()) {

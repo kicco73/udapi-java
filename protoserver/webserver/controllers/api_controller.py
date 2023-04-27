@@ -32,22 +32,34 @@ class ApiController(controller.Controller):
 
 		@app.route('/resources/<resource_id>/sparql', methods = ['GET'])
 		def wrap_assemble_resource(resource_id: str):
-			languages = request.values.getlist('languages')
-			subject_fields = request.values.getlist('subjectFields')
-			dates = request.values.getlist('dates')
-			no_concepts = request.values.get('noConcepts', default=False, type=json.loads)
-			no_senses = request.values.get('noSenses', default=False, type=json.loads)
-			operation = services.Assemble(resource_dir=resource_id, languages=languages, subject_fields=subject_fields, dates=dates, no_concepts=no_concepts, no_senses=no_senses)
+			args = dict( 
+				resource_dir = resource_id,
+				languages = request.values.getlist('languages'),
+				subject_fields = request.values.getlist('subjectFields'),
+				dates = request.values.getlist('dates'),
+				no_concepts = request.values.get('noConcepts', default=False, type=json.loads),
+				no_senses = request.values.get('noSenses', default=False, type=json.loads),
+				synonyms = request.values.get('synonyms', default=False, type=json.loads),
+			)
+			operation = services.Assemble(**args)
 			content = operation.execute()
 			return Response(content, mimetype='application/sparql-query')
 
-		@app.route('/resources/<resource_id>/submit', methods = ['POST'])
+		@app.route('/resources/<resource_id>/graphdb', methods = ['PUT'])
 		def wrap_submit_resource(resource_id: str):
 			inputdir = self.get_resource_path(resource_id)
 			repository = request.json.get('repository')
 			operation = services.Submit(resource_dir=inputdir, repository=repository)
 			operation.execute()
 			return Response(json.dumps({}), mimetype='application/json')
+
+		@app.route('/resources/<resource_id>/graphdb', methods = ['GET'])
+		def wrap_query_resource(resource_id: str):
+			inputdir = self.get_resource_path(resource_id)
+			repository = request.values.get('repository')
+			operation = services.Query(resource_dir=inputdir, repository=repository)
+			content = operation.execute()
+			return Response(content, mimetype='application/json')
 
 	def get_resource_path(self, resource_id: str, *args) -> str:
 		return os.path.join(self.app.config['RESOURCES_FOLDER'], resource_id, *args)

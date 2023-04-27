@@ -124,18 +124,93 @@ public class Services {
 		String statements = loadFromResourceProperty(resourceId, "sparql");
 		GraphDBClient client = new GraphDBClient(graphURL, repository);
 
-		Logger.warn("Cleaning GraphDB");
-		client.post("CLEAR DEFAULT\n"); // FIXME: temporary hack
+		client.postUpdate("CLEAR DEFAULT\n"); // FIXME: temporary hack
 
         String[] chunks = statements.split(SPARQLWriter.separator, 0);
         int n = 0;
         for (String chunk: chunks) {
             Logger.progress(++n * 100/chunks.length, "Submitting to GraphDB");
-            client.post(chunk);
+            client.postUpdate(chunk);
         }
 		Logger.progress(100, "Done");
-		Logger.warn("Successfully submitted");
-
 		return "";
+	}
+
+	static public String queryResource(String inputDir) throws Exception {
+		final String sparqlQuery = """
+			PREFIX ontolex: <http://www.w3.org/ns/lemon/ontolex#>
+			PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+			PREFIX lexinfo: <http://www.lexinfo.net/ontology/3.0/lexinfo#>
+			PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+			PREFIX dct: <http://purl.org/dc/terms/>
+			SELECT ?subjectField ?conceptID 
+			(GROUP_CONCAT(distinct(concat("DEFINITION @", lang(?def), ": ", str(?def), "\\nLINK: ",str(?identifier),"\\nSOURCE: ", str(?source), "\\n\\n"))) AS ?definitions)
+			(GROUP_CONCAT(distinct(concat("CONTEXT @", lang(?context), ": ", str(?context), "\\nLINK: ",str(?identifierSense),"\\nSOURCE: ", str(?sourceSense), "\\n\\n"))) AS ?contexts)
+			?wr ?pos ?termType ?normAuth ?note
+			WHERE { ?concept a skos:Concept ;
+					   skos:prefLabel ?conceptID .
+					?sense ontolex:reference ?concept ;
+						   ontolex:isSenseOf ?le .
+					?le ontolex:canonicalForm [ ontolex:writtenRep ?wr ]
+				OPTIONAL { ?concept skos:definition [ rdf:value ?def ;
+													  dct:identifier ?identifier ;
+													  dct:source ?source ] }
+				OPTIONAL { ?sense ontolex:usage [ rdf:value ?context ;
+													  dct:identifier ?identifierSense ;
+													  dct:source ?sourceSense ] }
+				OPTIONAL { ?concept skos:inScheme [ skos:prefLabel ?subjectField ] }
+				OPTIONAL { ?le lexinfo:partOfSpeech ?_pos }
+				OPTIONAL { ?le lexinfo:normativeAuthorization ?_normAuth }
+				OPTIONAL { ?le lexinfo:termType ?_termType }
+				OPTIONAL { ?le skos:note ?note }
+				BIND(strafter(str(?_pos), str(lexinfo:)) as ?pos)
+				BIND(strafter(str(?_normAuth), str(lexinfo:)) as ?normAuth)
+				BIND(strafter(str(?_termType), str(lexinfo:)) as ?termType)
+			} 
+			GROUP BY ?subjectField ?conceptID ?wr ?pos ?termType ?normAuth ?note
+			ORDER BY ?subjectField						
+			""";
+
+		String queryAlt = """
+			PREFIX ontolex: <http://www.w3.org/ns/lemon/ontolex#>
+			PREFIX skos: <http://www.w3.org/2004/02/skos/core#>
+			PREFIX lexinfo: <http://www.lexinfo.net/ontology/3.0/lexinfo#>
+			PREFIX rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+			PREFIX dct: <http://purl.org/dc/terms/>
+			PREFIX dc: <http://purl.org/dc/elements/1.1/>
+			SELECT ?subjectField ?conceptID 
+			(GROUP_CONCAT(distinct(concat("DEFINITION @", lang(?def), ": ", str(?def), "\\nLINK: ",str(?identifier),"\\nSOURCE: ", str(?source), "\\n\\n"))) AS ?definitions)
+			(GROUP_CONCAT(distinct(concat("CONTEXT @", lang(?context), ": ", str(?context), "\\nLINK: ",str(?identifierSense),"\\nSOURCE: ", str(?sourceSense), "\\n\\n"))) AS ?contexts)
+			?wr ?pos ?termType ?normAuth ?note ?sourceExt ?seeAlso
+			WHERE { ?concept a skos:Concept ;
+					   skos:prefLabel ?conceptID .
+					?sense ontolex:reference ?concept .
+					?le ontolex:sense ?sense ;
+						ontolex:canonicalForm [ ontolex:writtenRep ?wr ]
+				OPTIONAL { ?concept skos:definition [ rdf:value ?def ;
+													  dct:identifier ?identifier ;
+													  dct:source ?source ] }
+				OPTIONAL { ?sense ontolex:usage [ rdf:value ?context ;
+													  dct:identifier ?identifierSense ;
+													  dct:source ?sourceSense ] }
+				OPTIONAL { ?concept skos:inScheme [ skos:prefLabel ?subjectField ] }
+				OPTIONAL { ?le lexinfo:partOfSpeech ?_pos }
+				OPTIONAL { ?le lexinfo:normativeAuthorization ?_normAuth }
+				OPTIONAL { ?le lexinfo:termType ?_termType }
+				OPTIONAL { ?le skos:note ?note }
+				OPTIONAL { ?le dct:source ?sourceExt }
+				OPTIONAL { ?le rdf:seeAlso ?seeAlso }
+				BIND(strafter(str(?_pos), str(lexinfo:)) as ?pos)
+				BIND(strafter(str(?_normAuth), str(lexinfo:)) as ?normAuth)
+				BIND(strafter(str(?_termType), str(lexinfo:)) as ?termType)
+			} 
+			GROUP BY ?subjectField ?conceptID ?wr ?pos ?termType ?normAuth ?note ?sourceExt ?seeAlso
+			ORDER BY ?subjectField		
+		""";
+
+		GraphDBClient client = new GraphDBClient(graphURL, repository);
+
+		Logger.warn("Querying GraphDB");
+		return client.postQuery(queryAlt); 
 	}
 }

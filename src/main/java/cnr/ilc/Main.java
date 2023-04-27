@@ -106,6 +106,9 @@ public class Main {
                     case "--filter-no-senses":
                     filter.setNoSenses(true); 
                     break;
+                case "--filter-synonyms":
+                    filter.setSynonyms(true); 
+                    break;
                 case "-j":
                 case "--json":
                     isJson = true;
@@ -189,7 +192,10 @@ public class Main {
             case "submit":
                 response = Services.submitResource(fileName);
                 break;
-            default:
+            case "query":
+                response = Services.queryResource(fileName);
+                break;
+        default:
                 throw new IllegalArgumentException(String.format("Unknown service: %s", service));
         }
 
@@ -265,7 +271,7 @@ public class Main {
         int n = 0;
         for (String chunk: chunks) {
             System.err.print(String.format("\rPosting... %.0f%%", ++n * 100.0/chunks.length));
-            client.post(chunk);
+            client.postUpdate(chunk);
         }
         System.err.println();
     }
