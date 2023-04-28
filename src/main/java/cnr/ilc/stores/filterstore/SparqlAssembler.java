@@ -8,7 +8,6 @@ import java.util.List;
 
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.rut.utils.Logger;
-import cnr.ilc.sparql.SPARQLFormatter;
 import cnr.ilc.sparql.SPARQLWriter;
 import cnr.ilc.sparql.TripleSerialiser;
 import cnr.ilc.sparql.WordSerialiser;
@@ -16,13 +15,17 @@ import cnr.ilc.stores.filterstore.processors.NoSensesProcessor;
 import cnr.ilc.stores.filterstore.processors.PolysemicProcessor;
 import cnr.ilc.stores.filterstore.processors.ProcessorInterface;
 import cnr.ilc.stores.filterstore.processors.SynonymsProcessor;
+import cnr.ilc.stores.filterstore.processors.TranslateSenseProcessor;
+import cnr.ilc.stores.filterstore.processors.TranslateTermProcessor;
 
 public class SparqlAssembler {
 	protected SPARQLWriter output;
 	final private SqliteConnector db;
-	final private PolysemicProcessor polysemicProcessor;
-	final private SynonymsProcessor synonymsProcessor = new SynonymsProcessor();
 	final private NoSensesProcessor noSenseProcessor = new NoSensesProcessor();
+	final private TranslateTermProcessor translateTermProcessor = new TranslateTermProcessor();
+	final private PolysemicProcessor polysemicProcessor;
+	final private TranslateSenseProcessor translateSenseProcessor = new TranslateSenseProcessor();
+	final private SynonymsProcessor synonymsProcessor = new SynonymsProcessor();
 
 	public SparqlAssembler(SqliteConnector sql, SPARQLWriter writer) {
 		db = sql;
@@ -104,8 +107,12 @@ public class SparqlAssembler {
 		List<ProcessorInterface> processors = new ArrayList<>();
 		if (filter.isNoSenses()) {
 			processors.add(noSenseProcessor);
+			if (filter.isTranslateTerms())
+				processors.add(translateTermProcessor);
 		} else {
 			processors.add(polysemicProcessor);
+			if (filter.isTranslateSenses())
+				processors.add(translateSenseProcessor);
 			if (filter.isSynonyms())
 				processors.add(synonymsProcessor);
 		}

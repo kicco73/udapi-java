@@ -106,6 +106,12 @@ public class Main {
                     case "--filter-no-senses":
                     filter.setNoSenses(true); 
                     break;
+                case "--filter-translate-terms":
+                    filter.setTranslateTerms(true); 
+                    break;
+                case "--filter-translate-senses":
+                    filter.setTranslateSenses(true); 
+                    break;
                 case "--filter-synonyms":
                     filter.setSynonyms(true); 
                     break;

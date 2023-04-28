@@ -13,6 +13,8 @@ public class Filter {
 	private boolean noSenses = false;
 	private boolean noPolysemicGroups = false;
 	private boolean synonyms = false;
+	private boolean translateTerms = false;
+	private boolean translateSenses = false;
 	private Collection<String> excludeIds = new HashSet<>();
 
 	private Collection<String> cloneCollection(Collection<String> original) {
@@ -103,13 +105,28 @@ public class Filter {
 		excludeIds.clear();
 		excludeIds.addAll(ids);
 	}
-	
+
 	public boolean isSynonyms() {
 		return synonyms;
 	}
 
 	public void setSynonyms(boolean synonyms) {
 		this.synonyms = synonyms;
+	}
+	public boolean isTranslateTerms() {
+		return translateTerms;
+	}
+
+	public void setTranslateTerms(boolean translateTerms) {
+		this.translateTerms = translateTerms;
+	}
+
+	public boolean isTranslateSenses() {
+		return translateSenses;
+	}
+
+	public void setTranslateSenses(boolean translateSenses) {
+		this.translateSenses = translateSenses;
 	}
 
     private String whereValueInList(String entityName, String columnName, Collection<String> values) {

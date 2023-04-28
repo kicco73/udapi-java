@@ -27,19 +27,26 @@ class Filter(BaseOperation):
 		) 
 
 class Assemble(BaseOperation):
-	def __init__(self, resource_dir: str, languages: list, subject_fields: list, dates: list, no_concepts: bool, no_senses: bool, synonyms: bool):
+	def __init__(self, resource_dir: str, languages: list, subject_fields: list, dates: list, 
+	      no_concepts: bool, no_senses: bool, 
+	      translate_terms: bool, translate_senses: bool,
+		  synonyms: bool):
 		super().__init__(resource_dir=resource_dir)
 		self.languages = languages
 		self.subject_fields = subject_fields
 		self.dates = dates
 		self.no_concepts = no_concepts
 		self.no_senses = no_senses
+		self.translate_terms = translate_terms
+		self.translate_senses = translate_senses
 		self.synonyms = synonyms
 
 	def execute(self) -> str:
 		args = []
 		args += ['--filter-no-concepts'] if self.no_concepts else []
 		args += ['--filter-no-senses'] if self.no_senses else []
+		args += ['--filter-translate-terms'] if self.translate_terms else []
+		args += ['--filter-translate-senses'] if self.translate_senses else []
 		args += ['--filter-synonyms'] if self.synonyms else []
 		args += [
 			'--service', 'assemble', 

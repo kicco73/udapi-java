@@ -39,6 +39,8 @@ class ApiController(controller.Controller):
 				dates = request.values.getlist('dates'),
 				no_concepts = request.values.get('noConcepts', default=False, type=json.loads),
 				no_senses = request.values.get('noSenses', default=False, type=json.loads),
+				translate_terms = request.values.get('translateTerms', default=False, type=json.loads),
+				translate_senses = request.values.get('translateSenses', default=False, type=json.loads),
 				synonyms = request.values.get('synonyms', default=False, type=json.loads),
 			)
 			operation = services.Assemble(**args)

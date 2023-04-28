@@ -13,7 +13,6 @@ import org.json.simple.JSONArray;
 import cnr.ilc.lemon.PolysemicResolver;
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.rut.utils.Metadata;
-import cnr.ilc.sparql.SPARQLWriter;
 import cnr.ilc.sparql.TripleSerialiser;
 import cnr.ilc.stores.filterstore.Filter;
 import cnr.ilc.stores.filterstore.SqliteConnector;
