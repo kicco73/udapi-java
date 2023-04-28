@@ -23,16 +23,6 @@ public class TranslateTermProcessor implements ProcessorInterface {
         }
     }
 
-    private Map<String, Collection<WordInterface>> groupWordsByLanguage(Collection<WordInterface> words) {
-        Metadata metadata = new Metadata();
-
-        for (WordInterface word: words) {
-            metadata.addToList(word.getLanguage(), word);
-        }
-
-        return (JSONObject) metadata.getRoot();
-    }
-
     private Map<String, Collection<WordInterface>> groupWordsByConceptAndLanguage(Collection<WordInterface> words) {
         Metadata metadata = new Metadata();
 
