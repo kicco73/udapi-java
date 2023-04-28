@@ -117,4 +117,9 @@ public class Word implements WordInterface {
 	public String getCreator() {
 		return creator;
 	}
+
+	@Override
+	public String getConceptFQN() {
+		return concept == null? null : concept.get().getFQName();
+	}
 }

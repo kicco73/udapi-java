@@ -11,12 +11,13 @@ import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.sparql.WordSerialiser;
 import cnr.ilc.stores.MemoryStore;
+import cnr.ilc.stores.filterstore.processors.PolysemicProcessor;
 
 public class FilterStore extends MemoryStore {
 	private SqliteConnector db = new SqliteConnector();
-	private MetadataManager metadataManager = new MetadataManager(db);
-	private SparqlAssembler sparqlAssembler;
-	private PolysemicSupport polysemicSupport = new PolysemicSupport(db);
+	private PolysemicProcessor polysemicSupport = new PolysemicProcessor(db);
+	private SparqlAssembler sparqlAssembler = new SparqlAssembler(db, output);
+	private MetadataMerger metadataManager = new MetadataMerger(db);
 	private Filter filter = new Filter();
 
 	@Override
@@ -48,36 +49,40 @@ public class FilterStore extends MemoryStore {
 		String conceptId = null;
 		String subjectField = null;
 		String date = null;
+		String conceptFQN = null;
 		if (word.getConcept() != null) {
 			ConceptInterface concept = word.getConcept();
 			date = concept.getDate();
 			conceptId = concept.getId();
+			conceptFQN = concept.getFQName();
 			subjectField = concept.getSubjectField();
 		}
 
 		String serialised = word.getSerialised();
-		String serialisedSenses = WordSerialiser.serialiseLexicalSenses(word);
 		String lemma = word.getLemma();
 		String language = word.getLanguage();
 		String metadata = word.getMetadata().toJson(language);
 		String fqName = word.getFQName();
-
+		String serialisedSenses = WordSerialiser.serialiseLexicalSenses(word);
+		String senseFQN = word.getSenses().iterator().next().getFQName();	// TODO: handle multiple senses
+		
 		String query = """
 				insert into word (
-					lemma, language, date, conceptId, subjectField, FQName, 
-					metadata, serialised, serialisedSenses
-				) values ('%s', '%s', %s, %s, %s, %s, %s, %s, %s)
+					lemma, language, date, conceptId, conceptFQN, subjectField, 
+					FQName, metadata, serialised, senseFQN, serialisedSenses
+				) values ('%s', '%s', %s, %s, %s, %s, %s, %s, %s, %s, %s)
 		""";
 
 		db.executeUpdate(query, 
-			lemma, language, db.quote(date), db.quote(conceptId), db.quote(subjectField), db.quote(fqName), 
-			db.quote(metadata), db.quote(serialised), db.quote(serialisedSenses)
+			lemma, language, 
+			db.quote(date), db.quote(conceptId), db.quote(conceptFQN), db.quote(subjectField), 
+			db.quote(fqName), db.quote(metadata), db.quote(serialised), 
+			db.quote(senseFQN), db.quote(serialisedSenses)
 		);
 	}
 
 	public FilterStore(String namespace, String creator, int chunkSize, String fileName) throws Exception {
 		super(namespace, creator, chunkSize);
-		sparqlAssembler = new SparqlAssembler(db, output);
 		db.connect(fileName);
 	}
 

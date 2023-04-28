@@ -2,34 +2,44 @@ package cnr.ilc.stores.filterstore;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.Collection;
+import java.util.List;
 
-import cnr.ilc.lemon.PojoWord;
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.sparql.SPARQLFormatter;
 import cnr.ilc.sparql.SPARQLWriter;
+import cnr.ilc.sparql.TripleSerialiser;
 import cnr.ilc.sparql.WordSerialiser;
+import cnr.ilc.stores.filterstore.processors.NoSensesProcessor;
+import cnr.ilc.stores.filterstore.processors.PolysemicProcessor;
+import cnr.ilc.stores.filterstore.processors.ProcessorInterface;
+import cnr.ilc.stores.filterstore.processors.SynonymsProcessor;
 
 public class SparqlAssembler {
 	protected SPARQLWriter output;
-	private SqliteConnector db;
-	private PolysemicSupport ps;
+	final private SqliteConnector db;
+	final private PolysemicProcessor polysemicProcessor;
+	final private SynonymsProcessor synonymsProcessor = new SynonymsProcessor();
+	final private NoSensesProcessor noSenseProcessor = new NoSensesProcessor();
 
 	public SparqlAssembler(SqliteConnector sql, SPARQLWriter writer) {
-		output = writer;
 		db = sql;
-		ps = new PolysemicSupport(db);
+		output = writer;
+		polysemicProcessor = new PolysemicProcessor(db);
 	}
 
-	private void assembleConcept(Filter filter) throws SQLException {
+	private void assembleConcepts(Filter filter) throws SQLException {
+		if (filter.isNoConcepts()) return;
 		Filter includeNullSubjectField = new Filter(filter);
 		Collection<String> subjectFields = includeNullSubjectField.getSubjectFields();
 		if (subjectFields.size() > 0)
 			subjectFields.add(null);
 
-		for (String serialised: db.selectConcept("serialised", includeNullSubjectField))
+		for (String serialised: db.selectConcept("serialised", includeNullSubjectField)) {
 			output.append(serialised);
+		}
 	}
 
 	private Filter assembleEntity(String entityName, Filter filter, String ...columnNames) throws SQLException {
@@ -51,7 +61,7 @@ public class SparqlAssembler {
 		return filter;
 	}
 
-	private void assembleGlobal(Filter filter) throws Exception {
+	private void assembleGlobals(Filter filter) throws Exception {
 		Filter globalFilter = new Filter(filter);
 		Collection<String> filterSubjectFields = globalFilter.getSubjectFields();
 
@@ -62,6 +72,7 @@ public class SparqlAssembler {
 			if (filterSubjectFields.size() > 0)
 				filterSubjectFields.add(null);
 
+			System.err.println("GLOB");
 			Collection<String> usedSubjectFields = db.selectConcept("subjectField", globalFilter);
 			filterSubjectFields.clear();
 			filterSubjectFields.addAll(usedSubjectFields);		
@@ -72,51 +83,51 @@ public class SparqlAssembler {
 		assembleEntity("global", globalFilter, "serialised");
 	}
 
-	private void assembleWordReplacements(Collection<WordInterface> words) {
+	private void assembleWords(Collection<WordInterface> words) {
 		for (WordInterface word: words) {
-			PojoWord p = (PojoWord) word;
-			output.addComment("Synthesised polysemic term `%s`@%s with %d senses", p.getLemma(), p.getLanguage(), p.senses.size());
 			output.append(word.getSerialised());
 			output.append(WordSerialiser.serialiseLexicalSenses(word));
 		}
 	}
-	private void assembleWordWithoutSenses(Filter filter) throws Exception {
-		filter = assembleEntity("word", filter, "serialised");
 
-		output.addComment("Synthesising ontolex:denotes relationship in place of senses");
-
+	private Collection<WordInterface> getWords(Filter filter) throws Exception {
+		Collection<WordInterface> words = new ArrayList<>();
 		ResultSet rs = db.selectEntity("word", filter);
 		while (rs.next()) {
-			String FQName = rs.getString("FQName");
-			String conceptId = rs.getString("conceptId");
-			String statement = SPARQLFormatter.formatStatement(FQName, "ontolex:denotes", conceptId);
-			output.append(statement);
+			WordInterface word = db.hydrateWord(rs);
+			words.add(word);
 		}
+		return words;
 	}
 
-	private void assembleWord(Filter filter) throws Exception {
+	private List<ProcessorInterface> buildPipeline(Filter filter) {
+		List<ProcessorInterface> processors = new ArrayList<>();
 		if (filter.isNoSenses()) {
-			assembleWordWithoutSenses(filter);
-			return;
+			processors.add(noSenseProcessor);
+		} else {
+			processors.add(polysemicProcessor);
+			if (filter.isSynonyms())
+				processors.add(synonymsProcessor);
 		}
+		return processors;
+	}
 
-		Collection<WordInterface> replacingEntries = ps.findAndResolvePolysemicEntries(filter);
+	private void assembleWords(Filter filter) throws Exception {
+		List<ProcessorInterface> processors = buildPipeline(filter);
+		TripleSerialiser triples = new TripleSerialiser();
+		Collection<WordInterface> words = getWords(filter);
 
-		Filter filterOutPolysemicGroups = new Filter(filter);
-		filterOutPolysemicGroups.setNoPolysemicGroups(true);
+		for (ProcessorInterface processor: processors)
+			words = processor.filter(words, triples);
 
-		assembleEntity("word", filterOutPolysemicGroups, "serialised", "serialisedSenses");
-		assembleWordReplacements(replacingEntries);	
+		assembleWords(words);
+		output.append(triples.serialise());
 	}
 
 	public String getSparql(Filter filter) throws Exception {
-
-		assembleGlobal(filter);
-
-		if (!filter.isNoConcepts())
-			assembleConcept(filter);		
-
-		assembleWord(filter);
+		assembleGlobals(filter);
+		assembleConcepts(filter);		
+		assembleWords(filter);
 		return output.getSparql();
 	}
 }	

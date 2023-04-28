@@ -63,6 +63,13 @@ public class TripleSerialiser {
 		addMetaData(lexiconFQN, creator);     
 	}
 
+	public void addComment(String template, Object... args) {
+		String comment = String.format("\n\t# "+template+"\n\n", args);
+		String languageSpecific = features.getOrDefault("*", "");
+		languageSpecific += comment;
+		features.put("*", languageSpecific);
+	}
+
 	public String serialise(String language) {
 		return features.getOrDefault(language, "");
 	}

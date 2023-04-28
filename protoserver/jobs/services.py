@@ -68,7 +68,6 @@ class Query(BaseOperation):
 		self.repository = repository
 
 	def execute(self) -> str:
-		print("CIAAAAA")
 		result = self.run_java(
 			'--service', 'query', 
 			'--repository', self.repository, 

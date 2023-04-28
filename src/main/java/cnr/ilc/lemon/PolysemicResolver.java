@@ -14,8 +14,10 @@ public class PolysemicResolver {
 		int n = 0;
 
 		for(WordInterface word: input) {
-			if (ref == null)
-				ref = new PojoWord(word.getLemma(), word.getLanguage(), word.getFQName(), word.getSerialised());
+			if (ref == null) {
+				ref = word;
+				ref.getSenses().clear();
+			}
 			String senseId = String.format("poly%s", ++n);
 			SenseInterface sense = new Sense(ref, senseId, null);
 			ref.getSenses().add(sense);
@@ -24,6 +26,7 @@ public class PolysemicResolver {
 	}
 
 	public Collection<WordInterface> resolve(Collection<WordInterface> input) {
+		if (input.size() < 2) return input;
 		Collection<WordInterface> output = new ArrayList<>();
 		output.add(oneWordMultipleSensesToDifferentConcepts(input));
 		return output;

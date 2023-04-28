@@ -13,6 +13,11 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+import cnr.ilc.lemon.PojoSense;
+import cnr.ilc.lemon.PojoWord;
+import cnr.ilc.lemon.resource.SenseInterface;
+import cnr.ilc.lemon.resource.WordInterface;
+
 public class SqliteConnector {
     private Connection connection;
     private Statement statement;
@@ -41,7 +46,7 @@ public class SqliteConnector {
         createTable("global");
         createTable("concept", "conceptId string");
         createIndices("concept", "conceptId");
-        createTable("word", "conceptId string", "lemma string", "FQName string", "polysemicGroup integer", "serialisedSenses string");
+        createTable("word", "conceptId string", "conceptFQN string", "lemma string", "FQName string", "polysemicGroup integer", "senseFQN", "serialisedSenses string");
         createIndices("word", "conceptId", "lemma", "polysemicGroup");
     }
 
@@ -72,6 +77,24 @@ public class SqliteConnector {
         return s;
     }
 
+    public WordInterface hydrateWord(ResultSet rs) throws SQLException {
+        String lemma = rs.getString("lemma");
+        String language = rs.getString("language");
+        String fqName = rs.getString("FQName");
+        String serialised = rs.getString("serialised");
+        String serialisedSenses = rs.getString("serialisedSenses");
+        String conceptFQN = rs.getString("conceptFQN");
+        String senseFQN = rs.getString("senseFQN");
+        PojoWord word = new PojoWord(lemma, language, fqName, serialised, conceptFQN);
+
+        // TODO: this field must support multiple senses!
+        SenseInterface sense = new PojoSense(senseFQN, conceptFQN, serialisedSenses);
+        word.getSenses().add(sense);
+    
+        word.rowid = rs.getInt("rowid");
+        return word;
+    }
+    
     public Collection<String> selectConcept(String columnName, Filter filter) throws SQLException {
         Collection<String> result = new ArrayList<String>();
         filter = new Filter(filter);
@@ -92,7 +115,9 @@ public class SqliteConnector {
         String whereConcept = filter.buildWhere("concept");
         String whereWord = filter.buildWhere("word");
         ResultSet rs = executeQuery(query, columnName, whereConcept, whereWord);
+        System.err.println(String.format(query, columnName, whereConcept, whereWord));
         while (rs.next()) {
+            System.err.println("HO CONCEPT");
             result.add(rs.getString(columnName));
         }
         return result;

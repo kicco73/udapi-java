@@ -16,6 +16,7 @@ public interface WordInterface {
 	public Metadata getMetadata();
 	public String getSerialised();
 	public String getFQName();
+	public String getConceptFQN();
 	public String getCreator();
 	public Collection<SenseInterface> getSenses();
 }

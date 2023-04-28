@@ -95,6 +95,10 @@ public class Metadata {
 		return (Collection<Object>) getObject(language, path);
 	}
 
+	public Map<String, Object> getRoot() {
+		return metadata;
+	}
+
 	public String toJson(String language, String...path) {
 		JSONObject data = (JSONObject) getMap(language, path);
 		return JSONObject.toJSONString(data);

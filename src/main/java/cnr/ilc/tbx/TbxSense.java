@@ -9,7 +9,7 @@ public class TbxSense extends Sense {
 
 	public TbxSense(Word word, Map<String,String> context) {
 		super(word, "", null);
-		triples.add(FQName, "ontolex:usage", context, word.getLanguage());
+		triples.add(getFQName(), "ontolex:usage", context, word.getLanguage());
 	}
 
 }

@@ -4,7 +4,8 @@ import cnr.ilc.sparql.TripleSerialiser;
 
 public class Sense implements SenseInterface {
 	protected TripleSerialiser triples = new TripleSerialiser();
-	final public String FQName;
+	final private String FQName;
+	private String conceptFQN = null;
 
 	public Sense(WordInterface word, String id, String definition) {
 		FQName = String.format("%s_sense%s", word.getFQName(), id);
@@ -15,10 +16,22 @@ public class Sense implements SenseInterface {
 		if (definition != null)
 			triples.addString(FQName, "skos:definition", definition);
 
-		if (word.getConcept() != null)
-			triples.add(FQName, "ontolex:reference", word.getConcept().getFQName()); 
+		conceptFQN = word.getConceptFQN();
+		if (conceptFQN != null) {
+			triples.add(FQName, "ontolex:reference", conceptFQN); 
+		}
 
 		triples.addMetaData(FQName, word.getCreator()); 
+	}
+
+	@Override
+	public String getFQName() {
+		return FQName;
+	}
+
+	@Override
+	public String getConceptFQN() {
+		return conceptFQN;
 	}
 
 	@Override

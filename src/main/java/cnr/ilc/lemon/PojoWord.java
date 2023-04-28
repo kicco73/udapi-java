@@ -17,12 +17,14 @@ public class PojoWord implements WordInterface {
 	final private String language;
 	final private String FQName;
 	final private String serialised;
+	final private String conceptFQN;
 
-	public PojoWord(String lemma, String language, String FQName, String serialised) {
+	public PojoWord(String lemma, String language, String FQName, String serialised, String conceptFQN) {
 		this.lemma = lemma;
 		this.language = language;
 		this.FQName = FQName;
 		this.serialised = serialised;
+		this.conceptFQN = conceptFQN;
 	}
 
 	@Override
@@ -70,6 +72,11 @@ public class PojoWord implements WordInterface {
 	@Override
 	public Collection<SenseInterface> getSenses() {
 		return senses;
+	}
+
+	@Override
+	public String getConceptFQN() {
+		return conceptFQN;
 	}
 
 }
