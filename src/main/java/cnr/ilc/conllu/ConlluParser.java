@@ -16,6 +16,7 @@ import cnr.ilc.conllu.core.io.impl.CoNLLUReader;
 import cnr.ilc.conllu.core.io.impl.CoNLLUWriter;
 import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.lemon.resource.Global;
+import cnr.ilc.lemon.resource.GlobalInterface;
 import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.rut.ParserInterface;
@@ -62,8 +63,8 @@ public class ConlluParser implements ParserInterface, ResourceInterface {
     }
 
     @Override
-    public Collection<Global> getGlobals() {
-        Collection<Global> globals = new ArrayList<>();
+    public Collection<GlobalInterface> getGlobals() {
+        Collection<GlobalInterface> globals = new ArrayList<>();
         globals.add(global);
         return globals;
     }

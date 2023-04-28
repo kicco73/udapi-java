@@ -1,11 +1,8 @@
-package cnr.ilc.lemon;
+package cnr.ilc.lemon.resource;
 
 import java.util.ArrayList;
 import java.util.Collection;
 
-import cnr.ilc.lemon.resource.ConceptInterface;
-import cnr.ilc.lemon.resource.SenseInterface;
-import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.rut.utils.Metadata;
 
 public class PojoWord implements WordInterface {

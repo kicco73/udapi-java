@@ -1,6 +1,4 @@
-package cnr.ilc.lemon;
-
-import cnr.ilc.lemon.resource.SenseInterface;
+package cnr.ilc.lemon.resource;
 
 public class PojoSense implements SenseInterface {
 	final private String FQName;

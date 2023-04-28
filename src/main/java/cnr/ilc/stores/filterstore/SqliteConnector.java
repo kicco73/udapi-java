@@ -14,8 +14,12 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import cnr.ilc.lemon.PojoSense;
-import cnr.ilc.lemon.PojoWord;
+import cnr.ilc.lemon.resource.ConceptInterface;
+import cnr.ilc.lemon.resource.GlobalInterface;
+import cnr.ilc.lemon.resource.PojoConcept;
+import cnr.ilc.lemon.resource.PojoGlobal;
+import cnr.ilc.lemon.resource.PojoSense;
+import cnr.ilc.lemon.resource.PojoWord;
 import cnr.ilc.lemon.resource.SenseInterface;
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.rut.utils.Metadata;
@@ -78,6 +82,23 @@ public class SqliteConnector {
         s = "'" + s.replaceAll("'", "''") + "'";
         return s;
     }
+    public GlobalInterface hydrateGlobal(ResultSet rs) throws SQLException {
+        String language = rs.getString("language");
+        String subjectField = rs.getString("subjectField");
+        String serialised = rs.getString("serialised");
+        String json = rs.getString("metadata");
+        return new PojoGlobal(language, subjectField, serialised, json);
+    }
+
+    public ConceptInterface hydrateConcept(ResultSet rs) throws SQLException {
+        String id = "Zio pinetto"; //TODO: rs.getString("id");
+        String fqn = "Zio pinetto"; // TODO: rs.getString("FQName");
+        String date = rs.getString("date");
+        String subjectField = rs.getString("subjectField");
+        String serialised = rs.getString("serialised");
+        String json = rs.getString("metadata");
+        return new PojoConcept(id, fqn, subjectField, date, serialised, json);
+    }
 
     public WordInterface hydrateWord(ResultSet rs) throws SQLException {
         String lemma = rs.getString("lemma");
@@ -89,7 +110,7 @@ public class SqliteConnector {
         String senseFQN = rs.getString("senseFQN");
         PojoWord word = new PojoWord(lemma, language, fqName, serialised, conceptFQN);
 
-        // TODO: this field must support multiple senses!
+        // TODO: enforce this field supports only one sense
         SenseInterface sense = new PojoSense(senseFQN, conceptFQN, serialisedSenses);
         word.getSenses().add(sense);
     
@@ -97,6 +118,34 @@ public class SqliteConnector {
         return word;
     }
     
+    public Collection<ConceptInterface> selectConcepts(Filter filter) throws SQLException {
+        Collection<ConceptInterface> result = new ArrayList<ConceptInterface>();
+        filter = new Filter(filter);
+        Collection<String> langs = filter.getLanguages();
+        if (langs.size() > 0) langs.add("*");
+
+        String query = """
+            select distinct * from concept 
+            where %s and conceptId in (
+                select distinct concept.conceptId as conceptId
+                from concept
+                inner join word 
+                on concept.conceptId = word.conceptId
+                where concept.language = '*' and %s
+            ) order by conceptId, language  
+        """;
+
+        String whereConcept = filter.buildWhere("concept");
+        String whereWord = filter.buildWhere("word");
+        ResultSet rs = executeQuery(query, whereConcept, whereWord);
+
+        while (rs.next()) {
+			ConceptInterface concept = hydrateConcept(rs);
+			result.add(concept);
+		}
+        return result;
+    }
+
     public Collection<String> selectConcept(String columnName, Filter filter) throws SQLException {
         Collection<String> result = new ArrayList<String>();
         filter = new Filter(filter);

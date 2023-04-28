@@ -7,23 +7,26 @@ import java.util.Map;
 
 import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.lemon.resource.Global;
+import cnr.ilc.lemon.resource.GlobalInterface;
+import cnr.ilc.lemon.resource.PojoResource;
 import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.sparql.WordSerialiser;
 import cnr.ilc.stores.MemoryStore;
 
-public class FilterStore extends MemoryStore {
+public class FilterStore extends MemoryStore implements ParserInterface {
 	private SqliteConnector db = new SqliteConnector();
 	private SparqlAssembler sparqlAssembler;
 	private MetadataMerger metadataManager = new MetadataMerger(db);
 	private Filter filter = new Filter();
 
 	@Override
-	protected void appendGlobal(Global global) throws SQLException {
-		String serialised = global.triples.serialise();
-		String metadata = global.metadata.toJson(global.language);
+	protected void appendGlobal(GlobalInterface global) throws SQLException {
+		String serialised = global.getSerialised();
+		String metadata = global.getJson();
 		db.executeUpdate("insert into global (language, subjectField, metadata, serialised) values ('%s', %s, %s, %s)", 
-			global.language, db.quote(global.subjectField), db.quote(metadata), db.quote(serialised));
+			global.getLanguage(), db.quote(global.getSubjectField()), db.quote(metadata), db.quote(serialised));
 	}
 
 	@Override
@@ -33,7 +36,7 @@ public class FilterStore extends MemoryStore {
 		langs.addAll(languages);
 		for (String language: langs) {
 			String serialised = concept.getSerialised(language);
-			String metadata = concept.getMetadata().toJson(language);
+			String metadata = concept.getJson();
 			String subjectField = concept.getSubjectField();
 
 			if (serialised.length() > 0 || !metadata.equals("null"))
@@ -102,6 +105,11 @@ public class FilterStore extends MemoryStore {
 
 	public void setFilter(Filter filter) {
 		this.filter = filter;
+	}
+
+	@Override
+	public ResourceInterface parse() throws Exception {
+		return sparqlAssembler.getResource(filter);
 	}
 
 }	

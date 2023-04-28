@@ -5,6 +5,11 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
 
+import cnr.ilc.lemon.resource.ConceptInterface;
+import cnr.ilc.lemon.resource.Global;
+import cnr.ilc.lemon.resource.GlobalInterface;
+import cnr.ilc.lemon.resource.PojoResource;
+import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.sparql.SPARQLWriter;
 import cnr.ilc.sparql.TripleSerialiser;
@@ -22,19 +27,27 @@ public class SparqlAssembler {
 		output = writer;
 	}
 
-	private void processConcepts(Filter filter) throws SQLException {
-		if (filter.isNoConcepts()) return;
+	private Collection<ConceptInterface> getConcepts(Filter filter) throws SQLException {
+		if (filter.isNoConcepts()) return new ArrayList<ConceptInterface>();
+
 		Filter includeNullSubjectField = new Filter(filter);
 		Collection<String> subjectFields = includeNullSubjectField.getSubjectFields();
 		if (subjectFields.size() > 0)
 			subjectFields.add(null);
+		return db.selectConcepts(includeNullSubjectField);
+	}
 
-		for (String serialised: db.selectConcept("serialised", includeNullSubjectField)) {
-			output.append(serialised);
+	private void processConcepts(Filter filter) throws SQLException {
+		for (ConceptInterface concept: getConcepts(filter)) {
+			output.append(concept.getSerialised());
 		}
 	}
 
-	private void processGlobals(Filter filter) throws Exception {
+	private Collection<String> getLanguages(Filter filter) {
+		return null; // FIXME: TODO:
+	}
+
+	private Collection<GlobalInterface> getGlobals(Filter filter) throws Exception {
 		Filter globalFilter = new Filter(filter);
 		Collection<String> filterSubjectFields = globalFilter.getSubjectFields();
 
@@ -53,8 +66,19 @@ public class SparqlAssembler {
 		}
 
 		ResultSet rs = db.selectEntity("global", globalFilter);
+
+		Collection<GlobalInterface> globals = new ArrayList<>();
 		while (rs.next()) {
-			output.append(rs.getString("serialised"));
+			GlobalInterface global = db.hydrateGlobal(rs);
+			globals.add(global);
+		}
+		return globals;
+	}
+
+	private void processGlobals(Filter filter) throws Exception {
+		Collection<GlobalInterface> globals = getGlobals(filter);
+		for (GlobalInterface global: globals) {
+			output.append(global.getSerialised());
 		}
 	}
 
@@ -84,5 +108,14 @@ public class SparqlAssembler {
 		Collection<WordInterface> words = getWords(filter);
 		processor.filter(words, triples);
 		return coalesce(words, triples);
+	}
+
+	public ResourceInterface getResource(Filter filter) throws Exception {
+		return new PojoResource(
+			getLanguages(filter),
+			getGlobals(filter), 
+			getConcepts(filter),
+			getWords(filter)
+		);
 	}
 }	

@@ -71,7 +71,7 @@ public class ConceptEntry {
 		
 		Element dateElement = (Element)dates.item(0);
 		String date = dateElement.getTextContent();
-		concept.getMetadata().putInMap("*", date, "concepts", concept.getId(), "date");
+		concept.metadata.putInMap("*", date, "concepts", concept.getId(), "date");
 		concept.date = date;
 	}
 

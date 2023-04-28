@@ -12,13 +12,13 @@ public class Concept implements ConceptInterface {
 	final public TripleSerialiser triples = new TripleSerialiser();
 	public String date = null;
 
-	final private String id;
-	final private String FQName;
+	final public String id;
+	final public String FQName;
 	final private Collection<WordInterface> words = new ArrayList<>();
 	final private Map<String,String> definition = new HashMap<>();
-	final private Metadata metadata = new Metadata();
-	private String subjectField = null;
-	private String subjectFieldFQN = null;
+	final public Metadata metadata = new Metadata();
+	public String subjectField = null;
+	public String subjectFieldFQN = null;
 
 	public Concept(String conceptId) {
 		id = conceptId;
@@ -89,8 +89,8 @@ public class Concept implements ConceptInterface {
 	}
 
 	@Override
-	public Metadata getMetadata() {
-		return metadata;
+	public String getJson() {
+		return metadata.toJson("*");
 	}
 
 	@Override

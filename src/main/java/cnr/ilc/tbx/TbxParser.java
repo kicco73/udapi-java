@@ -5,6 +5,7 @@ import org.xml.sax.InputSource;
 import cnr.ilc.lemon.resource.Concept;
 import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.lemon.resource.Global;
+import cnr.ilc.lemon.resource.GlobalInterface;
 import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.rut.ParserInterface;
@@ -23,11 +24,11 @@ import java.util.Map.Entry;
 public class TbxParser implements ParserInterface, ResourceInterface {
 	private Document document;
 	private ConceptEntry conceptEntryParser = new ConceptEntry();
+	private Collection<GlobalInterface> globals = new ArrayList<>();
 	private Collection<ConceptInterface> concepts = new ArrayList<>();
 	private Map<String, String> subjectFields = new LinkedHashMap<>();
 	private Map<String, String> lexicons = new LinkedHashMap<>();
 	private String creator;
-	private Collection<Global> globals = new ArrayList<>();
 
     public TbxParser(InputStream inputStream, String creator) throws Exception {
 		this.creator = creator;
@@ -119,7 +120,7 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 	}
 
 	@Override
-	public Collection<Global> getGlobals() {
+	public Collection<GlobalInterface> getGlobals() {
 		return globals;
 	}
 
