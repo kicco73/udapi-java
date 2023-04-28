@@ -4,32 +4,22 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Collection;
-import java.util.List;
 
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.sparql.SPARQLWriter;
 import cnr.ilc.sparql.TripleSerialiser;
 import cnr.ilc.sparql.WordSerialiser;
-import cnr.ilc.stores.filterstore.processors.NoSensesProcessor;
-import cnr.ilc.stores.filterstore.processors.PolysemicProcessor;
-import cnr.ilc.stores.filterstore.processors.ProcessorInterface;
-import cnr.ilc.stores.filterstore.processors.SynonymsProcessor;
-import cnr.ilc.stores.filterstore.processors.TranslateSenseProcessor;
-import cnr.ilc.stores.filterstore.processors.TranslateTermProcessor;
+import cnr.ilc.processors.ProcessorInterface;
 
 public class SparqlAssembler {
 	protected SPARQLWriter output;
 	final private SqliteConnector db;
-	final private NoSensesProcessor noSenseProcessor = new NoSensesProcessor();
-	final private TranslateTermProcessor translateTermProcessor = new TranslateTermProcessor();
-	final private PolysemicProcessor polysemicProcessor;
-	final private TranslateSenseProcessor translateSenseProcessor = new TranslateSenseProcessor();
-	final private SynonymsProcessor synonymsProcessor = new SynonymsProcessor();
+	final private ProcessorInterface processor;
 
-	public SparqlAssembler(SqliteConnector sql, SPARQLWriter writer) {
+	public SparqlAssembler(SqliteConnector sql, ProcessorInterface postProcessor, SPARQLWriter writer) {
 		db = sql;
+		processor = postProcessor;
 		output = writer;
-		polysemicProcessor = new PolysemicProcessor(db);
 	}
 
 	private void processConcepts(Filter filter) throws SQLException {
@@ -78,32 +68,6 @@ public class SparqlAssembler {
 		return words;
 	}
 
-	private List<ProcessorInterface> buildPipeline(Filter filter) {
-		List<ProcessorInterface> processors = new ArrayList<>();
-		if (filter.isNoSenses()) {
-			processors.add(noSenseProcessor);
-			if (filter.isTranslateTerms())
-				processors.add(translateTermProcessor);
-		} else {
-			processors.add(polysemicProcessor);
-			if (filter.isTranslateSenses())
-				processors.add(translateSenseProcessor);
-			if (filter.isSynonyms())
-				processors.add(synonymsProcessor);
-		}
-		return processors;
-	}
-
-	private Collection<WordInterface> processWords(Filter filter, TripleSerialiser triples) throws Exception {
-		List<ProcessorInterface> processors = buildPipeline(filter);
-		Collection<WordInterface> words = getWords(filter);
-
-		for (ProcessorInterface processor: processors)
-			words = processor.filter(words, triples);
-
-		return words;
-	}
-
 	private String coalesce(Collection<WordInterface> words, TripleSerialiser triples) throws Exception {
 		for (WordInterface word: words) {
 			output.append(word.getSerialised());
@@ -117,7 +81,8 @@ public class SparqlAssembler {
 		TripleSerialiser triples = new TripleSerialiser();
 		processGlobals(filter);
 		processConcepts(filter);		
-		Collection<WordInterface> words = processWords(filter, triples);
+		Collection<WordInterface> words = getWords(filter);
+		processor.filter(words, triples);
 		return coalesce(words, triples);
 	}
 }	

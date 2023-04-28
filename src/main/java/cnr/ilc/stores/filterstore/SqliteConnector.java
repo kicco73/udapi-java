@@ -9,6 +9,7 @@ import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,6 +18,7 @@ import cnr.ilc.lemon.PojoSense;
 import cnr.ilc.lemon.PojoWord;
 import cnr.ilc.lemon.resource.SenseInterface;
 import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.rut.utils.Metadata;
 
 public class SqliteConnector {
     private Connection connection;
@@ -134,6 +136,43 @@ public class SqliteConnector {
         rs = executeQuery("select * from %s where %s order by language", entityName, where);
         rs.setFetchSize(rows);
         return rs;
+    }
+
+    public void markPolysemicGroups() throws SQLException {
+        String query = """
+                select rowid, lemma, language from word 
+                group by lemma, language having count(*) > 1
+        """;
+
+        String update = "update word set polysemicGroup = %d where lemma = '%s' and language ='%s' ";
+
+        ResultSet rs = executeQuery(query);
+        while (rs.next()) {
+            int groupId = rs.getInt("rowid");
+            String lemma = rs.getString("lemma");
+            String language = rs.getString("language");
+            executeUpdate(update, groupId, lemma, language);
+        }
+    }
+    public Object selectPolysemicEntries(Filter filter) throws SQLException {
+        Metadata result = new Metadata();
+
+        String query = """
+            select polysemicGroup, lemma, conceptId, language from word 
+                where polysemicGroup is not null and %s 
+                order by lemma, language
+        """;
+        String where = filter.buildWhere("word");
+        ResultSet rs = executeQuery(query, where);
+        while (rs.next()) {
+            Map<String,String> term = new HashMap<>();
+            term.put("t", rs.getString("lemma"));
+            term.put("c", rs.getString("conceptId"));
+            term.put("l", rs.getString("language"));
+            term.put("g", rs.getString("polysemicGroup"));
+            result.addToList("*", term);
+        }
+        return result.getObject("*");
     }
 
     public Map<String, Long> selectTermStats(Filter filter) throws SQLException {

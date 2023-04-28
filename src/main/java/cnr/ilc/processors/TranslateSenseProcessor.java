@@ -1,4 +1,4 @@
-package cnr.ilc.stores.filterstore.processors;
+package cnr.ilc.processors;
 
 import java.util.Collection;
 import java.util.Map;

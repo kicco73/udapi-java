@@ -11,12 +11,10 @@ import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.sparql.WordSerialiser;
 import cnr.ilc.stores.MemoryStore;
-import cnr.ilc.stores.filterstore.processors.PolysemicProcessor;
 
 public class FilterStore extends MemoryStore {
 	private SqliteConnector db = new SqliteConnector();
-	private PolysemicProcessor polysemicSupport = new PolysemicProcessor(db);
-	private SparqlAssembler sparqlAssembler = new SparqlAssembler(db, output);
+	private SparqlAssembler sparqlAssembler;
 	private MetadataMerger metadataManager = new MetadataMerger(db);
 	private Filter filter = new Filter();
 
@@ -81,15 +79,15 @@ public class FilterStore extends MemoryStore {
 		);
 	}
 
-	public FilterStore(String namespace, String creator, int chunkSize, String fileName) throws Exception {
-		super(namespace, creator, chunkSize);
+	public FilterStore(String namespace, String creator, int chunkSize, Filter filter, String fileName) throws Exception {
+		super(namespace, creator, chunkSize, filter);
 		db.connect(fileName);
+		sparqlAssembler = new SparqlAssembler(db, processor, output);
 	}
 
 	@Override
-	public void store(ResourceInterface resource) throws Exception  {
-		super.store(resource);
-		polysemicSupport.markPolysemicGroups();
+	protected void finaliseStore() throws Exception {
+		db.markPolysemicGroups();
 	}
 
 	@Override

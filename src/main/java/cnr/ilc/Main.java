@@ -219,9 +219,9 @@ public class Main {
             TripleStoreInterface tripleStore;
 
             if (isDb) {
-                tripleStore = new FilterStore(namespace, creator, chunkSize, fileName);
+                tripleStore = new FilterStore(namespace, creator, chunkSize, filter, fileName);
             } else {
-                tripleStore = new MemoryStore(namespace, creator, chunkSize);
+                tripleStore = new MemoryStore(namespace, creator, chunkSize, filter);
                 ParserInterface parser = makeParser(inputStream);
                 ResourceInterface resource = parser.parse();
                 tripleStore.store(resource);

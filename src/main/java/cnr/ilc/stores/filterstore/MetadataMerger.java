@@ -10,12 +10,10 @@ import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
 import cnr.ilc.rut.utils.Metadata;
-import cnr.ilc.stores.filterstore.processors.PolysemicProcessor;
 
 @SuppressWarnings("unchecked")
 public class MetadataMerger {
 	private SqliteConnector db;
-	private PolysemicProcessor ps;
 	private JSONParser jsonParser = new JSONParser();
 
 	private int mergeJson(Metadata metadata, String columnName, String entityName, Filter filter) throws Exception {
@@ -48,7 +46,6 @@ public class MetadataMerger {
 
 	public MetadataMerger(SqliteConnector db) {
 		this.db = db;
-		ps = new PolysemicProcessor(db);
 	}
 
 	public Map<String,Object> getMetadata(Filter filter) throws Exception {
@@ -64,7 +61,7 @@ public class MetadataMerger {
 		metadata.putInMap("*", numberOfTerms, "summary", "numberOfTerms");
 		metadata.putInMap("*", db.selectTermStats(filter), "summary", "languages");
 		metadata.putInMap("*", db.selectConceptDates(filter), "summary", "dates");
-		metadata.putInMap("*", ps.selectPolysemicEntries(filter), "summary", "polysemic");
+		metadata.putInMap("*", db.selectPolysemicEntries(filter), "summary", "polysemic");
 
 		return metadata.getMap("*");
 	}

@@ -66,13 +66,13 @@ public class Services {
 		return content;
 	}
 
-	private static FilterStore getStore(String resourceId, String namespace, String creator, boolean isNew) throws Exception {
+	private static FilterStore getStore(String resourceId, String namespace, String creator, Filter filter, boolean isNew) throws Exception {
 		String dbFile = getPathToResourceProperty(resourceId, "sqlite.db");
 		
 		dbFile = "resources/"+resourceId+".db";// FIXME: HACK
 
 		if (isNew) new File(dbFile).delete();
-		return new FilterStore(namespace, creator, chunkSize, dbFile);
+		return new FilterStore(namespace, creator, chunkSize, filter, dbFile);
 	}
 
 
@@ -94,7 +94,7 @@ public class Services {
 			saveToResourceProperty(resourceId, "input."+fileType, input);			
 
 			ResourceInterface resource = parser.parse();
-			FilterStore tripleStore = getStore(resourceId, namespace, creator, true);
+			FilterStore tripleStore = getStore(resourceId, namespace, creator, null, true);
 			tripleStore.store(resource);
 			response = tripleStore.getMetadata();
             response.put("id", resourceId);
@@ -104,7 +104,7 @@ public class Services {
 
 	static public String filterResource(String inputDir, String namespace, String creator, Filter filter) throws Exception {
 		String resourceId = new File(inputDir).getName();
-		FilterStore tripleStore = getStore(resourceId, namespace, creator, false);
+		FilterStore tripleStore = getStore(resourceId, namespace, creator, filter, false);
 		tripleStore.setFilter(filter);
 		String response = JSONObject.toJSONString(tripleStore.getMetadata());
 		return response;
@@ -112,7 +112,7 @@ public class Services {
 
 	static public String assembleResource(String inputDir, String namespace, String creator, Filter filter) throws Exception {
 		String resourceId = new File(inputDir).getName();
-		FilterStore tripleStore = getStore(resourceId, namespace, creator, false);
+		FilterStore tripleStore = getStore(resourceId, namespace, creator, filter, false);
 		tripleStore.setFilter(filter);
 		String sparql = tripleStore.getSparql();
 		saveToResourceProperty(resourceId, "sparql", sparql);
