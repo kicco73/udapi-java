@@ -37,9 +37,13 @@ public class Filter {
 		setSubjectFields(other.getSubjectFields());
 
 		excludeIds = cloneCollection(other.excludeIds);
+
 		noConcepts = other.noConcepts;
 		noSenses = other.noSenses;
 		noPolysemicGroups = other.noPolysemicGroups;
+		synonyms = other.synonyms;
+		translateSenses = other.translateSenses;
+		translateTerms = other.translateTerms;
 	}
 
 	public void setLanguages(Collection<String> languages) {

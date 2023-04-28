@@ -7,7 +7,6 @@ import java.util.Collection;
 import java.util.List;
 
 import cnr.ilc.lemon.resource.WordInterface;
-import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.sparql.SPARQLWriter;
 import cnr.ilc.sparql.TripleSerialiser;
 import cnr.ilc.sparql.WordSerialiser;
@@ -33,7 +32,7 @@ public class SparqlAssembler {
 		polysemicProcessor = new PolysemicProcessor(db);
 	}
 
-	private void assembleConcepts(Filter filter) throws SQLException {
+	private void processConcepts(Filter filter) throws SQLException {
 		if (filter.isNoConcepts()) return;
 		Filter includeNullSubjectField = new Filter(filter);
 		Collection<String> subjectFields = includeNullSubjectField.getSubjectFields();
@@ -45,26 +44,7 @@ public class SparqlAssembler {
 		}
 	}
 
-	private Filter assembleEntity(String entityName, Filter filter, String ...columnNames) throws SQLException {
-		filter = new Filter(filter);
-		Collection<String> languages = filter.getLanguages();
-		if (languages.size() > 0) languages.add("*");
-
-		ResultSet rs = db.selectEntity(entityName, filter);
-		int total = rs.getFetchSize();
-		int current = 0;
-		while (rs.next()) {
-			Logger.progress(++current * 100 / total, "Assembling %s entity", entityName);
-			for (String columnName: columnNames) {
-				String serialised = rs.getString(columnName);
-				output.append(serialised);
-			}
-		}
-		Logger.progress(100,  "Done");
-		return filter;
-	}
-
-	private void assembleGlobals(Filter filter) throws Exception {
+	private void processGlobals(Filter filter) throws Exception {
 		Filter globalFilter = new Filter(filter);
 		Collection<String> filterSubjectFields = globalFilter.getSubjectFields();
 
@@ -75,7 +55,6 @@ public class SparqlAssembler {
 			if (filterSubjectFields.size() > 0)
 				filterSubjectFields.add(null);
 
-			System.err.println("GLOB");
 			Collection<String> usedSubjectFields = db.selectConcept("subjectField", globalFilter);
 			filterSubjectFields.clear();
 			filterSubjectFields.addAll(usedSubjectFields);		
@@ -83,13 +62,9 @@ public class SparqlAssembler {
 				filterSubjectFields.add(null);
 		}
 
-		assembleEntity("global", globalFilter, "serialised");
-	}
-
-	private void assembleWords(Collection<WordInterface> words) {
-		for (WordInterface word: words) {
-			output.append(word.getSerialised());
-			output.append(WordSerialiser.serialiseLexicalSenses(word));
+		ResultSet rs = db.selectEntity("global", globalFilter);
+		while (rs.next()) {
+			output.append(rs.getString("serialised"));
 		}
 	}
 
@@ -119,22 +94,30 @@ public class SparqlAssembler {
 		return processors;
 	}
 
-	private void assembleWords(Filter filter) throws Exception {
+	private Collection<WordInterface> processWords(Filter filter, TripleSerialiser triples) throws Exception {
 		List<ProcessorInterface> processors = buildPipeline(filter);
-		TripleSerialiser triples = new TripleSerialiser();
 		Collection<WordInterface> words = getWords(filter);
 
 		for (ProcessorInterface processor: processors)
 			words = processor.filter(words, triples);
 
-		assembleWords(words);
+		return words;
+	}
+
+	private String coalesce(Collection<WordInterface> words, TripleSerialiser triples) throws Exception {
+		for (WordInterface word: words) {
+			output.append(word.getSerialised());
+			output.append(WordSerialiser.serialiseLexicalSenses(word));
+		}
 		output.append(triples.serialise());
+		return output.getSparql();
 	}
 
 	public String getSparql(Filter filter) throws Exception {
-		assembleGlobals(filter);
-		assembleConcepts(filter);		
-		assembleWords(filter);
-		return output.getSparql();
+		TripleSerialiser triples = new TripleSerialiser();
+		processGlobals(filter);
+		processConcepts(filter);		
+		Collection<WordInterface> words = processWords(filter, triples);
+		return coalesce(words, triples);
 	}
 }	
