@@ -7,7 +7,7 @@ import cnr.ilc.sparql.TripleSerialiser;
 public class NoSensesProcessor implements ProcessorInterface {
 
     @Override
-    public Collection<WordInterface> filter(Collection<WordInterface> words, TripleSerialiser triples)  {
+    public Collection<WordInterface> process(Collection<WordInterface> words, TripleSerialiser triples)  {
 		triples.addComment("[No Sense Processor] Connecting terms to concepts via ontolex:denotes relationship");
 
         for (WordInterface word: words) {

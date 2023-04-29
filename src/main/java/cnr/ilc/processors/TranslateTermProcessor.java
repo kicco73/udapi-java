@@ -42,7 +42,7 @@ public class TranslateTermProcessor implements ProcessorInterface {
     }
 
     @Override
-    public Collection<WordInterface> filter(Collection<WordInterface> words, TripleSerialiser triples) {
+    public Collection<WordInterface> process(Collection<WordInterface> words, TripleSerialiser triples) {
         Map<String, Collection<WordInterface>> concepts = groupWordsByConceptAndLanguage(words);
         
         for (Entry<String, Collection<WordInterface>> concept: concepts.entrySet()) {

@@ -131,7 +131,11 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 
 	@Override
 	public Collection<WordInterface> getWords() {
-		return null;
+		Collection<WordInterface> words = new ArrayList<WordInterface>();
+		for (ConceptInterface concept: concepts) {
+			words.addAll(concept.getWords());
+		}
+		return words;
 	}
 
 }

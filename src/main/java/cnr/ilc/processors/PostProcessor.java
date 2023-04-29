@@ -8,32 +8,31 @@ import cnr.ilc.sparql.TripleSerialiser;
 import cnr.ilc.stores.filterstore.Filter;
 
 public class PostProcessor implements ProcessorInterface {
-    final private List<ProcessorInterface> processors;
+    private List<ProcessorInterface> processors = new ArrayList<ProcessorInterface>();
 
-	static private List<ProcessorInterface> buildPipeline(Filter filter) {
-		List<ProcessorInterface> processors = new ArrayList<>();
+	static public PostProcessor make(Filter filter) {
+		PostProcessor postProcessor = new PostProcessor();
+		if (filter == null) return postProcessor;
+
 		if (filter.isNoSenses()) {
-			processors.add(new NoSensesProcessor());
+			postProcessor.processors.add(new NoSensesProcessor());
 			if (filter.isTranslateTerms())
-				processors.add(new TranslateTermProcessor());
+				postProcessor.processors.add(new TranslateTermProcessor());
 		} else {
-			processors.add(new PolysemicProcessor());
+			postProcessor.processors.add(new PolysemicProcessor());
 			if (filter.isTranslateSenses())
-				processors.add(new TranslateSenseProcessor());
+				postProcessor.processors.add(new TranslateSenseProcessor());
 			if (filter.isSynonyms())
-				processors.add(new SynonymsProcessor());
+				postProcessor.processors.add(new SynonymsProcessor());
 		}
-		return processors;
+
+		return postProcessor;
 	}
 
-    public PostProcessor(Filter filter) {
-        processors = buildPipeline(filter);
-    }
-
     @Override
-    public Collection<WordInterface> filter(Collection<WordInterface> words, TripleSerialiser triples) {
+    public Collection<WordInterface> process(Collection<WordInterface> words, TripleSerialiser triples) {
 		for (ProcessorInterface processor: processors)
-            words = processor.filter(words, triples);
+            words = processor.process(words, triples);
         return words;
     }
     

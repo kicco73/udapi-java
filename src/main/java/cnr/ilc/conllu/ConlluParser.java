@@ -71,7 +71,7 @@ public class ConlluParser implements ParserInterface, ResourceInterface {
 
     @Override
     public Collection<ConceptInterface> getConcepts() {
-        return null;
+        return new ArrayList<>();
     }
 
     @Override

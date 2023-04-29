@@ -1,4 +1,4 @@
-package cnr.ilc.rut;
+package cnr.ilc.services;
 
 import java.io.ByteArrayInputStream;
 import java.io.File;
@@ -7,18 +7,18 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.HashMap;
 import java.util.Map;
 
 import org.json.simple.JSONObject;
 
 import cnr.ilc.conllu.ConlluParser;
 import cnr.ilc.lemon.resource.ResourceInterface;
+import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.utils.IdGenerator;
 import cnr.ilc.rut.utils.Logger;
+import cnr.ilc.sparql.SPARQLAssembler;
 import cnr.ilc.sparql.SPARQLWriter;
 import cnr.ilc.stores.filterstore.Filter;
-import cnr.ilc.stores.filterstore.FilterStore;
 import cnr.ilc.tbx.TbxParser;
 
 public class Services {
@@ -66,55 +66,30 @@ public class Services {
 		return content;
 	}
 
-	private static FilterStore getStore(String resourceId, String namespace, String creator, Filter filter, boolean isNew) throws Exception {
-		String dbFile = getPathToResourceProperty(resourceId, "sqlite.db");
-		
-		dbFile = "resources/"+resourceId+".db";// FIXME: HACK
-
-		if (isNew) new File(dbFile).delete();
-		return new FilterStore(namespace, creator, chunkSize, filter, dbFile);
-	}
-
-
 	static public String createResource(String input, String inputFileName, String fileType, String creator, String language, String namespace) throws Exception {
-		ParserInterface parser = null;
-		Map<String, Object> response = new HashMap<>();
 		InputStream inputStream = new ByteArrayInputStream(input.getBytes());
+		String basename = new File(inputFileName).getName();
+		String resourceId = idGenerator.getId(basename);
 
-		if (fileType.equals("tbx")) {
-			parser = new TbxParser(inputStream, creator);
-		} else if (fileType.equals("conllu")) {
-			parser = new ConlluParser(inputStream, creator, language);
-		}
+		deleteResource(resourceId);
+		saveToResourceProperty(resourceId, "input."+fileType, input);	
 
-		if (parser != null) {
-			String basename = new File(inputFileName).getName();
-			String resourceId = idGenerator.getId(basename);
-			deleteResource(resourceId);
-			saveToResourceProperty(resourceId, "input."+fileType, input);			
-
-			ResourceInterface resource = parser.parse();
-			FilterStore tripleStore = getStore(resourceId, namespace, creator, null, true);
-			tripleStore.store(resource);
-			response = tripleStore.getMetadata();
-            response.put("id", resourceId);
-		}
-		return JSONObject.toJSONString(response);
+		OnlineCompiler analyser = new OnlineCompiler(resourceId);
+		return analyser.parse(inputStream, creator);
 	}
 
 	static public String filterResource(String inputDir, String namespace, String creator, Filter filter) throws Exception {
 		String resourceId = new File(inputDir).getName();
-		FilterStore tripleStore = getStore(resourceId, namespace, creator, filter, false);
-		tripleStore.setFilter(filter);
-		String response = JSONObject.toJSONString(tripleStore.getMetadata());
-		return response;
+		OnlineCompiler analyser = new OnlineCompiler(resourceId);
+		return analyser.getJson(filter);
 	}
 
 	static public String assembleResource(String inputDir, String namespace, String creator, Filter filter) throws Exception {
 		String resourceId = new File(inputDir).getName();
-		FilterStore tripleStore = getStore(resourceId, namespace, creator, filter, false);
-		tripleStore.setFilter(filter);
-		String sparql = tripleStore.getSparql();
+		OnlineCompiler analyser = new OnlineCompiler(resourceId);
+		SPARQLAssembler serialiser = new SPARQLAssembler(namespace, creator, chunkSize, filter);
+		serialiser.serialise(analyser.getResource(filter));
+		String sparql = serialiser.getSparql();
 		saveToResourceProperty(resourceId, "sparql", sparql);
 		return sparql;
 	}

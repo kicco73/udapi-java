@@ -17,7 +17,7 @@ public class PolysemicProcessor implements ProcessorInterface {
     PolysemicResolver resolver = new PolysemicResolver();
 
     @Override
-    public Collection<WordInterface> filter(Collection<WordInterface> words, TripleSerialiser triples)  {
+    public Collection<WordInterface> process(Collection<WordInterface> words, TripleSerialiser triples)  {
         Collection<WordInterface> result = new ArrayList<>();
         Metadata metadata = new Metadata();
 
@@ -35,8 +35,10 @@ public class PolysemicProcessor implements ProcessorInterface {
                 Collection<WordInterface> replacementSet = resolver.resolve(wordSet);
                 result.addAll(replacementSet);
 
-                if (wordSet.size() > 1)
-                    triples.addComment("[Polysemic Processor] term `%s`@%s merged", term, language);
+                if (wordSet.size() > 1) {
+                    // TODO: this comment is assuming the resolver merges all senses into one term
+                    triples.addComment("[Polysemic Processor] term `%s`@%s merged with %d senses", term, language, wordSet.size());
+                }
             }
         }
         return result;

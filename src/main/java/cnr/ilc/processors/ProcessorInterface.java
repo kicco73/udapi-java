@@ -6,5 +6,5 @@ import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.sparql.TripleSerialiser;
 
 public interface ProcessorInterface {
-	Collection<WordInterface> filter(Collection<WordInterface> words, TripleSerialiser triples);
+	Collection<WordInterface> process(Collection<WordInterface> words, TripleSerialiser triples);
 }

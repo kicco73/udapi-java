@@ -6,6 +6,7 @@ import java.util.Collection;
 import java.util.HashSet;
 import java.util.Map;
 
+import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
@@ -16,6 +17,10 @@ public class MetadataMerger {
 	private SqliteConnector db;
 	private JSONParser jsonParser = new JSONParser();
 
+	public MetadataMerger(SqliteConnector db) {
+		this.db = db;
+	}
+	
 	private int mergeJson(Metadata metadata, String columnName, String entityName, Filter filter) throws Exception {
 		int results = 0;
 		filter = new Filter(filter);
@@ -44,10 +49,6 @@ public class MetadataMerger {
 		return concepts == null? 0 : concepts.size();
 	}
 
-	public MetadataMerger(SqliteConnector db) {
-		this.db = db;
-	}
-
 	public Map<String,Object> getMetadata(Filter filter) throws Exception {
 		Metadata metadata = new Metadata();
 		Filter noDatesFilter = new Filter(filter);
@@ -64,5 +65,9 @@ public class MetadataMerger {
 		metadata.putInMap("*", db.selectPolysemicEntries(filter), "summary", "polysemic");
 
 		return metadata.getMap("*");
+	}
+
+	public String getJson(Filter filter) throws Exception {
+		return JSONObject.toJSONString(getMetadata(filter));
 	}
 }	

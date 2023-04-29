@@ -13,30 +13,21 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
-import java.util.HashMap;
-import java.util.Map;
-
-import org.json.simple.JSONValue;
-
 import cnr.ilc.conllu.ConlluParser;
 import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.rut.ParserInterface;
-import cnr.ilc.rut.Services;
 import cnr.ilc.rut.utils.DateProvider;
-import cnr.ilc.rut.utils.IdGenerator;
 import cnr.ilc.rut.utils.Logger;
+import cnr.ilc.services.GraphDBClient;
+import cnr.ilc.services.Services;
+import cnr.ilc.sparql.SPARQLAssembler;
 import cnr.ilc.sparql.SPARQLWriter;
-import cnr.ilc.stores.MemoryStore;
-import cnr.ilc.stores.TripleStoreInterface;
 import cnr.ilc.stores.filterstore.Filter;
-import cnr.ilc.stores.filterstore.FilterStore;
-import cnr.ilc.rut.GraphDBClient;
 import cnr.ilc.tbx.TbxParser;
 
 public class Main {
     boolean isConnlu = false;
     boolean isTbx = false;
-    boolean isDb = false;
     boolean isSparql = false;
     boolean isJson = false;
     String service = null;
@@ -83,8 +74,6 @@ public class Main {
                         isTbx = true;
                     else if (format.equals("sparql")) 
                         isSparql = true;
-                    else if (format.equals("sqlite")) 
-                        isDb = true;
                     else
                         throw new IllegalArgumentException(String.format("Unknown format %s: must be one of conllu, tbx, sparql, sqlite", format));
                     break;
@@ -155,7 +144,7 @@ public class Main {
                     throw new IllegalArgumentException(String.format("Unknown option: %s", args[startIndex-1]));
             }
         }
-        if ((service == null || service.equals("analyse")) && (isTbx? 1 : 0) + (isConnlu? 1 : 0) + (isSparql? 1 : 0) + (isDb? 1 : 0) != 1) 
+        if ((service == null || service.equals("analyse")) && (isTbx? 1 : 0) + (isConnlu? 1 : 0) + (isSparql? 1 : 0) != 1) 
             throw new IllegalArgumentException("--input-format option must be specified once (and once only).");
 
         return this;
@@ -210,44 +199,25 @@ public class Main {
 
     private void processFile(String fileName) throws Exception {
         InputStream inputStream = fileName == null? System.in : new FileInputStream(fileName);
-        Map<String, Object> metadata = null;
         String statements = null;
 
         if (isSparql) {
             statements = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
         } else {
-            TripleStoreInterface tripleStore;
-
-            if (isDb) {
-                tripleStore = new FilterStore(namespace, creator, chunkSize, filter, fileName);
-            } else {
-                tripleStore = new MemoryStore(namespace, creator, chunkSize, filter);
-                ParserInterface parser = makeParser(inputStream);
-                ResourceInterface resource = parser.parse();
-                tripleStore.store(resource);
-                metadata = tripleStore.getMetadata();
+            ParserInterface parser = makeParser(inputStream);
+            SPARQLAssembler assembler = new SPARQLAssembler(namespace, creator, chunkSize, filter);
+            ResourceInterface resource = parser.parse();
+            assembler.serialise(resource);
+            statements = assembler.getSparql();
     
-                if (isConnlu && exportConll != null && parser instanceof ConlluParser) {
-                    ((ConlluParser)parser).writeConll(exportConll);
-                }  
-            }
-            statements = tripleStore.getSparql();
+            if (exportConll != null && parser instanceof ConlluParser) {
+                ((ConlluParser)parser).writeConll(exportConll);
+            }  
         }
         
-        String output = statements;
-
-        if (isJson) {
-            Map<String, Object> response = new HashMap<>();
-            IdGenerator idGenerator = new IdGenerator();
-            response.put("metadata", metadata);
-            response.put("sparql", statements);
-            response.put("id", idGenerator.getId(fileName == null? "stdin" : fileName));
-            output = JSONValue.toJSONString(response); 
-        }
-
         if (Services.outDir == null || fileName == null) {
-            if (!isSparql) System.out.println(output);
-        } else if (statements != null) {
+            if (!isSparql) System.out.println(statements);
+        } else {
             saveStatementsUsingInFileName(fileName, ".sparql", statements);            
         }
 
@@ -280,6 +250,5 @@ public class Main {
             client.postUpdate(chunk);
         }
         System.err.println();
-    }
-    
+    }   
 }

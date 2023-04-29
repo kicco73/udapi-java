@@ -45,7 +45,7 @@ public class TranslateSenseProcessor implements ProcessorInterface {
 
 
     @Override
-    public Collection<WordInterface> filter(Collection<WordInterface> words, TripleSerialiser triples) {
+    public Collection<WordInterface> process(Collection<WordInterface> words, TripleSerialiser triples) {
         Map<String, Collection<SenseInterface>> concepts = groupSensesByConceptAndLanguage(words);
         
         for (Entry<String, Collection<SenseInterface>> concept: concepts.entrySet()) {

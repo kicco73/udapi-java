@@ -166,9 +166,7 @@ public class SqliteConnector {
         String whereConcept = filter.buildWhere("concept");
         String whereWord = filter.buildWhere("word");
         ResultSet rs = executeQuery(query, columnName, whereConcept, whereWord);
-        System.err.println(String.format(query, columnName, whereConcept, whereWord));
         while (rs.next()) {
-            System.err.println("HO CONCEPT");
             result.add(rs.getString(columnName));
         }
         return result;
@@ -253,5 +251,9 @@ public class SqliteConnector {
         }
 
         return results;
+    }
+
+    public void clear() throws SQLException {
+        createSchema();
     }
 }   

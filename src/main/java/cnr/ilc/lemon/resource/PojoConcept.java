@@ -1,8 +1,9 @@
 package cnr.ilc.lemon.resource;
 
+import java.util.ArrayList;
 import java.util.Collection;
 
-import cnr.ilc.rut.utils.Metadata;
+import cnr.ilc.rut.utils.Logger;
 
 public class PojoConcept implements ConceptInterface {
 	final private String id;
@@ -58,8 +59,8 @@ public class PojoConcept implements ConceptInterface {
 
 	@Override
 	public Collection<WordInterface> getWords() {
-		// TODO Auto-generated method stub
-		throw new UnsupportedOperationException("Unimplemented method 'getWords'");
+		Logger.error("Unimplemented method 'PojoConcept.getWords'");
+		return new ArrayList<>();
 	}
 
 }
