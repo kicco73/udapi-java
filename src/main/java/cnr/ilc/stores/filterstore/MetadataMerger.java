@@ -10,6 +10,7 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
+import cnr.ilc.rut.Filter;
 import cnr.ilc.rut.utils.Metadata;
 
 @SuppressWarnings("unchecked")
@@ -20,7 +21,7 @@ public class MetadataMerger {
 	public MetadataMerger(SqliteConnector db) {
 		this.db = db;
 	}
-	
+
 	private int mergeJson(Metadata metadata, String columnName, String entityName, Filter filter) throws Exception {
 		int results = 0;
 		filter = new Filter(filter);

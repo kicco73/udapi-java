@@ -6,6 +6,7 @@ import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.lemon.resource.GlobalInterface;
 import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.rut.Filter;
 import cnr.ilc.stores.TripleStoreInterface;
 
 public class FilterStore implements TripleStoreInterface, ResourceInterface {

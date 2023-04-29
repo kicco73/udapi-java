@@ -258,6 +258,6 @@ INSERT DATA {
 	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun_sense_default dct:created "2023-04-10T10:02+02:00" .
 	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun_sense_default dct:modified "2023-04-10T10:02+02:00" .
 
-	# [Polysemic Processor] term `VEP`@fr merged
+	# [Polysemic Processor] term `VEP`@fr merged with 2 senses
 }
 

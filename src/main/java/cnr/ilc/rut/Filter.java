@@ -1,4 +1,4 @@
-package cnr.ilc.stores.filterstore;
+package cnr.ilc.rut;
 
 import java.util.Collection;
 import java.util.HashMap;

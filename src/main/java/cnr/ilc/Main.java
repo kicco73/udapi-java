@@ -15,23 +15,20 @@ import java.util.Arrays;
 import java.util.Date;
 import cnr.ilc.conllu.ConlluParser;
 import cnr.ilc.lemon.resource.ResourceInterface;
+import cnr.ilc.rut.Filter;
 import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.utils.DateProvider;
 import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.services.GraphDBClient;
+import cnr.ilc.services.OfflineCompiler;
 import cnr.ilc.services.Services;
 import cnr.ilc.sparql.SPARQLAssembler;
 import cnr.ilc.sparql.SPARQLWriter;
-import cnr.ilc.stores.filterstore.Filter;
 import cnr.ilc.tbx.TbxParser;
 
 public class Main {
-    boolean isConnlu = false;
-    boolean isTbx = false;
     boolean isSparql = false;
-    boolean isJson = false;
     String service = null;
-    String language = "it";
     String creator = "bot";
     int chunkSize = 1500 * 1024;
     String namespace = "http://txt2rdf/test#";
@@ -40,6 +37,7 @@ public class Main {
     String[] fileNames = new String[0];
     String format = null;
     Filter filter = new Filter();
+    OfflineCompiler offlineCompiler = new OfflineCompiler();
 
     public static void main(String[] args) throws Exception {
         new Main()
@@ -69,9 +67,9 @@ public class Main {
                 case "--input-format":
                     format = args[startIndex++];
                     if (format.equals("conllu")) 
-                        isConnlu = true;
+                        offlineCompiler.isConnlu = true;
                     else if (format.equals("tbx")) 
-                        isTbx = true;
+                        offlineCompiler.isTbx = true;
                     else if (format.equals("sparql")) 
                         isSparql = true;
                     else
@@ -104,10 +102,6 @@ public class Main {
                 case "--filter-synonyms":
                     filter.setSynonyms(true); 
                     break;
-                case "-j":
-                case "--json":
-                    isJson = true;
-                    break;
                 case "-r":
                 case "--repository":
                     Services.repository = args[startIndex++];
@@ -118,7 +112,7 @@ public class Main {
                     break;
                 case "-l":
                 case "--language":
-                    language = args[startIndex++];
+                    offlineCompiler.language = args[startIndex++];
                     break;
                 case "-x":
                 case "--export-conll":
@@ -144,7 +138,8 @@ public class Main {
                     throw new IllegalArgumentException(String.format("Unknown option: %s", args[startIndex-1]));
             }
         }
-        if ((service == null || service.equals("analyse")) && (isTbx? 1 : 0) + (isConnlu? 1 : 0) + (isSparql? 1 : 0) != 1) 
+        if ((service == null || service.equals("analyse")) && 
+            (offlineCompiler.isTbx? 1 : 0) + (offlineCompiler.isConnlu? 1 : 0) + (isSparql? 1 : 0) != 1) 
             throw new IllegalArgumentException("--input-format option must be specified once (and once only).");
 
         return this;
@@ -161,25 +156,16 @@ public class Main {
         else processFile(null);
     }
 
-    private ParserInterface makeParser(InputStream inputStream) throws Exception {
-        if (isTbx) {
-            return new TbxParser(inputStream, creator);
-        } else if (isConnlu) {
-            return new ConlluParser(inputStream, creator, language);
-        }
-        return null;
-    }
-
     private void runService(String fileName) throws Exception {
         String response = "";
 
         switch(service) {
             case "analyse":
                 String input = new String(System.in.readAllBytes());
-                response = Services.createResource(input, fileName == null? "stdin" : fileName, format, creator, language, namespace);
+                response = Services.createResource(input, fileName == null? "stdin" : fileName, format, creator);
                 break;
             case "filter":
-                response = Services.filterResource(fileName, namespace, creator, filter);
+                response = Services.filterResource(fileName, filter);
                 break;
             case "assemble":
                 response = Services.assembleResource(fileName, namespace, creator, filter);
@@ -204,14 +190,11 @@ public class Main {
         if (isSparql) {
             statements = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
         } else {
-            ParserInterface parser = makeParser(inputStream);
-            SPARQLAssembler assembler = new SPARQLAssembler(namespace, creator, chunkSize, filter);
-            ResourceInterface resource = parser.parse();
-            assembler.serialise(resource);
-            statements = assembler.getSparql();
+
+            statements = offlineCompiler.compile(inputStream, namespace, creator, chunkSize, filter);
     
-            if (exportConll != null && parser instanceof ConlluParser) {
-                ((ConlluParser)parser).writeConll(exportConll);
+            if (exportConll != null) {
+                offlineCompiler.exportConll(exportConll);
             }  
         }
         

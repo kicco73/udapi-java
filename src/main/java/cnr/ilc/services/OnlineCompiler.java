@@ -7,9 +7,8 @@ import java.util.Map;
 import org.json.simple.JSONObject;
 
 import cnr.ilc.lemon.resource.ResourceInterface;
-import cnr.ilc.rut.ParserInterface;
-import cnr.ilc.stores.TripleStoreInterface;
-import cnr.ilc.stores.filterstore.Filter;
+import cnr.ilc.rut.Filter;
+import cnr.ilc.sparql.SPARQLAssembler;
 import cnr.ilc.stores.filterstore.FilterStore;
 import cnr.ilc.stores.filterstore.MetadataMerger;
 import cnr.ilc.stores.filterstore.SqliteConnector;
@@ -27,30 +26,24 @@ public class OnlineCompiler {
 		db.connect(dbFile);
 	}
 
-	public String parse(InputStream inputStream, String creator) throws Exception {
+	public String analyse(InputStream inputStream, String creator) throws Exception {
 		TbxParser parser = new TbxParser(inputStream, creator);
 		ResourceInterface resource = parser.parse();
 		filterStore.store(resource);
-		Map<String,Object> metadata = getMetadata();
+		Map<String,Object> metadata = metadataMerger.getMetadata(new Filter());
 		metadata.put("id", resourceId);
 		return JSONObject.toJSONString(metadata);
 	}
 
-	public String getJson() throws Exception {
-		return metadataMerger.getJson(new Filter());
-	}
-
-	public Map<String,Object> getMetadata() throws Exception {
-		return metadataMerger.getMetadata(new Filter());
-	}
-
-	public String getJson(Filter filter) throws Exception {
+	public String filter(Filter filter) throws Exception {
 		return metadataMerger.getJson(filter);
 	}
 
-	public ResourceInterface getResource(Filter filter) {
+	public String assemble(Filter filter, String namespace, String creator, int chunkSize) throws Exception {
+		SPARQLAssembler assembler = new SPARQLAssembler(namespace, creator, chunkSize, filter);
 		filterStore.setFilter(filter);
-		return filterStore;
+		assembler.serialise(filterStore);
+		return assembler.getSparql();
 	}
 
 }

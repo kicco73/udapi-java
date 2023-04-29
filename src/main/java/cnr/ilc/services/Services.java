@@ -7,19 +7,12 @@ import java.io.FileOutputStream;
 import java.io.InputStream;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
-import java.util.Map;
 
-import org.json.simple.JSONObject;
-
-import cnr.ilc.conllu.ConlluParser;
-import cnr.ilc.lemon.resource.ResourceInterface;
-import cnr.ilc.rut.ParserInterface;
+import cnr.ilc.rut.Filter;
 import cnr.ilc.rut.utils.IdGenerator;
 import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.sparql.SPARQLAssembler;
 import cnr.ilc.sparql.SPARQLWriter;
-import cnr.ilc.stores.filterstore.Filter;
-import cnr.ilc.tbx.TbxParser;
 
 public class Services {
 	static public String outDir = "resources";
@@ -66,7 +59,7 @@ public class Services {
 		return content;
 	}
 
-	static public String createResource(String input, String inputFileName, String fileType, String creator, String language, String namespace) throws Exception {
+	static public String createResource(String input, String inputFileName, String fileType, String creator) throws Exception {
 		InputStream inputStream = new ByteArrayInputStream(input.getBytes());
 		String basename = new File(inputFileName).getName();
 		String resourceId = idGenerator.getId(basename);
@@ -75,21 +68,19 @@ public class Services {
 		saveToResourceProperty(resourceId, "input."+fileType, input);	
 
 		OnlineCompiler analyser = new OnlineCompiler(resourceId);
-		return analyser.parse(inputStream, creator);
+		return analyser.analyse(inputStream, creator);
 	}
 
-	static public String filterResource(String inputDir, String namespace, String creator, Filter filter) throws Exception {
+	static public String filterResource(String inputDir, Filter filter) throws Exception {
 		String resourceId = new File(inputDir).getName();
 		OnlineCompiler analyser = new OnlineCompiler(resourceId);
-		return analyser.getJson(filter);
+		return analyser.filter(filter);
 	}
 
 	static public String assembleResource(String inputDir, String namespace, String creator, Filter filter) throws Exception {
 		String resourceId = new File(inputDir).getName();
-		OnlineCompiler analyser = new OnlineCompiler(resourceId);
-		SPARQLAssembler serialiser = new SPARQLAssembler(namespace, creator, chunkSize, filter);
-		serialiser.serialise(analyser.getResource(filter));
-		String sparql = serialiser.getSparql();
+		OnlineCompiler compiler = new OnlineCompiler(resourceId);
+		String sparql = compiler.assemble(filter, namespace, creator, chunkSize);
 		saveToResourceProperty(resourceId, "sparql", sparql);
 		return sparql;
 	}

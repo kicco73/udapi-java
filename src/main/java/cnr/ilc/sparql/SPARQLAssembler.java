@@ -12,8 +12,8 @@ import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.lemon.resource.WordInterface;
 import cnr.ilc.processors.PostProcessor;
 import cnr.ilc.processors.ProcessorInterface;
+import cnr.ilc.rut.Filter;
 import cnr.ilc.rut.utils.Logger;
-import cnr.ilc.stores.filterstore.Filter;
 
 public class SPARQLAssembler {
 	final private ProcessorInterface postProcessor;

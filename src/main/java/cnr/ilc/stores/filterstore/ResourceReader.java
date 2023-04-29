@@ -9,6 +9,7 @@ import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.lemon.resource.GlobalInterface;
 import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.rut.Filter;
 
 public class ResourceReader implements ResourceInterface {
 	final private SqliteConnector db;

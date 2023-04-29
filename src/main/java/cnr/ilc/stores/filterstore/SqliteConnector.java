@@ -22,6 +22,7 @@ import cnr.ilc.lemon.resource.PojoSense;
 import cnr.ilc.lemon.resource.PojoWord;
 import cnr.ilc.lemon.resource.SenseInterface;
 import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.rut.Filter;
 import cnr.ilc.rut.utils.Metadata;
 
 public class SqliteConnector {

@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.rut.Filter;
 import cnr.ilc.sparql.TripleSerialiser;
-import cnr.ilc.stores.filterstore.Filter;
 
 public class PostProcessor implements ProcessorInterface {
     private List<ProcessorInterface> processors = new ArrayList<ProcessorInterface>();
