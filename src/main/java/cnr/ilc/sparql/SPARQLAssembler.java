@@ -57,7 +57,7 @@ public class SPARQLAssembler {
 
 	public SPARQLAssembler(String namespace, String creator, int chunkSize, Filter filter) {
 		output = new SPARQLWriter(namespace, creator, chunkSize);
-		postProcessor = PostProcessor.make(filter);
+		postProcessor = PostProcessor.make(filter, creator);
 	}
 
 	public void serialise(ResourceInterface resource) throws Exception {

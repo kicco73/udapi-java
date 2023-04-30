@@ -10,22 +10,24 @@ import cnr.ilc.sparql.TripleSerialiser;
 public class PostProcessor implements ProcessorInterface {
     private List<ProcessorInterface> processors = new ArrayList<ProcessorInterface>();
 
-	static public PostProcessor make(Filter filter) {
+	static public PostProcessor make(Filter filter, String creator) {
 		PostProcessor postProcessor = new PostProcessor();
-		if (filter == null) return postProcessor;
 
-		if (filter.isNoSenses()) {
-			postProcessor.processors.add(new NoSensesProcessor());
-			if (filter.isTranslateTerms())
-				postProcessor.processors.add(new TranslateTermProcessor());
-		} else {
-			postProcessor.processors.add(new PolysemicProcessor());
-			if (filter.isTranslateSenses())
-				postProcessor.processors.add(new TranslateSenseProcessor());
-			if (filter.isSynonyms())
-				postProcessor.processors.add(new SynonymsProcessor());
+		if (filter != null) {
+			if (filter.isNoSenses()) {
+				postProcessor.processors.add(new NoSensesProcessor());
+				if (filter.isTranslateTerms())
+					postProcessor.processors.add(new TranslateTermProcessor());
+			} else {
+				postProcessor.processors.add(new PolysemicProcessor());
+				if (filter.isTranslateSenses())
+					postProcessor.processors.add(new TranslateSenseProcessor());
+				if (filter.isSynonyms())
+					postProcessor.processors.add(new SynonymsProcessor());
+			}
 		}
-
+		
+		postProcessor.processors.add(new AddMetadataProcessor(creator));
 		return postProcessor;
 	}
 

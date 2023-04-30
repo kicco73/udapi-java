@@ -61,12 +61,6 @@ public class PojoWord implements WordInterface {
 	}
 
 	@Override
-	public String getCreator() {
-		System.err.println("Unimplemented method 'getCreator'");
-		return "Zio Pino";
-	}
-
-	@Override
 	public Collection<SenseInterface> getSenses() {
 		return senses;
 	}

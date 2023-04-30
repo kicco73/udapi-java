@@ -49,7 +49,7 @@ public class Word implements WordInterface {
 		String canonicalFormFQN = String.format("%s_lemma", this.FQName);
 		canonicalForm = new Form(canonicalFormFQN, lemma);
 
-		this.triples = new WordSerialiser(this);
+		this.triples = new WordSerialiser(this, creator);
 
 		Map<String, String> term = new LinkedHashMap<>();
 		term.put("t", lemma);
@@ -111,11 +111,6 @@ public class Word implements WordInterface {
 	@Override
 	public String getFQName() {
 		return FQName;
-	}
-
-	@Override
-	public String getCreator() {
-		return creator;
 	}
 
 	@Override

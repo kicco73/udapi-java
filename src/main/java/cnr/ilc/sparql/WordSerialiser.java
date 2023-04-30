@@ -10,10 +10,12 @@ import cnr.ilc.lemon.resource.WordInterface;
 
 public class WordSerialiser extends TripleSerialiser {
 	final private WeakReference<Word> word;
+	final private String creator;
 
-	public WordSerialiser(Word word) {
+	public WordSerialiser(Word word, String creator) {
 		super();
 		this.word = new WeakReference<Word>(word);
+		this.creator = creator;
 		String wordFQN = word.getFQName();
 		add(word.lexiconFQN, "lime:entry", wordFQN);       
 		
@@ -22,7 +24,6 @@ public class WordSerialiser extends TripleSerialiser {
 		if (word.getPartOfSpeech() != null)
 			add(wordFQN, "lexinfo:partOfSpeech", word.getPartOfSpeech());
 		addString(wordFQN, "vs:term_status", "working");
-		addMetaData(wordFQN, word.getCreator()); 
 	}
 
 	static public String serialiseLexicalSenses(WordInterface word) {
@@ -38,7 +39,6 @@ public class WordSerialiser extends TripleSerialiser {
 		add(word.getFQName(), "ontolex:canonicalForm", canonicalFormFQN);        
 		add(canonicalFormFQN, "rdf:type", "ontolex:Form");        
 		addStringWithLanguage(canonicalFormFQN, "ontolex:writtenRep", word.canonicalForm.text, word.getLanguage());
-		addMetaData(canonicalFormFQN, word.getCreator()); 
 
 		for (Entry<String,String> entry: word.canonicalForm.features.entrySet()) {
 			add(canonicalFormFQN, entry.getValue(), entry.getKey());
@@ -52,7 +52,7 @@ public class WordSerialiser extends TripleSerialiser {
 			add(word.getFQName(), "ontolex:otherForm", otherFormFQN);
 			add(otherFormFQN, "rdf:type", "ontolex:Form");        
 			addStringWithLanguage(otherFormFQN, "ontolex:writtenRep", otherForm.text, word.getLanguage());        
-			addMetaData(otherFormFQN, word.getCreator()); 
+			addMetaData(otherFormFQN, creator); 
 
 			for (Entry<String,String> entry: otherForm.features.entrySet()) {
 				addString(otherFormFQN, entry.getValue(), entry.getKey());

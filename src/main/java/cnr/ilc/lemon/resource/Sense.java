@@ -20,8 +20,6 @@ public class Sense implements SenseInterface {
 		if (conceptFQN != null) {
 			triples.add(FQName, "ontolex:reference", conceptFQN); 
 		}
-
-		triples.addMetaData(FQName, word.getCreator()); 
 	}
 
 	@Override
