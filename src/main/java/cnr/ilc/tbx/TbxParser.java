@@ -2,7 +2,6 @@ package cnr.ilc.tbx;
 import org.w3c.dom.*;
 import org.xml.sax.InputSource;
 
-import cnr.ilc.lemon.resource.Concept;
 import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.lemon.resource.Global;
 import cnr.ilc.lemon.resource.GlobalInterface;
@@ -28,10 +27,8 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 	private Collection<ConceptInterface> concepts = new ArrayList<>();
 	private Map<String, String> subjectFields = new LinkedHashMap<>();
 	private Map<String, String> lexicons = new LinkedHashMap<>();
-	private String creator;
-
+	
     public TbxParser(InputStream inputStream, String creator) throws Exception {
-		this.creator = creator;
 		CountingInputStream countingInputStream = new CountingInputStream(inputStream);
 
 		document = parseTbx(countingInputStream);
@@ -71,7 +68,7 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 			}
 
 			Element conceptEntry = (Element) conceptEntries.item(i);
-			ConceptInterface concept = conceptEntryParser.parseConceptEntry(conceptEntry, creator);
+			ConceptInterface concept = conceptEntryParser.parseConceptEntry(conceptEntry);
 			concepts.add(concept);
 
 			lexicons.putAll(conceptEntryParser.getLexicons());
@@ -99,9 +96,8 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 		for (Entry<String,String> entry: lexicons.entrySet()) {
 			Global global = new Global();
 			global.language = entry.getKey();
-			String lexiconFQN = entry.getValue();
 			global.metadata.addToList(global.language, global.language, "summary", "languages");
-			global.triples.addLexicon(lexiconFQN, global.language, creator);
+			global.triples.addLexicon(global.language);
 			globals.add(global);
 		}
 	}

@@ -57,10 +57,15 @@ public class TripleSerialiser {
 		addString(entryFQN, "dct:modified", date + ":00");
 	}
 
-	public void addLexicon(String lexiconFQN, String language, String creator) {	
+	static public String getLexiconFQN(String language) {
+		return String.format(":lexicon_%s", language);
+	}
+
+	public String addLexicon(String language) {	
+		String lexiconFQN = getLexiconFQN(language);
 		add(lexiconFQN, "rdf:type", "lime:Lexicon");
         addString(lexiconFQN, "lime:language", language);   
-		addMetaData(lexiconFQN, creator);     
+		return lexiconFQN;
 	}
 
 	public void addComment(String template, Object... args) {

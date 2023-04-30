@@ -5,6 +5,7 @@ import cnr.ilc.lemon.resource.Concept;
 import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.lemon.resource.Word;
 import cnr.ilc.sparql.SPARQLFormatter;
+import cnr.ilc.sparql.TripleSerialiser;
 
 import java.util.Collection;
 import java.util.HashMap;
@@ -46,16 +47,16 @@ public class LangSec {
 		}
 	}
 
-	public Collection<TermInterface> parseLangSec(Element langSec, Concept concept, String creator) {
+	public Collection<TermInterface> parseLangSec(Element langSec, Concept concept) {
 		String lang = langSec.getAttribute("xml:lang");
-		String lexiconFQN = String.format(":tbx_%s", lang);
+		String lexiconFQN = TripleSerialiser.getLexiconFQN(lang);
 		lexicons.put(lang, lexiconFQN);
 
 		Collection<TermInterface> terms = new HashSet<>();
 		NodeList termSecs = langSec.getElementsByTagNameNS("*", "termSec");
 		for (int k = 0; k < termSecs.getLength(); ++k)  {
 			Element termSec = (Element) termSecs.item(k);
-			Word word = termSecParser.parseTermSec(termSec, lexiconFQN, lang, concept, creator);
+			Word word = termSecParser.parseTermSec(termSec, lexiconFQN, lang, concept);
 			terms.add(word);
 		}
 

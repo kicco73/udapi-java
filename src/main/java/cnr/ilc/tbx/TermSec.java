@@ -109,7 +109,7 @@ public class TermSec {
 		}
 	}
 
-	public Word parseTermSec(Element termSec, String lexiconFQN, String language, Concept concept, String creator) {
+	public Word parseTermSec(Element termSec, String lexiconFQN, String language, Concept concept) {
 
 		String lemma = Nodes.getTextOfTag(termSec, "term");
 		String grammaticalGender = Nodes.getTextOfTag(termSec, "grammaticalGender");
@@ -119,7 +119,7 @@ public class TermSec {
 		
 		String grammaticalGenderFQN = String.format("lexinfo:%s", grammaticalGender);
 
-		word = concept.newWord(lemma, partOfSpeechFQN, language, lexiconFQN, creator);
+		word = concept.newWord(lemma, partOfSpeechFQN, language, lexiconFQN);
 
 		if (grammaticalGender != null)
 			word.canonicalForm.features.put(grammaticalGenderFQN, "lexinfo:gender");

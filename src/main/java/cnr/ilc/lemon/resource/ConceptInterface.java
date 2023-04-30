@@ -11,4 +11,5 @@ public interface ConceptInterface {
 	public String getSerialised();
 	public String getJson();
 	public Collection<TermInterface> getTerms();
+	public String getSubjectFieldFQN();
 }

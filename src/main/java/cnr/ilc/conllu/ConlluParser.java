@@ -45,8 +45,7 @@ public class ConlluParser implements ParserInterface, ResourceInterface {
 
     @Override
     public ResourceInterface parse() throws Exception {
-        String lexiconFQN = ":connll-u";
-        global.triples.addLexicon(lexiconFQN, language, creator);
+        String lexiconFQN = global.triples.addLexicon(language);
         global.metadata.putInMap("*", "conllu", "fileType");
         words = ParserHelper.compileLexicon(document, namespace, language, lexiconFQN, creator);
         return this;

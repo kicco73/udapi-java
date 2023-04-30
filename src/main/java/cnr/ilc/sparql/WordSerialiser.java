@@ -10,12 +10,10 @@ import cnr.ilc.lemon.resource.TermInterface;
 
 public class WordSerialiser extends TripleSerialiser {
 	final private WeakReference<Word> word;
-	final private String creator;
 
-	public WordSerialiser(Word word, String creator) {
+	public WordSerialiser(Word word) {
 		super();
 		this.word = new WeakReference<Word>(word);
-		this.creator = creator;
 		String wordFQN = word.getFQName();
 		add(word.lexiconFQN, "lime:entry", wordFQN);       
 		
@@ -52,7 +50,7 @@ public class WordSerialiser extends TripleSerialiser {
 			add(word.getFQName(), "ontolex:otherForm", otherFormFQN);
 			add(otherFormFQN, "rdf:type", "ontolex:Form");        
 			addStringWithLanguage(otherFormFQN, "ontolex:writtenRep", otherForm.text, word.getLanguage());        
-			addMetaData(otherFormFQN, creator); 
+			addMetaData(otherFormFQN, "Zio Pino"); 
 
 			for (Entry<String,String> entry: otherForm.features.entrySet()) {
 				addString(otherFormFQN, entry.getValue(), entry.getKey());

@@ -51,13 +51,13 @@ public class ConceptEntry {
 		}
 	}
 
-	private void parseLangSecs(Element conceptEntry, Concept concept, String creator) {
+	private void parseLangSecs(Element conceptEntry, Concept concept) {
 
 		NodeList langSecs = conceptEntry.getElementsByTagNameNS("*", "langSec");
 		
 		for (int j = 0; j < langSecs.getLength(); ++j)  {
 			Element langSec = (Element) langSecs.item(j);
-			langSecParser.parseLangSec(langSec, concept, creator);
+			langSecParser.parseLangSec(langSec, concept);
 		}
 		
 		Nodes.removeNodesFromParsingTree(langSecs);
@@ -76,7 +76,7 @@ public class ConceptEntry {
 		concept.date = date;
 	}
 
-	public ConceptInterface parseConceptEntry(Element conceptEntry, String creator) {
+	public ConceptInterface parseConceptEntry(Element conceptEntry) {
 		String id = conceptEntry.getAttribute("id");
 
 		if (id == null) {
@@ -86,7 +86,7 @@ public class ConceptEntry {
 
 		Concept concept = new Concept(id);
 
-		parseLangSecs(conceptEntry, concept, creator);
+		parseLangSecs(conceptEntry, concept);
 		parseConceptEntryChildren(conceptEntry, concept);	
 		parseSubjectField(conceptEntry, concept, id);
 		parseDate(conceptEntry, concept);

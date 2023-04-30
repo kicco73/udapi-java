@@ -23,19 +23,17 @@ public class Word implements TermInterface {
 	final private WeakReference<ConceptInterface> concept;
 	final public String lexiconFQN;
 	final public String rdfType;
-	final private String creator;
 	final public TripleSerialiser triples;
 	final public Metadata metadata = new Metadata();
 	final private Collection<SenseInterface> senses = new ArrayList<>();
 	final private Map<String, Form> otherForms = new LinkedHashMap<>();
 	static final private IdGenerator idGenerator = new IdGenerator();
 
-	public Word(String lemma, String partOfSpeech, String language, ConceptInterface concept, String lexiconFQN, String rdfType, String creator) {
+	public Word(String lemma, String partOfSpeech, String language, ConceptInterface concept, String lexiconFQN, String rdfType) {
 		this.partOfSpeech = partOfSpeech;
 		this.language = language;
 		this.lexiconFQN = lexiconFQN;
 		this.rdfType = rdfType;
-		this.creator = creator;
 		this.concept = concept == null? null : new WeakReference<ConceptInterface>(concept);
 
 		String FQName = idGenerator.getId(String.format("%s+%s+%s", lemma, partOfSpeech, language));
@@ -49,7 +47,7 @@ public class Word implements TermInterface {
 		String canonicalFormFQN = String.format("%s_lemma", this.FQName);
 		canonicalForm = new Form(canonicalFormFQN, lemma);
 
-		this.triples = new WordSerialiser(this, creator);
+		this.triples = new WordSerialiser(this);
 
 		Map<String, String> term = new LinkedHashMap<>();
 		term.put("t", lemma);

@@ -150,7 +150,7 @@ public class ParserHelper {
                 boolean needsCompile = true;
 
                 if (word == null) {
-                    word = new Word(lemma, partOfSpeech, language, null, lexiconFQN, "ontolex:Word", creator);
+                    word = new Word(lemma, partOfSpeech, language, null, lexiconFQN, "ontolex:Word");
                     lemmas.put(key, word);
 
                     SenseInterface defaultSense = new Sense(word, "", null);

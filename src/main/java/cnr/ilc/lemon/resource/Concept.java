@@ -28,8 +28,8 @@ public class Concept implements ConceptInterface {
 		metadata.putInMap("*", id, "concepts", id, "id");
 	}
 
-	public Word newWord(String lemma, String partOfSpeech, String language, String lexiconFQN, String creator) {
-		Word word = new Word(lemma, partOfSpeech, language, this, lexiconFQN, "ontolex:LexicalEntry", creator);
+	public Word newWord(String lemma, String partOfSpeech, String language, String lexiconFQN) {
+		Word word = new Word(lemma, partOfSpeech, language, this, lexiconFQN, "ontolex:LexicalEntry");
 		words.add(word);
 
 		if (metadata.getObject(language, "concepts", id, "languages", language, "label") == null)

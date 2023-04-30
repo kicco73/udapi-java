@@ -1,6 +1,8 @@
 package cnr.ilc.processors;
 
 import java.util.Collection;
+import java.util.HashSet;
+import java.util.Set;
 
 import cnr.ilc.lemon.resource.SenseInterface;
 import cnr.ilc.lemon.resource.TermInterface;
@@ -14,16 +16,30 @@ public class AddMetadataProcessor implements ProcessorInterface {
     }
 
     @Override
-    public Collection<TermInterface> process(Collection<TermInterface> words, TripleSerialiser triples)  {
-		triples.addComment("[Add Metadata Processor] adding creator and date info to words and senses");
+    public Collection<TermInterface> process(Collection<TermInterface> terms, TripleSerialiser triples)  {
+        Set<String> conceptFQNs = new HashSet<>();
+        Set<String> languages = new HashSet<>();
 
-        for (TermInterface word: words) {
-            triples.addMetaData(word.getFQName(), creator);
-            for (SenseInterface sense: word.getSenses()) {
+		triples.addComment("[Add Metadata Processor] adding creator and date info");
+
+        for (TermInterface term: terms) {
+            String conceptFQN = term.getConceptFQN();
+            if (conceptFQN != null && !conceptFQNs.contains(conceptFQN)) {
+                triples.addMetaData(conceptFQN, creator);
+                conceptFQNs.add(conceptFQN);
+            }
+            String language = term.getLanguage();
+            if (!languages.contains(language)) {
+                triples.addMetaData(TripleSerialiser.getLexiconFQN(language), creator);
+                languages.add(language);
+            }
+
+            triples.addMetaData(term.getFQName(), creator);
+            for (SenseInterface sense: term.getSenses()) {
                 triples.addMetaData(sense.getFQName(), creator);
             }
         }
 
-        return words;
+        return terms;
     }
 }   
