@@ -5,7 +5,7 @@ import java.util.Collection;
 
 import cnr.ilc.rut.utils.Metadata;
 
-public class PojoWord implements WordInterface {
+public class PojoWord implements TermInterface {
 
 	public int rowid = -1; //FIXME:
 

@@ -5,15 +5,15 @@ import java.util.Collection;
 
 import cnr.ilc.lemon.resource.Sense;
 import cnr.ilc.lemon.resource.SenseInterface;
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 
 public class PolysemicResolver {
 
-	private WordInterface oneWordMultipleSensesToDifferentConcepts(Collection<WordInterface> input) {
-		WordInterface ref = null;
+	private TermInterface oneWordMultipleSensesToDifferentConcepts(Collection<TermInterface> input) {
+		TermInterface ref = null;
 		int n = 0;
 
-		for(WordInterface word: input) {
+		for(TermInterface word: input) {
 			if (ref == null) {
 				ref = word;
 				ref.getSenses().clear();
@@ -25,9 +25,9 @@ public class PolysemicResolver {
 		return ref;
 	}
 
-	public Collection<WordInterface> resolve(Collection<WordInterface> input) {
+	public Collection<TermInterface> resolve(Collection<TermInterface> input) {
 		if (input.size() < 2) return input;
-		Collection<WordInterface> output = new ArrayList<>();
+		Collection<TermInterface> output = new ArrayList<>();
 		output.add(oneWordMultipleSensesToDifferentConcepts(input));
 		return output;
 	}

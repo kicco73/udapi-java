@@ -18,7 +18,7 @@ import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.lemon.resource.Global;
 import cnr.ilc.lemon.resource.GlobalInterface;
 import cnr.ilc.lemon.resource.ResourceInterface;
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.rut.ParserInterface;
 
 public class ConlluParser implements ParserInterface, ResourceInterface {
@@ -26,7 +26,7 @@ public class ConlluParser implements ParserInterface, ResourceInterface {
     private String language;
     private String creator;
     private String namespace;
-    private Collection<WordInterface> words;
+    private Collection<TermInterface> words;
     Global global = new Global();
 
     public ConlluParser(InputStream inputStream, String creator, String language) throws Exception {
@@ -75,7 +75,7 @@ public class ConlluParser implements ParserInterface, ResourceInterface {
     }
 
     @Override
-    public Collection<WordInterface> getWords() {
+    public Collection<TermInterface> getTerms() {
         return words;
     }
 }

@@ -7,7 +7,7 @@ public class Sense implements SenseInterface {
 	final private String FQName;
 	private String conceptFQN = null;
 
-	public Sense(WordInterface word, String id, String definition) {
+	public Sense(TermInterface word, String id, String definition) {
 		FQName = String.format("%s_sense%s", word.getFQName(), id);
 
 		triples.add(word.getFQName(), "ontolex:sense", FQName);        

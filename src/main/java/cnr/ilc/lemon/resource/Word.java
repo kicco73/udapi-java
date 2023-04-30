@@ -15,7 +15,7 @@ import cnr.ilc.rut.utils.Metadata;
 import cnr.ilc.sparql.TripleSerialiser;
 import cnr.ilc.sparql.WordSerialiser;
 
-public class Word implements WordInterface {
+public class Word implements TermInterface {
 	final private String FQName;
 	final public Form canonicalForm;
 	final public String partOfSpeech;

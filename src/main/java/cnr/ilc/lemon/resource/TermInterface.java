@@ -8,7 +8,7 @@ import java.util.Collection;
 
 import cnr.ilc.rut.utils.Metadata;
 
-public interface WordInterface {
+public interface TermInterface {
 	public String getLemma();
 	public String getPartOfSpeech();
 	public String getLanguage();

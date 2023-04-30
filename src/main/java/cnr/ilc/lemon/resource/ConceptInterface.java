@@ -10,5 +10,5 @@ public interface ConceptInterface {
 	public String getSerialised(String language);
 	public String getSerialised();
 	public String getJson();
-	public Collection<WordInterface> getWords();
+	public Collection<TermInterface> getTerms();
 }

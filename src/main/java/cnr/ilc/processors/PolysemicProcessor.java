@@ -8,7 +8,7 @@ import java.util.Map.Entry;
 import org.json.simple.JSONArray;
 
 import cnr.ilc.lemon.PolysemicResolver;
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.rut.utils.Metadata;
 import cnr.ilc.sparql.TripleSerialiser;
 
@@ -17,11 +17,11 @@ public class PolysemicProcessor implements ProcessorInterface {
     PolysemicResolver resolver = new PolysemicResolver();
 
     @Override
-    public Collection<WordInterface> process(Collection<WordInterface> words, TripleSerialiser triples)  {
-        Collection<WordInterface> result = new ArrayList<>();
+    public Collection<TermInterface> process(Collection<TermInterface> words, TripleSerialiser triples)  {
+        Collection<TermInterface> result = new ArrayList<>();
         Metadata metadata = new Metadata();
 
-		for (WordInterface word: words) {
+		for (TermInterface word: words) {
             metadata.addToList(word.getLanguage(), word, word.getLemma());
         }
 
@@ -31,8 +31,8 @@ public class PolysemicProcessor implements ProcessorInterface {
             Map<String, Object> map = metadata.getMap(language);
             for (Entry<String, Object> group: map.entrySet()) {
                 String term = group.getKey();
-                Collection<WordInterface> wordSet = (JSONArray) group.getValue();
-                Collection<WordInterface> replacementSet = resolver.resolve(wordSet);
+                Collection<TermInterface> wordSet = (JSONArray) group.getValue();
+                Collection<TermInterface> replacementSet = resolver.resolve(wordSet);
                 result.addAll(replacementSet);
 
                 if (wordSet.size() > 1) {

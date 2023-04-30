@@ -14,7 +14,7 @@ public class Concept implements ConceptInterface {
 
 	final public String id;
 	final public String FQName;
-	final private Collection<WordInterface> words = new ArrayList<>();
+	final private Collection<TermInterface> words = new ArrayList<>();
 	final private Map<String,String> definition = new HashMap<>();
 	final public Metadata metadata = new Metadata();
 	public String subjectField = null;
@@ -94,7 +94,7 @@ public class Concept implements ConceptInterface {
 	}
 
 	@Override
-	public Collection<WordInterface> getWords() {
+	public Collection<TermInterface> getTerms() {
 		return words;
 	}
 }

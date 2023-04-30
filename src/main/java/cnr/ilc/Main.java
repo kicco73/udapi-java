@@ -13,18 +13,13 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
-import cnr.ilc.conllu.ConlluParser;
-import cnr.ilc.lemon.resource.ResourceInterface;
 import cnr.ilc.rut.Filter;
-import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.utils.DateProvider;
 import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.services.GraphDBClient;
 import cnr.ilc.services.OfflineCompiler;
 import cnr.ilc.services.Services;
-import cnr.ilc.sparql.SPARQLAssembler;
 import cnr.ilc.sparql.SPARQLWriter;
-import cnr.ilc.tbx.TbxParser;
 
 public class Main {
     boolean isSparql = false;

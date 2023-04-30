@@ -10,13 +10,15 @@ public class PojoConcept implements ConceptInterface {
 	final private String FQName;
 	final private String date;
 	final private String subjectField;
+	final private String subjectFieldFQN;
 	final private String serialised;
 	final private String json;
 
-	public PojoConcept(String id, String FQName, String subjectField, String date, String serialised, String json) {
+	public PojoConcept(String id, String FQName, String subjectField, String subjectFieldFQN, String date, String serialised, String json) {
 		this.id = id;
 		this.FQName = FQName;
 		this.subjectField = subjectField;
+		this.subjectFieldFQN = subjectFieldFQN;
 		this.date = date;
 		this.serialised = serialised;
 		this.json = json;
@@ -25,6 +27,12 @@ public class PojoConcept implements ConceptInterface {
 	@Override
 	public String getSubjectField() {
 		return subjectField;
+	}
+
+
+	@Override
+	public String getSubjectFieldFQN() {
+		return subjectFieldFQN;
 	}
 
 	@Override
@@ -58,8 +66,8 @@ public class PojoConcept implements ConceptInterface {
 	}
 
 	@Override
-	public Collection<WordInterface> getWords() {
-		Logger.error("Unimplemented method 'PojoConcept.getWords'");
+	public Collection<TermInterface> getTerms() {
+		Logger.error("Unimplemented method 'PojoConcept.getTerms'");
 		return new ArrayList<>();
 	}
 

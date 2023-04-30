@@ -8,7 +8,7 @@ import java.util.Collection;
 import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.lemon.resource.GlobalInterface;
 import cnr.ilc.lemon.resource.ResourceInterface;
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.rut.Filter;
 
 public class ResourceReader implements ResourceInterface {
@@ -64,11 +64,11 @@ public class ResourceReader implements ResourceInterface {
 	}
 
 	@Override
-	public Collection<WordInterface> getWords() throws Exception {
-		Collection<WordInterface> words = new ArrayList<>();
+	public Collection<TermInterface> getTerms() throws Exception {
+		Collection<TermInterface> words = new ArrayList<>();
 		ResultSet rs = db.selectEntity("word", filter);
 		while (rs.next()) {
-			WordInterface word = db.hydrateWord(rs);
+			TermInterface word = db.hydrateWord(rs);
 			words.add(word);
 		}
 		return words;

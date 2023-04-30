@@ -3,7 +3,7 @@ package cnr.ilc.processors;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.rut.Filter;
 import cnr.ilc.sparql.TripleSerialiser;
 
@@ -32,7 +32,7 @@ public class PostProcessor implements ProcessorInterface {
 	}
 
     @Override
-    public Collection<WordInterface> process(Collection<WordInterface> words, TripleSerialiser triples) {
+    public Collection<TermInterface> process(Collection<TermInterface> words, TripleSerialiser triples) {
 		for (ProcessorInterface processor: processors)
             words = processor.process(words, triples);
         return words;

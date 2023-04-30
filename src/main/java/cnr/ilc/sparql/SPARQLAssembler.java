@@ -9,7 +9,7 @@ import java.util.Collection;
 import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.lemon.resource.GlobalInterface;
 import cnr.ilc.lemon.resource.ResourceInterface;
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.processors.PostProcessor;
 import cnr.ilc.processors.ProcessorInterface;
 import cnr.ilc.rut.Filter;
@@ -38,11 +38,11 @@ public class SPARQLAssembler {
 	private void processWords(ResourceInterface resource) throws Exception {
 		TripleSerialiser triples = new TripleSerialiser();
 
-		Collection<WordInterface> words = resource.getWords();
+		Collection<TermInterface> words = resource.getTerms();
 		words = postProcessor.process(words, triples);
 
 		int count = 0;
-		for (WordInterface word: words) {
+		for (TermInterface word: words) {
 			Logger.progress(count++ * 100 / words.size(), "Assemble completed");
 
 			output.append(word.getSerialised());

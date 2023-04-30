@@ -7,7 +7,7 @@ import java.util.Map.Entry;
 import org.json.simple.JSONObject;
 
 import cnr.ilc.lemon.resource.SenseInterface;
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.rut.utils.Metadata;
 import cnr.ilc.sparql.TripleSerialiser;
 
@@ -24,10 +24,10 @@ public class SynonymsProcessor implements ProcessorInterface {
         }
     }
 
-    private Map<String, Collection<SenseInterface>> groupSensesByConcept(Collection<WordInterface> words) {
+    private Map<String, Collection<SenseInterface>> groupSensesByConcept(Collection<TermInterface> words) {
         Metadata metadata = new Metadata();
 
-        for (WordInterface word: words) {
+        for (TermInterface word: words) {
             for (SenseInterface sense: word.getSenses())
                 metadata.addToList(sense.getConceptFQN(), sense);
         }
@@ -36,7 +36,7 @@ public class SynonymsProcessor implements ProcessorInterface {
     }
 
     @Override
-    public Collection<WordInterface> process(Collection<WordInterface> words, TripleSerialiser triples) {
+    public Collection<TermInterface> process(Collection<TermInterface> words, TripleSerialiser triples) {
         Map<String, Collection<SenseInterface>> concepts = groupSensesByConcept(words);
         
         for (Entry<String, Collection<SenseInterface>> concept: concepts.entrySet()) {

@@ -2,6 +2,7 @@ package cnr.ilc.tbx;
 import org.w3c.dom.*;
 
 import cnr.ilc.lemon.resource.Concept;
+import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.rut.utils.IdGenerator;
 import cnr.ilc.rut.utils.Logger;
 
@@ -75,7 +76,7 @@ public class ConceptEntry {
 		concept.date = date;
 	}
 
-	public Concept parseConceptEntry(Element conceptEntry, String creator) {
+	public ConceptInterface parseConceptEntry(Element conceptEntry, String creator) {
 		String id = conceptEntry.getAttribute("id");
 
 		if (id == null) {

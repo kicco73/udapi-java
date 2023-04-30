@@ -11,7 +11,6 @@ import java.nio.charset.StandardCharsets;
 import cnr.ilc.rut.Filter;
 import cnr.ilc.rut.utils.IdGenerator;
 import cnr.ilc.rut.utils.Logger;
-import cnr.ilc.sparql.SPARQLAssembler;
 import cnr.ilc.sparql.SPARQLWriter;
 
 public class Services {

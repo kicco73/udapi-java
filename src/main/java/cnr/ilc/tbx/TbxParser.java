@@ -7,7 +7,7 @@ import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.lemon.resource.Global;
 import cnr.ilc.lemon.resource.GlobalInterface;
 import cnr.ilc.lemon.resource.ResourceInterface;
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.rut.ParserInterface;
 import cnr.ilc.rut.RutException;
 import cnr.ilc.rut.utils.CountingInputStream;
@@ -71,7 +71,7 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 			}
 
 			Element conceptEntry = (Element) conceptEntries.item(i);
-			Concept concept = conceptEntryParser.parseConceptEntry(conceptEntry, creator);
+			ConceptInterface concept = conceptEntryParser.parseConceptEntry(conceptEntry, creator);
 			concepts.add(concept);
 
 			lexicons.putAll(conceptEntryParser.getLexicons());
@@ -130,10 +130,10 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 	}
 
 	@Override
-	public Collection<WordInterface> getWords() {
-		Collection<WordInterface> words = new ArrayList<WordInterface>();
+	public Collection<TermInterface> getTerms() {
+		Collection<TermInterface> words = new ArrayList<TermInterface>();
 		for (ConceptInterface concept: concepts) {
-			words.addAll(concept.getWords());
+			words.addAll(concept.getTerms());
 		}
 		return words;
 	}

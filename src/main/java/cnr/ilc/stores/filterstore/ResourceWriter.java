@@ -6,7 +6,7 @@ import java.util.HashSet;
 import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.lemon.resource.GlobalInterface;
 import cnr.ilc.lemon.resource.ResourceInterface;
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.sparql.WordSerialiser;
 import cnr.ilc.stores.TripleStoreInterface;
 
@@ -40,12 +40,12 @@ public class ResourceWriter implements TripleStoreInterface {
 					db.quote(metadata), db.quote(serialised));
 			}
 		}
-		for (WordInterface word: concept.getWords()) {
+		for (TermInterface word: concept.getTerms()) {
 			storeWord(word);
 		}
 	}
 
-	private void storeWord(WordInterface word) throws SQLException {
+	private void storeWord(TermInterface word) throws SQLException {
 		String conceptId = null;
 		String subjectField = null;
 		String date = null;
@@ -90,7 +90,7 @@ public class ResourceWriter implements TripleStoreInterface {
 		for (ConceptInterface concept : input.getConcepts())
 			storeConcept(concept, input.getLanguages());
 
-		for (WordInterface word : input.getWords())
+		for (TermInterface word : input.getTerms())
 			storeWord(word);
 
 		db.markPolysemicGroups();

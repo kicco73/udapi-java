@@ -6,16 +6,16 @@ import java.util.Map.Entry;
 
 import org.json.simple.JSONObject;
 
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.rut.utils.Metadata;
 import cnr.ilc.sparql.TripleSerialiser;
 
 @SuppressWarnings("unchecked")
 public class TranslateTermProcessor implements ProcessorInterface {
 
-    private void createTranslationAmongAllWords(Collection<WordInterface> words, TripleSerialiser triples) {
-        WordInterface origin = null;
-        for (WordInterface destination: words) {
+    private void createTranslationAmongAllWords(Collection<TermInterface> words, TripleSerialiser triples) {
+        TermInterface origin = null;
+        for (TermInterface destination: words) {
             if (origin != null) {
                 triples.add(origin.getFQName(), "vartrans:translatableAs", destination.getFQName());
             }
@@ -23,10 +23,10 @@ public class TranslateTermProcessor implements ProcessorInterface {
         }
     }
 
-    private Map<String, Collection<WordInterface>> groupWordsByConceptAndLanguage(Collection<WordInterface> words) {
+    private Map<String, Collection<TermInterface>> groupWordsByConceptAndLanguage(Collection<TermInterface> words) {
         Metadata metadata = new Metadata();
 
-        for (WordInterface word: words) {
+        for (TermInterface word: words) {
             metadata.putInMap(word.getConceptFQN(), word, word.getLanguage());
         }
 
@@ -34,7 +34,7 @@ public class TranslateTermProcessor implements ProcessorInterface {
         
         for (Entry<String, Object> entry: metadata.getRoot().entrySet()) {
             String conceptFQN = entry.getKey();
-            Map<String, WordInterface> languages = (JSONObject) entry.getValue();
+            Map<String, TermInterface> languages = (JSONObject) entry.getValue();
             result.putInMap(conceptFQN, languages.values());
         }
 
@@ -42,12 +42,12 @@ public class TranslateTermProcessor implements ProcessorInterface {
     }
 
     @Override
-    public Collection<WordInterface> process(Collection<WordInterface> words, TripleSerialiser triples) {
-        Map<String, Collection<WordInterface>> concepts = groupWordsByConceptAndLanguage(words);
+    public Collection<TermInterface> process(Collection<TermInterface> words, TripleSerialiser triples) {
+        Map<String, Collection<TermInterface>> concepts = groupWordsByConceptAndLanguage(words);
         
-        for (Entry<String, Collection<WordInterface>> concept: concepts.entrySet()) {
+        for (Entry<String, Collection<TermInterface>> concept: concepts.entrySet()) {
             String conceptFQN = concept.getKey();
-            Collection<WordInterface> terms = concept.getValue();
+            Collection<TermInterface> terms = concept.getValue();
             if (terms.size() > 1) triples.addComment("[Translate Term Processor] generating term translations for concept `%s`", conceptFQN);
             createTranslationAmongAllWords(terms, triples);    
         }

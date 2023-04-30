@@ -6,7 +6,7 @@ import java.util.Map.Entry;
 import cnr.ilc.lemon.resource.Form;
 import cnr.ilc.lemon.resource.SenseInterface;
 import cnr.ilc.lemon.resource.Word;
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 
 public class WordSerialiser extends TripleSerialiser {
 	final private WeakReference<Word> word;
@@ -26,7 +26,7 @@ public class WordSerialiser extends TripleSerialiser {
 		addString(wordFQN, "vs:term_status", "working");
 	}
 
-	static public String serialiseLexicalSenses(WordInterface word) {
+	static public String serialiseLexicalSenses(TermInterface word) {
 		String serialised = "";
 		for(SenseInterface sense: word.getSenses()) {
 			serialised += sense.getSerialised();

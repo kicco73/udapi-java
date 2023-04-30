@@ -5,7 +5,7 @@ import java.util.Collection;
 import cnr.ilc.lemon.resource.ConceptInterface;
 import cnr.ilc.lemon.resource.GlobalInterface;
 import cnr.ilc.lemon.resource.ResourceInterface;
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.rut.Filter;
 import cnr.ilc.stores.TripleStoreInterface;
 
@@ -38,8 +38,8 @@ public class FilterStore implements TripleStoreInterface, ResourceInterface {
 	}
 
 	@Override
-	public Collection<WordInterface> getWords() throws Exception {
-		return reader.getWords();
+	public Collection<TermInterface> getTerms() throws Exception {
+		return reader.getTerms();
 	}
 
 	public void setFilter(Filter filter) {

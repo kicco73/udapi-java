@@ -16,12 +16,12 @@ import cnr.ilc.lemon.resource.Form;
 import cnr.ilc.lemon.resource.Sense;
 import cnr.ilc.lemon.resource.SenseInterface;
 import cnr.ilc.lemon.resource.Word;
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.rut.utils.Logger;
 
 public class ParserHelper {
 
-    private static Form createOtherForm(WordInterface word, String writtenRep) {
+    private static Form createOtherForm(TermInterface word, String writtenRep) {
         String FQName = String.format("%s_form_%s", word.getFQName(), writtenRep);
         Form form = new Form(FQName, writtenRep);
         return form;
@@ -114,7 +114,7 @@ public class ParserHelper {
         form.features.putAll(features);
     }
 
-    static public Collection<WordInterface> compileLexicon(Document document, String namespace, String language,
+    static public Collection<TermInterface> compileLexicon(Document document, String namespace, String language,
             String lexiconFQN, String creator) {
 
         final Map<String, String> parts = Stream.of(new String[][] {
@@ -125,7 +125,7 @@ public class ParserHelper {
                 { "PROPN", "lexinfo:properNoun" },
         }).collect(Collectors.toMap(data -> data[0], data -> data[1]));
 
-        Map<String, WordInterface> lemmas = new HashMap<>();
+        Map<String, TermInterface> lemmas = new HashMap<>();
         List<Sentence> sentences = document.getSentences();
 
         for (Sentence sentence : sentences) {

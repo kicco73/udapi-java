@@ -21,7 +21,7 @@ import cnr.ilc.lemon.resource.PojoGlobal;
 import cnr.ilc.lemon.resource.PojoSense;
 import cnr.ilc.lemon.resource.PojoWord;
 import cnr.ilc.lemon.resource.SenseInterface;
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.rut.Filter;
 import cnr.ilc.rut.utils.Metadata;
 
@@ -83,6 +83,7 @@ public class SqliteConnector {
         s = "'" + s.replaceAll("'", "''") + "'";
         return s;
     }
+    
     public GlobalInterface hydrateGlobal(ResultSet rs) throws SQLException {
         String language = rs.getString("language");
         String subjectField = rs.getString("subjectField");
@@ -91,17 +92,18 @@ public class SqliteConnector {
         return new PojoGlobal(language, subjectField, serialised, json);
     }
 
-    public ConceptInterface hydrateConcept(ResultSet rs) throws SQLException {
-        String id = "Zio pinetto"; //TODO: rs.getString("id");
-        String fqn = "Zio pinetto"; // TODO: rs.getString("FQName");
+    private ConceptInterface hydrateConcept(ResultSet rs) throws SQLException {
+        String id = rs.getString("conceptId");
+        String fqn = "Zio pino"; // TODO: rs.getString("FQName");
         String date = rs.getString("date");
         String subjectField = rs.getString("subjectField");
+        String subjectFieldFQN = "Zio pino"; //rs.getString("subjectFieldFQN");
         String serialised = rs.getString("serialised");
         String json = rs.getString("metadata");
-        return new PojoConcept(id, fqn, subjectField, date, serialised, json);
+        return new PojoConcept(id, fqn, subjectField, subjectFieldFQN, date, serialised, json);
     }
 
-    public WordInterface hydrateWord(ResultSet rs) throws SQLException {
+    public TermInterface hydrateWord(ResultSet rs) throws SQLException {
         String lemma = rs.getString("lemma");
         String language = rs.getString("language");
         String fqName = rs.getString("FQName");

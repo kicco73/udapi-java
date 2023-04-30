@@ -2,9 +2,9 @@ package cnr.ilc.processors;
 
 import java.util.Collection;
 
-import cnr.ilc.lemon.resource.WordInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.sparql.TripleSerialiser;
 
 public interface ProcessorInterface {
-	Collection<WordInterface> process(Collection<WordInterface> words, TripleSerialiser triples);
+	Collection<TermInterface> process(Collection<TermInterface> words, TripleSerialiser triples);
 }
