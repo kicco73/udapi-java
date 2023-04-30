@@ -17,7 +17,7 @@ public class OfflineCompiler {
 
     private ParserInterface makeParser(InputStream inputStream, String creator) throws Exception {
         if (isTbx) {
-            return new TbxParser(inputStream, creator);
+            return new TbxParser(inputStream);
         } else if (isConnlu) {
             return new ConlluParser(inputStream, creator, language);
         }

@@ -157,7 +157,7 @@ public class Main {
         switch(service) {
             case "analyse":
                 String input = new String(System.in.readAllBytes());
-                response = Services.createResource(input, fileName == null? "stdin" : fileName, format, creator);
+                response = Services.createResource(input, fileName == null? "stdin" : fileName, format);
                 break;
             case "filter":
                 response = Services.filterResource(fileName, filter);

@@ -58,7 +58,7 @@ public class Services {
 		return content;
 	}
 
-	static public String createResource(String input, String inputFileName, String fileType, String creator) throws Exception {
+	static public String createResource(String input, String inputFileName, String fileType) throws Exception {
 		InputStream inputStream = new ByteArrayInputStream(input.getBytes());
 		String basename = new File(inputFileName).getName();
 		String resourceId = idGenerator.getId(basename);
@@ -67,7 +67,7 @@ public class Services {
 		saveToResourceProperty(resourceId, "input."+fileType, input);	
 
 		OnlineCompiler analyser = new OnlineCompiler(resourceId);
-		return analyser.analyse(inputStream, creator);
+		return analyser.analyse(inputStream);
 	}
 
 	static public String filterResource(String inputDir, Filter filter) throws Exception {

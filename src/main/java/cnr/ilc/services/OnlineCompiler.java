@@ -26,8 +26,8 @@ public class OnlineCompiler {
 		db.connect(dbFile);
 	}
 
-	public String analyse(InputStream inputStream, String creator) throws Exception {
-		TbxParser parser = new TbxParser(inputStream, creator);
+	public String analyse(InputStream inputStream) throws Exception {
+		TbxParser parser = new TbxParser(inputStream);
 		ResourceInterface resource = parser.parse();
 		filterStore.store(resource);
 		Map<String,Object> metadata = metadataMerger.getMetadata(new Filter());

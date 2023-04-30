@@ -40,12 +40,9 @@ public class ResourceWriter implements TripleStoreInterface {
 					db.quote(metadata), db.quote(serialised));
 			}
 		}
-		for (TermInterface word: concept.getTerms()) {
-			storeWord(word);
-		}
 	}
 
-	private void storeWord(TermInterface word) throws SQLException {
+	private void storeTerm(TermInterface word) throws SQLException {
 		String conceptId = null;
 		String subjectField = null;
 		String date = null;
@@ -91,7 +88,7 @@ public class ResourceWriter implements TripleStoreInterface {
 			storeConcept(concept, input.getLanguages());
 
 		for (TermInterface word : input.getTerms())
-			storeWord(word);
+			storeTerm(word);
 
 		db.markPolysemicGroups();
 	}

@@ -28,7 +28,7 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 	private Map<String, String> subjectFields = new LinkedHashMap<>();
 	private Map<String, String> lexicons = new LinkedHashMap<>();
 	
-    public TbxParser(InputStream inputStream, String creator) throws Exception {
+    public TbxParser(InputStream inputStream) throws Exception {
 		CountingInputStream countingInputStream = new CountingInputStream(inputStream);
 
 		document = parseTbx(countingInputStream);
