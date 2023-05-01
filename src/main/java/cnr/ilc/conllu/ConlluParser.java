@@ -24,13 +24,11 @@ import cnr.ilc.rut.ParserInterface;
 public class ConlluParser implements ParserInterface, ResourceInterface {
     private Document document;
     private String language;
-    private String creator;
     private String namespace;
-    private Collection<TermInterface> words;
+    private Collection<TermInterface> terms;
     Global global = new Global();
 
-    public ConlluParser(InputStream inputStream, String creator, String language) throws Exception {
-        this.creator = creator;
+    public ConlluParser(InputStream inputStream, String language) throws Exception {
         this.language = language;
         document = parseCoNLL(inputStream);
     }
@@ -47,7 +45,7 @@ public class ConlluParser implements ParserInterface, ResourceInterface {
     public ResourceInterface parse() throws Exception {
         String lexiconFQN = global.triples.addLexicon(language);
         global.metadata.putInMap("*", "conllu", "fileType");
-        words = ParserHelper.compileLexicon(document, namespace, language, lexiconFQN, creator);
+        terms = ParserHelper.compileLexicon(document, namespace, language, lexiconFQN);
         return this;
     }
 
@@ -75,7 +73,7 @@ public class ConlluParser implements ParserInterface, ResourceInterface {
 
     @Override
     public Collection<TermInterface> getTerms() {
-        return words;
+        return terms;
     }
 }
 

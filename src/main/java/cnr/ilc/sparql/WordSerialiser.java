@@ -3,7 +3,6 @@ package cnr.ilc.sparql;
 import java.lang.ref.WeakReference;
 import java.util.Map.Entry;
 
-import cnr.ilc.lemon.resource.Form;
 import cnr.ilc.lemon.resource.SenseInterface;
 import cnr.ilc.lemon.resource.Word;
 import cnr.ilc.lemon.resource.TermInterface;
@@ -44,25 +43,10 @@ public class WordSerialiser extends TripleSerialiser {
 
 	}
 
-	private void createOtherForms(Word word) {
-		for (Form otherForm: word.getOtheForms()) {
-			String otherFormFQN = otherForm.FQName;
-			add(word.getFQName(), "ontolex:otherForm", otherFormFQN);
-			add(otherFormFQN, "rdf:type", "ontolex:Form");        
-			addStringWithLanguage(otherFormFQN, "ontolex:writtenRep", otherForm.text, word.getLanguage());        
-			addMetaData(otherFormFQN, "Zio Pino"); 
-
-			for (Entry<String,String> entry: otherForm.features.entrySet()) {
-				addString(otherFormFQN, entry.getValue(), entry.getKey());
-			}
-		}
-	}
-
 	@Override
 	public String serialise() {
 		Word word = this.word.get();
 		createCanonicalForm(word);
-		createOtherForms(word);
 		return super.serialise();
 	}
 

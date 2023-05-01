@@ -11,7 +11,7 @@ import cnr.ilc.rut.utils.DateProvider;
 
 public class TripleSerialiser {
 	private Map<String, String> features = new LinkedHashMap<>();
-	
+
 	public TripleSerialiser() {
 		features.put("*", "");
 	}

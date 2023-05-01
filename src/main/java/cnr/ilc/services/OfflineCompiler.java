@@ -15,17 +15,17 @@ public class OfflineCompiler {
 	public String language = "en";
 	ParserInterface parser;
 
-    private ParserInterface makeParser(InputStream inputStream, String creator) throws Exception {
+    private ParserInterface makeParser(InputStream inputStream) throws Exception {
         if (isTbx) {
             return new TbxParser(inputStream);
         } else if (isConnlu) {
-            return new ConlluParser(inputStream, creator, language);
+            return new ConlluParser(inputStream, language);
         }
         return null;
     }
 	
 	public String compile(InputStream inputStream, String namespace, String creator, int chunkSize, Filter filter) throws Exception {
-		parser = makeParser(inputStream, creator);
+		parser = makeParser(inputStream);
 		SPARQLAssembler assembler = new SPARQLAssembler(namespace, creator, chunkSize, filter);
 		ResourceInterface resource = parser.parse();
 		assembler.serialise(resource);

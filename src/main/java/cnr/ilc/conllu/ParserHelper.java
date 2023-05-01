@@ -114,8 +114,16 @@ public class ParserHelper {
         form.features.putAll(features);
     }
 
+    static Collection<TermInterface> expandWords(Collection<Word> words) {
+        Collection<TermInterface> terms = new ArrayList<TermInterface>();
+        for (Word word: words) {
+            terms.addAll(WordExpander.expand(word));
+        }
+        return terms;
+    }
+
     static public Collection<TermInterface> compileLexicon(Document document, String namespace, String language,
-            String lexiconFQN, String creator) {
+            String lexiconFQN) {
 
         final Map<String, String> parts = Stream.of(new String[][] {
                 { "ADV", "lexinfo:adverb" },
@@ -125,7 +133,7 @@ public class ParserHelper {
                 { "PROPN", "lexinfo:properNoun" },
         }).collect(Collectors.toMap(data -> data[0], data -> data[1]));
 
-        Map<String, TermInterface> lemmas = new HashMap<>();
+        Map<String, Word> lemmas = new HashMap<>();
         List<Sentence> sentences = document.getSentences();
 
         for (Sentence sentence : sentences) {
@@ -178,6 +186,6 @@ public class ParserHelper {
             }
         }
 
-        return lemmas.values();
+        return expandWords(lemmas.values());
     }
 }
