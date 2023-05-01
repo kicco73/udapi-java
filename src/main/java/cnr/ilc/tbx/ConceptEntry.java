@@ -3,9 +3,11 @@ import org.w3c.dom.*;
 
 import cnr.ilc.lemon.resource.Concept;
 import cnr.ilc.lemon.resource.ConceptInterface;
+import cnr.ilc.lemon.resource.TermInterface;
 import cnr.ilc.rut.utils.IdGenerator;
 import cnr.ilc.rut.utils.Logger;
 
+import java.util.Collection;
 import java.util.Map;
 import java.util.Random;
 import java.util.Set;
@@ -76,7 +78,7 @@ public class ConceptEntry {
 		concept.date = date;
 	}
 
-	public ConceptInterface parseConceptEntry(Element conceptEntry) {
+	public ConceptInterface parseConceptEntry(Element conceptEntry, Collection<TermInterface> terms) {
 		String id = conceptEntry.getAttribute("id");
 
 		if (id == null) {
@@ -91,6 +93,7 @@ public class ConceptEntry {
 		parseSubjectField(conceptEntry, concept, id);
 		parseDate(conceptEntry, concept);
 
+		terms.addAll(concept.getTerms());
 		return concept;
 	}
 

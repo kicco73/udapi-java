@@ -14,7 +14,7 @@ public class Concept implements ConceptInterface {
 
 	final public String id;
 	final public String FQName;
-	final private Collection<TermInterface> words = new ArrayList<>();
+	final private Collection<TermInterface> terms = new ArrayList<>();
 	final private Map<String,String> definition = new HashMap<>();
 	final public Metadata metadata = new Metadata();
 	public String subjectField = null;
@@ -30,7 +30,7 @@ public class Concept implements ConceptInterface {
 
 	public Word newWord(String lemma, String partOfSpeech, String language, String lexiconFQN) {
 		Word word = new Word(lemma, partOfSpeech, language, this, lexiconFQN, "ontolex:LexicalEntry");
-		words.add(word);
+		terms.add(word);
 
 		if (metadata.getObject(language, "concepts", id, "languages", language, "label") == null)
 			metadata.putInMap(language, word.getLemma(), "concepts", id, "languages", language, "label");
@@ -93,8 +93,7 @@ public class Concept implements ConceptInterface {
 		return metadata.toJson("*");
 	}
 
-	@Override
 	public Collection<TermInterface> getTerms() {
-		return words;
+		return terms;
 	}
 }

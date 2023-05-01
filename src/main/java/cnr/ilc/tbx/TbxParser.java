@@ -25,6 +25,7 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 	private ConceptEntry conceptEntryParser = new ConceptEntry();
 	private Collection<GlobalInterface> globals = new ArrayList<>();
 	private Collection<ConceptInterface> concepts = new ArrayList<>();
+	private Collection<TermInterface> terms = new ArrayList<>();
 	private Map<String, String> subjectFields = new LinkedHashMap<>();
 	private Map<String, String> lexicons = new LinkedHashMap<>();
 	
@@ -68,7 +69,7 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 			}
 
 			Element conceptEntry = (Element) conceptEntries.item(i);
-			ConceptInterface concept = conceptEntryParser.parseConceptEntry(conceptEntry);
+			ConceptInterface concept = conceptEntryParser.parseConceptEntry(conceptEntry, terms);
 			concepts.add(concept);
 
 			lexicons.putAll(conceptEntryParser.getLexicons());
@@ -127,11 +128,7 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 
 	@Override
 	public Collection<TermInterface> getTerms() {
-		Collection<TermInterface> words = new ArrayList<TermInterface>();
-		for (ConceptInterface concept: concepts) {
-			words.addAll(concept.getTerms());
-		}
-		return words;
+		return terms;
 	}
 
 }

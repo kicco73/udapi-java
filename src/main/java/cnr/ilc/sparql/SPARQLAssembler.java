@@ -30,16 +30,19 @@ public class SPARQLAssembler {
 	private void processConcepts(ResourceInterface resource) throws Exception {
 		if (resource.getConcepts() == null)
 			return;
+		output.append("\n\t# Concept section\n");
 		for (ConceptInterface concept: resource.getConcepts()) {
 			output.append(concept.getSerialised());
 		}
 	}
 
-	private void processWords(ResourceInterface resource) throws Exception {
+	private void processTerms(ResourceInterface resource) throws Exception {
 		TripleSerialiser triples = new TripleSerialiser();
 
 		Collection<TermInterface> words = resource.getTerms();
 		words = postProcessor.process(words, triples);
+
+		output.append("\n\t# Term section\n");
 
 		int count = 0;
 		for (TermInterface word: words) {
@@ -63,7 +66,7 @@ public class SPARQLAssembler {
 	public void serialise(ResourceInterface resource) throws Exception {
 		processGlobals(resource);
 		processConcepts(resource);
-		processWords(resource);
+		processTerms(resource);
 	}
 
 	public String getSparql() throws Exception {

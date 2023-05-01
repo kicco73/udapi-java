@@ -1,10 +1,5 @@
 package cnr.ilc.lemon.resource;
 
-import java.util.ArrayList;
-import java.util.Collection;
-
-import cnr.ilc.rut.utils.Logger;
-
 public class PojoConcept implements ConceptInterface {
 	final private String id;
 	final private String FQName;
@@ -63,12 +58,6 @@ public class PojoConcept implements ConceptInterface {
 	@Override
 	public String getJson() {
 		return json;
-	}
-
-	@Override
-	public Collection<TermInterface> getTerms() {
-		Logger.error("Unimplemented method 'PojoConcept.getTerms'");
-		return new ArrayList<>();
 	}
 
 }
