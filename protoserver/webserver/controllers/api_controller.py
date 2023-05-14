@@ -18,6 +18,7 @@ class ApiController(controller.Controller):
 		def wrap_create_resource():
 			tbx = request.json.get('tbx')
 			operation = services.Analyse(input=tbx)
+			operation.debug = app.config['DEBUG']
 			resource_string = operation.execute()
 			return Response(resource_string, mimetype='application/json')
 
@@ -27,6 +28,7 @@ class ApiController(controller.Controller):
 			dates = request.values.getlist('dates')
 			subject_fields = request.values.getlist('subjectFields')
 			operation = services.Filter(resource_dir=resource_id, languages=languages, dates=dates, subject_fields=subject_fields)
+			operation.debug = app.config['DEBUG']
 			content = operation.execute()
 			return Response(content, mimetype='application/json')
 
@@ -44,6 +46,7 @@ class ApiController(controller.Controller):
 				synonyms = request.values.get('synonyms', default=False, type=json.loads),
 			)
 			operation = services.Assemble(**args)
+			operation.debug = app.config['DEBUG']
 			content = operation.execute()
 			return Response(content, mimetype='application/sparql-query')
 

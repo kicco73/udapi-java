@@ -49,4 +49,6 @@ class WebServer(object):
 	def run(self, debug=False, **kw):
 		sess = Session()
 		sess.init_app(self.app)
+		self.app.config['DEBUG'] = debug
+
 		self.socketio.run(self.app, debug=debug, allow_unsafe_werkzeug=True, **kw) #FIXME unsafe

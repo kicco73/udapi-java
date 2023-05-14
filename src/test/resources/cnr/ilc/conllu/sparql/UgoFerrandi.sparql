@@ -15,6 +15,10 @@ PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
 	:lexicon_som rdf:type lime:Lexicon .
 	:lexicon_som lime:language "som" .
+
+	# Concept section
+
+	# Term section
 	:lexicon_som lime:entry term:le_30e7nYywJLyFQC2kJbmZn3_noun .
 	term:le_30e7nYywJLyFQC2kJbmZn3_noun rdf:type ontolex:Word .
 	term:le_30e7nYywJLyFQC2kJbmZn3_noun lexinfo:partOfSpeech lexinfo:noun .
