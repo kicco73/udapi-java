@@ -6,6 +6,7 @@ import java.util.Set;
 
 import cnr.ilc.lemon.resource.SenseInterface;
 import cnr.ilc.lemon.resource.TermInterface;
+import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.sparql.TripleSerialiser;
 
 public class AddMetadataProcessor implements ProcessorInterface {
@@ -21,8 +22,12 @@ public class AddMetadataProcessor implements ProcessorInterface {
         Set<String> languages = new HashSet<>();
 
 		triples.addComment("[Add Metadata Processor] adding creator and date info");
-
+        int total = terms.size();
+        int current = 0;
         for (TermInterface term: terms) {
+            int progress = 100 * current++/total;
+            Logger.progress(progress, "Adding metadata");
+
             String conceptFQN = term.getConceptFQN();
             if (conceptFQN != null && !conceptFQNs.contains(conceptFQN)) {
                 triples.addMetaData(conceptFQN, creator);
@@ -39,6 +44,7 @@ public class AddMetadataProcessor implements ProcessorInterface {
                 triples.addMetaData(sense.getFQName(), creator);
             }
         }
+        Logger.progress(100, "Done");
 
         return terms;
     }

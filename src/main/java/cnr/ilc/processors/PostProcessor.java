@@ -33,8 +33,10 @@ public class PostProcessor implements ProcessorInterface {
 
     @Override
     public Collection<TermInterface> process(Collection<TermInterface> words, TripleSerialiser triples) {
-		for (ProcessorInterface processor: processors)
+
+		for (ProcessorInterface processor: processors) {
             words = processor.process(words, triples);
+		}
         return words;
     }
     

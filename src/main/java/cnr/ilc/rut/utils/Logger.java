@@ -1,7 +1,6 @@
 package cnr.ilc.rut.utils;
 
 public class Logger {
-
 	static public void log(String template, Object ...args) {
 		JSONLogger.log(template, args);
 	}

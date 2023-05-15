@@ -42,24 +42,19 @@ public class Main {
 
     private Main parse(String[] args) throws ParseException {
         int startIndex = 0;
+        Logger.warn("ARGS: ", String.join(" ", args));
         while (startIndex < args.length) {
             switch (args[startIndex++]) {
-                case "-d":
-                case "--datetime":
+                case "-d", "--datetime" -> {
                     SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmXXX");      
                     Date date = formatter.parse(args[startIndex++]);      
                     DateProvider.getInstance(date);
-                    break;
-                case "-a":
-                case "--creator":
-                    creator = args[startIndex++];     
-                    break;   
-                case "-g":
-                case "--graphdb-url":
-                    Services.graphURL = args[startIndex++];
-                    break;
-                case "-i":
-                case "--input-format":
+                }
+                case "-a", "--creator" -> creator = args[startIndex++];     
+                case "-g", "--graphdb-url" -> Services.graphURL = args[startIndex++];
+                case "--no-graphdb" -> Services.graphURL = null;
+
+                case "-i", "--input-format" -> {
                     format = args[startIndex++];
                     if (format.equals("conllu")) 
                         offlineCompiler.isConnlu = true;
@@ -69,68 +64,38 @@ public class Main {
                         isSparql = true;
                     else
                         throw new IllegalArgumentException(String.format("Unknown format %s: must be one of conllu, tbx, sparql, sqlite", format));
-                    break;
-                case "--filter-languages":
+                }
+
+                case "--filter-languages" -> {
                     if (args[startIndex++].length() > 0)
                         filter.setLanguages(Arrays.asList(args[startIndex-1].split(",")));
-                    break;
-                case "--filter-dates":
+                }
+                case "--filter-dates" -> {
                     if (args[startIndex++].length() > 0)
                         filter.setDates(Arrays.asList(args[startIndex-1].split(",")));
-                    break;
-                case "--filter-subjectfields":
+                }
+                case "--filter-subjectfields" -> {
                     if (args[startIndex++].length() > 0)
                         filter.setSubjectFields(Arrays.asList(args[startIndex-1].split(",")));
-                    break;
-                case "--filter-no-concepts":
-                    filter.setNoConcepts(true); 
-                    break;
-                    case "--filter-no-senses":
-                    filter.setNoSenses(true); 
-                    break;
-                case "--filter-translate-terms":
-                    filter.setTranslateTerms(true); 
-                    break;
-                case "--filter-translate-senses":
-                    filter.setTranslateSenses(true); 
-                    break;
-                case "--filter-synonyms":
-                    filter.setSynonyms(true); 
-                    break;
-                case "-r":
-                case "--repository":
-                    Services.repository = args[startIndex++];
-                    break;
-                case "-S":
-                case "--chunk-size":
-                    chunkSize = Integer.parseInt(args[startIndex++]);        
-                    break;
-                case "-l":
-                case "--language":
-                    offlineCompiler.language = args[startIndex++];
-                    break;
-                case "-x":
-                case "--export-conll":
-                    exportConll = args[startIndex++];
-                    break;
-                case "-n":
-                case "--namespace":
-                    namespace = args[startIndex++];
-                    break;
-                case "-O":
-                case "--output-dir":
-                    Services.outDir = args[startIndex++];
-                    break;
-                case "-s":
-                case "--service":
-                    service = args[startIndex++];
-                    break;
-                case "--":
+                }
+                case "--filter-no-concepts" -> filter.setNoConcepts(true); 
+                case "--filter-no-senses" -> filter.setNoSenses(true); 
+                case "--filter-translate-terms" -> filter.setTranslateTerms(true); 
+                case "--filter-translate-senses" -> filter.setTranslateSenses(true); 
+                case "--filter-synonyms" -> filter.setSynonyms(true); 
+
+                case "--repository" -> Services.repository = args[startIndex++];
+                case "-S", "--chunk-size" -> chunkSize = Integer.parseInt(args[startIndex++]);        
+                case "-l", "--language" -> offlineCompiler.language = args[startIndex++];
+                case "-x", "--export-conll" -> exportConll = args[startIndex++];
+                case "-n", "--namespace" -> namespace = args[startIndex++];
+                case "-O", "--output-dir" -> Services.outDir = args[startIndex++];
+                case "-s", "--service" -> service = args[startIndex++];
+                case "--" -> {
                     fileNames = Arrays.copyOfRange(args, startIndex, args.length);
                     startIndex = args.length;
-                    break;
-                default:
-                    throw new IllegalArgumentException(String.format("Unknown option: %s", args[startIndex-1]));
+                }
+                default -> throw new IllegalArgumentException(String.format("Unknown option: %s", args[startIndex-1]));
             }
         }
         if ((service == null || service.equals("analyse")) && 
@@ -141,12 +106,12 @@ public class Main {
     }
 
     private void run() throws Exception {
-        if (fileNames.length > 0)
+        if (fileNames.length > 0) {
             for(String fileName: fileNames) {
-                Logger.log(String.format("\nProcessing: %s", fileName));
                 if (service != null) runService(fileName);
                 else processFile(fileName);
             }
+        }
         else if (service != null) runService(null);
         else processFile(null);
     }
@@ -185,14 +150,13 @@ public class Main {
         if (isSparql) {
             statements = new String(inputStream.readAllBytes(), StandardCharsets.UTF_8);
         } else {
-
             statements = offlineCompiler.compile(inputStream, namespace, creator, chunkSize, filter);
     
             if (exportConll != null) {
                 offlineCompiler.exportConll(exportConll);
             }  
         }
-        
+
         if (Services.outDir == null || fileName == null) {
             if (!isSparql) System.out.println(statements);
         } else {

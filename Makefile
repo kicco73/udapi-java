@@ -1,6 +1,6 @@
 image:
 	rm -rf protoserver/resources
-	./gradlew jar
+	./gradlew build jar
 	docker build --pull .
 
 run:

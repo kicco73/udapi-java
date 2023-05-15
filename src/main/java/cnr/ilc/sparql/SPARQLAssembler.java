@@ -46,7 +46,7 @@ public class SPARQLAssembler {
 
 		int count = 0;
 		for (TermInterface word: words) {
-			Logger.progress(count++ * 100 / words.size(), "Assemble completed");
+			Logger.progress(count++ * 100 / words.size(), "Assembling");
 
 			output.append(word.getSerialised());
 			output.append(WordSerialiser.serialiseLexicalSenses(word));

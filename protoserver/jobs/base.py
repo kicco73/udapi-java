@@ -50,7 +50,7 @@ class BaseOperation(Operation):
 	def run_java(self, *args) -> str:
 		output = ''
 		final_args = self.dev_bin if self.debug else self.prod_bin
-		final_args += self.args + list(args)
+		final_args = final_args + self.args + list(args)
 		with subprocess.Popen(final_args, stdin=subprocess.PIPE, stderr=subprocess.PIPE, stdout=subprocess.PIPE, text=True) as process:
 
 			process.stdin.write(self.input)

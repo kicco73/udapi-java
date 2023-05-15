@@ -60,13 +60,9 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 	private void parseConceptEntries() {
 		NodeList conceptEntries = document.getElementsByTagName("conceptEntry");
 
-		int prevPercentage = 0;
 		for (int i = 0; i < conceptEntries.getLength(); ++i)  {
-			int newPrecentage = 100 * (i+1) / conceptEntries.getLength();
-			if (newPrecentage > prevPercentage) {
-				Logger.progress(newPrecentage, "Progress");
-				prevPercentage = newPrecentage;
-			}
+			int percentage = 100 * (i+1) / conceptEntries.getLength();
+			Logger.progress(percentage, "Parsing concepts");
 
 			Element conceptEntry = (Element) conceptEntries.item(i);
 			ConceptInterface concept = conceptEntryParser.parseConceptEntry(conceptEntry, terms);
