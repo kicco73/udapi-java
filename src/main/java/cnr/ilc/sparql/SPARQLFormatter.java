@@ -6,7 +6,10 @@ package cnr.ilc.sparql;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.Collections;
 import java.util.Map;
+import java.util.SortedSet;
+import java.util.TreeSet;
 import java.util.Map.Entry;
 
 public class SPARQLFormatter {
@@ -37,8 +40,9 @@ public class SPARQLFormatter {
 	static private String flattenObject(Map<String, String> links) {
 		String object = "";
 		int count = links.size();
-		for (Entry<String,String> entry: links.entrySet()) {
-			object += entry.getKey() + " " + entry.getValue();
+		SortedSet<String> keys = new TreeSet<>(links.keySet());
+		for (String key: keys) {
+			object += key + " " + links.get(key);
 			if (--count > 0) object += " ; ";
 		}
 		object = object.replaceAll("[\n\t ]+", " ");

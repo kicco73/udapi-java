@@ -16,9 +16,9 @@ INSERT DATA {
 
 	:sf_OdeYA0FHeFFB1DVUMqdMw { rdf:type skos:ConceptScheme ; skos:prefLabel "e-mobility" } .
 	:sf_1gkE5ripjs1GT67xQzsF9A { rdf:type skos:ConceptScheme ; skos:prefLabel "e-caz" } .
-	:lexicon_en { lime:language "en" ; rdf:type lime:Lexicon } .
-	:lexicon_it { lime:language "it" ; rdf:type lime:Lexicon } .
-	:lexicon_fr { lime:language "fr" ; rdf:type lime:Lexicon } .
+	:lexicon_en { rdf:type lime:Lexicon ; lime:language "en" } .
+	:lexicon_it { rdf:type lime:Lexicon ; lime:language "it" } .
+	:lexicon_fr { rdf:type lime:Lexicon ; lime:language "fr" } .
 
 	# Concept section
 	conc:concept_c1 rdf:type skos:Concept .

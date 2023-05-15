@@ -16,8 +16,8 @@ INSERT DATA {
 
 	:sf_opa4aSDlpMCpGKFg8OQJW { rdf:type skos:ConceptScheme ; skos:prefLabel "Currency" } .
 	:sf_krpCWEW7cxlH0Qa75sfpI { rdf:type skos:ConceptScheme ; skos:prefLabel "Music" } .
-	:lexicon_de { lime:language "de" ; rdf:type lime:Lexicon } .
-	:lexicon_en { lime:language "en" ; rdf:type lime:Lexicon } .
+	:lexicon_de { rdf:type lime:Lexicon ; lime:language "de" } .
+	:lexicon_en { rdf:type lime:Lexicon ; lime:language "en" } .
 
 	# Concept section
 	conc:concept_C001 rdf:type skos:Concept .

@@ -17,9 +17,9 @@ INSERT DATA {
 	:sf_4Y6xVErBJmy4ILWbH56p7R { rdf:type skos:ConceptScheme ; skos:prefLabel "General" } .
 	:sf_5Wn5qvhW2kRXyqCJNs5a7o { rdf:type skos:ConceptScheme ; skos:prefLabel "Stellar Birth" } .
 	:sf_6dLpuXjfy5d3rR4CTeHmy5 { rdf:type skos:ConceptScheme ; skos:prefLabel "Stellar Death" } .
-	:lexicon_en { lime:language "en" ; rdf:type lime:Lexicon } .
-	:lexicon_es { lime:language "es" ; rdf:type lime:Lexicon } .
-	:lexicon_zu { lime:language "zu" ; rdf:type lime:Lexicon } .
+	:lexicon_en { rdf:type lime:Lexicon ; lime:language "en" } .
+	:lexicon_es { rdf:type lime:Lexicon ; lime:language "es" } .
+	:lexicon_zu { rdf:type lime:Lexicon ; lime:language "zu" } .
 
 	# Concept section
 	conc:concept_c1 rdf:type skos:Concept .
