@@ -54,8 +54,7 @@ public class TripleSerialiser {
 
 		int count = 0;
 		String[] anonLinks = new String[anonObject.size()*2];
-		Map<String,String> treeObject = new TreeMap<>(anonObject);
-		for (Entry<String,String> entry: treeObject.entrySet()) {
+		for (Entry<String,String> entry: anonObject.entrySet()) {
 			anonLinks[count++] = entry.getKey();
 			anonLinks[count++] = entry.getValue();
 		}
