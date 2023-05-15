@@ -32,6 +32,13 @@ public class TripleSerialiser {
 		add(subject, link, objectString);
 	}
 
+	public void addMultiple(String subject, Map<String,String> links) {
+		String language = "*";
+		String languageSpecific = features.getOrDefault(language, "");
+		languageSpecific += SPARQLFormatter.formatMultipleStatement(subject, links);
+		features.put(language, languageSpecific);
+	}
+
 	public void addUrlOrString(String subject, String link, String possibleUrl) {
 		String object = SPARQLFormatter.formatObjectWithUrlIfPossible(possibleUrl);
 		add(subject, link, object);
@@ -43,18 +50,17 @@ public class TripleSerialiser {
 	}
 
 	public void add(String subject, String link, Map<String,String> anonObject, String language) {
-		String description = SPARQLFormatter.formatObject(anonObject);
-		add(subject, link, description, language);
+		String languageSpecific = features.getOrDefault(language, "");
+		languageSpecific += SPARQLFormatter.formatAnonStatement(subject, link, anonObject);
+		features.put(language, languageSpecific);
 	}
 
 	public void addMetaData(String entryFQN, String creator) {
 		Date now = DateProvider.getInstance().getDate();
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmX"); // Quoted "Z" to indicate UTC, no timezone offset
-		String date = df.format(now);
-
-		addString(entryFQN, "dct:creator", creator);
-		addString(entryFQN, "dct:created", date + ":00");
-		addString(entryFQN, "dct:modified", date + ":00");
+		String date = String.format("\"%s:00\"",  df.format(now));
+		Map<String,String> links = Map.of("dct:creator", "\""+creator+"\"", "dct:created", date, "dct:modified", date);
+		addMultiple(entryFQN, links);
 	}
 
 	static public String getLexiconFQN(String language) {

@@ -34,18 +34,28 @@ public class SPARQLFormatter {
 		return object;
 	}
 
-	static public String formatObject(Map<String, String> anon) {
-		String object = "[ ";
-		int count = anon.size();
-		for (Entry<String,String> entry: anon.entrySet()) {
+	static private String flattenObject(Map<String, String> links) {
+		String object = "";
+		int count = links.size();
+		for (Entry<String,String> entry: links.entrySet()) {
 			object += entry.getKey() + " " + entry.getValue();
 			if (--count > 0) object += " ; ";
 		}
-		object += " ]";
+		object = object.replaceAll("[\n\t ]+", " ");
 		return object;
 	}
 
 	static public String formatStatement(String subject, String link, String object) {
 		return String.format("\t%s %s %s .\n", subject, link, object);
+	}
+
+	static public String formatMultipleStatement(String subject, Map<String,String> links) {
+		String object = flattenObject(links);
+		return String.format("\t%s { %s } .\n", subject, object);
+	}
+
+	static public String formatAnonStatement(String subject, String link, Map<String,String> anon) {
+		String object = flattenObject(anon);
+		return String.format("\t%s %s [ %s ] .\n", subject, link, object);
 	}
 }

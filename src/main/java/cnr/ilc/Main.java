@@ -15,7 +15,6 @@ import java.util.Arrays;
 import java.util.Date;
 import cnr.ilc.rut.Filter;
 import cnr.ilc.rut.utils.DateProvider;
-import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.services.GraphDBClient;
 import cnr.ilc.services.OfflineCompiler;
 import cnr.ilc.services.Services;

@@ -4,6 +4,7 @@ import org.json.simple.JSONObject;
 
 @SuppressWarnings("unchecked")
 public class JSONLogger {
+	static int prevProgress = 0;
 
 	static private void sendMessage(String event, JSONObject message) {
 		message.put("event", event);
@@ -34,6 +35,8 @@ public class JSONLogger {
 	}
 
 	static public void progress(int percentage, String template, Object ...args) {
+		if (percentage == prevProgress) return;
+		prevProgress = percentage;
 		JSONObject jobUpdate = new JSONObject();
 		String job = String.format(template, args);
 		jobUpdate.put("job", job);
