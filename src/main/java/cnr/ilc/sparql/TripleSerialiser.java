@@ -69,8 +69,8 @@ public class TripleSerialiser {
 
 	public String addLexicon(String language) {	
 		String lexiconFQN = getLexiconFQN(language);
-		add(lexiconFQN, "rdf:type", "lime:Lexicon");
-        addString(lexiconFQN, "lime:language", language);   
+		Map<String,String> links = Map.of("rdf:type", "lime:Lexicon", "lime:language", "\""+language+"\"");
+		addMultiple(lexiconFQN, links);
 		return lexiconFQN;
 	}
 

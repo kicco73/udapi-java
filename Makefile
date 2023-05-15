@@ -1,6 +1,5 @@
-image:
+image: jar
 	rm -rf protoserver/resources
-	./gradlew build jar
 	docker build --pull .
 
 jar:
@@ -9,6 +8,17 @@ jar:
 run:
 	docker image rm -f udapi-java_rut-backend
 	docker-compose up -d
+
+snapshots:
+	/usr/bin/env java -jar bin/libs/rut.jar \
+		--no-graphdb --namespace http://txt2rdf/test# \
+		--datetime 2023-04-10T10:02+02:00 --creator kicco \
+		--output-dir src/test/resources/cnr/ilc/tbx/sparql \
+		--input-format tbx \
+		-- src/test/resources/cnr/ilc/tbx/input/*
+
+test:
+	./gradlew test
 
 clean:
 	rm -rf protoserver/resources

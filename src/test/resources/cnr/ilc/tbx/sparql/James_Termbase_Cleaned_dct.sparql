@@ -14,22 +14,14 @@ PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
 
-	:sf_2SU1vPZE67x7OQ2keemVas rdf:type skos:ConceptScheme .
-	:sf_2SU1vPZE67x7OQ2keemVas skos:prefLabel "clothing" .
-	:sf_4q02ThPHBUQVAX9bMGj5jq rdf:type skos:ConceptScheme .
-	:sf_4q02ThPHBUQVAX9bMGj5jq skos:prefLabel "---" .
-	:sf_2zW02rM8gJs4PlBii1YtRp rdf:type skos:ConceptScheme .
-	:sf_2zW02rM8gJs4PlBii1YtRp skos:prefLabel "food" .
-	:lexicon_de rdf:type lime:Lexicon .
-	:lexicon_de lime:language "de" .
-	:lexicon_en rdf:type lime:Lexicon .
-	:lexicon_en lime:language "en" .
-	:lexicon_es rdf:type lime:Lexicon .
-	:lexicon_es lime:language "es" .
-	:lexicon_hu rdf:type lime:Lexicon .
-	:lexicon_hu lime:language "hu" .
-	:lexicon_ko rdf:type lime:Lexicon .
-	:lexicon_ko lime:language "ko" .
+	:sf_2SU1vPZE67x7OQ2keemVas { rdf:type skos:ConceptScheme ; skos:prefLabel "clothing" } .
+	:sf_4q02ThPHBUQVAX9bMGj5jq { rdf:type skos:ConceptScheme ; skos:prefLabel "---" } .
+	:sf_2zW02rM8gJs4PlBii1YtRp { rdf:type skos:ConceptScheme ; skos:prefLabel "food" } .
+	:lexicon_de { lime:language "de" ; rdf:type lime:Lexicon } .
+	:lexicon_en { lime:language "en" ; rdf:type lime:Lexicon } .
+	:lexicon_es { lime:language "es" ; rdf:type lime:Lexicon } .
+	:lexicon_hu { lime:language "hu" ; rdf:type lime:Lexicon } .
+	:lexicon_ko { lime:language "ko" ; rdf:type lime:Lexicon } .
 
 	# Concept section
 	conc:concept_c9680bce6-2c85-47ed-913a-68e64b427708 rdf:type skos:Concept .
