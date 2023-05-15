@@ -14,109 +14,109 @@ PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
 
-	:sf_4Y6xVErBJmy4ILWbH56p7R { skos:prefLabel "General" ; rdf:type skos:ConceptScheme } .
-	:sf_5Wn5qvhW2kRXyqCJNs5a7o { skos:prefLabel "Stellar Birth" ; rdf:type skos:ConceptScheme } .
-	:sf_6dLpuXjfy5d3rR4CTeHmy5 { skos:prefLabel "Stellar Death" ; rdf:type skos:ConceptScheme } .
-	:lexicon_en { lime:language "en" ; rdf:type lime:Lexicon } .
-	:lexicon_es { lime:language "es" ; rdf:type lime:Lexicon } .
-	:lexicon_zu { lime:language "zu" ; rdf:type lime:Lexicon } .
+	:sf_4Y6xVErBJmy4ILWbH56p7R { rdf:type skos:ConceptScheme ; skos:prefLabel "General" } .
+	:sf_5Wn5qvhW2kRXyqCJNs5a7o { rdf:type skos:ConceptScheme ; skos:prefLabel "Stellar Birth" } .
+	:sf_6dLpuXjfy5d3rR4CTeHmy5 { rdf:type skos:ConceptScheme ; skos:prefLabel "Stellar Death" } .
+	:lexicon_en { rdf:type lime:Lexicon ; lime:language "en" } .
+	:lexicon_es { rdf:type lime:Lexicon ; lime:language "es" } .
+	:lexicon_zu { rdf:type lime:Lexicon ; lime:language "zu" } .
 
 	# Concept section
 	conc:concept_c1 rdf:type skos:Concept .
 	conc:concept_c1 skos:prefLabel "c1" .
 	conc:concept_c1 skos:note "G-Source: http://www.physics.drexel.edu/observatory/dump.shtml" .
 	conc:concept_c1 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c1 skos:definition [ dct:source "Oxford2007" ; rdf:value "A group of stars formed together in the spiral\n arms of a galaxy."@en ] .
-	conc:concept_c1 skos:definition [ dct:source <http://www.espacioprofundo.com.ar/diccionario/Glosario_de_Astronomia/vertermino/Cumulo_abierto.html> ; rdf:value "Una acumulación de una docena hasta varios miles\n de jóvenes estrellas en el plano de las galaxias."@es ] .
+	conc:concept_c1 skos:definition [ rdf:value "A group of stars formed together in the spiral\n arms of a galaxy."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c1 skos:definition [ rdf:value "Una acumulación de una docena hasta varios miles\n de jóvenes estrellas en el plano de las galaxias."@es ; dct:source <http://www.espacioprofundo.com.ar/diccionario/Glosario_de_Astronomia/vertermino/Cumulo_abierto.html> ] .
 	conc:concept_c2 rdf:type skos:Concept .
 	conc:concept_c2 skos:prefLabel "c2" .
 	conc:concept_c2 skos:note "G-Source:\n http://www.cfht.hawaii.edu/Instruments/Spectroscopy/Espadons/www.ast.obs-mip.fr/users/donati/press/fuori_eng.html" .
 	conc:concept_c2 skos:inScheme :sf_5Wn5qvhW2kRXyqCJNs5a7o .
-	conc:concept_c2 skos:definition [ dct:source "Oxford2007" ; rdf:value "A structure that forms around a compact object\n (e.g. a white dwarf, neutron star, or black hole) when matter flows\n towards it."@en ] .
-	conc:concept_c2 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Disco_de_acreci%C3%B3n> ; rdf:value "Una estructura en forma de disco alrededor de un\n objeto central masivo que alimenta el cuerpo central siendo atraido por\n éste y contribuye a su aumento de masa."@es ] .
+	conc:concept_c2 skos:definition [ rdf:value "A structure that forms around a compact object\n (e.g. a white dwarf, neutron star, or black hole) when matter flows\n towards it."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c2 skos:definition [ rdf:value "Una estructura en forma de disco alrededor de un\n objeto central masivo que alimenta el cuerpo central siendo atraido por\n éste y contribuye a su aumento de masa."@es ; dct:source <http://es.wikipedia.org/wiki/Disco_de_acreci%C3%B3n> ] .
 	conc:concept_c3 rdf:type skos:Concept .
 	conc:concept_c3 skos:prefLabel "c3" .
 	conc:concept_c3 skos:note "G-Source: http://wallpaper-s.org/12__Supermassive_Black_Hole.htm" .
 	conc:concept_c3 skos:inScheme :sf_6dLpuXjfy5d3rR4CTeHmy5 .
-	conc:concept_c3 skos:definition [ dct:source "Cambridge2007" ; rdf:value "A region of space where the gravitational force\n is so strong that not even light can escape from it."@en ] .
-	conc:concept_c3 skos:definition [ dct:source "www.atlasoftheuniverse.com/espanol/glossary.html" ; rdf:value "Un punto super-denso en el espacio formado por el\n colapso de una estrella donde nada puede escapar de su influencia\n gravitacional."@es ] .
+	conc:concept_c3 skos:definition [ rdf:value "A region of space where the gravitational force\n is so strong that not even light can escape from it."@en ; dct:source "Cambridge2007" ] .
+	conc:concept_c3 skos:definition [ rdf:value "Un punto super-denso en el espacio formado por el\n colapso de una estrella donde nada puede escapar de su influencia\n gravitacional."@es ; dct:source "www.atlasoftheuniverse.com/espanol/glossary.html" ] .
 	conc:concept_c4 rdf:type skos:Concept .
 	conc:concept_c4 skos:prefLabel "c4" .
 	conc:concept_c4 skos:note "G-Source:\n http://nakedmaninthetree.wordpress.com/2009/02/22/galaxies-and-the-future/" .
 	conc:concept_c4 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c4 skos:definition [ dct:source "Cambridge2007" ; rdf:value "A temporary intese burst of gamma rays and X-rays\n from a cosmic source."@en ] .
-	conc:concept_c4 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Brote_de_rayos_gamma> ; rdf:value "Destellos de rayos gamma que pueden durar desde\n unos nanosegundos hasta cerca de una hora."@es ] .
+	conc:concept_c4 skos:definition [ rdf:value "A temporary intese burst of gamma rays and X-rays\n from a cosmic source."@en ; dct:source "Cambridge2007" ] .
+	conc:concept_c4 skos:definition [ rdf:value "Destellos de rayos gamma que pueden durar desde\n unos nanosegundos hasta cerca de una hora."@es ; dct:source <http://es.wikipedia.org/wiki/Brote_de_rayos_gamma> ] .
 	conc:concept_c5 rdf:type skos:Concept .
 	conc:concept_c5 skos:prefLabel "c5" .
 	conc:concept_c5 skos:note "G-Source: http://www.astrographics.com/GalleryPrintsIndex/GP0046.html" .
 	conc:concept_c5 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c5 skos:definition [ dct:source "Oxford2007" ; rdf:value "A roughly spherical group of old stars in the\n halo of the galaxy."@en ] .
-	conc:concept_c5 skos:definition [ dct:source <http://es.wikipedia.org/wiki/C%C3%BAmulo_globular> ; rdf:value "Un tipo de cúmulo estelar que consiste en una\n agrupación de miles de estrellas viejas, gravitacionalmente ligadas, con\n distribución aproximadamente esférica, y que orbita en torno a una\n galaxia de manera similar a un satélite."@es ] .
+	conc:concept_c5 skos:definition [ rdf:value "A roughly spherical group of old stars in the\n halo of the galaxy."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c5 skos:definition [ rdf:value "Un tipo de cúmulo estelar que consiste en una\n agrupación de miles de estrellas viejas, gravitacionalmente ligadas, con\n distribución aproximadamente esférica, y que orbita en torno a una\n galaxia de manera similar a un satélite."@es ; dct:source <http://es.wikipedia.org/wiki/C%C3%BAmulo_globular> ] .
 	conc:concept_c6 rdf:type skos:Concept .
 	conc:concept_c6 skos:prefLabel "c6" .
 	conc:concept_c6 skos:note "G-Source: http://www.skyofplenty.com/?page_id=374" .
 	conc:concept_c6 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c6 skos:definition [ dct:source <http://en.wiktionary.org/wiki/main-sequence> ; rdf:value "Of or dealing with a major group of stars forming\n a band stretching from upper left to lower right on a\n Hertzsprung-Russell diagram when being plotted by luminosity and surface\n temperature."@en ] .
-	conc:concept_c6 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Secuencia_principal> ; rdf:value "Pertenece a las estrellas en la región del\n diagrama de Hertzsprung-Russell en la que se encuentran la mayor parte\n de las estrellas que transforman hidrógeno en helio."@es ] .
+	conc:concept_c6 skos:definition [ rdf:value "Of or dealing with a major group of stars forming\n a band stretching from upper left to lower right on a\n Hertzsprung-Russell diagram when being plotted by luminosity and surface\n temperature."@en ; dct:source <http://en.wiktionary.org/wiki/main-sequence> ] .
+	conc:concept_c6 skos:definition [ rdf:value "Pertenece a las estrellas en la región del\n diagrama de Hertzsprung-Russell en la que se encuentran la mayor parte\n de las estrellas que transforman hidrógeno en helio."@es ; dct:source <http://es.wikipedia.org/wiki/Secuencia_principal> ] .
 	conc:concept_c7 rdf:type skos:Concept .
 	conc:concept_c7 skos:prefLabel "c7" .
 	conc:concept_c7 skos:note "G-Source: http://www.konkoly.hu/KISAG/Science/star/star_intro.html" .
 	conc:concept_c7 skos:inScheme :sf_5Wn5qvhW2kRXyqCJNs5a7o .
-	conc:concept_c7 skos:definition [ dct:source "Cambridge2007" ; rdf:value "A star in the earliest observable stage of\n formation."@en ] .
-	conc:concept_c7 skos:definition [ dct:source "www.astrocosmo.cl/glosario/glosar-p.htm" ; rdf:value "Una región muy densa o descorazonada de nubes\n moleculares donde existen estrellas en proceso de formación."@es ] .
+	conc:concept_c7 skos:definition [ rdf:value "A star in the earliest observable stage of\n formation."@en ; dct:source "Cambridge2007" ] .
+	conc:concept_c7 skos:definition [ rdf:value "Una región muy densa o descorazonada de nubes\n moleculares donde existen estrellas en proceso de formación."@es ; dct:source "www.astrocosmo.cl/glosario/glosar-p.htm" ] .
 	conc:concept_c8 rdf:type skos:Concept .
 	conc:concept_c8 skos:prefLabel "c8" .
 	conc:concept_c8 skos:note "G-Source: http://apod.nasa.gov/apod/ap060109.html" .
 	conc:concept_c8 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c8 skos:definition [ dct:source "Oxford2007" ; rdf:value "A collection of stars formed together from the\n same gas cloud and bound together by mutual gravitational\n attraction."@en ] .
-	conc:concept_c8 skos:definition [ dct:source <http://iopscience.iop.org/1538-3881/129/5/2281/pdf/1538-3881_129_5_2281.pdf> ; rdf:value "Un grupo de estrellas atraídas entre sí por su\n gravedad mutua."@es ] .
+	conc:concept_c8 skos:definition [ rdf:value "A collection of stars formed together from the\n same gas cloud and bound together by mutual gravitational\n attraction."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c8 skos:definition [ rdf:value "Un grupo de estrellas atraídas entre sí por su\n gravedad mutua."@es ; dct:source <http://iopscience.iop.org/1538-3881/129/5/2281/pdf/1538-3881_129_5_2281.pdf> ] .
 	conc:concept_c9 rdf:type skos:Concept .
 	conc:concept_c9 skos:prefLabel "c9" .
 	conc:concept_c9 skos:note "G-Source: http://www.cfa.harvard.edu/~afrebel/milky-way-2.jpg" .
 	conc:concept_c9 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c9 skos:definition [ dct:source "Oxford2007" ; rdf:value "A band of faint light across the sky, visible to\n the naked eye on a moonless night, consisting of stars and glowing gas\n in the disk of our own Galaxy."@en ] .
-	conc:concept_c9 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Vía_Láctea> ; rdf:value "Una galaxia espiral en la que se encuentra el\n Sistema Solar y, por ende, la Tierra."@es ] .
+	conc:concept_c9 skos:definition [ rdf:value "A band of faint light across the sky, visible to\n the naked eye on a moonless night, consisting of stars and glowing gas\n in the disk of our own Galaxy."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c9 skos:definition [ rdf:value "Una galaxia espiral en la que se encuentra el\n Sistema Solar y, por ende, la Tierra."@es ; dct:source <http://es.wikipedia.org/wiki/Vía_Láctea> ] .
 	conc:concept_c10 rdf:type skos:Concept .
 	conc:concept_c10 skos:prefLabel "c10" .
 	conc:concept_c10 skos:note "G-Source:\n http://lh4.ggpht.com/_EuutPdvjcY0/SQ2jGBKWO7I/AAAAAAAAALM/gjDMVimDQc8/005Est.jpg" .
 	conc:concept_c10 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c10 skos:definition [ dct:source "Cambridge2007" ; rdf:value "A large, luminous ball of gas generating energy\n internally by nuclear fusion."@en ] .
-	conc:concept_c10 skos:definition [ dct:source "spaceplace.nasa.gov/sp/kids/spitzer/signs/sign_glossary.shtml" ; rdf:value "Una enorme y densa bola de gas que genera fusión\n nuclear, liberando así una gran cantidad de energía"@es ] .
+	conc:concept_c10 skos:definition [ rdf:value "A large, luminous ball of gas generating energy\n internally by nuclear fusion."@en ; dct:source "Cambridge2007" ] .
+	conc:concept_c10 skos:definition [ rdf:value "Una enorme y densa bola de gas que genera fusión\n nuclear, liberando así una gran cantidad de energía"@es ; dct:source "spaceplace.nasa.gov/sp/kids/spitzer/signs/sign_glossary.shtml" ] .
 	conc:concept_c11 rdf:type skos:Concept .
 	conc:concept_c11 skos:prefLabel "c11" .
 	conc:concept_c11 skos:note "G-Source: http://drdima.files.wordpress.com/2009/05/sun-rays.jpg" .
 	conc:concept_c11 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c11 skos:definition [ dct:source "Oxford2007" ; rdf:value "The region of the electromagnetic spectrum\n spanning the wavelength range from the Lymann limit at 91.2 nm to 350\n nm."@en ] .
-	conc:concept_c11 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Radiaci%C3%B3n_UV> ; rdf:value "La radiación electromagnética cuya longitud de\n onda está comprendida aproximadamente entre los 400 nm y los 15\n nm."@es ] .
+	conc:concept_c11 skos:definition [ rdf:value "The region of the electromagnetic spectrum\n spanning the wavelength range from the Lymann limit at 91.2 nm to 350\n nm."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c11 skos:definition [ rdf:value "La radiación electromagnética cuya longitud de\n onda está comprendida aproximadamente entre los 400 nm y los 15\n nm."@es ; dct:source <http://es.wikipedia.org/wiki/Radiaci%C3%B3n_UV> ] .
 	conc:concept_c12 rdf:type skos:Concept .
 	conc:concept_c12 skos:prefLabel "c12" .
 	conc:concept_c12 skos:note "G-Source: http://www.greatdreams.com/magnet1.jpg" .
 	conc:concept_c12 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c12 skos:definition [ dct:source "Merriam-Webster2002" ; rdf:value "A region subject to the influence of magnetism\n that is manifested by the mechanical forces that it exerts upon\n electricity moving across it and upon the poles of magnets placed in\n it."@en ] .
-	conc:concept_c12 skos:definition [ dct:source <http://www.greenfacts.org/es/glosario/abc/campo-magnetico.htm> ; rdf:value "Un campo de fuerza creado como consecuencia del\n movimiento de cargas eléctricas, del flujo de la electricidad."@es ] .
+	conc:concept_c12 skos:definition [ rdf:value "A region subject to the influence of magnetism\n that is manifested by the mechanical forces that it exerts upon\n electricity moving across it and upon the poles of magnets placed in\n it."@en ; dct:source "Merriam-Webster2002" ] .
+	conc:concept_c12 skos:definition [ rdf:value "Un campo de fuerza creado como consecuencia del\n movimiento de cargas eléctricas, del flujo de la electricidad."@es ; dct:source <http://www.greenfacts.org/es/glosario/abc/campo-magnetico.htm> ] .
 	conc:concept_c13 rdf:type skos:Concept .
 	conc:concept_c13 skos:prefLabel "c13" .
 	conc:concept_c13 skos:note "G-Source: http://images.spaceref.com/news/2009/ooBlue_Straggler09.jpg" .
 	conc:concept_c13 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c13 skos:definition [ dct:source "Oxford2007" ; rdf:value "A blue main-sequence star, usually found in a\n globular or open cluster that appears to be slower in its evolution than\n other stars of similar mass and luminosity in the same\n cluster."@en ] .
-	conc:concept_c13 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Estrella_rezagada_azul> ; rdf:value "Estrellas que aparentan una edad menor que la del\n sistema estelar al que pertenecen, si se supone que se formaron junto\n con él."@es ] .
+	conc:concept_c13 skos:definition [ rdf:value "A blue main-sequence star, usually found in a\n globular or open cluster that appears to be slower in its evolution than\n other stars of similar mass and luminosity in the same\n cluster."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c13 skos:definition [ rdf:value "Estrellas que aparentan una edad menor que la del\n sistema estelar al que pertenecen, si se supone que se formaron junto\n con él."@es ; dct:source <http://es.wikipedia.org/wiki/Estrella_rezagada_azul> ] .
 	conc:concept_c14 rdf:type skos:Concept .
 	conc:concept_c14 skos:prefLabel "c14" .
 	conc:concept_c14 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c14 skos:definition [ dct:source "Cambridge2007" ; rdf:value "The sudden collapse of a massive star when the\n internal pressure pushing outwards falls so that it cannot balance the\n weight of material pressing inward."@en ] .
-	conc:concept_c14 skos:definition [ dct:source <http://www.conocimientosweb.net/portal/term6172.html> ; rdf:value "El estado final de la evolución de una estrella\n de gran masa en el que la materia se comprime bajo la acción de su\n propia atracción gravitatoria, con desprendimiento de grandes cantidades\n de energía."@es ] .
+	conc:concept_c14 skos:definition [ rdf:value "The sudden collapse of a massive star when the\n internal pressure pushing outwards falls so that it cannot balance the\n weight of material pressing inward."@en ; dct:source "Cambridge2007" ] .
+	conc:concept_c14 skos:definition [ rdf:value "El estado final de la evolución de una estrella\n de gran masa en el que la materia se comprime bajo la acción de su\n propia atracción gravitatoria, con desprendimiento de grandes cantidades\n de energía."@es ; dct:source <http://www.conocimientosweb.net/portal/term6172.html> ] .
 	conc:concept_c15 rdf:type skos:Concept .
 	conc:concept_c15 skos:prefLabel "c15" .
 	conc:concept_c15 skos:note "G-Source:\n http://lh6.ggpht.com/_6hgSmco4R9M/SaqplXGqJfI/AAAAAAAAA1k/B3a43_O9VI8/56_Binary_Stars_thumb3.jpg" .
 	conc:concept_c15 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c15 skos:definition [ dct:source "Cambridge2007" ; rdf:value "A pair of stars in orbit around each other, held\n together by the graviational attraction between them."@en ] .
-	conc:concept_c15 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Estrella_binaria> ; rdf:value "Un sistema estelar compuesto de dos estrellas que\n orbitan mutuamente alrededor de un centro de masas común."@es ] .
+	conc:concept_c15 skos:definition [ rdf:value "A pair of stars in orbit around each other, held\n together by the graviational attraction between them."@en ; dct:source "Cambridge2007" ] .
+	conc:concept_c15 skos:definition [ rdf:value "Un sistema estelar compuesto de dos estrellas que\n orbitan mutuamente alrededor de un centro de masas común."@es ; dct:source <http://es.wikipedia.org/wiki/Estrella_binaria> ] .
 	conc:concept_c16 rdf:type skos:Concept .
 	conc:concept_c16 skos:prefLabel "c16" .
 	conc:concept_c16 skos:note "G-Source:\n http://www.astro.ljmu.ac.uk/~ikb/research/imf-use-in-cosmology.html\nThis figure compares the IMFs by ploting mass fraction per dex versus mass,\n i.e., normalized so that the integral under each curve is unity. They are\n assumed to be valid from 0.1 to 120 solar masses.\nN-Source:\n http://www.astro.ljmu.ac.uk/~ikb/research/imf-use-in-cosmology.html" .
 	conc:concept_c16 skos:inScheme :sf_5Wn5qvhW2kRXyqCJNs5a7o .
-	conc:concept_c16 skos:definition [ dct:source "Oxford2007" ; rdf:value "A mathematical description of the relative\n frequncy with which stars of various masses are formed."@en ] .
-	conc:concept_c16 skos:definition [ dct:source "Basado en http://laeff.cab.inta-csic.es/modules.php?op=modload&name=phpWiki&file=index&pagename=Research-Estrellas-IMF" ; rdf:value "La expresión numérica que determina el número de\n estrellas con masa en un rango determinado."@es ] .
+	conc:concept_c16 skos:definition [ rdf:value "A mathematical description of the relative\n frequncy with which stars of various masses are formed."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c16 skos:definition [ rdf:value "La expresión numérica que determina el número de\n estrellas con masa en un rango determinado."@es ; dct:source "Basado en http://laeff.cab.inta-csic.es/modules.php?op=modload&name=phpWiki&file=index&pagename=Research-Estrellas-IMF" ] .
 	conc:concept_c17 rdf:type skos:Concept .
 	conc:concept_c17 skos:prefLabel "c17" .
 	conc:concept_c18 rdf:type skos:Concept .
@@ -129,102 +129,102 @@ INSERT DATA {
 	conc:concept_c21 skos:prefLabel "c21" .
 	conc:concept_c21 skos:note "G-Source:\n http://jcconwell.wordpress.com/2009/07/24/top-10-ways-the-universe-could-kill-us/supernova/" .
 	conc:concept_c21 skos:inScheme :sf_6dLpuXjfy5d3rR4CTeHmy5 .
-	conc:concept_c21 skos:definition [ dct:source "Cambridge2007" ; rdf:value "A catastrophic stellar explosion in which so much\n energy is released that the supernova alone can outshine an entire\n galaxy of billions of stars."@en ] .
-	conc:concept_c21 skos:definition [ dct:source <http://www.astromia.com/glosario/supernova.htm> ; rdf:value "Una estrella que estalla y lanza a todo su\n alrededor la mayor parte de su masa a altísimas velocidades."@es ] .
+	conc:concept_c21 skos:definition [ rdf:value "A catastrophic stellar explosion in which so much\n energy is released that the supernova alone can outshine an entire\n galaxy of billions of stars."@en ; dct:source "Cambridge2007" ] .
+	conc:concept_c21 skos:definition [ rdf:value "Una estrella que estalla y lanza a todo su\n alrededor la mayor parte de su masa a altísimas velocidades."@es ; dct:source <http://www.astromia.com/glosario/supernova.htm> ] .
 	conc:concept_c22 rdf:type skos:Concept .
 	conc:concept_c22 skos:prefLabel "c22" .
 	conc:concept_c23 rdf:type skos:Concept .
 	conc:concept_c23 skos:prefLabel "c23" .
 	conc:concept_c23 skos:note "G-Source:\n http://www.lcsd.gov.hk/CE/Museum/Space/EducationResource/Universe/framed_e/lecture/ch15/imgs/red_size.jpg" .
 	conc:concept_c23 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c23 skos:definition [ dct:source "Oxford2007" ; rdf:value "A cool, large and highly luminous star that has\n left the main sequence and is powered by heavier elements than\n hydrogen."@en ] .
-	conc:concept_c23 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Gigante_roja> ; rdf:value "Una estrella de masa baja o intermedia (menos de\n 8-9 masas solares) que, tras haber consumido el hidrógeno en su núcleo\n durante la etapa de secuencia principal, convirtiéndolo en helio por\n fusión nuclear, comienza a quemar hidrógeno en una cáscara alrededor del\n núcleo de helio inerte."@es ] .
+	conc:concept_c23 skos:definition [ rdf:value "A cool, large and highly luminous star that has\n left the main sequence and is powered by heavier elements than\n hydrogen."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c23 skos:definition [ rdf:value "Una estrella de masa baja o intermedia (menos de\n 8-9 masas solares) que, tras haber consumido el hidrógeno en su núcleo\n durante la etapa de secuencia principal, convirtiéndolo en helio por\n fusión nuclear, comienza a quemar hidrógeno en una cáscara alrededor del\n núcleo de helio inerte."@es ; dct:source <http://es.wikipedia.org/wiki/Gigante_roja> ] .
 	conc:concept_c24 rdf:type skos:Concept .
 	conc:concept_c24 skos:prefLabel "c24" .
 	conc:concept_c24 skos:note "G-Source: http://www.wolflodge.org/bluestar/h_red_dwarf_02.jpg" .
 	conc:concept_c24 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c24 skos:definition [ dct:source "Oxford2007" ; rdf:value "A cool, faint, low-mass star lying at the lower\n end of the main sequence of spectral type K or M."@en ] .
-	conc:concept_c24 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Enana_roja> ; rdf:value "Una estrella pequeña y relativamente fría de la\n secuencia principal, ya sea de tipo espectral K tardío o M."@es ] .
+	conc:concept_c24 skos:definition [ rdf:value "A cool, faint, low-mass star lying at the lower\n end of the main sequence of spectral type K or M."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c24 skos:definition [ rdf:value "Una estrella pequeña y relativamente fría de la\n secuencia principal, ya sea de tipo espectral K tardío o M."@es ; dct:source <http://es.wikipedia.org/wiki/Enana_roja> ] .
 	conc:concept_c25 rdf:type skos:Concept .
 	conc:concept_c25 skos:prefLabel "c25" .
 	conc:concept_c25 skos:note "G-Source:\n http://www.astro.columbia.edu/~archung/labs/spring2002/images/spectral_type2.jpg" .
 	conc:concept_c25 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c25 skos:definition [ dct:source "Oxford2007" ; rdf:value "A means of classifying stars according to the\n details of their spectrum, depending largely on their surface\n temperature."@en ] .
-	conc:concept_c25 skos:definition [ dct:source "Basado en http://www.espacioprofundo.com.ar/diccionario/Glosario_de_Astronomia/vertermino/Tipo_espectral.html" ; rdf:value "El espectro de una estrella clasificado por una\n letra (O, B, A, F, G, K, M, R, N, S) seguida de un digito que describe\n el color de la estrella y su temperatura."@es ] .
+	conc:concept_c25 skos:definition [ rdf:value "A means of classifying stars according to the\n details of their spectrum, depending largely on their surface\n temperature."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c25 skos:definition [ rdf:value "El espectro de una estrella clasificado por una\n letra (O, B, A, F, G, K, M, R, N, S) seguida de un digito que describe\n el color de la estrella y su temperatura."@es ; dct:source "Basado en http://www.espacioprofundo.com.ar/diccionario/Glosario_de_Astronomia/vertermino/Tipo_espectral.html" ] .
 	conc:concept_c26 rdf:type skos:Concept .
 	conc:concept_c26 skos:prefLabel "c26" .
 	conc:concept_c26 skos:note "G-Source: http://www.stsci.edu/~inr/thisweek1/thisweek/WhiteDwarf.gif" .
 	conc:concept_c26 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c26 skos:note "This is the end-result of all but the most massive of stars.\nN-Source: Oxford2007"@en .
-	conc:concept_c26 skos:definition [ dct:source "Based on Oxford2007 and Cambridge2007" ; rdf:value "A small dense star that is has run out of fuel\n for nuclear fusion, collapsing under its own gravity and blowing off its\n outer layers to form a planetary nebula in the process."@en ] .
-	conc:concept_c26 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Enana_blanca> ; rdf:value "Un remanente estelar que se genera cuando una\n estrella de masa menor a 9-10 masas solares ha agotado su combustible\n nuclear."@es ] .
+	conc:concept_c26 skos:definition [ rdf:value "A small dense star that is has run out of fuel\n for nuclear fusion, collapsing under its own gravity and blowing off its\n outer layers to form a planetary nebula in the process."@en ; dct:source "Based on Oxford2007 and Cambridge2007" ] .
+	conc:concept_c26 skos:definition [ rdf:value "Un remanente estelar que se genera cuando una\n estrella de masa menor a 9-10 masas solares ha agotado su combustible\n nuclear."@es ; dct:source <http://es.wikipedia.org/wiki/Enana_blanca> ] .
 	conc:concept_c27 rdf:type skos:Concept .
 	conc:concept_c27 skos:prefLabel "c27" .
 	conc:concept_c27 skos:note "G-Source:\n http://www.phys.ncku.edu.tw/~astrolab/mirrors/apod_e/image/0901/ngc2818_hheritage_800.jpg" .
 	conc:concept_c27 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c27 skos:note "As mass is gradually lost, the core of the star becomes more exposed,\n ultimately becoming a white dwarf. Also, planetary nebulae have nothing to\n do with planets, and are not true nebulae.\nN-Source: Based on Oxford2007 and Moore2003, 186"@en .
-	conc:concept_c27 skos:definition [ dct:source "Oxford2007" ; rdf:value "A bright cloud of glowing gas and dust\n surrounding a highly evolved star."@en ] .
-	conc:concept_c27 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Nebulosa_planetaria> ; rdf:value "Una nebulosa de emisión consistente en una\n envoltura brillante en expansión de plasma y gas ionizado, expulsada\n durante la fase de rama asintótica gigante que atraviesan las estrellas\n gigantes rojas en los últimos momentos de sus vidas."@es ] .
+	conc:concept_c27 skos:definition [ rdf:value "A bright cloud of glowing gas and dust\n surrounding a highly evolved star."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c27 skos:definition [ rdf:value "Una nebulosa de emisión consistente en una\n envoltura brillante en expansión de plasma y gas ionizado, expulsada\n durante la fase de rama asintótica gigante que atraviesan las estrellas\n gigantes rojas en los últimos momentos de sus vidas."@es ; dct:source <http://es.wikipedia.org/wiki/Nebulosa_planetaria> ] .
 	conc:concept_c28 rdf:type skos:Concept .
 	conc:concept_c28 skos:prefLabel "c28" .
 	conc:concept_c28 skos:note "G-Source: http://apod.nasa.gov/apod/image/0612/NGC2174_lrg.jpg" .
 	conc:concept_c28 skos:inScheme :sf_5Wn5qvhW2kRXyqCJNs5a7o .
 	conc:concept_c28 skos:note "Ultraviolet radiation, gas cloud collisions, and synchrotron radiation can\n all cause the emission nebula to shine.\nN-Source: Oxford2007"@en .
-	conc:concept_c28 skos:definition [ dct:source "Oxford2007" ; rdf:value "A luminous cloud of gas and sust in space which\n shines with its own light, which can be generated in several\n ways."@en ] .
-	conc:concept_c28 skos:definition [ dct:source <http://www.diclib.com/Nebulosa%20de%20emisi%C3%B3n/show/en/es_astronomia/726> ; rdf:value "Una nube de gas interestelar que brilla por la\n excitación del gas, causado por radiación ultravioleta emitida por\n estrellas inmersas en la nube o por calentamiento debido a otro\n mecanismos."@es ] .
+	conc:concept_c28 skos:definition [ rdf:value "A luminous cloud of gas and sust in space which\n shines with its own light, which can be generated in several\n ways."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c28 skos:definition [ rdf:value "Una nube de gas interestelar que brilla por la\n excitación del gas, causado por radiación ultravioleta emitida por\n estrellas inmersas en la nube o por calentamiento debido a otro\n mecanismos."@es ; dct:source <http://www.diclib.com/Nebulosa%20de%20emisi%C3%B3n/show/en/es_astronomia/726> ] .
 	conc:concept_c29 rdf:type skos:Concept .
 	conc:concept_c29 skos:prefLabel "c29" .
 	conc:concept_c29 skos:note "G-Source:\n http://my-blackberry.net/wallpapers/49/m/NASA_-_The_Horsehead_Nebula%2C_B33%2C_Orion_Nebula.jpg" .
 	conc:concept_c29 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c29 skos:note "The term was originally applied to any object with a fuzzy telescopic\n appearance, but with the advent of larger instruments many 'nebulae' were\n found to consist of faint stars.\nN-Source: Oxford2007"@en .
-	conc:concept_c29 skos:definition [ dct:source "Cambridge2007" ; rdf:value "A cloud of interstellar gas and dust."@en ] .
-	conc:concept_c29 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Nebulosa> ; rdf:value "Regiones del medio interestelar constituidas por\n gases (principalmente hidrógeno y helio) y polvo."@es ] .
+	conc:concept_c29 skos:definition [ rdf:value "A cloud of interstellar gas and dust."@en ; dct:source "Cambridge2007" ] .
+	conc:concept_c29 skos:definition [ rdf:value "Regiones del medio interestelar constituidas por\n gases (principalmente hidrógeno y helio) y polvo."@es ; dct:source <http://es.wikipedia.org/wiki/Nebulosa> ] .
 	conc:concept_c30 rdf:type skos:Concept .
 	conc:concept_c30 skos:prefLabel "c30" .
 	conc:concept_c30 skos:note "G-Source: http://www.mallorcaweb.net/masm/obstel/caballo.GIF" .
 	conc:concept_c30 skos:inScheme :sf_5Wn5qvhW2kRXyqCJNs5a7o .
-	conc:concept_c30 skos:definition [ dct:source <http://en.wikipedia.org/wiki/Dark_nebula> ; rdf:value "A type of interstellar cloud that is so dense\n that it obscures the light from the background emission or reflection\n nebula or that it blocks out background stars."@en ] .
-	conc:concept_c30 skos:definition [ dct:source <http://www.astrored.net/nebulosaweb/types.html> ; rdf:value "Nubes de polvo que simplemente tapan la luz de lo\n que haya detras."@es ] .
+	conc:concept_c30 skos:definition [ rdf:value "A type of interstellar cloud that is so dense\n that it obscures the light from the background emission or reflection\n nebula or that it blocks out background stars."@en ; dct:source <http://en.wikipedia.org/wiki/Dark_nebula> ] .
+	conc:concept_c30 skos:definition [ rdf:value "Nubes de polvo que simplemente tapan la luz de lo\n que haya detras."@es ; dct:source <http://www.astrored.net/nebulosaweb/types.html> ] .
 	conc:concept_c31 rdf:type skos:Concept .
 	conc:concept_c31 skos:prefLabel "c31" .
 	conc:concept_c31 skos:note "G-Source:\n http://mm04.nasaimages.org/MediaManager/srvr?mediafile=/Size3/NVA2-8-NA/14107/full_tif.jpg&userid=1&username=admin&resolution=3&servertype=JVA&cid=8&iid=NVA2&vcid=NA&usergroup=HUBBLE&profileid=39" .
 	conc:concept_c31 skos:inScheme :sf_5Wn5qvhW2kRXyqCJNs5a7o .
-	conc:concept_c31 skos:definition [ dct:source "Oxford2007" ; rdf:value "A cloud of interstellar gas and dust that appears\n bight because it reflects or scatters starlight."@en ] .
-	conc:concept_c31 skos:definition [ dct:source <http://www.astrored.net/nebulosaweb/types.html> ; rdf:value "Nubes de polvo que simplemente reflejan la luz de\n una estrella o estrellas cercanas."@es ] .
+	conc:concept_c31 skos:definition [ rdf:value "A cloud of interstellar gas and dust that appears\n bight because it reflects or scatters starlight."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c31 skos:definition [ rdf:value "Nubes de polvo que simplemente reflejan la luz de\n una estrella o estrellas cercanas."@es ; dct:source <http://www.astrored.net/nebulosaweb/types.html> ] .
 	conc:concept_c32 rdf:type skos:Concept .
 	conc:concept_c32 skos:prefLabel "c32" .
 	conc:concept_c32 skos:note "G-Source: http://nrumiano.free.fr/Images/Neutron_star_E.gif" .
 	conc:concept_c32 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c32 skos:definition [ dct:source <http://www.astroasa.com.ar/diccionario_astro.htm> ; rdf:value "Un cuerpo pequeño muy denso que se forma en el\n envejecimiento de una estrella pesada y que está formada únicamente por\n partículas subatómicas denominadas neutrones."@es ] .
+	conc:concept_c32 skos:definition [ rdf:value "Un cuerpo pequeño muy denso que se forma en el\n envejecimiento de una estrella pesada y que está formada únicamente por\n partículas subatómicas denominadas neutrones."@es ; dct:source <http://www.astroasa.com.ar/diccionario_astro.htm> ] .
 	conc:concept_c33 rdf:type skos:Concept .
 	conc:concept_c33 skos:prefLabel "c33" .
 	conc:concept_c33 skos:inScheme :sf_6dLpuXjfy5d3rR4CTeHmy5 .
 	conc:concept_c33 skos:note "For a star with no hydrogen content the limit is 1.44 solar masses, which\n is thus the maximum possible for a white dwarf.\nN-Source: Oxford2007"@en .
-	conc:concept_c33 skos:definition [ dct:source "Oxford2007" ; rdf:value "The maximum possible mass of a degenerate star,\n above which it will be unable to support itself against the inward pull\n of its own gravity."@en ] .
-	conc:concept_c33 skos:definition [ dct:source <http://es.wikipedia.org/wiki/L%C3%ADmite_de_Chandrasekhar> ; rdf:value "El límite de masa más allá del cual la\n degeneración de electrones no es capaz de contrarrestar la fuerza de\n gravedad en un remanente estelar, produciéndose un colapso que origina\n una estrella de neutrones o un agujero negro."@es ] .
+	conc:concept_c33 skos:definition [ rdf:value "The maximum possible mass of a degenerate star,\n above which it will be unable to support itself against the inward pull\n of its own gravity."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c33 skos:definition [ rdf:value "El límite de masa más allá del cual la\n degeneración de electrones no es capaz de contrarrestar la fuerza de\n gravedad en un remanente estelar, produciéndose un colapso que origina\n una estrella de neutrones o un agujero negro."@es ; dct:source <http://es.wikipedia.org/wiki/L%C3%ADmite_de_Chandrasekhar> ] .
 	conc:concept_c34 rdf:type skos:Concept .
 	conc:concept_c34 skos:prefLabel "c34" .
 	conc:concept_c34 skos:inScheme :sf_6dLpuXjfy5d3rR4CTeHmy5 .
 	conc:concept_c34 skos:note "Encountered on in neutron stars.\nN-Source: Oxford2007"@en .
-	conc:concept_c34 skos:definition [ dct:source "Oxford2007" ; rdf:value "The state of degeneracy attained when the density\n of matter is so high that neutrons cannot be packed any more closely\n together."@en ] .
-	conc:concept_c34 skos:definition [ dct:source "Oxford2003" ; rdf:value "El estado de degeneración alcanzado cuando la\n densidad de materia es tan alta, que los neutrones no pueden juntarse\n más."@es ] .
+	conc:concept_c34 skos:definition [ rdf:value "The state of degeneracy attained when the density\n of matter is so high that neutrons cannot be packed any more closely\n together."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c34 skos:definition [ rdf:value "El estado de degeneración alcanzado cuando la\n densidad de materia es tan alta, que los neutrones no pueden juntarse\n más."@es ; dct:source "Oxford2003" ] .
 	conc:concept_c35 rdf:type skos:Concept .
 	conc:concept_c35 skos:prefLabel "c35" .
 	conc:concept_c35 skos:note "G-Source:\n http://www.astro.cornell.edu/academics/courses/astro2201/images/bh_structure.gif" .
 	conc:concept_c35 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c35 skos:definition [ dct:source "Oxford2007" ; rdf:value "The radius of the event horizon of a black\n hole."@en ] .
-	conc:concept_c35 skos:definition [ dct:source <http://www.astrocosmo.cl/glosario/glosar-r.htm> ; rdf:value "El radio del horizonte de sucesos para un agujero\n negro."@es ] .
+	conc:concept_c35 skos:definition [ rdf:value "The radius of the event horizon of a black\n hole."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c35 skos:definition [ rdf:value "El radio del horizonte de sucesos para un agujero\n negro."@es ; dct:source <http://www.astrocosmo.cl/glosario/glosar-r.htm> ] .
 	conc:concept_c36 rdf:type skos:Concept .
 	conc:concept_c36 skos:prefLabel "c36" .
 	conc:concept_c36 skos:note "G-Source:\n http://www.astro.cornell.edu/academics/courses/astro2201/images/bh_structure.gif" .
 	conc:concept_c36 skos:inScheme :sf_6dLpuXjfy5d3rR4CTeHmy5 .
-	conc:concept_c36 skos:definition [ dct:source "Oxford2007" ; rdf:value "The surface of a black hole."@en ] .
-	conc:concept_c36 skos:definition [ dct:source "Oxford2003" ; rdf:value "El superficie de un agujero negro."@es ] .
+	conc:concept_c36 skos:definition [ rdf:value "The surface of a black hole."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c36 skos:definition [ rdf:value "El superficie de un agujero negro."@es ; dct:source "Oxford2003" ] .
 	conc:concept_c37 rdf:type skos:Concept .
 	conc:concept_c37 skos:prefLabel "c37" .
 	conc:concept_c37 skos:note "G-Source: http://en.wikipedia.org/wiki/File:FusionintheSun.svg" .
 	conc:concept_c37 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c37 skos:definition [ dct:source <http://www.avizora.com/publicaciones/astronomia/textos/glosario_astronomia_afines_0006.htm> ; rdf:value "Un conjunto de procesos nucleares mediante los\n cuales cuatro núcleos de átomos de hidrógeno se combinan para formar uno\n de helio, produciendo gran cantidad de energía."@es ] .
+	conc:concept_c37 skos:definition [ rdf:value "Un conjunto de procesos nucleares mediante los\n cuales cuatro núcleos de átomos de hidrógeno se combinan para formar uno\n de helio, produciendo gran cantidad de energía."@es ; dct:source <http://www.avizora.com/publicaciones/astronomia/textos/glosario_astronomia_afines_0006.htm> ] .
 	conc:concept_c38 rdf:type skos:Concept .
 	conc:concept_c38 skos:prefLabel "c38" .
 	conc:concept_c38 skos:note "G-Source: http://en.wikipedia.org/wiki/File:CNO_Cycle.svg" .
@@ -232,40 +232,40 @@ INSERT DATA {
 	conc:concept_c39 rdf:type skos:Concept .
 	conc:concept_c39 skos:prefLabel "c39" .
 	conc:concept_c39 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c39 skos:definition [ dct:source "Oxford2007" ; rdf:value "A state of matter attained when atomic particles\n are packed together as termSechtly as is physically possible, at densities\n of several thousand tonnes per cubic metre."@en ] .
-	conc:concept_c39 skos:definition [ dct:source <http://www.emiliosilveravazquez.com/glosario.php?letra=d> ; rdf:value "Estado de la materia producido cuando las\n partículas atómicas tienen el mayor empaquetamiento físicamente posible,\n con densidades de varios miles de toneladas por centímetro cúbico."@es ] .
+	conc:concept_c39 skos:definition [ rdf:value "A state of matter attained when atomic particles\n are packed together as termSechtly as is physically possible, at densities\n of several thousand tonnes per cubic metre."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c39 skos:definition [ rdf:value "Estado de la materia producido cuando las\n partículas atómicas tienen el mayor empaquetamiento físicamente posible,\n con densidades de varios miles de toneladas por centímetro cúbico."@es ; dct:source <http://www.emiliosilveravazquez.com/glosario.php?letra=d> ] .
 	conc:concept_c40 rdf:type skos:Concept .
 	conc:concept_c40 skos:prefLabel "c40" .
 	conc:concept_c41 rdf:type skos:Concept .
 	conc:concept_c41 skos:prefLabel "c41" .
 	conc:concept_c41 skos:inScheme :sf_6dLpuXjfy5d3rR4CTeHmy5 .
 	conc:concept_c41 skos:note "Electron degeneracy supports white dwarf stars against further\n collapse.\nN-Source: Oxford2007"@en .
-	conc:concept_c41 skos:definition [ dct:source "Oxford2007" ; rdf:value "The state of degeneracy attained when the density\n of matter is so high that electrons cannot be packed any closer\n together."@en ] .
-	conc:concept_c41 skos:definition [ dct:source "Oxford2003" ; rdf:value "El estado de degeneración alcanzado cuando la\n densidad de materia es tan grande, que los electrones no pueden\n empaquetarse más."@es ] .
+	conc:concept_c41 skos:definition [ rdf:value "The state of degeneracy attained when the density\n of matter is so high that electrons cannot be packed any closer\n together."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c41 skos:definition [ rdf:value "El estado de degeneración alcanzado cuando la\n densidad de materia es tan grande, que los electrones no pueden\n empaquetarse más."@es ; dct:source "Oxford2003" ] .
 	conc:concept_c42 rdf:type skos:Concept .
 	conc:concept_c42 skos:prefLabel "c42" .
 	conc:concept_c42 skos:note "G-Source:\n http://www.astro.cornell.edu/academics/courses/astro2201/images/bh_structure.gif" .
 	conc:concept_c42 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c42 skos:definition [ dct:source "Oxford2007" ; rdf:value "A mathematical point at which certain physical\n quantities reach infinite values."@en ] .
-	conc:concept_c42 skos:definition [ dct:source "Oxford2003" ; rdf:value "Un punto matemático en el que ciertas cantidades\n físicas alcanzan valores infinitos."@es ] .
+	conc:concept_c42 skos:definition [ rdf:value "A mathematical point at which certain physical\n quantities reach infinite values."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c42 skos:definition [ rdf:value "Un punto matemático en el que ciertas cantidades\n físicas alcanzan valores infinitos."@es ; dct:source "Oxford2003" ] .
 	conc:concept_c43 rdf:type skos:Concept .
 	conc:concept_c43 skos:prefLabel "c43" .
 	conc:concept_c43 skos:note "G-Source: http://en.wikipedia.org/wiki/Solar_mass\nIn this graphic, the M with a subscript is the symbol for a solar mass.\nN-Source: Jonathan Tomolonis" .
 	conc:concept_c43 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c43 skos:definition [ dct:source "Oxford2007" ; rdf:value "A unit of mass used in stellar and galactic\n astronomy, equivalent to the mass of the sun, 1.989 x 10^30\n kg."@en ] .
-	conc:concept_c43 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Masa_solar> ; rdf:value "Una unidad de medida utilizada en astronomía y\n astrofísica para medir comparativamente la masa de las estrellas y otros\n objetos astronómicos muy masivos como galaxias."@es ] .
+	conc:concept_c43 skos:definition [ rdf:value "A unit of mass used in stellar and galactic\n astronomy, equivalent to the mass of the sun, 1.989 x 10^30\n kg."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c43 skos:definition [ rdf:value "Una unidad de medida utilizada en astronomía y\n astrofísica para medir comparativamente la masa de las estrellas y otros\n objetos astronómicos muy masivos como galaxias."@es ; dct:source <http://es.wikipedia.org/wiki/Masa_solar> ] .
 	conc:concept_c44 rdf:type skos:Concept .
 	conc:concept_c44 skos:prefLabel "c44" .
 	conc:concept_c44 skos:note "G-Source:\n http://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Triple-Alpha_Process.svg/750px-Triple-Alpha_Process.svg.png" .
 	conc:concept_c44 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c44 skos:definition [ dct:source "Oxford2007" ; rdf:value "The chain of nuclear reactions by which carbon is\n synthesized in the interiors of stars through the fusion of three helium\n nuclei(alpha particles)."@en ] .
-	conc:concept_c44 skos:definition [ dct:source <http://es.wikipedia.org/wiki/Proceso_triple-alfa> ; rdf:value "El proceso por el cual tres núcleos de helio\n (partículas alfa) se transforman en un núcleo de carbono."@es ] .
+	conc:concept_c44 skos:definition [ rdf:value "The chain of nuclear reactions by which carbon is\n synthesized in the interiors of stars through the fusion of three helium\n nuclei(alpha particles)."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c44 skos:definition [ rdf:value "El proceso por el cual tres núcleos de helio\n (partículas alfa) se transforman en un núcleo de carbono."@es ; dct:source <http://es.wikipedia.org/wiki/Proceso_triple-alfa> ] .
 	conc:concept_c45 rdf:type skos:Concept .
 	conc:concept_c45 skos:prefLabel "c45" .
 	conc:concept_c45 skos:note "G-Source:\n http://www.dorlingkindersley-uk.co.uk/static/clipart/uk/dk/sci_space/image_sci_space013.jpg" .
 	conc:concept_c45 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c45 skos:definition [ dct:source "Oxford2007" ; rdf:value "A degenerate star that has cooled until it is no\n longer visible."@en ] .
-	conc:concept_c45 skos:definition [ dct:source <http://spaceplace.nasa.gov/sp/kids/spitzer/signs/sign_glossary.shtml> ; rdf:value "Una estrella creada cuando una enana blanca se\n enfría lo suficiente como para dejar de emitir calor o luz en cantidad\n significativa."@es ] .
+	conc:concept_c45 skos:definition [ rdf:value "A degenerate star that has cooled until it is no\n longer visible."@en ; dct:source "Oxford2007" ] .
+	conc:concept_c45 skos:definition [ rdf:value "Una estrella creada cuando una enana blanca se\n enfría lo suficiente como para dejar de emitir calor o luz en cantidad\n significativa."@es ; dct:source <http://spaceplace.nasa.gov/sp/kids/spitzer/signs/sign_glossary.shtml> ] .
 
 	# Term section
 	:lexicon_en lime:entry term:le_31zBph7s45PSGrLfsrnsOX_noun .
@@ -279,7 +279,7 @@ INSERT DATA {
 	term:le_31zBph7s45PSGrLfsrnsOX_noun ontolex:sense term:le_31zBph7s45PSGrLfsrnsOX_noun_sense .
 	term:le_31zBph7s45PSGrLfsrnsOX_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_31zBph7s45PSGrLfsrnsOX_noun_sense ontolex:reference conc:concept_c24 .
-	term:le_31zBph7s45PSGrLfsrnsOX_noun_sense ontolex:usage [ dct:source "Moore2003" ; rdf:value "The dim red dward Proxima, more than a degree\n away from Alpha, is slightly closer to us."@en ] .
+	term:le_31zBph7s45PSGrLfsrnsOX_noun_sense ontolex:usage [ rdf:value "The dim red dward Proxima, more than a degree\n away from Alpha, is slightly closer to us."@en ; dct:source "Moore2003" ] .
 	:lexicon_en lime:entry term:le_3myQQ1Yzw6FaQjJCKoMu6r_noun .
 	term:le_3myQQ1Yzw6FaQjJCKoMu6r_noun rdf:type ontolex:LexicalEntry .
 	term:le_3myQQ1Yzw6FaQjJCKoMu6r_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -292,7 +292,7 @@ INSERT DATA {
 	term:le_3myQQ1Yzw6FaQjJCKoMu6r_noun ontolex:sense term:le_3myQQ1Yzw6FaQjJCKoMu6r_noun_sense .
 	term:le_3myQQ1Yzw6FaQjJCKoMu6r_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_3myQQ1Yzw6FaQjJCKoMu6r_noun_sense ontolex:reference conc:concept_c9 .
-	term:le_3myQQ1Yzw6FaQjJCKoMu6r_noun_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "If merging is an important pathway to the\n formation of massive stars, then it is expected that some\n highluminosity IRAS sources in our Galaxy have brightened or faded\n since the IRAS observations were made."@en ] .
+	term:le_3myQQ1Yzw6FaQjJCKoMu6r_noun_sense ontolex:usage [ rdf:value "If merging is an important pathway to the\n formation of massive stars, then it is expected that some\n highluminosity IRAS sources in our Galaxy have brightened or faded\n since the IRAS observations were made."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_46dqS2mIujTCclZ9eIwkLo_noun .
 	term:le_46dqS2mIujTCclZ9eIwkLo_noun rdf:type ontolex:LexicalEntry .
 	term:le_46dqS2mIujTCclZ9eIwkLo_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -304,7 +304,7 @@ INSERT DATA {
 	term:le_46dqS2mIujTCclZ9eIwkLo_noun ontolex:sense term:le_46dqS2mIujTCclZ9eIwkLo_noun_sense .
 	term:le_46dqS2mIujTCclZ9eIwkLo_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_46dqS2mIujTCclZ9eIwkLo_noun_sense ontolex:reference conc:concept_c16 .
-	term:le_46dqS2mIujTCclZ9eIwkLo_noun_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "The extremely rare merger of two stars close to\n the upper-mass end of the initial mass function may be a possible\n pathway to hypernova-generated gamma-ray bursts."@en ] .
+	term:le_46dqS2mIujTCclZ9eIwkLo_noun_sense ontolex:usage [ rdf:value "The extremely rare merger of two stars close to\n the upper-mass end of the initial mass function may be a possible\n pathway to hypernova-generated gamma-ray bursts."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_qtfXHleXBks4osIWIgWPt_noun .
 	term:le_qtfXHleXBks4osIWIgWPt_noun rdf:type ontolex:LexicalEntry .
 	term:le_qtfXHleXBks4osIWIgWPt_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -316,7 +316,7 @@ INSERT DATA {
 	term:le_qtfXHleXBks4osIWIgWPt_noun ontolex:sense term:le_qtfXHleXBks4osIWIgWPt_noun_sense .
 	term:le_qtfXHleXBks4osIWIgWPt_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_qtfXHleXBks4osIWIgWPt_noun_sense ontolex:reference conc:concept_c25 .
-	term:le_qtfXHleXBks4osIWIgWPt_noun_sense ontolex:usage [ dct:source "Moore2003, 171" ; rdf:value "In this version of a typical HR diagram, the\n stars are plotted according to their spectral types and suface\n temperatures (horzontal axis, x) and their luminositites in therms\n of the Sun (vertical axis, y)."@en ] .
+	term:le_qtfXHleXBks4osIWIgWPt_noun_sense ontolex:usage [ rdf:value "In this version of a typical HR diagram, the\n stars are plotted according to their spectral types and suface\n temperatures (horzontal axis, x) and their luminositites in therms\n of the Sun (vertical axis, y)."@en ; dct:source "Moore2003, 171" ] .
 	:lexicon_en lime:entry term:le_4S2glmWm4ulVVrc2TeYZnE_noun .
 	term:le_4S2glmWm4ulVVrc2TeYZnE_noun rdf:type ontolex:LexicalEntry .
 	term:le_4S2glmWm4ulVVrc2TeYZnE_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -328,7 +328,7 @@ INSERT DATA {
 	term:le_4S2glmWm4ulVVrc2TeYZnE_noun ontolex:sense term:le_4S2glmWm4ulVVrc2TeYZnE_noun_sense .
 	term:le_4S2glmWm4ulVVrc2TeYZnE_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_4S2glmWm4ulVVrc2TeYZnE_noun_sense ontolex:reference conc:concept_c43 .
-	term:le_4S2glmWm4ulVVrc2TeYZnE_noun_sense ontolex:usage [ dct:source <http://outreach.atnf.csiro.au/education/senior/astrophysics/stellarevolution_deathlow.html> ; rdf:value "This page now explores the fate of stars of 8\n solar masses or less."@en ] .
+	term:le_4S2glmWm4ulVVrc2TeYZnE_noun_sense ontolex:usage [ rdf:value "This page now explores the fate of stars of 8\n solar masses or less."@en ; dct:source <http://outreach.atnf.csiro.au/education/senior/astrophysics/stellarevolution_deathlow.html> ] .
 	:lexicon_en lime:entry term:le_QvQ21KsIUoKfij9yO8bEO_noun .
 	term:le_QvQ21KsIUoKfij9yO8bEO_noun rdf:type ontolex:LexicalEntry .
 	term:le_QvQ21KsIUoKfij9yO8bEO_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -340,7 +340,7 @@ INSERT DATA {
 	term:le_QvQ21KsIUoKfij9yO8bEO_noun ontolex:sense term:le_QvQ21KsIUoKfij9yO8bEO_noun_sense .
 	term:le_QvQ21KsIUoKfij9yO8bEO_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_QvQ21KsIUoKfij9yO8bEO_noun_sense ontolex:reference conc:concept_c21 .
-	term:le_QvQ21KsIUoKfij9yO8bEO_noun_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "The supermassive object may be eventually\n disrupted by an unusually violent supernova explosion (a hypernova)\n soon after formation."@en ] .
+	term:le_QvQ21KsIUoKfij9yO8bEO_noun_sense ontolex:usage [ rdf:value "The supermassive object may be eventually\n disrupted by an unusually violent supernova explosion (a hypernova)\n soon after formation."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_6yW5fFYtFimOcINdVQyrsJ_noun .
 	term:le_6yW5fFYtFimOcINdVQyrsJ_noun rdf:type ontolex:LexicalEntry .
 	term:le_6yW5fFYtFimOcINdVQyrsJ_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -352,7 +352,7 @@ INSERT DATA {
 	term:le_6yW5fFYtFimOcINdVQyrsJ_noun ontolex:sense term:le_6yW5fFYtFimOcINdVQyrsJ_noun_sense .
 	term:le_6yW5fFYtFimOcINdVQyrsJ_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_6yW5fFYtFimOcINdVQyrsJ_noun_sense ontolex:reference conc:concept_c45 .
-	term:le_6yW5fFYtFimOcINdVQyrsJ_noun_sense ontolex:usage [ dct:source "Moore2003, 173" ; rdf:value "Banprupt though it is, a white swarf still has a\n high surface temperature when it is first formed; up to 100,000\n degrees C in some cases and it continues to radiate. Gradually it\n fades, and must end up as a cold, dead black dwarf; but at the\n moment no white dwarf with a surface temperature of below 3,000\n degrees C has been found, and it may be that the universe is not yet\n old enough for any black dwarfs to have been formed."@en ] .
+	term:le_6yW5fFYtFimOcINdVQyrsJ_noun_sense ontolex:usage [ rdf:value "Banprupt though it is, a white swarf still has a\n high surface temperature when it is first formed; up to 100,000\n degrees C in some cases and it continues to radiate. Gradually it\n fades, and must end up as a cold, dead black dwarf; but at the\n moment no white dwarf with a surface temperature of below 3,000\n degrees C has been found, and it may be that the universe is not yet\n old enough for any black dwarfs to have been formed."@en ; dct:source "Moore2003, 173" ] .
 	:lexicon_en lime:entry term:le_3cf5tTjyucQrJEYFkMDcud_noun .
 	term:le_3cf5tTjyucQrJEYFkMDcud_noun rdf:type ontolex:LexicalEntry .
 	term:le_3cf5tTjyucQrJEYFkMDcud_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -366,7 +366,7 @@ INSERT DATA {
 	term:le_3cf5tTjyucQrJEYFkMDcud_noun ontolex:sense term:le_3cf5tTjyucQrJEYFkMDcud_noun_sense .
 	term:le_3cf5tTjyucQrJEYFkMDcud_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_3cf5tTjyucQrJEYFkMDcud_noun_sense ontolex:reference conc:concept_c37 .
-	term:le_3cf5tTjyucQrJEYFkMDcud_noun_sense ontolex:usage [ dct:source <http://www.absoluteastronomy.com/topics/Proton-proton_chain_reaction> ; rdf:value "The proton–proton chain reaction is one of\n several fusion reactions by which stars convert hydrogen to helium,\n the primary alternative being the CNO cycle. The proton–proton chain\n dominates in stars the size of the Sun or smaller."@en ] .
+	term:le_3cf5tTjyucQrJEYFkMDcud_noun_sense ontolex:usage [ rdf:value "The proton–proton chain reaction is one of\n several fusion reactions by which stars convert hydrogen to helium,\n the primary alternative being the CNO cycle. The proton–proton chain\n dominates in stars the size of the Sun or smaller."@en ; dct:source <http://www.absoluteastronomy.com/topics/Proton-proton_chain_reaction> ] .
 	:lexicon_en lime:entry term:le_1MX9HQRG3O98tPrHChfGhm_noun .
 	term:le_1MX9HQRG3O98tPrHChfGhm_noun rdf:type ontolex:LexicalEntry .
 	term:le_1MX9HQRG3O98tPrHChfGhm_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -378,7 +378,7 @@ INSERT DATA {
 	term:le_1MX9HQRG3O98tPrHChfGhm_noun ontolex:sense term:le_1MX9HQRG3O98tPrHChfGhm_noun_sense .
 	term:le_1MX9HQRG3O98tPrHChfGhm_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_1MX9HQRG3O98tPrHChfGhm_noun_sense ontolex:reference conc:concept_c14 .
-	term:le_1MX9HQRG3O98tPrHChfGhm_noun_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "Stars form from the gravitational collapse of\n turbulent molecular cloud cores (Elmegreen & Scalo 2004; Mac Low\n & Klessen 2004)."@en ] .
+	term:le_1MX9HQRG3O98tPrHChfGhm_noun_sense ontolex:usage [ rdf:value "Stars form from the gravitational collapse of\n turbulent molecular cloud cores (Elmegreen & Scalo 2004; Mac Low\n & Klessen 2004)."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_3iGqnMz8GXqxARyojj4cfK_noun .
 	term:le_3iGqnMz8GXqxARyojj4cfK_noun rdf:type ontolex:LexicalEntry .
 	term:le_3iGqnMz8GXqxARyojj4cfK_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -390,7 +390,7 @@ INSERT DATA {
 	term:le_3iGqnMz8GXqxARyojj4cfK_noun ontolex:sense term:le_3iGqnMz8GXqxARyojj4cfK_noun_sense .
 	term:le_3iGqnMz8GXqxARyojj4cfK_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_3iGqnMz8GXqxARyojj4cfK_noun_sense ontolex:reference conc:concept_c3 .
-	term:le_3iGqnMz8GXqxARyojj4cfK_noun_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "As matter spirals toward and into the black\n hole, some of its gravitational potential energy may be efficiently\n converted into relativistic jets launched by the magnetic field\n along the spin axis."@en ] .
+	term:le_3iGqnMz8GXqxARyojj4cfK_noun_sense ontolex:usage [ rdf:value "As matter spirals toward and into the black\n hole, some of its gravitational potential energy may be efficiently\n converted into relativistic jets launched by the magnetic field\n along the spin axis."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_5K24nBUdrXE2SKyoo2RvFI_noun .
 	term:le_5K24nBUdrXE2SKyoo2RvFI_noun rdf:type ontolex:LexicalEntry .
 	term:le_5K24nBUdrXE2SKyoo2RvFI_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -402,7 +402,7 @@ INSERT DATA {
 	term:le_5K24nBUdrXE2SKyoo2RvFI_noun ontolex:sense term:le_5K24nBUdrXE2SKyoo2RvFI_noun_sense .
 	term:le_5K24nBUdrXE2SKyoo2RvFI_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_5K24nBUdrXE2SKyoo2RvFI_noun_sense ontolex:reference conc:concept_c34 .
-	term:le_5K24nBUdrXE2SKyoo2RvFI_noun_sense ontolex:usage [ dct:source <http://hyperphysics.phy-astr.gsu.edu/HBASE/Astro/pulsar.html> ; rdf:value "When it reaches the threshold of energy\n necessary to force the combining of electrons and protons to form\n neutrons, the electron degeneracy limit has been passed and the\n collapse continues until it is stopped by neutron\n degeneracy."@en ] .
+	term:le_5K24nBUdrXE2SKyoo2RvFI_noun_sense ontolex:usage [ rdf:value "When it reaches the threshold of energy\n necessary to force the combining of electrons and protons to form\n neutrons, the electron degeneracy limit has been passed and the\n collapse continues until it is stopped by neutron\n degeneracy."@en ; dct:source <http://hyperphysics.phy-astr.gsu.edu/HBASE/Astro/pulsar.html> ] .
 	:lexicon_en lime:entry term:le_6IjvRnCiIvdKZQMUJn244_noun .
 	term:le_6IjvRnCiIvdKZQMUJn244_noun rdf:type ontolex:LexicalEntry .
 	term:le_6IjvRnCiIvdKZQMUJn244_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -415,7 +415,7 @@ INSERT DATA {
 	term:le_6IjvRnCiIvdKZQMUJn244_noun ontolex:sense term:le_6IjvRnCiIvdKZQMUJn244_noun_sense .
 	term:le_6IjvRnCiIvdKZQMUJn244_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_6IjvRnCiIvdKZQMUJn244_noun_sense ontolex:reference conc:concept_c4 .
-	term:le_6IjvRnCiIvdKZQMUJn244_noun_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "The extremely rare merger of two stars close to\n the upper-mass end of the initial mass function may be a possible\n pathway to hypernova-generated gamma-ray bursts."@en ] .
+	term:le_6IjvRnCiIvdKZQMUJn244_noun_sense ontolex:usage [ rdf:value "The extremely rare merger of two stars close to\n the upper-mass end of the initial mass function may be a possible\n pathway to hypernova-generated gamma-ray bursts."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_1Jt4oTD2KOcSTx5pWeR4RZ_noun .
 	term:le_1Jt4oTD2KOcSTx5pWeR4RZ_noun rdf:type ontolex:LexicalEntry .
 	term:le_1Jt4oTD2KOcSTx5pWeR4RZ_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -429,7 +429,7 @@ INSERT DATA {
 	term:le_1Jt4oTD2KOcSTx5pWeR4RZ_noun ontolex:sense term:le_1Jt4oTD2KOcSTx5pWeR4RZ_noun_sense .
 	term:le_1Jt4oTD2KOcSTx5pWeR4RZ_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_1Jt4oTD2KOcSTx5pWeR4RZ_noun_sense ontolex:reference conc:concept_c38 .
-	term:le_1Jt4oTD2KOcSTx5pWeR4RZ_noun_sense ontolex:usage [ dct:source <http://iopscience.iop.org/0004-637X/687/1/678> ; rdf:value "We argue that it may be possible to exploit\n neutrinos from the CN cycle and p-p chain to determine the\n primordial solar core abundances of C and N at an interesting level\n of precision."@en ] .
+	term:le_1Jt4oTD2KOcSTx5pWeR4RZ_noun_sense ontolex:usage [ rdf:value "We argue that it may be possible to exploit\n neutrinos from the CN cycle and p-p chain to determine the\n primordial solar core abundances of C and N at an interesting level\n of precision."@en ; dct:source <http://iopscience.iop.org/0004-637X/687/1/678> ] .
 	:lexicon_en lime:entry term:le_3rZhA8m77XzWYWjReMaTnM_noun .
 	term:le_3rZhA8m77XzWYWjReMaTnM_noun rdf:type ontolex:LexicalEntry .
 	term:le_3rZhA8m77XzWYWjReMaTnM_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -455,7 +455,7 @@ INSERT DATA {
 	term:le_5S685WixqqLSskdQ0DNXbq_noun ontolex:sense term:le_5S685WixqqLSskdQ0DNXbq_noun_sense .
 	term:le_5S685WixqqLSskdQ0DNXbq_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_5S685WixqqLSskdQ0DNXbq_noun_sense ontolex:reference conc:concept_c37 .
-	term:le_5S685WixqqLSskdQ0DNXbq_noun_sense ontolex:usage [ dct:source <http://csep10.phys.utk.edu/astr162/lect/energy/ppchain.html> ; rdf:value "The primary reactions in the main branch of the\n PP chain are illustrated in the following figure."@en ] .
+	term:le_5S685WixqqLSskdQ0DNXbq_noun_sense ontolex:usage [ rdf:value "The primary reactions in the main branch of the\n PP chain are illustrated in the following figure."@en ; dct:source <http://csep10.phys.utk.edu/astr162/lect/energy/ppchain.html> ] .
 	:lexicon_en lime:entry term:le_2U7A3vf0WIko2H0PII55BL_noun .
 	term:le_2U7A3vf0WIko2H0PII55BL_noun rdf:type ontolex:LexicalEntry .
 	term:le_2U7A3vf0WIko2H0PII55BL_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -469,7 +469,7 @@ INSERT DATA {
 	term:le_2U7A3vf0WIko2H0PII55BL_noun ontolex:sense term:le_2U7A3vf0WIko2H0PII55BL_noun_sense .
 	term:le_2U7A3vf0WIko2H0PII55BL_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_2U7A3vf0WIko2H0PII55BL_noun_sense ontolex:reference conc:concept_c38 .
-	term:le_2U7A3vf0WIko2H0PII55BL_noun_sense ontolex:usage [ dct:source <http://nobelprize.org/nobel_prizes/physics/articles/fusion/sun_cno.html> ; rdf:value "For stars heavier than the sun, theoretical\n models show that the CNO (carbon-nitrogen-oxygen) cycle of nuclear\n fusion is the dominant source of energy generation."@en ] .
+	term:le_2U7A3vf0WIko2H0PII55BL_noun_sense ontolex:usage [ rdf:value "For stars heavier than the sun, theoretical\n models show that the CNO (carbon-nitrogen-oxygen) cycle of nuclear\n fusion is the dominant source of energy generation."@en ; dct:source <http://nobelprize.org/nobel_prizes/physics/articles/fusion/sun_cno.html> ] .
 	:lexicon_en lime:entry term:le_x2jPAXzNogLNJnehfzkvG_noun .
 	term:le_x2jPAXzNogLNJnehfzkvG_noun rdf:type ontolex:LexicalEntry .
 	term:le_x2jPAXzNogLNJnehfzkvG_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -481,7 +481,7 @@ INSERT DATA {
 	term:le_x2jPAXzNogLNJnehfzkvG_noun ontolex:sense term:le_x2jPAXzNogLNJnehfzkvG_noun_sense .
 	term:le_x2jPAXzNogLNJnehfzkvG_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_x2jPAXzNogLNJnehfzkvG_noun_sense ontolex:reference conc:concept_c31 .
-	term:le_x2jPAXzNogLNJnehfzkvG_noun_sense ontolex:usage [ dct:source <http://www.nasa.gov/multimedia/imagegallery/image_feature_701.html> ; rdf:value "Just weeks after NASA astronauts repaired the\n Hubble Space Telescope in December 1999, the Hubble Heritage Project\n snapped this picture of NGC 1999, a reflection nebula in the\n constellation Orion."@en ] .
+	term:le_x2jPAXzNogLNJnehfzkvG_noun_sense ontolex:usage [ rdf:value "Just weeks after NASA astronauts repaired the\n Hubble Space Telescope in December 1999, the Hubble Heritage Project\n snapped this picture of NGC 1999, a reflection nebula in the\n constellation Orion."@en ; dct:source <http://www.nasa.gov/multimedia/imagegallery/image_feature_701.html> ] .
 	:lexicon_en lime:entry term:le_2DynConj8MjHyYiauH81R0_noun .
 	term:le_2DynConj8MjHyYiauH81R0_noun rdf:type ontolex:LexicalEntry .
 	term:le_2DynConj8MjHyYiauH81R0_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -494,7 +494,7 @@ INSERT DATA {
 	term:le_2DynConj8MjHyYiauH81R0_noun ontolex:sense term:le_2DynConj8MjHyYiauH81R0_noun_sense .
 	term:le_2DynConj8MjHyYiauH81R0_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_2DynConj8MjHyYiauH81R0_noun_sense ontolex:reference conc:concept_c11 .
-	term:le_2DynConj8MjHyYiauH81R0_noun_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "UV radiation from stars and shocks likely\n provide the minimum level of ionization required to couple these\n fields strongly to the entangled medium."@en ] .
+	term:le_2DynConj8MjHyYiauH81R0_noun_sense ontolex:usage [ rdf:value "UV radiation from stars and shocks likely\n provide the minimum level of ionization required to couple these\n fields strongly to the entangled medium."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_63ETzY6HtRdvGfwL5kJMPU_noun .
 	term:le_63ETzY6HtRdvGfwL5kJMPU_noun rdf:type ontolex:LexicalEntry .
 	term:le_63ETzY6HtRdvGfwL5kJMPU_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -507,7 +507,7 @@ INSERT DATA {
 	term:le_63ETzY6HtRdvGfwL5kJMPU_noun ontolex:sense term:le_63ETzY6HtRdvGfwL5kJMPU_noun_sense .
 	term:le_63ETzY6HtRdvGfwL5kJMPU_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_63ETzY6HtRdvGfwL5kJMPU_noun_sense ontolex:reference conc:concept_c1 .
-	term:le_63ETzY6HtRdvGfwL5kJMPU_noun_sense ontolex:usage [ dct:source <http://seds.org/MESSIER/open.html> ; rdf:value "Over 1100 open clusters are known in our Milky\n Way Galaxy, and this is probably only a small percentage of the\n total population which is probably some factor higher; estimates of\n as many as about 100,000 Milky Way open clusters have been given."@en ] .
+	term:le_63ETzY6HtRdvGfwL5kJMPU_noun_sense ontolex:usage [ rdf:value "Over 1100 open clusters are known in our Milky\n Way Galaxy, and this is probably only a small percentage of the\n total population which is probably some factor higher; estimates of\n as many as about 100,000 Milky Way open clusters have been given."@en ; dct:source <http://seds.org/MESSIER/open.html> ] .
 	:lexicon_en lime:entry term:le_7D8oJJ3JD9qG4g72fhpuXx_noun .
 	term:le_7D8oJJ3JD9qG4g72fhpuXx_noun rdf:type ontolex:LexicalEntry .
 	term:le_7D8oJJ3JD9qG4g72fhpuXx_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -520,7 +520,7 @@ INSERT DATA {
 	term:le_7D8oJJ3JD9qG4g72fhpuXx_noun ontolex:sense term:le_7D8oJJ3JD9qG4g72fhpuXx_noun_sense .
 	term:le_7D8oJJ3JD9qG4g72fhpuXx_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_7D8oJJ3JD9qG4g72fhpuXx_noun_sense ontolex:reference conc:concept_c4 .
-	term:le_7D8oJJ3JD9qG4g72fhpuXx_noun_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "The off-axis collisions and merging of stars\n near the top of the stellar mass spectrum may result in the\n production of GRBs."@en ] .
+	term:le_7D8oJJ3JD9qG4g72fhpuXx_noun_sense ontolex:usage [ rdf:value "The off-axis collisions and merging of stars\n near the top of the stellar mass spectrum may result in the\n production of GRBs."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_6P8arEd8lWEmWowSDmkczE_adjective .
 	term:le_6P8arEd8lWEmWowSDmkczE_adjective rdf:type ontolex:LexicalEntry .
 	term:le_6P8arEd8lWEmWowSDmkczE_adjective lexinfo:partOfSpeech lexinfo:adjective .
@@ -532,7 +532,7 @@ INSERT DATA {
 	term:le_6P8arEd8lWEmWowSDmkczE_adjective ontolex:sense term:le_6P8arEd8lWEmWowSDmkczE_adjective_sense .
 	term:le_6P8arEd8lWEmWowSDmkczE_adjective_sense rdf:type ontolex:LexicalSense .
 	term:le_6P8arEd8lWEmWowSDmkczE_adjective_sense ontolex:reference conc:concept_c6 .
-	term:le_6P8arEd8lWEmWowSDmkczE_adjective_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "However, immediately after its formation, the\n merger product is likely to have a photospheric radius considerably\n larger than that of a main-sequence star with the same\n mass."@en ] .
+	term:le_6P8arEd8lWEmWowSDmkczE_adjective_sense ontolex:usage [ rdf:value "However, immediately after its formation, the\n merger product is likely to have a photospheric radius considerably\n larger than that of a main-sequence star with the same\n mass."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_8I5DzskMBx8lj4KSxHjzS_noun .
 	term:le_8I5DzskMBx8lj4KSxHjzS_noun rdf:type ontolex:LexicalEntry .
 	term:le_8I5DzskMBx8lj4KSxHjzS_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -545,7 +545,7 @@ INSERT DATA {
 	term:le_8I5DzskMBx8lj4KSxHjzS_noun ontolex:sense term:le_8I5DzskMBx8lj4KSxHjzS_noun_sense .
 	term:le_8I5DzskMBx8lj4KSxHjzS_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_8I5DzskMBx8lj4KSxHjzS_noun_sense ontolex:reference conc:concept_c38 .
-	term:le_8I5DzskMBx8lj4KSxHjzS_noun_sense ontolex:usage [ dct:source <http://www.nytimes.com/2007/05/02/world/europe/02weizsacker.html> ; rdf:value "Dr. von Weizsäcker is best known in science for\n what is sometimes called the Bethe-Weizsäcker cycle, proposed by him\n and the physicist Hans Bethe in the late 1930s as the nuclear\n reactive process by which energy is generated in stars."@en ] .
+	term:le_8I5DzskMBx8lj4KSxHjzS_noun_sense ontolex:usage [ rdf:value "Dr. von Weizsäcker is best known in science for\n what is sometimes called the Bethe-Weizsäcker cycle, proposed by him\n and the physicist Hans Bethe in the late 1930s as the nuclear\n reactive process by which energy is generated in stars."@en ; dct:source <http://www.nytimes.com/2007/05/02/world/europe/02weizsacker.html> ] .
 	:lexicon_en lime:entry term:le_51ffAI0i3XgZvpoomACqkb_noun .
 	term:le_51ffAI0i3XgZvpoomACqkb_noun rdf:type ontolex:LexicalEntry .
 	term:le_51ffAI0i3XgZvpoomACqkb_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -558,7 +558,7 @@ INSERT DATA {
 	term:le_51ffAI0i3XgZvpoomACqkb_noun ontolex:sense term:le_51ffAI0i3XgZvpoomACqkb_noun_sense .
 	term:le_51ffAI0i3XgZvpoomACqkb_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_51ffAI0i3XgZvpoomACqkb_noun_sense ontolex:reference conc:concept_c2 .
-	term:le_51ffAI0i3XgZvpoomACqkb_noun_sense ontolex:usage [ dct:source <http://cdsweb.cern.ch/record/369655> ; rdf:value "Accretion Disc Evolution in Single and Binary T\n Tauri Stars"@en ] .
+	term:le_51ffAI0i3XgZvpoomACqkb_noun_sense ontolex:usage [ rdf:value "Accretion Disc Evolution in Single and Binary T\n Tauri Stars"@en ; dct:source <http://cdsweb.cern.ch/record/369655> ] .
 	:lexicon_en lime:entry term:le_4hZoDvOkJqeN16IozUzSKL_noun .
 	term:le_4hZoDvOkJqeN16IozUzSKL_noun rdf:type ontolex:LexicalEntry .
 	term:le_4hZoDvOkJqeN16IozUzSKL_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -571,7 +571,7 @@ INSERT DATA {
 	term:le_4hZoDvOkJqeN16IozUzSKL_noun ontolex:sense term:le_4hZoDvOkJqeN16IozUzSKL_noun_sense .
 	term:le_4hZoDvOkJqeN16IozUzSKL_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_4hZoDvOkJqeN16IozUzSKL_noun_sense ontolex:reference conc:concept_c35 .
-	term:le_4hZoDvOkJqeN16IozUzSKL_noun_sense ontolex:usage [ dct:source "Moore2003" ; rdf:value "The critical radius of a non-rotating black hole\n is called the Schwarzschild radius, after the German astronomer who\n investermSecated the problem mathematically as long ago as 1916: the\n boundary around the collapsed star having this radius is termed the\n 'event horizon'."@en ] .
+	term:le_4hZoDvOkJqeN16IozUzSKL_noun_sense ontolex:usage [ rdf:value "The critical radius of a non-rotating black hole\n is called the Schwarzschild radius, after the German astronomer who\n investermSecated the problem mathematically as long ago as 1916: the\n boundary around the collapsed star having this radius is termed the\n 'event horizon'."@en ; dct:source "Moore2003" ] .
 	:lexicon_en lime:entry term:le_5itIAwfDtSGyKDLBqIyVf0_noun .
 	term:le_5itIAwfDtSGyKDLBqIyVf0_noun rdf:type ontolex:LexicalEntry .
 	term:le_5itIAwfDtSGyKDLBqIyVf0_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -583,7 +583,7 @@ INSERT DATA {
 	term:le_5itIAwfDtSGyKDLBqIyVf0_noun ontolex:sense term:le_5itIAwfDtSGyKDLBqIyVf0_noun_sense .
 	term:le_5itIAwfDtSGyKDLBqIyVf0_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_5itIAwfDtSGyKDLBqIyVf0_noun_sense ontolex:reference conc:concept_c32 .
-	term:le_5itIAwfDtSGyKDLBqIyVf0_noun_sense ontolex:usage [ dct:source "Moore2003, 173" ; rdf:value "After its Main Sequence period the star becomes\n a red supergiant and may explode as a supernova. It may end as a\n neutron star or pulsar, although if its mass is even greater it may\n poroduce a black hole."@en ] .
+	term:le_5itIAwfDtSGyKDLBqIyVf0_noun_sense ontolex:usage [ rdf:value "After its Main Sequence period the star becomes\n a red supergiant and may explode as a supernova. It may end as a\n neutron star or pulsar, although if its mass is even greater it may\n poroduce a black hole."@en ; dct:source "Moore2003, 173" ] .
 	:lexicon_en lime:entry term:le_SbT1jcxbhBif8PuKD0VNn_noun .
 	term:le_SbT1jcxbhBif8PuKD0VNn_noun rdf:type ontolex:LexicalEntry .
 	term:le_SbT1jcxbhBif8PuKD0VNn_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -595,7 +595,7 @@ INSERT DATA {
 	term:le_SbT1jcxbhBif8PuKD0VNn_noun ontolex:sense term:le_SbT1jcxbhBif8PuKD0VNn_noun_sense .
 	term:le_SbT1jcxbhBif8PuKD0VNn_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_SbT1jcxbhBif8PuKD0VNn_noun_sense ontolex:reference conc:concept_c33 .
-	term:le_SbT1jcxbhBif8PuKD0VNn_noun_sense ontolex:usage [ dct:source "Moore2003" ; rdf:value "However, there is a limit, once the mass of the\n white dwarf becomes greater than 1.4 time that of the sun )a value\n known as the Chandrasekhar limit, after the Indian astronomer who\n first worked it out=, the carbon detonates, and in a matter of a few\n seconds the white dwarf blows itself to pieces."@en ] .
+	term:le_SbT1jcxbhBif8PuKD0VNn_noun_sense ontolex:usage [ rdf:value "However, there is a limit, once the mass of the\n white dwarf becomes greater than 1.4 time that of the sun )a value\n known as the Chandrasekhar limit, after the Indian astronomer who\n first worked it out=, the carbon detonates, and in a matter of a few\n seconds the white dwarf blows itself to pieces."@en ; dct:source "Moore2003" ] .
 	:lexicon_en lime:entry term:le_6wLB99sEILUkJFKD7DGt23_noun .
 	term:le_6wLB99sEILUkJFKD7DGt23_noun rdf:type ontolex:LexicalEntry .
 	term:le_6wLB99sEILUkJFKD7DGt23_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -609,7 +609,7 @@ INSERT DATA {
 	term:le_6wLB99sEILUkJFKD7DGt23_noun ontolex:sense term:le_6wLB99sEILUkJFKD7DGt23_noun_sense .
 	term:le_6wLB99sEILUkJFKD7DGt23_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_6wLB99sEILUkJFKD7DGt23_noun_sense ontolex:reference conc:concept_c37 .
-	term:le_6wLB99sEILUkJFKD7DGt23_noun_sense ontolex:usage [ dct:source <http://www.daviddarling.info/encyclopedia/P/proton-proton_chain.html> ; rdf:value "The gamma rays produced in the proton-proton\n reaction take one to 10 million years to work their way out from the\n star's core, being scattered numerous times and losing energy as\n they go, until they emerge from the surface as rays of light and\n heat. Inside the Sun, about 655 million tons of hydrogen are\n converted into 650 million tons of helium every second. In stars\n heavier than about 2 solar masses, in which the core temperature is\n more than about 18 million K, the dominant process in which energy\n is produced by the fusion of hydrogen into helium is a different\n reaction chain known as the carbon-nitrogen cycle."@en ] .
+	term:le_6wLB99sEILUkJFKD7DGt23_noun_sense ontolex:usage [ rdf:value "The gamma rays produced in the proton-proton\n reaction take one to 10 million years to work their way out from the\n star's core, being scattered numerous times and losing energy as\n they go, until they emerge from the surface as rays of light and\n heat. Inside the Sun, about 655 million tons of hydrogen are\n converted into 650 million tons of helium every second. In stars\n heavier than about 2 solar masses, in which the core temperature is\n more than about 18 million K, the dominant process in which energy\n is produced by the fusion of hydrogen into helium is a different\n reaction chain known as the carbon-nitrogen cycle."@en ; dct:source <http://www.daviddarling.info/encyclopedia/P/proton-proton_chain.html> ] .
 	:lexicon_en lime:entry term:le_2x2T2FXMiqoPjtv42XfpkV_noun .
 	term:le_2x2T2FXMiqoPjtv42XfpkV_noun rdf:type ontolex:LexicalEntry .
 	term:le_2x2T2FXMiqoPjtv42XfpkV_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -621,7 +621,7 @@ INSERT DATA {
 	term:le_2x2T2FXMiqoPjtv42XfpkV_noun ontolex:sense term:le_2x2T2FXMiqoPjtv42XfpkV_noun_sense .
 	term:le_2x2T2FXMiqoPjtv42XfpkV_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_2x2T2FXMiqoPjtv42XfpkV_noun_sense ontolex:reference conc:concept_c23 .
-	term:le_2x2T2FXMiqoPjtv42XfpkV_noun_sense ontolex:usage [ dct:source "Moore2003" ; rdf:value "The core temperature becomes so high that helium\n start to 'burn', producing carbon; around this active core there is\n a shell where hydrogen is still producing energy. The star becomes\n unstable, and the outer layers swell out, cooling as they do so. The\n star becomes a red giant."@en ] .
+	term:le_2x2T2FXMiqoPjtv42XfpkV_noun_sense ontolex:usage [ rdf:value "The core temperature becomes so high that helium\n start to 'burn', producing carbon; around this active core there is\n a shell where hydrogen is still producing energy. The star becomes\n unstable, and the outer layers swell out, cooling as they do so. The\n star becomes a red giant."@en ; dct:source "Moore2003" ] .
 	:lexicon_en lime:entry term:le_7bjbbaj5s0mYvlXcQGauSX_noun .
 	term:le_7bjbbaj5s0mYvlXcQGauSX_noun rdf:type ontolex:LexicalEntry .
 	term:le_7bjbbaj5s0mYvlXcQGauSX_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -633,7 +633,7 @@ INSERT DATA {
 	term:le_7bjbbaj5s0mYvlXcQGauSX_noun ontolex:sense term:le_7bjbbaj5s0mYvlXcQGauSX_noun_sense .
 	term:le_7bjbbaj5s0mYvlXcQGauSX_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_7bjbbaj5s0mYvlXcQGauSX_noun_sense ontolex:reference conc:concept_c12 .
-	term:le_7bjbbaj5s0mYvlXcQGauSX_noun_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "Detailed consideration of the merger process\n will require numerical modeling in which the hydrodynamics, effects\n of gravity,magnetic fields, and radiation are considered\n carefully."@en ] .
+	term:le_7bjbbaj5s0mYvlXcQGauSX_noun_sense ontolex:usage [ rdf:value "Detailed consideration of the merger process\n will require numerical modeling in which the hydrodynamics, effects\n of gravity,magnetic fields, and radiation are considered\n carefully."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_7CguCAIbdgKDCyQ7A4gxZW_noun .
 	term:le_7CguCAIbdgKDCyQ7A4gxZW_noun rdf:type ontolex:LexicalEntry .
 	term:le_7CguCAIbdgKDCyQ7A4gxZW_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -645,7 +645,7 @@ INSERT DATA {
 	term:le_7CguCAIbdgKDCyQ7A4gxZW_noun ontolex:sense term:le_7CguCAIbdgKDCyQ7A4gxZW_noun_sense .
 	term:le_7CguCAIbdgKDCyQ7A4gxZW_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_7CguCAIbdgKDCyQ7A4gxZW_noun_sense ontolex:reference conc:concept_c26 .
-	term:le_7CguCAIbdgKDCyQ7A4gxZW_noun_sense ontolex:usage [ dct:source "Moore2003, 170" ; rdf:value "To the upper right lie giants and supergiants of\n tremendous luminosity, while to the lower left there are the white\n dwarfs, which are in a differnt category and were not known when HR\n Diagrams were introduced."@en ] .
+	term:le_7CguCAIbdgKDCyQ7A4gxZW_noun_sense ontolex:usage [ rdf:value "To the upper right lie giants and supergiants of\n tremendous luminosity, while to the lower left there are the white\n dwarfs, which are in a differnt category and were not known when HR\n Diagrams were introduced."@en ; dct:source "Moore2003, 170" ] .
 	:lexicon_en lime:entry term:le_61V0BTObz8cHJRP6WBW7il_noun .
 	term:le_61V0BTObz8cHJRP6WBW7il_noun rdf:type ontolex:LexicalEntry .
 	term:le_61V0BTObz8cHJRP6WBW7il_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -659,7 +659,7 @@ INSERT DATA {
 	term:le_61V0BTObz8cHJRP6WBW7il_noun ontolex:sense term:le_61V0BTObz8cHJRP6WBW7il_noun_sense .
 	term:le_61V0BTObz8cHJRP6WBW7il_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_61V0BTObz8cHJRP6WBW7il_noun_sense ontolex:reference conc:concept_c38 .
-	term:le_61V0BTObz8cHJRP6WBW7il_noun_sense ontolex:usage [ dct:source <http://www.sciencenews.org/view/generic/id/44769/title/Supernova_may_be_in_a_new_class> ; rdf:value "The Helium burning process are important 1)\n Carbon-Nitrogen cycle at which a carbon-12 nucleus (12C) capture\n proton and is converted into 13C, Nitrogen-4 and nitrogen –15."@en ] .
+	term:le_61V0BTObz8cHJRP6WBW7il_noun_sense ontolex:usage [ rdf:value "The Helium burning process are important 1)\n Carbon-Nitrogen cycle at which a carbon-12 nucleus (12C) capture\n proton and is converted into 13C, Nitrogen-4 and nitrogen –15."@en ; dct:source <http://www.sciencenews.org/view/generic/id/44769/title/Supernova_may_be_in_a_new_class> ] .
 	:lexicon_en lime:entry term:le_4wlELR6Whwkj5xidlnamG9_noun .
 	term:le_4wlELR6Whwkj5xidlnamG9_noun rdf:type ontolex:LexicalEntry .
 	term:le_4wlELR6Whwkj5xidlnamG9_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -672,7 +672,7 @@ INSERT DATA {
 	term:le_4wlELR6Whwkj5xidlnamG9_noun ontolex:sense term:le_4wlELR6Whwkj5xidlnamG9_noun_sense .
 	term:le_4wlELR6Whwkj5xidlnamG9_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_4wlELR6Whwkj5xidlnamG9_noun_sense ontolex:reference conc:concept_c29 .
-	term:le_4wlELR6Whwkj5xidlnamG9_noun_sense ontolex:usage [ dct:source "Moore2003, 172" ; rdf:value "According to current theory, a star begins by\n condensing out of the tenuous material making up a nebula."@en ] .
+	term:le_4wlELR6Whwkj5xidlnamG9_noun_sense ontolex:usage [ rdf:value "According to current theory, a star begins by\n condensing out of the tenuous material making up a nebula."@en ; dct:source "Moore2003, 172" ] .
 	:lexicon_en lime:entry term:le_73J7izryNsyesAUeXEbpCM_noun .
 	term:le_73J7izryNsyesAUeXEbpCM_noun rdf:type ontolex:LexicalEntry .
 	term:le_73J7izryNsyesAUeXEbpCM_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -684,7 +684,7 @@ INSERT DATA {
 	term:le_73J7izryNsyesAUeXEbpCM_noun ontolex:sense term:le_73J7izryNsyesAUeXEbpCM_noun_sense .
 	term:le_73J7izryNsyesAUeXEbpCM_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_73J7izryNsyesAUeXEbpCM_noun_sense ontolex:reference conc:concept_c41 .
-	term:le_73J7izryNsyesAUeXEbpCM_noun_sense ontolex:usage [ dct:source <http://hyperphysics.phy-astr.gsu.edu/HBASE/Astro/pulsar.html> ; rdf:value "When it reaches the threshold of energy\n necessary to force the combining of electrons and protons to form\n neutrons, the electron degeneracy limit has been passed and the\n collapse continues until it is stopped by neutron\n degeneracy."@en ] .
+	term:le_73J7izryNsyesAUeXEbpCM_noun_sense ontolex:usage [ rdf:value "When it reaches the threshold of energy\n necessary to force the combining of electrons and protons to form\n neutrons, the electron degeneracy limit has been passed and the\n collapse continues until it is stopped by neutron\n degeneracy."@en ; dct:source <http://hyperphysics.phy-astr.gsu.edu/HBASE/Astro/pulsar.html> ] .
 	:lexicon_en lime:entry term:le_1RTOqbLEFQWLNRl7kT8rC6_noun .
 	term:le_1RTOqbLEFQWLNRl7kT8rC6_noun rdf:type ontolex:LexicalEntry .
 	term:le_1RTOqbLEFQWLNRl7kT8rC6_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -696,7 +696,7 @@ INSERT DATA {
 	term:le_1RTOqbLEFQWLNRl7kT8rC6_noun ontolex:sense term:le_1RTOqbLEFQWLNRl7kT8rC6_noun_sense .
 	term:le_1RTOqbLEFQWLNRl7kT8rC6_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_1RTOqbLEFQWLNRl7kT8rC6_noun_sense ontolex:reference conc:concept_c15 .
-	term:le_1RTOqbLEFQWLNRl7kT8rC6_noun_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "These authors considered collision partners\n having similar masses and concluded that such interactions can at\n most account for a small fraction of the observed binary star\n population in young clusters."@en ] .
+	term:le_1RTOqbLEFQWLNRl7kT8rC6_noun_sense ontolex:usage [ rdf:value "These authors considered collision partners\n having similar masses and concluded that such interactions can at\n most account for a small fraction of the observed binary star\n population in young clusters."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_oMsHVfGdWOqApFoDBB51A_noun .
 	term:le_oMsHVfGdWOqApFoDBB51A_noun rdf:type ontolex:LexicalEntry .
 	term:le_oMsHVfGdWOqApFoDBB51A_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -709,7 +709,7 @@ INSERT DATA {
 	term:le_oMsHVfGdWOqApFoDBB51A_noun ontolex:sense term:le_oMsHVfGdWOqApFoDBB51A_noun_sense .
 	term:le_oMsHVfGdWOqApFoDBB51A_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_oMsHVfGdWOqApFoDBB51A_noun_sense ontolex:reference conc:concept_c30 .
-	term:le_oMsHVfGdWOqApFoDBB51A_noun_sense ontolex:usage [ dct:source <http://www.glyphweb.com/esky/concepts/absorptionnebula.html> ; rdf:value "An absorption nebula is a dense cloud of dust\n and gas. From the point of view of an observer on Earth, it absorbs\n the light from more distant stars, creating a dark, starless\n region."@en ] .
+	term:le_oMsHVfGdWOqApFoDBB51A_noun_sense ontolex:usage [ rdf:value "An absorption nebula is a dense cloud of dust\n and gas. From the point of view of an observer on Earth, it absorbs\n the light from more distant stars, creating a dark, starless\n region."@en ; dct:source <http://www.glyphweb.com/esky/concepts/absorptionnebula.html> ] .
 	:lexicon_en lime:entry term:le_BXh4s84yNZdf77KZ6ZpdI_noun .
 	term:le_BXh4s84yNZdf77KZ6ZpdI_noun rdf:type ontolex:LexicalEntry .
 	term:le_BXh4s84yNZdf77KZ6ZpdI_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -722,7 +722,7 @@ INSERT DATA {
 	term:le_BXh4s84yNZdf77KZ6ZpdI_noun ontolex:sense term:le_BXh4s84yNZdf77KZ6ZpdI_noun_sense .
 	term:le_BXh4s84yNZdf77KZ6ZpdI_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_BXh4s84yNZdf77KZ6ZpdI_noun_sense ontolex:reference conc:concept_c30 .
-	term:le_BXh4s84yNZdf77KZ6ZpdI_noun_sense ontolex:usage [ dct:source "Moore2003, 187" ; rdf:value "There is no difference between a dark nebula and\n a bright one, except for the lack of illumination."@en ] .
+	term:le_BXh4s84yNZdf77KZ6ZpdI_noun_sense ontolex:usage [ rdf:value "There is no difference between a dark nebula and\n a bright one, except for the lack of illumination."@en ; dct:source "Moore2003, 187" ] .
 	:lexicon_en lime:entry term:le_5tdBZf7nEHRMgKoKjRimLX_noun .
 	term:le_5tdBZf7nEHRMgKoKjRimLX_noun rdf:type ontolex:LexicalEntry .
 	term:le_5tdBZf7nEHRMgKoKjRimLX_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -734,7 +734,7 @@ INSERT DATA {
 	term:le_5tdBZf7nEHRMgKoKjRimLX_noun ontolex:sense term:le_5tdBZf7nEHRMgKoKjRimLX_noun_sense .
 	term:le_5tdBZf7nEHRMgKoKjRimLX_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_5tdBZf7nEHRMgKoKjRimLX_noun_sense ontolex:reference conc:concept_c13 .
-	term:le_5tdBZf7nEHRMgKoKjRimLX_noun_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "Numerical models of stellar collisions leading\n to the formation of blue stragglers in globular clusters (Lombardi\n et al. 2002, 2003; Fregeau et al. 2004) indicate that merger\n products have radii up to 30 times larger than that of an equivalent\n main-sequence star."@en ] .
+	term:le_5tdBZf7nEHRMgKoKjRimLX_noun_sense ontolex:usage [ rdf:value "Numerical models of stellar collisions leading\n to the formation of blue stragglers in globular clusters (Lombardi\n et al. 2002, 2003; Fregeau et al. 2004) indicate that merger\n products have radii up to 30 times larger than that of an equivalent\n main-sequence star."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_6XB8IVoK2fNWo9wd5We70M_noun .
 	term:le_6XB8IVoK2fNWo9wd5We70M_noun rdf:type ontolex:LexicalEntry .
 	term:le_6XB8IVoK2fNWo9wd5We70M_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -748,7 +748,7 @@ INSERT DATA {
 	term:le_6XB8IVoK2fNWo9wd5We70M_noun ontolex:sense term:le_6XB8IVoK2fNWo9wd5We70M_noun_sense .
 	term:le_6XB8IVoK2fNWo9wd5We70M_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_6XB8IVoK2fNWo9wd5We70M_noun_sense ontolex:reference conc:concept_c2 .
-	term:le_6XB8IVoK2fNWo9wd5We70M_noun_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "In contrast with the violence of merging, the\n gradual growth of massive stars by accretion is likely to produce\n less infrared variability, relatively thin circumstellar accretion\n disks that maintain their orientation, and collimated bipolar\n outflows that are scaled-up versions of those produced by low-mass\n young stellar objects."@en ] .
+	term:le_6XB8IVoK2fNWo9wd5We70M_noun_sense ontolex:usage [ rdf:value "In contrast with the violence of merging, the\n gradual growth of massive stars by accretion is likely to produce\n less infrared variability, relatively thin circumstellar accretion\n disks that maintain their orientation, and collimated bipolar\n outflows that are scaled-up versions of those produced by low-mass\n young stellar objects."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_7EVD0Q0sX35wOola3cCNtg_noun .
 	term:le_7EVD0Q0sX35wOola3cCNtg_noun rdf:type ontolex:LexicalEntry .
 	term:le_7EVD0Q0sX35wOola3cCNtg_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -761,7 +761,7 @@ INSERT DATA {
 	term:le_7EVD0Q0sX35wOola3cCNtg_noun ontolex:sense term:le_7EVD0Q0sX35wOola3cCNtg_noun_sense .
 	term:le_7EVD0Q0sX35wOola3cCNtg_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_7EVD0Q0sX35wOola3cCNtg_noun_sense ontolex:reference conc:concept_c42 .
-	term:le_7EVD0Q0sX35wOola3cCNtg_noun_sense ontolex:usage [ dct:source <http://curious.astro.cornell.edu/question.php?number=55> ; rdf:value "A singularity means a point where some property\n is infinite. For example, at the center of a black hole, according\n to classical theory, the density is infinite (because a finite mass\n is compressed to a zero volume). Hence it is a singularity."@en ] .
+	term:le_7EVD0Q0sX35wOola3cCNtg_noun_sense ontolex:usage [ rdf:value "A singularity means a point where some property\n is infinite. For example, at the center of a black hole, according\n to classical theory, the density is infinite (because a finite mass\n is compressed to a zero volume). Hence it is a singularity."@en ; dct:source <http://curious.astro.cornell.edu/question.php?number=55> ] .
 	:lexicon_en lime:entry term:le_1JR6uWUe1fbrzMwGSdSoqU_noun .
 	term:le_1JR6uWUe1fbrzMwGSdSoqU_noun rdf:type ontolex:LexicalEntry .
 	term:le_1JR6uWUe1fbrzMwGSdSoqU_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -775,7 +775,7 @@ INSERT DATA {
 	term:le_1JR6uWUe1fbrzMwGSdSoqU_noun ontolex:sense term:le_1JR6uWUe1fbrzMwGSdSoqU_noun_sense .
 	term:le_1JR6uWUe1fbrzMwGSdSoqU_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_1JR6uWUe1fbrzMwGSdSoqU_noun_sense ontolex:reference conc:concept_c38 .
-	term:le_1JR6uWUe1fbrzMwGSdSoqU_noun_sense ontolex:usage [ dct:source <http://nobelprize.org/nobel_prizes/physics/articles/fusion/sun_cno.html> ; rdf:value "For stars heavier than the sun, theoretical\n models show that the CNO (carbon-nitrogen-oxygen) cycle of nuclear\n fusion is the dominant source of energy generation."@en ] .
+	term:le_1JR6uWUe1fbrzMwGSdSoqU_noun_sense ontolex:usage [ rdf:value "For stars heavier than the sun, theoretical\n models show that the CNO (carbon-nitrogen-oxygen) cycle of nuclear\n fusion is the dominant source of energy generation."@en ; dct:source <http://nobelprize.org/nobel_prizes/physics/articles/fusion/sun_cno.html> ] .
 	:lexicon_en lime:entry term:le_7aacRcYxbWJSpAB3t24IXp_noun .
 	term:le_7aacRcYxbWJSpAB3t24IXp_noun rdf:type ontolex:LexicalEntry .
 	term:le_7aacRcYxbWJSpAB3t24IXp_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -789,7 +789,7 @@ INSERT DATA {
 	term:le_7aacRcYxbWJSpAB3t24IXp_noun ontolex:sense term:le_7aacRcYxbWJSpAB3t24IXp_noun_sense .
 	term:le_7aacRcYxbWJSpAB3t24IXp_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_7aacRcYxbWJSpAB3t24IXp_noun_sense ontolex:reference conc:concept_c1 .
-	term:le_7aacRcYxbWJSpAB3t24IXp_noun_sense ontolex:usage [ dct:source <http://www.eastbayastro.org/2000/0900/r0900-8.htm> ; rdf:value "In contrast, the galactic cluster represented by\n M29 is a grouping of stars—a “knot” of stars in the stellar\n backdrop."@en ] .
+	term:le_7aacRcYxbWJSpAB3t24IXp_noun_sense ontolex:usage [ rdf:value "In contrast, the galactic cluster represented by\n M29 is a grouping of stars—a “knot” of stars in the stellar\n backdrop."@en ; dct:source <http://www.eastbayastro.org/2000/0900/r0900-8.htm> ] .
 	:lexicon_en lime:entry term:le_4pcjVU5RQzI2eYgDshXimH_noun .
 	term:le_4pcjVU5RQzI2eYgDshXimH_noun rdf:type ontolex:LexicalEntry .
 	term:le_4pcjVU5RQzI2eYgDshXimH_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -801,7 +801,7 @@ INSERT DATA {
 	term:le_4pcjVU5RQzI2eYgDshXimH_noun ontolex:sense term:le_4pcjVU5RQzI2eYgDshXimH_noun_sense .
 	term:le_4pcjVU5RQzI2eYgDshXimH_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_4pcjVU5RQzI2eYgDshXimH_noun_sense ontolex:reference conc:concept_c39 .
-	term:le_4pcjVU5RQzI2eYgDshXimH_noun_sense ontolex:usage [ dct:source <http://www.tamil.net/people/andrew/subra.htm> ; rdf:value "Although Eddington raised doubts at the meeting\n about the concept of relativistic degeneracy, astronomy has since\n found that all white dwarfs for which masses have been measured fall\n neatly below the Chandrasekhar limit without exception. Today there\n are no doubts about his work on degeneracy."@en ] .
+	term:le_4pcjVU5RQzI2eYgDshXimH_noun_sense ontolex:usage [ rdf:value "Although Eddington raised doubts at the meeting\n about the concept of relativistic degeneracy, astronomy has since\n found that all white dwarfs for which masses have been measured fall\n neatly below the Chandrasekhar limit without exception. Today there\n are no doubts about his work on degeneracy."@en ; dct:source <http://www.tamil.net/people/andrew/subra.htm> ] .
 	:lexicon_en lime:entry term:le_48adkzlPD3Jm47ZPKFtHrf_noun .
 	term:le_48adkzlPD3Jm47ZPKFtHrf_noun rdf:type ontolex:LexicalEntry .
 	term:le_48adkzlPD3Jm47ZPKFtHrf_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -813,7 +813,7 @@ INSERT DATA {
 	term:le_48adkzlPD3Jm47ZPKFtHrf_noun ontolex:sense term:le_48adkzlPD3Jm47ZPKFtHrf_noun_sense .
 	term:le_48adkzlPD3Jm47ZPKFtHrf_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_48adkzlPD3Jm47ZPKFtHrf_noun_sense ontolex:reference conc:concept_c10 .
-	term:le_48adkzlPD3Jm47ZPKFtHrf_noun_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "While the behavior of stars forming by accretion\n is reasonably well understood,the consequences of merging have not\n been fully investermSecated."@en ] .
+	term:le_48adkzlPD3Jm47ZPKFtHrf_noun_sense ontolex:usage [ rdf:value "While the behavior of stars forming by accretion\n is reasonably well understood,the consequences of merging have not\n been fully investermSecated."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_1i1T4JVYZdAvcOmimqW9zM_noun .
 	term:le_1i1T4JVYZdAvcOmimqW9zM_noun rdf:type ontolex:LexicalEntry .
 	term:le_1i1T4JVYZdAvcOmimqW9zM_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -826,7 +826,7 @@ INSERT DATA {
 	term:le_1i1T4JVYZdAvcOmimqW9zM_noun ontolex:sense term:le_1i1T4JVYZdAvcOmimqW9zM_noun_sense .
 	term:le_1i1T4JVYZdAvcOmimqW9zM_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_1i1T4JVYZdAvcOmimqW9zM_noun_sense ontolex:reference conc:concept_c29 .
-	term:le_1i1T4JVYZdAvcOmimqW9zM_noun_sense ontolex:usage [ dct:source "Moore2003, 187" ; rdf:value "Other nebulae are within the range of small\n telescopes."@en ] .
+	term:le_1i1T4JVYZdAvcOmimqW9zM_noun_sense ontolex:usage [ rdf:value "Other nebulae are within the range of small\n telescopes."@en ; dct:source "Moore2003, 187" ] .
 	:lexicon_en lime:entry term:le_GRnhIXhEP05IZGpIKXnbL_noun .
 	term:le_GRnhIXhEP05IZGpIKXnbL_noun rdf:type ontolex:LexicalEntry .
 	term:le_GRnhIXhEP05IZGpIKXnbL_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -850,7 +850,7 @@ INSERT DATA {
 	term:le_4mELd72j2uto9rtVUGSCRV_noun ontolex:sense term:le_4mELd72j2uto9rtVUGSCRV_noun_sense .
 	term:le_4mELd72j2uto9rtVUGSCRV_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_4mELd72j2uto9rtVUGSCRV_noun_sense ontolex:reference conc:concept_c27 .
-	term:le_4mELd72j2uto9rtVUGSCRV_noun_sense ontolex:usage [ dct:source "Moore2003, 173" ; rdf:value "The star's outer layers are thrown off, and for\n a cosmically brief period - no more than about 100,000 years - we\n have the phenomenon of what is termed a planetary nebula."@en ] .
+	term:le_4mELd72j2uto9rtVUGSCRV_noun_sense ontolex:usage [ rdf:value "The star's outer layers are thrown off, and for\n a cosmically brief period - no more than about 100,000 years - we\n have the phenomenon of what is termed a planetary nebula."@en ; dct:source "Moore2003, 173" ] .
 	:lexicon_en lime:entry term:le_4yEzHhKK9LpU8l7Bms9qTW_noun .
 	term:le_4yEzHhKK9LpU8l7Bms9qTW_noun rdf:type ontolex:LexicalEntry .
 	term:le_4yEzHhKK9LpU8l7Bms9qTW_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -865,7 +865,7 @@ INSERT DATA {
 	term:le_4yEzHhKK9LpU8l7Bms9qTW_noun ontolex:sense term:le_4yEzHhKK9LpU8l7Bms9qTW_noun_sense .
 	term:le_4yEzHhKK9LpU8l7Bms9qTW_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_4yEzHhKK9LpU8l7Bms9qTW_noun_sense ontolex:reference conc:concept_c38 .
-	term:le_4yEzHhKK9LpU8l7Bms9qTW_noun_sense ontolex:usage [ dct:source <http://hyperphysics.phy-astr.gsu.edu/HBASE/Astro/carbcyc.html> ; rdf:value "The main theme of the carbon cycle is the adding\n of protons, but after a carbon-12 nucleus fuses with a proton to\n form nitrogen-13, one of the protons decays with the emission of a\n positron and a neutrino to form carbon -13."@en ] .
+	term:le_4yEzHhKK9LpU8l7Bms9qTW_noun_sense ontolex:usage [ rdf:value "The main theme of the carbon cycle is the adding\n of protons, but after a carbon-12 nucleus fuses with a proton to\n form nitrogen-13, one of the protons decays with the emission of a\n positron and a neutrino to form carbon -13."@en ; dct:source <http://hyperphysics.phy-astr.gsu.edu/HBASE/Astro/carbcyc.html> ] .
 	:lexicon_en lime:entry term:le_6263mLVxKBJ8w4Rr0D0tF2_noun .
 	term:le_6263mLVxKBJ8w4Rr0D0tF2_noun rdf:type ontolex:LexicalEntry .
 	term:le_6263mLVxKBJ8w4Rr0D0tF2_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -878,7 +878,7 @@ INSERT DATA {
 	term:le_6263mLVxKBJ8w4Rr0D0tF2_noun ontolex:sense term:le_6263mLVxKBJ8w4Rr0D0tF2_noun_sense .
 	term:le_6263mLVxKBJ8w4Rr0D0tF2_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_6263mLVxKBJ8w4Rr0D0tF2_noun_sense ontolex:reference conc:concept_c8 .
-	term:le_6263mLVxKBJ8w4Rr0D0tF2_noun_sense ontolex:usage [ dct:source <http://hubblesite.org/newscenter/archive/releases/star%20cluster/2008/25/full/> ; rdf:value "Most star clusters are too far away and the\n white dwarfs are too faint to be seen by ground-based telescopes,\n but Hubble's powerful vision sees many of them."@en ] .
+	term:le_6263mLVxKBJ8w4Rr0D0tF2_noun_sense ontolex:usage [ rdf:value "Most star clusters are too far away and the\n white dwarfs are too faint to be seen by ground-based telescopes,\n but Hubble's powerful vision sees many of them."@en ; dct:source <http://hubblesite.org/newscenter/archive/releases/star%20cluster/2008/25/full/> ] .
 	:lexicon_en lime:entry term:le_34qa4wBRxDoRFP2CoMGX0r_noun .
 	term:le_34qa4wBRxDoRFP2CoMGX0r_noun rdf:type ontolex:LexicalEntry .
 	term:le_34qa4wBRxDoRFP2CoMGX0r_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -891,7 +891,7 @@ INSERT DATA {
 	term:le_34qa4wBRxDoRFP2CoMGX0r_noun ontolex:sense term:le_34qa4wBRxDoRFP2CoMGX0r_noun_sense .
 	term:le_34qa4wBRxDoRFP2CoMGX0r_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_34qa4wBRxDoRFP2CoMGX0r_noun_sense ontolex:reference conc:concept_c11 .
-	term:le_34qa4wBRxDoRFP2CoMGX0r_noun_sense ontolex:usage [ dct:source <http://www.who.int/uv/en/> ; rdf:value "Ultraviolet (UV) radiation is part of the\n electromagnetic spectrum emitted by the sun."@en ] .
+	term:le_34qa4wBRxDoRFP2CoMGX0r_noun_sense ontolex:usage [ rdf:value "Ultraviolet (UV) radiation is part of the\n electromagnetic spectrum emitted by the sun."@en ; dct:source <http://www.who.int/uv/en/> ] .
 	:lexicon_en lime:entry term:le_6pAje9hWMZN1u14iCGfdcs_noun .
 	term:le_6pAje9hWMZN1u14iCGfdcs_noun rdf:type ontolex:LexicalEntry .
 	term:le_6pAje9hWMZN1u14iCGfdcs_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -903,7 +903,7 @@ INSERT DATA {
 	term:le_6pAje9hWMZN1u14iCGfdcs_noun ontolex:sense term:le_6pAje9hWMZN1u14iCGfdcs_noun_sense .
 	term:le_6pAje9hWMZN1u14iCGfdcs_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_6pAje9hWMZN1u14iCGfdcs_noun_sense ontolex:reference conc:concept_c44 .
-	term:le_6pAje9hWMZN1u14iCGfdcs_noun_sense ontolex:usage [ dct:source <http://csep10.phys.utk.edu/astr162/lect/energy/triplealph.html> ; rdf:value "This small concentration of Be-8 can begin to\n undergo reactions with other He-4 nuclei to produce an excited state\n of the mass-12 isotope of Carbon. This excited state is unstable,\n but a few of these excited Carbon nuclei emit a gamma-ray quickly\n enough to become stable before they disintegrate. This extremely\n improbable sequence is called the triple-alpha process because the\n net effect is to combine 3 alpha particles (that is, 3 He-4 nuclei)\n to form a C-12 nucleus."@en ] .
+	term:le_6pAje9hWMZN1u14iCGfdcs_noun_sense ontolex:usage [ rdf:value "This small concentration of Be-8 can begin to\n undergo reactions with other He-4 nuclei to produce an excited state\n of the mass-12 isotope of Carbon. This excited state is unstable,\n but a few of these excited Carbon nuclei emit a gamma-ray quickly\n enough to become stable before they disintegrate. This extremely\n improbable sequence is called the triple-alpha process because the\n net effect is to combine 3 alpha particles (that is, 3 He-4 nuclei)\n to form a C-12 nucleus."@en ; dct:source <http://csep10.phys.utk.edu/astr162/lect/energy/triplealph.html> ] .
 	:lexicon_en lime:entry term:le_6rQMsgU7HgGjR4OpI7qkCg_noun .
 	term:le_6rQMsgU7HgGjR4OpI7qkCg_noun rdf:type ontolex:LexicalEntry .
 	term:le_6rQMsgU7HgGjR4OpI7qkCg_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -915,7 +915,7 @@ INSERT DATA {
 	term:le_6rQMsgU7HgGjR4OpI7qkCg_noun ontolex:sense term:le_6rQMsgU7HgGjR4OpI7qkCg_noun_sense .
 	term:le_6rQMsgU7HgGjR4OpI7qkCg_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_6rQMsgU7HgGjR4OpI7qkCg_noun_sense ontolex:reference conc:concept_c7 .
-	term:le_6rQMsgU7HgGjR4OpI7qkCg_noun_sense ontolex:usage [ dct:source "Bally2005" ; rdf:value "Alternatively, it has been suggested that\n massive stars form from the merging of lower mass protostars in\n high-density protostar clusters (Bonnell et al.1998; Stahler et al.\n 2000; Bonnell 2002; Zinnecker & Bate 2002)."@en ] .
+	term:le_6rQMsgU7HgGjR4OpI7qkCg_noun_sense ontolex:usage [ rdf:value "Alternatively, it has been suggested that\n massive stars form from the merging of lower mass protostars in\n high-density protostar clusters (Bonnell et al.1998; Stahler et al.\n 2000; Bonnell 2002; Zinnecker & Bate 2002)."@en ; dct:source "Bally2005" ] .
 	:lexicon_en lime:entry term:le_2zyAe8O2QvnKNUrvAiD3KC_noun .
 	term:le_2zyAe8O2QvnKNUrvAiD3KC_noun rdf:type ontolex:LexicalEntry .
 	term:le_2zyAe8O2QvnKNUrvAiD3KC_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -928,7 +928,7 @@ INSERT DATA {
 	term:le_2zyAe8O2QvnKNUrvAiD3KC_noun ontolex:sense term:le_2zyAe8O2QvnKNUrvAiD3KC_noun_sense .
 	term:le_2zyAe8O2QvnKNUrvAiD3KC_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_2zyAe8O2QvnKNUrvAiD3KC_noun_sense ontolex:reference conc:concept_c28 .
-	term:le_2zyAe8O2QvnKNUrvAiD3KC_noun_sense ontolex:usage [ dct:source <http://apod.nasa.gov/apod/emission_nebulae.html> ; rdf:value "In this and other similar emission nebulae,\n energetic ultraviolet light from a hot young star strips electrons\n from the surrounding hydrogen atoms."@en ] .
+	term:le_2zyAe8O2QvnKNUrvAiD3KC_noun_sense ontolex:usage [ rdf:value "In this and other similar emission nebulae,\n energetic ultraviolet light from a hot young star strips electrons\n from the surrounding hydrogen atoms."@en ; dct:source <http://apod.nasa.gov/apod/emission_nebulae.html> ] .
 	:lexicon_en lime:entry term:le_QjEHA772daFThRUn1zj3k_noun .
 	term:le_QjEHA772daFThRUn1zj3k_noun rdf:type ontolex:LexicalEntry .
 	term:le_QjEHA772daFThRUn1zj3k_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -941,7 +941,7 @@ INSERT DATA {
 	term:le_QjEHA772daFThRUn1zj3k_noun ontolex:sense term:le_QjEHA772daFThRUn1zj3k_noun_sense .
 	term:le_QjEHA772daFThRUn1zj3k_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_QjEHA772daFThRUn1zj3k_noun_sense ontolex:reference conc:concept_c5 .
-	term:le_QjEHA772daFThRUn1zj3k_noun_sense ontolex:usage [ dct:source "Birth of High-Mass Stars" ; rdf:value "Although the standard accretion scenario may\n well explain the formation of most massive stars, the existence of\n blue stragglers in globular clusters indicates that mergers do occur\n in nature."@en ] .
+	term:le_QjEHA772daFThRUn1zj3k_noun_sense ontolex:usage [ rdf:value "Although the standard accretion scenario may\n well explain the formation of most massive stars, the existence of\n blue stragglers in globular clusters indicates that mergers do occur\n in nature."@en ; dct:source "Birth of High-Mass Stars" ] .
 	:lexicon_en lime:entry term:le_1y5nV6IzTjBP5zm1F0AygW_noun .
 	term:le_1y5nV6IzTjBP5zm1F0AygW_noun rdf:type ontolex:LexicalEntry .
 	term:le_1y5nV6IzTjBP5zm1F0AygW_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -953,7 +953,7 @@ INSERT DATA {
 	term:le_1y5nV6IzTjBP5zm1F0AygW_noun ontolex:sense term:le_1y5nV6IzTjBP5zm1F0AygW_noun_sense .
 	term:le_1y5nV6IzTjBP5zm1F0AygW_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_1y5nV6IzTjBP5zm1F0AygW_noun_sense ontolex:reference conc:concept_c36 .
-	term:le_1y5nV6IzTjBP5zm1F0AygW_noun_sense ontolex:usage [ dct:source <http://www.newscientist.com/article/dn2527-astronomers-reach-the-event-horizon.html> ; rdf:value "Narayan and Heyl have calculated that if very\n heavy objects do not collapse to a point with an event horizon but\n instead have a surface, they would eject as many type 1 bursts as\n neutron stars."@en ] .
+	term:le_1y5nV6IzTjBP5zm1F0AygW_noun_sense ontolex:usage [ rdf:value "Narayan and Heyl have calculated that if very\n heavy objects do not collapse to a point with an event horizon but\n instead have a surface, they would eject as many type 1 bursts as\n neutron stars."@en ; dct:source <http://www.newscientist.com/article/dn2527-astronomers-reach-the-event-horizon.html> ] .
 	:lexicon_en lime:entry term:le_56ZA7D7odJT1iOkNnoYOYX_noun .
 	term:le_56ZA7D7odJT1iOkNnoYOYX_noun rdf:type ontolex:LexicalEntry .
 	term:le_56ZA7D7odJT1iOkNnoYOYX_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -966,7 +966,7 @@ INSERT DATA {
 	term:le_56ZA7D7odJT1iOkNnoYOYX_noun ontolex:sense term:le_56ZA7D7odJT1iOkNnoYOYX_noun_sense .
 	term:le_56ZA7D7odJT1iOkNnoYOYX_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_56ZA7D7odJT1iOkNnoYOYX_noun_sense ontolex:reference conc:concept_c2 .
-	term:le_56ZA7D7odJT1iOkNnoYOYX_noun_sense ontolex:usage [ dct:source <http://adsabs.harvard.edu/abs/2010MNRAS.402.1504D> ; rdf:value "Our results suggest a scenario of a central star\n accreting material from a circumstellar disc at the centre of a cool\n extended rotating torus, while driving a fast bipolar wind."@en ] .
+	term:le_56ZA7D7odJT1iOkNnoYOYX_noun_sense ontolex:usage [ rdf:value "Our results suggest a scenario of a central star\n accreting material from a circumstellar disc at the centre of a cool\n extended rotating torus, while driving a fast bipolar wind."@en ; dct:source <http://adsabs.harvard.edu/abs/2010MNRAS.402.1504D> ] .
 	:lexicon_zu lime:entry term:le_2I2X17UtuB6NqisHU4gzmf .
 	term:le_2I2X17UtuB6NqisHU4gzmf rdf:type ontolex:LexicalEntry .
 	term:le_2I2X17UtuB6NqisHU4gzmf vs:term_status "working" .
@@ -1056,7 +1056,7 @@ INSERT DATA {
 	term:le_5vi8NkP7SPQghRkt9pkj38_noun ontolex:sense term:le_5vi8NkP7SPQghRkt9pkj38_noun_sense .
 	term:le_5vi8NkP7SPQghRkt9pkj38_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_5vi8NkP7SPQghRkt9pkj38_noun_sense ontolex:reference conc:concept_c13 .
-	term:le_5vi8NkP7SPQghRkt9pkj38_noun_sense ontolex:usage [ dct:source <http://mundoastronomia.portalmundos.com/nuevas-pistas-sobre-el-origen-de-las-estrellas-rezagadas-azules/> ; rdf:value "Las últimas observaciones de las “rezagadas\n azules”, estrellas atípicas que aparentan ser más jóvenes que el\n sistema estelar al que pertenecen, han proporcionado dos modelos\n diferentes sobre su origen."@es ] .
+	term:le_5vi8NkP7SPQghRkt9pkj38_noun_sense ontolex:usage [ rdf:value "Las últimas observaciones de las “rezagadas\n azules”, estrellas atípicas que aparentan ser más jóvenes que el\n sistema estelar al que pertenecen, han proporcionado dos modelos\n diferentes sobre su origen."@es ; dct:source <http://mundoastronomia.portalmundos.com/nuevas-pistas-sobre-el-origen-de-las-estrellas-rezagadas-azules/> ] .
 	:lexicon_es lime:entry term:le_5nlgIUZfOgPsJaTfwOfZPp_noun .
 	term:le_5nlgIUZfOgPsJaTfwOfZPp_noun rdf:type ontolex:LexicalEntry .
 	term:le_5nlgIUZfOgPsJaTfwOfZPp_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1068,7 +1068,7 @@ INSERT DATA {
 	term:le_5nlgIUZfOgPsJaTfwOfZPp_noun ontolex:sense term:le_5nlgIUZfOgPsJaTfwOfZPp_noun_sense .
 	term:le_5nlgIUZfOgPsJaTfwOfZPp_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_5nlgIUZfOgPsJaTfwOfZPp_noun_sense ontolex:reference conc:concept_c21 .
-	term:le_5nlgIUZfOgPsJaTfwOfZPp_noun_sense ontolex:usage [ dct:source <http://www.plataformasinc.es/index.php/esl/Noticias/Una-supernova-observada-por-astronomos-aficionados-abre-el-debate-entre-los-profesionales> ; rdf:value "Un equipo de científicos británicos propone esta\n semana en la revista Nature que la tenue supernova SN2008ha,\n descubierta por una adolescente estadounidense en noviembre de 2008,\n podría ser la explosión de una estrella masiva, en lugar de proceder\n de una enana blanca como se planteaba hasta ahora."@es ] .
+	term:le_5nlgIUZfOgPsJaTfwOfZPp_noun_sense ontolex:usage [ rdf:value "Un equipo de científicos británicos propone esta\n semana en la revista Nature que la tenue supernova SN2008ha,\n descubierta por una adolescente estadounidense en noviembre de 2008,\n podría ser la explosión de una estrella masiva, en lugar de proceder\n de una enana blanca como se planteaba hasta ahora."@es ; dct:source <http://www.plataformasinc.es/index.php/esl/Noticias/Una-supernova-observada-por-astronomos-aficionados-abre-el-debate-entre-los-profesionales> ] .
 	:lexicon_es lime:entry term:le_4X2HNWOzzphaobR1MorO6I_noun .
 	term:le_4X2HNWOzzphaobR1MorO6I_noun rdf:type ontolex:LexicalEntry .
 	term:le_4X2HNWOzzphaobR1MorO6I_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1080,7 +1080,7 @@ INSERT DATA {
 	term:le_4X2HNWOzzphaobR1MorO6I_noun ontolex:sense term:le_4X2HNWOzzphaobR1MorO6I_noun_sense .
 	term:le_4X2HNWOzzphaobR1MorO6I_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_4X2HNWOzzphaobR1MorO6I_noun_sense ontolex:reference conc:concept_c14 .
-	term:le_4X2HNWOzzphaobR1MorO6I_noun_sense ontolex:usage [ dct:source <http://bibliotecadigital.ilce.edu.mx/sites/ciencia/volumen1/ciencia2/06/html/sec_15.html> ; rdf:value "Esto sucede si la masa de un pedazo de la nube\n excede cierto valor crítico, de modo tal que la fuerza de gravedad\n vence definitivamente y el pedazo empieza a contraerse, aumentando\n su densidad. Este proceso se llama colapso gravitacional."@es ] .
+	term:le_4X2HNWOzzphaobR1MorO6I_noun_sense ontolex:usage [ rdf:value "Esto sucede si la masa de un pedazo de la nube\n excede cierto valor crítico, de modo tal que la fuerza de gravedad\n vence definitivamente y el pedazo empieza a contraerse, aumentando\n su densidad. Este proceso se llama colapso gravitacional."@es ; dct:source <http://bibliotecadigital.ilce.edu.mx/sites/ciencia/volumen1/ciencia2/06/html/sec_15.html> ] .
 	:lexicon_es lime:entry term:le_2VARoFaJAI2zPPb1ryCyQQ_noun .
 	term:le_2VARoFaJAI2zPPb1ryCyQQ_noun rdf:type ontolex:LexicalEntry .
 	term:le_2VARoFaJAI2zPPb1ryCyQQ_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1094,7 +1094,7 @@ INSERT DATA {
 	term:le_2VARoFaJAI2zPPb1ryCyQQ_noun ontolex:sense term:le_2VARoFaJAI2zPPb1ryCyQQ_noun_sense .
 	term:le_2VARoFaJAI2zPPb1ryCyQQ_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_2VARoFaJAI2zPPb1ryCyQQ_noun_sense ontolex:reference conc:concept_c38 .
-	term:le_2VARoFaJAI2zPPb1ryCyQQ_noun_sense ontolex:usage [ dct:source <http://www.zaragoza.es/ciudad/conocimiento/zivis/aplicaciones.htm> ; rdf:value "No se pretende copiar los complicados ciclos de\n reacciones que se dan en el interior de las estrellas, como la\n cadena protón-protón o el ciclo del carbono-nitrógeno-oxígeno (esta\n última más importante en las estrellas más masivas que el Sol)."@es ] .
+	term:le_2VARoFaJAI2zPPb1ryCyQQ_noun_sense ontolex:usage [ rdf:value "No se pretende copiar los complicados ciclos de\n reacciones que se dan en el interior de las estrellas, como la\n cadena protón-protón o el ciclo del carbono-nitrógeno-oxígeno (esta\n última más importante en las estrellas más masivas que el Sol)."@es ; dct:source <http://www.zaragoza.es/ciudad/conocimiento/zivis/aplicaciones.htm> ] .
 	:lexicon_es lime:entry term:le_13h6HZY2SOjy9nE5tnzLAo_noun .
 	term:le_13h6HZY2SOjy9nE5tnzLAo_noun rdf:type ontolex:LexicalEntry .
 	term:le_13h6HZY2SOjy9nE5tnzLAo_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1106,7 +1106,7 @@ INSERT DATA {
 	term:le_13h6HZY2SOjy9nE5tnzLAo_noun ontolex:sense term:le_13h6HZY2SOjy9nE5tnzLAo_noun_sense .
 	term:le_13h6HZY2SOjy9nE5tnzLAo_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_13h6HZY2SOjy9nE5tnzLAo_noun_sense ontolex:reference conc:concept_c27 .
-	term:le_13h6HZY2SOjy9nE5tnzLAo_noun_sense ontolex:usage [ dct:source <http://www.astromia.com/glosario/nebulosaplanetaria.htm> ; rdf:value "Las nebulosas planetarias resultan objetos muy\n espectaculares si se observan con un telescopio de media o gran\n potencia."@es ] .
+	term:le_13h6HZY2SOjy9nE5tnzLAo_noun_sense ontolex:usage [ rdf:value "Las nebulosas planetarias resultan objetos muy\n espectaculares si se observan con un telescopio de media o gran\n potencia."@es ; dct:source <http://www.astromia.com/glosario/nebulosaplanetaria.htm> ] .
 	:lexicon_es lime:entry term:le_3tC8m8qVDDGl3Ho7o4W5Qz_noun .
 	term:le_3tC8m8qVDDGl3Ho7o4W5Qz_noun rdf:type ontolex:LexicalEntry .
 	term:le_3tC8m8qVDDGl3Ho7o4W5Qz_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1121,7 +1121,7 @@ INSERT DATA {
 	term:le_3tC8m8qVDDGl3Ho7o4W5Qz_noun ontolex:sense term:le_3tC8m8qVDDGl3Ho7o4W5Qz_noun_sense .
 	term:le_3tC8m8qVDDGl3Ho7o4W5Qz_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_3tC8m8qVDDGl3Ho7o4W5Qz_noun_sense ontolex:reference conc:concept_c38 .
-	term:le_3tC8m8qVDDGl3Ho7o4W5Qz_noun_sense ontolex:usage [ dct:source <http://www.astromia.com/glosario/ciclocno.htm> ; rdf:value "El ciclo del carbono comienza y acaba con un\n núcleo de carbono 12 que actúa como catalizador en la producción de\n un núcleo de helio a partir de núcleos de hidrógeno; también se\n producen neutrinos y rayos gamma."@es ] .
+	term:le_3tC8m8qVDDGl3Ho7o4W5Qz_noun_sense ontolex:usage [ rdf:value "El ciclo del carbono comienza y acaba con un\n núcleo de carbono 12 que actúa como catalizador en la producción de\n un núcleo de helio a partir de núcleos de hidrógeno; también se\n producen neutrinos y rayos gamma."@es ; dct:source <http://www.astromia.com/glosario/ciclocno.htm> ] .
 	:lexicon_es lime:entry term:le_2uVM7NWoSJP9b6P86jaLc4_noun .
 	term:le_2uVM7NWoSJP9b6P86jaLc4_noun rdf:type ontolex:LexicalEntry .
 	term:le_2uVM7NWoSJP9b6P86jaLc4_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1133,7 +1133,7 @@ INSERT DATA {
 	term:le_2uVM7NWoSJP9b6P86jaLc4_noun ontolex:sense term:le_2uVM7NWoSJP9b6P86jaLc4_noun_sense .
 	term:le_2uVM7NWoSJP9b6P86jaLc4_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_2uVM7NWoSJP9b6P86jaLc4_noun_sense ontolex:reference conc:concept_c10 .
-	term:le_2uVM7NWoSJP9b6P86jaLc4_noun_sense ontolex:usage [ dct:source <http://www.astrosurf.com/astronosur/estrellas.htm> ; rdf:value "Las estrellas son enormes aglomeraciones de gas,\n principalmente Hidrogeno, cuya temperatura es tan alta debido a la\n fusión de este elemento, que irradian luz a lo largo de todo el\n espectro electromagnético. Poseen diferentes temperaturas que varían\n desde los 2000 grados Celsius hasta los 50000."@es ] .
+	term:le_2uVM7NWoSJP9b6P86jaLc4_noun_sense ontolex:usage [ rdf:value "Las estrellas son enormes aglomeraciones de gas,\n principalmente Hidrogeno, cuya temperatura es tan alta debido a la\n fusión de este elemento, que irradian luz a lo largo de todo el\n espectro electromagnético. Poseen diferentes temperaturas que varían\n desde los 2000 grados Celsius hasta los 50000."@es ; dct:source <http://www.astrosurf.com/astronosur/estrellas.htm> ] .
 	:lexicon_es lime:entry term:le_6Cem0WXarBzw9ujxrmtDpT_noun .
 	term:le_6Cem0WXarBzw9ujxrmtDpT_noun rdf:type ontolex:LexicalEntry .
 	term:le_6Cem0WXarBzw9ujxrmtDpT_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1145,7 +1145,7 @@ INSERT DATA {
 	term:le_6Cem0WXarBzw9ujxrmtDpT_noun ontolex:sense term:le_6Cem0WXarBzw9ujxrmtDpT_noun_sense .
 	term:le_6Cem0WXarBzw9ujxrmtDpT_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_6Cem0WXarBzw9ujxrmtDpT_noun_sense ontolex:reference conc:concept_c28 .
-	term:le_6Cem0WXarBzw9ujxrmtDpT_noun_sense ontolex:usage [ dct:source <http://www.astrored.net/nebulosaweb/types.html> ; rdf:value "Las nebulosas de emisión estan normalmente en\n los lugares de formación de estrellas."@es ] .
+	term:le_6Cem0WXarBzw9ujxrmtDpT_noun_sense ontolex:usage [ rdf:value "Las nebulosas de emisión estan normalmente en\n los lugares de formación de estrellas."@es ; dct:source <http://www.astrored.net/nebulosaweb/types.html> ] .
 	:lexicon_es lime:entry term:le_5tVkYVO2PtTBoXtaeXr4GR_noun .
 	term:le_5tVkYVO2PtTBoXtaeXr4GR_noun rdf:type ontolex:LexicalEntry .
 	term:le_5tVkYVO2PtTBoXtaeXr4GR_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1158,7 +1158,7 @@ INSERT DATA {
 	term:le_5tVkYVO2PtTBoXtaeXr4GR_noun ontolex:sense term:le_5tVkYVO2PtTBoXtaeXr4GR_noun_sense .
 	term:le_5tVkYVO2PtTBoXtaeXr4GR_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_5tVkYVO2PtTBoXtaeXr4GR_noun_sense ontolex:reference conc:concept_c2 .
-	term:le_5tVkYVO2PtTBoXtaeXr4GR_noun_sense ontolex:usage [ dct:source <http://www.amazings.com/ciencia/noticias/010210e.html> ; rdf:value "Lo que alimenta esta actividad es el gas\n extraído de la estrella normal, que, cayendo en espiral hacia el\n agujero negro, se acumula en un denso disco de acreción."@es ] .
+	term:le_5tVkYVO2PtTBoXtaeXr4GR_noun_sense ontolex:usage [ rdf:value "Lo que alimenta esta actividad es el gas\n extraído de la estrella normal, que, cayendo en espiral hacia el\n agujero negro, se acumula en un denso disco de acreción."@es ; dct:source <http://www.amazings.com/ciencia/noticias/010210e.html> ] .
 	:lexicon_es lime:entry term:le_3rP4XS1fj9IHtGuv5BpIsv_noun .
 	term:le_3rP4XS1fj9IHtGuv5BpIsv_noun rdf:type ontolex:LexicalEntry .
 	term:le_3rP4XS1fj9IHtGuv5BpIsv_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1171,7 +1171,7 @@ INSERT DATA {
 	term:le_3rP4XS1fj9IHtGuv5BpIsv_noun ontolex:sense term:le_3rP4XS1fj9IHtGuv5BpIsv_noun_sense .
 	term:le_3rP4XS1fj9IHtGuv5BpIsv_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_3rP4XS1fj9IHtGuv5BpIsv_noun_sense ontolex:reference conc:concept_c2 .
-	term:le_3rP4XS1fj9IHtGuv5BpIsv_noun_sense ontolex:usage [ dct:source <http://www.laeff.inta.es/index.php?op=modload&name=phpWiki&file=index&pagename=Research-Brown%20Dwarfs-BD_esp-DiscosAcrecimiento> ; rdf:value "Imágenes de estrellas jóvenes con discos de\n acrecimeinto y chorros colimados de material, tomadas con el\n telescopio espacial Hubble."@es ] .
+	term:le_3rP4XS1fj9IHtGuv5BpIsv_noun_sense ontolex:usage [ rdf:value "Imágenes de estrellas jóvenes con discos de\n acrecimeinto y chorros colimados de material, tomadas con el\n telescopio espacial Hubble."@es ; dct:source <http://www.laeff.inta.es/index.php?op=modload&name=phpWiki&file=index&pagename=Research-Brown%20Dwarfs-BD_esp-DiscosAcrecimiento> ] .
 	:lexicon_es lime:entry term:le_7AYaW7Li95HPhVONIwuRgd_noun .
 	term:le_7AYaW7Li95HPhVONIwuRgd_noun rdf:type ontolex:LexicalEntry .
 	term:le_7AYaW7Li95HPhVONIwuRgd_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1183,7 +1183,7 @@ INSERT DATA {
 	term:le_7AYaW7Li95HPhVONIwuRgd_noun ontolex:sense term:le_7AYaW7Li95HPhVONIwuRgd_noun_sense .
 	term:le_7AYaW7Li95HPhVONIwuRgd_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_7AYaW7Li95HPhVONIwuRgd_noun_sense ontolex:reference conc:concept_c29 .
-	term:le_7AYaW7Li95HPhVONIwuRgd_noun_sense ontolex:usage [ dct:source <http://www.oarval.org/OrionNebsp.htm> ; rdf:value "A unos 1.500 años-luz de distancia, dentro de\n nuestro brazo espiral en la Vía Láctea, la Nebulosa de Orión está en\n el centro de la región de la Espada de la constelación de Orión el\n Cazador, que domina el cielo nocturno a inicios del invierno, en las\n latitudes Norte."@es ] .
+	term:le_7AYaW7Li95HPhVONIwuRgd_noun_sense ontolex:usage [ rdf:value "A unos 1.500 años-luz de distancia, dentro de\n nuestro brazo espiral en la Vía Láctea, la Nebulosa de Orión está en\n el centro de la región de la Espada de la constelación de Orión el\n Cazador, que domina el cielo nocturno a inicios del invierno, en las\n latitudes Norte."@es ; dct:source <http://www.oarval.org/OrionNebsp.htm> ] .
 	:lexicon_es lime:entry term:le_7jt3DaewODavgE1ldRo5mh_noun .
 	term:le_7jt3DaewODavgE1ldRo5mh_noun rdf:type ontolex:LexicalEntry .
 	term:le_7jt3DaewODavgE1ldRo5mh_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1196,7 +1196,7 @@ INSERT DATA {
 	term:le_7jt3DaewODavgE1ldRo5mh_noun ontolex:sense term:le_7jt3DaewODavgE1ldRo5mh_noun_sense .
 	term:le_7jt3DaewODavgE1ldRo5mh_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_7jt3DaewODavgE1ldRo5mh_noun_sense ontolex:reference conc:concept_c42 .
-	term:le_7jt3DaewODavgE1ldRo5mh_noun_sense ontolex:usage [ dct:source <http://www.astrocosmo.cl/h-foton/h-foton-03_08-01.htm> ; rdf:value "Las singularidades ocurren en el Big Bang, en\n los agujeros negros y en el Big Crunch (que podría ser considerado\n como una unión de agujeros negros)."@es ] .
+	term:le_7jt3DaewODavgE1ldRo5mh_noun_sense ontolex:usage [ rdf:value "Las singularidades ocurren en el Big Bang, en\n los agujeros negros y en el Big Crunch (que podría ser considerado\n como una unión de agujeros negros)."@es ; dct:source <http://www.astrocosmo.cl/h-foton/h-foton-03_08-01.htm> ] .
 	:lexicon_es lime:entry term:le_7Pdy2mblNzIK20TYEN4y0P_noun .
 	term:le_7Pdy2mblNzIK20TYEN4y0P_noun rdf:type ontolex:LexicalEntry .
 	term:le_7Pdy2mblNzIK20TYEN4y0P_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1209,7 +1209,7 @@ INSERT DATA {
 	term:le_7Pdy2mblNzIK20TYEN4y0P_noun ontolex:sense term:le_7Pdy2mblNzIK20TYEN4y0P_noun_sense .
 	term:le_7Pdy2mblNzIK20TYEN4y0P_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_7Pdy2mblNzIK20TYEN4y0P_noun_sense ontolex:reference conc:concept_c5 .
-	term:le_7Pdy2mblNzIK20TYEN4y0P_noun_sense ontolex:usage [ dct:source <http://www.tayabeixo.org/portadas/m3.htm> ; rdf:value "De los 200 cúmulos globulares que sobreviven\n hoy, M3 es uno de los más grande y luminoso, fácilmente observable\n con binoculares en el hemisferio Norte del cielo."@es ] .
+	term:le_7Pdy2mblNzIK20TYEN4y0P_noun_sense ontolex:usage [ rdf:value "De los 200 cúmulos globulares que sobreviven\n hoy, M3 es uno de los más grande y luminoso, fácilmente observable\n con binoculares en el hemisferio Norte del cielo."@es ; dct:source <http://www.tayabeixo.org/portadas/m3.htm> ] .
 	:lexicon_es lime:entry term:le_3NvRDEAVive6lhHRnfKthe_noun .
 	term:le_3NvRDEAVive6lhHRnfKthe_noun rdf:type ontolex:LexicalEntry .
 	term:le_3NvRDEAVive6lhHRnfKthe_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1221,7 +1221,7 @@ INSERT DATA {
 	term:le_3NvRDEAVive6lhHRnfKthe_noun ontolex:sense term:le_3NvRDEAVive6lhHRnfKthe_noun_sense .
 	term:le_3NvRDEAVive6lhHRnfKthe_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_3NvRDEAVive6lhHRnfKthe_noun_sense ontolex:reference conc:concept_c23 .
-	term:le_3NvRDEAVive6lhHRnfKthe_noun_sense ontolex:usage [ dct:source <http://www.solociencia.com/astronomia/07071709.htm> ; rdf:value "La gigante roja S Orionis (S Ori) es una\n estrella variable del tipo Mira. Su masa es similar a la del Sol,\n con la diferencia de que está mucho más cerca de convertirse en una\n enana blanca, el mismo final que le espera a nuestro Sol dentro de 5\n mil millones de años."@es ] .
+	term:le_3NvRDEAVive6lhHRnfKthe_noun_sense ontolex:usage [ rdf:value "La gigante roja S Orionis (S Ori) es una\n estrella variable del tipo Mira. Su masa es similar a la del Sol,\n con la diferencia de que está mucho más cerca de convertirse en una\n enana blanca, el mismo final que le espera a nuestro Sol dentro de 5\n mil millones de años."@es ; dct:source <http://www.solociencia.com/astronomia/07071709.htm> ] .
 	:lexicon_es lime:entry term:le_2KvJ2nQ3PsigJjcAhzntlj_noun .
 	term:le_2KvJ2nQ3PsigJjcAhzntlj_noun rdf:type ontolex:LexicalEntry .
 	term:le_2KvJ2nQ3PsigJjcAhzntlj_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1233,7 +1233,7 @@ INSERT DATA {
 	term:le_2KvJ2nQ3PsigJjcAhzntlj_noun ontolex:sense term:le_2KvJ2nQ3PsigJjcAhzntlj_noun_sense .
 	term:le_2KvJ2nQ3PsigJjcAhzntlj_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_2KvJ2nQ3PsigJjcAhzntlj_noun_sense ontolex:reference conc:concept_c24 .
-	term:le_2KvJ2nQ3PsigJjcAhzntlj_noun_sense ontolex:usage [ dct:source <http://axxon.com.ar/not/157/c-1570034.htm> ; rdf:value "El planeta que se ha descubierto girando\n alrededor de esta enana roja tiene una masa equivalente a la de\n Neptuno, es decir, es sólo 17 veces mayor que la Tierra y mucho\n menor que Saturno."@es ] .
+	term:le_2KvJ2nQ3PsigJjcAhzntlj_noun_sense ontolex:usage [ rdf:value "El planeta que se ha descubierto girando\n alrededor de esta enana roja tiene una masa equivalente a la de\n Neptuno, es decir, es sólo 17 veces mayor que la Tierra y mucho\n menor que Saturno."@es ; dct:source <http://axxon.com.ar/not/157/c-1570034.htm> ] .
 	:lexicon_es lime:entry term:le_2PdB1hcerJMKvaKzSp91yO_noun .
 	term:le_2PdB1hcerJMKvaKzSp91yO_noun rdf:type ontolex:LexicalEntry .
 	term:le_2PdB1hcerJMKvaKzSp91yO_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1245,7 +1245,7 @@ INSERT DATA {
 	term:le_2PdB1hcerJMKvaKzSp91yO_noun ontolex:sense term:le_2PdB1hcerJMKvaKzSp91yO_noun_sense .
 	term:le_2PdB1hcerJMKvaKzSp91yO_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_2PdB1hcerJMKvaKzSp91yO_noun_sense ontolex:reference conc:concept_c36 .
-	term:le_2PdB1hcerJMKvaKzSp91yO_noun_sense ontolex:usage [ dct:source <http://www.cienciakanija.com/2008/02/14/horizonte-de-eventos-sintetico-de-un-agujero-negro-creado-en-un-laboratorio-del-reino-unido/> ; rdf:value "InvestermSecadores de la Universidad de St. Andrews\n en Escocia, afirman haber encontrado una forma de simular un\n horizonte de eventos de un agujero negro – no a través de una nueva\n técnica de observación cósmica, ni mediante una supercomputadora de\n alta potencia … sino en el laboratorio."@es ] .
+	term:le_2PdB1hcerJMKvaKzSp91yO_noun_sense ontolex:usage [ rdf:value "InvestermSecadores de la Universidad de St. Andrews\n en Escocia, afirman haber encontrado una forma de simular un\n horizonte de eventos de un agujero negro – no a través de una nueva\n técnica de observación cósmica, ni mediante una supercomputadora de\n alta potencia … sino en el laboratorio."@es ; dct:source <http://www.cienciakanija.com/2008/02/14/horizonte-de-eventos-sintetico-de-un-agujero-negro-creado-en-un-laboratorio-del-reino-unido/> ] .
 	:lexicon_es lime:entry term:le_26dF7M4m9S2ElIiL5pfWBz_noun .
 	term:le_26dF7M4m9S2ElIiL5pfWBz_noun rdf:type ontolex:LexicalEntry .
 	term:le_26dF7M4m9S2ElIiL5pfWBz_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1258,7 +1258,7 @@ INSERT DATA {
 	term:le_26dF7M4m9S2ElIiL5pfWBz_noun ontolex:sense term:le_26dF7M4m9S2ElIiL5pfWBz_noun_sense .
 	term:le_26dF7M4m9S2ElIiL5pfWBz_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_26dF7M4m9S2ElIiL5pfWBz_noun_sense ontolex:reference conc:concept_c9 .
-	term:le_26dF7M4m9S2ElIiL5pfWBz_noun_sense ontolex:usage [ dct:source <http://www.astromia.com/universo/vialactea.htm> ; rdf:value "La Via Láctea és una galaxia grande, espiral y\n puede tener unos 100.000 millones de estrellas, entre ellas, el Sol."@es ] .
+	term:le_26dF7M4m9S2ElIiL5pfWBz_noun_sense ontolex:usage [ rdf:value "La Via Láctea és una galaxia grande, espiral y\n puede tener unos 100.000 millones de estrellas, entre ellas, el Sol."@es ; dct:source <http://www.astromia.com/universo/vialactea.htm> ] .
 	:lexicon_es lime:entry term:le_1zi0Ox8uY8YQgShMwO1ZwS_noun .
 	term:le_1zi0Ox8uY8YQgShMwO1ZwS_noun rdf:type ontolex:LexicalEntry .
 	term:le_1zi0Ox8uY8YQgShMwO1ZwS_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1270,7 +1270,7 @@ INSERT DATA {
 	term:le_1zi0Ox8uY8YQgShMwO1ZwS_noun ontolex:sense term:le_1zi0Ox8uY8YQgShMwO1ZwS_noun_sense .
 	term:le_1zi0Ox8uY8YQgShMwO1ZwS_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_1zi0Ox8uY8YQgShMwO1ZwS_noun_sense ontolex:reference conc:concept_c43 .
-	term:le_1zi0Ox8uY8YQgShMwO1ZwS_noun_sense ontolex:usage [ dct:source <http://www.tayabeixo.org/sist_solar/hipotesis/formacion_sistsolar.htm> ; rdf:value "Para una nube con la masa de nuestro Sol, el\n colapso dura unos 10 millones de años, mientras que si su masa fuese\n mucho más pequeña, por ejemplo un décimo de la masa solar, este\n proceso podría durar hasta 800 millones de años."@es ] .
+	term:le_1zi0Ox8uY8YQgShMwO1ZwS_noun_sense ontolex:usage [ rdf:value "Para una nube con la masa de nuestro Sol, el\n colapso dura unos 10 millones de años, mientras que si su masa fuese\n mucho más pequeña, por ejemplo un décimo de la masa solar, este\n proceso podría durar hasta 800 millones de años."@es ; dct:source <http://www.tayabeixo.org/sist_solar/hipotesis/formacion_sistsolar.htm> ] .
 	:lexicon_es lime:entry term:le_NeqZ2PQttmCOQT36ZLZTC_noun .
 	term:le_NeqZ2PQttmCOQT36ZLZTC_noun rdf:type ontolex:LexicalEntry .
 	term:le_NeqZ2PQttmCOQT36ZLZTC_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1282,7 +1282,7 @@ INSERT DATA {
 	term:le_NeqZ2PQttmCOQT36ZLZTC_noun ontolex:sense term:le_NeqZ2PQttmCOQT36ZLZTC_noun_sense .
 	term:le_NeqZ2PQttmCOQT36ZLZTC_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_NeqZ2PQttmCOQT36ZLZTC_noun_sense ontolex:reference conc:concept_c4 .
-	term:le_NeqZ2PQttmCOQT36ZLZTC_noun_sense ontolex:usage [ dct:source <http://ciencia.nasa.gov/headlines/y2008/21mar_nakedeye.htm> ; rdf:value "Una poderosa explosión de rayos gamma, detectada\n el 19 de marzo por el satélite Swift, de la NASA, batió el récord\n como el objeto más distante que se pudo observar a simple\n vista."@es ] .
+	term:le_NeqZ2PQttmCOQT36ZLZTC_noun_sense ontolex:usage [ rdf:value "Una poderosa explosión de rayos gamma, detectada\n el 19 de marzo por el satélite Swift, de la NASA, batió el récord\n como el objeto más distante que se pudo observar a simple\n vista."@es ; dct:source <http://ciencia.nasa.gov/headlines/y2008/21mar_nakedeye.htm> ] .
 	:lexicon_es lime:entry term:le_3vKgEwDgnW9MEr7sHtPUO7_noun .
 	term:le_3vKgEwDgnW9MEr7sHtPUO7_noun rdf:type ontolex:LexicalEntry .
 	term:le_3vKgEwDgnW9MEr7sHtPUO7_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1294,7 +1294,7 @@ INSERT DATA {
 	term:le_3vKgEwDgnW9MEr7sHtPUO7_noun ontolex:sense term:le_3vKgEwDgnW9MEr7sHtPUO7_noun_sense .
 	term:le_3vKgEwDgnW9MEr7sHtPUO7_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_3vKgEwDgnW9MEr7sHtPUO7_noun_sense ontolex:reference conc:concept_c26 .
-	term:le_3vKgEwDgnW9MEr7sHtPUO7_noun_sense ontolex:usage [ dct:source <http://astroverada.com/_/Main/T_evolucion.html> ; rdf:value "Cuando el material fusionable se agota la\n estrella pierde la presión interna producida por la fusión nuclear y\n puede colapsar inmediatamente terminando en una enana\n blanca."@es ] .
+	term:le_3vKgEwDgnW9MEr7sHtPUO7_noun_sense ontolex:usage [ rdf:value "Cuando el material fusionable se agota la\n estrella pierde la presión interna producida por la fusión nuclear y\n puede colapsar inmediatamente terminando en una enana\n blanca."@es ; dct:source <http://astroverada.com/_/Main/T_evolucion.html> ] .
 	:lexicon_es lime:entry term:le_4zB3I6QmvXs4N3KOlOlkBy_noun .
 	term:le_4zB3I6QmvXs4N3KOlOlkBy_noun rdf:type ontolex:LexicalEntry .
 	term:le_4zB3I6QmvXs4N3KOlOlkBy_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1307,7 +1307,7 @@ INSERT DATA {
 	term:le_4zB3I6QmvXs4N3KOlOlkBy_noun ontolex:sense term:le_4zB3I6QmvXs4N3KOlOlkBy_noun_sense .
 	term:le_4zB3I6QmvXs4N3KOlOlkBy_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_4zB3I6QmvXs4N3KOlOlkBy_noun_sense ontolex:reference conc:concept_c9 .
-	term:le_4zB3I6QmvXs4N3KOlOlkBy_noun_sense ontolex:usage [ dct:source "www.todoelsistemasolar.com.ar/vlactea.htm" ; rdf:value "La Vía Láctea, también llamada la Galaxia, es un\n agrupamiento de estrellas con forma de disco, que incluye al Sol y a\n su sistema solar."@es ] .
+	term:le_4zB3I6QmvXs4N3KOlOlkBy_noun_sense ontolex:usage [ rdf:value "La Vía Láctea, también llamada la Galaxia, es un\n agrupamiento de estrellas con forma de disco, que incluye al Sol y a\n su sistema solar."@es ; dct:source "www.todoelsistemasolar.com.ar/vlactea.htm" ] .
 	:lexicon_es lime:entry term:le_wLZROKGCqBHUOHkEsP2Id_noun .
 	term:le_wLZROKGCqBHUOHkEsP2Id_noun rdf:type ontolex:LexicalEntry .
 	term:le_wLZROKGCqBHUOHkEsP2Id_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1319,7 +1319,7 @@ INSERT DATA {
 	term:le_wLZROKGCqBHUOHkEsP2Id_noun ontolex:sense term:le_wLZROKGCqBHUOHkEsP2Id_noun_sense .
 	term:le_wLZROKGCqBHUOHkEsP2Id_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_wLZROKGCqBHUOHkEsP2Id_noun_sense ontolex:reference conc:concept_c36 .
-	term:le_wLZROKGCqBHUOHkEsP2Id_noun_sense ontolex:usage [ dct:source <http://www.astrocosmo.cl/h-foton/h-foton-03_08-01.htm> ; rdf:value "En consecuencia, aquí, cuando nos estamos\n refiriendo a una «singularidad», estamos pensando en una masa con\n volumen nulo rodeada de una frontera gravitacional llamada\n «horizonte de sucesos», de la cual nada puede escapar."@es ] .
+	term:le_wLZROKGCqBHUOHkEsP2Id_noun_sense ontolex:usage [ rdf:value "En consecuencia, aquí, cuando nos estamos\n refiriendo a una «singularidad», estamos pensando en una masa con\n volumen nulo rodeada de una frontera gravitacional llamada\n «horizonte de sucesos», de la cual nada puede escapar."@es ; dct:source <http://www.astrocosmo.cl/h-foton/h-foton-03_08-01.htm> ] .
 	:lexicon_es lime:entry term:le_48mPplWQMes2fVlKO9C5pQ_noun .
 	term:le_48mPplWQMes2fVlKO9C5pQ_noun rdf:type ontolex:LexicalEntry .
 	term:le_48mPplWQMes2fVlKO9C5pQ_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1331,7 +1331,7 @@ INSERT DATA {
 	term:le_48mPplWQMes2fVlKO9C5pQ_noun ontolex:sense term:le_48mPplWQMes2fVlKO9C5pQ_noun_sense .
 	term:le_48mPplWQMes2fVlKO9C5pQ_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_48mPplWQMes2fVlKO9C5pQ_noun_sense ontolex:reference conc:concept_c7 .
-	term:le_48mPplWQMes2fVlKO9C5pQ_noun_sense ontolex:usage [ dct:source <http://www.fomento.es/MFOM/LANG_CASTELLANO/DIRECCIONES_GENERALES/INSTITUTO_GEOGRAFICO/Astronomia/InvestermSecacion/astronomia/protoestrellas.htm> ; rdf:value "En estos primeros estadios, la protoestrella es\n un objeto muy activo, y produce un viento bipolar formado por dos\n chorros opuestos de material de alta velocidad."@es ] .
+	term:le_48mPplWQMes2fVlKO9C5pQ_noun_sense ontolex:usage [ rdf:value "En estos primeros estadios, la protoestrella es\n un objeto muy activo, y produce un viento bipolar formado por dos\n chorros opuestos de material de alta velocidad."@es ; dct:source <http://www.fomento.es/MFOM/LANG_CASTELLANO/DIRECCIONES_GENERALES/INSTITUTO_GEOGRAFICO/Astronomia/InvestermSecacion/astronomia/protoestrellas.htm> ] .
 	:lexicon_es lime:entry term:le_45gKIPGqcWCUyJFAJWI87g_noun .
 	term:le_45gKIPGqcWCUyJFAJWI87g_noun rdf:type ontolex:LexicalEntry .
 	term:le_45gKIPGqcWCUyJFAJWI87g_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1344,7 +1344,7 @@ INSERT DATA {
 	term:le_45gKIPGqcWCUyJFAJWI87g_noun ontolex:sense term:le_45gKIPGqcWCUyJFAJWI87g_noun_sense .
 	term:le_45gKIPGqcWCUyJFAJWI87g_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_45gKIPGqcWCUyJFAJWI87g_noun_sense ontolex:reference conc:concept_c30 .
-	term:le_45gKIPGqcWCUyJFAJWI87g_noun_sense ontolex:usage [ dct:source <http://www.blogdeastronomia.es/astronomia/formacion-de-estrellas/las-nebulosas> ; rdf:value "El caso más opuesto a las nebulosas de emisión\n son las nebulosas de absorción (nebulosas oscuras). Estas ni si\n quiera están rodeadas de estrellas lo suficientemente potentes ni\n cercanas para hacer llegar la luminosidad suficiente para que la\n nebulosa pueda reflejarla."@es ] .
+	term:le_45gKIPGqcWCUyJFAJWI87g_noun_sense ontolex:usage [ rdf:value "El caso más opuesto a las nebulosas de emisión\n son las nebulosas de absorción (nebulosas oscuras). Estas ni si\n quiera están rodeadas de estrellas lo suficientemente potentes ni\n cercanas para hacer llegar la luminosidad suficiente para que la\n nebulosa pueda reflejarla."@es ; dct:source <http://www.blogdeastronomia.es/astronomia/formacion-de-estrellas/las-nebulosas> ] .
 	:lexicon_es lime:entry term:le_3zvkiVLQ1GecMp8IBUgpU8_noun .
 	term:le_3zvkiVLQ1GecMp8IBUgpU8_noun rdf:type ontolex:LexicalEntry .
 	term:le_3zvkiVLQ1GecMp8IBUgpU8_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1356,7 +1356,7 @@ INSERT DATA {
 	term:le_3zvkiVLQ1GecMp8IBUgpU8_noun ontolex:sense term:le_3zvkiVLQ1GecMp8IBUgpU8_noun_sense .
 	term:le_3zvkiVLQ1GecMp8IBUgpU8_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_3zvkiVLQ1GecMp8IBUgpU8_noun_sense ontolex:reference conc:concept_c3 .
-	term:le_3zvkiVLQ1GecMp8IBUgpU8_noun_sense ontolex:usage [ dct:source <http://html.rincondelvago.com/agujeros-negros_5.html> ; rdf:value "En teoría un agujero negro se origina hacia el\n final de la vida de una estrella, cuando ésta se contrae mas allá de\n un límite determinado - conocido como radio de Schwarzschild - y se\n hace más pequeña y mas densa que una estrella de neutrones, tanto\n que ni la luz puede escapar de su campo gravitatorio."@es ] .
+	term:le_3zvkiVLQ1GecMp8IBUgpU8_noun_sense ontolex:usage [ rdf:value "En teoría un agujero negro se origina hacia el\n final de la vida de una estrella, cuando ésta se contrae mas allá de\n un límite determinado - conocido como radio de Schwarzschild - y se\n hace más pequeña y mas densa que una estrella de neutrones, tanto\n que ni la luz puede escapar de su campo gravitatorio."@es ; dct:source <http://html.rincondelvago.com/agujeros-negros_5.html> ] .
 	:lexicon_es lime:entry term:le_50L3kQeHJoFUDvDI56td51_noun .
 	term:le_50L3kQeHJoFUDvDI56td51_noun rdf:type ontolex:LexicalEntry .
 	term:le_50L3kQeHJoFUDvDI56td51_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1368,7 +1368,7 @@ INSERT DATA {
 	term:le_50L3kQeHJoFUDvDI56td51_noun ontolex:sense term:le_50L3kQeHJoFUDvDI56td51_noun_sense .
 	term:le_50L3kQeHJoFUDvDI56td51_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_50L3kQeHJoFUDvDI56td51_noun_sense ontolex:reference conc:concept_c1 .
-	term:le_50L3kQeHJoFUDvDI56td51_noun_sense ontolex:usage [ dct:source <http://observatorio.info/2009/11/m7-cumulo-abierto-en-scorpius-2/> ; rdf:value "M7 es uno de los cúmulos abiertos estelares más\n prominentes del cielo. El cúmulo, dominado por brillantes estrellas\n azules, puede ser visto a ojo desnudo en un cielo oscuro en la cola\n de la constelación del Escorpión (Scorpius).Contiene unas 100\n estrellas en total, tiene una edad aproximada de 200 millones de\n años, mide 25 años luz de ancho, y se encuentra a unos 1000 años luz\n de distancia."@es ] .
+	term:le_50L3kQeHJoFUDvDI56td51_noun_sense ontolex:usage [ rdf:value "M7 es uno de los cúmulos abiertos estelares más\n prominentes del cielo. El cúmulo, dominado por brillantes estrellas\n azules, puede ser visto a ojo desnudo en un cielo oscuro en la cola\n de la constelación del Escorpión (Scorpius).Contiene unas 100\n estrellas en total, tiene una edad aproximada de 200 millones de\n años, mide 25 años luz de ancho, y se encuentra a unos 1000 años luz\n de distancia."@es ; dct:source <http://observatorio.info/2009/11/m7-cumulo-abierto-en-scorpius-2/> ] .
 	:lexicon_es lime:entry term:le_4JTAodwOtFifAuMAprK88V_noun .
 	term:le_4JTAodwOtFifAuMAprK88V_noun rdf:type ontolex:LexicalEntry .
 	term:le_4JTAodwOtFifAuMAprK88V_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1382,7 +1382,7 @@ INSERT DATA {
 	term:le_4JTAodwOtFifAuMAprK88V_noun ontolex:sense term:le_4JTAodwOtFifAuMAprK88V_noun_sense .
 	term:le_4JTAodwOtFifAuMAprK88V_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_4JTAodwOtFifAuMAprK88V_noun_sense ontolex:reference conc:concept_c8 .
-	term:le_4JTAodwOtFifAuMAprK88V_noun_sense ontolex:usage [ dct:source <http://www.astromia.com/universo/cumulos.htm> ; rdf:value "Los cúmulos de estrellas se clasifican en dos\n grupos: cúmulos abiertos, que no poseen forma definida, y cúmulos\n globulares, que son esféricos o casi esféricos."@es ] .
+	term:le_4JTAodwOtFifAuMAprK88V_noun_sense ontolex:usage [ rdf:value "Los cúmulos de estrellas se clasifican en dos\n grupos: cúmulos abiertos, que no poseen forma definida, y cúmulos\n globulares, que son esféricos o casi esféricos."@es ; dct:source <http://www.astromia.com/universo/cumulos.htm> ] .
 	:lexicon_es lime:entry term:le_7AsoFWThjcFKNDdVfZgK8z_noun .
 	term:le_7AsoFWThjcFKNDdVfZgK8z_noun rdf:type ontolex:LexicalEntry .
 	term:le_7AsoFWThjcFKNDdVfZgK8z_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1395,7 +1395,7 @@ INSERT DATA {
 	term:le_7AsoFWThjcFKNDdVfZgK8z_noun ontolex:sense term:le_7AsoFWThjcFKNDdVfZgK8z_noun_sense .
 	term:le_7AsoFWThjcFKNDdVfZgK8z_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_7AsoFWThjcFKNDdVfZgK8z_noun_sense ontolex:reference conc:concept_c11 .
-	term:le_7AsoFWThjcFKNDdVfZgK8z_noun_sense ontolex:usage [ dct:source <http://copublications.greenfacts.org/es/camas-solares/> ; rdf:value "Los usuarios de camas solares se someten a dosis\n considerables de radiaciones UV artificiales para conseguir un\n bronceado complementario al obtenido al tomar el sol."@es ] .
+	term:le_7AsoFWThjcFKNDdVfZgK8z_noun_sense ontolex:usage [ rdf:value "Los usuarios de camas solares se someten a dosis\n considerables de radiaciones UV artificiales para conseguir un\n bronceado complementario al obtenido al tomar el sol."@es ; dct:source <http://copublications.greenfacts.org/es/camas-solares/> ] .
 	:lexicon_es lime:entry term:le_6oI4v5VErPUgRYzxcK8ag6_noun .
 	term:le_6oI4v5VErPUgRYzxcK8ag6_noun rdf:type ontolex:LexicalEntry .
 	term:le_6oI4v5VErPUgRYzxcK8ag6_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1407,7 +1407,7 @@ INSERT DATA {
 	term:le_6oI4v5VErPUgRYzxcK8ag6_noun ontolex:sense term:le_6oI4v5VErPUgRYzxcK8ag6_noun_sense .
 	term:le_6oI4v5VErPUgRYzxcK8ag6_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_6oI4v5VErPUgRYzxcK8ag6_noun_sense ontolex:reference conc:concept_c12 .
-	term:le_6oI4v5VErPUgRYzxcK8ag6_noun_sense ontolex:usage [ dct:source <http://teleformacion.edu.aytolacoruna.es/FISICA/document/teoria/A_Franco/elecmagnet/magnetico/cMagnetico.html> ; rdf:value "El campo magnético es producido por la corriente\n eléctrica que circula por un conductor."@es ] .
+	term:le_6oI4v5VErPUgRYzxcK8ag6_noun_sense ontolex:usage [ rdf:value "El campo magnético es producido por la corriente\n eléctrica que circula por un conductor."@es ; dct:source <http://teleformacion.edu.aytolacoruna.es/FISICA/document/teoria/A_Franco/elecmagnet/magnetico/cMagnetico.html> ] .
 	:lexicon_es lime:entry term:le_3j8NXYP7ru7IEkZEBBv9Fm_noun .
 	term:le_3j8NXYP7ru7IEkZEBBv9Fm_noun rdf:type ontolex:LexicalEntry .
 	term:le_3j8NXYP7ru7IEkZEBBv9Fm_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1420,7 +1420,7 @@ INSERT DATA {
 	term:le_3j8NXYP7ru7IEkZEBBv9Fm_noun ontolex:sense term:le_3j8NXYP7ru7IEkZEBBv9Fm_noun_sense .
 	term:le_3j8NXYP7ru7IEkZEBBv9Fm_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_3j8NXYP7ru7IEkZEBBv9Fm_noun_sense ontolex:reference conc:concept_c9 .
-	term:le_3j8NXYP7ru7IEkZEBBv9Fm_noun_sense ontolex:usage [ dct:source <http://www.windows.ucar.edu/tour/link=/the_universe/Milkyway.sp.html> ; rdf:value "La galaxia Vía Láctea es una galaxia espiral que\n es nuestro hogar, al igual que el de otras 100 mil millones\n estrellas."@es ] .
+	term:le_3j8NXYP7ru7IEkZEBBv9Fm_noun_sense ontolex:usage [ rdf:value "La galaxia Vía Láctea es una galaxia espiral que\n es nuestro hogar, al igual que el de otras 100 mil millones\n estrellas."@es ; dct:source <http://www.windows.ucar.edu/tour/link=/the_universe/Milkyway.sp.html> ] .
 	:lexicon_es lime:entry term:le_3j7QZ0QbiOYjiKRO2hDck0_noun .
 	term:le_3j7QZ0QbiOYjiKRO2hDck0_noun rdf:type ontolex:LexicalEntry .
 	term:le_3j7QZ0QbiOYjiKRO2hDck0_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1433,7 +1433,7 @@ INSERT DATA {
 	term:le_3j7QZ0QbiOYjiKRO2hDck0_noun ontolex:sense term:le_3j7QZ0QbiOYjiKRO2hDck0_noun_sense .
 	term:le_3j7QZ0QbiOYjiKRO2hDck0_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_3j7QZ0QbiOYjiKRO2hDck0_noun_sense ontolex:reference conc:concept_c15 .
-	term:le_3j7QZ0QbiOYjiKRO2hDck0_noun_sense ontolex:usage [ dct:source <http://www.astromia.com/universo/dobles.htm> ; rdf:value "Una estrella doble es una pareja de estrellas\n que se mantienen unidas por la fuerza de la gravitación y giran en\n torno a su centro común."@es ] .
+	term:le_3j7QZ0QbiOYjiKRO2hDck0_noun_sense ontolex:usage [ rdf:value "Una estrella doble es una pareja de estrellas\n que se mantienen unidas por la fuerza de la gravitación y giran en\n torno a su centro común."@es ; dct:source <http://www.astromia.com/universo/dobles.htm> ] .
 	:lexicon_es lime:entry term:le_4VFoNCE2d1qdHAKwETjJYi_noun .
 	term:le_4VFoNCE2d1qdHAKwETjJYi_noun rdf:type ontolex:LexicalEntry .
 	term:le_4VFoNCE2d1qdHAKwETjJYi_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1445,7 +1445,7 @@ INSERT DATA {
 	term:le_4VFoNCE2d1qdHAKwETjJYi_noun ontolex:sense term:le_4VFoNCE2d1qdHAKwETjJYi_noun_sense .
 	term:le_4VFoNCE2d1qdHAKwETjJYi_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_4VFoNCE2d1qdHAKwETjJYi_noun_sense ontolex:reference conc:concept_c4 .
-	term:le_4VFoNCE2d1qdHAKwETjJYi_noun_sense ontolex:usage [ dct:source <http://francisthemulenews.wordpress.com/2009/02/21/el-mayor-brote-de-rayos-gamma-grb-080916c-acerca-la-gravedad-cuantica-al-mundo-de-planck/> ; rdf:value "John Ellis (entrevistado por Punset en su\n despacho en el CERN en un programa de Redes) y sus colaboradores\n mostraron cómo utilizar las propiedades de los grandes brotes de\n rayos gamma (gamma-ray bursters o GRBs) para responder a esta\n cuestión."@es ] .
+	term:le_4VFoNCE2d1qdHAKwETjJYi_noun_sense ontolex:usage [ rdf:value "John Ellis (entrevistado por Punset en su\n despacho en el CERN en un programa de Redes) y sus colaboradores\n mostraron cómo utilizar las propiedades de los grandes brotes de\n rayos gamma (gamma-ray bursters o GRBs) para responder a esta\n cuestión."@es ; dct:source <http://francisthemulenews.wordpress.com/2009/02/21/el-mayor-brote-de-rayos-gamma-grb-080916c-acerca-la-gravedad-cuantica-al-mundo-de-planck/> ] .
 	:lexicon_es lime:entry term:le_5HCVUT5ZthWj2DtBDDmUq4_noun .
 	term:le_5HCVUT5ZthWj2DtBDDmUq4_noun rdf:type ontolex:LexicalEntry .
 	term:le_5HCVUT5ZthWj2DtBDDmUq4_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1458,7 +1458,7 @@ INSERT DATA {
 	term:le_5HCVUT5ZthWj2DtBDDmUq4_noun ontolex:sense term:le_5HCVUT5ZthWj2DtBDDmUq4_noun_sense .
 	term:le_5HCVUT5ZthWj2DtBDDmUq4_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_5HCVUT5ZthWj2DtBDDmUq4_noun_sense ontolex:reference conc:concept_c30 .
-	term:le_5HCVUT5ZthWj2DtBDDmUq4_noun_sense ontolex:usage [ dct:source <http://www.atlasoftheuniverse.com/espanol/darknebs.html> ; rdf:value "Aqui hay un mapa que muestra las regiones de\n nebulosas oscuras que estan en un radio de 2000 años luz."@es ] .
+	term:le_5HCVUT5ZthWj2DtBDDmUq4_noun_sense ontolex:usage [ rdf:value "Aqui hay un mapa que muestra las regiones de\n nebulosas oscuras que estan en un radio de 2000 años luz."@es ; dct:source <http://www.atlasoftheuniverse.com/espanol/darknebs.html> ] .
 	:lexicon_es lime:entry term:le_4PGxN3x4ksnP3UsEiDcPj_noun .
 	term:le_4PGxN3x4ksnP3UsEiDcPj_noun rdf:type ontolex:LexicalEntry .
 	term:le_4PGxN3x4ksnP3UsEiDcPj_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1470,7 +1470,7 @@ INSERT DATA {
 	term:le_4PGxN3x4ksnP3UsEiDcPj_noun ontolex:sense term:le_4PGxN3x4ksnP3UsEiDcPj_noun_sense .
 	term:le_4PGxN3x4ksnP3UsEiDcPj_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_4PGxN3x4ksnP3UsEiDcPj_noun_sense ontolex:reference conc:concept_c32 .
-	term:le_4PGxN3x4ksnP3UsEiDcPj_noun_sense ontolex:usage [ dct:source <http://www.rtve.es/noticias/20100301/imagen-unica-estrella-neutrones-cazada-canarias/321412.shtml> ; rdf:value "El Gran Telescopio Canarias (GTC), instalado en\n el Observatorio del Roque de los Muchachos (La Palma), ha obtenido\n imágenes de una profundidad \"sin precedentes\" de una estrella de\n neutrones del tipo magnetar, de las que se conocen seis, según ha\n informado el Instituto de Astrofísica de Canarias (IAC)."@es ] .
+	term:le_4PGxN3x4ksnP3UsEiDcPj_noun_sense ontolex:usage [ rdf:value "El Gran Telescopio Canarias (GTC), instalado en\n el Observatorio del Roque de los Muchachos (La Palma), ha obtenido\n imágenes de una profundidad \"sin precedentes\" de una estrella de\n neutrones del tipo magnetar, de las que se conocen seis, según ha\n informado el Instituto de Astrofísica de Canarias (IAC)."@es ; dct:source <http://www.rtve.es/noticias/20100301/imagen-unica-estrella-neutrones-cazada-canarias/321412.shtml> ] .
 	:lexicon_es lime:entry term:le_6fpKZJCdHa523F6Tc8PQlM_noun .
 	term:le_6fpKZJCdHa523F6Tc8PQlM_noun rdf:type ontolex:LexicalEntry .
 	term:le_6fpKZJCdHa523F6Tc8PQlM_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1482,7 +1482,7 @@ INSERT DATA {
 	term:le_6fpKZJCdHa523F6Tc8PQlM_noun ontolex:sense term:le_6fpKZJCdHa523F6Tc8PQlM_noun_sense .
 	term:le_6fpKZJCdHa523F6Tc8PQlM_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_6fpKZJCdHa523F6Tc8PQlM_noun_sense ontolex:reference conc:concept_c33 .
-	term:le_6fpKZJCdHa523F6Tc8PQlM_noun_sense ontolex:usage [ dct:source <http://html.rincondelvago.com/agujeros-negros_5.html> ; rdf:value "Descubrió una masa (aproximadamente 1.5 veces la\n masa del Sol) en la que una estrella fría no podría soportar su\n gravedad. Esto es lo que se conoce como el límite de\n Chandrasekhar."@es ] .
+	term:le_6fpKZJCdHa523F6Tc8PQlM_noun_sense ontolex:usage [ rdf:value "Descubrió una masa (aproximadamente 1.5 veces la\n masa del Sol) en la que una estrella fría no podría soportar su\n gravedad. Esto es lo que se conoce como el límite de\n Chandrasekhar."@es ; dct:source <http://html.rincondelvago.com/agujeros-negros_5.html> ] .
 	:lexicon_es lime:entry term:le_6iDZ554IXgPCy3aJ7kJGwf_noun .
 	term:le_6iDZ554IXgPCy3aJ7kJGwf_noun rdf:type ontolex:LexicalEntry .
 	term:le_6iDZ554IXgPCy3aJ7kJGwf_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1495,7 +1495,7 @@ INSERT DATA {
 	term:le_6iDZ554IXgPCy3aJ7kJGwf_noun ontolex:sense term:le_6iDZ554IXgPCy3aJ7kJGwf_noun_sense .
 	term:le_6iDZ554IXgPCy3aJ7kJGwf_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_6iDZ554IXgPCy3aJ7kJGwf_noun_sense ontolex:reference conc:concept_c41 .
-	term:le_6iDZ554IXgPCy3aJ7kJGwf_noun_sense ontolex:usage [ dct:source <http://www.emiliosilveravazquez.com/glosario.php?letra=d> ; rdf:value "Es la principal responsable de la resistencia al\n colapso gravitacional de las enanas blancas (degeneración de\n electrones) y de las estrellas de neutrones (degeneración de\n neutrones)."@es ] .
+	term:le_6iDZ554IXgPCy3aJ7kJGwf_noun_sense ontolex:usage [ rdf:value "Es la principal responsable de la resistencia al\n colapso gravitacional de las enanas blancas (degeneración de\n electrones) y de las estrellas de neutrones (degeneración de\n neutrones)."@es ; dct:source <http://www.emiliosilveravazquez.com/glosario.php?letra=d> ] .
 	:lexicon_es lime:entry term:le_6kobDfSeWz3U7By5vJkzIa_noun .
 	term:le_6kobDfSeWz3U7By5vJkzIa_noun rdf:type ontolex:LexicalEntry .
 	term:le_6kobDfSeWz3U7By5vJkzIa_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1507,7 +1507,7 @@ INSERT DATA {
 	term:le_6kobDfSeWz3U7By5vJkzIa_noun ontolex:sense term:le_6kobDfSeWz3U7By5vJkzIa_noun_sense .
 	term:le_6kobDfSeWz3U7By5vJkzIa_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_6kobDfSeWz3U7By5vJkzIa_noun_sense ontolex:reference conc:concept_c44 .
-	term:le_6kobDfSeWz3U7By5vJkzIa_noun_sense ontolex:usage [ dct:source <http://feinstein.com.ar/Composicion.html> ; rdf:value "También debe tenerse en cuenta una tercera\n reacción de gran importancia, denominada proceso triple\n alfa."@es ] .
+	term:le_6kobDfSeWz3U7By5vJkzIa_noun_sense ontolex:usage [ rdf:value "También debe tenerse en cuenta una tercera\n reacción de gran importancia, denominada proceso triple\n alfa."@es ; dct:source <http://feinstein.com.ar/Composicion.html> ] .
 	:lexicon_es lime:entry term:le_1GwZMBVSRTeSesqnjY782c_noun .
 	term:le_1GwZMBVSRTeSesqnjY782c_noun rdf:type ontolex:LexicalEntry .
 	term:le_1GwZMBVSRTeSesqnjY782c_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1519,7 +1519,7 @@ INSERT DATA {
 	term:le_1GwZMBVSRTeSesqnjY782c_noun ontolex:sense term:le_1GwZMBVSRTeSesqnjY782c_noun_sense .
 	term:le_1GwZMBVSRTeSesqnjY782c_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_1GwZMBVSRTeSesqnjY782c_noun_sense ontolex:reference conc:concept_c31 .
-	term:le_1GwZMBVSRTeSesqnjY782c_noun_sense ontolex:usage [ dct:source <http://www.astrofotos.com.es/2008/11/nebulosa-de-la-cabeza-de-bruja.html> ; rdf:value "Como el propio nombre implica, esta nebulosa de\n reflexión asociada con la estrella Rigel, se asemeja a una vieja\n arpía de un cuento de hadas."@es ] .
+	term:le_1GwZMBVSRTeSesqnjY782c_noun_sense ontolex:usage [ rdf:value "Como el propio nombre implica, esta nebulosa de\n reflexión asociada con la estrella Rigel, se asemeja a una vieja\n arpía de un cuento de hadas."@es ; dct:source <http://www.astrofotos.com.es/2008/11/nebulosa-de-la-cabeza-de-bruja.html> ] .
 	:lexicon_es lime:entry term:le_2aKen42bxmTU3sWjam2Sk8_noun .
 	term:le_2aKen42bxmTU3sWjam2Sk8_noun rdf:type ontolex:LexicalEntry .
 	term:le_2aKen42bxmTU3sWjam2Sk8_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1531,7 +1531,7 @@ INSERT DATA {
 	term:le_2aKen42bxmTU3sWjam2Sk8_noun ontolex:sense term:le_2aKen42bxmTU3sWjam2Sk8_noun_sense .
 	term:le_2aKen42bxmTU3sWjam2Sk8_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_2aKen42bxmTU3sWjam2Sk8_noun_sense ontolex:reference conc:concept_c39 .
-	term:le_2aKen42bxmTU3sWjam2Sk8_noun_sense ontolex:usage [ dct:source <http://www.austrinus.com/index.php?option=com_content&view=article&id=157&Itemid=112> ; rdf:value "Estas estrellas son aún más densas que las\n enanas blancas, y más pequeñas. Se mantienen por un proceso de\n \"degeneración de neutrones\" o \"repulsión de neutrones\"."@es ] .
+	term:le_2aKen42bxmTU3sWjam2Sk8_noun_sense ontolex:usage [ rdf:value "Estas estrellas son aún más densas que las\n enanas blancas, y más pequeñas. Se mantienen por un proceso de\n \"degeneración de neutrones\" o \"repulsión de neutrones\"."@es ; dct:source <http://www.austrinus.com/index.php?option=com_content&view=article&id=157&Itemid=112> ] .
 	:lexicon_es lime:entry term:le_prgm77PjiUJyTZJf9y7Xa_noun .
 	term:le_prgm77PjiUJyTZJf9y7Xa_noun rdf:type ontolex:LexicalEntry .
 	term:le_prgm77PjiUJyTZJf9y7Xa_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1544,7 +1544,7 @@ INSERT DATA {
 	term:le_prgm77PjiUJyTZJf9y7Xa_noun ontolex:sense term:le_prgm77PjiUJyTZJf9y7Xa_noun_sense .
 	term:le_prgm77PjiUJyTZJf9y7Xa_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_prgm77PjiUJyTZJf9y7Xa_noun_sense ontolex:reference conc:concept_c15 .
-	term:le_prgm77PjiUJyTZJf9y7Xa_noun_sense ontolex:usage [ dct:source <http://www.astroelche.es/blog/index.php?blog=2&title=astronomos-capturam-la-explosion-de-una-&more=1&c=1&tb=1&pb=1> ; rdf:value "La explosión de una estrella binaria dentro de\n una nebulosa planetaria ha sido capturado por un equipo dirigido por\n investermSecadores del University College of London UCL - es un\n acontecimiento que no ha sido presenciado hace más de 100\n años."@es ] .
+	term:le_prgm77PjiUJyTZJf9y7Xa_noun_sense ontolex:usage [ rdf:value "La explosión de una estrella binaria dentro de\n una nebulosa planetaria ha sido capturado por un equipo dirigido por\n investermSecadores del University College of London UCL - es un\n acontecimiento que no ha sido presenciado hace más de 100\n años."@es ; dct:source <http://www.astroelche.es/blog/index.php?blog=2&title=astronomos-capturam-la-explosion-de-una-&more=1&c=1&tb=1&pb=1> ] .
 	:lexicon_es lime:entry term:le_6wjq1FAc40310IO8iZc2qR_noun .
 	term:le_6wjq1FAc40310IO8iZc2qR_noun rdf:type ontolex:LexicalEntry .
 	term:le_6wjq1FAc40310IO8iZc2qR_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1557,7 +1557,7 @@ INSERT DATA {
 	term:le_6wjq1FAc40310IO8iZc2qR_noun ontolex:sense term:le_6wjq1FAc40310IO8iZc2qR_noun_sense .
 	term:le_6wjq1FAc40310IO8iZc2qR_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_6wjq1FAc40310IO8iZc2qR_noun_sense ontolex:reference conc:concept_c35 .
-	term:le_6wjq1FAc40310IO8iZc2qR_noun_sense ontolex:usage [ dct:source <http://www.microsiervos.com/archivo/ciencia/agujeros-negros-y-el-radio-de-schwarzschild.html> ; rdf:value "Me pareció muy interesante este vídeo del\n proyecto Sixty Symbols de la Universidad de Nottingham en el que\n explican de forma divulgativa qué es el radio de Schwarzschild.\n Básicamente es el radio de un agujero negro."@es ] .
+	term:le_6wjq1FAc40310IO8iZc2qR_noun_sense ontolex:usage [ rdf:value "Me pareció muy interesante este vídeo del\n proyecto Sixty Symbols de la Universidad de Nottingham en el que\n explican de forma divulgativa qué es el radio de Schwarzschild.\n Básicamente es el radio de un agujero negro."@es ; dct:source <http://www.microsiervos.com/archivo/ciencia/agujeros-negros-y-el-radio-de-schwarzschild.html> ] .
 	:lexicon_es lime:entry term:le_oiLqK0LGahW5N5fVYFpdO_noun .
 	term:le_oiLqK0LGahW5N5fVYFpdO_noun rdf:type ontolex:LexicalEntry .
 	term:le_oiLqK0LGahW5N5fVYFpdO_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1570,7 +1570,7 @@ INSERT DATA {
 	term:le_oiLqK0LGahW5N5fVYFpdO_noun ontolex:sense term:le_oiLqK0LGahW5N5fVYFpdO_noun_sense .
 	term:le_oiLqK0LGahW5N5fVYFpdO_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_oiLqK0LGahW5N5fVYFpdO_noun_sense ontolex:reference conc:concept_c41 .
-	term:le_oiLqK0LGahW5N5fVYFpdO_noun_sense ontolex:usage [ dct:source <http://www.portalplanetasedna.com.ar/estrella2.htm> ; rdf:value "Las fuerzas gravitatorias actuantes en un cuerpo\n celeste masivo pueden comprimir su materia hasta un estado de\n degeneración electrónica y no más, ya que el principio de exclusión\n impide a dos electrones ocupar el mismo nivel de energía."@es ] .
+	term:le_oiLqK0LGahW5N5fVYFpdO_noun_sense ontolex:usage [ rdf:value "Las fuerzas gravitatorias actuantes en un cuerpo\n celeste masivo pueden comprimir su materia hasta un estado de\n degeneración electrónica y no más, ya que el principio de exclusión\n impide a dos electrones ocupar el mismo nivel de energía."@es ; dct:source <http://www.portalplanetasedna.com.ar/estrella2.htm> ] .
 	:lexicon_es lime:entry term:le_1CmPJ9joyk1AJ2jFqXn0IO_noun .
 	term:le_1CmPJ9joyk1AJ2jFqXn0IO_noun rdf:type ontolex:LexicalEntry .
 	term:le_1CmPJ9joyk1AJ2jFqXn0IO_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1584,7 +1584,7 @@ INSERT DATA {
 	term:le_1CmPJ9joyk1AJ2jFqXn0IO_noun ontolex:sense term:le_1CmPJ9joyk1AJ2jFqXn0IO_noun_sense .
 	term:le_1CmPJ9joyk1AJ2jFqXn0IO_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_1CmPJ9joyk1AJ2jFqXn0IO_noun_sense ontolex:reference conc:concept_c38 .
-	term:le_1CmPJ9joyk1AJ2jFqXn0IO_noun_sense ontolex:usage [ dct:source <http://www.aavbae.net/bol17/evolucion.php> ; rdf:value "En las estrellas de gran masa, que queman su\n hidrógeno mucho más rápidamente, predomina el ciclo del\n carbono-nitrógeno (CN)."@es ] .
+	term:le_1CmPJ9joyk1AJ2jFqXn0IO_noun_sense ontolex:usage [ rdf:value "En las estrellas de gran masa, que queman su\n hidrógeno mucho más rápidamente, predomina el ciclo del\n carbono-nitrógeno (CN)."@es ; dct:source <http://www.aavbae.net/bol17/evolucion.php> ] .
 	:lexicon_es lime:entry term:le_5qN5Ut9vSAb68lzWD2vJ0s_adjective .
 	term:le_5qN5Ut9vSAb68lzWD2vJ0s_adjective rdf:type ontolex:LexicalEntry .
 	term:le_5qN5Ut9vSAb68lzWD2vJ0s_adjective lexinfo:partOfSpeech lexinfo:adjective .
@@ -1596,7 +1596,7 @@ INSERT DATA {
 	term:le_5qN5Ut9vSAb68lzWD2vJ0s_adjective ontolex:sense term:le_5qN5Ut9vSAb68lzWD2vJ0s_adjective_sense .
 	term:le_5qN5Ut9vSAb68lzWD2vJ0s_adjective_sense rdf:type ontolex:LexicalSense .
 	term:le_5qN5Ut9vSAb68lzWD2vJ0s_adjective_sense ontolex:reference conc:concept_c6 .
-	term:le_5qN5Ut9vSAb68lzWD2vJ0s_adjective_sense ontolex:usage [ dct:source <http://celestia.albacete.org/celestia/celestia/stars/secu5.htm> ; rdf:value "Por ejemplo, nuestro sol es una estrella de\n secuencia principal regular de tamaño pequeño."@es ] .
+	term:le_5qN5Ut9vSAb68lzWD2vJ0s_adjective_sense ontolex:usage [ rdf:value "Por ejemplo, nuestro sol es una estrella de\n secuencia principal regular de tamaño pequeño."@es ; dct:source <http://celestia.albacete.org/celestia/celestia/stars/secu5.htm> ] .
 	:lexicon_es lime:entry term:le_01j1ru7HksI6tV74p05Zfr_noun .
 	term:le_01j1ru7HksI6tV74p05Zfr_noun rdf:type ontolex:LexicalEntry .
 	term:le_01j1ru7HksI6tV74p05Zfr_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1608,7 +1608,7 @@ INSERT DATA {
 	term:le_01j1ru7HksI6tV74p05Zfr_noun ontolex:sense term:le_01j1ru7HksI6tV74p05Zfr_noun_sense .
 	term:le_01j1ru7HksI6tV74p05Zfr_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_01j1ru7HksI6tV74p05Zfr_noun_sense ontolex:reference conc:concept_c45 .
-	term:le_01j1ru7HksI6tV74p05Zfr_noun_sense ontolex:usage [ dct:source <http://celestia.albacete.org/celestia/celestia/stars/enana12.htm> ; rdf:value "No se conoce, todavía, la cantidad de Enanas\n Negras que pueblan en realidad nuestro Universo. El tiempo estimado\n para que una Enana Blanca se enfríe lo suficiente para volverse\n Negra, se estima entre diez y cien mil millones de años, y nuestro\n Universo no es aún lo bastante viejo, nada más que para que existan\n algunas enanas blancas que se han enfriado lo suficiente para\n alcanzar la etapa de enanas negras."@es ] .
+	term:le_01j1ru7HksI6tV74p05Zfr_noun_sense ontolex:usage [ rdf:value "No se conoce, todavía, la cantidad de Enanas\n Negras que pueblan en realidad nuestro Universo. El tiempo estimado\n para que una Enana Blanca se enfríe lo suficiente para volverse\n Negra, se estima entre diez y cien mil millones de años, y nuestro\n Universo no es aún lo bastante viejo, nada más que para que existan\n algunas enanas blancas que se han enfriado lo suficiente para\n alcanzar la etapa de enanas negras."@es ; dct:source <http://celestia.albacete.org/celestia/celestia/stars/enana12.htm> ] .
 	:lexicon_es lime:entry term:le_5BChz4gcGX9oQ7IZcIG60d_noun .
 	term:le_5BChz4gcGX9oQ7IZcIG60d_noun rdf:type ontolex:LexicalEntry .
 	term:le_5BChz4gcGX9oQ7IZcIG60d_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1620,7 +1620,7 @@ INSERT DATA {
 	term:le_5BChz4gcGX9oQ7IZcIG60d_noun ontolex:sense term:le_5BChz4gcGX9oQ7IZcIG60d_noun_sense .
 	term:le_5BChz4gcGX9oQ7IZcIG60d_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_5BChz4gcGX9oQ7IZcIG60d_noun_sense ontolex:reference conc:concept_c25 .
-	term:le_5BChz4gcGX9oQ7IZcIG60d_noun_sense ontolex:usage [ dct:source <http://www.astrosurf.com/astronosur/estrellas.htm> ; rdf:value "En el gráfico superior se muestra la intensidad\n de las líneas espectrales según la temperatura de la estrella (tipo\n espectral)"@es ] .
+	term:le_5BChz4gcGX9oQ7IZcIG60d_noun_sense ontolex:usage [ rdf:value "En el gráfico superior se muestra la intensidad\n de las líneas espectrales según la temperatura de la estrella (tipo\n espectral)"@es ; dct:source <http://www.astrosurf.com/astronosur/estrellas.htm> ] .
 	:lexicon_es lime:entry term:le_2MM9ePpdiEUDMbbOw4pv1f_noun .
 	term:le_2MM9ePpdiEUDMbbOw4pv1f_noun rdf:type ontolex:LexicalEntry .
 	term:le_2MM9ePpdiEUDMbbOw4pv1f_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1632,7 +1632,7 @@ INSERT DATA {
 	term:le_2MM9ePpdiEUDMbbOw4pv1f_noun ontolex:sense term:le_2MM9ePpdiEUDMbbOw4pv1f_noun_sense .
 	term:le_2MM9ePpdiEUDMbbOw4pv1f_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_2MM9ePpdiEUDMbbOw4pv1f_noun_sense ontolex:reference conc:concept_c34 .
-	term:le_2MM9ePpdiEUDMbbOw4pv1f_noun_sense ontolex:usage [ dct:source <http://www.emiliosilveravazquez.com/glosario.php?letra=d> ; rdf:value "Es la principal responsable de la resistencia al\n colapso gravitacional de las enanas blancas (degeneración de\n electrones) y de las estrellas de neutrones (degeneración de\n neutrones)."@es ] .
+	term:le_2MM9ePpdiEUDMbbOw4pv1f_noun_sense ontolex:usage [ rdf:value "Es la principal responsable de la resistencia al\n colapso gravitacional de las enanas blancas (degeneración de\n electrones) y de las estrellas de neutrones (degeneración de\n neutrones)."@es ; dct:source <http://www.emiliosilveravazquez.com/glosario.php?letra=d> ] .
 	:lexicon_es lime:entry term:le_7liEMmF2l9qmXxIiddqEUf_noun .
 	term:le_7liEMmF2l9qmXxIiddqEUf_noun rdf:type ontolex:LexicalEntry .
 	term:le_7liEMmF2l9qmXxIiddqEUf_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1644,7 +1644,7 @@ INSERT DATA {
 	term:le_7liEMmF2l9qmXxIiddqEUf_noun ontolex:sense term:le_7liEMmF2l9qmXxIiddqEUf_noun_sense .
 	term:le_7liEMmF2l9qmXxIiddqEUf_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_7liEMmF2l9qmXxIiddqEUf_noun_sense ontolex:reference conc:concept_c16 .
-	term:le_7liEMmF2l9qmXxIiddqEUf_noun_sense ontolex:usage [ dct:source <http://dialnet.unirioja.es/servlet/tesis?codigo=11651> ; rdf:value "Estado evolutivo y función inicial de masa de\n cúmulos jóvenes en la gran nube de Magallanes (estudio en el\n ultravioleta)."@es ] .
+	term:le_7liEMmF2l9qmXxIiddqEUf_noun_sense ontolex:usage [ rdf:value "Estado evolutivo y función inicial de masa de\n cúmulos jóvenes en la gran nube de Magallanes (estudio en el\n ultravioleta)."@es ; dct:source <http://dialnet.unirioja.es/servlet/tesis?codigo=11651> ] .
 	:lexicon_es lime:entry term:le_2vnlh21ryMtJXWxhlWEhAe_noun .
 	term:le_2vnlh21ryMtJXWxhlWEhAe_noun rdf:type ontolex:LexicalEntry .
 	term:le_2vnlh21ryMtJXWxhlWEhAe_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1657,7 +1657,7 @@ INSERT DATA {
 	term:le_2vnlh21ryMtJXWxhlWEhAe_noun ontolex:sense term:le_2vnlh21ryMtJXWxhlWEhAe_noun_sense .
 	term:le_2vnlh21ryMtJXWxhlWEhAe_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_2vnlh21ryMtJXWxhlWEhAe_noun_sense ontolex:reference conc:concept_c8 .
-	term:le_2vnlh21ryMtJXWxhlWEhAe_noun_sense ontolex:usage [ dct:source <http://www.astroseti.org/vernew.php?codigo=1117> ; rdf:value "“Es como encontrar un pez fuera del agua”, dice\n Ed Churchwell, profesor de astronomía de la Universidad de\n Wisconsin-Madison, quien con un equipo de científicos de UW-Madison,\n de la Universidad de Wyoming, de la Universidad de Boston, del\n Instituto de Ciencia Espacial de Boulder, Colorado, y del Centro de\n Ciencia Spitzer descubrieron este inusual cúmulo estelar con la\n ayuda del Telescopio Espacial Spitzer de la NASA."@es ] .
+	term:le_2vnlh21ryMtJXWxhlWEhAe_noun_sense ontolex:usage [ rdf:value "“Es como encontrar un pez fuera del agua”, dice\n Ed Churchwell, profesor de astronomía de la Universidad de\n Wisconsin-Madison, quien con un equipo de científicos de UW-Madison,\n de la Universidad de Wyoming, de la Universidad de Boston, del\n Instituto de Ciencia Espacial de Boulder, Colorado, y del Centro de\n Ciencia Spitzer descubrieron este inusual cúmulo estelar con la\n ayuda del Telescopio Espacial Spitzer de la NASA."@es ; dct:source <http://www.astroseti.org/vernew.php?codigo=1117> ] .
 	:lexicon_es lime:entry term:le_3ePlVVEr14xGIxar1PSOA1_noun .
 	term:le_3ePlVVEr14xGIxar1PSOA1_noun rdf:type ontolex:LexicalEntry .
 	term:le_3ePlVVEr14xGIxar1PSOA1_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1671,7 +1671,7 @@ INSERT DATA {
 	term:le_3ePlVVEr14xGIxar1PSOA1_noun ontolex:sense term:le_3ePlVVEr14xGIxar1PSOA1_noun_sense .
 	term:le_3ePlVVEr14xGIxar1PSOA1_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_3ePlVVEr14xGIxar1PSOA1_noun_sense ontolex:reference conc:concept_c38 .
-	term:le_3ePlVVEr14xGIxar1PSOA1_noun_sense ontolex:usage [ dct:source <http://eltamiz.com/2007/09/06/la-vida-privada-de-las-estrellas-las-entranas-de-una-estrella/> ; rdf:value "Existen dos formas fundamentales en las que una\n estrella fusiona hidrógeno para producir helio: la cadena\n protón-protón y el ciclo CNO."@es ] .
+	term:le_3ePlVVEr14xGIxar1PSOA1_noun_sense ontolex:usage [ rdf:value "Existen dos formas fundamentales en las que una\n estrella fusiona hidrógeno para producir helio: la cadena\n protón-protón y el ciclo CNO."@es ; dct:source <http://eltamiz.com/2007/09/06/la-vida-privada-de-las-estrellas-las-entranas-de-una-estrella/> ] .
 	:lexicon_es lime:entry term:le_3aojOcINCkmaYkBN2HICEO_noun .
 	term:le_3aojOcINCkmaYkBN2HICEO_noun rdf:type ontolex:LexicalEntry .
 	term:le_3aojOcINCkmaYkBN2HICEO_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -1684,7 +1684,7 @@ INSERT DATA {
 	term:le_3aojOcINCkmaYkBN2HICEO_noun ontolex:sense term:le_3aojOcINCkmaYkBN2HICEO_noun_sense .
 	term:le_3aojOcINCkmaYkBN2HICEO_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_3aojOcINCkmaYkBN2HICEO_noun_sense ontolex:reference conc:concept_c11 .
-	term:le_3aojOcINCkmaYkBN2HICEO_noun_sense ontolex:usage [ dct:source <http://www.windows.ucar.edu/tour/link=/physical_science/magnetism/em_ultraviolet.sp.html> ; rdf:value "La radiación ultravioleta se encuentra entre la\n luz visible y los rayos X del espectro electromagnético."@es ] .
+	term:le_3aojOcINCkmaYkBN2HICEO_noun_sense ontolex:usage [ rdf:value "La radiación ultravioleta se encuentra entre la\n luz visible y los rayos X del espectro electromagnético."@es ; dct:source <http://www.windows.ucar.edu/tour/link=/physical_science/magnetism/em_ultraviolet.sp.html> ] .
 
 	# [Add Metadata Processor] adding creator and date info
 

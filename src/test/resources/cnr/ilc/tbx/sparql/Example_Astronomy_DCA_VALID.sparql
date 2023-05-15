@@ -14,9 +14,9 @@ PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
 
-	:lexicon_en { lime:language "en" ; rdf:type lime:Lexicon } .
-	:lexicon_es { lime:language "es" ; rdf:type lime:Lexicon } .
-	:lexicon_zu { lime:language "zu" ; rdf:type lime:Lexicon } .
+	:lexicon_en { rdf:type lime:Lexicon ; lime:language "en" } .
+	:lexicon_es { rdf:type lime:Lexicon ; lime:language "es" } .
+	:lexicon_zu { rdf:type lime:Lexicon ; lime:language "zu" } .
 
 	# Concept section
 	conc:concept_c1 rdf:type skos:Concept .

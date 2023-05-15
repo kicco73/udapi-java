@@ -14,10 +14,10 @@ PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
 
-	:sf_opa4aSDlpMCpGKFg8OQJW { skos:prefLabel "Currency" ; rdf:type skos:ConceptScheme } .
-	:sf_krpCWEW7cxlH0Qa75sfpI { skos:prefLabel "Music" ; rdf:type skos:ConceptScheme } .
-	:lexicon_de { lime:language "de" ; rdf:type lime:Lexicon } .
-	:lexicon_en { lime:language "en" ; rdf:type lime:Lexicon } .
+	:sf_opa4aSDlpMCpGKFg8OQJW { rdf:type skos:ConceptScheme ; skos:prefLabel "Currency" } .
+	:sf_krpCWEW7cxlH0Qa75sfpI { rdf:type skos:ConceptScheme ; skos:prefLabel "Music" } .
+	:lexicon_de { rdf:type lime:Lexicon ; lime:language "de" } .
+	:lexicon_en { rdf:type lime:Lexicon ; lime:language "en" } .
 
 	# Concept section
 	conc:concept_C001 rdf:type skos:Concept .

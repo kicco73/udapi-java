@@ -14,10 +14,10 @@ PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
 
-	:sf_OdeYA0FHeFFB1DVUMqdMw { skos:prefLabel "e-mobility" ; rdf:type skos:ConceptScheme } .
-	:lexicon_en { lime:language "en" ; rdf:type lime:Lexicon } .
-	:lexicon_it { lime:language "it" ; rdf:type lime:Lexicon } .
-	:lexicon_fr { lime:language "fr" ; rdf:type lime:Lexicon } .
+	:sf_OdeYA0FHeFFB1DVUMqdMw { rdf:type skos:ConceptScheme ; skos:prefLabel "e-mobility" } .
+	:lexicon_en { rdf:type lime:Lexicon ; lime:language "en" } .
+	:lexicon_it { rdf:type lime:Lexicon ; lime:language "it" } .
+	:lexicon_fr { rdf:type lime:Lexicon ; lime:language "fr" } .
 
 	# Concept section
 	conc:concept_c1 rdf:type skos:Concept .

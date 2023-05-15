@@ -14,23 +14,23 @@ PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
 
-	:sf_OdeYA0FHeFFB1DVUMqdMw { skos:prefLabel "e-mobility" ; rdf:type skos:ConceptScheme } .
-	:sf_1gkE5ripjs1GT67xQzsF9A { skos:prefLabel "e-caz" ; rdf:type skos:ConceptScheme } .
-	:lexicon_en { lime:language "en" ; rdf:type lime:Lexicon } .
-	:lexicon_it { lime:language "it" ; rdf:type lime:Lexicon } .
-	:lexicon_fr { lime:language "fr" ; rdf:type lime:Lexicon } .
+	:sf_OdeYA0FHeFFB1DVUMqdMw { rdf:type skos:ConceptScheme ; skos:prefLabel "e-mobility" } .
+	:sf_1gkE5ripjs1GT67xQzsF9A { rdf:type skos:ConceptScheme ; skos:prefLabel "e-caz" } .
+	:lexicon_en { rdf:type lime:Lexicon ; lime:language "en" } .
+	:lexicon_it { rdf:type lime:Lexicon ; lime:language "it" } .
+	:lexicon_fr { rdf:type lime:Lexicon ; lime:language "fr" } .
 
 	# Concept section
 	conc:concept_c1 rdf:type skos:Concept .
 	conc:concept_c1 skos:prefLabel "c1" .
 	conc:concept_c1 skos:inScheme :sf_OdeYA0FHeFFB1DVUMqdMw .
-	conc:concept_c1 skos:definition [ dct:identifier <https://www.techtarget.com/whatis/definition/neighborhood-electric-vehicle-NEV> ; dct:source "TechTarget" ; rdf:value "A battery-electric car that is capable of\n traveling at a maximum speed of 25 miles per hour (mph) and has a maximum loaded weight of 3,000 lbs."@en ] .
-	conc:concept_c1 skos:definition [ dct:identifier <https://gdt.oqlf.gouv.qc.ca/ficheOqlf.aspx?Id_Fiche=2069944> ; dct:source "Office québécois de la langue française, 2002" ; rdf:value "Véhicule à deux places, activé par un moteur électrique à courant continu\n alimenté par des batteries au plomb rechargeables à partir d'une prise de courant résidentielle de 110 volts."@fr ] .
-	conc:concept_c1 skos:definition [ dct:identifier <https://it.wikipedia.org/wiki/Neighborhood_Electric_Vehicle> ; dct:source "Wikipedia" ; rdf:value "Un Neighborhood Electric Vehicle (NEV) è una denominazione USA per i veicoli elettrici di prossimità urbana che solitamente sono costruiti per avere una velocità non superiori a 50 km/h (70 km/h per categoria N1)\n e hanno un peso massimo caricato di circa 1.000 kg. I NEV rientrano nella classificazione dei quadricicli leggeri."@it ] .
+	conc:concept_c1 skos:definition [ rdf:value "A battery-electric car that is capable of\n traveling at a maximum speed of 25 miles per hour (mph) and has a maximum loaded weight of 3,000 lbs."@en ; dct:source "TechTarget" ; dct:identifier <https://www.techtarget.com/whatis/definition/neighborhood-electric-vehicle-NEV> ] .
+	conc:concept_c1 skos:definition [ rdf:value "Véhicule à deux places, activé par un moteur électrique à courant continu\n alimenté par des batteries au plomb rechargeables à partir d'une prise de courant résidentielle de 110 volts."@fr ; dct:source "Office québécois de la langue française, 2002" ; dct:identifier <https://gdt.oqlf.gouv.qc.ca/ficheOqlf.aspx?Id_Fiche=2069944> ] .
+	conc:concept_c1 skos:definition [ rdf:value "Un Neighborhood Electric Vehicle (NEV) è una denominazione USA per i veicoli elettrici di prossimità urbana che solitamente sono costruiti per avere una velocità non superiori a 50 km/h (70 km/h per categoria N1)\n e hanno un peso massimo caricato di circa 1.000 kg. I NEV rientrano nella classificazione dei quadricicli leggeri."@it ; dct:source "Wikipedia" ; dct:identifier <https://it.wikipedia.org/wiki/Neighborhood_Electric_Vehicle> ] .
 	conc:concept_c2 rdf:type skos:Concept .
 	conc:concept_c2 skos:prefLabel "c2" .
 	conc:concept_c2 skos:inScheme :sf_1gkE5ripjs1GT67xQzsF9A .
-	conc:concept_c2 skos:definition [ dct:identifier <https://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-fra.html?lang=fra&i=1&srchtxt=Véhicule+Électrique+Personnel&codom2nd_wet=1#resultrecs> ; dct:source "TERMIUM Plus" ; rdf:value "Véhicule entièrement électrique [conçu] spécifiquement pour transporter une seule personne sur de courtes distances."@fr ] .
+	conc:concept_c2 skos:definition [ rdf:value "Véhicule entièrement électrique [conçu] spécifiquement pour transporter une seule personne sur de courtes distances."@fr ; dct:source "TERMIUM Plus" ; dct:identifier <https://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-fra.html?lang=fra&i=1&srchtxt=Véhicule+Électrique+Personnel&codom2nd_wet=1#resultrecs> ] .
 
 	# Term section
 	:lexicon_en lime:entry term:le_3qBH7rT9OGlyXvod5zzJcT_noun .
@@ -46,7 +46,7 @@ INSERT DATA {
 	term:le_3qBH7rT9OGlyXvod5zzJcT_noun ontolex:sense term:le_3qBH7rT9OGlyXvod5zzJcT_noun_sense .
 	term:le_3qBH7rT9OGlyXvod5zzJcT_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_3qBH7rT9OGlyXvod5zzJcT_noun_sense ontolex:reference conc:concept_c1 .
-	term:le_3qBH7rT9OGlyXvod5zzJcT_noun_sense ontolex:usage [ dct:identifier <https://en.wikipedia.org/wiki/Neighborhood_Electric_Vehicle> ; dct:source "Wikipedia" ; rdf:value "A Neighborhood Electric Vehicle (NEV) is a U.S. category for battery electric vehicles that are usually built to have a top speed of 25 miles\n per hour (40 km/h), and have a maximum loaded weight of 3,000 lb (1,400 kg)."@en ] .
+	term:le_3qBH7rT9OGlyXvod5zzJcT_noun_sense ontolex:usage [ rdf:value "A Neighborhood Electric Vehicle (NEV) is a U.S. category for battery electric vehicles that are usually built to have a top speed of 25 miles\n per hour (40 km/h), and have a maximum loaded weight of 3,000 lb (1,400 kg)."@en ; dct:source "Wikipedia" ; dct:identifier <https://en.wikipedia.org/wiki/Neighborhood_Electric_Vehicle> ] .
 	:lexicon_en lime:entry term:le_47OMGlu0UAjWfjgVL05X0Q_noun .
 	term:le_47OMGlu0UAjWfjgVL05X0Q_noun rdf:type ontolex:LexicalEntry .
 	term:le_47OMGlu0UAjWfjgVL05X0Q_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -74,7 +74,7 @@ INSERT DATA {
 	term:le_161FnpgQej7gct2ziBVU9O_noun ontolex:sense term:le_161FnpgQej7gct2ziBVU9O_noun_sense .
 	term:le_161FnpgQej7gct2ziBVU9O_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_161FnpgQej7gct2ziBVU9O_noun_sense ontolex:reference conc:concept_c1 .
-	term:le_161FnpgQej7gct2ziBVU9O_noun_sense ontolex:usage [ dct:identifier <https://www.exelentia.it/veicoli-elettrici-urbani-nev/> ; dct:source "Exelentia" ; rdf:value "Mobilità in spazi chiusi, aree sensibili e protette? La risposta è NEV – Neighborhood\n Electric Vehicles, veicoli elettrici di prossimità urbana, idonei ad andare dove altri si fermano."@it ] .
+	term:le_161FnpgQej7gct2ziBVU9O_noun_sense ontolex:usage [ rdf:value "Mobilità in spazi chiusi, aree sensibili e protette? La risposta è NEV – Neighborhood\n Electric Vehicles, veicoli elettrici di prossimità urbana, idonei ad andare dove altri si fermano."@it ; dct:source "Exelentia" ; dct:identifier <https://www.exelentia.it/veicoli-elettrici-urbani-nev/> ] .
 	:lexicon_it lime:entry term:le_6iiJqZLFjjkxJQ1Un0CYai_noun .
 	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun rdf:type ontolex:LexicalEntry .
 	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -119,7 +119,7 @@ INSERT DATA {
 	term:le_5xeokIoIHPBPUJpqkiwIaY_noun ontolex:sense term:le_5xeokIoIHPBPUJpqkiwIaY_noun_sense .
 	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_sense ontolex:reference conc:concept_c1 .
-	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_sense ontolex:usage [ dct:identifier <https://definir-tech.com/vehicule-electrique-de-proximite-nev/> ; dct:source "Definir Tech" ; rdf:value "Un véhicule électrique de proximité (NEV) est une voiture électrique à batterie capable de se déplacer\n à une vitesse maximale de 25 miles par heure (mph) et dont le poids maximal en charge est de 3 000 livres."@fr ] .
+	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_sense ontolex:usage [ rdf:value "Un véhicule électrique de proximité (NEV) est une voiture électrique à batterie capable de se déplacer\n à une vitesse maximale de 25 miles par heure (mph) et dont le poids maximal en charge est de 3 000 livres."@fr ; dct:source "Definir Tech" ; dct:identifier <https://definir-tech.com/vehicule-electrique-de-proximite-nev/> ] .
 	:lexicon_fr lime:entry term:le_4RAB9Zskz180iQxtsAxhU2_noun .
 	term:le_4RAB9Zskz180iQxtsAxhU2_noun rdf:type ontolex:LexicalEntry .
 	term:le_4RAB9Zskz180iQxtsAxhU2_noun lexinfo:partOfSpeech lexinfo:noun .
@@ -134,7 +134,7 @@ INSERT DATA {
 	term:le_4RAB9Zskz180iQxtsAxhU2_noun ontolex:sense term:le_4RAB9Zskz180iQxtsAxhU2_noun_sense .
 	term:le_4RAB9Zskz180iQxtsAxhU2_noun_sense rdf:type ontolex:LexicalSense .
 	term:le_4RAB9Zskz180iQxtsAxhU2_noun_sense ontolex:reference conc:concept_c2 .
-	term:le_4RAB9Zskz180iQxtsAxhU2_noun_sense ontolex:usage [ dct:identifier <https://www.carbone4.com/decryptage-mobilite-recharge-electrique> ; dct:source "Carbone 4" ; rdf:value "C’est une solution alternative adaptée à l’usage peu fréquent du véhicule électrique personnel\n sur les longues distances et qui peut se révéler très vertueuse sur le plan environnemental"@fr ] .
+	term:le_4RAB9Zskz180iQxtsAxhU2_noun_sense ontolex:usage [ rdf:value "C’est une solution alternative adaptée à l’usage peu fréquent du véhicule électrique personnel\n sur les longues distances et qui peut se révéler très vertueuse sur le plan environnemental"@fr ; dct:source "Carbone 4" ; dct:identifier <https://www.carbone4.com/decryptage-mobilite-recharge-electrique> ] .
 	:lexicon_fr lime:entry term:le_4822mpTrFD9AuxWfM2f4xr_noun .
 	term:le_4822mpTrFD9AuxWfM2f4xr_noun rdf:type ontolex:LexicalEntry .
 	term:le_4822mpTrFD9AuxWfM2f4xr_noun lexinfo:partOfSpeech lexinfo:noun .
