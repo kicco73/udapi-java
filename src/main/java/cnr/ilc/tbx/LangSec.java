@@ -10,6 +10,7 @@ import cnr.ilc.sparql.TripleSerialiser;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
+import java.util.LinkedHashMap;
 import java.util.Map;
 
 public class LangSec {
@@ -34,7 +35,7 @@ public class LangSec {
 		if (source == null && externalCrossReference == null) {
 			concept.triples.addStringWithLanguage(FQName, "skos:definition", definition, language);
 		} else {
-			Map<String, String> object = new HashMap<>();
+			Map<String, String> object = new LinkedHashMap<>();
 			object.put("rdf:value", SPARQLFormatter.formatObjectWithLanguage(definition, language));
 		
 			if (source != null) 
@@ -43,7 +44,7 @@ public class LangSec {
 			if (externalCrossReference != null) 
 				object.put("dct:identifier", SPARQLFormatter.formatObjectWithUrlIfPossible(externalCrossReference));
 	
-			concept.triples.add(FQName, "skos:definition", object, language);
+			concept.triples.addObject(FQName, "skos:definition", object, language);
 		}
 	}
 

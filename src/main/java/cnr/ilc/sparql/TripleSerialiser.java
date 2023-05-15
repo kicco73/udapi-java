@@ -1,12 +1,16 @@
 package cnr.ilc.sparql;
 
 import java.util.Collection;
+import java.util.Collections;
 import java.util.Date;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Map;
+import java.util.Set;
 import java.util.Map.Entry;
+import java.util.stream.Collectors;
 
 import cnr.ilc.rut.utils.DateProvider;
 
@@ -51,13 +55,15 @@ public class TripleSerialiser {
 	}
 
 	public void add(String subject, String link, Map<String,String> anonObject, String language) {
-		String languageSpecific = features.getOrDefault(language, "");
-		String[] anonLinks = new String[anonObject.size()*2];
+
 		int count = 0;
+		String[] anonLinks = new String[anonObject.size()*2];
 		for (Entry<String,String> entry: anonObject.entrySet()) {
 			anonLinks[count++] = entry.getKey();
 			anonLinks[count++] = entry.getValue();
 		}
+
+		String languageSpecific = features.getOrDefault(language, "");
 		languageSpecific += SPARQLFormatter.formatAnonStatement(subject, link, anonLinks);
 		features.put(language, languageSpecific);
 	}

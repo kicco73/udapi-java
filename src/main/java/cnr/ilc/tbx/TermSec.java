@@ -9,7 +9,7 @@ import cnr.ilc.rut.RutException;
 import cnr.ilc.rut.utils.Logger;
 import cnr.ilc.sparql.SPARQLFormatter;
 
-import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
@@ -68,7 +68,7 @@ public class TermSec {
 		String context = Nodes.getTextOfTag(descripGrp, "context");
 
 		if (context != null) {
-			Map<String, String> object = new HashMap<>();
+			Map<String, String> object = new LinkedHashMap<>();
 			object.put("rdf:value", SPARQLFormatter.formatObjectWithLanguage(context, language));
 		
 			if (source != null) 
