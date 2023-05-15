@@ -6,11 +6,6 @@ package cnr.ilc.sparql;
 
 import java.net.MalformedURLException;
 import java.net.URL;
-import java.util.Collections;
-import java.util.Map;
-import java.util.SortedSet;
-import java.util.TreeSet;
-import java.util.Map.Entry;
 
 public class SPARQLFormatter {
 
@@ -37,13 +32,14 @@ public class SPARQLFormatter {
 		return object;
 	}
 
-	static private String flattenObject(Map<String, String> links) {
+	static private String formatMultipleObjects(String... links) {
 		String object = "";
-		int count = links.size();
-		SortedSet<String> keys = new TreeSet<>(links.keySet());
-		for (String key: keys) {
-			object += key + " " + links.get(key);
-			if (--count > 0) object += " ; ";
+
+		int count = 0;
+		
+		while(count < links.length) {
+			object += links[count++] + " " + links[count++];
+			if (count < links.length) object += " ; ";
 		}
 		object = object.replaceAll("[\n\t ]+", " ");
 		return object;
@@ -53,13 +49,13 @@ public class SPARQLFormatter {
 		return String.format("\t%s %s %s .\n", subject, link, object);
 	}
 
-	static public String formatMultipleStatement(String subject, Map<String,String> links) {
-		String object = flattenObject(links);
+	static public String formatMultipleStatement(String subject, String... links) {
+		String object = formatMultipleObjects(links);
 		return String.format("\t%s { %s } .\n", subject, object);
 	}
 
-	static public String formatAnonStatement(String subject, String link, Map<String,String> anon) {
-		String object = flattenObject(anon);
+	static public String formatAnonStatement(String subject, String link, String... anon) {
+		String object = formatMultipleObjects(anon);
 		return String.format("\t%s %s [ %s ] .\n", subject, link, object);
 	}
 }

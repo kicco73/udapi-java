@@ -83,8 +83,7 @@ public class TbxParser implements ParserInterface, ResourceInterface {
 			global.subjectField = entry.getKey();
 			String subjectFieldFQN = entry.getValue();
 			global.metadata.addToList("*", global.subjectField, "summary", "subjectFields");
-			Map<String,String> links = Map.of( "rdf:type", "skos:ConceptScheme", "skos:prefLabel",  "\""+global.subjectField+"\"");
-			global.triples.addMultiple(subjectFieldFQN, links);
+			global.triples.addMultiple(subjectFieldFQN, "rdf:type", "skos:ConceptScheme", "skos:prefLabel",  "\""+global.subjectField+"\"");
 			globals.add(global);
 		}
 	}

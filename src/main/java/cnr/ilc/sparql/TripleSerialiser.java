@@ -6,6 +6,7 @@ import java.util.LinkedHashMap;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import cnr.ilc.rut.utils.DateProvider;
 
@@ -32,7 +33,7 @@ public class TripleSerialiser {
 		add(subject, link, objectString);
 	}
 
-	public void addMultiple(String subject, Map<String,String> links) {
+	public void addMultiple(String subject, String... links) {
 		String language = "*";
 		String languageSpecific = features.getOrDefault(language, "");
 		languageSpecific += SPARQLFormatter.formatMultipleStatement(subject, links);
@@ -51,7 +52,13 @@ public class TripleSerialiser {
 
 	public void add(String subject, String link, Map<String,String> anonObject, String language) {
 		String languageSpecific = features.getOrDefault(language, "");
-		languageSpecific += SPARQLFormatter.formatAnonStatement(subject, link, anonObject);
+		String[] anonLinks = new String[anonObject.size()*2];
+		int count = 0;
+		for (Entry<String,String> entry: anonObject.entrySet()) {
+			anonLinks[count++] = entry.getKey();
+			anonLinks[count++] = entry.getValue();
+		}
+		languageSpecific += SPARQLFormatter.formatAnonStatement(subject, link, anonLinks);
 		features.put(language, languageSpecific);
 	}
 
@@ -59,8 +66,7 @@ public class TripleSerialiser {
 		Date now = DateProvider.getInstance().getDate();
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmX"); // Quoted "Z" to indicate UTC, no timezone offset
 		String date = String.format("\"%s:00\"",  df.format(now));
-		Map<String,String> links = Map.of("dct:creator", "\""+creator+"\"", "dct:created", date, "dct:modified", date);
-		addMultiple(entryFQN, links);
+		addMultiple(entryFQN, "dct:creator", "\""+creator+"\"", "dct:created", date, "dct:modified", date);
 	}
 
 	static public String getLexiconFQN(String language) {
@@ -69,8 +75,7 @@ public class TripleSerialiser {
 
 	public String addLexicon(String language) {	
 		String lexiconFQN = getLexiconFQN(language);
-		Map<String,String> links = Map.of("rdf:type", "lime:Lexicon", "lime:language", "\""+language+"\"");
-		addMultiple(lexiconFQN, links);
+		addMultiple(lexiconFQN, "rdf:type", "lime:Lexicon", "lime:language", "\""+language+"\"");
 		return lexiconFQN;
 	}
 

@@ -14,8 +14,8 @@ PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
 
-	:sf_OdeYA0FHeFFB1DVUMqdMw { rdf:type skos:ConceptScheme ; skos:prefLabel "e-mobility" } .
-	:sf_1gkE5ripjs1GT67xQzsF9A { rdf:type skos:ConceptScheme ; skos:prefLabel "e-caz" } .
+	:sf_OdeYA0FHeFFB1DVUMqdMw { skos:prefLabel "e-mobility" ; rdf:type skos:ConceptScheme } .
+	:sf_1gkE5ripjs1GT67xQzsF9A { skos:prefLabel "e-caz" ; rdf:type skos:ConceptScheme } .
 	:lexicon_en { rdf:type lime:Lexicon ; lime:language "en" } .
 	:lexicon_it { rdf:type lime:Lexicon ; lime:language "it" } .
 	:lexicon_fr { rdf:type lime:Lexicon ; lime:language "fr" } .
@@ -169,29 +169,29 @@ INSERT DATA {
 
 	# [Add Metadata Processor] adding creator and date info
 
-	conc:concept_c1 { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	:lexicon_en { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_3qBH7rT9OGlyXvod5zzJcT_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_3qBH7rT9OGlyXvod5zzJcT_noun_sense { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_47OMGlu0UAjWfjgVL05X0Q_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_47OMGlu0UAjWfjgVL05X0Q_noun_sense_default { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	:lexicon_it { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_161FnpgQej7gct2ziBVU9O_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_161FnpgQej7gct2ziBVU9O_noun_sense { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun_sense_default { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	:lexicon_fr { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly1 { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly2 { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_5xeokIoIHPBPUJpqkiwIaY_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_sense { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	conc:concept_c2 { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_4RAB9Zskz180iQxtsAxhU2_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_4RAB9Zskz180iQxtsAxhU2_noun_sense { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_4822mpTrFD9AuxWfM2f4xr_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_4822mpTrFD9AuxWfM2f4xr_noun_sense_default { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
-	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun_sense_default { dct:modified "2023-04-10T10:02+02:00" ; dct:created "2023-04-10T10:02+02:00" ; dct:creator "kicco" } .
+	conc:concept_c1 { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	:lexicon_en { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_3qBH7rT9OGlyXvod5zzJcT_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_3qBH7rT9OGlyXvod5zzJcT_noun_sense { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_47OMGlu0UAjWfjgVL05X0Q_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_47OMGlu0UAjWfjgVL05X0Q_noun_sense_default { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	:lexicon_it { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_161FnpgQej7gct2ziBVU9O_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_161FnpgQej7gct2ziBVU9O_noun_sense { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun_sense_default { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	:lexicon_fr { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_3WbmMJFniSr1vy5NuW2J9h_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly1 { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly2 { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_5xeokIoIHPBPUJpqkiwIaY_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_sense { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	conc:concept_c2 { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_4RAB9Zskz180iQxtsAxhU2_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_4RAB9Zskz180iQxtsAxhU2_noun_sense { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_4822mpTrFD9AuxWfM2f4xr_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_4822mpTrFD9AuxWfM2f4xr_noun_sense_default { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
+	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun_sense_default { dct:modified "2023-04-10T10:02+02:00" ; dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" } .
 }
 
