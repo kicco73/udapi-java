@@ -6,6 +6,7 @@ import java.util.LinkedHashMap;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.Map.Entry;
 import cnr.ilc.rut.utils.DateProvider;
 
@@ -53,7 +54,8 @@ public class TripleSerialiser {
 
 		int count = 0;
 		String[] anonLinks = new String[anonObject.size()*2];
-		for (Entry<String,String> entry: anonObject.entrySet()) {
+		Map<String,String> treeObject = new TreeMap<>(anonObject);
+		for (Entry<String,String> entry: treeObject.entrySet()) {
 			anonLinks[count++] = entry.getKey();
 			anonLinks[count++] = entry.getValue();
 		}
