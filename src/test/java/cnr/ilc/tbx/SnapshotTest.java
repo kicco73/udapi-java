@@ -82,8 +82,7 @@ public class SnapshotTest {
             String output = exec("--no-graphdb --input-format tbx --creator kicco --datetime 2023-04-10T10:02+02:00", inPath);
             String snapshotFileName = replaceExtension(inFileName, "sparql");
             snapshotFileName = new File(snapshotDir, snapshotFileName).getAbsolutePath();
-            //assertIsSameSnapshot(snapshotFileName, output);
-      
+            assertIsSameSnapshot(snapshotFileName, output);
         }
     }
 }
