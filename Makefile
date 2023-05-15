@@ -3,6 +3,9 @@ image:
 	./gradlew build jar
 	docker build --pull .
 
+jar:
+	./gradlew build jar
+
 run:
 	docker image rm -f udapi-java_rut-backend
 	docker-compose up -d
