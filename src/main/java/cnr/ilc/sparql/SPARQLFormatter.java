@@ -51,7 +51,7 @@ public class SPARQLFormatter {
 
 	static public String formatMultipleStatement(String subject, String... links) {
 		String object = formatMultipleObjects(links);
-		return String.format("\t%s { %s } .\n", subject, object);
+		return String.format("\t%s %s .\n", subject, object);
 	}
 
 	static public String formatAnonStatement(String subject, String link, String... anon) {

@@ -14,254 +14,209 @@ PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
 
-	:sf_4Y6xVErBJmy4ILWbH56p7R { rdf:type skos:ConceptScheme ; skos:prefLabel "General" } .
-	:sf_5Wn5qvhW2kRXyqCJNs5a7o { rdf:type skos:ConceptScheme ; skos:prefLabel "Stellar Birth" } .
-	:sf_6dLpuXjfy5d3rR4CTeHmy5 { rdf:type skos:ConceptScheme ; skos:prefLabel "Stellar Death" } .
-	:lexicon_en { rdf:type lime:Lexicon ; lime:language "en" } .
-	:lexicon_es { rdf:type lime:Lexicon ; lime:language "es" } .
-	:lexicon_zu { rdf:type lime:Lexicon ; lime:language "zu" } .
+	:sf_4Y6xVErBJmy4ILWbH56p7R rdf:type skos:ConceptScheme ; skos:prefLabel "General" .
+	:sf_5Wn5qvhW2kRXyqCJNs5a7o rdf:type skos:ConceptScheme ; skos:prefLabel "Stellar Birth" .
+	:sf_6dLpuXjfy5d3rR4CTeHmy5 rdf:type skos:ConceptScheme ; skos:prefLabel "Stellar Death" .
+	:lexicon_en rdf:type lime:Lexicon ; lime:language "en" .
+	:lexicon_es rdf:type lime:Lexicon ; lime:language "es" .
+	:lexicon_zu rdf:type lime:Lexicon ; lime:language "zu" .
 
 	# Concept section
-	conc:concept_c1 rdf:type skos:Concept .
-	conc:concept_c1 skos:prefLabel "c1" .
+	conc:concept_c1 rdf:type skos:Concept ; skos:prefLabel "c1" .
 	conc:concept_c1 skos:note "G-Source: http://www.physics.drexel.edu/observatory/dump.shtml" .
 	conc:concept_c1 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c1 skos:definition [ rdf:value "A group of stars formed together in the spiral\n arms of a galaxy."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c1 skos:definition [ rdf:value "Una acumulación de una docena hasta varios miles\n de jóvenes estrellas en el plano de las galaxias."@es ; dct:source <http://www.espacioprofundo.com.ar/diccionario/Glosario_de_Astronomia/vertermino/Cumulo_abierto.html> ] .
-	conc:concept_c2 rdf:type skos:Concept .
-	conc:concept_c2 skos:prefLabel "c2" .
+	conc:concept_c2 rdf:type skos:Concept ; skos:prefLabel "c2" .
 	conc:concept_c2 skos:note "G-Source:\n http://www.cfht.hawaii.edu/Instruments/Spectroscopy/Espadons/www.ast.obs-mip.fr/users/donati/press/fuori_eng.html" .
 	conc:concept_c2 skos:inScheme :sf_5Wn5qvhW2kRXyqCJNs5a7o .
 	conc:concept_c2 skos:definition [ rdf:value "A structure that forms around a compact object\n (e.g. a white dwarf, neutron star, or black hole) when matter flows\n towards it."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c2 skos:definition [ rdf:value "Una estructura en forma de disco alrededor de un\n objeto central masivo que alimenta el cuerpo central siendo atraido por\n éste y contribuye a su aumento de masa."@es ; dct:source <http://es.wikipedia.org/wiki/Disco_de_acreci%C3%B3n> ] .
-	conc:concept_c3 rdf:type skos:Concept .
-	conc:concept_c3 skos:prefLabel "c3" .
+	conc:concept_c3 rdf:type skos:Concept ; skos:prefLabel "c3" .
 	conc:concept_c3 skos:note "G-Source: http://wallpaper-s.org/12__Supermassive_Black_Hole.htm" .
 	conc:concept_c3 skos:inScheme :sf_6dLpuXjfy5d3rR4CTeHmy5 .
 	conc:concept_c3 skos:definition [ rdf:value "A region of space where the gravitational force\n is so strong that not even light can escape from it."@en ; dct:source "Cambridge2007" ] .
 	conc:concept_c3 skos:definition [ rdf:value "Un punto super-denso en el espacio formado por el\n colapso de una estrella donde nada puede escapar de su influencia\n gravitacional."@es ; dct:source "www.atlasoftheuniverse.com/espanol/glossary.html" ] .
-	conc:concept_c4 rdf:type skos:Concept .
-	conc:concept_c4 skos:prefLabel "c4" .
+	conc:concept_c4 rdf:type skos:Concept ; skos:prefLabel "c4" .
 	conc:concept_c4 skos:note "G-Source:\n http://nakedmaninthetree.wordpress.com/2009/02/22/galaxies-and-the-future/" .
 	conc:concept_c4 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c4 skos:definition [ rdf:value "A temporary intese burst of gamma rays and X-rays\n from a cosmic source."@en ; dct:source "Cambridge2007" ] .
 	conc:concept_c4 skos:definition [ rdf:value "Destellos de rayos gamma que pueden durar desde\n unos nanosegundos hasta cerca de una hora."@es ; dct:source <http://es.wikipedia.org/wiki/Brote_de_rayos_gamma> ] .
-	conc:concept_c5 rdf:type skos:Concept .
-	conc:concept_c5 skos:prefLabel "c5" .
+	conc:concept_c5 rdf:type skos:Concept ; skos:prefLabel "c5" .
 	conc:concept_c5 skos:note "G-Source: http://www.astrographics.com/GalleryPrintsIndex/GP0046.html" .
 	conc:concept_c5 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c5 skos:definition [ rdf:value "A roughly spherical group of old stars in the\n halo of the galaxy."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c5 skos:definition [ rdf:value "Un tipo de cúmulo estelar que consiste en una\n agrupación de miles de estrellas viejas, gravitacionalmente ligadas, con\n distribución aproximadamente esférica, y que orbita en torno a una\n galaxia de manera similar a un satélite."@es ; dct:source <http://es.wikipedia.org/wiki/C%C3%BAmulo_globular> ] .
-	conc:concept_c6 rdf:type skos:Concept .
-	conc:concept_c6 skos:prefLabel "c6" .
+	conc:concept_c6 rdf:type skos:Concept ; skos:prefLabel "c6" .
 	conc:concept_c6 skos:note "G-Source: http://www.skyofplenty.com/?page_id=374" .
 	conc:concept_c6 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c6 skos:definition [ rdf:value "Of or dealing with a major group of stars forming\n a band stretching from upper left to lower right on a\n Hertzsprung-Russell diagram when being plotted by luminosity and surface\n temperature."@en ; dct:source <http://en.wiktionary.org/wiki/main-sequence> ] .
 	conc:concept_c6 skos:definition [ rdf:value "Pertenece a las estrellas en la región del\n diagrama de Hertzsprung-Russell en la que se encuentran la mayor parte\n de las estrellas que transforman hidrógeno en helio."@es ; dct:source <http://es.wikipedia.org/wiki/Secuencia_principal> ] .
-	conc:concept_c7 rdf:type skos:Concept .
-	conc:concept_c7 skos:prefLabel "c7" .
+	conc:concept_c7 rdf:type skos:Concept ; skos:prefLabel "c7" .
 	conc:concept_c7 skos:note "G-Source: http://www.konkoly.hu/KISAG/Science/star/star_intro.html" .
 	conc:concept_c7 skos:inScheme :sf_5Wn5qvhW2kRXyqCJNs5a7o .
 	conc:concept_c7 skos:definition [ rdf:value "A star in the earliest observable stage of\n formation."@en ; dct:source "Cambridge2007" ] .
 	conc:concept_c7 skos:definition [ rdf:value "Una región muy densa o descorazonada de nubes\n moleculares donde existen estrellas en proceso de formación."@es ; dct:source "www.astrocosmo.cl/glosario/glosar-p.htm" ] .
-	conc:concept_c8 rdf:type skos:Concept .
-	conc:concept_c8 skos:prefLabel "c8" .
+	conc:concept_c8 rdf:type skos:Concept ; skos:prefLabel "c8" .
 	conc:concept_c8 skos:note "G-Source: http://apod.nasa.gov/apod/ap060109.html" .
 	conc:concept_c8 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c8 skos:definition [ rdf:value "A collection of stars formed together from the\n same gas cloud and bound together by mutual gravitational\n attraction."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c8 skos:definition [ rdf:value "Un grupo de estrellas atraídas entre sí por su\n gravedad mutua."@es ; dct:source <http://iopscience.iop.org/1538-3881/129/5/2281/pdf/1538-3881_129_5_2281.pdf> ] .
-	conc:concept_c9 rdf:type skos:Concept .
-	conc:concept_c9 skos:prefLabel "c9" .
+	conc:concept_c9 rdf:type skos:Concept ; skos:prefLabel "c9" .
 	conc:concept_c9 skos:note "G-Source: http://www.cfa.harvard.edu/~afrebel/milky-way-2.jpg" .
 	conc:concept_c9 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c9 skos:definition [ rdf:value "A band of faint light across the sky, visible to\n the naked eye on a moonless night, consisting of stars and glowing gas\n in the disk of our own Galaxy."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c9 skos:definition [ rdf:value "Una galaxia espiral en la que se encuentra el\n Sistema Solar y, por ende, la Tierra."@es ; dct:source <http://es.wikipedia.org/wiki/Vía_Láctea> ] .
-	conc:concept_c10 rdf:type skos:Concept .
-	conc:concept_c10 skos:prefLabel "c10" .
+	conc:concept_c10 rdf:type skos:Concept ; skos:prefLabel "c10" .
 	conc:concept_c10 skos:note "G-Source:\n http://lh4.ggpht.com/_EuutPdvjcY0/SQ2jGBKWO7I/AAAAAAAAALM/gjDMVimDQc8/005Est.jpg" .
 	conc:concept_c10 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c10 skos:definition [ rdf:value "A large, luminous ball of gas generating energy\n internally by nuclear fusion."@en ; dct:source "Cambridge2007" ] .
 	conc:concept_c10 skos:definition [ rdf:value "Una enorme y densa bola de gas que genera fusión\n nuclear, liberando así una gran cantidad de energía"@es ; dct:source "spaceplace.nasa.gov/sp/kids/spitzer/signs/sign_glossary.shtml" ] .
-	conc:concept_c11 rdf:type skos:Concept .
-	conc:concept_c11 skos:prefLabel "c11" .
+	conc:concept_c11 rdf:type skos:Concept ; skos:prefLabel "c11" .
 	conc:concept_c11 skos:note "G-Source: http://drdima.files.wordpress.com/2009/05/sun-rays.jpg" .
 	conc:concept_c11 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c11 skos:definition [ rdf:value "The region of the electromagnetic spectrum\n spanning the wavelength range from the Lymann limit at 91.2 nm to 350\n nm."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c11 skos:definition [ rdf:value "La radiación electromagnética cuya longitud de\n onda está comprendida aproximadamente entre los 400 nm y los 15\n nm."@es ; dct:source <http://es.wikipedia.org/wiki/Radiaci%C3%B3n_UV> ] .
-	conc:concept_c12 rdf:type skos:Concept .
-	conc:concept_c12 skos:prefLabel "c12" .
+	conc:concept_c12 rdf:type skos:Concept ; skos:prefLabel "c12" .
 	conc:concept_c12 skos:note "G-Source: http://www.greatdreams.com/magnet1.jpg" .
 	conc:concept_c12 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c12 skos:definition [ rdf:value "A region subject to the influence of magnetism\n that is manifested by the mechanical forces that it exerts upon\n electricity moving across it and upon the poles of magnets placed in\n it."@en ; dct:source "Merriam-Webster2002" ] .
 	conc:concept_c12 skos:definition [ rdf:value "Un campo de fuerza creado como consecuencia del\n movimiento de cargas eléctricas, del flujo de la electricidad."@es ; dct:source <http://www.greenfacts.org/es/glosario/abc/campo-magnetico.htm> ] .
-	conc:concept_c13 rdf:type skos:Concept .
-	conc:concept_c13 skos:prefLabel "c13" .
+	conc:concept_c13 rdf:type skos:Concept ; skos:prefLabel "c13" .
 	conc:concept_c13 skos:note "G-Source: http://images.spaceref.com/news/2009/ooBlue_Straggler09.jpg" .
 	conc:concept_c13 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c13 skos:definition [ rdf:value "A blue main-sequence star, usually found in a\n globular or open cluster that appears to be slower in its evolution than\n other stars of similar mass and luminosity in the same\n cluster."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c13 skos:definition [ rdf:value "Estrellas que aparentan una edad menor que la del\n sistema estelar al que pertenecen, si se supone que se formaron junto\n con él."@es ; dct:source <http://es.wikipedia.org/wiki/Estrella_rezagada_azul> ] .
-	conc:concept_c14 rdf:type skos:Concept .
-	conc:concept_c14 skos:prefLabel "c14" .
+	conc:concept_c14 rdf:type skos:Concept ; skos:prefLabel "c14" .
 	conc:concept_c14 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c14 skos:definition [ rdf:value "The sudden collapse of a massive star when the\n internal pressure pushing outwards falls so that it cannot balance the\n weight of material pressing inward."@en ; dct:source "Cambridge2007" ] .
 	conc:concept_c14 skos:definition [ rdf:value "El estado final de la evolución de una estrella\n de gran masa en el que la materia se comprime bajo la acción de su\n propia atracción gravitatoria, con desprendimiento de grandes cantidades\n de energía."@es ; dct:source <http://www.conocimientosweb.net/portal/term6172.html> ] .
-	conc:concept_c15 rdf:type skos:Concept .
-	conc:concept_c15 skos:prefLabel "c15" .
+	conc:concept_c15 rdf:type skos:Concept ; skos:prefLabel "c15" .
 	conc:concept_c15 skos:note "G-Source:\n http://lh6.ggpht.com/_6hgSmco4R9M/SaqplXGqJfI/AAAAAAAAA1k/B3a43_O9VI8/56_Binary_Stars_thumb3.jpg" .
 	conc:concept_c15 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c15 skos:definition [ rdf:value "A pair of stars in orbit around each other, held\n together by the graviational attraction between them."@en ; dct:source "Cambridge2007" ] .
 	conc:concept_c15 skos:definition [ rdf:value "Un sistema estelar compuesto de dos estrellas que\n orbitan mutuamente alrededor de un centro de masas común."@es ; dct:source <http://es.wikipedia.org/wiki/Estrella_binaria> ] .
-	conc:concept_c16 rdf:type skos:Concept .
-	conc:concept_c16 skos:prefLabel "c16" .
+	conc:concept_c16 rdf:type skos:Concept ; skos:prefLabel "c16" .
 	conc:concept_c16 skos:note "G-Source:\n http://www.astro.ljmu.ac.uk/~ikb/research/imf-use-in-cosmology.html\nThis figure compares the IMFs by ploting mass fraction per dex versus mass,\n i.e., normalized so that the integral under each curve is unity. They are\n assumed to be valid from 0.1 to 120 solar masses.\nN-Source:\n http://www.astro.ljmu.ac.uk/~ikb/research/imf-use-in-cosmology.html" .
 	conc:concept_c16 skos:inScheme :sf_5Wn5qvhW2kRXyqCJNs5a7o .
 	conc:concept_c16 skos:definition [ rdf:value "A mathematical description of the relative\n frequncy with which stars of various masses are formed."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c16 skos:definition [ rdf:value "La expresión numérica que determina el número de\n estrellas con masa en un rango determinado."@es ; dct:source "Basado en http://laeff.cab.inta-csic.es/modules.php?op=modload&name=phpWiki&file=index&pagename=Research-Estrellas-IMF" ] .
-	conc:concept_c17 rdf:type skos:Concept .
-	conc:concept_c17 skos:prefLabel "c17" .
-	conc:concept_c18 rdf:type skos:Concept .
-	conc:concept_c18 skos:prefLabel "c18" .
-	conc:concept_c19 rdf:type skos:Concept .
-	conc:concept_c19 skos:prefLabel "c19" .
-	conc:concept_c20 rdf:type skos:Concept .
-	conc:concept_c20 skos:prefLabel "c20" .
-	conc:concept_c21 rdf:type skos:Concept .
-	conc:concept_c21 skos:prefLabel "c21" .
+	conc:concept_c17 rdf:type skos:Concept ; skos:prefLabel "c17" .
+	conc:concept_c18 rdf:type skos:Concept ; skos:prefLabel "c18" .
+	conc:concept_c19 rdf:type skos:Concept ; skos:prefLabel "c19" .
+	conc:concept_c20 rdf:type skos:Concept ; skos:prefLabel "c20" .
+	conc:concept_c21 rdf:type skos:Concept ; skos:prefLabel "c21" .
 	conc:concept_c21 skos:note "G-Source:\n http://jcconwell.wordpress.com/2009/07/24/top-10-ways-the-universe-could-kill-us/supernova/" .
 	conc:concept_c21 skos:inScheme :sf_6dLpuXjfy5d3rR4CTeHmy5 .
 	conc:concept_c21 skos:definition [ rdf:value "A catastrophic stellar explosion in which so much\n energy is released that the supernova alone can outshine an entire\n galaxy of billions of stars."@en ; dct:source "Cambridge2007" ] .
 	conc:concept_c21 skos:definition [ rdf:value "Una estrella que estalla y lanza a todo su\n alrededor la mayor parte de su masa a altísimas velocidades."@es ; dct:source <http://www.astromia.com/glosario/supernova.htm> ] .
-	conc:concept_c22 rdf:type skos:Concept .
-	conc:concept_c22 skos:prefLabel "c22" .
-	conc:concept_c23 rdf:type skos:Concept .
-	conc:concept_c23 skos:prefLabel "c23" .
+	conc:concept_c22 rdf:type skos:Concept ; skos:prefLabel "c22" .
+	conc:concept_c23 rdf:type skos:Concept ; skos:prefLabel "c23" .
 	conc:concept_c23 skos:note "G-Source:\n http://www.lcsd.gov.hk/CE/Museum/Space/EducationResource/Universe/framed_e/lecture/ch15/imgs/red_size.jpg" .
 	conc:concept_c23 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c23 skos:definition [ rdf:value "A cool, large and highly luminous star that has\n left the main sequence and is powered by heavier elements than\n hydrogen."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c23 skos:definition [ rdf:value "Una estrella de masa baja o intermedia (menos de\n 8-9 masas solares) que, tras haber consumido el hidrógeno en su núcleo\n durante la etapa de secuencia principal, convirtiéndolo en helio por\n fusión nuclear, comienza a quemar hidrógeno en una cáscara alrededor del\n núcleo de helio inerte."@es ; dct:source <http://es.wikipedia.org/wiki/Gigante_roja> ] .
-	conc:concept_c24 rdf:type skos:Concept .
-	conc:concept_c24 skos:prefLabel "c24" .
+	conc:concept_c24 rdf:type skos:Concept ; skos:prefLabel "c24" .
 	conc:concept_c24 skos:note "G-Source: http://www.wolflodge.org/bluestar/h_red_dwarf_02.jpg" .
 	conc:concept_c24 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c24 skos:definition [ rdf:value "A cool, faint, low-mass star lying at the lower\n end of the main sequence of spectral type K or M."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c24 skos:definition [ rdf:value "Una estrella pequeña y relativamente fría de la\n secuencia principal, ya sea de tipo espectral K tardío o M."@es ; dct:source <http://es.wikipedia.org/wiki/Enana_roja> ] .
-	conc:concept_c25 rdf:type skos:Concept .
-	conc:concept_c25 skos:prefLabel "c25" .
+	conc:concept_c25 rdf:type skos:Concept ; skos:prefLabel "c25" .
 	conc:concept_c25 skos:note "G-Source:\n http://www.astro.columbia.edu/~archung/labs/spring2002/images/spectral_type2.jpg" .
 	conc:concept_c25 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c25 skos:definition [ rdf:value "A means of classifying stars according to the\n details of their spectrum, depending largely on their surface\n temperature."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c25 skos:definition [ rdf:value "El espectro de una estrella clasificado por una\n letra (O, B, A, F, G, K, M, R, N, S) seguida de un digito que describe\n el color de la estrella y su temperatura."@es ; dct:source "Basado en http://www.espacioprofundo.com.ar/diccionario/Glosario_de_Astronomia/vertermino/Tipo_espectral.html" ] .
-	conc:concept_c26 rdf:type skos:Concept .
-	conc:concept_c26 skos:prefLabel "c26" .
+	conc:concept_c26 rdf:type skos:Concept ; skos:prefLabel "c26" .
 	conc:concept_c26 skos:note "G-Source: http://www.stsci.edu/~inr/thisweek1/thisweek/WhiteDwarf.gif" .
 	conc:concept_c26 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c26 skos:note "This is the end-result of all but the most massive of stars.\nN-Source: Oxford2007"@en .
 	conc:concept_c26 skos:definition [ rdf:value "A small dense star that is has run out of fuel\n for nuclear fusion, collapsing under its own gravity and blowing off its\n outer layers to form a planetary nebula in the process."@en ; dct:source "Based on Oxford2007 and Cambridge2007" ] .
 	conc:concept_c26 skos:definition [ rdf:value "Un remanente estelar que se genera cuando una\n estrella de masa menor a 9-10 masas solares ha agotado su combustible\n nuclear."@es ; dct:source <http://es.wikipedia.org/wiki/Enana_blanca> ] .
-	conc:concept_c27 rdf:type skos:Concept .
-	conc:concept_c27 skos:prefLabel "c27" .
+	conc:concept_c27 rdf:type skos:Concept ; skos:prefLabel "c27" .
 	conc:concept_c27 skos:note "G-Source:\n http://www.phys.ncku.edu.tw/~astrolab/mirrors/apod_e/image/0901/ngc2818_hheritage_800.jpg" .
 	conc:concept_c27 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c27 skos:note "As mass is gradually lost, the core of the star becomes more exposed,\n ultimately becoming a white dwarf. Also, planetary nebulae have nothing to\n do with planets, and are not true nebulae.\nN-Source: Based on Oxford2007 and Moore2003, 186"@en .
 	conc:concept_c27 skos:definition [ rdf:value "A bright cloud of glowing gas and dust\n surrounding a highly evolved star."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c27 skos:definition [ rdf:value "Una nebulosa de emisión consistente en una\n envoltura brillante en expansión de plasma y gas ionizado, expulsada\n durante la fase de rama asintótica gigante que atraviesan las estrellas\n gigantes rojas en los últimos momentos de sus vidas."@es ; dct:source <http://es.wikipedia.org/wiki/Nebulosa_planetaria> ] .
-	conc:concept_c28 rdf:type skos:Concept .
-	conc:concept_c28 skos:prefLabel "c28" .
+	conc:concept_c28 rdf:type skos:Concept ; skos:prefLabel "c28" .
 	conc:concept_c28 skos:note "G-Source: http://apod.nasa.gov/apod/image/0612/NGC2174_lrg.jpg" .
 	conc:concept_c28 skos:inScheme :sf_5Wn5qvhW2kRXyqCJNs5a7o .
 	conc:concept_c28 skos:note "Ultraviolet radiation, gas cloud collisions, and synchrotron radiation can\n all cause the emission nebula to shine.\nN-Source: Oxford2007"@en .
 	conc:concept_c28 skos:definition [ rdf:value "A luminous cloud of gas and sust in space which\n shines with its own light, which can be generated in several\n ways."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c28 skos:definition [ rdf:value "Una nube de gas interestelar que brilla por la\n excitación del gas, causado por radiación ultravioleta emitida por\n estrellas inmersas en la nube o por calentamiento debido a otro\n mecanismos."@es ; dct:source <http://www.diclib.com/Nebulosa%20de%20emisi%C3%B3n/show/en/es_astronomia/726> ] .
-	conc:concept_c29 rdf:type skos:Concept .
-	conc:concept_c29 skos:prefLabel "c29" .
+	conc:concept_c29 rdf:type skos:Concept ; skos:prefLabel "c29" .
 	conc:concept_c29 skos:note "G-Source:\n http://my-blackberry.net/wallpapers/49/m/NASA_-_The_Horsehead_Nebula%2C_B33%2C_Orion_Nebula.jpg" .
 	conc:concept_c29 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c29 skos:note "The term was originally applied to any object with a fuzzy telescopic\n appearance, but with the advent of larger instruments many 'nebulae' were\n found to consist of faint stars.\nN-Source: Oxford2007"@en .
 	conc:concept_c29 skos:definition [ rdf:value "A cloud of interstellar gas and dust."@en ; dct:source "Cambridge2007" ] .
 	conc:concept_c29 skos:definition [ rdf:value "Regiones del medio interestelar constituidas por\n gases (principalmente hidrógeno y helio) y polvo."@es ; dct:source <http://es.wikipedia.org/wiki/Nebulosa> ] .
-	conc:concept_c30 rdf:type skos:Concept .
-	conc:concept_c30 skos:prefLabel "c30" .
+	conc:concept_c30 rdf:type skos:Concept ; skos:prefLabel "c30" .
 	conc:concept_c30 skos:note "G-Source: http://www.mallorcaweb.net/masm/obstel/caballo.GIF" .
 	conc:concept_c30 skos:inScheme :sf_5Wn5qvhW2kRXyqCJNs5a7o .
 	conc:concept_c30 skos:definition [ rdf:value "A type of interstellar cloud that is so dense\n that it obscures the light from the background emission or reflection\n nebula or that it blocks out background stars."@en ; dct:source <http://en.wikipedia.org/wiki/Dark_nebula> ] .
 	conc:concept_c30 skos:definition [ rdf:value "Nubes de polvo que simplemente tapan la luz de lo\n que haya detras."@es ; dct:source <http://www.astrored.net/nebulosaweb/types.html> ] .
-	conc:concept_c31 rdf:type skos:Concept .
-	conc:concept_c31 skos:prefLabel "c31" .
+	conc:concept_c31 rdf:type skos:Concept ; skos:prefLabel "c31" .
 	conc:concept_c31 skos:note "G-Source:\n http://mm04.nasaimages.org/MediaManager/srvr?mediafile=/Size3/NVA2-8-NA/14107/full_tif.jpg&userid=1&username=admin&resolution=3&servertype=JVA&cid=8&iid=NVA2&vcid=NA&usergroup=HUBBLE&profileid=39" .
 	conc:concept_c31 skos:inScheme :sf_5Wn5qvhW2kRXyqCJNs5a7o .
 	conc:concept_c31 skos:definition [ rdf:value "A cloud of interstellar gas and dust that appears\n bight because it reflects or scatters starlight."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c31 skos:definition [ rdf:value "Nubes de polvo que simplemente reflejan la luz de\n una estrella o estrellas cercanas."@es ; dct:source <http://www.astrored.net/nebulosaweb/types.html> ] .
-	conc:concept_c32 rdf:type skos:Concept .
-	conc:concept_c32 skos:prefLabel "c32" .
+	conc:concept_c32 rdf:type skos:Concept ; skos:prefLabel "c32" .
 	conc:concept_c32 skos:note "G-Source: http://nrumiano.free.fr/Images/Neutron_star_E.gif" .
 	conc:concept_c32 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c32 skos:definition [ rdf:value "Un cuerpo pequeño muy denso que se forma en el\n envejecimiento de una estrella pesada y que está formada únicamente por\n partículas subatómicas denominadas neutrones."@es ; dct:source <http://www.astroasa.com.ar/diccionario_astro.htm> ] .
-	conc:concept_c33 rdf:type skos:Concept .
-	conc:concept_c33 skos:prefLabel "c33" .
+	conc:concept_c33 rdf:type skos:Concept ; skos:prefLabel "c33" .
 	conc:concept_c33 skos:inScheme :sf_6dLpuXjfy5d3rR4CTeHmy5 .
 	conc:concept_c33 skos:note "For a star with no hydrogen content the limit is 1.44 solar masses, which\n is thus the maximum possible for a white dwarf.\nN-Source: Oxford2007"@en .
 	conc:concept_c33 skos:definition [ rdf:value "The maximum possible mass of a degenerate star,\n above which it will be unable to support itself against the inward pull\n of its own gravity."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c33 skos:definition [ rdf:value "El límite de masa más allá del cual la\n degeneración de electrones no es capaz de contrarrestar la fuerza de\n gravedad en un remanente estelar, produciéndose un colapso que origina\n una estrella de neutrones o un agujero negro."@es ; dct:source <http://es.wikipedia.org/wiki/L%C3%ADmite_de_Chandrasekhar> ] .
-	conc:concept_c34 rdf:type skos:Concept .
-	conc:concept_c34 skos:prefLabel "c34" .
+	conc:concept_c34 rdf:type skos:Concept ; skos:prefLabel "c34" .
 	conc:concept_c34 skos:inScheme :sf_6dLpuXjfy5d3rR4CTeHmy5 .
 	conc:concept_c34 skos:note "Encountered on in neutron stars.\nN-Source: Oxford2007"@en .
 	conc:concept_c34 skos:definition [ rdf:value "The state of degeneracy attained when the density\n of matter is so high that neutrons cannot be packed any more closely\n together."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c34 skos:definition [ rdf:value "El estado de degeneración alcanzado cuando la\n densidad de materia es tan alta, que los neutrones no pueden juntarse\n más."@es ; dct:source "Oxford2003" ] .
-	conc:concept_c35 rdf:type skos:Concept .
-	conc:concept_c35 skos:prefLabel "c35" .
+	conc:concept_c35 rdf:type skos:Concept ; skos:prefLabel "c35" .
 	conc:concept_c35 skos:note "G-Source:\n http://www.astro.cornell.edu/academics/courses/astro2201/images/bh_structure.gif" .
 	conc:concept_c35 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c35 skos:definition [ rdf:value "The radius of the event horizon of a black\n hole."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c35 skos:definition [ rdf:value "El radio del horizonte de sucesos para un agujero\n negro."@es ; dct:source <http://www.astrocosmo.cl/glosario/glosar-r.htm> ] .
-	conc:concept_c36 rdf:type skos:Concept .
-	conc:concept_c36 skos:prefLabel "c36" .
+	conc:concept_c36 rdf:type skos:Concept ; skos:prefLabel "c36" .
 	conc:concept_c36 skos:note "G-Source:\n http://www.astro.cornell.edu/academics/courses/astro2201/images/bh_structure.gif" .
 	conc:concept_c36 skos:inScheme :sf_6dLpuXjfy5d3rR4CTeHmy5 .
 	conc:concept_c36 skos:definition [ rdf:value "The surface of a black hole."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c36 skos:definition [ rdf:value "El superficie de un agujero negro."@es ; dct:source "Oxford2003" ] .
-	conc:concept_c37 rdf:type skos:Concept .
-	conc:concept_c37 skos:prefLabel "c37" .
+	conc:concept_c37 rdf:type skos:Concept ; skos:prefLabel "c37" .
 	conc:concept_c37 skos:note "G-Source: http://en.wikipedia.org/wiki/File:FusionintheSun.svg" .
 	conc:concept_c37 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c37 skos:definition [ rdf:value "Un conjunto de procesos nucleares mediante los\n cuales cuatro núcleos de átomos de hidrógeno se combinan para formar uno\n de helio, produciendo gran cantidad de energía."@es ; dct:source <http://www.avizora.com/publicaciones/astronomia/textos/glosario_astronomia_afines_0006.htm> ] .
-	conc:concept_c38 rdf:type skos:Concept .
-	conc:concept_c38 skos:prefLabel "c38" .
+	conc:concept_c38 rdf:type skos:Concept ; skos:prefLabel "c38" .
 	conc:concept_c38 skos:note "G-Source: http://en.wikipedia.org/wiki/File:CNO_Cycle.svg" .
 	conc:concept_c38 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
-	conc:concept_c39 rdf:type skos:Concept .
-	conc:concept_c39 skos:prefLabel "c39" .
+	conc:concept_c39 rdf:type skos:Concept ; skos:prefLabel "c39" .
 	conc:concept_c39 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c39 skos:definition [ rdf:value "A state of matter attained when atomic particles\n are packed together as termSechtly as is physically possible, at densities\n of several thousand tonnes per cubic metre."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c39 skos:definition [ rdf:value "Estado de la materia producido cuando las\n partículas atómicas tienen el mayor empaquetamiento físicamente posible,\n con densidades de varios miles de toneladas por centímetro cúbico."@es ; dct:source <http://www.emiliosilveravazquez.com/glosario.php?letra=d> ] .
-	conc:concept_c40 rdf:type skos:Concept .
-	conc:concept_c40 skos:prefLabel "c40" .
-	conc:concept_c41 rdf:type skos:Concept .
-	conc:concept_c41 skos:prefLabel "c41" .
+	conc:concept_c40 rdf:type skos:Concept ; skos:prefLabel "c40" .
+	conc:concept_c41 rdf:type skos:Concept ; skos:prefLabel "c41" .
 	conc:concept_c41 skos:inScheme :sf_6dLpuXjfy5d3rR4CTeHmy5 .
 	conc:concept_c41 skos:note "Electron degeneracy supports white dwarf stars against further\n collapse.\nN-Source: Oxford2007"@en .
 	conc:concept_c41 skos:definition [ rdf:value "The state of degeneracy attained when the density\n of matter is so high that electrons cannot be packed any closer\n together."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c41 skos:definition [ rdf:value "El estado de degeneración alcanzado cuando la\n densidad de materia es tan grande, que los electrones no pueden\n empaquetarse más."@es ; dct:source "Oxford2003" ] .
-	conc:concept_c42 rdf:type skos:Concept .
-	conc:concept_c42 skos:prefLabel "c42" .
+	conc:concept_c42 rdf:type skos:Concept ; skos:prefLabel "c42" .
 	conc:concept_c42 skos:note "G-Source:\n http://www.astro.cornell.edu/academics/courses/astro2201/images/bh_structure.gif" .
 	conc:concept_c42 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c42 skos:definition [ rdf:value "A mathematical point at which certain physical\n quantities reach infinite values."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c42 skos:definition [ rdf:value "Un punto matemático en el que ciertas cantidades\n físicas alcanzan valores infinitos."@es ; dct:source "Oxford2003" ] .
-	conc:concept_c43 rdf:type skos:Concept .
-	conc:concept_c43 skos:prefLabel "c43" .
+	conc:concept_c43 rdf:type skos:Concept ; skos:prefLabel "c43" .
 	conc:concept_c43 skos:note "G-Source: http://en.wikipedia.org/wiki/Solar_mass\nIn this graphic, the M with a subscript is the symbol for a solar mass.\nN-Source: Jonathan Tomolonis" .
 	conc:concept_c43 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c43 skos:definition [ rdf:value "A unit of mass used in stellar and galactic\n astronomy, equivalent to the mass of the sun, 1.989 x 10^30\n kg."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c43 skos:definition [ rdf:value "Una unidad de medida utilizada en astronomía y\n astrofísica para medir comparativamente la masa de las estrellas y otros\n objetos astronómicos muy masivos como galaxias."@es ; dct:source <http://es.wikipedia.org/wiki/Masa_solar> ] .
-	conc:concept_c44 rdf:type skos:Concept .
-	conc:concept_c44 skos:prefLabel "c44" .
+	conc:concept_c44 rdf:type skos:Concept ; skos:prefLabel "c44" .
 	conc:concept_c44 skos:note "G-Source:\n http://upload.wikimedia.org/wikipedia/commons/thumb/5/5d/Triple-Alpha_Process.svg/750px-Triple-Alpha_Process.svg.png" .
 	conc:concept_c44 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c44 skos:definition [ rdf:value "The chain of nuclear reactions by which carbon is\n synthesized in the interiors of stars through the fusion of three helium\n nuclei(alpha particles)."@en ; dct:source "Oxford2007" ] .
 	conc:concept_c44 skos:definition [ rdf:value "El proceso por el cual tres núcleos de helio\n (partículas alfa) se transforman en un núcleo de carbono."@es ; dct:source <http://es.wikipedia.org/wiki/Proceso_triple-alfa> ] .
-	conc:concept_c45 rdf:type skos:Concept .
-	conc:concept_c45 skos:prefLabel "c45" .
+	conc:concept_c45 rdf:type skos:Concept ; skos:prefLabel "c45" .
 	conc:concept_c45 skos:note "G-Source:\n http://www.dorlingkindersley-uk.co.uk/static/clipart/uk/dk/sci_space/image_sci_space013.jpg" .
 	conc:concept_c45 skos:inScheme :sf_4Y6xVErBJmy4ILWbH56p7R .
 	conc:concept_c45 skos:definition [ rdf:value "A degenerate star that has cooled until it is no\n longer visible."@en ; dct:source "Oxford2007" ] .
@@ -1688,279 +1643,279 @@ INSERT DATA {
 
 	# [Add Metadata Processor] adding creator and date info
 
-	conc:concept_c24 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	:lexicon_en { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_31zBph7s45PSGrLfsrnsOX_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_31zBph7s45PSGrLfsrnsOX_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c9 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3myQQ1Yzw6FaQjJCKoMu6r_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3myQQ1Yzw6FaQjJCKoMu6r_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c16 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_46dqS2mIujTCclZ9eIwkLo_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_46dqS2mIujTCclZ9eIwkLo_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c25 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_qtfXHleXBks4osIWIgWPt_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_qtfXHleXBks4osIWIgWPt_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c43 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4S2glmWm4ulVVrc2TeYZnE_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4S2glmWm4ulVVrc2TeYZnE_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c21 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_QvQ21KsIUoKfij9yO8bEO_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_QvQ21KsIUoKfij9yO8bEO_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c45 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6yW5fFYtFimOcINdVQyrsJ_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6yW5fFYtFimOcINdVQyrsJ_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c37 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3cf5tTjyucQrJEYFkMDcud_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3cf5tTjyucQrJEYFkMDcud_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c14 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1MX9HQRG3O98tPrHChfGhm_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1MX9HQRG3O98tPrHChfGhm_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c3 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3iGqnMz8GXqxARyojj4cfK_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3iGqnMz8GXqxARyojj4cfK_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c34 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5K24nBUdrXE2SKyoo2RvFI_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5K24nBUdrXE2SKyoo2RvFI_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c4 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6IjvRnCiIvdKZQMUJn244_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6IjvRnCiIvdKZQMUJn244_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c38 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1Jt4oTD2KOcSTx5pWeR4RZ_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1Jt4oTD2KOcSTx5pWeR4RZ_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3rZhA8m77XzWYWjReMaTnM_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3rZhA8m77XzWYWjReMaTnM_noun_sense_default { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5S685WixqqLSskdQ0DNXbq_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5S685WixqqLSskdQ0DNXbq_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2U7A3vf0WIko2H0PII55BL_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2U7A3vf0WIko2H0PII55BL_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c31 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_x2jPAXzNogLNJnehfzkvG_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_x2jPAXzNogLNJnehfzkvG_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c11 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2DynConj8MjHyYiauH81R0_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2DynConj8MjHyYiauH81R0_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c1 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_63ETzY6HtRdvGfwL5kJMPU_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_63ETzY6HtRdvGfwL5kJMPU_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7D8oJJ3JD9qG4g72fhpuXx_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7D8oJJ3JD9qG4g72fhpuXx_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c6 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6P8arEd8lWEmWowSDmkczE_adjective { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6P8arEd8lWEmWowSDmkczE_adjective_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_8I5DzskMBx8lj4KSxHjzS_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_8I5DzskMBx8lj4KSxHjzS_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c2 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_51ffAI0i3XgZvpoomACqkb_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_51ffAI0i3XgZvpoomACqkb_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c35 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4hZoDvOkJqeN16IozUzSKL_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4hZoDvOkJqeN16IozUzSKL_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c32 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5itIAwfDtSGyKDLBqIyVf0_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5itIAwfDtSGyKDLBqIyVf0_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c33 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_SbT1jcxbhBif8PuKD0VNn_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_SbT1jcxbhBif8PuKD0VNn_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6wLB99sEILUkJFKD7DGt23_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6wLB99sEILUkJFKD7DGt23_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c23 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2x2T2FXMiqoPjtv42XfpkV_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2x2T2FXMiqoPjtv42XfpkV_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c12 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7bjbbaj5s0mYvlXcQGauSX_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7bjbbaj5s0mYvlXcQGauSX_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c26 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7CguCAIbdgKDCyQ7A4gxZW_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7CguCAIbdgKDCyQ7A4gxZW_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_61V0BTObz8cHJRP6WBW7il_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_61V0BTObz8cHJRP6WBW7il_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c29 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4wlELR6Whwkj5xidlnamG9_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4wlELR6Whwkj5xidlnamG9_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c41 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_73J7izryNsyesAUeXEbpCM_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_73J7izryNsyesAUeXEbpCM_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c15 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1RTOqbLEFQWLNRl7kT8rC6_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1RTOqbLEFQWLNRl7kT8rC6_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c30 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_oMsHVfGdWOqApFoDBB51A_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_oMsHVfGdWOqApFoDBB51A_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_BXh4s84yNZdf77KZ6ZpdI_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_BXh4s84yNZdf77KZ6ZpdI_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c13 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5tdBZf7nEHRMgKoKjRimLX_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5tdBZf7nEHRMgKoKjRimLX_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6XB8IVoK2fNWo9wd5We70M_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6XB8IVoK2fNWo9wd5We70M_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c42 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7EVD0Q0sX35wOola3cCNtg_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7EVD0Q0sX35wOola3cCNtg_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1JR6uWUe1fbrzMwGSdSoqU_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1JR6uWUe1fbrzMwGSdSoqU_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7aacRcYxbWJSpAB3t24IXp_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7aacRcYxbWJSpAB3t24IXp_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c39 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4pcjVU5RQzI2eYgDshXimH_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4pcjVU5RQzI2eYgDshXimH_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c10 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_48adkzlPD3Jm47ZPKFtHrf_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_48adkzlPD3Jm47ZPKFtHrf_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1i1T4JVYZdAvcOmimqW9zM_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1i1T4JVYZdAvcOmimqW9zM_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_GRnhIXhEP05IZGpIKXnbL_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_GRnhIXhEP05IZGpIKXnbL_noun_sense_default { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c27 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4mELd72j2uto9rtVUGSCRV_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4mELd72j2uto9rtVUGSCRV_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4yEzHhKK9LpU8l7Bms9qTW_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4yEzHhKK9LpU8l7Bms9qTW_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c8 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6263mLVxKBJ8w4Rr0D0tF2_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6263mLVxKBJ8w4Rr0D0tF2_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_34qa4wBRxDoRFP2CoMGX0r_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_34qa4wBRxDoRFP2CoMGX0r_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c44 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6pAje9hWMZN1u14iCGfdcs_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6pAje9hWMZN1u14iCGfdcs_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c7 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6rQMsgU7HgGjR4OpI7qkCg_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6rQMsgU7HgGjR4OpI7qkCg_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c28 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2zyAe8O2QvnKNUrvAiD3KC_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2zyAe8O2QvnKNUrvAiD3KC_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c5 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_QjEHA772daFThRUn1zj3k_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_QjEHA772daFThRUn1zj3k_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c36 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1y5nV6IzTjBP5zm1F0AygW_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1y5nV6IzTjBP5zm1F0AygW_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_56ZA7D7odJT1iOkNnoYOYX_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_56ZA7D7odJT1iOkNnoYOYX_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c20 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	:lexicon_zu { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2I2X17UtuB6NqisHU4gzmf { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2I2X17UtuB6NqisHU4gzmf_sense_default { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c18 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_68K3Ra75gpdZQknzxscQAI { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_68K3Ra75gpdZQknzxscQAI_sense_default { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c19 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3yOgIDrbQTXxxbWn1mkQUb { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3yOgIDrbQTXxxbWn1mkQUb_sense_default { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c22 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7BrfMUzhQju2qTjpzHiIMB { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7BrfMUzhQju2qTjpzHiIMB_sense_default { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c17 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4Ge4fe0dTrkWaIhwGGP9mo { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4Ge4fe0dTrkWaIhwGGP9mo_sense_default { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c40 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1hPLh5KawVRtIHQov0SgnO { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1hPLh5KawVRtIHQov0SgnO_sense_default { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	:lexicon_es { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_68TubKMpuUmyVYxpPPmaQT_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_68TubKMpuUmyVYxpPPmaQT_noun_sense_default { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5vi8NkP7SPQghRkt9pkj38_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5vi8NkP7SPQghRkt9pkj38_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5nlgIUZfOgPsJaTfwOfZPp_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5nlgIUZfOgPsJaTfwOfZPp_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4X2HNWOzzphaobR1MorO6I_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4X2HNWOzzphaobR1MorO6I_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2VARoFaJAI2zPPb1ryCyQQ_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2VARoFaJAI2zPPb1ryCyQQ_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_13h6HZY2SOjy9nE5tnzLAo_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_13h6HZY2SOjy9nE5tnzLAo_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3tC8m8qVDDGl3Ho7o4W5Qz_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3tC8m8qVDDGl3Ho7o4W5Qz_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2uVM7NWoSJP9b6P86jaLc4_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2uVM7NWoSJP9b6P86jaLc4_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6Cem0WXarBzw9ujxrmtDpT_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6Cem0WXarBzw9ujxrmtDpT_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5tVkYVO2PtTBoXtaeXr4GR_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5tVkYVO2PtTBoXtaeXr4GR_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3rP4XS1fj9IHtGuv5BpIsv_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3rP4XS1fj9IHtGuv5BpIsv_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7AYaW7Li95HPhVONIwuRgd_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7AYaW7Li95HPhVONIwuRgd_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7jt3DaewODavgE1ldRo5mh_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7jt3DaewODavgE1ldRo5mh_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7Pdy2mblNzIK20TYEN4y0P_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7Pdy2mblNzIK20TYEN4y0P_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3NvRDEAVive6lhHRnfKthe_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3NvRDEAVive6lhHRnfKthe_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2KvJ2nQ3PsigJjcAhzntlj_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2KvJ2nQ3PsigJjcAhzntlj_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2PdB1hcerJMKvaKzSp91yO_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2PdB1hcerJMKvaKzSp91yO_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_26dF7M4m9S2ElIiL5pfWBz_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_26dF7M4m9S2ElIiL5pfWBz_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1zi0Ox8uY8YQgShMwO1ZwS_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1zi0Ox8uY8YQgShMwO1ZwS_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_NeqZ2PQttmCOQT36ZLZTC_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_NeqZ2PQttmCOQT36ZLZTC_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3vKgEwDgnW9MEr7sHtPUO7_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3vKgEwDgnW9MEr7sHtPUO7_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4zB3I6QmvXs4N3KOlOlkBy_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4zB3I6QmvXs4N3KOlOlkBy_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_wLZROKGCqBHUOHkEsP2Id_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_wLZROKGCqBHUOHkEsP2Id_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_48mPplWQMes2fVlKO9C5pQ_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_48mPplWQMes2fVlKO9C5pQ_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_45gKIPGqcWCUyJFAJWI87g_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_45gKIPGqcWCUyJFAJWI87g_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3zvkiVLQ1GecMp8IBUgpU8_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3zvkiVLQ1GecMp8IBUgpU8_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_50L3kQeHJoFUDvDI56td51_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_50L3kQeHJoFUDvDI56td51_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4JTAodwOtFifAuMAprK88V_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4JTAodwOtFifAuMAprK88V_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7AsoFWThjcFKNDdVfZgK8z_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7AsoFWThjcFKNDdVfZgK8z_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6oI4v5VErPUgRYzxcK8ag6_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6oI4v5VErPUgRYzxcK8ag6_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3j8NXYP7ru7IEkZEBBv9Fm_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3j8NXYP7ru7IEkZEBBv9Fm_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3j7QZ0QbiOYjiKRO2hDck0_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3j7QZ0QbiOYjiKRO2hDck0_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4VFoNCE2d1qdHAKwETjJYi_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4VFoNCE2d1qdHAKwETjJYi_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5HCVUT5ZthWj2DtBDDmUq4_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5HCVUT5ZthWj2DtBDDmUq4_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4PGxN3x4ksnP3UsEiDcPj_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4PGxN3x4ksnP3UsEiDcPj_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6fpKZJCdHa523F6Tc8PQlM_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6fpKZJCdHa523F6Tc8PQlM_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6iDZ554IXgPCy3aJ7kJGwf_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6iDZ554IXgPCy3aJ7kJGwf_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6kobDfSeWz3U7By5vJkzIa_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6kobDfSeWz3U7By5vJkzIa_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1GwZMBVSRTeSesqnjY782c_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1GwZMBVSRTeSesqnjY782c_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2aKen42bxmTU3sWjam2Sk8_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2aKen42bxmTU3sWjam2Sk8_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_prgm77PjiUJyTZJf9y7Xa_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_prgm77PjiUJyTZJf9y7Xa_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6wjq1FAc40310IO8iZc2qR_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6wjq1FAc40310IO8iZc2qR_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_oiLqK0LGahW5N5fVYFpdO_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_oiLqK0LGahW5N5fVYFpdO_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1CmPJ9joyk1AJ2jFqXn0IO_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_1CmPJ9joyk1AJ2jFqXn0IO_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5qN5Ut9vSAb68lzWD2vJ0s_adjective { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5qN5Ut9vSAb68lzWD2vJ0s_adjective_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_01j1ru7HksI6tV74p05Zfr_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_01j1ru7HksI6tV74p05Zfr_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5BChz4gcGX9oQ7IZcIG60d_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5BChz4gcGX9oQ7IZcIG60d_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2MM9ePpdiEUDMbbOw4pv1f_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2MM9ePpdiEUDMbbOw4pv1f_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7liEMmF2l9qmXxIiddqEUf_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_7liEMmF2l9qmXxIiddqEUf_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2vnlh21ryMtJXWxhlWEhAe_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_2vnlh21ryMtJXWxhlWEhAe_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3ePlVVEr14xGIxar1PSOA1_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3ePlVVEr14xGIxar1PSOA1_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3aojOcINCkmaYkBN2HICEO_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3aojOcINCkmaYkBN2HICEO_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
+	conc:concept_c24 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	:lexicon_en dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_31zBph7s45PSGrLfsrnsOX_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_31zBph7s45PSGrLfsrnsOX_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c9 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3myQQ1Yzw6FaQjJCKoMu6r_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3myQQ1Yzw6FaQjJCKoMu6r_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c16 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_46dqS2mIujTCclZ9eIwkLo_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_46dqS2mIujTCclZ9eIwkLo_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c25 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_qtfXHleXBks4osIWIgWPt_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_qtfXHleXBks4osIWIgWPt_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c43 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4S2glmWm4ulVVrc2TeYZnE_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4S2glmWm4ulVVrc2TeYZnE_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c21 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_QvQ21KsIUoKfij9yO8bEO_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_QvQ21KsIUoKfij9yO8bEO_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c45 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6yW5fFYtFimOcINdVQyrsJ_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6yW5fFYtFimOcINdVQyrsJ_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c37 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3cf5tTjyucQrJEYFkMDcud_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3cf5tTjyucQrJEYFkMDcud_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c14 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1MX9HQRG3O98tPrHChfGhm_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1MX9HQRG3O98tPrHChfGhm_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c3 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3iGqnMz8GXqxARyojj4cfK_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3iGqnMz8GXqxARyojj4cfK_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c34 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5K24nBUdrXE2SKyoo2RvFI_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5K24nBUdrXE2SKyoo2RvFI_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c4 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6IjvRnCiIvdKZQMUJn244_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6IjvRnCiIvdKZQMUJn244_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c38 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1Jt4oTD2KOcSTx5pWeR4RZ_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1Jt4oTD2KOcSTx5pWeR4RZ_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3rZhA8m77XzWYWjReMaTnM_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3rZhA8m77XzWYWjReMaTnM_noun_sense_default dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5S685WixqqLSskdQ0DNXbq_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5S685WixqqLSskdQ0DNXbq_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2U7A3vf0WIko2H0PII55BL_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2U7A3vf0WIko2H0PII55BL_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c31 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_x2jPAXzNogLNJnehfzkvG_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_x2jPAXzNogLNJnehfzkvG_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c11 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2DynConj8MjHyYiauH81R0_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2DynConj8MjHyYiauH81R0_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c1 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_63ETzY6HtRdvGfwL5kJMPU_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_63ETzY6HtRdvGfwL5kJMPU_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7D8oJJ3JD9qG4g72fhpuXx_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7D8oJJ3JD9qG4g72fhpuXx_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c6 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6P8arEd8lWEmWowSDmkczE_adjective dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6P8arEd8lWEmWowSDmkczE_adjective_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_8I5DzskMBx8lj4KSxHjzS_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_8I5DzskMBx8lj4KSxHjzS_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c2 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_51ffAI0i3XgZvpoomACqkb_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_51ffAI0i3XgZvpoomACqkb_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c35 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4hZoDvOkJqeN16IozUzSKL_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4hZoDvOkJqeN16IozUzSKL_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c32 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5itIAwfDtSGyKDLBqIyVf0_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5itIAwfDtSGyKDLBqIyVf0_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c33 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_SbT1jcxbhBif8PuKD0VNn_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_SbT1jcxbhBif8PuKD0VNn_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6wLB99sEILUkJFKD7DGt23_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6wLB99sEILUkJFKD7DGt23_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c23 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2x2T2FXMiqoPjtv42XfpkV_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2x2T2FXMiqoPjtv42XfpkV_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c12 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7bjbbaj5s0mYvlXcQGauSX_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7bjbbaj5s0mYvlXcQGauSX_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c26 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7CguCAIbdgKDCyQ7A4gxZW_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7CguCAIbdgKDCyQ7A4gxZW_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_61V0BTObz8cHJRP6WBW7il_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_61V0BTObz8cHJRP6WBW7il_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c29 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4wlELR6Whwkj5xidlnamG9_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4wlELR6Whwkj5xidlnamG9_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c41 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_73J7izryNsyesAUeXEbpCM_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_73J7izryNsyesAUeXEbpCM_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c15 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1RTOqbLEFQWLNRl7kT8rC6_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1RTOqbLEFQWLNRl7kT8rC6_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c30 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_oMsHVfGdWOqApFoDBB51A_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_oMsHVfGdWOqApFoDBB51A_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_BXh4s84yNZdf77KZ6ZpdI_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_BXh4s84yNZdf77KZ6ZpdI_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c13 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5tdBZf7nEHRMgKoKjRimLX_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5tdBZf7nEHRMgKoKjRimLX_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6XB8IVoK2fNWo9wd5We70M_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6XB8IVoK2fNWo9wd5We70M_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c42 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7EVD0Q0sX35wOola3cCNtg_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7EVD0Q0sX35wOola3cCNtg_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1JR6uWUe1fbrzMwGSdSoqU_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1JR6uWUe1fbrzMwGSdSoqU_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7aacRcYxbWJSpAB3t24IXp_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7aacRcYxbWJSpAB3t24IXp_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c39 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4pcjVU5RQzI2eYgDshXimH_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4pcjVU5RQzI2eYgDshXimH_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c10 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_48adkzlPD3Jm47ZPKFtHrf_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_48adkzlPD3Jm47ZPKFtHrf_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1i1T4JVYZdAvcOmimqW9zM_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1i1T4JVYZdAvcOmimqW9zM_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_GRnhIXhEP05IZGpIKXnbL_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_GRnhIXhEP05IZGpIKXnbL_noun_sense_default dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c27 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4mELd72j2uto9rtVUGSCRV_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4mELd72j2uto9rtVUGSCRV_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4yEzHhKK9LpU8l7Bms9qTW_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4yEzHhKK9LpU8l7Bms9qTW_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c8 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6263mLVxKBJ8w4Rr0D0tF2_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6263mLVxKBJ8w4Rr0D0tF2_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_34qa4wBRxDoRFP2CoMGX0r_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_34qa4wBRxDoRFP2CoMGX0r_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c44 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6pAje9hWMZN1u14iCGfdcs_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6pAje9hWMZN1u14iCGfdcs_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c7 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6rQMsgU7HgGjR4OpI7qkCg_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6rQMsgU7HgGjR4OpI7qkCg_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c28 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2zyAe8O2QvnKNUrvAiD3KC_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2zyAe8O2QvnKNUrvAiD3KC_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c5 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_QjEHA772daFThRUn1zj3k_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_QjEHA772daFThRUn1zj3k_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c36 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1y5nV6IzTjBP5zm1F0AygW_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1y5nV6IzTjBP5zm1F0AygW_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_56ZA7D7odJT1iOkNnoYOYX_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_56ZA7D7odJT1iOkNnoYOYX_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c20 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	:lexicon_zu dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2I2X17UtuB6NqisHU4gzmf dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2I2X17UtuB6NqisHU4gzmf_sense_default dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c18 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_68K3Ra75gpdZQknzxscQAI dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_68K3Ra75gpdZQknzxscQAI_sense_default dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c19 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3yOgIDrbQTXxxbWn1mkQUb dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3yOgIDrbQTXxxbWn1mkQUb_sense_default dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c22 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7BrfMUzhQju2qTjpzHiIMB dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7BrfMUzhQju2qTjpzHiIMB_sense_default dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c17 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4Ge4fe0dTrkWaIhwGGP9mo dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4Ge4fe0dTrkWaIhwGGP9mo_sense_default dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c40 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1hPLh5KawVRtIHQov0SgnO dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1hPLh5KawVRtIHQov0SgnO_sense_default dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	:lexicon_es dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_68TubKMpuUmyVYxpPPmaQT_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_68TubKMpuUmyVYxpPPmaQT_noun_sense_default dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5vi8NkP7SPQghRkt9pkj38_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5vi8NkP7SPQghRkt9pkj38_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5nlgIUZfOgPsJaTfwOfZPp_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5nlgIUZfOgPsJaTfwOfZPp_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4X2HNWOzzphaobR1MorO6I_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4X2HNWOzzphaobR1MorO6I_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2VARoFaJAI2zPPb1ryCyQQ_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2VARoFaJAI2zPPb1ryCyQQ_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_13h6HZY2SOjy9nE5tnzLAo_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_13h6HZY2SOjy9nE5tnzLAo_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3tC8m8qVDDGl3Ho7o4W5Qz_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3tC8m8qVDDGl3Ho7o4W5Qz_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2uVM7NWoSJP9b6P86jaLc4_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2uVM7NWoSJP9b6P86jaLc4_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6Cem0WXarBzw9ujxrmtDpT_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6Cem0WXarBzw9ujxrmtDpT_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5tVkYVO2PtTBoXtaeXr4GR_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5tVkYVO2PtTBoXtaeXr4GR_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3rP4XS1fj9IHtGuv5BpIsv_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3rP4XS1fj9IHtGuv5BpIsv_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7AYaW7Li95HPhVONIwuRgd_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7AYaW7Li95HPhVONIwuRgd_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7jt3DaewODavgE1ldRo5mh_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7jt3DaewODavgE1ldRo5mh_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7Pdy2mblNzIK20TYEN4y0P_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7Pdy2mblNzIK20TYEN4y0P_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3NvRDEAVive6lhHRnfKthe_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3NvRDEAVive6lhHRnfKthe_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2KvJ2nQ3PsigJjcAhzntlj_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2KvJ2nQ3PsigJjcAhzntlj_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2PdB1hcerJMKvaKzSp91yO_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2PdB1hcerJMKvaKzSp91yO_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_26dF7M4m9S2ElIiL5pfWBz_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_26dF7M4m9S2ElIiL5pfWBz_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1zi0Ox8uY8YQgShMwO1ZwS_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1zi0Ox8uY8YQgShMwO1ZwS_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_NeqZ2PQttmCOQT36ZLZTC_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_NeqZ2PQttmCOQT36ZLZTC_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3vKgEwDgnW9MEr7sHtPUO7_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3vKgEwDgnW9MEr7sHtPUO7_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4zB3I6QmvXs4N3KOlOlkBy_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4zB3I6QmvXs4N3KOlOlkBy_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_wLZROKGCqBHUOHkEsP2Id_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_wLZROKGCqBHUOHkEsP2Id_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_48mPplWQMes2fVlKO9C5pQ_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_48mPplWQMes2fVlKO9C5pQ_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_45gKIPGqcWCUyJFAJWI87g_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_45gKIPGqcWCUyJFAJWI87g_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3zvkiVLQ1GecMp8IBUgpU8_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3zvkiVLQ1GecMp8IBUgpU8_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_50L3kQeHJoFUDvDI56td51_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_50L3kQeHJoFUDvDI56td51_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4JTAodwOtFifAuMAprK88V_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4JTAodwOtFifAuMAprK88V_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7AsoFWThjcFKNDdVfZgK8z_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7AsoFWThjcFKNDdVfZgK8z_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6oI4v5VErPUgRYzxcK8ag6_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6oI4v5VErPUgRYzxcK8ag6_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3j8NXYP7ru7IEkZEBBv9Fm_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3j8NXYP7ru7IEkZEBBv9Fm_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3j7QZ0QbiOYjiKRO2hDck0_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3j7QZ0QbiOYjiKRO2hDck0_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4VFoNCE2d1qdHAKwETjJYi_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4VFoNCE2d1qdHAKwETjJYi_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5HCVUT5ZthWj2DtBDDmUq4_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5HCVUT5ZthWj2DtBDDmUq4_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4PGxN3x4ksnP3UsEiDcPj_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4PGxN3x4ksnP3UsEiDcPj_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6fpKZJCdHa523F6Tc8PQlM_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6fpKZJCdHa523F6Tc8PQlM_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6iDZ554IXgPCy3aJ7kJGwf_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6iDZ554IXgPCy3aJ7kJGwf_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6kobDfSeWz3U7By5vJkzIa_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6kobDfSeWz3U7By5vJkzIa_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1GwZMBVSRTeSesqnjY782c_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1GwZMBVSRTeSesqnjY782c_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2aKen42bxmTU3sWjam2Sk8_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2aKen42bxmTU3sWjam2Sk8_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_prgm77PjiUJyTZJf9y7Xa_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_prgm77PjiUJyTZJf9y7Xa_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6wjq1FAc40310IO8iZc2qR_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6wjq1FAc40310IO8iZc2qR_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_oiLqK0LGahW5N5fVYFpdO_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_oiLqK0LGahW5N5fVYFpdO_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1CmPJ9joyk1AJ2jFqXn0IO_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_1CmPJ9joyk1AJ2jFqXn0IO_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5qN5Ut9vSAb68lzWD2vJ0s_adjective dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5qN5Ut9vSAb68lzWD2vJ0s_adjective_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_01j1ru7HksI6tV74p05Zfr_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_01j1ru7HksI6tV74p05Zfr_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5BChz4gcGX9oQ7IZcIG60d_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5BChz4gcGX9oQ7IZcIG60d_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2MM9ePpdiEUDMbbOw4pv1f_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2MM9ePpdiEUDMbbOw4pv1f_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7liEMmF2l9qmXxIiddqEUf_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_7liEMmF2l9qmXxIiddqEUf_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2vnlh21ryMtJXWxhlWEhAe_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2vnlh21ryMtJXWxhlWEhAe_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3ePlVVEr14xGIxar1PSOA1_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3ePlVVEr14xGIxar1PSOA1_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3aojOcINCkmaYkBN2HICEO_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3aojOcINCkmaYkBN2HICEO_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
 }
 

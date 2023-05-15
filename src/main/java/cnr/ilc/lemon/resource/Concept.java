@@ -23,8 +23,7 @@ public class Concept implements ConceptInterface {
 	public Concept(String conceptId) {
 		id = conceptId;
 		FQName = String.format("conc:concept_%s", conceptId);
-		triples.add(FQName, "rdf:type", "skos:Concept");
-		triples.addString(FQName, "skos:prefLabel", id);
+		triples.addMultiple(FQName, "rdf:type", "skos:Concept", "skos:prefLabel", "\""+ id + "\"");
 		metadata.putInMap("*", id, "concepts", id, "id");
 	}
 

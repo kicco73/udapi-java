@@ -14,16 +14,17 @@ class BaseOperation(Operation):
 		'-cp', '/Users/enricocarniani/Documents/udapi-java/bin/main', 
 		"@/var/folders/vw/clt3dc494hg0bcmvk_1pkwdw0000gn/T/cp_747zl4waewrm1vf9nuzgcr49f.argfile", 
 		'cnr.ilc.Main',
+		'--graphdb-url', 'http://localhost:7200',
 	]
 
 	prod_bin = [
 		'/usr/bin/env', 'java', '-jar', '/app/rut.jar', 
+		'--graphdb-url', 'http://graphdb:7200',
 	]
 
 	args = [
 		'--namespace', 'http://txt2rdf/test#',
 		'--creator', 'bot',
-		'--graphdb-url', 'http://localhost:7200',
 		'--output-dir', os.path.join(os.getcwd(), 'resources')
 	]
 

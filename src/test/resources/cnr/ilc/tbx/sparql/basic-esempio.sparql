@@ -14,21 +14,19 @@ PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
 
-	:sf_OdeYA0FHeFFB1DVUMqdMw { rdf:type skos:ConceptScheme ; skos:prefLabel "e-mobility" } .
-	:sf_1gkE5ripjs1GT67xQzsF9A { rdf:type skos:ConceptScheme ; skos:prefLabel "e-caz" } .
-	:lexicon_en { rdf:type lime:Lexicon ; lime:language "en" } .
-	:lexicon_it { rdf:type lime:Lexicon ; lime:language "it" } .
-	:lexicon_fr { rdf:type lime:Lexicon ; lime:language "fr" } .
+	:sf_OdeYA0FHeFFB1DVUMqdMw rdf:type skos:ConceptScheme ; skos:prefLabel "e-mobility" .
+	:sf_1gkE5ripjs1GT67xQzsF9A rdf:type skos:ConceptScheme ; skos:prefLabel "e-caz" .
+	:lexicon_en rdf:type lime:Lexicon ; lime:language "en" .
+	:lexicon_it rdf:type lime:Lexicon ; lime:language "it" .
+	:lexicon_fr rdf:type lime:Lexicon ; lime:language "fr" .
 
 	# Concept section
-	conc:concept_c1 rdf:type skos:Concept .
-	conc:concept_c1 skos:prefLabel "c1" .
+	conc:concept_c1 rdf:type skos:Concept ; skos:prefLabel "c1" .
 	conc:concept_c1 skos:inScheme :sf_OdeYA0FHeFFB1DVUMqdMw .
 	conc:concept_c1 skos:definition [ rdf:value "A battery-electric car that is capable of\n traveling at a maximum speed of 25 miles per hour (mph) and has a maximum loaded weight of 3,000 lbs."@en ; dct:source "TechTarget" ; dct:identifier <https://www.techtarget.com/whatis/definition/neighborhood-electric-vehicle-NEV> ] .
 	conc:concept_c1 skos:definition [ rdf:value "Véhicule à deux places, activé par un moteur électrique à courant continu\n alimenté par des batteries au plomb rechargeables à partir d'une prise de courant résidentielle de 110 volts."@fr ; dct:source "Office québécois de la langue française, 2002" ; dct:identifier <https://gdt.oqlf.gouv.qc.ca/ficheOqlf.aspx?Id_Fiche=2069944> ] .
 	conc:concept_c1 skos:definition [ rdf:value "Un Neighborhood Electric Vehicle (NEV) è una denominazione USA per i veicoli elettrici di prossimità urbana che solitamente sono costruiti per avere una velocità non superiori a 50 km/h (70 km/h per categoria N1)\n e hanno un peso massimo caricato di circa 1.000 kg. I NEV rientrano nella classificazione dei quadricicli leggeri."@it ; dct:source "Wikipedia" ; dct:identifier <https://it.wikipedia.org/wiki/Neighborhood_Electric_Vehicle> ] .
-	conc:concept_c2 rdf:type skos:Concept .
-	conc:concept_c2 skos:prefLabel "c2" .
+	conc:concept_c2 rdf:type skos:Concept ; skos:prefLabel "c2" .
 	conc:concept_c2 skos:inScheme :sf_1gkE5ripjs1GT67xQzsF9A .
 	conc:concept_c2 skos:definition [ rdf:value "Véhicule entièrement électrique [conçu] spécifiquement pour transporter une seule personne sur de courtes distances."@fr ; dct:source "TERMIUM Plus" ; dct:identifier <https://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-fra.html?lang=fra&i=1&srchtxt=Véhicule+Électrique+Personnel&codom2nd_wet=1#resultrecs> ] .
 
@@ -169,29 +167,29 @@ INSERT DATA {
 
 	# [Add Metadata Processor] adding creator and date info
 
-	conc:concept_c1 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	:lexicon_en { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3qBH7rT9OGlyXvod5zzJcT_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3qBH7rT9OGlyXvod5zzJcT_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_47OMGlu0UAjWfjgVL05X0Q_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_47OMGlu0UAjWfjgVL05X0Q_noun_sense_default { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	:lexicon_it { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_161FnpgQej7gct2ziBVU9O_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_161FnpgQej7gct2ziBVU9O_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun_sense_default { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	:lexicon_fr { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly1 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly2 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5xeokIoIHPBPUJpqkiwIaY_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	conc:concept_c2 { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4RAB9Zskz180iQxtsAxhU2_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4RAB9Zskz180iQxtsAxhU2_noun_sense { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4822mpTrFD9AuxWfM2f4xr_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_4822mpTrFD9AuxWfM2f4xr_noun_sense_default { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
-	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun_sense_default { dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" } .
+	conc:concept_c1 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	:lexicon_en dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3qBH7rT9OGlyXvod5zzJcT_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3qBH7rT9OGlyXvod5zzJcT_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_47OMGlu0UAjWfjgVL05X0Q_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_47OMGlu0UAjWfjgVL05X0Q_noun_sense_default dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	:lexicon_it dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_161FnpgQej7gct2ziBVU9O_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_161FnpgQej7gct2ziBVU9O_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun_sense_default dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	:lexicon_fr dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3WbmMJFniSr1vy5NuW2J9h_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly1 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly2 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5xeokIoIHPBPUJpqkiwIaY_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	conc:concept_c2 dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4RAB9Zskz180iQxtsAxhU2_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4RAB9Zskz180iQxtsAxhU2_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4822mpTrFD9AuxWfM2f4xr_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_4822mpTrFD9AuxWfM2f4xr_noun_sense_default dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun_sense_default dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
 }
 
