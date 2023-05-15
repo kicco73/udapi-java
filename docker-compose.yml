@@ -11,4 +11,4 @@ services:
       GDB_JAVA_OPTS: >-
         -Xmx2g -Xms2g
     ports: 
-      - 8080:8080
+      - 8081:8081
