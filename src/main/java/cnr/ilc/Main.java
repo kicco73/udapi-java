@@ -42,7 +42,6 @@ public class Main {
 
     private Main parse(String[] args) throws ParseException {
         int startIndex = 0;
-        Logger.warn("ARGS: ", String.join(" ", args));
         while (startIndex < args.length) {
             switch (args[startIndex++]) {
                 case "-d", "--datetime" -> {
