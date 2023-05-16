@@ -27,7 +27,7 @@ public class PostProcessor implements ProcessorInterface {
 			}
 		}
 		
-		postProcessor.processors.add(new AddMetadataProcessor(creator));
+		postProcessor.processors.add(new AddMetadataProcessor(creator, filter.isNoConcepts()));
 		return postProcessor;
 	}
 

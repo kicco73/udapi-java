@@ -6,8 +6,10 @@ package cnr.ilc.sparql;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.regex.Pattern;
 
 public class SPARQLFormatter {
+	static private Pattern removeBlanks = Pattern.compile("[\n\t ]+");
 
 	static public String formatObjectWithUrlIfPossible(String object) {
 		try {
@@ -33,16 +35,16 @@ public class SPARQLFormatter {
 	}
 
 	static private String formatMultipleObjects(String... links) {
-		String object = "";
+		StringBuilder object = new StringBuilder("");
 
 		int count = 0;
 		
 		while(count < links.length) {
-			object += links[count++] + " " + links[count++];
-			if (count < links.length) object += " ; ";
+			object.append(links[count++] + " " + links[count++]);
+			if (count < links.length) object.append(" ; ");
 		}
-		object = object.replaceAll("[\n\t ]+", " ");
-		return object;
+		String renderedObject = removeBlanks.matcher(object.toString()).replaceAll(" ");
+		return renderedObject;
 	}
 
 	static public String formatStatement(String subject, String link, String object) {

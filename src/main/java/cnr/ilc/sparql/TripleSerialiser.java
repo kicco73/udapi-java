@@ -7,20 +7,28 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Map;
 import java.util.Map.Entry;
+import java.util.regex.Pattern;
+
 import cnr.ilc.rut.utils.DateProvider;
 
 public class TripleSerialiser {
-	private Map<String, String> features = new LinkedHashMap<>();
+	static private Pattern removeBlanks = Pattern.compile("[\n\t ]+");
+	private Map<String, StringBuilder> features = new LinkedHashMap<>();
 
 	public TripleSerialiser() {
-		features.put("*", "");
+		features.put("*", new StringBuilder(""));
+	}
+
+	private void addFeature(String language, String content) {
+		StringBuilder languageSpecific = features.containsKey(language)? features.get(language) : new StringBuilder("");
+		languageSpecific.append(content);
+		features.put(language, languageSpecific);
 	}
 
 	private void add(String subject, String link, String object, String language) {
-		object = object.replaceAll("[\n\t ]+", " ");
-		String languageSpecific = features.getOrDefault(language, "");
-		languageSpecific += SPARQLFormatter.formatStatement(subject, link, object);
-		features.put(language, languageSpecific);
+		object = removeBlanks.matcher(object).replaceAll(" ");
+		String content = SPARQLFormatter.formatStatement(subject, link, object);
+		addFeature(language, content);
 	} 
 
 	public void add(String subject, String link, String object) {
@@ -33,10 +41,8 @@ public class TripleSerialiser {
 	}
 
 	public void addMultiple(String subject, String... links) {
-		String language = "*";
-		String languageSpecific = features.getOrDefault(language, "");
-		languageSpecific += SPARQLFormatter.formatMultipleStatement(subject, links);
-		features.put(language, languageSpecific);
+		String content = SPARQLFormatter.formatMultipleStatement(subject, links);
+		addFeature("*", content);
 	}
 
 	public void addUrlOrString(String subject, String link, String possibleUrl) {
@@ -58,9 +64,8 @@ public class TripleSerialiser {
 			anonLinks[count++] = entry.getValue();
 		}
 
-		String languageSpecific = features.getOrDefault(language, "");
-		languageSpecific += SPARQLFormatter.formatAnonStatement(subject, link, anonLinks);
-		features.put(language, languageSpecific);
+		String content = SPARQLFormatter.formatAnonStatement(subject, link, anonLinks);
+		addFeature(language, content);
 	}
 
 	public void addMetaData(String entryFQN, String creator) {
@@ -82,13 +87,11 @@ public class TripleSerialiser {
 
 	public void addComment(String template, Object... args) {
 		String comment = String.format("\n\t# "+template+"\n\n", args);
-		String languageSpecific = features.getOrDefault("*", "");
-		languageSpecific += comment;
-		features.put("*", languageSpecific);
+		addFeature("*", comment);
 	}
 
 	public String serialise(String language) {
-		return features.getOrDefault(language, "");
+		return features.containsKey(language)? features.get(language).toString() : "";
 	}
 
 	public Collection<String> getLanguages() {
@@ -96,11 +99,11 @@ public class TripleSerialiser {
 	}
 
 	public String serialise() {
-		String serialised = "";
-		for (String languageSpecific: features.values()) {
-			serialised += languageSpecific;
+		StringBuilder builder = new StringBuilder("");
+		for (StringBuilder languageSpecific: features.values()) {
+			builder.append(languageSpecific);
 		}
-		return serialised;
+		return builder.toString();
 	}
 
 }

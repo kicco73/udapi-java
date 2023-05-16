@@ -11,9 +11,11 @@ import cnr.ilc.sparql.TripleSerialiser;
 
 public class AddMetadataProcessor implements ProcessorInterface {
     final private String creator;
+    final private boolean excludeConcepts;
 
-    public AddMetadataProcessor(String creator) {
+    public AddMetadataProcessor(String creator, boolean excludeConcepts) {
         this.creator = creator;
+        this.excludeConcepts = excludeConcepts;
     }
 
     @Override
@@ -29,7 +31,7 @@ public class AddMetadataProcessor implements ProcessorInterface {
             Logger.progress(progress, "Adding metadata");
 
             String conceptFQN = term.getConceptFQN();
-            if (conceptFQN != null && !conceptFQNs.contains(conceptFQN)) {
+            if (!excludeConcepts && conceptFQN != null && !conceptFQNs.contains(conceptFQN)) {
                 triples.addMetaData(conceptFQN, creator);
                 conceptFQNs.add(conceptFQN);
             }

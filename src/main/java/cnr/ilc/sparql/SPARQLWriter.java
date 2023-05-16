@@ -8,7 +8,7 @@ public class SPARQLWriter {
 	static final public String separator = "# data-chunk";
 	final protected String creator;
 	final private int chunkSize;
-	final private StringBuffer buffer = new StringBuffer();
+	final private StringBuilder buffer = new StringBuilder();
 	private int charsWritten = 0;
 	private boolean blockStarted = false;
 	private String prefixes =
@@ -69,6 +69,7 @@ public class SPARQLWriter {
 	public String getSparql() throws Exception {
 		if (blockStarted) {
 			buffer.append("}\n");
+			blockStarted = false;
 		}
 		return buffer.toString();
 	}
