@@ -60,4 +60,9 @@ public class PojoConcept implements ConceptInterface {
 		return json;
 	}
 
+	@Override
+	public String getJson(String language) throws Exception {
+		throw new UnsupportedOperationException("Unimplemented method getJson(language) called");
+	}
+
 }

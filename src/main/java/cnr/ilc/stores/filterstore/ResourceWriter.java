@@ -17,20 +17,20 @@ public class ResourceWriter implements TripleStoreInterface {
 		this.db = db;
 	}
 
-	private void storeGlobal(GlobalInterface global) throws SQLException {
+	private void storeGlobal(GlobalInterface global) throws Exception {
 		String serialised = global.getSerialised();
 		String metadata = global.getJson();
 		db.executeUpdate("insert into global (language, subjectField, metadata, serialised) values ('%s', %s, %s, %s)",
 				global.getLanguage(), db.quote(global.getSubjectField()), db.quote(metadata), db.quote(serialised));
 	}
 
-	private void storeConcept(ConceptInterface concept, Collection<String> languages) throws SQLException {
+	private void storeConcept(ConceptInterface concept, Collection<String> languages) throws Exception {
 		Collection<String> langs = new HashSet<>();
 		langs.add("*");
 		langs.addAll(languages);
 		for (String language : langs) {
 			String serialised = concept.getSerialised(language);
-			String metadata = concept.getJson();
+			String metadata = concept.getJson(language);
 			String subjectField = concept.getSubjectField();
 
 			if (serialised.length() > 0 || !metadata.equals("null")) {

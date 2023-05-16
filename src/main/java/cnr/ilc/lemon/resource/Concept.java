@@ -93,6 +93,11 @@ public class Concept implements ConceptInterface {
 		return metadata.toJson("*");
 	}
 
+	@Override
+	public String getJson(String language) {
+		return metadata.toJson(language);
+	}
+
 	public Collection<TermInterface> getTerms() {
 		return terms;
 	}

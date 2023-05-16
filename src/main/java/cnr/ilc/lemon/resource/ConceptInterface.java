@@ -8,5 +8,6 @@ public interface ConceptInterface {
 	public String getSubjectFieldFQN();
 	public String getSerialised(String language);
 	public String getSerialised();
+	public String getJson(String language) throws Exception;
 	public String getJson();
 }

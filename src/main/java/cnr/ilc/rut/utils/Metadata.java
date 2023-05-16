@@ -103,5 +103,4 @@ public class Metadata {
 		JSONObject data = (JSONObject) getMap(language, path);
 		return JSONObject.toJSONString(data);
 	}
-	
 }
