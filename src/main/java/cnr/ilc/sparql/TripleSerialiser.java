@@ -51,7 +51,7 @@ public class TripleSerialiser {
 	}
 
 	public void addStringWithLanguage(String subject, String link, String description, String language) {
-		String object = SPARQLFormatter.formatObjectWithLanguage(description, language);
+		String object = SPARQLFormatter.formatObjectAsStringWithLanguage(description, language);
 		add(subject, link, object, language);
 	}
 

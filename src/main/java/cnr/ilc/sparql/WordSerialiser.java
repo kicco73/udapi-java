@@ -15,12 +15,16 @@ public class WordSerialiser extends TripleSerialiser {
 		this.word = new WeakReference<Word>(word);
 		String wordFQN = word.getFQName();
 		add(word.lexiconFQN, "lime:entry", wordFQN);       
-		
-		add(wordFQN, "rdf:type", word.rdfType);   
-		addStringWithLanguage(wordFQN, "rdfs:label", word.canonicalForm.text, word.getLanguage());        
+	
+		String label = SPARQLFormatter.formatObjectAsStringWithLanguage(word.canonicalForm.text, word.getLanguage());
+		addMultiple(wordFQN, 
+			"rdf:type", word.rdfType, "vs:term_status", 
+			SPARQLFormatter.formatObjectAsString("working"), 
+			"rdfs:label", label
+		);
+
 		if (word.getPartOfSpeech() != null)
 			add(wordFQN, "lexinfo:partOfSpeech", word.getPartOfSpeech());
-		addString(wordFQN, "vs:term_status", "working");
 	}
 
 	static public String serialiseLexicalSenses(TermInterface word) {

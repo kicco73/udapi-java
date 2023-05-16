@@ -76,1150 +76,924 @@ INSERT DATA {
 
 	# Term section
 	:lexicon_en lime:entry term:le_6PkHAfwQ6Nnttda1Zoynku .
-	term:le_6PkHAfwQ6Nnttda1Zoynku rdf:type ontolex:LexicalEntry .
-	term:le_6PkHAfwQ6Nnttda1Zoynku vs:term_status "working" .
+	term:le_6PkHAfwQ6Nnttda1Zoynku rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "red dwarf"@en .
 	term:le_6PkHAfwQ6Nnttda1Zoynku ontolex:canonicalForm term:le_6PkHAfwQ6Nnttda1Zoynku_lemma .
 	term:le_6PkHAfwQ6Nnttda1Zoynku_lemma rdf:type ontolex:Form .
-	term:le_6PkHAfwQ6Nnttda1Zoynku rdfs:label "red dwarf"@en .
 	term:le_6PkHAfwQ6Nnttda1Zoynku_lemma ontolex:writtenRep "red dwarf"@en .
 	term:le_6PkHAfwQ6Nnttda1Zoynku ontolex:sense term:le_6PkHAfwQ6Nnttda1Zoynku_sense_default .
 	term:le_6PkHAfwQ6Nnttda1Zoynku_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6PkHAfwQ6Nnttda1Zoynku_sense_default ontolex:reference conc:concept_c24 .
 	:lexicon_en lime:entry term:le_1uLRqgSgjnkCHgYMbju4Yp .
-	term:le_1uLRqgSgjnkCHgYMbju4Yp rdf:type ontolex:LexicalEntry .
-	term:le_1uLRqgSgjnkCHgYMbju4Yp vs:term_status "working" .
+	term:le_1uLRqgSgjnkCHgYMbju4Yp rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Galaxy"@en .
 	term:le_1uLRqgSgjnkCHgYMbju4Yp ontolex:canonicalForm term:le_1uLRqgSgjnkCHgYMbju4Yp_lemma .
 	term:le_1uLRqgSgjnkCHgYMbju4Yp_lemma rdf:type ontolex:Form .
-	term:le_1uLRqgSgjnkCHgYMbju4Yp rdfs:label "Galaxy"@en .
 	term:le_1uLRqgSgjnkCHgYMbju4Yp_lemma ontolex:writtenRep "Galaxy"@en .
 	term:le_1uLRqgSgjnkCHgYMbju4Yp ontolex:sense term:le_1uLRqgSgjnkCHgYMbju4Yp_sense_default .
 	term:le_1uLRqgSgjnkCHgYMbju4Yp_sense_default rdf:type ontolex:LexicalSense .
 	term:le_1uLRqgSgjnkCHgYMbju4Yp_sense_default ontolex:reference conc:concept_c9 .
 	:lexicon_en lime:entry term:le_57oUEhfhm3NV1ZKFPssGtZ .
-	term:le_57oUEhfhm3NV1ZKFPssGtZ rdf:type ontolex:LexicalEntry .
-	term:le_57oUEhfhm3NV1ZKFPssGtZ vs:term_status "working" .
+	term:le_57oUEhfhm3NV1ZKFPssGtZ rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "initial mass function"@en .
 	term:le_57oUEhfhm3NV1ZKFPssGtZ ontolex:canonicalForm term:le_57oUEhfhm3NV1ZKFPssGtZ_lemma .
 	term:le_57oUEhfhm3NV1ZKFPssGtZ_lemma rdf:type ontolex:Form .
-	term:le_57oUEhfhm3NV1ZKFPssGtZ rdfs:label "initial mass function"@en .
 	term:le_57oUEhfhm3NV1ZKFPssGtZ_lemma ontolex:writtenRep "initial mass function"@en .
 	term:le_57oUEhfhm3NV1ZKFPssGtZ ontolex:sense term:le_57oUEhfhm3NV1ZKFPssGtZ_sense_default .
 	term:le_57oUEhfhm3NV1ZKFPssGtZ_sense_default rdf:type ontolex:LexicalSense .
 	term:le_57oUEhfhm3NV1ZKFPssGtZ_sense_default ontolex:reference conc:concept_c16 .
 	:lexicon_en lime:entry term:le_n0xPpYEn3A1gRZMAOvpzX .
-	term:le_n0xPpYEn3A1gRZMAOvpzX rdf:type ontolex:LexicalEntry .
-	term:le_n0xPpYEn3A1gRZMAOvpzX vs:term_status "working" .
+	term:le_n0xPpYEn3A1gRZMAOvpzX rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "spectral type"@en .
 	term:le_n0xPpYEn3A1gRZMAOvpzX ontolex:canonicalForm term:le_n0xPpYEn3A1gRZMAOvpzX_lemma .
 	term:le_n0xPpYEn3A1gRZMAOvpzX_lemma rdf:type ontolex:Form .
-	term:le_n0xPpYEn3A1gRZMAOvpzX rdfs:label "spectral type"@en .
 	term:le_n0xPpYEn3A1gRZMAOvpzX_lemma ontolex:writtenRep "spectral type"@en .
 	term:le_n0xPpYEn3A1gRZMAOvpzX ontolex:sense term:le_n0xPpYEn3A1gRZMAOvpzX_sense_default .
 	term:le_n0xPpYEn3A1gRZMAOvpzX_sense_default rdf:type ontolex:LexicalSense .
 	term:le_n0xPpYEn3A1gRZMAOvpzX_sense_default ontolex:reference conc:concept_c25 .
 	:lexicon_en lime:entry term:le_32wTsiwXLTZxbGv14Hpgie .
-	term:le_32wTsiwXLTZxbGv14Hpgie rdf:type ontolex:LexicalEntry .
-	term:le_32wTsiwXLTZxbGv14Hpgie vs:term_status "working" .
+	term:le_32wTsiwXLTZxbGv14Hpgie rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "solar mass"@en .
 	term:le_32wTsiwXLTZxbGv14Hpgie ontolex:canonicalForm term:le_32wTsiwXLTZxbGv14Hpgie_lemma .
 	term:le_32wTsiwXLTZxbGv14Hpgie_lemma rdf:type ontolex:Form .
-	term:le_32wTsiwXLTZxbGv14Hpgie rdfs:label "solar mass"@en .
 	term:le_32wTsiwXLTZxbGv14Hpgie_lemma ontolex:writtenRep "solar mass"@en .
 	term:le_32wTsiwXLTZxbGv14Hpgie ontolex:sense term:le_32wTsiwXLTZxbGv14Hpgie_sense_default .
 	term:le_32wTsiwXLTZxbGv14Hpgie_sense_default rdf:type ontolex:LexicalSense .
 	term:le_32wTsiwXLTZxbGv14Hpgie_sense_default ontolex:reference conc:concept_c43 .
 	:lexicon_en lime:entry term:le_9XhHHYH8vOP0Y6uSFHPN0 .
-	term:le_9XhHHYH8vOP0Y6uSFHPN0 rdf:type ontolex:LexicalEntry .
-	term:le_9XhHHYH8vOP0Y6uSFHPN0 vs:term_status "working" .
+	term:le_9XhHHYH8vOP0Y6uSFHPN0 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "supernova"@en .
 	term:le_9XhHHYH8vOP0Y6uSFHPN0 ontolex:canonicalForm term:le_9XhHHYH8vOP0Y6uSFHPN0_lemma .
 	term:le_9XhHHYH8vOP0Y6uSFHPN0_lemma rdf:type ontolex:Form .
-	term:le_9XhHHYH8vOP0Y6uSFHPN0 rdfs:label "supernova"@en .
 	term:le_9XhHHYH8vOP0Y6uSFHPN0_lemma ontolex:writtenRep "supernova"@en .
 	term:le_9XhHHYH8vOP0Y6uSFHPN0 ontolex:sense term:le_9XhHHYH8vOP0Y6uSFHPN0_sense_default .
 	term:le_9XhHHYH8vOP0Y6uSFHPN0_sense_default rdf:type ontolex:LexicalSense .
 	term:le_9XhHHYH8vOP0Y6uSFHPN0_sense_default ontolex:reference conc:concept_c21 .
 	:lexicon_en lime:entry term:le_qUqCKXX1yuSytViUmllo9 .
-	term:le_qUqCKXX1yuSytViUmllo9 rdf:type ontolex:LexicalEntry .
-	term:le_qUqCKXX1yuSytViUmllo9 vs:term_status "working" .
+	term:le_qUqCKXX1yuSytViUmllo9 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "black dwarf"@en .
 	term:le_qUqCKXX1yuSytViUmllo9 ontolex:canonicalForm term:le_qUqCKXX1yuSytViUmllo9_lemma .
 	term:le_qUqCKXX1yuSytViUmllo9_lemma rdf:type ontolex:Form .
-	term:le_qUqCKXX1yuSytViUmllo9 rdfs:label "black dwarf"@en .
 	term:le_qUqCKXX1yuSytViUmllo9_lemma ontolex:writtenRep "black dwarf"@en .
 	term:le_qUqCKXX1yuSytViUmllo9 ontolex:sense term:le_qUqCKXX1yuSytViUmllo9_sense_default .
 	term:le_qUqCKXX1yuSytViUmllo9_sense_default rdf:type ontolex:LexicalSense .
 	term:le_qUqCKXX1yuSytViUmllo9_sense_default ontolex:reference conc:concept_c45 .
 	:lexicon_en lime:entry term:le_5PxnFhbha40gJ7G7NR2Alf .
-	term:le_5PxnFhbha40gJ7G7NR2Alf rdf:type ontolex:LexicalEntry .
-	term:le_5PxnFhbha40gJ7G7NR2Alf vs:term_status "working" .
+	term:le_5PxnFhbha40gJ7G7NR2Alf rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "proton-proton chain reaction"@en .
 	term:le_5PxnFhbha40gJ7G7NR2Alf ontolex:canonicalForm term:le_5PxnFhbha40gJ7G7NR2Alf_lemma .
 	term:le_5PxnFhbha40gJ7G7NR2Alf_lemma rdf:type ontolex:Form .
-	term:le_5PxnFhbha40gJ7G7NR2Alf rdfs:label "proton-proton chain reaction"@en .
 	term:le_5PxnFhbha40gJ7G7NR2Alf_lemma ontolex:writtenRep "proton-proton chain reaction"@en .
 	term:le_5PxnFhbha40gJ7G7NR2Alf ontolex:sense term:le_5PxnFhbha40gJ7G7NR2Alf_sense_default .
 	term:le_5PxnFhbha40gJ7G7NR2Alf_sense_default rdf:type ontolex:LexicalSense .
 	term:le_5PxnFhbha40gJ7G7NR2Alf_sense_default ontolex:reference conc:concept_c37 .
 	:lexicon_en lime:entry term:le_68RK0U18jFUfI35pKRmpgC .
-	term:le_68RK0U18jFUfI35pKRmpgC rdf:type ontolex:LexicalEntry .
-	term:le_68RK0U18jFUfI35pKRmpgC vs:term_status "working" .
+	term:le_68RK0U18jFUfI35pKRmpgC rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "gravitational collapse"@en .
 	term:le_68RK0U18jFUfI35pKRmpgC ontolex:canonicalForm term:le_68RK0U18jFUfI35pKRmpgC_lemma .
 	term:le_68RK0U18jFUfI35pKRmpgC_lemma rdf:type ontolex:Form .
-	term:le_68RK0U18jFUfI35pKRmpgC rdfs:label "gravitational collapse"@en .
 	term:le_68RK0U18jFUfI35pKRmpgC_lemma ontolex:writtenRep "gravitational collapse"@en .
 	term:le_68RK0U18jFUfI35pKRmpgC ontolex:sense term:le_68RK0U18jFUfI35pKRmpgC_sense_default .
 	term:le_68RK0U18jFUfI35pKRmpgC_sense_default rdf:type ontolex:LexicalSense .
 	term:le_68RK0U18jFUfI35pKRmpgC_sense_default ontolex:reference conc:concept_c14 .
 	:lexicon_en lime:entry term:le_2XnweUn3ffSNydE5SaEivX .
-	term:le_2XnweUn3ffSNydE5SaEivX rdf:type ontolex:LexicalEntry .
-	term:le_2XnweUn3ffSNydE5SaEivX vs:term_status "working" .
+	term:le_2XnweUn3ffSNydE5SaEivX rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "black hole"@en .
 	term:le_2XnweUn3ffSNydE5SaEivX ontolex:canonicalForm term:le_2XnweUn3ffSNydE5SaEivX_lemma .
 	term:le_2XnweUn3ffSNydE5SaEivX_lemma rdf:type ontolex:Form .
-	term:le_2XnweUn3ffSNydE5SaEivX rdfs:label "black hole"@en .
 	term:le_2XnweUn3ffSNydE5SaEivX_lemma ontolex:writtenRep "black hole"@en .
 	term:le_2XnweUn3ffSNydE5SaEivX ontolex:sense term:le_2XnweUn3ffSNydE5SaEivX_sense_default .
 	term:le_2XnweUn3ffSNydE5SaEivX_sense_default rdf:type ontolex:LexicalSense .
 	term:le_2XnweUn3ffSNydE5SaEivX_sense_default ontolex:reference conc:concept_c3 .
 	:lexicon_en lime:entry term:le_6FALe7hOPUW7ZnoYg4wi82 .
-	term:le_6FALe7hOPUW7ZnoYg4wi82 rdf:type ontolex:LexicalEntry .
-	term:le_6FALe7hOPUW7ZnoYg4wi82 vs:term_status "working" .
+	term:le_6FALe7hOPUW7ZnoYg4wi82 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "neutron degeneracy"@en .
 	term:le_6FALe7hOPUW7ZnoYg4wi82 ontolex:canonicalForm term:le_6FALe7hOPUW7ZnoYg4wi82_lemma .
 	term:le_6FALe7hOPUW7ZnoYg4wi82_lemma rdf:type ontolex:Form .
-	term:le_6FALe7hOPUW7ZnoYg4wi82 rdfs:label "neutron degeneracy"@en .
 	term:le_6FALe7hOPUW7ZnoYg4wi82_lemma ontolex:writtenRep "neutron degeneracy"@en .
 	term:le_6FALe7hOPUW7ZnoYg4wi82 ontolex:sense term:le_6FALe7hOPUW7ZnoYg4wi82_sense_default .
 	term:le_6FALe7hOPUW7ZnoYg4wi82_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6FALe7hOPUW7ZnoYg4wi82_sense_default ontolex:reference conc:concept_c34 .
 	:lexicon_en lime:entry term:le_4Q4sFp0EraVS3LsXqS4ldd .
-	term:le_4Q4sFp0EraVS3LsXqS4ldd rdf:type ontolex:LexicalEntry .
-	term:le_4Q4sFp0EraVS3LsXqS4ldd vs:term_status "working" .
+	term:le_4Q4sFp0EraVS3LsXqS4ldd rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "gamma-ray burst"@en .
 	term:le_4Q4sFp0EraVS3LsXqS4ldd ontolex:canonicalForm term:le_4Q4sFp0EraVS3LsXqS4ldd_lemma .
 	term:le_4Q4sFp0EraVS3LsXqS4ldd_lemma rdf:type ontolex:Form .
-	term:le_4Q4sFp0EraVS3LsXqS4ldd rdfs:label "gamma-ray burst"@en .
 	term:le_4Q4sFp0EraVS3LsXqS4ldd_lemma ontolex:writtenRep "gamma-ray burst"@en .
 	term:le_4Q4sFp0EraVS3LsXqS4ldd ontolex:sense term:le_4Q4sFp0EraVS3LsXqS4ldd_sense_default .
 	term:le_4Q4sFp0EraVS3LsXqS4ldd_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4Q4sFp0EraVS3LsXqS4ldd_sense_default ontolex:reference conc:concept_c4 .
 	:lexicon_en lime:entry term:le_4mdKtPUdKa0iCjbBBHMYXk .
-	term:le_4mdKtPUdKa0iCjbBBHMYXk rdf:type ontolex:LexicalEntry .
-	term:le_4mdKtPUdKa0iCjbBBHMYXk vs:term_status "working" .
+	term:le_4mdKtPUdKa0iCjbBBHMYXk rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "CN cycle"@en .
 	term:le_4mdKtPUdKa0iCjbBBHMYXk ontolex:canonicalForm term:le_4mdKtPUdKa0iCjbBBHMYXk_lemma .
 	term:le_4mdKtPUdKa0iCjbBBHMYXk_lemma rdf:type ontolex:Form .
-	term:le_4mdKtPUdKa0iCjbBBHMYXk rdfs:label "CN cycle"@en .
 	term:le_4mdKtPUdKa0iCjbBBHMYXk_lemma ontolex:writtenRep "CN cycle"@en .
 	term:le_4mdKtPUdKa0iCjbBBHMYXk ontolex:sense term:le_4mdKtPUdKa0iCjbBBHMYXk_sense_default .
 	term:le_4mdKtPUdKa0iCjbBBHMYXk_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4mdKtPUdKa0iCjbBBHMYXk_sense_default ontolex:reference conc:concept_c38 .
 	:lexicon_en lime:entry term:le_4PVaMMQkdJ0sP7MXM82GNB .
-	term:le_4PVaMMQkdJ0sP7MXM82GNB rdf:type ontolex:LexicalEntry .
-	term:le_4PVaMMQkdJ0sP7MXM82GNB vs:term_status "working" .
+	term:le_4PVaMMQkdJ0sP7MXM82GNB rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Milky Way"@en .
 	term:le_4PVaMMQkdJ0sP7MXM82GNB ontolex:canonicalForm term:le_4PVaMMQkdJ0sP7MXM82GNB_lemma .
 	term:le_4PVaMMQkdJ0sP7MXM82GNB_lemma rdf:type ontolex:Form .
-	term:le_4PVaMMQkdJ0sP7MXM82GNB rdfs:label "Milky Way"@en .
 	term:le_4PVaMMQkdJ0sP7MXM82GNB_lemma ontolex:writtenRep "Milky Way"@en .
 	term:le_4PVaMMQkdJ0sP7MXM82GNB ontolex:sense term:le_4PVaMMQkdJ0sP7MXM82GNB_sense_default .
 	term:le_4PVaMMQkdJ0sP7MXM82GNB_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4PVaMMQkdJ0sP7MXM82GNB_sense_default ontolex:reference conc:concept_c9 .
 	:lexicon_en lime:entry term:le_28IBO4Qu5yg1XgZl7jIZIs .
-	term:le_28IBO4Qu5yg1XgZl7jIZIs rdf:type ontolex:LexicalEntry .
-	term:le_28IBO4Qu5yg1XgZl7jIZIs vs:term_status "working" .
+	term:le_28IBO4Qu5yg1XgZl7jIZIs rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "PP chain"@en .
 	term:le_28IBO4Qu5yg1XgZl7jIZIs ontolex:canonicalForm term:le_28IBO4Qu5yg1XgZl7jIZIs_lemma .
 	term:le_28IBO4Qu5yg1XgZl7jIZIs_lemma rdf:type ontolex:Form .
-	term:le_28IBO4Qu5yg1XgZl7jIZIs rdfs:label "PP chain"@en .
 	term:le_28IBO4Qu5yg1XgZl7jIZIs_lemma ontolex:writtenRep "PP chain"@en .
 	term:le_28IBO4Qu5yg1XgZl7jIZIs ontolex:sense term:le_28IBO4Qu5yg1XgZl7jIZIs_sense_default .
 	term:le_28IBO4Qu5yg1XgZl7jIZIs_sense_default rdf:type ontolex:LexicalSense .
 	term:le_28IBO4Qu5yg1XgZl7jIZIs_sense_default ontolex:reference conc:concept_c37 .
 	:lexicon_en lime:entry term:le_3jNovKE13CM3kjnkdJv6VB .
-	term:le_3jNovKE13CM3kjnkdJv6VB rdf:type ontolex:LexicalEntry .
-	term:le_3jNovKE13CM3kjnkdJv6VB vs:term_status "working" .
+	term:le_3jNovKE13CM3kjnkdJv6VB rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "carbon-nitrogen-oxygen cycle"@en .
 	term:le_3jNovKE13CM3kjnkdJv6VB ontolex:canonicalForm term:le_3jNovKE13CM3kjnkdJv6VB_lemma .
 	term:le_3jNovKE13CM3kjnkdJv6VB_lemma rdf:type ontolex:Form .
-	term:le_3jNovKE13CM3kjnkdJv6VB rdfs:label "carbon-nitrogen-oxygen cycle"@en .
 	term:le_3jNovKE13CM3kjnkdJv6VB_lemma ontolex:writtenRep "carbon-nitrogen-oxygen cycle"@en .
 	term:le_3jNovKE13CM3kjnkdJv6VB ontolex:sense term:le_3jNovKE13CM3kjnkdJv6VB_sense_default .
 	term:le_3jNovKE13CM3kjnkdJv6VB_sense_default rdf:type ontolex:LexicalSense .
 	term:le_3jNovKE13CM3kjnkdJv6VB_sense_default ontolex:reference conc:concept_c38 .
 	:lexicon_en lime:entry term:le_2DbvATtTcNOP3RdyCTRgrA .
-	term:le_2DbvATtTcNOP3RdyCTRgrA rdf:type ontolex:LexicalEntry .
-	term:le_2DbvATtTcNOP3RdyCTRgrA vs:term_status "working" .
+	term:le_2DbvATtTcNOP3RdyCTRgrA rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "reflection nebula"@en .
 	term:le_2DbvATtTcNOP3RdyCTRgrA ontolex:canonicalForm term:le_2DbvATtTcNOP3RdyCTRgrA_lemma .
 	term:le_2DbvATtTcNOP3RdyCTRgrA_lemma rdf:type ontolex:Form .
-	term:le_2DbvATtTcNOP3RdyCTRgrA rdfs:label "reflection nebula"@en .
 	term:le_2DbvATtTcNOP3RdyCTRgrA_lemma ontolex:writtenRep "reflection nebula"@en .
 	term:le_2DbvATtTcNOP3RdyCTRgrA ontolex:sense term:le_2DbvATtTcNOP3RdyCTRgrA_sense_default .
 	term:le_2DbvATtTcNOP3RdyCTRgrA_sense_default rdf:type ontolex:LexicalSense .
 	term:le_2DbvATtTcNOP3RdyCTRgrA_sense_default ontolex:reference conc:concept_c31 .
 	:lexicon_en lime:entry term:le_5ycS6opKbzjxJBiiMVlmhY .
-	term:le_5ycS6opKbzjxJBiiMVlmhY rdf:type ontolex:LexicalEntry .
-	term:le_5ycS6opKbzjxJBiiMVlmhY vs:term_status "working" .
+	term:le_5ycS6opKbzjxJBiiMVlmhY rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "UV radiation"@en .
 	term:le_5ycS6opKbzjxJBiiMVlmhY ontolex:canonicalForm term:le_5ycS6opKbzjxJBiiMVlmhY_lemma .
 	term:le_5ycS6opKbzjxJBiiMVlmhY_lemma rdf:type ontolex:Form .
-	term:le_5ycS6opKbzjxJBiiMVlmhY rdfs:label "UV radiation"@en .
 	term:le_5ycS6opKbzjxJBiiMVlmhY_lemma ontolex:writtenRep "UV radiation"@en .
 	term:le_5ycS6opKbzjxJBiiMVlmhY ontolex:sense term:le_5ycS6opKbzjxJBiiMVlmhY_sense_default .
 	term:le_5ycS6opKbzjxJBiiMVlmhY_sense_default rdf:type ontolex:LexicalSense .
 	term:le_5ycS6opKbzjxJBiiMVlmhY_sense_default ontolex:reference conc:concept_c11 .
 	:lexicon_en lime:entry term:le_6kflZx9kaEP1xpxZq2e5qO .
-	term:le_6kflZx9kaEP1xpxZq2e5qO rdf:type ontolex:LexicalEntry .
-	term:le_6kflZx9kaEP1xpxZq2e5qO vs:term_status "working" .
+	term:le_6kflZx9kaEP1xpxZq2e5qO rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "open cluster"@en .
 	term:le_6kflZx9kaEP1xpxZq2e5qO ontolex:canonicalForm term:le_6kflZx9kaEP1xpxZq2e5qO_lemma .
 	term:le_6kflZx9kaEP1xpxZq2e5qO_lemma rdf:type ontolex:Form .
-	term:le_6kflZx9kaEP1xpxZq2e5qO rdfs:label "open cluster"@en .
 	term:le_6kflZx9kaEP1xpxZq2e5qO_lemma ontolex:writtenRep "open cluster"@en .
 	term:le_6kflZx9kaEP1xpxZq2e5qO ontolex:sense term:le_6kflZx9kaEP1xpxZq2e5qO_sense_default .
 	term:le_6kflZx9kaEP1xpxZq2e5qO_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6kflZx9kaEP1xpxZq2e5qO_sense_default ontolex:reference conc:concept_c1 .
 	:lexicon_en lime:entry term:le_2Lzx1uSAMaApOFAhRpda2F .
-	term:le_2Lzx1uSAMaApOFAhRpda2F rdf:type ontolex:LexicalEntry .
-	term:le_2Lzx1uSAMaApOFAhRpda2F vs:term_status "working" .
+	term:le_2Lzx1uSAMaApOFAhRpda2F rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "GRB"@en .
 	term:le_2Lzx1uSAMaApOFAhRpda2F ontolex:canonicalForm term:le_2Lzx1uSAMaApOFAhRpda2F_lemma .
 	term:le_2Lzx1uSAMaApOFAhRpda2F_lemma rdf:type ontolex:Form .
-	term:le_2Lzx1uSAMaApOFAhRpda2F rdfs:label "GRB"@en .
 	term:le_2Lzx1uSAMaApOFAhRpda2F_lemma ontolex:writtenRep "GRB"@en .
 	term:le_2Lzx1uSAMaApOFAhRpda2F ontolex:sense term:le_2Lzx1uSAMaApOFAhRpda2F_sense_default .
 	term:le_2Lzx1uSAMaApOFAhRpda2F_sense_default rdf:type ontolex:LexicalSense .
 	term:le_2Lzx1uSAMaApOFAhRpda2F_sense_default ontolex:reference conc:concept_c4 .
 	:lexicon_en lime:entry term:le_5OlS58aZZR561E4Qtiw1ws .
-	term:le_5OlS58aZZR561E4Qtiw1ws rdf:type ontolex:LexicalEntry .
-	term:le_5OlS58aZZR561E4Qtiw1ws vs:term_status "working" .
+	term:le_5OlS58aZZR561E4Qtiw1ws rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "main-sequence"@en .
 	term:le_5OlS58aZZR561E4Qtiw1ws ontolex:canonicalForm term:le_5OlS58aZZR561E4Qtiw1ws_lemma .
 	term:le_5OlS58aZZR561E4Qtiw1ws_lemma rdf:type ontolex:Form .
-	term:le_5OlS58aZZR561E4Qtiw1ws rdfs:label "main-sequence"@en .
 	term:le_5OlS58aZZR561E4Qtiw1ws_lemma ontolex:writtenRep "main-sequence"@en .
 	term:le_5OlS58aZZR561E4Qtiw1ws ontolex:sense term:le_5OlS58aZZR561E4Qtiw1ws_sense_default .
 	term:le_5OlS58aZZR561E4Qtiw1ws_sense_default rdf:type ontolex:LexicalSense .
 	term:le_5OlS58aZZR561E4Qtiw1ws_sense_default ontolex:reference conc:concept_c6 .
 	:lexicon_en lime:entry term:le_RvFpkEYw5mOalDq8Q3DSn .
-	term:le_RvFpkEYw5mOalDq8Q3DSn rdf:type ontolex:LexicalEntry .
-	term:le_RvFpkEYw5mOalDq8Q3DSn vs:term_status "working" .
+	term:le_RvFpkEYw5mOalDq8Q3DSn rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Bethe-Weizsäcker-cycle"@en .
 	term:le_RvFpkEYw5mOalDq8Q3DSn ontolex:canonicalForm term:le_RvFpkEYw5mOalDq8Q3DSn_lemma .
 	term:le_RvFpkEYw5mOalDq8Q3DSn_lemma rdf:type ontolex:Form .
-	term:le_RvFpkEYw5mOalDq8Q3DSn rdfs:label "Bethe-Weizsäcker-cycle"@en .
 	term:le_RvFpkEYw5mOalDq8Q3DSn_lemma ontolex:writtenRep "Bethe-Weizsäcker-cycle"@en .
 	term:le_RvFpkEYw5mOalDq8Q3DSn ontolex:sense term:le_RvFpkEYw5mOalDq8Q3DSn_sense_default .
 	term:le_RvFpkEYw5mOalDq8Q3DSn_sense_default rdf:type ontolex:LexicalSense .
 	term:le_RvFpkEYw5mOalDq8Q3DSn_sense_default ontolex:reference conc:concept_c38 .
 	:lexicon_en lime:entry term:le_73GubLVa49rC4oR7njxxo4 .
-	term:le_73GubLVa49rC4oR7njxxo4 rdf:type ontolex:LexicalEntry .
-	term:le_73GubLVa49rC4oR7njxxo4 vs:term_status "working" .
+	term:le_73GubLVa49rC4oR7njxxo4 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "accretion disc"@en .
 	term:le_73GubLVa49rC4oR7njxxo4 ontolex:canonicalForm term:le_73GubLVa49rC4oR7njxxo4_lemma .
 	term:le_73GubLVa49rC4oR7njxxo4_lemma rdf:type ontolex:Form .
-	term:le_73GubLVa49rC4oR7njxxo4 rdfs:label "accretion disc"@en .
 	term:le_73GubLVa49rC4oR7njxxo4_lemma ontolex:writtenRep "accretion disc"@en .
 	term:le_73GubLVa49rC4oR7njxxo4 ontolex:sense term:le_73GubLVa49rC4oR7njxxo4_sense_default .
 	term:le_73GubLVa49rC4oR7njxxo4_sense_default rdf:type ontolex:LexicalSense .
 	term:le_73GubLVa49rC4oR7njxxo4_sense_default ontolex:reference conc:concept_c2 .
 	:lexicon_en lime:entry term:le_4hhoYdsAyQEXXLw2KS0fTU .
-	term:le_4hhoYdsAyQEXXLw2KS0fTU rdf:type ontolex:LexicalEntry .
-	term:le_4hhoYdsAyQEXXLw2KS0fTU vs:term_status "working" .
+	term:le_4hhoYdsAyQEXXLw2KS0fTU rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Schwarzschild radius"@en .
 	term:le_4hhoYdsAyQEXXLw2KS0fTU ontolex:canonicalForm term:le_4hhoYdsAyQEXXLw2KS0fTU_lemma .
 	term:le_4hhoYdsAyQEXXLw2KS0fTU_lemma rdf:type ontolex:Form .
-	term:le_4hhoYdsAyQEXXLw2KS0fTU rdfs:label "Schwarzschild radius"@en .
 	term:le_4hhoYdsAyQEXXLw2KS0fTU skos:note "Related Term: event horizon"@en .
 	term:le_4hhoYdsAyQEXXLw2KS0fTU_lemma ontolex:writtenRep "Schwarzschild radius"@en .
 	term:le_4hhoYdsAyQEXXLw2KS0fTU ontolex:sense term:le_4hhoYdsAyQEXXLw2KS0fTU_sense_default .
 	term:le_4hhoYdsAyQEXXLw2KS0fTU_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4hhoYdsAyQEXXLw2KS0fTU_sense_default ontolex:reference conc:concept_c35 .
 	:lexicon_en lime:entry term:le_HBkgoNwgGEJ8My2i2NwRy .
-	term:le_HBkgoNwgGEJ8My2i2NwRy rdf:type ontolex:LexicalEntry .
-	term:le_HBkgoNwgGEJ8My2i2NwRy vs:term_status "working" .
+	term:le_HBkgoNwgGEJ8My2i2NwRy rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "neutron star"@en .
 	term:le_HBkgoNwgGEJ8My2i2NwRy ontolex:canonicalForm term:le_HBkgoNwgGEJ8My2i2NwRy_lemma .
 	term:le_HBkgoNwgGEJ8My2i2NwRy_lemma rdf:type ontolex:Form .
-	term:le_HBkgoNwgGEJ8My2i2NwRy rdfs:label "neutron star"@en .
 	term:le_HBkgoNwgGEJ8My2i2NwRy_lemma ontolex:writtenRep "neutron star"@en .
 	term:le_HBkgoNwgGEJ8My2i2NwRy ontolex:sense term:le_HBkgoNwgGEJ8My2i2NwRy_sense_default .
 	term:le_HBkgoNwgGEJ8My2i2NwRy_sense_default rdf:type ontolex:LexicalSense .
 	term:le_HBkgoNwgGEJ8My2i2NwRy_sense_default ontolex:reference conc:concept_c32 .
 	:lexicon_en lime:entry term:le_2v8SgyBGvh4RcpeNvHMfYL .
-	term:le_2v8SgyBGvh4RcpeNvHMfYL rdf:type ontolex:LexicalEntry .
-	term:le_2v8SgyBGvh4RcpeNvHMfYL vs:term_status "working" .
+	term:le_2v8SgyBGvh4RcpeNvHMfYL rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Chandrasekhar limit"@en .
 	term:le_2v8SgyBGvh4RcpeNvHMfYL ontolex:canonicalForm term:le_2v8SgyBGvh4RcpeNvHMfYL_lemma .
 	term:le_2v8SgyBGvh4RcpeNvHMfYL_lemma rdf:type ontolex:Form .
-	term:le_2v8SgyBGvh4RcpeNvHMfYL rdfs:label "Chandrasekhar limit"@en .
 	term:le_2v8SgyBGvh4RcpeNvHMfYL_lemma ontolex:writtenRep "Chandrasekhar limit"@en .
 	term:le_2v8SgyBGvh4RcpeNvHMfYL ontolex:sense term:le_2v8SgyBGvh4RcpeNvHMfYL_sense_default .
 	term:le_2v8SgyBGvh4RcpeNvHMfYL_sense_default rdf:type ontolex:LexicalSense .
 	term:le_2v8SgyBGvh4RcpeNvHMfYL_sense_default ontolex:reference conc:concept_c33 .
 	:lexicon_en lime:entry term:le_3FUHTufiqDcmkFUvdNXm8N .
-	term:le_3FUHTufiqDcmkFUvdNXm8N rdf:type ontolex:LexicalEntry .
-	term:le_3FUHTufiqDcmkFUvdNXm8N vs:term_status "working" .
+	term:le_3FUHTufiqDcmkFUvdNXm8N rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "proton-proton reaction"@en .
 	term:le_3FUHTufiqDcmkFUvdNXm8N ontolex:canonicalForm term:le_3FUHTufiqDcmkFUvdNXm8N_lemma .
 	term:le_3FUHTufiqDcmkFUvdNXm8N_lemma rdf:type ontolex:Form .
-	term:le_3FUHTufiqDcmkFUvdNXm8N rdfs:label "proton-proton reaction"@en .
 	term:le_3FUHTufiqDcmkFUvdNXm8N_lemma ontolex:writtenRep "proton-proton reaction"@en .
 	term:le_3FUHTufiqDcmkFUvdNXm8N ontolex:sense term:le_3FUHTufiqDcmkFUvdNXm8N_sense_default .
 	term:le_3FUHTufiqDcmkFUvdNXm8N_sense_default rdf:type ontolex:LexicalSense .
 	term:le_3FUHTufiqDcmkFUvdNXm8N_sense_default ontolex:reference conc:concept_c37 .
 	:lexicon_en lime:entry term:le_13YT4DbRHf6rC36oUTT48h .
-	term:le_13YT4DbRHf6rC36oUTT48h rdf:type ontolex:LexicalEntry .
-	term:le_13YT4DbRHf6rC36oUTT48h vs:term_status "working" .
+	term:le_13YT4DbRHf6rC36oUTT48h rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "red giant"@en .
 	term:le_13YT4DbRHf6rC36oUTT48h ontolex:canonicalForm term:le_13YT4DbRHf6rC36oUTT48h_lemma .
 	term:le_13YT4DbRHf6rC36oUTT48h_lemma rdf:type ontolex:Form .
-	term:le_13YT4DbRHf6rC36oUTT48h rdfs:label "red giant"@en .
 	term:le_13YT4DbRHf6rC36oUTT48h_lemma ontolex:writtenRep "red giant"@en .
 	term:le_13YT4DbRHf6rC36oUTT48h ontolex:sense term:le_13YT4DbRHf6rC36oUTT48h_sense_default .
 	term:le_13YT4DbRHf6rC36oUTT48h_sense_default rdf:type ontolex:LexicalSense .
 	term:le_13YT4DbRHf6rC36oUTT48h_sense_default ontolex:reference conc:concept_c23 .
 	:lexicon_en lime:entry term:le_5TmrDVBarvYclYmIPwPUrB .
-	term:le_5TmrDVBarvYclYmIPwPUrB rdf:type ontolex:LexicalEntry .
-	term:le_5TmrDVBarvYclYmIPwPUrB vs:term_status "working" .
+	term:le_5TmrDVBarvYclYmIPwPUrB rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "magnetic field"@en .
 	term:le_5TmrDVBarvYclYmIPwPUrB ontolex:canonicalForm term:le_5TmrDVBarvYclYmIPwPUrB_lemma .
 	term:le_5TmrDVBarvYclYmIPwPUrB_lemma rdf:type ontolex:Form .
-	term:le_5TmrDVBarvYclYmIPwPUrB rdfs:label "magnetic field"@en .
 	term:le_5TmrDVBarvYclYmIPwPUrB_lemma ontolex:writtenRep "magnetic field"@en .
 	term:le_5TmrDVBarvYclYmIPwPUrB ontolex:sense term:le_5TmrDVBarvYclYmIPwPUrB_sense_default .
 	term:le_5TmrDVBarvYclYmIPwPUrB_sense_default rdf:type ontolex:LexicalSense .
 	term:le_5TmrDVBarvYclYmIPwPUrB_sense_default ontolex:reference conc:concept_c12 .
 	:lexicon_en lime:entry term:le_2ojcLpAym6qmWqadwPzaPv .
-	term:le_2ojcLpAym6qmWqadwPzaPv rdf:type ontolex:LexicalEntry .
-	term:le_2ojcLpAym6qmWqadwPzaPv vs:term_status "working" .
+	term:le_2ojcLpAym6qmWqadwPzaPv rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "white dwarf"@en .
 	term:le_2ojcLpAym6qmWqadwPzaPv ontolex:canonicalForm term:le_2ojcLpAym6qmWqadwPzaPv_lemma .
 	term:le_2ojcLpAym6qmWqadwPzaPv_lemma rdf:type ontolex:Form .
-	term:le_2ojcLpAym6qmWqadwPzaPv rdfs:label "white dwarf"@en .
 	term:le_2ojcLpAym6qmWqadwPzaPv_lemma ontolex:writtenRep "white dwarf"@en .
 	term:le_2ojcLpAym6qmWqadwPzaPv ontolex:sense term:le_2ojcLpAym6qmWqadwPzaPv_sense_default .
 	term:le_2ojcLpAym6qmWqadwPzaPv_sense_default rdf:type ontolex:LexicalSense .
 	term:le_2ojcLpAym6qmWqadwPzaPv_sense_default ontolex:reference conc:concept_c26 .
 	:lexicon_en lime:entry term:le_6shBfrEp3Tm6EQp1jvwa4 .
-	term:le_6shBfrEp3Tm6EQp1jvwa4 rdf:type ontolex:LexicalEntry .
-	term:le_6shBfrEp3Tm6EQp1jvwa4 vs:term_status "working" .
+	term:le_6shBfrEp3Tm6EQp1jvwa4 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "carbon-nitrogen cycle"@en .
 	term:le_6shBfrEp3Tm6EQp1jvwa4 ontolex:canonicalForm term:le_6shBfrEp3Tm6EQp1jvwa4_lemma .
 	term:le_6shBfrEp3Tm6EQp1jvwa4_lemma rdf:type ontolex:Form .
-	term:le_6shBfrEp3Tm6EQp1jvwa4 rdfs:label "carbon-nitrogen cycle"@en .
 	term:le_6shBfrEp3Tm6EQp1jvwa4_lemma ontolex:writtenRep "carbon-nitrogen cycle"@en .
 	term:le_6shBfrEp3Tm6EQp1jvwa4 ontolex:sense term:le_6shBfrEp3Tm6EQp1jvwa4_sense_default .
 	term:le_6shBfrEp3Tm6EQp1jvwa4_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6shBfrEp3Tm6EQp1jvwa4_sense_default ontolex:reference conc:concept_c38 .
 	:lexicon_en lime:entry term:le_5mXBohzdWrSTMdpd6rABbp .
-	term:le_5mXBohzdWrSTMdpd6rABbp rdf:type ontolex:LexicalEntry .
-	term:le_5mXBohzdWrSTMdpd6rABbp vs:term_status "working" .
+	term:le_5mXBohzdWrSTMdpd6rABbp rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "nebula"@en .
 	term:le_5mXBohzdWrSTMdpd6rABbp ontolex:canonicalForm term:le_5mXBohzdWrSTMdpd6rABbp_lemma .
 	term:le_5mXBohzdWrSTMdpd6rABbp_lemma rdf:type ontolex:Form .
-	term:le_5mXBohzdWrSTMdpd6rABbp rdfs:label "nebula"@en .
 	term:le_5mXBohzdWrSTMdpd6rABbp skos:note "Grammatical Number: singular"@en .
 	term:le_5mXBohzdWrSTMdpd6rABbp_lemma ontolex:writtenRep "nebula"@en .
 	term:le_5mXBohzdWrSTMdpd6rABbp ontolex:sense term:le_5mXBohzdWrSTMdpd6rABbp_sense_default .
 	term:le_5mXBohzdWrSTMdpd6rABbp_sense_default rdf:type ontolex:LexicalSense .
 	term:le_5mXBohzdWrSTMdpd6rABbp_sense_default ontolex:reference conc:concept_c29 .
 	:lexicon_en lime:entry term:le_3yByVtrxoex3ekXvCgH8tg .
-	term:le_3yByVtrxoex3ekXvCgH8tg rdf:type ontolex:LexicalEntry .
-	term:le_3yByVtrxoex3ekXvCgH8tg vs:term_status "working" .
+	term:le_3yByVtrxoex3ekXvCgH8tg rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "electron degeneracy"@en .
 	term:le_3yByVtrxoex3ekXvCgH8tg ontolex:canonicalForm term:le_3yByVtrxoex3ekXvCgH8tg_lemma .
 	term:le_3yByVtrxoex3ekXvCgH8tg_lemma rdf:type ontolex:Form .
-	term:le_3yByVtrxoex3ekXvCgH8tg rdfs:label "electron degeneracy"@en .
 	term:le_3yByVtrxoex3ekXvCgH8tg_lemma ontolex:writtenRep "electron degeneracy"@en .
 	term:le_3yByVtrxoex3ekXvCgH8tg ontolex:sense term:le_3yByVtrxoex3ekXvCgH8tg_sense_default .
 	term:le_3yByVtrxoex3ekXvCgH8tg_sense_default rdf:type ontolex:LexicalSense .
 	term:le_3yByVtrxoex3ekXvCgH8tg_sense_default ontolex:reference conc:concept_c41 .
 	:lexicon_en lime:entry term:le_4cXM8QeUmZvOLTqFWMsJLD .
-	term:le_4cXM8QeUmZvOLTqFWMsJLD rdf:type ontolex:LexicalEntry .
-	term:le_4cXM8QeUmZvOLTqFWMsJLD vs:term_status "working" .
+	term:le_4cXM8QeUmZvOLTqFWMsJLD rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "binary star"@en .
 	term:le_4cXM8QeUmZvOLTqFWMsJLD ontolex:canonicalForm term:le_4cXM8QeUmZvOLTqFWMsJLD_lemma .
 	term:le_4cXM8QeUmZvOLTqFWMsJLD_lemma rdf:type ontolex:Form .
-	term:le_4cXM8QeUmZvOLTqFWMsJLD rdfs:label "binary star"@en .
 	term:le_4cXM8QeUmZvOLTqFWMsJLD_lemma ontolex:writtenRep "binary star"@en .
 	term:le_4cXM8QeUmZvOLTqFWMsJLD ontolex:sense term:le_4cXM8QeUmZvOLTqFWMsJLD_sense_default .
 	term:le_4cXM8QeUmZvOLTqFWMsJLD_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4cXM8QeUmZvOLTqFWMsJLD_sense_default ontolex:reference conc:concept_c15 .
 	:lexicon_en lime:entry term:le_2tuzfPMtrimuznEDscCAPZ .
-	term:le_2tuzfPMtrimuznEDscCAPZ rdf:type ontolex:LexicalEntry .
-	term:le_2tuzfPMtrimuznEDscCAPZ vs:term_status "working" .
+	term:le_2tuzfPMtrimuznEDscCAPZ rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "absorbtion nebula"@en .
 	term:le_2tuzfPMtrimuznEDscCAPZ ontolex:canonicalForm term:le_2tuzfPMtrimuznEDscCAPZ_lemma .
 	term:le_2tuzfPMtrimuznEDscCAPZ_lemma rdf:type ontolex:Form .
-	term:le_2tuzfPMtrimuznEDscCAPZ rdfs:label "absorbtion nebula"@en .
 	term:le_2tuzfPMtrimuznEDscCAPZ_lemma ontolex:writtenRep "absorbtion nebula"@en .
 	term:le_2tuzfPMtrimuznEDscCAPZ ontolex:sense term:le_2tuzfPMtrimuznEDscCAPZ_sense_default .
 	term:le_2tuzfPMtrimuznEDscCAPZ_sense_default rdf:type ontolex:LexicalSense .
 	term:le_2tuzfPMtrimuznEDscCAPZ_sense_default ontolex:reference conc:concept_c30 .
 	:lexicon_en lime:entry term:le_29udSsUb5Bmp6dnxiliSOy .
-	term:le_29udSsUb5Bmp6dnxiliSOy rdf:type ontolex:LexicalEntry .
-	term:le_29udSsUb5Bmp6dnxiliSOy vs:term_status "working" .
+	term:le_29udSsUb5Bmp6dnxiliSOy rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "dark nebula"@en .
 	term:le_29udSsUb5Bmp6dnxiliSOy ontolex:canonicalForm term:le_29udSsUb5Bmp6dnxiliSOy_lemma .
 	term:le_29udSsUb5Bmp6dnxiliSOy_lemma rdf:type ontolex:Form .
-	term:le_29udSsUb5Bmp6dnxiliSOy rdfs:label "dark nebula"@en .
 	term:le_29udSsUb5Bmp6dnxiliSOy_lemma ontolex:writtenRep "dark nebula"@en .
 	term:le_29udSsUb5Bmp6dnxiliSOy ontolex:sense term:le_29udSsUb5Bmp6dnxiliSOy_sense_default .
 	term:le_29udSsUb5Bmp6dnxiliSOy_sense_default rdf:type ontolex:LexicalSense .
 	term:le_29udSsUb5Bmp6dnxiliSOy_sense_default ontolex:reference conc:concept_c30 .
 	:lexicon_en lime:entry term:le_4mdMvvxVzYwP2Y8hRqo7gh .
-	term:le_4mdMvvxVzYwP2Y8hRqo7gh rdf:type ontolex:LexicalEntry .
-	term:le_4mdMvvxVzYwP2Y8hRqo7gh vs:term_status "working" .
+	term:le_4mdMvvxVzYwP2Y8hRqo7gh rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "blue straggler"@en .
 	term:le_4mdMvvxVzYwP2Y8hRqo7gh ontolex:canonicalForm term:le_4mdMvvxVzYwP2Y8hRqo7gh_lemma .
 	term:le_4mdMvvxVzYwP2Y8hRqo7gh_lemma rdf:type ontolex:Form .
-	term:le_4mdMvvxVzYwP2Y8hRqo7gh rdfs:label "blue straggler"@en .
 	term:le_4mdMvvxVzYwP2Y8hRqo7gh_lemma ontolex:writtenRep "blue straggler"@en .
 	term:le_4mdMvvxVzYwP2Y8hRqo7gh ontolex:sense term:le_4mdMvvxVzYwP2Y8hRqo7gh_sense_default .
 	term:le_4mdMvvxVzYwP2Y8hRqo7gh_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4mdMvvxVzYwP2Y8hRqo7gh_sense_default ontolex:reference conc:concept_c13 .
 	:lexicon_en lime:entry term:le_USaOvrPk0i2B5IxlBZKrq .
-	term:le_USaOvrPk0i2B5IxlBZKrq rdf:type ontolex:LexicalEntry .
-	term:le_USaOvrPk0i2B5IxlBZKrq vs:term_status "working" .
+	term:le_USaOvrPk0i2B5IxlBZKrq rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "circumstellar accretion disk"@en .
 	term:le_USaOvrPk0i2B5IxlBZKrq ontolex:canonicalForm term:le_USaOvrPk0i2B5IxlBZKrq_lemma .
 	term:le_USaOvrPk0i2B5IxlBZKrq_lemma rdf:type ontolex:Form .
-	term:le_USaOvrPk0i2B5IxlBZKrq rdfs:label "circumstellar accretion disk"@en .
 	term:le_USaOvrPk0i2B5IxlBZKrq_lemma ontolex:writtenRep "circumstellar accretion disk"@en .
 	term:le_USaOvrPk0i2B5IxlBZKrq ontolex:sense term:le_USaOvrPk0i2B5IxlBZKrq_sense_default .
 	term:le_USaOvrPk0i2B5IxlBZKrq_sense_default rdf:type ontolex:LexicalSense .
 	term:le_USaOvrPk0i2B5IxlBZKrq_sense_default ontolex:reference conc:concept_c2 .
 	:lexicon_en lime:entry term:le_3hGuWmU5SbECCuvyl49h2h .
-	term:le_3hGuWmU5SbECCuvyl49h2h rdf:type ontolex:LexicalEntry .
-	term:le_3hGuWmU5SbECCuvyl49h2h vs:term_status "working" .
+	term:le_3hGuWmU5SbECCuvyl49h2h rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "singularity"@en .
 	term:le_3hGuWmU5SbECCuvyl49h2h ontolex:canonicalForm term:le_3hGuWmU5SbECCuvyl49h2h_lemma .
 	term:le_3hGuWmU5SbECCuvyl49h2h_lemma rdf:type ontolex:Form .
-	term:le_3hGuWmU5SbECCuvyl49h2h rdfs:label "singularity"@en .
 	term:le_3hGuWmU5SbECCuvyl49h2h skos:note "Related Term: black hole, event horizon, Schwarzschild radius"@en .
 	term:le_3hGuWmU5SbECCuvyl49h2h_lemma ontolex:writtenRep "singularity"@en .
 	term:le_3hGuWmU5SbECCuvyl49h2h ontolex:sense term:le_3hGuWmU5SbECCuvyl49h2h_sense_default .
 	term:le_3hGuWmU5SbECCuvyl49h2h_sense_default rdf:type ontolex:LexicalSense .
 	term:le_3hGuWmU5SbECCuvyl49h2h_sense_default ontolex:reference conc:concept_c42 .
 	:lexicon_en lime:entry term:le_3QrecUaPOTN0nUhhCLWd9M .
-	term:le_3QrecUaPOTN0nUhhCLWd9M rdf:type ontolex:LexicalEntry .
-	term:le_3QrecUaPOTN0nUhhCLWd9M vs:term_status "working" .
+	term:le_3QrecUaPOTN0nUhhCLWd9M rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "CNO cycle"@en .
 	term:le_3QrecUaPOTN0nUhhCLWd9M ontolex:canonicalForm term:le_3QrecUaPOTN0nUhhCLWd9M_lemma .
 	term:le_3QrecUaPOTN0nUhhCLWd9M_lemma rdf:type ontolex:Form .
-	term:le_3QrecUaPOTN0nUhhCLWd9M rdfs:label "CNO cycle"@en .
 	term:le_3QrecUaPOTN0nUhhCLWd9M_lemma ontolex:writtenRep "CNO cycle"@en .
 	term:le_3QrecUaPOTN0nUhhCLWd9M ontolex:sense term:le_3QrecUaPOTN0nUhhCLWd9M_sense_default .
 	term:le_3QrecUaPOTN0nUhhCLWd9M_sense_default rdf:type ontolex:LexicalSense .
 	term:le_3QrecUaPOTN0nUhhCLWd9M_sense_default ontolex:reference conc:concept_c38 .
 	:lexicon_en lime:entry term:le_4Sik966BeQHefcL1Fjplu4 .
-	term:le_4Sik966BeQHefcL1Fjplu4 rdf:type ontolex:LexicalEntry .
-	term:le_4Sik966BeQHefcL1Fjplu4 vs:term_status "working" .
+	term:le_4Sik966BeQHefcL1Fjplu4 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "galactic cluster"@en .
 	term:le_4Sik966BeQHefcL1Fjplu4 ontolex:canonicalForm term:le_4Sik966BeQHefcL1Fjplu4_lemma .
 	term:le_4Sik966BeQHefcL1Fjplu4_lemma rdf:type ontolex:Form .
-	term:le_4Sik966BeQHefcL1Fjplu4 rdfs:label "galactic cluster"@en .
 	term:le_4Sik966BeQHefcL1Fjplu4 skos:note "Another name for an open star cluster. They are often termed Galactic\n Clusters because they are found mainly in the plane of our galaxy. If\n you were to view our galaxy from afar, you would find that all the\n open/galactic clusters lie within the spiral arms of the galaxy.\nN-Source:\n http://www.delscope.demon.co.uk/astronomy/glossary.htm#G"@en .
 	term:le_4Sik966BeQHefcL1Fjplu4_lemma ontolex:writtenRep "galactic cluster"@en .
 	term:le_4Sik966BeQHefcL1Fjplu4 ontolex:sense term:le_4Sik966BeQHefcL1Fjplu4_sense_default .
 	term:le_4Sik966BeQHefcL1Fjplu4_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4Sik966BeQHefcL1Fjplu4_sense_default ontolex:reference conc:concept_c1 .
 	:lexicon_en lime:entry term:le_481YQcwYBbedAto9o1HM3Y .
-	term:le_481YQcwYBbedAto9o1HM3Y rdf:type ontolex:LexicalEntry .
-	term:le_481YQcwYBbedAto9o1HM3Y vs:term_status "working" .
+	term:le_481YQcwYBbedAto9o1HM3Y rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "degeneracy"@en .
 	term:le_481YQcwYBbedAto9o1HM3Y ontolex:canonicalForm term:le_481YQcwYBbedAto9o1HM3Y_lemma .
 	term:le_481YQcwYBbedAto9o1HM3Y_lemma rdf:type ontolex:Form .
-	term:le_481YQcwYBbedAto9o1HM3Y rdfs:label "degeneracy"@en .
 	term:le_481YQcwYBbedAto9o1HM3Y_lemma ontolex:writtenRep "degeneracy"@en .
 	term:le_481YQcwYBbedAto9o1HM3Y ontolex:sense term:le_481YQcwYBbedAto9o1HM3Y_sense_default .
 	term:le_481YQcwYBbedAto9o1HM3Y_sense_default rdf:type ontolex:LexicalSense .
 	term:le_481YQcwYBbedAto9o1HM3Y_sense_default ontolex:reference conc:concept_c39 .
 	:lexicon_en lime:entry term:le_4EVEO38URSMCp2iCxuuro7 .
-	term:le_4EVEO38URSMCp2iCxuuro7 rdf:type ontolex:LexicalEntry .
-	term:le_4EVEO38URSMCp2iCxuuro7 vs:term_status "working" .
+	term:le_4EVEO38URSMCp2iCxuuro7 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "star"@en .
 	term:le_4EVEO38URSMCp2iCxuuro7 ontolex:canonicalForm term:le_4EVEO38URSMCp2iCxuuro7_lemma .
 	term:le_4EVEO38URSMCp2iCxuuro7_lemma rdf:type ontolex:Form .
-	term:le_4EVEO38URSMCp2iCxuuro7 rdfs:label "star"@en .
 	term:le_4EVEO38URSMCp2iCxuuro7_lemma ontolex:writtenRep "star"@en .
 	term:le_4EVEO38URSMCp2iCxuuro7 ontolex:sense term:le_4EVEO38URSMCp2iCxuuro7_sense_default .
 	term:le_4EVEO38URSMCp2iCxuuro7_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4EVEO38URSMCp2iCxuuro7_sense_default ontolex:reference conc:concept_c10 .
 	:lexicon_en lime:entry term:le_6yApTHFZHyR5AhYGPR4P3O .
-	term:le_6yApTHFZHyR5AhYGPR4P3O rdf:type ontolex:LexicalEntry .
-	term:le_6yApTHFZHyR5AhYGPR4P3O vs:term_status "working" .
+	term:le_6yApTHFZHyR5AhYGPR4P3O rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "nebulae"@en .
 	term:le_6yApTHFZHyR5AhYGPR4P3O ontolex:canonicalForm term:le_6yApTHFZHyR5AhYGPR4P3O_lemma .
 	term:le_6yApTHFZHyR5AhYGPR4P3O_lemma rdf:type ontolex:Form .
-	term:le_6yApTHFZHyR5AhYGPR4P3O rdfs:label "nebulae"@en .
 	term:le_6yApTHFZHyR5AhYGPR4P3O skos:note "Grammatical Number: plural"@en .
 	term:le_6yApTHFZHyR5AhYGPR4P3O_lemma ontolex:writtenRep "nebulae"@en .
 	term:le_6yApTHFZHyR5AhYGPR4P3O ontolex:sense term:le_6yApTHFZHyR5AhYGPR4P3O_sense_default .
 	term:le_6yApTHFZHyR5AhYGPR4P3O_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6yApTHFZHyR5AhYGPR4P3O_sense_default ontolex:reference conc:concept_c29 .
 	:lexicon_en lime:entry term:le_7PyJzmSqjcBHaINGtb2a3m .
-	term:le_7PyJzmSqjcBHaINGtb2a3m rdf:type ontolex:LexicalEntry .
-	term:le_7PyJzmSqjcBHaINGtb2a3m vs:term_status "working" .
+	term:le_7PyJzmSqjcBHaINGtb2a3m rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Milky Way Galaxy"@en .
 	term:le_7PyJzmSqjcBHaINGtb2a3m ontolex:canonicalForm term:le_7PyJzmSqjcBHaINGtb2a3m_lemma .
 	term:le_7PyJzmSqjcBHaINGtb2a3m_lemma rdf:type ontolex:Form .
-	term:le_7PyJzmSqjcBHaINGtb2a3m rdfs:label "Milky Way Galaxy"@en .
 	term:le_7PyJzmSqjcBHaINGtb2a3m_lemma ontolex:writtenRep "Milky Way Galaxy"@en .
 	term:le_7PyJzmSqjcBHaINGtb2a3m ontolex:sense term:le_7PyJzmSqjcBHaINGtb2a3m_sense_default .
 	term:le_7PyJzmSqjcBHaINGtb2a3m_sense_default rdf:type ontolex:LexicalSense .
 	term:le_7PyJzmSqjcBHaINGtb2a3m_sense_default ontolex:reference conc:concept_c9 .
 	:lexicon_en lime:entry term:le_DCCpECao5sf8wCBjfzZEO .
-	term:le_DCCpECao5sf8wCBjfzZEO rdf:type ontolex:LexicalEntry .
-	term:le_DCCpECao5sf8wCBjfzZEO vs:term_status "working" .
+	term:le_DCCpECao5sf8wCBjfzZEO rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "planetary nebula"@en .
 	term:le_DCCpECao5sf8wCBjfzZEO ontolex:canonicalForm term:le_DCCpECao5sf8wCBjfzZEO_lemma .
 	term:le_DCCpECao5sf8wCBjfzZEO_lemma rdf:type ontolex:Form .
-	term:le_DCCpECao5sf8wCBjfzZEO rdfs:label "planetary nebula"@en .
 	term:le_DCCpECao5sf8wCBjfzZEO_lemma ontolex:writtenRep "planetary nebula"@en .
 	term:le_DCCpECao5sf8wCBjfzZEO ontolex:sense term:le_DCCpECao5sf8wCBjfzZEO_sense_default .
 	term:le_DCCpECao5sf8wCBjfzZEO_sense_default rdf:type ontolex:LexicalSense .
 	term:le_DCCpECao5sf8wCBjfzZEO_sense_default ontolex:reference conc:concept_c27 .
 	:lexicon_en lime:entry term:le_1Jlx7xlyId1nq6Nl0WLeaI .
-	term:le_1Jlx7xlyId1nq6Nl0WLeaI rdf:type ontolex:LexicalEntry .
-	term:le_1Jlx7xlyId1nq6Nl0WLeaI vs:term_status "working" .
+	term:le_1Jlx7xlyId1nq6Nl0WLeaI rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "carbon cycle"@en .
 	term:le_1Jlx7xlyId1nq6Nl0WLeaI ontolex:canonicalForm term:le_1Jlx7xlyId1nq6Nl0WLeaI_lemma .
 	term:le_1Jlx7xlyId1nq6Nl0WLeaI_lemma rdf:type ontolex:Form .
-	term:le_1Jlx7xlyId1nq6Nl0WLeaI rdfs:label "carbon cycle"@en .
 	term:le_1Jlx7xlyId1nq6Nl0WLeaI skos:note "The carbon cycle can also refer to the biogeochemical cycle by which\n carbon is exchanged among the biosphere, pedosphere, geosphere,\n hydrosphere, and atmosphere of the Earth.\nN-Source: http://en.wikipedia.org/wiki/Carbon_cycle"@en .
 	term:le_1Jlx7xlyId1nq6Nl0WLeaI_lemma ontolex:writtenRep "carbon cycle"@en .
 	term:le_1Jlx7xlyId1nq6Nl0WLeaI ontolex:sense term:le_1Jlx7xlyId1nq6Nl0WLeaI_sense_default .
 	term:le_1Jlx7xlyId1nq6Nl0WLeaI_sense_default rdf:type ontolex:LexicalSense .
 	term:le_1Jlx7xlyId1nq6Nl0WLeaI_sense_default ontolex:reference conc:concept_c38 .
 	:lexicon_en lime:entry term:le_6uoORjIcbvvnuPBcPQYxsC .
-	term:le_6uoORjIcbvvnuPBcPQYxsC rdf:type ontolex:LexicalEntry .
-	term:le_6uoORjIcbvvnuPBcPQYxsC vs:term_status "working" .
+	term:le_6uoORjIcbvvnuPBcPQYxsC rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "star cluster"@en .
 	term:le_6uoORjIcbvvnuPBcPQYxsC ontolex:canonicalForm term:le_6uoORjIcbvvnuPBcPQYxsC_lemma .
 	term:le_6uoORjIcbvvnuPBcPQYxsC_lemma rdf:type ontolex:Form .
-	term:le_6uoORjIcbvvnuPBcPQYxsC rdfs:label "star cluster"@en .
 	term:le_6uoORjIcbvvnuPBcPQYxsC skos:note "Related Term: globular cluster\nRelated Term: open cluster"@en .
 	term:le_6uoORjIcbvvnuPBcPQYxsC_lemma ontolex:writtenRep "star cluster"@en .
 	term:le_6uoORjIcbvvnuPBcPQYxsC ontolex:sense term:le_6uoORjIcbvvnuPBcPQYxsC_sense_default .
 	term:le_6uoORjIcbvvnuPBcPQYxsC_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6uoORjIcbvvnuPBcPQYxsC_sense_default ontolex:reference conc:concept_c8 .
 	:lexicon_en lime:entry term:le_3n2jxY8NmMvV1hkIw23jNa .
-	term:le_3n2jxY8NmMvV1hkIw23jNa rdf:type ontolex:LexicalEntry .
-	term:le_3n2jxY8NmMvV1hkIw23jNa vs:term_status "working" .
+	term:le_3n2jxY8NmMvV1hkIw23jNa rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "ultraviolet radiation"@en .
 	term:le_3n2jxY8NmMvV1hkIw23jNa ontolex:canonicalForm term:le_3n2jxY8NmMvV1hkIw23jNa_lemma .
 	term:le_3n2jxY8NmMvV1hkIw23jNa_lemma rdf:type ontolex:Form .
-	term:le_3n2jxY8NmMvV1hkIw23jNa rdfs:label "ultraviolet radiation"@en .
 	term:le_3n2jxY8NmMvV1hkIw23jNa_lemma ontolex:writtenRep "ultraviolet radiation"@en .
 	term:le_3n2jxY8NmMvV1hkIw23jNa ontolex:sense term:le_3n2jxY8NmMvV1hkIw23jNa_sense_default .
 	term:le_3n2jxY8NmMvV1hkIw23jNa_sense_default rdf:type ontolex:LexicalSense .
 	term:le_3n2jxY8NmMvV1hkIw23jNa_sense_default ontolex:reference conc:concept_c11 .
 	:lexicon_en lime:entry term:le_1Hs5QfUjHYrKe9MLOORgms .
-	term:le_1Hs5QfUjHYrKe9MLOORgms rdf:type ontolex:LexicalEntry .
-	term:le_1Hs5QfUjHYrKe9MLOORgms vs:term_status "working" .
+	term:le_1Hs5QfUjHYrKe9MLOORgms rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "triple-alpha process"@en .
 	term:le_1Hs5QfUjHYrKe9MLOORgms ontolex:canonicalForm term:le_1Hs5QfUjHYrKe9MLOORgms_lemma .
 	term:le_1Hs5QfUjHYrKe9MLOORgms_lemma rdf:type ontolex:Form .
-	term:le_1Hs5QfUjHYrKe9MLOORgms rdfs:label "triple-alpha process"@en .
 	term:le_1Hs5QfUjHYrKe9MLOORgms_lemma ontolex:writtenRep "triple-alpha process"@en .
 	term:le_1Hs5QfUjHYrKe9MLOORgms ontolex:sense term:le_1Hs5QfUjHYrKe9MLOORgms_sense_default .
 	term:le_1Hs5QfUjHYrKe9MLOORgms_sense_default rdf:type ontolex:LexicalSense .
 	term:le_1Hs5QfUjHYrKe9MLOORgms_sense_default ontolex:reference conc:concept_c44 .
 	:lexicon_en lime:entry term:le_41EK6WYUhdG9ye70CDTP2F .
-	term:le_41EK6WYUhdG9ye70CDTP2F rdf:type ontolex:LexicalEntry .
-	term:le_41EK6WYUhdG9ye70CDTP2F vs:term_status "working" .
+	term:le_41EK6WYUhdG9ye70CDTP2F rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "protostar"@en .
 	term:le_41EK6WYUhdG9ye70CDTP2F ontolex:canonicalForm term:le_41EK6WYUhdG9ye70CDTP2F_lemma .
 	term:le_41EK6WYUhdG9ye70CDTP2F_lemma rdf:type ontolex:Form .
-	term:le_41EK6WYUhdG9ye70CDTP2F rdfs:label "protostar"@en .
 	term:le_41EK6WYUhdG9ye70CDTP2F_lemma ontolex:writtenRep "protostar"@en .
 	term:le_41EK6WYUhdG9ye70CDTP2F ontolex:sense term:le_41EK6WYUhdG9ye70CDTP2F_sense_default .
 	term:le_41EK6WYUhdG9ye70CDTP2F_sense_default rdf:type ontolex:LexicalSense .
 	term:le_41EK6WYUhdG9ye70CDTP2F_sense_default ontolex:reference conc:concept_c7 .
 	:lexicon_en lime:entry term:le_2csG3iUBkk9W6050I94yBA .
-	term:le_2csG3iUBkk9W6050I94yBA rdf:type ontolex:LexicalEntry .
-	term:le_2csG3iUBkk9W6050I94yBA vs:term_status "working" .
+	term:le_2csG3iUBkk9W6050I94yBA rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "emission nebula"@en .
 	term:le_2csG3iUBkk9W6050I94yBA ontolex:canonicalForm term:le_2csG3iUBkk9W6050I94yBA_lemma .
 	term:le_2csG3iUBkk9W6050I94yBA_lemma rdf:type ontolex:Form .
-	term:le_2csG3iUBkk9W6050I94yBA rdfs:label "emission nebula"@en .
 	term:le_2csG3iUBkk9W6050I94yBA_lemma ontolex:writtenRep "emission nebula"@en .
 	term:le_2csG3iUBkk9W6050I94yBA ontolex:sense term:le_2csG3iUBkk9W6050I94yBA_sense_default .
 	term:le_2csG3iUBkk9W6050I94yBA_sense_default rdf:type ontolex:LexicalSense .
 	term:le_2csG3iUBkk9W6050I94yBA_sense_default ontolex:reference conc:concept_c28 .
 	:lexicon_en lime:entry term:le_1FVV5ZSQF2un7HfTzRTBC6 .
-	term:le_1FVV5ZSQF2un7HfTzRTBC6 rdf:type ontolex:LexicalEntry .
-	term:le_1FVV5ZSQF2un7HfTzRTBC6 vs:term_status "working" .
+	term:le_1FVV5ZSQF2un7HfTzRTBC6 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "globular cluster"@en .
 	term:le_1FVV5ZSQF2un7HfTzRTBC6 ontolex:canonicalForm term:le_1FVV5ZSQF2un7HfTzRTBC6_lemma .
 	term:le_1FVV5ZSQF2un7HfTzRTBC6_lemma rdf:type ontolex:Form .
-	term:le_1FVV5ZSQF2un7HfTzRTBC6 rdfs:label "globular cluster"@en .
 	term:le_1FVV5ZSQF2un7HfTzRTBC6 skos:note "Related Term: star cluster"@en .
 	term:le_1FVV5ZSQF2un7HfTzRTBC6_lemma ontolex:writtenRep "globular cluster"@en .
 	term:le_1FVV5ZSQF2un7HfTzRTBC6 ontolex:sense term:le_1FVV5ZSQF2un7HfTzRTBC6_sense_default .
 	term:le_1FVV5ZSQF2un7HfTzRTBC6_sense_default rdf:type ontolex:LexicalSense .
 	term:le_1FVV5ZSQF2un7HfTzRTBC6_sense_default ontolex:reference conc:concept_c5 .
 	:lexicon_en lime:entry term:le_77Ne5wy09Gvfg9fy6zujE8 .
-	term:le_77Ne5wy09Gvfg9fy6zujE8 rdf:type ontolex:LexicalEntry .
-	term:le_77Ne5wy09Gvfg9fy6zujE8 vs:term_status "working" .
+	term:le_77Ne5wy09Gvfg9fy6zujE8 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "event horizon"@en .
 	term:le_77Ne5wy09Gvfg9fy6zujE8 ontolex:canonicalForm term:le_77Ne5wy09Gvfg9fy6zujE8_lemma .
 	term:le_77Ne5wy09Gvfg9fy6zujE8_lemma rdf:type ontolex:Form .
-	term:le_77Ne5wy09Gvfg9fy6zujE8 rdfs:label "event horizon"@en .
 	term:le_77Ne5wy09Gvfg9fy6zujE8_lemma ontolex:writtenRep "event horizon"@en .
 	term:le_77Ne5wy09Gvfg9fy6zujE8 ontolex:sense term:le_77Ne5wy09Gvfg9fy6zujE8_sense_default .
 	term:le_77Ne5wy09Gvfg9fy6zujE8_sense_default rdf:type ontolex:LexicalSense .
 	term:le_77Ne5wy09Gvfg9fy6zujE8_sense_default ontolex:reference conc:concept_c36 .
 	:lexicon_en lime:entry term:le_6ABFLnoYMsegi5Ab39K25H .
-	term:le_6ABFLnoYMsegi5Ab39K25H rdf:type ontolex:LexicalEntry .
-	term:le_6ABFLnoYMsegi5Ab39K25H vs:term_status "working" .
+	term:le_6ABFLnoYMsegi5Ab39K25H rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "circumstellar disk"@en .
 	term:le_6ABFLnoYMsegi5Ab39K25H ontolex:canonicalForm term:le_6ABFLnoYMsegi5Ab39K25H_lemma .
 	term:le_6ABFLnoYMsegi5Ab39K25H_lemma rdf:type ontolex:Form .
-	term:le_6ABFLnoYMsegi5Ab39K25H rdfs:label "circumstellar disk"@en .
 	term:le_6ABFLnoYMsegi5Ab39K25H_lemma ontolex:writtenRep "circumstellar disk"@en .
 	term:le_6ABFLnoYMsegi5Ab39K25H ontolex:sense term:le_6ABFLnoYMsegi5Ab39K25H_sense_default .
 	term:le_6ABFLnoYMsegi5Ab39K25H_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6ABFLnoYMsegi5Ab39K25H_sense_default ontolex:reference conc:concept_c2 .
 	:lexicon_zu lime:entry term:le_2I2X17UtuB6NqisHU4gzmf .
-	term:le_2I2X17UtuB6NqisHU4gzmf rdf:type ontolex:LexicalEntry .
-	term:le_2I2X17UtuB6NqisHU4gzmf vs:term_status "working" .
+	term:le_2I2X17UtuB6NqisHU4gzmf rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Oxford2007"@zu .
 	term:le_2I2X17UtuB6NqisHU4gzmf ontolex:canonicalForm term:le_2I2X17UtuB6NqisHU4gzmf_lemma .
 	term:le_2I2X17UtuB6NqisHU4gzmf_lemma rdf:type ontolex:Form .
-	term:le_2I2X17UtuB6NqisHU4gzmf rdfs:label "Oxford2007"@zu .
 	term:le_2I2X17UtuB6NqisHU4gzmf skos:note "Book Title: Oxford Dictionary of Astronomy\nEditor[s]: Ridpath, Ian\nVolume: Second Edition\nPublication Place: New York\nPublisher: Oxford University Press\nPublication Year: 2007"@zu .
 	term:le_2I2X17UtuB6NqisHU4gzmf_lemma ontolex:writtenRep "Oxford2007"@zu .
 	term:le_2I2X17UtuB6NqisHU4gzmf ontolex:sense term:le_2I2X17UtuB6NqisHU4gzmf_sense_default .
 	term:le_2I2X17UtuB6NqisHU4gzmf_sense_default rdf:type ontolex:LexicalSense .
 	term:le_2I2X17UtuB6NqisHU4gzmf_sense_default ontolex:reference conc:concept_c20 .
 	:lexicon_zu lime:entry term:le_68K3Ra75gpdZQknzxscQAI .
-	term:le_68K3Ra75gpdZQknzxscQAI rdf:type ontolex:LexicalEntry .
-	term:le_68K3Ra75gpdZQknzxscQAI vs:term_status "working" .
+	term:le_68K3Ra75gpdZQknzxscQAI rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Cambridge2007"@zu .
 	term:le_68K3Ra75gpdZQknzxscQAI ontolex:canonicalForm term:le_68K3Ra75gpdZQknzxscQAI_lemma .
 	term:le_68K3Ra75gpdZQknzxscQAI_lemma rdf:type ontolex:Form .
-	term:le_68K3Ra75gpdZQknzxscQAI rdfs:label "Cambridge2007"@zu .
 	term:le_68K3Ra75gpdZQknzxscQAI skos:note "Author[s]: Mitton, Jaqueline\nBook Title: Cambridge Illustrated Dictionary of Astronomy\nPublication Place: New York\nPublisher: Cambridge University Press\nPublication Year: 2007"@zu .
 	term:le_68K3Ra75gpdZQknzxscQAI_lemma ontolex:writtenRep "Cambridge2007"@zu .
 	term:le_68K3Ra75gpdZQknzxscQAI ontolex:sense term:le_68K3Ra75gpdZQknzxscQAI_sense_default .
 	term:le_68K3Ra75gpdZQknzxscQAI_sense_default rdf:type ontolex:LexicalSense .
 	term:le_68K3Ra75gpdZQknzxscQAI_sense_default ontolex:reference conc:concept_c18 .
 	:lexicon_zu lime:entry term:le_3yOgIDrbQTXxxbWn1mkQUb .
-	term:le_3yOgIDrbQTXxxbWn1mkQUb rdf:type ontolex:LexicalEntry .
-	term:le_3yOgIDrbQTXxxbWn1mkQUb vs:term_status "working" .
+	term:le_3yOgIDrbQTXxxbWn1mkQUb rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Merriam-Webster2002"@zu .
 	term:le_3yOgIDrbQTXxxbWn1mkQUb ontolex:canonicalForm term:le_3yOgIDrbQTXxxbWn1mkQUb_lemma .
 	term:le_3yOgIDrbQTXxxbWn1mkQUb_lemma rdf:type ontolex:Form .
-	term:le_3yOgIDrbQTXxxbWn1mkQUb rdfs:label "Merriam-Webster2002"@zu .
 	term:le_3yOgIDrbQTXxxbWn1mkQUb skos:note "Book Title: Webster's Third New International Dictionary\nEditor[s]: Gove, Philip Babcock\nVolume: Third Edition\nPublication Place: Springfield, Massachusetts\nPublisher: Merriam-Webster INC.\nPublication Year: 2002"@zu .
 	term:le_3yOgIDrbQTXxxbWn1mkQUb_lemma ontolex:writtenRep "Merriam-Webster2002"@zu .
 	term:le_3yOgIDrbQTXxxbWn1mkQUb ontolex:sense term:le_3yOgIDrbQTXxxbWn1mkQUb_sense_default .
 	term:le_3yOgIDrbQTXxxbWn1mkQUb_sense_default rdf:type ontolex:LexicalSense .
 	term:le_3yOgIDrbQTXxxbWn1mkQUb_sense_default ontolex:reference conc:concept_c19 .
 	:lexicon_zu lime:entry term:le_7BrfMUzhQju2qTjpzHiIMB .
-	term:le_7BrfMUzhQju2qTjpzHiIMB rdf:type ontolex:LexicalEntry .
-	term:le_7BrfMUzhQju2qTjpzHiIMB vs:term_status "working" .
+	term:le_7BrfMUzhQju2qTjpzHiIMB rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Moore2003"@zu .
 	term:le_7BrfMUzhQju2qTjpzHiIMB ontolex:canonicalForm term:le_7BrfMUzhQju2qTjpzHiIMB_lemma .
 	term:le_7BrfMUzhQju2qTjpzHiIMB_lemma rdf:type ontolex:Form .
-	term:le_7BrfMUzhQju2qTjpzHiIMB rdfs:label "Moore2003"@zu .
 	term:le_7BrfMUzhQju2qTjpzHiIMB skos:note "Author[s]: Moore, Patrick\nBook Title: Philip's Atlas of the Universe\nPublication Place: Heron Quays, London\nPublisher: Philip's\nPublication Year: 2003"@zu .
 	term:le_7BrfMUzhQju2qTjpzHiIMB_lemma ontolex:writtenRep "Moore2003"@zu .
 	term:le_7BrfMUzhQju2qTjpzHiIMB ontolex:sense term:le_7BrfMUzhQju2qTjpzHiIMB_sense_default .
 	term:le_7BrfMUzhQju2qTjpzHiIMB_sense_default rdf:type ontolex:LexicalSense .
 	term:le_7BrfMUzhQju2qTjpzHiIMB_sense_default ontolex:reference conc:concept_c22 .
 	:lexicon_zu lime:entry term:le_4Ge4fe0dTrkWaIhwGGP9mo .
-	term:le_4Ge4fe0dTrkWaIhwGGP9mo rdf:type ontolex:LexicalEntry .
-	term:le_4Ge4fe0dTrkWaIhwGGP9mo vs:term_status "working" .
+	term:le_4Ge4fe0dTrkWaIhwGGP9mo rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Bally2005"@zu .
 	term:le_4Ge4fe0dTrkWaIhwGGP9mo ontolex:canonicalForm term:le_4Ge4fe0dTrkWaIhwGGP9mo_lemma .
 	term:le_4Ge4fe0dTrkWaIhwGGP9mo_lemma rdf:type ontolex:Form .
-	term:le_4Ge4fe0dTrkWaIhwGGP9mo rdfs:label "Bally2005"@zu .
 	term:le_4Ge4fe0dTrkWaIhwGGP9mo skos:note "Author[s]: Bally, John and Hans Zinnecker\nJournal Title: The Astronomical Journal\nArticle Title: The Birth of High-Mass Stars: Accertion and/or\n Mergers?\nVolume: 129\nPublication Place: U.S.A.\nPublisher: The American Astronomical Society\nPublication Year: May 2005\nPage(s): 2281-2293"@zu .
 	term:le_4Ge4fe0dTrkWaIhwGGP9mo_lemma ontolex:writtenRep "Bally2005"@zu .
 	term:le_4Ge4fe0dTrkWaIhwGGP9mo ontolex:sense term:le_4Ge4fe0dTrkWaIhwGGP9mo_sense_default .
 	term:le_4Ge4fe0dTrkWaIhwGGP9mo_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4Ge4fe0dTrkWaIhwGGP9mo_sense_default ontolex:reference conc:concept_c17 .
 	:lexicon_zu lime:entry term:le_1hPLh5KawVRtIHQov0SgnO .
-	term:le_1hPLh5KawVRtIHQov0SgnO rdf:type ontolex:LexicalEntry .
-	term:le_1hPLh5KawVRtIHQov0SgnO vs:term_status "working" .
+	term:le_1hPLh5KawVRtIHQov0SgnO rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Oxford2003"@zu .
 	term:le_1hPLh5KawVRtIHQov0SgnO ontolex:canonicalForm term:le_1hPLh5KawVRtIHQov0SgnO_lemma .
 	term:le_1hPLh5KawVRtIHQov0SgnO_lemma rdf:type ontolex:Form .
-	term:le_1hPLh5KawVRtIHQov0SgnO rdfs:label "Oxford2003"@zu .
 	term:le_1hPLh5KawVRtIHQov0SgnO skos:note "Author[s]: Ridpath, Ian\nBook Title: Astronomía\nPublication Place: Spain\nPublisher: Oxford University Press\nPublication Year: 2003"@zu .
 	term:le_1hPLh5KawVRtIHQov0SgnO_lemma ontolex:writtenRep "Oxford2003"@zu .
 	term:le_1hPLh5KawVRtIHQov0SgnO ontolex:sense term:le_1hPLh5KawVRtIHQov0SgnO_sense_default .
 	term:le_1hPLh5KawVRtIHQov0SgnO_sense_default rdf:type ontolex:LexicalSense .
 	term:le_1hPLh5KawVRtIHQov0SgnO_sense_default ontolex:reference conc:concept_c40 .
 	:lexicon_es lime:entry term:le_6hVcwcj0o3GVrG5Mrn2avj .
-	term:le_6hVcwcj0o3GVrG5Mrn2avj rdf:type ontolex:LexicalEntry .
-	term:le_6hVcwcj0o3GVrG5Mrn2avj vs:term_status "working" .
+	term:le_6hVcwcj0o3GVrG5Mrn2avj rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "cadena protón-protón"@es .
 	term:le_6hVcwcj0o3GVrG5Mrn2avj ontolex:canonicalForm term:le_6hVcwcj0o3GVrG5Mrn2avj_lemma .
 	term:le_6hVcwcj0o3GVrG5Mrn2avj_lemma rdf:type ontolex:Form .
-	term:le_6hVcwcj0o3GVrG5Mrn2avj rdfs:label "cadena protón-protón"@es .
 	term:le_6hVcwcj0o3GVrG5Mrn2avj_lemma ontolex:writtenRep "cadena protón-protón"@es .
 	term:le_6hVcwcj0o3GVrG5Mrn2avj ontolex:sense term:le_6hVcwcj0o3GVrG5Mrn2avj_sense_default .
 	term:le_6hVcwcj0o3GVrG5Mrn2avj_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6hVcwcj0o3GVrG5Mrn2avj_sense_default ontolex:reference conc:concept_c37 .
 	:lexicon_es lime:entry term:le_3QZqk54s5xmLxXoo64xyZJ .
-	term:le_3QZqk54s5xmLxXoo64xyZJ rdf:type ontolex:LexicalEntry .
-	term:le_3QZqk54s5xmLxXoo64xyZJ vs:term_status "working" .
+	term:le_3QZqk54s5xmLxXoo64xyZJ rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "estrella rezagada azul"@es .
 	term:le_3QZqk54s5xmLxXoo64xyZJ ontolex:canonicalForm term:le_3QZqk54s5xmLxXoo64xyZJ_lemma .
 	term:le_3QZqk54s5xmLxXoo64xyZJ_lemma rdf:type ontolex:Form .
-	term:le_3QZqk54s5xmLxXoo64xyZJ rdfs:label "estrella rezagada azul"@es .
 	term:le_3QZqk54s5xmLxXoo64xyZJ_lemma ontolex:writtenRep "estrella rezagada azul"@es .
 	term:le_3QZqk54s5xmLxXoo64xyZJ ontolex:sense term:le_3QZqk54s5xmLxXoo64xyZJ_sense_default .
 	term:le_3QZqk54s5xmLxXoo64xyZJ_sense_default rdf:type ontolex:LexicalSense .
 	term:le_3QZqk54s5xmLxXoo64xyZJ_sense_default ontolex:reference conc:concept_c13 .
 	:lexicon_es lime:entry term:le_4ZV85fKqEvOBEwh1JZnOcS .
-	term:le_4ZV85fKqEvOBEwh1JZnOcS rdf:type ontolex:LexicalEntry .
-	term:le_4ZV85fKqEvOBEwh1JZnOcS vs:term_status "working" .
+	term:le_4ZV85fKqEvOBEwh1JZnOcS rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "supernova"@es .
 	term:le_4ZV85fKqEvOBEwh1JZnOcS ontolex:canonicalForm term:le_4ZV85fKqEvOBEwh1JZnOcS_lemma .
 	term:le_4ZV85fKqEvOBEwh1JZnOcS_lemma rdf:type ontolex:Form .
-	term:le_4ZV85fKqEvOBEwh1JZnOcS rdfs:label "supernova"@es .
 	term:le_4ZV85fKqEvOBEwh1JZnOcS_lemma ontolex:writtenRep "supernova"@es .
 	term:le_4ZV85fKqEvOBEwh1JZnOcS ontolex:sense term:le_4ZV85fKqEvOBEwh1JZnOcS_sense_default .
 	term:le_4ZV85fKqEvOBEwh1JZnOcS_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4ZV85fKqEvOBEwh1JZnOcS_sense_default ontolex:reference conc:concept_c21 .
 	:lexicon_es lime:entry term:le_3elwwoUninHBIN49sRY2li .
-	term:le_3elwwoUninHBIN49sRY2li rdf:type ontolex:LexicalEntry .
-	term:le_3elwwoUninHBIN49sRY2li vs:term_status "working" .
+	term:le_3elwwoUninHBIN49sRY2li rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "colapso gravitacional"@es .
 	term:le_3elwwoUninHBIN49sRY2li ontolex:canonicalForm term:le_3elwwoUninHBIN49sRY2li_lemma .
 	term:le_3elwwoUninHBIN49sRY2li_lemma rdf:type ontolex:Form .
-	term:le_3elwwoUninHBIN49sRY2li rdfs:label "colapso gravitacional"@es .
 	term:le_3elwwoUninHBIN49sRY2li_lemma ontolex:writtenRep "colapso gravitacional"@es .
 	term:le_3elwwoUninHBIN49sRY2li ontolex:sense term:le_3elwwoUninHBIN49sRY2li_sense_default .
 	term:le_3elwwoUninHBIN49sRY2li_sense_default rdf:type ontolex:LexicalSense .
 	term:le_3elwwoUninHBIN49sRY2li_sense_default ontolex:reference conc:concept_c14 .
 	:lexicon_es lime:entry term:le_6JJOsml82x9mDUsyayTYsl .
-	term:le_6JJOsml82x9mDUsyayTYsl rdf:type ontolex:LexicalEntry .
-	term:le_6JJOsml82x9mDUsyayTYsl vs:term_status "working" .
+	term:le_6JJOsml82x9mDUsyayTYsl rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "ciclo del carbono-nitrógeno-oxígeno"@es .
 	term:le_6JJOsml82x9mDUsyayTYsl ontolex:canonicalForm term:le_6JJOsml82x9mDUsyayTYsl_lemma .
 	term:le_6JJOsml82x9mDUsyayTYsl_lemma rdf:type ontolex:Form .
-	term:le_6JJOsml82x9mDUsyayTYsl rdfs:label "ciclo del carbono-nitrógeno-oxígeno"@es .
 	term:le_6JJOsml82x9mDUsyayTYsl_lemma ontolex:writtenRep "ciclo del carbono-nitrógeno-oxígeno"@es .
 	term:le_6JJOsml82x9mDUsyayTYsl ontolex:sense term:le_6JJOsml82x9mDUsyayTYsl_sense_default .
 	term:le_6JJOsml82x9mDUsyayTYsl_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6JJOsml82x9mDUsyayTYsl_sense_default ontolex:reference conc:concept_c38 .
 	:lexicon_es lime:entry term:le_9TGIOtCmYOBSSERPypug6 .
-	term:le_9TGIOtCmYOBSSERPypug6 rdf:type ontolex:LexicalEntry .
-	term:le_9TGIOtCmYOBSSERPypug6 vs:term_status "working" .
+	term:le_9TGIOtCmYOBSSERPypug6 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "nebulosa planetaria"@es .
 	term:le_9TGIOtCmYOBSSERPypug6 ontolex:canonicalForm term:le_9TGIOtCmYOBSSERPypug6_lemma .
 	term:le_9TGIOtCmYOBSSERPypug6_lemma rdf:type ontolex:Form .
-	term:le_9TGIOtCmYOBSSERPypug6 rdfs:label "nebulosa planetaria"@es .
 	term:le_9TGIOtCmYOBSSERPypug6_lemma ontolex:writtenRep "nebulosa planetaria"@es .
 	term:le_9TGIOtCmYOBSSERPypug6 ontolex:sense term:le_9TGIOtCmYOBSSERPypug6_sense_default .
 	term:le_9TGIOtCmYOBSSERPypug6_sense_default rdf:type ontolex:LexicalSense .
 	term:le_9TGIOtCmYOBSSERPypug6_sense_default ontolex:reference conc:concept_c27 .
 	:lexicon_es lime:entry term:le_3qBYlSN1PDaOustHVJRgC .
-	term:le_3qBYlSN1PDaOustHVJRgC rdf:type ontolex:LexicalEntry .
-	term:le_3qBYlSN1PDaOustHVJRgC vs:term_status "working" .
+	term:le_3qBYlSN1PDaOustHVJRgC rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "ciclo del carbono"@es .
 	term:le_3qBYlSN1PDaOustHVJRgC ontolex:canonicalForm term:le_3qBYlSN1PDaOustHVJRgC_lemma .
 	term:le_3qBYlSN1PDaOustHVJRgC_lemma rdf:type ontolex:Form .
-	term:le_3qBYlSN1PDaOustHVJRgC rdfs:label "ciclo del carbono"@es .
 	term:le_3qBYlSN1PDaOustHVJRgC skos:note "También este término puede referirse a la formación de las moléculas\n de carbohidratos, lípidos, proteínas y ácidos nucleicos.\nN-Source: http://es.wikipedia.org/wiki/Ciclo_del_carbono"@es .
 	term:le_3qBYlSN1PDaOustHVJRgC_lemma ontolex:writtenRep "ciclo del carbono"@es .
 	term:le_3qBYlSN1PDaOustHVJRgC ontolex:sense term:le_3qBYlSN1PDaOustHVJRgC_sense_default .
 	term:le_3qBYlSN1PDaOustHVJRgC_sense_default rdf:type ontolex:LexicalSense .
 	term:le_3qBYlSN1PDaOustHVJRgC_sense_default ontolex:reference conc:concept_c38 .
 	:lexicon_es lime:entry term:le_Vxwj8p0JA2ttW9jm9r9gM .
-	term:le_Vxwj8p0JA2ttW9jm9r9gM rdf:type ontolex:LexicalEntry .
-	term:le_Vxwj8p0JA2ttW9jm9r9gM vs:term_status "working" .
+	term:le_Vxwj8p0JA2ttW9jm9r9gM rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "estrella"@es .
 	term:le_Vxwj8p0JA2ttW9jm9r9gM ontolex:canonicalForm term:le_Vxwj8p0JA2ttW9jm9r9gM_lemma .
 	term:le_Vxwj8p0JA2ttW9jm9r9gM_lemma rdf:type ontolex:Form .
-	term:le_Vxwj8p0JA2ttW9jm9r9gM rdfs:label "estrella"@es .
 	term:le_Vxwj8p0JA2ttW9jm9r9gM_lemma ontolex:writtenRep "estrella"@es .
 	term:le_Vxwj8p0JA2ttW9jm9r9gM ontolex:sense term:le_Vxwj8p0JA2ttW9jm9r9gM_sense_default .
 	term:le_Vxwj8p0JA2ttW9jm9r9gM_sense_default rdf:type ontolex:LexicalSense .
 	term:le_Vxwj8p0JA2ttW9jm9r9gM_sense_default ontolex:reference conc:concept_c10 .
 	:lexicon_es lime:entry term:le_4AqCjRkV90bTZ1dUuhxEat .
-	term:le_4AqCjRkV90bTZ1dUuhxEat rdf:type ontolex:LexicalEntry .
-	term:le_4AqCjRkV90bTZ1dUuhxEat vs:term_status "working" .
+	term:le_4AqCjRkV90bTZ1dUuhxEat rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "nebulosa de emisión"@es .
 	term:le_4AqCjRkV90bTZ1dUuhxEat ontolex:canonicalForm term:le_4AqCjRkV90bTZ1dUuhxEat_lemma .
 	term:le_4AqCjRkV90bTZ1dUuhxEat_lemma rdf:type ontolex:Form .
-	term:le_4AqCjRkV90bTZ1dUuhxEat rdfs:label "nebulosa de emisión"@es .
 	term:le_4AqCjRkV90bTZ1dUuhxEat_lemma ontolex:writtenRep "nebulosa de emisión"@es .
 	term:le_4AqCjRkV90bTZ1dUuhxEat ontolex:sense term:le_4AqCjRkV90bTZ1dUuhxEat_sense_default .
 	term:le_4AqCjRkV90bTZ1dUuhxEat_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4AqCjRkV90bTZ1dUuhxEat_sense_default ontolex:reference conc:concept_c28 .
 	:lexicon_es lime:entry term:le_260x4LSRWsD0jPMA4SemIb .
-	term:le_260x4LSRWsD0jPMA4SemIb rdf:type ontolex:LexicalEntry .
-	term:le_260x4LSRWsD0jPMA4SemIb vs:term_status "working" .
+	term:le_260x4LSRWsD0jPMA4SemIb rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "disco de acreción"@es .
 	term:le_260x4LSRWsD0jPMA4SemIb ontolex:canonicalForm term:le_260x4LSRWsD0jPMA4SemIb_lemma .
 	term:le_260x4LSRWsD0jPMA4SemIb_lemma rdf:type ontolex:Form .
-	term:le_260x4LSRWsD0jPMA4SemIb rdfs:label "disco de acreción"@es .
 	term:le_260x4LSRWsD0jPMA4SemIb_lemma ontolex:writtenRep "disco de acreción"@es .
 	term:le_260x4LSRWsD0jPMA4SemIb ontolex:sense term:le_260x4LSRWsD0jPMA4SemIb_sense_default .
 	term:le_260x4LSRWsD0jPMA4SemIb_sense_default rdf:type ontolex:LexicalSense .
 	term:le_260x4LSRWsD0jPMA4SemIb_sense_default ontolex:reference conc:concept_c2 .
 	:lexicon_es lime:entry term:le_6G5gk0P3Vp0dBNcf3AkygF .
-	term:le_6G5gk0P3Vp0dBNcf3AkygF rdf:type ontolex:LexicalEntry .
-	term:le_6G5gk0P3Vp0dBNcf3AkygF vs:term_status "working" .
+	term:le_6G5gk0P3Vp0dBNcf3AkygF rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "disco de acrecimiento"@es .
 	term:le_6G5gk0P3Vp0dBNcf3AkygF ontolex:canonicalForm term:le_6G5gk0P3Vp0dBNcf3AkygF_lemma .
 	term:le_6G5gk0P3Vp0dBNcf3AkygF_lemma rdf:type ontolex:Form .
-	term:le_6G5gk0P3Vp0dBNcf3AkygF rdfs:label "disco de acrecimiento"@es .
 	term:le_6G5gk0P3Vp0dBNcf3AkygF_lemma ontolex:writtenRep "disco de acrecimiento"@es .
 	term:le_6G5gk0P3Vp0dBNcf3AkygF ontolex:sense term:le_6G5gk0P3Vp0dBNcf3AkygF_sense_default .
 	term:le_6G5gk0P3Vp0dBNcf3AkygF_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6G5gk0P3Vp0dBNcf3AkygF_sense_default ontolex:reference conc:concept_c2 .
 	:lexicon_es lime:entry term:le_286fczA4uSKLCn0mJYYY93 .
-	term:le_286fczA4uSKLCn0mJYYY93 rdf:type ontolex:LexicalEntry .
-	term:le_286fczA4uSKLCn0mJYYY93 vs:term_status "working" .
+	term:le_286fczA4uSKLCn0mJYYY93 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "nebulosa"@es .
 	term:le_286fczA4uSKLCn0mJYYY93 ontolex:canonicalForm term:le_286fczA4uSKLCn0mJYYY93_lemma .
 	term:le_286fczA4uSKLCn0mJYYY93_lemma rdf:type ontolex:Form .
-	term:le_286fczA4uSKLCn0mJYYY93 rdfs:label "nebulosa"@es .
 	term:le_286fczA4uSKLCn0mJYYY93_lemma ontolex:writtenRep "nebulosa"@es .
 	term:le_286fczA4uSKLCn0mJYYY93 ontolex:sense term:le_286fczA4uSKLCn0mJYYY93_sense_default .
 	term:le_286fczA4uSKLCn0mJYYY93_sense_default rdf:type ontolex:LexicalSense .
 	term:le_286fczA4uSKLCn0mJYYY93_sense_default ontolex:reference conc:concept_c29 .
 	:lexicon_es lime:entry term:le_2o433iME0TWf5q0yo2koJv .
-	term:le_2o433iME0TWf5q0yo2koJv rdf:type ontolex:LexicalEntry .
-	term:le_2o433iME0TWf5q0yo2koJv vs:term_status "working" .
+	term:le_2o433iME0TWf5q0yo2koJv rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "singularidad"@es .
 	term:le_2o433iME0TWf5q0yo2koJv ontolex:canonicalForm term:le_2o433iME0TWf5q0yo2koJv_lemma .
 	term:le_2o433iME0TWf5q0yo2koJv_lemma rdf:type ontolex:Form .
-	term:le_2o433iME0TWf5q0yo2koJv rdfs:label "singularidad"@es .
 	term:le_2o433iME0TWf5q0yo2koJv skos:note "Related Term: agujero negro, horizonte de sucesos, radio de\n Schwarzschild"@es .
 	term:le_2o433iME0TWf5q0yo2koJv_lemma ontolex:writtenRep "singularidad"@es .
 	term:le_2o433iME0TWf5q0yo2koJv ontolex:sense term:le_2o433iME0TWf5q0yo2koJv_sense_default .
 	term:le_2o433iME0TWf5q0yo2koJv_sense_default rdf:type ontolex:LexicalSense .
 	term:le_2o433iME0TWf5q0yo2koJv_sense_default ontolex:reference conc:concept_c42 .
 	:lexicon_es lime:entry term:le_10HTc4FVmdZ3dj85n6UW7t .
-	term:le_10HTc4FVmdZ3dj85n6UW7t rdf:type ontolex:LexicalEntry .
-	term:le_10HTc4FVmdZ3dj85n6UW7t vs:term_status "working" .
+	term:le_10HTc4FVmdZ3dj85n6UW7t rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "cúmulo globular"@es .
 	term:le_10HTc4FVmdZ3dj85n6UW7t ontolex:canonicalForm term:le_10HTc4FVmdZ3dj85n6UW7t_lemma .
 	term:le_10HTc4FVmdZ3dj85n6UW7t_lemma rdf:type ontolex:Form .
-	term:le_10HTc4FVmdZ3dj85n6UW7t rdfs:label "cúmulo globular"@es .
 	term:le_10HTc4FVmdZ3dj85n6UW7t skos:note "Related Term: cúmulo estelar"@es .
 	term:le_10HTc4FVmdZ3dj85n6UW7t_lemma ontolex:writtenRep "cúmulo globular"@es .
 	term:le_10HTc4FVmdZ3dj85n6UW7t ontolex:sense term:le_10HTc4FVmdZ3dj85n6UW7t_sense_default .
 	term:le_10HTc4FVmdZ3dj85n6UW7t_sense_default rdf:type ontolex:LexicalSense .
 	term:le_10HTc4FVmdZ3dj85n6UW7t_sense_default ontolex:reference conc:concept_c5 .
 	:lexicon_es lime:entry term:le_6l49Gwy2CpLZ74XvkgufxE .
-	term:le_6l49Gwy2CpLZ74XvkgufxE rdf:type ontolex:LexicalEntry .
-	term:le_6l49Gwy2CpLZ74XvkgufxE vs:term_status "working" .
+	term:le_6l49Gwy2CpLZ74XvkgufxE rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "gigante roja"@es .
 	term:le_6l49Gwy2CpLZ74XvkgufxE ontolex:canonicalForm term:le_6l49Gwy2CpLZ74XvkgufxE_lemma .
 	term:le_6l49Gwy2CpLZ74XvkgufxE_lemma rdf:type ontolex:Form .
-	term:le_6l49Gwy2CpLZ74XvkgufxE rdfs:label "gigante roja"@es .
 	term:le_6l49Gwy2CpLZ74XvkgufxE_lemma ontolex:writtenRep "gigante roja"@es .
 	term:le_6l49Gwy2CpLZ74XvkgufxE ontolex:sense term:le_6l49Gwy2CpLZ74XvkgufxE_sense_default .
 	term:le_6l49Gwy2CpLZ74XvkgufxE_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6l49Gwy2CpLZ74XvkgufxE_sense_default ontolex:reference conc:concept_c23 .
 	:lexicon_es lime:entry term:le_4IVJ8eIpusp6ZBa8f6McvK .
-	term:le_4IVJ8eIpusp6ZBa8f6McvK rdf:type ontolex:LexicalEntry .
-	term:le_4IVJ8eIpusp6ZBa8f6McvK vs:term_status "working" .
+	term:le_4IVJ8eIpusp6ZBa8f6McvK rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "enana roja"@es .
 	term:le_4IVJ8eIpusp6ZBa8f6McvK ontolex:canonicalForm term:le_4IVJ8eIpusp6ZBa8f6McvK_lemma .
 	term:le_4IVJ8eIpusp6ZBa8f6McvK_lemma rdf:type ontolex:Form .
-	term:le_4IVJ8eIpusp6ZBa8f6McvK rdfs:label "enana roja"@es .
 	term:le_4IVJ8eIpusp6ZBa8f6McvK_lemma ontolex:writtenRep "enana roja"@es .
 	term:le_4IVJ8eIpusp6ZBa8f6McvK ontolex:sense term:le_4IVJ8eIpusp6ZBa8f6McvK_sense_default .
 	term:le_4IVJ8eIpusp6ZBa8f6McvK_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4IVJ8eIpusp6ZBa8f6McvK_sense_default ontolex:reference conc:concept_c24 .
 	:lexicon_es lime:entry term:le_MyzA6E8aZ3xTeNCBh1GIF .
-	term:le_MyzA6E8aZ3xTeNCBh1GIF rdf:type ontolex:LexicalEntry .
-	term:le_MyzA6E8aZ3xTeNCBh1GIF vs:term_status "working" .
+	term:le_MyzA6E8aZ3xTeNCBh1GIF rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "horizonte de eventos"@es .
 	term:le_MyzA6E8aZ3xTeNCBh1GIF ontolex:canonicalForm term:le_MyzA6E8aZ3xTeNCBh1GIF_lemma .
 	term:le_MyzA6E8aZ3xTeNCBh1GIF_lemma rdf:type ontolex:Form .
-	term:le_MyzA6E8aZ3xTeNCBh1GIF rdfs:label "horizonte de eventos"@es .
 	term:le_MyzA6E8aZ3xTeNCBh1GIF_lemma ontolex:writtenRep "horizonte de eventos"@es .
 	term:le_MyzA6E8aZ3xTeNCBh1GIF ontolex:sense term:le_MyzA6E8aZ3xTeNCBh1GIF_sense_default .
 	term:le_MyzA6E8aZ3xTeNCBh1GIF_sense_default rdf:type ontolex:LexicalSense .
 	term:le_MyzA6E8aZ3xTeNCBh1GIF_sense_default ontolex:reference conc:concept_c36 .
 	:lexicon_es lime:entry term:le_1lxmdWyVso6kjZA0kOvySx .
-	term:le_1lxmdWyVso6kjZA0kOvySx rdf:type ontolex:LexicalEntry .
-	term:le_1lxmdWyVso6kjZA0kOvySx vs:term_status "working" .
+	term:le_1lxmdWyVso6kjZA0kOvySx rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Vía Láctea"@es .
 	term:le_1lxmdWyVso6kjZA0kOvySx ontolex:canonicalForm term:le_1lxmdWyVso6kjZA0kOvySx_lemma .
 	term:le_1lxmdWyVso6kjZA0kOvySx_lemma rdf:type ontolex:Form .
-	term:le_1lxmdWyVso6kjZA0kOvySx rdfs:label "Vía Láctea"@es .
 	term:le_1lxmdWyVso6kjZA0kOvySx_lemma ontolex:writtenRep "Vía Láctea"@es .
 	term:le_1lxmdWyVso6kjZA0kOvySx ontolex:sense term:le_1lxmdWyVso6kjZA0kOvySx_sense_default .
 	term:le_1lxmdWyVso6kjZA0kOvySx_sense_default rdf:type ontolex:LexicalSense .
 	term:le_1lxmdWyVso6kjZA0kOvySx_sense_default ontolex:reference conc:concept_c9 .
 	:lexicon_es lime:entry term:le_1HXQpWfI6DJqAd2tOx3c8V .
-	term:le_1HXQpWfI6DJqAd2tOx3c8V rdf:type ontolex:LexicalEntry .
-	term:le_1HXQpWfI6DJqAd2tOx3c8V vs:term_status "working" .
+	term:le_1HXQpWfI6DJqAd2tOx3c8V rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "masa solar"@es .
 	term:le_1HXQpWfI6DJqAd2tOx3c8V ontolex:canonicalForm term:le_1HXQpWfI6DJqAd2tOx3c8V_lemma .
 	term:le_1HXQpWfI6DJqAd2tOx3c8V_lemma rdf:type ontolex:Form .
-	term:le_1HXQpWfI6DJqAd2tOx3c8V rdfs:label "masa solar"@es .
 	term:le_1HXQpWfI6DJqAd2tOx3c8V_lemma ontolex:writtenRep "masa solar"@es .
 	term:le_1HXQpWfI6DJqAd2tOx3c8V ontolex:sense term:le_1HXQpWfI6DJqAd2tOx3c8V_sense_default .
 	term:le_1HXQpWfI6DJqAd2tOx3c8V_sense_default rdf:type ontolex:LexicalSense .
 	term:le_1HXQpWfI6DJqAd2tOx3c8V_sense_default ontolex:reference conc:concept_c43 .
 	:lexicon_es lime:entry term:le_11FvRq7Mnz6SKeXH4rGvSQ .
-	term:le_11FvRq7Mnz6SKeXH4rGvSQ rdf:type ontolex:LexicalEntry .
-	term:le_11FvRq7Mnz6SKeXH4rGvSQ vs:term_status "working" .
+	term:le_11FvRq7Mnz6SKeXH4rGvSQ rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "explosión de rayos gamma"@es .
 	term:le_11FvRq7Mnz6SKeXH4rGvSQ ontolex:canonicalForm term:le_11FvRq7Mnz6SKeXH4rGvSQ_lemma .
 	term:le_11FvRq7Mnz6SKeXH4rGvSQ_lemma rdf:type ontolex:Form .
-	term:le_11FvRq7Mnz6SKeXH4rGvSQ rdfs:label "explosión de rayos gamma"@es .
 	term:le_11FvRq7Mnz6SKeXH4rGvSQ_lemma ontolex:writtenRep "explosión de rayos gamma"@es .
 	term:le_11FvRq7Mnz6SKeXH4rGvSQ ontolex:sense term:le_11FvRq7Mnz6SKeXH4rGvSQ_sense_default .
 	term:le_11FvRq7Mnz6SKeXH4rGvSQ_sense_default rdf:type ontolex:LexicalSense .
 	term:le_11FvRq7Mnz6SKeXH4rGvSQ_sense_default ontolex:reference conc:concept_c4 .
 	:lexicon_es lime:entry term:le_GHLRVuYGRtN9JnC7TssOs .
-	term:le_GHLRVuYGRtN9JnC7TssOs rdf:type ontolex:LexicalEntry .
-	term:le_GHLRVuYGRtN9JnC7TssOs vs:term_status "working" .
+	term:le_GHLRVuYGRtN9JnC7TssOs rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "enana blanca"@es .
 	term:le_GHLRVuYGRtN9JnC7TssOs ontolex:canonicalForm term:le_GHLRVuYGRtN9JnC7TssOs_lemma .
 	term:le_GHLRVuYGRtN9JnC7TssOs_lemma rdf:type ontolex:Form .
-	term:le_GHLRVuYGRtN9JnC7TssOs rdfs:label "enana blanca"@es .
 	term:le_GHLRVuYGRtN9JnC7TssOs_lemma ontolex:writtenRep "enana blanca"@es .
 	term:le_GHLRVuYGRtN9JnC7TssOs ontolex:sense term:le_GHLRVuYGRtN9JnC7TssOs_sense_default .
 	term:le_GHLRVuYGRtN9JnC7TssOs_sense_default rdf:type ontolex:LexicalSense .
 	term:le_GHLRVuYGRtN9JnC7TssOs_sense_default ontolex:reference conc:concept_c26 .
 	:lexicon_es lime:entry term:le_45EWWb57ffgEOKzSKIMzDt .
-	term:le_45EWWb57ffgEOKzSKIMzDt rdf:type ontolex:LexicalEntry .
-	term:le_45EWWb57ffgEOKzSKIMzDt vs:term_status "working" .
+	term:le_45EWWb57ffgEOKzSKIMzDt rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Galaxia"@es .
 	term:le_45EWWb57ffgEOKzSKIMzDt ontolex:canonicalForm term:le_45EWWb57ffgEOKzSKIMzDt_lemma .
 	term:le_45EWWb57ffgEOKzSKIMzDt_lemma rdf:type ontolex:Form .
-	term:le_45EWWb57ffgEOKzSKIMzDt rdfs:label "Galaxia"@es .
 	term:le_45EWWb57ffgEOKzSKIMzDt_lemma ontolex:writtenRep "Galaxia"@es .
 	term:le_45EWWb57ffgEOKzSKIMzDt ontolex:sense term:le_45EWWb57ffgEOKzSKIMzDt_sense_default .
 	term:le_45EWWb57ffgEOKzSKIMzDt_sense_default rdf:type ontolex:LexicalSense .
 	term:le_45EWWb57ffgEOKzSKIMzDt_sense_default ontolex:reference conc:concept_c9 .
 	:lexicon_es lime:entry term:le_6Wu4Rkw37qb4o9nOKkngk5 .
-	term:le_6Wu4Rkw37qb4o9nOKkngk5 rdf:type ontolex:LexicalEntry .
-	term:le_6Wu4Rkw37qb4o9nOKkngk5 vs:term_status "working" .
+	term:le_6Wu4Rkw37qb4o9nOKkngk5 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "horizonte de sucesos"@es .
 	term:le_6Wu4Rkw37qb4o9nOKkngk5 ontolex:canonicalForm term:le_6Wu4Rkw37qb4o9nOKkngk5_lemma .
 	term:le_6Wu4Rkw37qb4o9nOKkngk5_lemma rdf:type ontolex:Form .
-	term:le_6Wu4Rkw37qb4o9nOKkngk5 rdfs:label "horizonte de sucesos"@es .
 	term:le_6Wu4Rkw37qb4o9nOKkngk5_lemma ontolex:writtenRep "horizonte de sucesos"@es .
 	term:le_6Wu4Rkw37qb4o9nOKkngk5 ontolex:sense term:le_6Wu4Rkw37qb4o9nOKkngk5_sense_default .
 	term:le_6Wu4Rkw37qb4o9nOKkngk5_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6Wu4Rkw37qb4o9nOKkngk5_sense_default ontolex:reference conc:concept_c36 .
 	:lexicon_es lime:entry term:le_9FK2chwhvMoyvtrG403pl .
-	term:le_9FK2chwhvMoyvtrG403pl rdf:type ontolex:LexicalEntry .
-	term:le_9FK2chwhvMoyvtrG403pl vs:term_status "working" .
+	term:le_9FK2chwhvMoyvtrG403pl rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "protoestrella"@es .
 	term:le_9FK2chwhvMoyvtrG403pl ontolex:canonicalForm term:le_9FK2chwhvMoyvtrG403pl_lemma .
 	term:le_9FK2chwhvMoyvtrG403pl_lemma rdf:type ontolex:Form .
-	term:le_9FK2chwhvMoyvtrG403pl rdfs:label "protoestrella"@es .
 	term:le_9FK2chwhvMoyvtrG403pl_lemma ontolex:writtenRep "protoestrella"@es .
 	term:le_9FK2chwhvMoyvtrG403pl ontolex:sense term:le_9FK2chwhvMoyvtrG403pl_sense_default .
 	term:le_9FK2chwhvMoyvtrG403pl_sense_default rdf:type ontolex:LexicalSense .
 	term:le_9FK2chwhvMoyvtrG403pl_sense_default ontolex:reference conc:concept_c7 .
 	:lexicon_es lime:entry term:le_6AU7mPbKAPqYYdZaZOuJ7r .
-	term:le_6AU7mPbKAPqYYdZaZOuJ7r rdf:type ontolex:LexicalEntry .
-	term:le_6AU7mPbKAPqYYdZaZOuJ7r vs:term_status "working" .
+	term:le_6AU7mPbKAPqYYdZaZOuJ7r rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "nebulosa de absorción"@es .
 	term:le_6AU7mPbKAPqYYdZaZOuJ7r ontolex:canonicalForm term:le_6AU7mPbKAPqYYdZaZOuJ7r_lemma .
 	term:le_6AU7mPbKAPqYYdZaZOuJ7r_lemma rdf:type ontolex:Form .
-	term:le_6AU7mPbKAPqYYdZaZOuJ7r rdfs:label "nebulosa de absorción"@es .
 	term:le_6AU7mPbKAPqYYdZaZOuJ7r_lemma ontolex:writtenRep "nebulosa de absorción"@es .
 	term:le_6AU7mPbKAPqYYdZaZOuJ7r ontolex:sense term:le_6AU7mPbKAPqYYdZaZOuJ7r_sense_default .
 	term:le_6AU7mPbKAPqYYdZaZOuJ7r_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6AU7mPbKAPqYYdZaZOuJ7r_sense_default ontolex:reference conc:concept_c30 .
 	:lexicon_es lime:entry term:le_66mHaNjp9ZVdvohx2XOwMV .
-	term:le_66mHaNjp9ZVdvohx2XOwMV rdf:type ontolex:LexicalEntry .
-	term:le_66mHaNjp9ZVdvohx2XOwMV vs:term_status "working" .
+	term:le_66mHaNjp9ZVdvohx2XOwMV rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "agujero negro"@es .
 	term:le_66mHaNjp9ZVdvohx2XOwMV ontolex:canonicalForm term:le_66mHaNjp9ZVdvohx2XOwMV_lemma .
 	term:le_66mHaNjp9ZVdvohx2XOwMV_lemma rdf:type ontolex:Form .
-	term:le_66mHaNjp9ZVdvohx2XOwMV rdfs:label "agujero negro"@es .
 	term:le_66mHaNjp9ZVdvohx2XOwMV_lemma ontolex:writtenRep "agujero negro"@es .
 	term:le_66mHaNjp9ZVdvohx2XOwMV ontolex:sense term:le_66mHaNjp9ZVdvohx2XOwMV_sense_default .
 	term:le_66mHaNjp9ZVdvohx2XOwMV_sense_default rdf:type ontolex:LexicalSense .
 	term:le_66mHaNjp9ZVdvohx2XOwMV_sense_default ontolex:reference conc:concept_c3 .
 	:lexicon_es lime:entry term:le_ez9HfOqRi6Eojq5cp2u4N .
-	term:le_ez9HfOqRi6Eojq5cp2u4N rdf:type ontolex:LexicalEntry .
-	term:le_ez9HfOqRi6Eojq5cp2u4N vs:term_status "working" .
+	term:le_ez9HfOqRi6Eojq5cp2u4N rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "cúmulo abierto"@es .
 	term:le_ez9HfOqRi6Eojq5cp2u4N ontolex:canonicalForm term:le_ez9HfOqRi6Eojq5cp2u4N_lemma .
 	term:le_ez9HfOqRi6Eojq5cp2u4N_lemma rdf:type ontolex:Form .
-	term:le_ez9HfOqRi6Eojq5cp2u4N rdfs:label "cúmulo abierto"@es .
 	term:le_ez9HfOqRi6Eojq5cp2u4N_lemma ontolex:writtenRep "cúmulo abierto"@es .
 	term:le_ez9HfOqRi6Eojq5cp2u4N ontolex:sense term:le_ez9HfOqRi6Eojq5cp2u4N_sense_default .
 	term:le_ez9HfOqRi6Eojq5cp2u4N_sense_default rdf:type ontolex:LexicalSense .
 	term:le_ez9HfOqRi6Eojq5cp2u4N_sense_default ontolex:reference conc:concept_c1 .
 	:lexicon_es lime:entry term:le_Awzr2wQsjkRPYIneL09TP .
-	term:le_Awzr2wQsjkRPYIneL09TP rdf:type ontolex:LexicalEntry .
-	term:le_Awzr2wQsjkRPYIneL09TP vs:term_status "working" .
+	term:le_Awzr2wQsjkRPYIneL09TP rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "cúmulo de estrellas"@es .
 	term:le_Awzr2wQsjkRPYIneL09TP ontolex:canonicalForm term:le_Awzr2wQsjkRPYIneL09TP_lemma .
 	term:le_Awzr2wQsjkRPYIneL09TP_lemma rdf:type ontolex:Form .
-	term:le_Awzr2wQsjkRPYIneL09TP rdfs:label "cúmulo de estrellas"@es .
 	term:le_Awzr2wQsjkRPYIneL09TP skos:note "Related Term: cúmulo globular\nRelated Term: cúmulo abierto"@es .
 	term:le_Awzr2wQsjkRPYIneL09TP_lemma ontolex:writtenRep "cúmulo de estrellas"@es .
 	term:le_Awzr2wQsjkRPYIneL09TP ontolex:sense term:le_Awzr2wQsjkRPYIneL09TP_sense_default .
 	term:le_Awzr2wQsjkRPYIneL09TP_sense_default rdf:type ontolex:LexicalSense .
 	term:le_Awzr2wQsjkRPYIneL09TP_sense_default ontolex:reference conc:concept_c8 .
 	:lexicon_es lime:entry term:le_1eBOwdLT1L9qMz7EBmQqrV .
-	term:le_1eBOwdLT1L9qMz7EBmQqrV rdf:type ontolex:LexicalEntry .
-	term:le_1eBOwdLT1L9qMz7EBmQqrV vs:term_status "working" .
+	term:le_1eBOwdLT1L9qMz7EBmQqrV rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "radiación UV"@es .
 	term:le_1eBOwdLT1L9qMz7EBmQqrV ontolex:canonicalForm term:le_1eBOwdLT1L9qMz7EBmQqrV_lemma .
 	term:le_1eBOwdLT1L9qMz7EBmQqrV_lemma rdf:type ontolex:Form .
-	term:le_1eBOwdLT1L9qMz7EBmQqrV rdfs:label "radiación UV"@es .
 	term:le_1eBOwdLT1L9qMz7EBmQqrV_lemma ontolex:writtenRep "radiación UV"@es .
 	term:le_1eBOwdLT1L9qMz7EBmQqrV ontolex:sense term:le_1eBOwdLT1L9qMz7EBmQqrV_sense_default .
 	term:le_1eBOwdLT1L9qMz7EBmQqrV_sense_default rdf:type ontolex:LexicalSense .
 	term:le_1eBOwdLT1L9qMz7EBmQqrV_sense_default ontolex:reference conc:concept_c11 .
 	:lexicon_es lime:entry term:le_01EOLok3D52oAY4auSepdo .
-	term:le_01EOLok3D52oAY4auSepdo rdf:type ontolex:LexicalEntry .
-	term:le_01EOLok3D52oAY4auSepdo vs:term_status "working" .
+	term:le_01EOLok3D52oAY4auSepdo rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "campo magnético"@es .
 	term:le_01EOLok3D52oAY4auSepdo ontolex:canonicalForm term:le_01EOLok3D52oAY4auSepdo_lemma .
 	term:le_01EOLok3D52oAY4auSepdo_lemma rdf:type ontolex:Form .
-	term:le_01EOLok3D52oAY4auSepdo rdfs:label "campo magnético"@es .
 	term:le_01EOLok3D52oAY4auSepdo_lemma ontolex:writtenRep "campo magnético"@es .
 	term:le_01EOLok3D52oAY4auSepdo ontolex:sense term:le_01EOLok3D52oAY4auSepdo_sense_default .
 	term:le_01EOLok3D52oAY4auSepdo_sense_default rdf:type ontolex:LexicalSense .
 	term:le_01EOLok3D52oAY4auSepdo_sense_default ontolex:reference conc:concept_c12 .
 	:lexicon_es lime:entry term:le_5jOcB3hlc3qVqmiGIYNzHW .
-	term:le_5jOcB3hlc3qVqmiGIYNzHW rdf:type ontolex:LexicalEntry .
-	term:le_5jOcB3hlc3qVqmiGIYNzHW vs:term_status "working" .
+	term:le_5jOcB3hlc3qVqmiGIYNzHW rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "galaxia Vía Láctea"@es .
 	term:le_5jOcB3hlc3qVqmiGIYNzHW ontolex:canonicalForm term:le_5jOcB3hlc3qVqmiGIYNzHW_lemma .
 	term:le_5jOcB3hlc3qVqmiGIYNzHW_lemma rdf:type ontolex:Form .
-	term:le_5jOcB3hlc3qVqmiGIYNzHW rdfs:label "galaxia Vía Láctea"@es .
 	term:le_5jOcB3hlc3qVqmiGIYNzHW_lemma ontolex:writtenRep "galaxia Vía Láctea"@es .
 	term:le_5jOcB3hlc3qVqmiGIYNzHW ontolex:sense term:le_5jOcB3hlc3qVqmiGIYNzHW_sense_default .
 	term:le_5jOcB3hlc3qVqmiGIYNzHW_sense_default rdf:type ontolex:LexicalSense .
 	term:le_5jOcB3hlc3qVqmiGIYNzHW_sense_default ontolex:reference conc:concept_c9 .
 	:lexicon_es lime:entry term:le_5l69VP3vYE95NuLPx0Rruj .
-	term:le_5l69VP3vYE95NuLPx0Rruj rdf:type ontolex:LexicalEntry .
-	term:le_5l69VP3vYE95NuLPx0Rruj vs:term_status "working" .
+	term:le_5l69VP3vYE95NuLPx0Rruj rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "estrella doble"@es .
 	term:le_5l69VP3vYE95NuLPx0Rruj ontolex:canonicalForm term:le_5l69VP3vYE95NuLPx0Rruj_lemma .
 	term:le_5l69VP3vYE95NuLPx0Rruj_lemma rdf:type ontolex:Form .
-	term:le_5l69VP3vYE95NuLPx0Rruj rdfs:label "estrella doble"@es .
 	term:le_5l69VP3vYE95NuLPx0Rruj_lemma ontolex:writtenRep "estrella doble"@es .
 	term:le_5l69VP3vYE95NuLPx0Rruj ontolex:sense term:le_5l69VP3vYE95NuLPx0Rruj_sense_default .
 	term:le_5l69VP3vYE95NuLPx0Rruj_sense_default rdf:type ontolex:LexicalSense .
 	term:le_5l69VP3vYE95NuLPx0Rruj_sense_default ontolex:reference conc:concept_c15 .
 	:lexicon_es lime:entry term:le_5QYCX9OkCtpVVA1gj8vlTq .
-	term:le_5QYCX9OkCtpVVA1gj8vlTq rdf:type ontolex:LexicalEntry .
-	term:le_5QYCX9OkCtpVVA1gj8vlTq vs:term_status "working" .
+	term:le_5QYCX9OkCtpVVA1gj8vlTq rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "brote de rayos gamma"@es .
 	term:le_5QYCX9OkCtpVVA1gj8vlTq ontolex:canonicalForm term:le_5QYCX9OkCtpVVA1gj8vlTq_lemma .
 	term:le_5QYCX9OkCtpVVA1gj8vlTq_lemma rdf:type ontolex:Form .
-	term:le_5QYCX9OkCtpVVA1gj8vlTq rdfs:label "brote de rayos gamma"@es .
 	term:le_5QYCX9OkCtpVVA1gj8vlTq_lemma ontolex:writtenRep "brote de rayos gamma"@es .
 	term:le_5QYCX9OkCtpVVA1gj8vlTq ontolex:sense term:le_5QYCX9OkCtpVVA1gj8vlTq_sense_default .
 	term:le_5QYCX9OkCtpVVA1gj8vlTq_sense_default rdf:type ontolex:LexicalSense .
 	term:le_5QYCX9OkCtpVVA1gj8vlTq_sense_default ontolex:reference conc:concept_c4 .
 	:lexicon_es lime:entry term:le_3QDnyemA4oom5R21pGGHke .
-	term:le_3QDnyemA4oom5R21pGGHke rdf:type ontolex:LexicalEntry .
-	term:le_3QDnyemA4oom5R21pGGHke vs:term_status "working" .
+	term:le_3QDnyemA4oom5R21pGGHke rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "nebulosa oscura"@es .
 	term:le_3QDnyemA4oom5R21pGGHke ontolex:canonicalForm term:le_3QDnyemA4oom5R21pGGHke_lemma .
 	term:le_3QDnyemA4oom5R21pGGHke_lemma rdf:type ontolex:Form .
-	term:le_3QDnyemA4oom5R21pGGHke rdfs:label "nebulosa oscura"@es .
 	term:le_3QDnyemA4oom5R21pGGHke_lemma ontolex:writtenRep "nebulosa oscura"@es .
 	term:le_3QDnyemA4oom5R21pGGHke ontolex:sense term:le_3QDnyemA4oom5R21pGGHke_sense_default .
 	term:le_3QDnyemA4oom5R21pGGHke_sense_default rdf:type ontolex:LexicalSense .
 	term:le_3QDnyemA4oom5R21pGGHke_sense_default ontolex:reference conc:concept_c30 .
 	:lexicon_es lime:entry term:le_p2m0JVNCMEIaEVYN20y86 .
-	term:le_p2m0JVNCMEIaEVYN20y86 rdf:type ontolex:LexicalEntry .
-	term:le_p2m0JVNCMEIaEVYN20y86 vs:term_status "working" .
+	term:le_p2m0JVNCMEIaEVYN20y86 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "estrella de neutrones"@es .
 	term:le_p2m0JVNCMEIaEVYN20y86 ontolex:canonicalForm term:le_p2m0JVNCMEIaEVYN20y86_lemma .
 	term:le_p2m0JVNCMEIaEVYN20y86_lemma rdf:type ontolex:Form .
-	term:le_p2m0JVNCMEIaEVYN20y86 rdfs:label "estrella de neutrones"@es .
 	term:le_p2m0JVNCMEIaEVYN20y86_lemma ontolex:writtenRep "estrella de neutrones"@es .
 	term:le_p2m0JVNCMEIaEVYN20y86 ontolex:sense term:le_p2m0JVNCMEIaEVYN20y86_sense_default .
 	term:le_p2m0JVNCMEIaEVYN20y86_sense_default rdf:type ontolex:LexicalSense .
 	term:le_p2m0JVNCMEIaEVYN20y86_sense_default ontolex:reference conc:concept_c32 .
 	:lexicon_es lime:entry term:le_7Pvl72x5ldIWyM98rQigfl .
-	term:le_7Pvl72x5ldIWyM98rQigfl rdf:type ontolex:LexicalEntry .
-	term:le_7Pvl72x5ldIWyM98rQigfl vs:term_status "working" .
+	term:le_7Pvl72x5ldIWyM98rQigfl rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "límite de Chandrasekhar"@es .
 	term:le_7Pvl72x5ldIWyM98rQigfl ontolex:canonicalForm term:le_7Pvl72x5ldIWyM98rQigfl_lemma .
 	term:le_7Pvl72x5ldIWyM98rQigfl_lemma rdf:type ontolex:Form .
-	term:le_7Pvl72x5ldIWyM98rQigfl rdfs:label "límite de Chandrasekhar"@es .
 	term:le_7Pvl72x5ldIWyM98rQigfl_lemma ontolex:writtenRep "límite de Chandrasekhar"@es .
 	term:le_7Pvl72x5ldIWyM98rQigfl ontolex:sense term:le_7Pvl72x5ldIWyM98rQigfl_sense_default .
 	term:le_7Pvl72x5ldIWyM98rQigfl_sense_default rdf:type ontolex:LexicalSense .
 	term:le_7Pvl72x5ldIWyM98rQigfl_sense_default ontolex:reference conc:concept_c33 .
 	:lexicon_es lime:entry term:le_4f7jcBBzclPcYBATWuUhlI .
-	term:le_4f7jcBBzclPcYBATWuUhlI rdf:type ontolex:LexicalEntry .
-	term:le_4f7jcBBzclPcYBATWuUhlI vs:term_status "working" .
+	term:le_4f7jcBBzclPcYBATWuUhlI rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "degeneración de electrones"@es .
 	term:le_4f7jcBBzclPcYBATWuUhlI ontolex:canonicalForm term:le_4f7jcBBzclPcYBATWuUhlI_lemma .
 	term:le_4f7jcBBzclPcYBATWuUhlI_lemma rdf:type ontolex:Form .
-	term:le_4f7jcBBzclPcYBATWuUhlI rdfs:label "degeneración de electrones"@es .
 	term:le_4f7jcBBzclPcYBATWuUhlI_lemma ontolex:writtenRep "degeneración de electrones"@es .
 	term:le_4f7jcBBzclPcYBATWuUhlI ontolex:sense term:le_4f7jcBBzclPcYBATWuUhlI_sense_default .
 	term:le_4f7jcBBzclPcYBATWuUhlI_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4f7jcBBzclPcYBATWuUhlI_sense_default ontolex:reference conc:concept_c41 .
 	:lexicon_es lime:entry term:le_2CZ6jHkhIphY1e0FmZU9UJ .
-	term:le_2CZ6jHkhIphY1e0FmZU9UJ rdf:type ontolex:LexicalEntry .
-	term:le_2CZ6jHkhIphY1e0FmZU9UJ vs:term_status "working" .
+	term:le_2CZ6jHkhIphY1e0FmZU9UJ rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "proceso triple-alfa"@es .
 	term:le_2CZ6jHkhIphY1e0FmZU9UJ ontolex:canonicalForm term:le_2CZ6jHkhIphY1e0FmZU9UJ_lemma .
 	term:le_2CZ6jHkhIphY1e0FmZU9UJ_lemma rdf:type ontolex:Form .
-	term:le_2CZ6jHkhIphY1e0FmZU9UJ rdfs:label "proceso triple-alfa"@es .
 	term:le_2CZ6jHkhIphY1e0FmZU9UJ_lemma ontolex:writtenRep "proceso triple-alfa"@es .
 	term:le_2CZ6jHkhIphY1e0FmZU9UJ ontolex:sense term:le_2CZ6jHkhIphY1e0FmZU9UJ_sense_default .
 	term:le_2CZ6jHkhIphY1e0FmZU9UJ_sense_default rdf:type ontolex:LexicalSense .
 	term:le_2CZ6jHkhIphY1e0FmZU9UJ_sense_default ontolex:reference conc:concept_c44 .
 	:lexicon_es lime:entry term:le_4jyFbjgBzRyxAZcIzsAT9V .
-	term:le_4jyFbjgBzRyxAZcIzsAT9V rdf:type ontolex:LexicalEntry .
-	term:le_4jyFbjgBzRyxAZcIzsAT9V vs:term_status "working" .
+	term:le_4jyFbjgBzRyxAZcIzsAT9V rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "nebulosa de reflexión"@es .
 	term:le_4jyFbjgBzRyxAZcIzsAT9V ontolex:canonicalForm term:le_4jyFbjgBzRyxAZcIzsAT9V_lemma .
 	term:le_4jyFbjgBzRyxAZcIzsAT9V_lemma rdf:type ontolex:Form .
-	term:le_4jyFbjgBzRyxAZcIzsAT9V rdfs:label "nebulosa de reflexión"@es .
 	term:le_4jyFbjgBzRyxAZcIzsAT9V_lemma ontolex:writtenRep "nebulosa de reflexión"@es .
 	term:le_4jyFbjgBzRyxAZcIzsAT9V ontolex:sense term:le_4jyFbjgBzRyxAZcIzsAT9V_sense_default .
 	term:le_4jyFbjgBzRyxAZcIzsAT9V_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4jyFbjgBzRyxAZcIzsAT9V_sense_default ontolex:reference conc:concept_c31 .
 	:lexicon_es lime:entry term:le_6vWuDJ6wlwIjex8VBzgbzZ .
-	term:le_6vWuDJ6wlwIjex8VBzgbzZ rdf:type ontolex:LexicalEntry .
-	term:le_6vWuDJ6wlwIjex8VBzgbzZ vs:term_status "working" .
+	term:le_6vWuDJ6wlwIjex8VBzgbzZ rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "degeneración"@es .
 	term:le_6vWuDJ6wlwIjex8VBzgbzZ ontolex:canonicalForm term:le_6vWuDJ6wlwIjex8VBzgbzZ_lemma .
 	term:le_6vWuDJ6wlwIjex8VBzgbzZ_lemma rdf:type ontolex:Form .
-	term:le_6vWuDJ6wlwIjex8VBzgbzZ rdfs:label "degeneración"@es .
 	term:le_6vWuDJ6wlwIjex8VBzgbzZ_lemma ontolex:writtenRep "degeneración"@es .
 	term:le_6vWuDJ6wlwIjex8VBzgbzZ ontolex:sense term:le_6vWuDJ6wlwIjex8VBzgbzZ_sense_default .
 	term:le_6vWuDJ6wlwIjex8VBzgbzZ_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6vWuDJ6wlwIjex8VBzgbzZ_sense_default ontolex:reference conc:concept_c39 .
 	:lexicon_es lime:entry term:le_15rIxVMdrQyquAQPpPGFQG .
-	term:le_15rIxVMdrQyquAQPpPGFQG rdf:type ontolex:LexicalEntry .
-	term:le_15rIxVMdrQyquAQPpPGFQG vs:term_status "working" .
+	term:le_15rIxVMdrQyquAQPpPGFQG rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "estrella binaria"@es .
 	term:le_15rIxVMdrQyquAQPpPGFQG ontolex:canonicalForm term:le_15rIxVMdrQyquAQPpPGFQG_lemma .
 	term:le_15rIxVMdrQyquAQPpPGFQG_lemma rdf:type ontolex:Form .
-	term:le_15rIxVMdrQyquAQPpPGFQG rdfs:label "estrella binaria"@es .
 	term:le_15rIxVMdrQyquAQPpPGFQG_lemma ontolex:writtenRep "estrella binaria"@es .
 	term:le_15rIxVMdrQyquAQPpPGFQG ontolex:sense term:le_15rIxVMdrQyquAQPpPGFQG_sense_default .
 	term:le_15rIxVMdrQyquAQPpPGFQG_sense_default rdf:type ontolex:LexicalSense .
 	term:le_15rIxVMdrQyquAQPpPGFQG_sense_default ontolex:reference conc:concept_c15 .
 	:lexicon_es lime:entry term:le_4r8zJ9rIfsWGolPTaZYeJg .
-	term:le_4r8zJ9rIfsWGolPTaZYeJg rdf:type ontolex:LexicalEntry .
-	term:le_4r8zJ9rIfsWGolPTaZYeJg vs:term_status "working" .
+	term:le_4r8zJ9rIfsWGolPTaZYeJg rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "radio de Schwarzschild"@es .
 	term:le_4r8zJ9rIfsWGolPTaZYeJg ontolex:canonicalForm term:le_4r8zJ9rIfsWGolPTaZYeJg_lemma .
 	term:le_4r8zJ9rIfsWGolPTaZYeJg_lemma rdf:type ontolex:Form .
-	term:le_4r8zJ9rIfsWGolPTaZYeJg rdfs:label "radio de Schwarzschild"@es .
 	term:le_4r8zJ9rIfsWGolPTaZYeJg skos:note "Related Term: horizonte de sucesos, horizonte de eventos"@es .
 	term:le_4r8zJ9rIfsWGolPTaZYeJg_lemma ontolex:writtenRep "radio de Schwarzschild"@es .
 	term:le_4r8zJ9rIfsWGolPTaZYeJg ontolex:sense term:le_4r8zJ9rIfsWGolPTaZYeJg_sense_default .
 	term:le_4r8zJ9rIfsWGolPTaZYeJg_sense_default rdf:type ontolex:LexicalSense .
 	term:le_4r8zJ9rIfsWGolPTaZYeJg_sense_default ontolex:reference conc:concept_c35 .
 	:lexicon_es lime:entry term:le_1KOMgeHeD6fw8PQbwuoADh .
-	term:le_1KOMgeHeD6fw8PQbwuoADh rdf:type ontolex:LexicalEntry .
-	term:le_1KOMgeHeD6fw8PQbwuoADh vs:term_status "working" .
+	term:le_1KOMgeHeD6fw8PQbwuoADh rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "degeneración electrónica"@es .
 	term:le_1KOMgeHeD6fw8PQbwuoADh ontolex:canonicalForm term:le_1KOMgeHeD6fw8PQbwuoADh_lemma .
 	term:le_1KOMgeHeD6fw8PQbwuoADh_lemma rdf:type ontolex:Form .
-	term:le_1KOMgeHeD6fw8PQbwuoADh rdfs:label "degeneración electrónica"@es .
 	term:le_1KOMgeHeD6fw8PQbwuoADh_lemma ontolex:writtenRep "degeneración electrónica"@es .
 	term:le_1KOMgeHeD6fw8PQbwuoADh ontolex:sense term:le_1KOMgeHeD6fw8PQbwuoADh_sense_default .
 	term:le_1KOMgeHeD6fw8PQbwuoADh_sense_default rdf:type ontolex:LexicalSense .
 	term:le_1KOMgeHeD6fw8PQbwuoADh_sense_default ontolex:reference conc:concept_c41 .
 	:lexicon_es lime:entry term:le_59tinNpppmD6OdwHVwd9ca .
-	term:le_59tinNpppmD6OdwHVwd9ca rdf:type ontolex:LexicalEntry .
-	term:le_59tinNpppmD6OdwHVwd9ca vs:term_status "working" .
+	term:le_59tinNpppmD6OdwHVwd9ca rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "ciclo del carbono-nitrógeno"@es .
 	term:le_59tinNpppmD6OdwHVwd9ca ontolex:canonicalForm term:le_59tinNpppmD6OdwHVwd9ca_lemma .
 	term:le_59tinNpppmD6OdwHVwd9ca_lemma rdf:type ontolex:Form .
-	term:le_59tinNpppmD6OdwHVwd9ca rdfs:label "ciclo del carbono-nitrógeno"@es .
 	term:le_59tinNpppmD6OdwHVwd9ca_lemma ontolex:writtenRep "ciclo del carbono-nitrógeno"@es .
 	term:le_59tinNpppmD6OdwHVwd9ca ontolex:sense term:le_59tinNpppmD6OdwHVwd9ca_sense_default .
 	term:le_59tinNpppmD6OdwHVwd9ca_sense_default rdf:type ontolex:LexicalSense .
 	term:le_59tinNpppmD6OdwHVwd9ca_sense_default ontolex:reference conc:concept_c38 .
 	:lexicon_es lime:entry term:le_5Yt9HuZ3f7g7SToSRDFHrr .
-	term:le_5Yt9HuZ3f7g7SToSRDFHrr rdf:type ontolex:LexicalEntry .
-	term:le_5Yt9HuZ3f7g7SToSRDFHrr vs:term_status "working" .
+	term:le_5Yt9HuZ3f7g7SToSRDFHrr rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "de secuencia principal"@es .
 	term:le_5Yt9HuZ3f7g7SToSRDFHrr ontolex:canonicalForm term:le_5Yt9HuZ3f7g7SToSRDFHrr_lemma .
 	term:le_5Yt9HuZ3f7g7SToSRDFHrr_lemma rdf:type ontolex:Form .
-	term:le_5Yt9HuZ3f7g7SToSRDFHrr rdfs:label "de secuencia principal"@es .
 	term:le_5Yt9HuZ3f7g7SToSRDFHrr_lemma ontolex:writtenRep "de secuencia principal"@es .
 	term:le_5Yt9HuZ3f7g7SToSRDFHrr ontolex:sense term:le_5Yt9HuZ3f7g7SToSRDFHrr_sense_default .
 	term:le_5Yt9HuZ3f7g7SToSRDFHrr_sense_default rdf:type ontolex:LexicalSense .
 	term:le_5Yt9HuZ3f7g7SToSRDFHrr_sense_default ontolex:reference conc:concept_c6 .
 	:lexicon_es lime:entry term:le_7lgHaHSByFR0Afh3FOGI1f .
-	term:le_7lgHaHSByFR0Afh3FOGI1f rdf:type ontolex:LexicalEntry .
-	term:le_7lgHaHSByFR0Afh3FOGI1f vs:term_status "working" .
+	term:le_7lgHaHSByFR0Afh3FOGI1f rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "enana negra"@es .
 	term:le_7lgHaHSByFR0Afh3FOGI1f ontolex:canonicalForm term:le_7lgHaHSByFR0Afh3FOGI1f_lemma .
 	term:le_7lgHaHSByFR0Afh3FOGI1f_lemma rdf:type ontolex:Form .
-	term:le_7lgHaHSByFR0Afh3FOGI1f rdfs:label "enana negra"@es .
 	term:le_7lgHaHSByFR0Afh3FOGI1f_lemma ontolex:writtenRep "enana negra"@es .
 	term:le_7lgHaHSByFR0Afh3FOGI1f ontolex:sense term:le_7lgHaHSByFR0Afh3FOGI1f_sense_default .
 	term:le_7lgHaHSByFR0Afh3FOGI1f_sense_default rdf:type ontolex:LexicalSense .
 	term:le_7lgHaHSByFR0Afh3FOGI1f_sense_default ontolex:reference conc:concept_c45 .
 	:lexicon_es lime:entry term:le_1XzPpqt5I7yJCnqScbGgko .
-	term:le_1XzPpqt5I7yJCnqScbGgko rdf:type ontolex:LexicalEntry .
-	term:le_1XzPpqt5I7yJCnqScbGgko vs:term_status "working" .
+	term:le_1XzPpqt5I7yJCnqScbGgko rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "tipo espectral"@es .
 	term:le_1XzPpqt5I7yJCnqScbGgko ontolex:canonicalForm term:le_1XzPpqt5I7yJCnqScbGgko_lemma .
 	term:le_1XzPpqt5I7yJCnqScbGgko_lemma rdf:type ontolex:Form .
-	term:le_1XzPpqt5I7yJCnqScbGgko rdfs:label "tipo espectral"@es .
 	term:le_1XzPpqt5I7yJCnqScbGgko_lemma ontolex:writtenRep "tipo espectral"@es .
 	term:le_1XzPpqt5I7yJCnqScbGgko ontolex:sense term:le_1XzPpqt5I7yJCnqScbGgko_sense_default .
 	term:le_1XzPpqt5I7yJCnqScbGgko_sense_default rdf:type ontolex:LexicalSense .
 	term:le_1XzPpqt5I7yJCnqScbGgko_sense_default ontolex:reference conc:concept_c25 .
 	:lexicon_es lime:entry term:le_3w5MlD7SYwbftgEGgiIzAz .
-	term:le_3w5MlD7SYwbftgEGgiIzAz rdf:type ontolex:LexicalEntry .
-	term:le_3w5MlD7SYwbftgEGgiIzAz vs:term_status "working" .
+	term:le_3w5MlD7SYwbftgEGgiIzAz rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "degeneración de neutrones"@es .
 	term:le_3w5MlD7SYwbftgEGgiIzAz ontolex:canonicalForm term:le_3w5MlD7SYwbftgEGgiIzAz_lemma .
 	term:le_3w5MlD7SYwbftgEGgiIzAz_lemma rdf:type ontolex:Form .
-	term:le_3w5MlD7SYwbftgEGgiIzAz rdfs:label "degeneración de neutrones"@es .
 	term:le_3w5MlD7SYwbftgEGgiIzAz_lemma ontolex:writtenRep "degeneración de neutrones"@es .
 	term:le_3w5MlD7SYwbftgEGgiIzAz ontolex:sense term:le_3w5MlD7SYwbftgEGgiIzAz_sense_default .
 	term:le_3w5MlD7SYwbftgEGgiIzAz_sense_default rdf:type ontolex:LexicalSense .
 	term:le_3w5MlD7SYwbftgEGgiIzAz_sense_default ontolex:reference conc:concept_c34 .
 	:lexicon_es lime:entry term:le_1TSAfu4NaPkKFtdq3Nuhuy .
-	term:le_1TSAfu4NaPkKFtdq3Nuhuy rdf:type ontolex:LexicalEntry .
-	term:le_1TSAfu4NaPkKFtdq3Nuhuy vs:term_status "working" .
+	term:le_1TSAfu4NaPkKFtdq3Nuhuy rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "función inicial de masa"@es .
 	term:le_1TSAfu4NaPkKFtdq3Nuhuy ontolex:canonicalForm term:le_1TSAfu4NaPkKFtdq3Nuhuy_lemma .
 	term:le_1TSAfu4NaPkKFtdq3Nuhuy_lemma rdf:type ontolex:Form .
-	term:le_1TSAfu4NaPkKFtdq3Nuhuy rdfs:label "función inicial de masa"@es .
 	term:le_1TSAfu4NaPkKFtdq3Nuhuy_lemma ontolex:writtenRep "función inicial de masa"@es .
 	term:le_1TSAfu4NaPkKFtdq3Nuhuy ontolex:sense term:le_1TSAfu4NaPkKFtdq3Nuhuy_sense_default .
 	term:le_1TSAfu4NaPkKFtdq3Nuhuy_sense_default rdf:type ontolex:LexicalSense .
 	term:le_1TSAfu4NaPkKFtdq3Nuhuy_sense_default ontolex:reference conc:concept_c16 .
 	:lexicon_es lime:entry term:le_6BGSY7ioMIw03En8Hrb86Q .
-	term:le_6BGSY7ioMIw03En8Hrb86Q rdf:type ontolex:LexicalEntry .
-	term:le_6BGSY7ioMIw03En8Hrb86Q vs:term_status "working" .
+	term:le_6BGSY7ioMIw03En8Hrb86Q rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "cúmulo estelar"@es .
 	term:le_6BGSY7ioMIw03En8Hrb86Q ontolex:canonicalForm term:le_6BGSY7ioMIw03En8Hrb86Q_lemma .
 	term:le_6BGSY7ioMIw03En8Hrb86Q_lemma rdf:type ontolex:Form .
-	term:le_6BGSY7ioMIw03En8Hrb86Q rdfs:label "cúmulo estelar"@es .
 	term:le_6BGSY7ioMIw03En8Hrb86Q_lemma ontolex:writtenRep "cúmulo estelar"@es .
 	term:le_6BGSY7ioMIw03En8Hrb86Q ontolex:sense term:le_6BGSY7ioMIw03En8Hrb86Q_sense_default .
 	term:le_6BGSY7ioMIw03En8Hrb86Q_sense_default rdf:type ontolex:LexicalSense .
 	term:le_6BGSY7ioMIw03En8Hrb86Q_sense_default ontolex:reference conc:concept_c8 .
 	:lexicon_es lime:entry term:le_5jk4hnEXOF2eCn2dPaRAYo .
-	term:le_5jk4hnEXOF2eCn2dPaRAYo rdf:type ontolex:LexicalEntry .
-	term:le_5jk4hnEXOF2eCn2dPaRAYo vs:term_status "working" .
+	term:le_5jk4hnEXOF2eCn2dPaRAYo rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "ciclo CNO"@es .
 	term:le_5jk4hnEXOF2eCn2dPaRAYo ontolex:canonicalForm term:le_5jk4hnEXOF2eCn2dPaRAYo_lemma .
 	term:le_5jk4hnEXOF2eCn2dPaRAYo_lemma rdf:type ontolex:Form .
-	term:le_5jk4hnEXOF2eCn2dPaRAYo rdfs:label "ciclo CNO"@es .
 	term:le_5jk4hnEXOF2eCn2dPaRAYo_lemma ontolex:writtenRep "ciclo CNO"@es .
 	term:le_5jk4hnEXOF2eCn2dPaRAYo ontolex:sense term:le_5jk4hnEXOF2eCn2dPaRAYo_sense_default .
 	term:le_5jk4hnEXOF2eCn2dPaRAYo_sense_default rdf:type ontolex:LexicalSense .
 	term:le_5jk4hnEXOF2eCn2dPaRAYo_sense_default ontolex:reference conc:concept_c38 .
 	:lexicon_es lime:entry term:le_160BGr3ZtNtiiELPc0svHn .
-	term:le_160BGr3ZtNtiiELPc0svHn rdf:type ontolex:LexicalEntry .
-	term:le_160BGr3ZtNtiiELPc0svHn vs:term_status "working" .
+	term:le_160BGr3ZtNtiiELPc0svHn rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "radiación ultravioleta"@es .
 	term:le_160BGr3ZtNtiiELPc0svHn ontolex:canonicalForm term:le_160BGr3ZtNtiiELPc0svHn_lemma .
 	term:le_160BGr3ZtNtiiELPc0svHn_lemma rdf:type ontolex:Form .
-	term:le_160BGr3ZtNtiiELPc0svHn rdfs:label "radiación ultravioleta"@es .
 	term:le_160BGr3ZtNtiiELPc0svHn_lemma ontolex:writtenRep "radiación ultravioleta"@es .
 	term:le_160BGr3ZtNtiiELPc0svHn ontolex:sense term:le_160BGr3ZtNtiiELPc0svHn_sense_default .
 	term:le_160BGr3ZtNtiiELPc0svHn_sense_default rdf:type ontolex:LexicalSense .

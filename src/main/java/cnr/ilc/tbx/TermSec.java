@@ -69,7 +69,7 @@ public class TermSec {
 
 		if (context != null) {
 			Map<String, String> object = new LinkedHashMap<>();
-			object.put("rdf:value", SPARQLFormatter.formatObjectWithLanguage(context, language));
+			object.put("rdf:value", SPARQLFormatter.formatObjectAsStringWithLanguage(context, language));
 		
 			if (source != null) 
 				object.put("dct:source", SPARQLFormatter.formatObjectWithUrlIfPossible(source));

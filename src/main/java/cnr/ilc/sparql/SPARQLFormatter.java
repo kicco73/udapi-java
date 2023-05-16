@@ -22,7 +22,7 @@ public class SPARQLFormatter {
 		return object;
 	}
 
-	static public String formatObjectWithLanguage(String object, String language) {
+	static public String formatObjectAsStringWithLanguage(String object, String language) {
 		object = String.format("%s@%s", formatObjectAsString(object), language);
 		return object;
 	}

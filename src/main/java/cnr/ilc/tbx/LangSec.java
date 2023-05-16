@@ -36,7 +36,7 @@ public class LangSec {
 			concept.triples.addStringWithLanguage(FQName, "skos:definition", definition, language);
 		} else {
 			Map<String, String> object = new LinkedHashMap<>();
-			object.put("rdf:value", SPARQLFormatter.formatObjectWithLanguage(definition, language));
+			object.put("rdf:value", SPARQLFormatter.formatObjectAsStringWithLanguage(definition, language));
 		
 			if (source != null) 
 				object.put("dct:source", SPARQLFormatter.formatObjectWithUrlIfPossible(source));
