@@ -7,28 +7,26 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Map;
 import java.util.Map.Entry;
-import java.util.regex.Pattern;
 
 import cnr.ilc.rut.utils.DateProvider;
 
 public class TripleSerialiser {
-	static private Pattern removeBlanks = Pattern.compile("[\n\t ]+");
-	private Map<String, StringBuilder> features = new LinkedHashMap<>();
+	private Map<String, TripleOptimiser> features = new LinkedHashMap<>();
 
 	public TripleSerialiser() {
-		features.put("*", new StringBuilder(""));
+		features.put("*", new TripleOptimiser());
 	}
 
 	private void addFeature(String language, String content) {
-		StringBuilder languageSpecific = features.containsKey(language)? features.get(language) : new StringBuilder("");
+		TripleOptimiser languageSpecific = features.containsKey(language)? features.get(language) : new TripleOptimiser();
 		languageSpecific.append(content);
 		features.put(language, languageSpecific);
 	}
 
 	private void add(String subject, String link, String object, String language) {
-		object = removeBlanks.matcher(object).replaceAll(" ");
-		String content = SPARQLFormatter.formatStatement(subject, link, object);
-		addFeature(language, content);
+		TripleOptimiser languageSpecific = features.containsKey(language)? features.get(language) : new TripleOptimiser();
+		languageSpecific.add(subject, link, object);
+		features.put(language, languageSpecific);
 	} 
 
 	public void add(String subject, String link, String object) {
@@ -38,11 +36,6 @@ public class TripleSerialiser {
 	public void addString(String subject, String link, String object) {
 		String objectString = SPARQLFormatter.formatObjectAsString(object);
 		add(subject, link, objectString);
-	}
-
-	public void addMultiple(String subject, String... links) {
-		String content = SPARQLFormatter.formatMultipleStatement(subject, links);
-		addFeature("*", content);
 	}
 
 	public void addUrlOrString(String subject, String link, String possibleUrl) {
@@ -71,8 +64,10 @@ public class TripleSerialiser {
 	public void addMetaData(String entryFQN, String creator) {
 		Date now = DateProvider.getInstance().getDate();
 		DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mmX"); // Quoted "Z" to indicate UTC, no timezone offset
-		String date = String.format("\"%s:00\"",  df.format(now));
-		addMultiple(entryFQN, "dct:creator", "\""+creator+"\"", "dct:created", date, "dct:modified", date);
+		String date = String.format("%s:00",  df.format(now));
+		addString(entryFQN, "dct:creator", creator);
+		addString(entryFQN, "dct:created", date);
+		addString(entryFQN, "dct:modified", date);
 	}
 
 	static public String getLexiconFQN(String language) {
@@ -81,7 +76,8 @@ public class TripleSerialiser {
 
 	public String addLexicon(String language) {	
 		String lexiconFQN = getLexiconFQN(language);
-		addMultiple(lexiconFQN, "rdf:type", "lime:Lexicon", "lime:language", "\""+language+"\"");
+		add(lexiconFQN, "rdf:type", "lime:Lexicon");
+		addString(lexiconFQN, "lime:language", language);
 		return lexiconFQN;
 	}
 
@@ -91,7 +87,9 @@ public class TripleSerialiser {
 	}
 
 	public String serialise(String language) {
-		return features.containsKey(language)? features.get(language).toString() : "";
+		if (!features.containsKey(language)) return "";
+		TripleOptimiser builder = features.get(language);
+		return builder.getStringBuilder().toString();
 	}
 
 	public Collection<String> getLanguages() {
@@ -100,8 +98,8 @@ public class TripleSerialiser {
 
 	public String serialise() {
 		StringBuilder builder = new StringBuilder("");
-		for (StringBuilder languageSpecific: features.values()) {
-			builder.append(languageSpecific);
+		for (TripleOptimiser languageSpecific: features.values()) {
+			builder.append(languageSpecific.getStringBuilder());
 		}
 		return builder.toString();
 	}

@@ -20,74 +20,51 @@ INSERT DATA {
 	:lexicon_fr rdf:type lime:Lexicon ; lime:language "fr" .
 
 	# Concept section
-	conc:concept_c1 rdf:type skos:Concept ; skos:prefLabel "c1" .
-	conc:concept_c1 skos:inScheme :sf_OdeYA0FHeFFB1DVUMqdMw .
+	conc:concept_c1 rdf:type skos:Concept ; skos:prefLabel "c1" ; skos:inScheme :sf_OdeYA0FHeFFB1DVUMqdMw .
 
 	# Term section
 	:lexicon_en lime:entry term:le_2qtl9zuTssWXwKguQH423y_noun .
-	term:le_2qtl9zuTssWXwKguQH423y_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "car clubs"@en .
-	term:le_2qtl9zuTssWXwKguQH423y_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_2qtl9zuTssWXwKguQH423y_noun ontolex:canonicalForm term:le_2qtl9zuTssWXwKguQH423y_noun_lemma .
+	term:le_2qtl9zuTssWXwKguQH423y_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; ontolex:canonicalForm term:le_2qtl9zuTssWXwKguQH423y_noun_lemma .
 	term:le_2qtl9zuTssWXwKguQH423y_noun_lemma rdf:type ontolex:Form .
-	term:le_2qtl9zuTssWXwKguQH423y_noun skos:note "terminological variant in UK"@en .
+	term:le_2qtl9zuTssWXwKguQH423y_noun rdfs:label "car clubs"@en ; skos:note "terminological variant in UK"@en .
 	term:le_2qtl9zuTssWXwKguQH423y_noun_lemma ontolex:writtenRep "car clubs"@en .
 	term:le_2qtl9zuTssWXwKguQH423y_noun ontolex:sense term:le_2qtl9zuTssWXwKguQH423y_noun_sense_default .
-	term:le_2qtl9zuTssWXwKguQH423y_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_2qtl9zuTssWXwKguQH423y_noun_sense_default ontolex:reference conc:concept_c1 .
+	term:le_2qtl9zuTssWXwKguQH423y_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	:lexicon_en lime:entry term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun .
-	term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "carsharing"@en .
-	term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun rdf:seeAlso <https://en.wikipedia.org/wiki/Carsharing> .
-	term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun ontolex:canonicalForm term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun_lemma .
+	term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; rdf:seeAlso <https://en.wikipedia.org/wiki/Carsharing> ; ontolex:canonicalForm term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun_lemma .
 	term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun_lemma rdf:type ontolex:Form .
+	term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun rdfs:label "carsharing"@en .
 	term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun_lemma ontolex:writtenRep "carsharing"@en .
 	term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun ontolex:sense term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun_sense_default .
-	term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun_sense_default ontolex:reference conc:concept_c1 .
+	term:le_7OxhhZzHnoAbFCbvYtk1Cd_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	:lexicon_en lime:entry term:le_F6vvbs0kcwnN5sxhBSmoF_noun .
-	term:le_F6vvbs0kcwnN5sxhBSmoF_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "car sharing"@en .
-	term:le_F6vvbs0kcwnN5sxhBSmoF_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_F6vvbs0kcwnN5sxhBSmoF_noun ontolex:canonicalForm term:le_F6vvbs0kcwnN5sxhBSmoF_noun_lemma .
+	term:le_F6vvbs0kcwnN5sxhBSmoF_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; ontolex:canonicalForm term:le_F6vvbs0kcwnN5sxhBSmoF_noun_lemma .
 	term:le_F6vvbs0kcwnN5sxhBSmoF_noun_lemma rdf:type ontolex:Form .
-	term:le_F6vvbs0kcwnN5sxhBSmoF_noun skos:note "terminological variant in AU, NZ, CA, TH, and US"@en .
+	term:le_F6vvbs0kcwnN5sxhBSmoF_noun rdfs:label "car sharing"@en ; skos:note "terminological variant in AU, NZ, CA, TH, and US"@en .
 	term:le_F6vvbs0kcwnN5sxhBSmoF_noun_lemma ontolex:writtenRep "car sharing"@en .
 	term:le_F6vvbs0kcwnN5sxhBSmoF_noun ontolex:sense term:le_F6vvbs0kcwnN5sxhBSmoF_noun_sense_default .
-	term:le_F6vvbs0kcwnN5sxhBSmoF_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_F6vvbs0kcwnN5sxhBSmoF_noun_sense_default ontolex:reference conc:concept_c1 .
+	term:le_F6vvbs0kcwnN5sxhBSmoF_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	:lexicon_it lime:entry term:le_25QFMWwLeNpDJrEVjzkvYZ_noun .
-	term:le_25QFMWwLeNpDJrEVjzkvYZ_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "car sharing"@it .
-	term:le_25QFMWwLeNpDJrEVjzkvYZ_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_25QFMWwLeNpDJrEVjzkvYZ_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_25QFMWwLeNpDJrEVjzkvYZ_noun rdf:seeAlso <https://it.wikipedia.org/wiki/Car_sharing> .
-	term:le_25QFMWwLeNpDJrEVjzkvYZ_noun ontolex:canonicalForm term:le_25QFMWwLeNpDJrEVjzkvYZ_noun_lemma .
+	term:le_25QFMWwLeNpDJrEVjzkvYZ_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; rdf:seeAlso <https://it.wikipedia.org/wiki/Car_sharing> ; ontolex:canonicalForm term:le_25QFMWwLeNpDJrEVjzkvYZ_noun_lemma .
 	term:le_25QFMWwLeNpDJrEVjzkvYZ_noun_lemma rdf:type ontolex:Form .
-	term:le_25QFMWwLeNpDJrEVjzkvYZ_noun skos:note "Generalmente in italiano si utilizza l'anglicismo sebbene la variante \"auto condivisa\" sia attestata."@it .
+	term:le_25QFMWwLeNpDJrEVjzkvYZ_noun rdfs:label "car sharing"@it ; skos:note "Generalmente in italiano si utilizza l'anglicismo sebbene la variante \"auto condivisa\" sia attestata."@it .
 	term:le_25QFMWwLeNpDJrEVjzkvYZ_noun_lemma ontolex:writtenRep "car sharing"@it .
 	term:le_25QFMWwLeNpDJrEVjzkvYZ_noun ontolex:sense term:le_25QFMWwLeNpDJrEVjzkvYZ_noun_sense_default .
-	term:le_25QFMWwLeNpDJrEVjzkvYZ_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_25QFMWwLeNpDJrEVjzkvYZ_noun_sense_default ontolex:reference conc:concept_c1 .
+	term:le_25QFMWwLeNpDJrEVjzkvYZ_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	:lexicon_fr lime:entry term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun .
-	term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "autopartage"@fr .
-	term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun rdf:seeAlso <https://fr.wikipedia.org/wiki/Autopartage> .
-	term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun ontolex:canonicalForm term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun_lemma .
+	term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; rdf:seeAlso <https://fr.wikipedia.org/wiki/Autopartage> ; ontolex:canonicalForm term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun_lemma .
 	term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun_lemma rdf:type ontolex:Form .
-	term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun skos:note "Il faut distinguer le terme analysé de \"service de partage de véhicules\" et \"partage de véhicules\".\n Ces derniers sont souvent utilisés comme synonymes, mais il s'agit en réalité de concepts plus généraux qui englobent\n tous les types de véhicules, tandis que l'autopartage ne concerne que les voitures."@fr .
+	term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun rdfs:label "autopartage"@fr ; skos:note "Il faut distinguer le terme analysé de \"service de partage de véhicules\" et \"partage de véhicules\".\n Ces derniers sont souvent utilisés comme synonymes, mais il s'agit en réalité de concepts plus généraux qui englobent\n tous les types de véhicules, tandis que l'autopartage ne concerne que les voitures."@fr .
 	term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun_lemma ontolex:writtenRep "autopartage"@fr .
 	term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun ontolex:sense term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun_sense_default .
-	term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun_sense_default ontolex:reference conc:concept_c1 .
+	term:le_4fMgHWGEhhKnqdnjKsQt8Z_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	:lexicon_fr lime:entry term:le_R17APqtXAdlWRud1xPrPQ_noun .
-	term:le_R17APqtXAdlWRud1xPrPQ_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "voitures en libre-service"@fr .
-	term:le_R17APqtXAdlWRud1xPrPQ_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_R17APqtXAdlWRud1xPrPQ_noun ontolex:canonicalForm term:le_R17APqtXAdlWRud1xPrPQ_noun_lemma .
+	term:le_R17APqtXAdlWRud1xPrPQ_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; ontolex:canonicalForm term:le_R17APqtXAdlWRud1xPrPQ_noun_lemma .
 	term:le_R17APqtXAdlWRud1xPrPQ_noun_lemma rdf:type ontolex:Form .
+	term:le_R17APqtXAdlWRud1xPrPQ_noun rdfs:label "voitures en libre-service"@fr .
 	term:le_R17APqtXAdlWRud1xPrPQ_noun_lemma ontolex:writtenRep "voitures en libre-service"@fr .
 	term:le_R17APqtXAdlWRud1xPrPQ_noun ontolex:sense term:le_R17APqtXAdlWRud1xPrPQ_noun_sense_default .
-	term:le_R17APqtXAdlWRud1xPrPQ_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_R17APqtXAdlWRud1xPrPQ_noun_sense_default ontolex:reference conc:concept_c1 .
+	term:le_R17APqtXAdlWRud1xPrPQ_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 
 	# [Add Metadata Processor] adding creator and date info
 

@@ -21,128 +21,83 @@ INSERT DATA {
 	:lexicon_fr rdf:type lime:Lexicon ; lime:language "fr" .
 
 	# Concept section
-	conc:concept_c1 rdf:type skos:Concept ; skos:prefLabel "c1" .
-	conc:concept_c1 skos:inScheme :sf_OdeYA0FHeFFB1DVUMqdMw .
+	conc:concept_c1 rdf:type skos:Concept ; skos:prefLabel "c1" ; skos:inScheme :sf_OdeYA0FHeFFB1DVUMqdMw .
 	conc:concept_c1 skos:definition [ rdf:value "A battery-electric car that is capable of\n traveling at a maximum speed of 25 miles per hour (mph) and has a maximum loaded weight of 3,000 lbs."@en ; dct:source "TechTarget" ; dct:identifier <https://www.techtarget.com/whatis/definition/neighborhood-electric-vehicle-NEV> ] .
 	conc:concept_c1 skos:definition [ rdf:value "Véhicule à deux places, activé par un moteur électrique à courant continu\n alimenté par des batteries au plomb rechargeables à partir d'une prise de courant résidentielle de 110 volts."@fr ; dct:source "Office québécois de la langue française, 2002" ; dct:identifier <https://gdt.oqlf.gouv.qc.ca/ficheOqlf.aspx?Id_Fiche=2069944> ] .
 	conc:concept_c1 skos:definition [ rdf:value "Un Neighborhood Electric Vehicle (NEV) è una denominazione USA per i veicoli elettrici di prossimità urbana che solitamente sono costruiti per avere una velocità non superiori a 50 km/h (70 km/h per categoria N1)\n e hanno un peso massimo caricato di circa 1.000 kg. I NEV rientrano nella classificazione dei quadricicli leggeri."@it ; dct:source "Wikipedia" ; dct:identifier <https://it.wikipedia.org/wiki/Neighborhood_Electric_Vehicle> ] .
-	conc:concept_c2 rdf:type skos:Concept ; skos:prefLabel "c2" .
-	conc:concept_c2 skos:inScheme :sf_1gkE5ripjs1GT67xQzsF9A .
+	conc:concept_c2 rdf:type skos:Concept ; skos:prefLabel "c2" ; skos:inScheme :sf_1gkE5ripjs1GT67xQzsF9A .
 	conc:concept_c2 skos:definition [ rdf:value "Véhicule entièrement électrique [conçu] spécifiquement pour transporter une seule personne sur de courtes distances."@fr ; dct:source "TERMIUM Plus" ; dct:identifier <https://www.btb.termiumplus.gc.ca/tpv2alpha/alpha-fra.html?lang=fra&i=1&srchtxt=Véhicule+Électrique+Personnel&codom2nd_wet=1#resultrecs> ] .
 
 	# Term section
 	:lexicon_en lime:entry term:le_3qBH7rT9OGlyXvod5zzJcT_noun .
-	term:le_3qBH7rT9OGlyXvod5zzJcT_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "neighborhood electric vehicle"@en .
-	term:le_3qBH7rT9OGlyXvod5zzJcT_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_3qBH7rT9OGlyXvod5zzJcT_noun lexinfo:termType lexinfo:fullForm .
-	term:le_3qBH7rT9OGlyXvod5zzJcT_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_3qBH7rT9OGlyXvod5zzJcT_noun ontolex:canonicalForm term:le_3qBH7rT9OGlyXvod5zzJcT_noun_lemma .
+	term:le_3qBH7rT9OGlyXvod5zzJcT_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:termType lexinfo:fullForm ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; ontolex:canonicalForm term:le_3qBH7rT9OGlyXvod5zzJcT_noun_lemma .
 	term:le_3qBH7rT9OGlyXvod5zzJcT_noun_lemma rdf:type ontolex:Form .
+	term:le_3qBH7rT9OGlyXvod5zzJcT_noun rdfs:label "neighborhood electric vehicle"@en .
 	term:le_3qBH7rT9OGlyXvod5zzJcT_noun_lemma ontolex:writtenRep "neighborhood electric vehicle"@en .
 	term:le_3qBH7rT9OGlyXvod5zzJcT_noun ontolex:sense term:le_3qBH7rT9OGlyXvod5zzJcT_noun_sense .
-	term:le_3qBH7rT9OGlyXvod5zzJcT_noun_sense rdf:type ontolex:LexicalSense .
-	term:le_3qBH7rT9OGlyXvod5zzJcT_noun_sense ontolex:reference conc:concept_c1 .
+	term:le_3qBH7rT9OGlyXvod5zzJcT_noun_sense rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	term:le_3qBH7rT9OGlyXvod5zzJcT_noun_sense ontolex:usage [ rdf:value "A Neighborhood Electric Vehicle (NEV) is a U.S. category for battery electric vehicles that are usually built to have a top speed of 25 miles\n per hour (40 km/h), and have a maximum loaded weight of 3,000 lb (1,400 kg)."@en ; dct:source "Wikipedia" ; dct:identifier <https://en.wikipedia.org/wiki/Neighborhood_Electric_Vehicle> ] .
 	:lexicon_en lime:entry term:le_47OMGlu0UAjWfjgVL05X0Q_noun .
-	term:le_47OMGlu0UAjWfjgVL05X0Q_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "NEV"@en .
-	term:le_47OMGlu0UAjWfjgVL05X0Q_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_47OMGlu0UAjWfjgVL05X0Q_noun lexinfo:termType lexinfo:acronym .
-	term:le_47OMGlu0UAjWfjgVL05X0Q_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
-	term:le_47OMGlu0UAjWfjgVL05X0Q_noun ontolex:canonicalForm term:le_47OMGlu0UAjWfjgVL05X0Q_noun_lemma .
+	term:le_47OMGlu0UAjWfjgVL05X0Q_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:termType lexinfo:acronym ; lexinfo:normativeAuthorization lexinfo:admittedTerm ; ontolex:canonicalForm term:le_47OMGlu0UAjWfjgVL05X0Q_noun_lemma .
 	term:le_47OMGlu0UAjWfjgVL05X0Q_noun_lemma rdf:type ontolex:Form .
+	term:le_47OMGlu0UAjWfjgVL05X0Q_noun rdfs:label "NEV"@en .
 	term:le_47OMGlu0UAjWfjgVL05X0Q_noun_lemma ontolex:writtenRep "NEV"@en .
 	term:le_47OMGlu0UAjWfjgVL05X0Q_noun ontolex:sense term:le_47OMGlu0UAjWfjgVL05X0Q_noun_sense_default .
-	term:le_47OMGlu0UAjWfjgVL05X0Q_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_47OMGlu0UAjWfjgVL05X0Q_noun_sense_default ontolex:reference conc:concept_c1 .
+	term:le_47OMGlu0UAjWfjgVL05X0Q_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	:lexicon_it lime:entry term:le_161FnpgQej7gct2ziBVU9O_noun .
-	term:le_161FnpgQej7gct2ziBVU9O_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "veicoli elettrici di prossimità urbana"@it .
-	term:le_161FnpgQej7gct2ziBVU9O_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_161FnpgQej7gct2ziBVU9O_noun lexinfo:termType lexinfo:fullForm .
-	term:le_161FnpgQej7gct2ziBVU9O_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
-	term:le_161FnpgQej7gct2ziBVU9O_noun ontolex:canonicalForm term:le_161FnpgQej7gct2ziBVU9O_noun_lemma .
-	term:le_161FnpgQej7gct2ziBVU9O_noun_lemma rdf:type ontolex:Form .
-	term:le_161FnpgQej7gct2ziBVU9O_noun_lemma lexinfo:gender lexinfo:masculine .
+	term:le_161FnpgQej7gct2ziBVU9O_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:termType lexinfo:fullForm ; lexinfo:normativeAuthorization lexinfo:admittedTerm ; ontolex:canonicalForm term:le_161FnpgQej7gct2ziBVU9O_noun_lemma .
+	term:le_161FnpgQej7gct2ziBVU9O_noun_lemma rdf:type ontolex:Form ; lexinfo:gender lexinfo:masculine .
+	term:le_161FnpgQej7gct2ziBVU9O_noun rdfs:label "veicoli elettrici di prossimità urbana"@it .
 	term:le_161FnpgQej7gct2ziBVU9O_noun_lemma ontolex:writtenRep "veicoli elettrici di prossimità urbana"@it .
 	term:le_161FnpgQej7gct2ziBVU9O_noun ontolex:sense term:le_161FnpgQej7gct2ziBVU9O_noun_sense .
-	term:le_161FnpgQej7gct2ziBVU9O_noun_sense rdf:type ontolex:LexicalSense .
-	term:le_161FnpgQej7gct2ziBVU9O_noun_sense ontolex:reference conc:concept_c1 .
+	term:le_161FnpgQej7gct2ziBVU9O_noun_sense rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	term:le_161FnpgQej7gct2ziBVU9O_noun_sense ontolex:usage [ rdf:value "Mobilità in spazi chiusi, aree sensibili e protette? La risposta è NEV – Neighborhood\n Electric Vehicles, veicoli elettrici di prossimità urbana, idonei ad andare dove altri si fermano."@it ; dct:source "Exelentia" ; dct:identifier <https://www.exelentia.it/veicoli-elettrici-urbani-nev/> ] .
 	:lexicon_it lime:entry term:le_6iiJqZLFjjkxJQ1Un0CYai_noun .
-	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "NEV"@it .
-	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun lexinfo:termType lexinfo:acronym .
-	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun ontolex:canonicalForm term:le_6iiJqZLFjjkxJQ1Un0CYai_noun_lemma .
+	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:termType lexinfo:acronym ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; ontolex:canonicalForm term:le_6iiJqZLFjjkxJQ1Un0CYai_noun_lemma .
 	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun_lemma rdf:type ontolex:Form .
+	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun rdfs:label "NEV"@it .
 	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun_lemma ontolex:writtenRep "NEV"@it .
 	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun ontolex:sense term:le_6iiJqZLFjjkxJQ1Un0CYai_noun_sense_default .
-	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun_sense_default ontolex:reference conc:concept_c1 .
+	term:le_6iiJqZLFjjkxJQ1Un0CYai_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	:lexicon_fr lime:entry term:le_3WbmMJFniSr1vy5NuW2J9h_noun .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "VEP"@fr .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun lexinfo:termType lexinfo:acronym .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun ontolex:canonicalForm term:le_3WbmMJFniSr1vy5NuW2J9h_noun_lemma .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_lemma rdf:type ontolex:Form .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_lemma lexinfo:gender lexinfo:masculine .
+	term:le_3WbmMJFniSr1vy5NuW2J9h_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:termType lexinfo:acronym ; lexinfo:normativeAuthorization lexinfo:admittedTerm ; ontolex:canonicalForm term:le_3WbmMJFniSr1vy5NuW2J9h_noun_lemma .
+	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_lemma rdf:type ontolex:Form ; lexinfo:gender lexinfo:masculine .
+	term:le_3WbmMJFniSr1vy5NuW2J9h_noun rdfs:label "VEP"@fr .
 	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_lemma ontolex:writtenRep "VEP"@fr .
 	term:le_3WbmMJFniSr1vy5NuW2J9h_noun ontolex:sense term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly1 .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly1 rdf:type ontolex:LexicalSense .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly1 ontolex:reference conc:concept_c1 .
+	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly1 rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	term:le_3WbmMJFniSr1vy5NuW2J9h_noun ontolex:sense term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly2 .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly2 rdf:type ontolex:LexicalSense .
-	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly2 ontolex:reference conc:concept_c1 .
+	term:le_3WbmMJFniSr1vy5NuW2J9h_noun_sensepoly2 rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	:lexicon_fr lime:entry term:le_5xeokIoIHPBPUJpqkiwIaY_noun .
-	term:le_5xeokIoIHPBPUJpqkiwIaY_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "véhicule électrique de proximité"@fr .
-	term:le_5xeokIoIHPBPUJpqkiwIaY_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_5xeokIoIHPBPUJpqkiwIaY_noun lexinfo:termType lexinfo:fullForm .
-	term:le_5xeokIoIHPBPUJpqkiwIaY_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_5xeokIoIHPBPUJpqkiwIaY_noun ontolex:canonicalForm term:le_5xeokIoIHPBPUJpqkiwIaY_noun_lemma .
-	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_lemma rdf:type ontolex:Form .
-	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_lemma lexinfo:gender lexinfo:masculine .
+	term:le_5xeokIoIHPBPUJpqkiwIaY_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:termType lexinfo:fullForm ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; ontolex:canonicalForm term:le_5xeokIoIHPBPUJpqkiwIaY_noun_lemma .
+	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_lemma rdf:type ontolex:Form ; lexinfo:gender lexinfo:masculine .
+	term:le_5xeokIoIHPBPUJpqkiwIaY_noun rdfs:label "véhicule électrique de proximité"@fr .
 	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_lemma ontolex:writtenRep "véhicule électrique de proximité"@fr .
 	term:le_5xeokIoIHPBPUJpqkiwIaY_noun ontolex:sense term:le_5xeokIoIHPBPUJpqkiwIaY_noun_sense .
-	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_sense rdf:type ontolex:LexicalSense .
-	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_sense ontolex:reference conc:concept_c1 .
+	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_sense rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	term:le_5xeokIoIHPBPUJpqkiwIaY_noun_sense ontolex:usage [ rdf:value "Un véhicule électrique de proximité (NEV) est une voiture électrique à batterie capable de se déplacer\n à une vitesse maximale de 25 miles par heure (mph) et dont le poids maximal en charge est de 3 000 livres."@fr ; dct:source "Definir Tech" ; dct:identifier <https://definir-tech.com/vehicule-electrique-de-proximite-nev/> ] .
 	:lexicon_fr lime:entry term:le_4RAB9Zskz180iQxtsAxhU2_noun .
-	term:le_4RAB9Zskz180iQxtsAxhU2_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "véhicule électrique personnel"@fr .
-	term:le_4RAB9Zskz180iQxtsAxhU2_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_4RAB9Zskz180iQxtsAxhU2_noun lexinfo:termType lexinfo:fullForm .
-	term:le_4RAB9Zskz180iQxtsAxhU2_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_4RAB9Zskz180iQxtsAxhU2_noun ontolex:canonicalForm term:le_4RAB9Zskz180iQxtsAxhU2_noun_lemma .
-	term:le_4RAB9Zskz180iQxtsAxhU2_noun_lemma rdf:type ontolex:Form .
-	term:le_4RAB9Zskz180iQxtsAxhU2_noun_lemma lexinfo:gender lexinfo:masculine .
+	term:le_4RAB9Zskz180iQxtsAxhU2_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:termType lexinfo:fullForm ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; ontolex:canonicalForm term:le_4RAB9Zskz180iQxtsAxhU2_noun_lemma .
+	term:le_4RAB9Zskz180iQxtsAxhU2_noun_lemma rdf:type ontolex:Form ; lexinfo:gender lexinfo:masculine .
+	term:le_4RAB9Zskz180iQxtsAxhU2_noun rdfs:label "véhicule électrique personnel"@fr .
 	term:le_4RAB9Zskz180iQxtsAxhU2_noun_lemma ontolex:writtenRep "véhicule électrique personnel"@fr .
 	term:le_4RAB9Zskz180iQxtsAxhU2_noun ontolex:sense term:le_4RAB9Zskz180iQxtsAxhU2_noun_sense .
-	term:le_4RAB9Zskz180iQxtsAxhU2_noun_sense rdf:type ontolex:LexicalSense .
-	term:le_4RAB9Zskz180iQxtsAxhU2_noun_sense ontolex:reference conc:concept_c2 .
+	term:le_4RAB9Zskz180iQxtsAxhU2_noun_sense rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c2 .
 	term:le_4RAB9Zskz180iQxtsAxhU2_noun_sense ontolex:usage [ rdf:value "C’est une solution alternative adaptée à l’usage peu fréquent du véhicule électrique personnel\n sur les longues distances et qui peut se révéler très vertueuse sur le plan environnemental"@fr ; dct:source "Carbone 4" ; dct:identifier <https://www.carbone4.com/decryptage-mobilite-recharge-electrique> ] .
 	:lexicon_fr lime:entry term:le_4822mpTrFD9AuxWfM2f4xr_noun .
-	term:le_4822mpTrFD9AuxWfM2f4xr_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "véhicule de proximité"@fr .
-	term:le_4822mpTrFD9AuxWfM2f4xr_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_4822mpTrFD9AuxWfM2f4xr_noun lexinfo:termType lexinfo:fullForm .
-	term:le_4822mpTrFD9AuxWfM2f4xr_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
-	term:le_4822mpTrFD9AuxWfM2f4xr_noun ontolex:canonicalForm term:le_4822mpTrFD9AuxWfM2f4xr_noun_lemma .
-	term:le_4822mpTrFD9AuxWfM2f4xr_noun_lemma rdf:type ontolex:Form .
-	term:le_4822mpTrFD9AuxWfM2f4xr_noun_lemma lexinfo:gender lexinfo:masculine .
+	term:le_4822mpTrFD9AuxWfM2f4xr_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:termType lexinfo:fullForm ; lexinfo:normativeAuthorization lexinfo:admittedTerm ; ontolex:canonicalForm term:le_4822mpTrFD9AuxWfM2f4xr_noun_lemma .
+	term:le_4822mpTrFD9AuxWfM2f4xr_noun_lemma rdf:type ontolex:Form ; lexinfo:gender lexinfo:masculine .
+	term:le_4822mpTrFD9AuxWfM2f4xr_noun rdfs:label "véhicule de proximité"@fr .
 	term:le_4822mpTrFD9AuxWfM2f4xr_noun_lemma ontolex:writtenRep "véhicule de proximité"@fr .
 	term:le_4822mpTrFD9AuxWfM2f4xr_noun ontolex:sense term:le_4822mpTrFD9AuxWfM2f4xr_noun_sense_default .
-	term:le_4822mpTrFD9AuxWfM2f4xr_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_4822mpTrFD9AuxWfM2f4xr_noun_sense_default ontolex:reference conc:concept_c1 .
+	term:le_4822mpTrFD9AuxWfM2f4xr_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	:lexicon_fr lime:entry term:le_5JHTB7BXBMGjtsC5VlJKcG_noun .
-	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "NEV"@fr .
-	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun lexinfo:termType lexinfo:acronym .
-	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun lexinfo:normativeAuthorization lexinfo:deprecatedTerm .
-	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun ontolex:canonicalForm term:le_5JHTB7BXBMGjtsC5VlJKcG_noun_lemma .
+	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:termType lexinfo:acronym ; lexinfo:normativeAuthorization lexinfo:deprecatedTerm ; ontolex:canonicalForm term:le_5JHTB7BXBMGjtsC5VlJKcG_noun_lemma .
 	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun_lemma rdf:type ontolex:Form .
-	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun skos:note "Il semble inutile d'emprunter l'acronyme anglais NEV puisque la dénomination\n française produit par siglaison une appellation aussi efficace et aussi brève."@fr .
+	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun rdfs:label "NEV"@fr ; skos:note "Il semble inutile d'emprunter l'acronyme anglais NEV puisque la dénomination\n française produit par siglaison une appellation aussi efficace et aussi brève."@fr .
 	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun_lemma ontolex:writtenRep "NEV"@fr .
 	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun ontolex:sense term:le_5JHTB7BXBMGjtsC5VlJKcG_noun_sense_default .
-	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun_sense_default ontolex:reference conc:concept_c1 .
+	term:le_5JHTB7BXBMGjtsC5VlJKcG_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 
 	# [Polysemic Processor] term `VEP`@fr merged with 2 senses
 

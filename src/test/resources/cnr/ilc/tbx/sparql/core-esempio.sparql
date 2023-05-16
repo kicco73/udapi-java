@@ -24,72 +24,61 @@ INSERT DATA {
 
 	# Term section
 	:lexicon_en lime:entry term:le_3W2XxrhsggXVPPhAqGsFS9 .
-	term:le_3W2XxrhsggXVPPhAqGsFS9 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "utility vehicle"@en .
-	term:le_3W2XxrhsggXVPPhAqGsFS9 ontolex:canonicalForm term:le_3W2XxrhsggXVPPhAqGsFS9_lemma .
+	term:le_3W2XxrhsggXVPPhAqGsFS9 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; ontolex:canonicalForm term:le_3W2XxrhsggXVPPhAqGsFS9_lemma .
 	term:le_3W2XxrhsggXVPPhAqGsFS9_lemma rdf:type ontolex:Form .
+	term:le_3W2XxrhsggXVPPhAqGsFS9 rdfs:label "utility vehicle"@en .
 	term:le_3W2XxrhsggXVPPhAqGsFS9_lemma ontolex:writtenRep "utility vehicle"@en .
 	term:le_3W2XxrhsggXVPPhAqGsFS9 ontolex:sense term:le_3W2XxrhsggXVPPhAqGsFS9_sense_default .
-	term:le_3W2XxrhsggXVPPhAqGsFS9_sense_default rdf:type ontolex:LexicalSense .
-	term:le_3W2XxrhsggXVPPhAqGsFS9_sense_default ontolex:reference conc:concept_c1 .
+	term:le_3W2XxrhsggXVPPhAqGsFS9_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	:lexicon_en lime:entry term:le_7gWG0fB0zg5SJQROUfNkj .
-	term:le_7gWG0fB0zg5SJQROUfNkj rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "storage"@en .
-	term:le_7gWG0fB0zg5SJQROUfNkj ontolex:canonicalForm term:le_7gWG0fB0zg5SJQROUfNkj_lemma .
+	term:le_7gWG0fB0zg5SJQROUfNkj rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; ontolex:canonicalForm term:le_7gWG0fB0zg5SJQROUfNkj_lemma .
 	term:le_7gWG0fB0zg5SJQROUfNkj_lemma rdf:type ontolex:Form .
+	term:le_7gWG0fB0zg5SJQROUfNkj rdfs:label "storage"@en .
 	term:le_7gWG0fB0zg5SJQROUfNkj_lemma ontolex:writtenRep "storage"@en .
 	term:le_7gWG0fB0zg5SJQROUfNkj ontolex:sense term:le_7gWG0fB0zg5SJQROUfNkj_sense_default .
-	term:le_7gWG0fB0zg5SJQROUfNkj_sense_default rdf:type ontolex:LexicalSense .
-	term:le_7gWG0fB0zg5SJQROUfNkj_sense_default ontolex:reference conc:concept_c2 .
+	term:le_7gWG0fB0zg5SJQROUfNkj_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c2 .
 	:lexicon_en lime:entry term:le_16qvD8VDGS0JrCz98QRjRf .
-	term:le_16qvD8VDGS0JrCz98QRjRf rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "store"@en .
-	term:le_16qvD8VDGS0JrCz98QRjRf ontolex:canonicalForm term:le_16qvD8VDGS0JrCz98QRjRf_lemma .
+	term:le_16qvD8VDGS0JrCz98QRjRf rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; ontolex:canonicalForm term:le_16qvD8VDGS0JrCz98QRjRf_lemma .
 	term:le_16qvD8VDGS0JrCz98QRjRf_lemma rdf:type ontolex:Form .
+	term:le_16qvD8VDGS0JrCz98QRjRf rdfs:label "store"@en .
 	term:le_16qvD8VDGS0JrCz98QRjRf_lemma ontolex:writtenRep "store"@en .
 	term:le_16qvD8VDGS0JrCz98QRjRf ontolex:sense term:le_16qvD8VDGS0JrCz98QRjRf_sense_default .
-	term:le_16qvD8VDGS0JrCz98QRjRf_sense_default rdf:type ontolex:LexicalSense .
-	term:le_16qvD8VDGS0JrCz98QRjRf_sense_default ontolex:reference conc:concept_c2 .
+	term:le_16qvD8VDGS0JrCz98QRjRf_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c2 .
 	:lexicon_en lime:entry term:le_7KRZyjSSMokrQpr2Kq8HtF .
-	term:le_7KRZyjSSMokrQpr2Kq8HtF rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "goods vehicle"@en .
-	term:le_7KRZyjSSMokrQpr2Kq8HtF ontolex:canonicalForm term:le_7KRZyjSSMokrQpr2Kq8HtF_lemma .
+	term:le_7KRZyjSSMokrQpr2Kq8HtF rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; ontolex:canonicalForm term:le_7KRZyjSSMokrQpr2Kq8HtF_lemma .
 	term:le_7KRZyjSSMokrQpr2Kq8HtF_lemma rdf:type ontolex:Form .
+	term:le_7KRZyjSSMokrQpr2Kq8HtF rdfs:label "goods vehicle"@en .
 	term:le_7KRZyjSSMokrQpr2Kq8HtF_lemma ontolex:writtenRep "goods vehicle"@en .
 	term:le_7KRZyjSSMokrQpr2Kq8HtF ontolex:sense term:le_7KRZyjSSMokrQpr2Kq8HtF_sense_default .
-	term:le_7KRZyjSSMokrQpr2Kq8HtF_sense_default rdf:type ontolex:LexicalSense .
-	term:le_7KRZyjSSMokrQpr2Kq8HtF_sense_default ontolex:reference conc:concept_c1 .
+	term:le_7KRZyjSSMokrQpr2Kq8HtF_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	:lexicon_it lime:entry term:le_NjeZd1t4MbZinUNMDUVH8 .
-	term:le_NjeZd1t4MbZinUNMDUVH8 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "veicolo commerciale"@it .
-	term:le_NjeZd1t4MbZinUNMDUVH8 ontolex:canonicalForm term:le_NjeZd1t4MbZinUNMDUVH8_lemma .
+	term:le_NjeZd1t4MbZinUNMDUVH8 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; ontolex:canonicalForm term:le_NjeZd1t4MbZinUNMDUVH8_lemma .
 	term:le_NjeZd1t4MbZinUNMDUVH8_lemma rdf:type ontolex:Form .
-	term:le_NjeZd1t4MbZinUNMDUVH8 skos:note "Si distingue tra veicolo commerciale leggero (LCV) e veicolo commerciale pesante (veicolo industriale, che superano le 3,5 t)"@it .
+	term:le_NjeZd1t4MbZinUNMDUVH8 rdfs:label "veicolo commerciale"@it ; skos:note "Si distingue tra veicolo commerciale leggero (LCV) e veicolo commerciale pesante (veicolo industriale, che superano le 3,5 t)"@it .
 	term:le_NjeZd1t4MbZinUNMDUVH8_lemma ontolex:writtenRep "veicolo commerciale"@it .
 	term:le_NjeZd1t4MbZinUNMDUVH8 ontolex:sense term:le_NjeZd1t4MbZinUNMDUVH8_sense_default .
-	term:le_NjeZd1t4MbZinUNMDUVH8_sense_default rdf:type ontolex:LexicalSense .
-	term:le_NjeZd1t4MbZinUNMDUVH8_sense_default ontolex:reference conc:concept_c1 .
+	term:le_NjeZd1t4MbZinUNMDUVH8_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 	:lexicon_it lime:entry term:le_16plhP8dzQnWVaEpJR8lcH .
-	term:le_16plhP8dzQnWVaEpJR8lcH rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "stoccaggio"@it .
-	term:le_16plhP8dzQnWVaEpJR8lcH ontolex:canonicalForm term:le_16plhP8dzQnWVaEpJR8lcH_lemma .
+	term:le_16plhP8dzQnWVaEpJR8lcH rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; ontolex:canonicalForm term:le_16plhP8dzQnWVaEpJR8lcH_lemma .
 	term:le_16plhP8dzQnWVaEpJR8lcH_lemma rdf:type ontolex:Form .
+	term:le_16plhP8dzQnWVaEpJR8lcH rdfs:label "stoccaggio"@it .
 	term:le_16plhP8dzQnWVaEpJR8lcH_lemma ontolex:writtenRep "stoccaggio"@it .
 	term:le_16plhP8dzQnWVaEpJR8lcH ontolex:sense term:le_16plhP8dzQnWVaEpJR8lcH_sense_default .
-	term:le_16plhP8dzQnWVaEpJR8lcH_sense_default rdf:type ontolex:LexicalSense .
-	term:le_16plhP8dzQnWVaEpJR8lcH_sense_default ontolex:reference conc:concept_c2 .
+	term:le_16plhP8dzQnWVaEpJR8lcH_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c2 .
 	:lexicon_fr lime:entry term:le_3d1Bxh4MoKpuQdZdmH1HRh .
-	term:le_3d1Bxh4MoKpuQdZdmH1HRh rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "stockage"@fr .
-	term:le_3d1Bxh4MoKpuQdZdmH1HRh ontolex:canonicalForm term:le_3d1Bxh4MoKpuQdZdmH1HRh_lemma .
+	term:le_3d1Bxh4MoKpuQdZdmH1HRh rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; ontolex:canonicalForm term:le_3d1Bxh4MoKpuQdZdmH1HRh_lemma .
 	term:le_3d1Bxh4MoKpuQdZdmH1HRh_lemma rdf:type ontolex:Form .
-	term:le_3d1Bxh4MoKpuQdZdmH1HRh skos:note "Les méthodes de stockage dépendent du type d’énergie. Les sources d’énergies fossiles (charbon, gaz, pétrole), sous forme de réservoirs à l’état naturel, remplissent naturellement la fonction de stocks.\n Une fois extraites, elles peuvent facilement être isolées, hébergées et transportées d’un point de vue technique. Le stockage s’avère plus complexe pour les énergies intermittentes :\n leur production est relayée par des vecteurs énergétiques tels que l’électricité, la chaleur ou l’hydrogène, nécessitant des systèmes spécifiques de stockage."@fr .
+	term:le_3d1Bxh4MoKpuQdZdmH1HRh rdfs:label "stockage"@fr ; skos:note "Les méthodes de stockage dépendent du type d’énergie. Les sources d’énergies fossiles (charbon, gaz, pétrole), sous forme de réservoirs à l’état naturel, remplissent naturellement la fonction de stocks.\n Une fois extraites, elles peuvent facilement être isolées, hébergées et transportées d’un point de vue technique. Le stockage s’avère plus complexe pour les énergies intermittentes :\n leur production est relayée par des vecteurs énergétiques tels que l’électricité, la chaleur ou l’hydrogène, nécessitant des systèmes spécifiques de stockage."@fr .
 	term:le_3d1Bxh4MoKpuQdZdmH1HRh_lemma ontolex:writtenRep "stockage"@fr .
 	term:le_3d1Bxh4MoKpuQdZdmH1HRh ontolex:sense term:le_3d1Bxh4MoKpuQdZdmH1HRh_sense_default .
-	term:le_3d1Bxh4MoKpuQdZdmH1HRh_sense_default rdf:type ontolex:LexicalSense .
-	term:le_3d1Bxh4MoKpuQdZdmH1HRh_sense_default ontolex:reference conc:concept_c2 .
+	term:le_3d1Bxh4MoKpuQdZdmH1HRh_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c2 .
 	:lexicon_fr lime:entry term:le_577oPcUnQ1vPTclUBY0HE6 .
-	term:le_577oPcUnQ1vPTclUBY0HE6 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "véhicule utilitaire"@fr .
-	term:le_577oPcUnQ1vPTclUBY0HE6 ontolex:canonicalForm term:le_577oPcUnQ1vPTclUBY0HE6_lemma .
+	term:le_577oPcUnQ1vPTclUBY0HE6 rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; ontolex:canonicalForm term:le_577oPcUnQ1vPTclUBY0HE6_lemma .
 	term:le_577oPcUnQ1vPTclUBY0HE6_lemma rdf:type ontolex:Form .
-	term:le_577oPcUnQ1vPTclUBY0HE6 skos:note "On distingue le véhicule utilitaire léger, aussi appelé VUL, défini par son PTAC (poids total autorisé en charge)\n qui ne doit pas ex-céder 3,5 tonnes et le véhicule utilitaire poids lourd (aussi appelé camion poids lourd)\n sont quant à eux définis par un PTAC supérieur à 3,5 tonnes."@fr .
+	term:le_577oPcUnQ1vPTclUBY0HE6 rdfs:label "véhicule utilitaire"@fr ; skos:note "On distingue le véhicule utilitaire léger, aussi appelé VUL, défini par son PTAC (poids total autorisé en charge)\n qui ne doit pas ex-céder 3,5 tonnes et le véhicule utilitaire poids lourd (aussi appelé camion poids lourd)\n sont quant à eux définis par un PTAC supérieur à 3,5 tonnes."@fr .
 	term:le_577oPcUnQ1vPTclUBY0HE6_lemma ontolex:writtenRep "véhicule utilitaire"@fr .
 	term:le_577oPcUnQ1vPTclUBY0HE6 ontolex:sense term:le_577oPcUnQ1vPTclUBY0HE6_sense_default .
-	term:le_577oPcUnQ1vPTclUBY0HE6_sense_default rdf:type ontolex:LexicalSense .
-	term:le_577oPcUnQ1vPTclUBY0HE6_sense_default ontolex:reference conc:concept_c1 .
+	term:le_577oPcUnQ1vPTclUBY0HE6_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c1 .
 
 	# [Add Metadata Processor] adding creator and date info
 

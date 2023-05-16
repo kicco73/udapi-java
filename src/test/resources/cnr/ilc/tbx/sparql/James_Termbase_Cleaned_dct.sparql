@@ -25,125 +25,88 @@ INSERT DATA {
 
 	# Concept section
 	conc:concept_c9680bce6-2c85-47ed-913a-68e64b427708 rdf:type skos:Concept ; skos:prefLabel "c9680bce6-2c85-47ed-913a-68e64b427708" .
-	conc:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f rdf:type skos:Concept ; skos:prefLabel "ca60e0cb9-30d3-466f-aba8-323294edcb4f" .
-	conc:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f skos:inScheme :sf_2SU1vPZE67x7OQ2keemVas .
-	conc:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a rdf:type skos:Concept ; skos:prefLabel "c7f4dde5b-7930-40bf-8eee-f14545933a0a" .
-	conc:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a skos:note "this is a note\nthis is also a note" .
-	conc:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a skos:inScheme :sf_4q02ThPHBUQVAX9bMGj5jq .
-	conc:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 rdf:type skos:Concept ; skos:prefLabel "c7a541f0f-09e8-48a6-b346-8371f80800d0" .
-	conc:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 skos:inScheme :sf_2zW02rM8gJs4PlBii1YtRp .
+	conc:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f rdf:type skos:Concept ; skos:prefLabel "ca60e0cb9-30d3-466f-aba8-323294edcb4f" ; skos:inScheme :sf_2SU1vPZE67x7OQ2keemVas .
+	conc:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a rdf:type skos:Concept ; skos:prefLabel "c7f4dde5b-7930-40bf-8eee-f14545933a0a" ; skos:note "this is a note\nthis is also a note" ; skos:inScheme :sf_4q02ThPHBUQVAX9bMGj5jq .
+	conc:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 rdf:type skos:Concept ; skos:prefLabel "c7a541f0f-09e8-48a6-b346-8371f80800d0" ; skos:inScheme :sf_2zW02rM8gJs4PlBii1YtRp .
 
 	# Term section
 	:lexicon_de lime:entry term:le_Mqnr20F8H7t633nORk4NE_noun .
-	term:le_Mqnr20F8H7t633nORk4NE_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Wurm"@de .
-	term:le_Mqnr20F8H7t633nORk4NE_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_Mqnr20F8H7t633nORk4NE_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_Mqnr20F8H7t633nORk4NE_noun ontolex:canonicalForm term:le_Mqnr20F8H7t633nORk4NE_noun_lemma .
+	term:le_Mqnr20F8H7t633nORk4NE_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; ontolex:canonicalForm term:le_Mqnr20F8H7t633nORk4NE_noun_lemma .
 	term:le_Mqnr20F8H7t633nORk4NE_noun_lemma rdf:type ontolex:Form .
+	term:le_Mqnr20F8H7t633nORk4NE_noun rdfs:label "Wurm"@de .
 	term:le_Mqnr20F8H7t633nORk4NE_noun_lemma ontolex:writtenRep "Wurm"@de .
 	term:le_Mqnr20F8H7t633nORk4NE_noun ontolex:sense term:le_Mqnr20F8H7t633nORk4NE_noun_sense_default .
-	term:le_Mqnr20F8H7t633nORk4NE_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_Mqnr20F8H7t633nORk4NE_noun_sense_default ontolex:reference conc:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
+	term:le_Mqnr20F8H7t633nORk4NE_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
 	:lexicon_de lime:entry term:le_6Han44sibupa7x0jPUq8BP_noun .
-	term:le_6Han44sibupa7x0jPUq8BP_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Maus"@de .
-	term:le_6Han44sibupa7x0jPUq8BP_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_6Han44sibupa7x0jPUq8BP_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_6Han44sibupa7x0jPUq8BP_noun ontolex:canonicalForm term:le_6Han44sibupa7x0jPUq8BP_noun_lemma .
+	term:le_6Han44sibupa7x0jPUq8BP_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; ontolex:canonicalForm term:le_6Han44sibupa7x0jPUq8BP_noun_lemma .
 	term:le_6Han44sibupa7x0jPUq8BP_noun_lemma rdf:type ontolex:Form .
+	term:le_6Han44sibupa7x0jPUq8BP_noun rdfs:label "Maus"@de .
 	term:le_6Han44sibupa7x0jPUq8BP_noun_lemma ontolex:writtenRep "Maus"@de .
 	term:le_6Han44sibupa7x0jPUq8BP_noun ontolex:sense term:le_6Han44sibupa7x0jPUq8BP_noun_sense_default .
-	term:le_6Han44sibupa7x0jPUq8BP_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_6Han44sibupa7x0jPUq8BP_noun_sense_default ontolex:reference conc:concept_c9680bce6-2c85-47ed-913a-68e64b427708 .
+	term:le_6Han44sibupa7x0jPUq8BP_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c9680bce6-2c85-47ed-913a-68e64b427708 .
 	:lexicon_de lime:entry term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun .
-	term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "Erdwurm"@de .
-	term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun ontolex:canonicalForm term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_lemma .
+	term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; ontolex:canonicalForm term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_lemma .
 	term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_lemma rdf:type ontolex:Form .
+	term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun rdfs:label "Erdwurm"@de .
 	term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_lemma ontolex:writtenRep "Erdwurm"@de .
 	term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun ontolex:sense term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_sense_default .
-	term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_sense_default ontolex:reference conc:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
+	term:le_5cr2Mm5ei3mMZMFnPLyHOn_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
 	:lexicon_ko lime:entry term:le_4lBMEyLLVz4IWVk8UvjnSI_noun .
-	term:le_4lBMEyLLVz4IWVk8UvjnSI_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "수박"@ko .
-	term:le_4lBMEyLLVz4IWVk8UvjnSI_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_4lBMEyLLVz4IWVk8UvjnSI_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_4lBMEyLLVz4IWVk8UvjnSI_noun ontolex:canonicalForm term:le_4lBMEyLLVz4IWVk8UvjnSI_noun_lemma .
+	term:le_4lBMEyLLVz4IWVk8UvjnSI_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; ontolex:canonicalForm term:le_4lBMEyLLVz4IWVk8UvjnSI_noun_lemma .
 	term:le_4lBMEyLLVz4IWVk8UvjnSI_noun_lemma rdf:type ontolex:Form .
+	term:le_4lBMEyLLVz4IWVk8UvjnSI_noun rdfs:label "수박"@ko .
 	term:le_4lBMEyLLVz4IWVk8UvjnSI_noun_lemma ontolex:writtenRep "수박"@ko .
 	term:le_4lBMEyLLVz4IWVk8UvjnSI_noun ontolex:sense term:le_4lBMEyLLVz4IWVk8UvjnSI_noun_sense_default .
-	term:le_4lBMEyLLVz4IWVk8UvjnSI_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_4lBMEyLLVz4IWVk8UvjnSI_noun_sense_default ontolex:reference conc:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 .
+	term:le_4lBMEyLLVz4IWVk8UvjnSI_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 .
 	:lexicon_en lime:entry term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun .
-	term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "mouse"@en .
-	term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun ontolex:canonicalForm term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_lemma .
+	term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; ontolex:canonicalForm term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_lemma .
 	term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_lemma rdf:type ontolex:Form .
+	term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun rdfs:label "mouse"@en .
 	term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_lemma ontolex:writtenRep "mouse"@en .
 	term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun ontolex:sense term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_sense_default .
-	term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_sense_default ontolex:reference conc:concept_c9680bce6-2c85-47ed-913a-68e64b427708 .
+	term:le_2Qb3H8sa1SfH1sGbqfRTWJ_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c9680bce6-2c85-47ed-913a-68e64b427708 .
 	:lexicon_en lime:entry term:le_6IGu2I1G5Xq5khSTcONslT_noun .
-	term:le_6IGu2I1G5Xq5khSTcONslT_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "worm"@en .
-	term:le_6IGu2I1G5Xq5khSTcONslT_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_6IGu2I1G5Xq5khSTcONslT_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_6IGu2I1G5Xq5khSTcONslT_noun ontolex:canonicalForm term:le_6IGu2I1G5Xq5khSTcONslT_noun_lemma .
+	term:le_6IGu2I1G5Xq5khSTcONslT_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; ontolex:canonicalForm term:le_6IGu2I1G5Xq5khSTcONslT_noun_lemma .
 	term:le_6IGu2I1G5Xq5khSTcONslT_noun_lemma rdf:type ontolex:Form .
+	term:le_6IGu2I1G5Xq5khSTcONslT_noun rdfs:label "worm"@en .
 	term:le_6IGu2I1G5Xq5khSTcONslT_noun_lemma ontolex:writtenRep "worm"@en .
 	term:le_6IGu2I1G5Xq5khSTcONslT_noun ontolex:sense term:le_6IGu2I1G5Xq5khSTcONslT_noun_sense_default .
-	term:le_6IGu2I1G5Xq5khSTcONslT_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_6IGu2I1G5Xq5khSTcONslT_noun_sense_default ontolex:reference conc:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
+	term:le_6IGu2I1G5Xq5khSTcONslT_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
 	:lexicon_en lime:entry term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun .
-	term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "earthworm"@en .
-	term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun lexinfo:normativeAuthorization lexinfo:admittedTerm .
-	term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun ontolex:canonicalForm term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun_lemma .
+	term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:normativeAuthorization lexinfo:admittedTerm ; ontolex:canonicalForm term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun_lemma .
 	term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun_lemma rdf:type ontolex:Form .
+	term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun rdfs:label "earthworm"@en .
 	term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun_lemma ontolex:writtenRep "earthworm"@en .
 	term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun ontolex:sense term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun_sense_default .
-	term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun_sense_default ontolex:reference conc:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
+	term:le_1VMiyL7FYf7h5Yj7kJM2vR_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
 	:lexicon_en lime:entry term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun .
-	term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "watermelon"@en .
-	term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun ontolex:canonicalForm term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_lemma .
+	term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; ontolex:canonicalForm term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_lemma .
 	term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_lemma rdf:type ontolex:Form .
+	term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun rdfs:label "watermelon"@en .
 	term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_lemma ontolex:writtenRep "watermelon"@en .
 	term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun ontolex:sense term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_sense_default .
-	term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_sense_default ontolex:reference conc:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 .
+	term:le_2wBBjpjyr7R6g0Ssmh02Zk_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c7a541f0f-09e8-48a6-b346-8371f80800d0 .
 	:lexicon_en lime:entry term:le_5PhpMjASPJuEGEjWQzFRoD_noun .
-	term:le_5PhpMjASPJuEGEjWQzFRoD_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "shoe"@en .
-	term:le_5PhpMjASPJuEGEjWQzFRoD_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_5PhpMjASPJuEGEjWQzFRoD_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_5PhpMjASPJuEGEjWQzFRoD_noun ontolex:canonicalForm term:le_5PhpMjASPJuEGEjWQzFRoD_noun_lemma .
+	term:le_5PhpMjASPJuEGEjWQzFRoD_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; ontolex:canonicalForm term:le_5PhpMjASPJuEGEjWQzFRoD_noun_lemma .
 	term:le_5PhpMjASPJuEGEjWQzFRoD_noun_lemma rdf:type ontolex:Form .
+	term:le_5PhpMjASPJuEGEjWQzFRoD_noun rdfs:label "shoe"@en .
 	term:le_5PhpMjASPJuEGEjWQzFRoD_noun_lemma ontolex:writtenRep "shoe"@en .
 	term:le_5PhpMjASPJuEGEjWQzFRoD_noun ontolex:sense term:le_5PhpMjASPJuEGEjWQzFRoD_noun_sense_default .
-	term:le_5PhpMjASPJuEGEjWQzFRoD_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_5PhpMjASPJuEGEjWQzFRoD_noun_sense_default ontolex:reference conc:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f .
+	term:le_5PhpMjASPJuEGEjWQzFRoD_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f .
 	:lexicon_hu lime:entry term:le_12LR32yX4GlBIvt6D3RXpW_noun .
-	term:le_12LR32yX4GlBIvt6D3RXpW_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "kukak"@hu .
-	term:le_12LR32yX4GlBIvt6D3RXpW_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_12LR32yX4GlBIvt6D3RXpW_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_12LR32yX4GlBIvt6D3RXpW_noun ontolex:canonicalForm term:le_12LR32yX4GlBIvt6D3RXpW_noun_lemma .
+	term:le_12LR32yX4GlBIvt6D3RXpW_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; ontolex:canonicalForm term:le_12LR32yX4GlBIvt6D3RXpW_noun_lemma .
 	term:le_12LR32yX4GlBIvt6D3RXpW_noun_lemma rdf:type ontolex:Form .
+	term:le_12LR32yX4GlBIvt6D3RXpW_noun rdfs:label "kukak"@hu .
 	term:le_12LR32yX4GlBIvt6D3RXpW_noun_lemma ontolex:writtenRep "kukak"@hu .
 	term:le_12LR32yX4GlBIvt6D3RXpW_noun ontolex:sense term:le_12LR32yX4GlBIvt6D3RXpW_noun_sense_default .
-	term:le_12LR32yX4GlBIvt6D3RXpW_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_12LR32yX4GlBIvt6D3RXpW_noun_sense_default ontolex:reference conc:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
+	term:le_12LR32yX4GlBIvt6D3RXpW_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_c7f4dde5b-7930-40bf-8eee-f14545933a0a .
 	:lexicon_es lime:entry term:le_3Y9UyvanjP1ACqwPy3ysne_noun .
-	term:le_3Y9UyvanjP1ACqwPy3ysne_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; rdfs:label "zapato"@es .
-	term:le_3Y9UyvanjP1ACqwPy3ysne_noun lexinfo:partOfSpeech lexinfo:noun .
-	term:le_3Y9UyvanjP1ACqwPy3ysne_noun lexinfo:normativeAuthorization lexinfo:preferredTerm .
-	term:le_3Y9UyvanjP1ACqwPy3ysne_noun ontolex:canonicalForm term:le_3Y9UyvanjP1ACqwPy3ysne_noun_lemma .
+	term:le_3Y9UyvanjP1ACqwPy3ysne_noun rdf:type ontolex:LexicalEntry ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; lexinfo:normativeAuthorization lexinfo:preferredTerm ; ontolex:canonicalForm term:le_3Y9UyvanjP1ACqwPy3ysne_noun_lemma .
 	term:le_3Y9UyvanjP1ACqwPy3ysne_noun_lemma rdf:type ontolex:Form .
+	term:le_3Y9UyvanjP1ACqwPy3ysne_noun rdfs:label "zapato"@es .
 	term:le_3Y9UyvanjP1ACqwPy3ysne_noun_lemma ontolex:writtenRep "zapato"@es .
 	term:le_3Y9UyvanjP1ACqwPy3ysne_noun ontolex:sense term:le_3Y9UyvanjP1ACqwPy3ysne_noun_sense_default .
-	term:le_3Y9UyvanjP1ACqwPy3ysne_noun_sense_default rdf:type ontolex:LexicalSense .
-	term:le_3Y9UyvanjP1ACqwPy3ysne_noun_sense_default ontolex:reference conc:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f .
+	term:le_3Y9UyvanjP1ACqwPy3ysne_noun_sense_default rdf:type ontolex:LexicalSense ; ontolex:reference conc:concept_ca60e0cb9-30d3-466f-aba8-323294edcb4f .
 
 	# [Add Metadata Processor] adding creator and date info
 
