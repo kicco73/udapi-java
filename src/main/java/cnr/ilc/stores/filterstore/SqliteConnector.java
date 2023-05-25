@@ -68,7 +68,13 @@ public class SqliteConnector {
 
     public void executeUpdate(String query, Object ...args) throws SQLException {
         query = String.format(query, args);
-        statement.executeUpdate(query);
+        try {
+            statement.executeUpdate(query);
+        } 
+        catch(Exception e) {
+            System.err.println(query);
+            throw e;
+        }
     }
 
     public ResultSet executeQuery(String query, Object ...args) throws SQLException {

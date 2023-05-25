@@ -12,7 +12,7 @@ class BaseOperation(Operation):
 	dev_bin = [
 		'/usr/bin/env', '/Library/Java/JavaVirtualMachines/temurin-17.jdk/Contents/Home/bin/java',
 		'-cp', '/Users/enricocarniani/Documents/udapi-java/bin/main', 
-		"@/var/folders/vw/clt3dc494hg0bcmvk_1pkwdw0000gn/T/cp_747zl4waewrm1vf9nuzgcr49f.argfile", 
+		"@/var/folders/vw/clt3dc494hg0bcmvk_1pkwdw0000gn/T/cp_nr8rpkr1yj9t6t89ye9rk3mw.argfile", 
 		'cnr.ilc.Main',
 		'--graphdb-url', 'http://localhost:7200',
 	]

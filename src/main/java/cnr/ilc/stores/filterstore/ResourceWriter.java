@@ -67,11 +67,11 @@ public class ResourceWriter implements TripleStoreInterface {
 						insert into word (
 							lemma, language, date, conceptId, conceptFQN, subjectField,
 							FQName, metadata, serialised, senseFQN, serialisedSenses
-						) values ('%s', '%s', %s, %s, %s, %s, %s, %s, %s, %s, %s)
+						) values (%s, '%s', %s, %s, %s, %s, %s, %s, %s, %s, %s)
 				""";
 
 		db.executeUpdate(query,
-				lemma, language,
+				db.quote(lemma), language,
 				db.quote(date), db.quote(conceptId), db.quote(conceptFQN), db.quote(subjectField),
 				db.quote(fqName), db.quote(metadata), db.quote(serialised),
 				db.quote(senseFQN), db.quote(serialisedSenses));
