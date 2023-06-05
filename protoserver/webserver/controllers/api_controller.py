@@ -55,6 +55,7 @@ class ApiController(controller.Controller):
 			inputdir = self.get_resource_path(resource_id)
 			repository = request.json.get('repository')
 			operation = services.Submit(resource_dir=inputdir, repository=repository)
+			operation.debug = app.config['DEBUG']
 			operation.execute()
 			return Response(json.dumps({}), mimetype='application/json')
 
@@ -63,6 +64,7 @@ class ApiController(controller.Controller):
 			inputdir = self.get_resource_path(resource_id)
 			repository = request.values.get('repository')
 			operation = services.Query(resource_dir=inputdir, repository=repository)
+			operation.debug = app.config['DEBUG']
 			content = operation.execute()
 			return Response(content, mimetype='application/json')
 
