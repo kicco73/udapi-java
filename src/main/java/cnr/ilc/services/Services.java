@@ -137,7 +137,7 @@ public class Services {
 				BIND(strafter(str(?_termType), str(lexinfo:)) as ?termType)
 			} 
 			GROUP BY ?subjectField ?conceptID ?wr ?pos ?termType ?normAuth ?note ?sourceExt ?seeAlso
-			ORDER BY ?subjectField		
+			ORDER BY ?subjectField ?conceptID
 		""";
 
 		GraphDBClient client = new GraphDBClient(graphURL, repository);
