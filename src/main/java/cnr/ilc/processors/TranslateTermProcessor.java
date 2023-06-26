@@ -48,7 +48,7 @@ public class TranslateTermProcessor implements ProcessorInterface {
         for (Entry<String, Collection<TermInterface>> concept: concepts.entrySet()) {
             String conceptFQN = concept.getKey();
             Collection<TermInterface> terms = concept.getValue();
-            if (terms.size() > 1) triples.addComment("[Translate Term Processor] generating term translations for concept `%s`", conceptFQN);
+            if (terms.size() > 1) triples.addComment("[Translate Term Processor] generating term equivalences for concept `%s`", conceptFQN);
             createTranslationAmongAllWords(terms, triples);    
         }
         return words;
