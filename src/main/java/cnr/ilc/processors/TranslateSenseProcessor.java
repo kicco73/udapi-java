@@ -51,7 +51,7 @@ public class TranslateSenseProcessor implements ProcessorInterface {
         for (Entry<String, Collection<SenseInterface>> concept: concepts.entrySet()) {
             String conceptFQN = concept.getKey();
             Collection<SenseInterface> senses = concept.getValue();
-            if (senses.size() > 1) triples.addComment("[Translate Sense Processor] generating sense translations for concept `%s`", conceptFQN);
+            if (senses.size() > 1) triples.addComment("[Translate Sense Processor] generating sense equivalences for concept `%s`", conceptFQN);
             createTranslationAmongAllSenses(senses, triples);    
         }
         return words;
