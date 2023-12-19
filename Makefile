@@ -19,7 +19,7 @@ tbx-snapshots: jar
 
 conllu-snapshots: jar
 	/usr/bin/env java -jar bin/libs/rut.jar \
-		--no-graphdb --input-format conllu --datetime 2023-04-10T10:02+02:00 --creator kicco \
+		--no-graphdb --input-format conllu --datetime 2023-04-10T10:02+02:00 --creator kicco --language som \
 		--output-dir src/test/resources/cnr/ilc/conllu/sparql \
 		-- src/test/resources/cnr/ilc/conllu/input/*
 

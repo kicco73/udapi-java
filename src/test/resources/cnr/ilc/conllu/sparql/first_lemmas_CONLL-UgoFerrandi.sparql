@@ -13,104 +13,104 @@ PREFIX lime: <http://www.w3.org/ns/lemon/lime#>
 PREFIX vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#>
 PREFIX vartrans: <http://www.w3.org/ns/lemon/vartrans#>
 INSERT DATA {
-	:lexicon_en rdf:type lime:Lexicon ; lime:language "en" .
+	:lexicon_som rdf:type lime:Lexicon ; lime:language "som" .
 
 	# Concept section
 
 	# Term section
-	:lexicon_en lime:entry term:le_7NpR4B6bYkQNHaFtR2DUTl_noun .
-	term:le_7NpR4B6bYkQNHaFtR2DUTl_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=dawaco|SENSE=10017_0|DEFINITION=\"(-ooyin, m.l) 1. Dugaag hilib ku noolka ka mid ah, eyga u eg kase yar oo ariga laaya. 2. Dawacada midkeeda dheddig. ld dacawo, dayo_1 (2).\"|SYNONYM=\"dacawo, dayo_1\"|ITALIAN_TRANSLATION=\"(-ooyin, m.), vr. dacawo, dawo_1, dayo_1 - 1. Sciacallo femmina. 2. co. Sciacallo.\"|ENGLISH_TRANSLATION=\"jackal, fox\"" ; ontolex:canonicalForm term:le_7NpR4B6bYkQNHaFtR2DUTl_noun_lemma .
-	term:le_7NpR4B6bYkQNHaFtR2DUTl_noun_lemma rdf:type ontolex:Form .
-	term:le_7NpR4B6bYkQNHaFtR2DUTl_noun rdfs:label "dawaco"@en .
-	term:le_7NpR4B6bYkQNHaFtR2DUTl_noun_lemma ontolex:writtenRep "dawaco"@en .
-	term:le_7NpR4B6bYkQNHaFtR2DUTl_noun ontolex:sense term:le_7NpR4B6bYkQNHaFtR2DUTl_noun_sense .
-	term:le_7NpR4B6bYkQNHaFtR2DUTl_noun_sense rdf:type ontolex:LexicalSense .
-	:lexicon_en lime:entry term:le_uyWIJnNTYr9CrRPiM4ctd_noun .
-	term:le_uyWIJnNTYr9CrRPiM4ctd_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=ganso|SENSE=34596_1, 34597_1, 34596_2, 34597_2|DEFINITION=\"(-ooyin, m.l) 1. Qalab ka samaysan ul iyo wax la mid ah, oo lagu nadoocshay xarig labada af lagaga xiray, oo leebka iyo gammuunka laga gano. 2. Summad loo adeegsado ah hadalka ama codadka intooda kale, sababa kala duwan awgooda: qaansooyin deriley: {}; qaansooyin geesaley: []; qaansooyin bileed: ()., (-ooyin, m.l) (xis.) Qayb ka mid ah xood is-haysta. Haddii meeriska goobo ama xoodad kale oo oodan loo qaybiyo labaqaybood oo aan isle'ekeyn, labada qaanso midda dheer waa qaanso weyn, midda gaabanna waa qaanso yar. Labadooda waxa ay sammeeyaan lammaane qaansooyin oo xisti ah., (-ooyin, m.l) 1. Qalab ka samaysan ul iyo wax la mid ah, oo lagu nadoocshay xarig labada af lagaga xiray, oo leebka iyo gammuunka laga gano. 2. Summad loo adeegsado ah hadalka ama codadka intooda kale, sababa kala duwan awgooda: qaansooyin deriley: {}; qaansooyin geesaley: []; qaansooyin bileed: ()., (-ooyin, m.l) (xis.) Qayb ka mid ah xood is-haysta. Haddii meeriska goobo ama xoodad kale oo oodan loo qaybiyo labaqaybood oo aan isle'ekeyn, labada qaanso midda dheer waa qaanso weyn, midda gaabanna waa qaanso yar. Labadooda waxa ay sammeeyaan lammaane qaansooyin oo xisti ah.\"|ITALIAN_TRANSLATION=\"arco, arco\"|ENGLISH_TRANSLATION=\"arc\"" ; ontolex:canonicalForm term:le_uyWIJnNTYr9CrRPiM4ctd_noun_lemma .
-	term:le_uyWIJnNTYr9CrRPiM4ctd_noun_lemma rdf:type ontolex:Form .
-	term:le_uyWIJnNTYr9CrRPiM4ctd_noun rdfs:label "qaanso"@en .
-	term:le_uyWIJnNTYr9CrRPiM4ctd_noun_lemma ontolex:writtenRep "qaanso"@en .
-	term:le_uyWIJnNTYr9CrRPiM4ctd_noun ontolex:sense term:le_uyWIJnNTYr9CrRPiM4ctd_noun_sense .
-	term:le_uyWIJnNTYr9CrRPiM4ctd_noun_sense rdf:type ontolex:LexicalSense .
-	:lexicon_en lime:entry term:le_5CBaX82O5a0lRatzRAG5uE_noun .
-	term:le_5CBaX82O5a0lRatzRAG5uE_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=mundull|SENSE=32649_0|DEFINITION=\"(-llo, m.dh) Aqal wareegsan oo inta badan dhis iyo dhoobo ka samaysan oo leh saqaf dhis iyo caws ah oo kor u fiiqan. ld muddul, mundulle.\"|SYNONYM=\"muddul; mundulle; cariish\"|ITALIAN_TRANSLATION=\"Capanna circolare di ramaglie e fango.\"|ENGLISH_TRANSLATION=\"circular mud hut - circular hut with thatch roof\"" ; ontolex:canonicalForm term:le_5CBaX82O5a0lRatzRAG5uE_noun_lemma .
-	term:le_5CBaX82O5a0lRatzRAG5uE_noun_lemma rdf:type ontolex:Form .
-	term:le_5CBaX82O5a0lRatzRAG5uE_noun rdfs:label "mundul"@en .
-	term:le_5CBaX82O5a0lRatzRAG5uE_noun_lemma ontolex:writtenRep "mundul"@en .
-	term:le_5CBaX82O5a0lRatzRAG5uE_noun ontolex:sense term:le_5CBaX82O5a0lRatzRAG5uE_noun_sense .
-	term:le_5CBaX82O5a0lRatzRAG5uE_noun_sense rdf:type ontolex:LexicalSense .
-	:lexicon_en lime:entry term:le_3Shyiylbl90SxpgvLEFFZG_noun .
-	term:le_3Shyiylbl90SxpgvLEFFZG_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=dundummu|SENSE=14449_0|DEFINITION=\"ld duddun.\"|ITALIAN_TRANSLATION=\"vr. di duddun.\"|ENGLISH_TRANSLATION=\"termitary\"" ; ontolex:canonicalForm term:le_3Shyiylbl90SxpgvLEFFZG_noun_lemma .
-	term:le_3Shyiylbl90SxpgvLEFFZG_noun_lemma rdf:type ontolex:Form .
-	term:le_3Shyiylbl90SxpgvLEFFZG_noun rdfs:label "dundumo"@en .
-	term:le_3Shyiylbl90SxpgvLEFFZG_noun_lemma ontolex:writtenRep "dundumo"@en .
-	term:le_3Shyiylbl90SxpgvLEFFZG_noun ontolex:sense term:le_3Shyiylbl90SxpgvLEFFZG_noun_sense .
-	term:le_3Shyiylbl90SxpgvLEFFZG_noun_sense rdf:type ontolex:LexicalSense .
-	:lexicon_en lime:entry term:le_6qHabAhwIUUrJI4L4lAMNc_noun .
-	term:le_6qHabAhwIUUrJI4L4lAMNc_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=faranfar|SENSE=15823_0|DEFINITION=\"(-rro, m.dh) (c.nafl.) Naasley yar, god uu dhulka ka qotay ku nool oo leh laba ilig oo dhaadheer iyo af dhuuban. ld ferenfer.\"|SYNONYM=\"ferenfer, fadhaanfadh\"|ITALIAN_TRANSLATION=\"(-rro, f.) - Talpa,\"|ENGLISH_TRANSLATION=\"mole species\"" ; ontolex:canonicalForm term:le_6qHabAhwIUUrJI4L4lAMNc_noun_lemma .
-	term:le_6qHabAhwIUUrJI4L4lAMNc_noun_lemma rdf:type ontolex:Form .
-	term:le_6qHabAhwIUUrJI4L4lAMNc_noun rdfs:label "faranfar"@en .
-	term:le_6qHabAhwIUUrJI4L4lAMNc_noun_lemma ontolex:writtenRep "faranfar"@en .
-	term:le_6qHabAhwIUUrJI4L4lAMNc_noun ontolex:sense term:le_6qHabAhwIUUrJI4L4lAMNc_noun_sense .
-	term:le_6qHabAhwIUUrJI4L4lAMNc_noun_sense rdf:type ontolex:LexicalSense .
-	:lexicon_en lime:entry term:le_3MUOkJsdCVJ2sDXQJuNWz0_noun .
-	term:le_3MUOkJsdCVJ2sDXQJuNWz0_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=dofar|SENSE=13897_0|DEFINITION=\"(-rro, m.dh) Naasley caws-kunool ah idaha la eg ka ballaaran,leh madax weyn, gano iyo dhogor yar oo hilibkiisu muslimiinta xaaraan ka yahay. ld doonfaar.\"|SYNONYM=\"doonfaar\"|ITALIAN_TRANSLATION=\"(-rro,/), vr. doonfaar - 1 . Facocero. 2. Maiale; suino,\"|ENGLISH_TRANSLATION=\"warthog, pig, boar; porkpig\"" ; ontolex:canonicalForm term:le_3MUOkJsdCVJ2sDXQJuNWz0_noun_lemma .
-	term:le_3MUOkJsdCVJ2sDXQJuNWz0_noun_lemma rdf:type ontolex:Form .
-	term:le_3MUOkJsdCVJ2sDXQJuNWz0_noun rdfs:label "doofaar"@en .
-	term:le_3MUOkJsdCVJ2sDXQJuNWz0_noun_lemma ontolex:writtenRep "doofaar"@en .
-	term:le_3MUOkJsdCVJ2sDXQJuNWz0_noun ontolex:sense term:le_3MUOkJsdCVJ2sDXQJuNWz0_noun_sense .
-	term:le_3MUOkJsdCVJ2sDXQJuNWz0_noun_sense rdf:type ontolex:LexicalSense .
-	:lexicon_en lime:entry term:le_3GEa9mt9MTwxuzb8PemGnL_noun .
-	term:le_3GEa9mt9MTwxuzb8PemGnL_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=madegg|SENSE=29695_0|DEFINITION=\"(-dko, m.l) Qori gaaban oo sida badan geedka docolka, mareerka iwm laga qoro oo inta dhexda fantax yar looga yeelo ul yar oo af siman leh lagu fariisiyo, kaddibna xoog loo xurbiyo ilaa uu dab ka dhasho.\"" ; ontolex:canonicalForm term:le_3GEa9mt9MTwxuzb8PemGnL_noun_lemma .
-	term:le_3GEa9mt9MTwxuzb8PemGnL_noun_lemma rdf:type ontolex:Form .
-	term:le_3GEa9mt9MTwxuzb8PemGnL_noun rdfs:label "madag"@en .
-	term:le_3GEa9mt9MTwxuzb8PemGnL_noun_lemma ontolex:writtenRep "madag"@en .
-	term:le_3GEa9mt9MTwxuzb8PemGnL_noun ontolex:sense term:le_3GEa9mt9MTwxuzb8PemGnL_noun_sense .
-	term:le_3GEa9mt9MTwxuzb8PemGnL_noun_sense rdf:type ontolex:LexicalSense .
-	:lexicon_en lime:entry term:le_1DDsBaDBawuZGiJ59Ok0m7_noun .
-	term:le_1DDsBaDBawuZGiJ59Ok0m7_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=curus|SENSE=27802_0|DEFINITION=\"(-syo, m.dh) Cad baruur ah oo weyn oo geela dhabarkiisa ka baxa.\"|ITALIAN_TRANSLATION=\"gobba di cammello\"|ENGLISH_TRANSLATION=\"camel's hump\"" ; ontolex:canonicalForm term:le_1DDsBaDBawuZGiJ59Ok0m7_noun_lemma .
-	term:le_1DDsBaDBawuZGiJ59Ok0m7_noun_lemma rdf:type ontolex:Form .
-	term:le_1DDsBaDBawuZGiJ59Ok0m7_noun rdfs:label "kurus"@en .
-	term:le_1DDsBaDBawuZGiJ59Ok0m7_noun_lemma ontolex:writtenRep "kurus"@en .
-	term:le_1DDsBaDBawuZGiJ59Ok0m7_noun ontolex:sense term:le_1DDsBaDBawuZGiJ59Ok0m7_noun_sense .
-	term:le_1DDsBaDBawuZGiJ59Ok0m7_noun_sense rdf:type ontolex:LexicalSense .
-	:lexicon_en lime:entry term:le_2A73nOXkUAlVnaW5uu2I4_noun .
-	term:le_2A73nOXkUAlVnaW5uu2I4_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=moi|SENSE=32386_0|DEFINITION=\"(-yayaal, m.l/dh) 1. ld moy. Weel qori ama bir ka samaysan oo ay tibi weheliso oo badarka iwm lagu tumo. 2. ld mooy (2) M. ah: neef lo' ah oo aan geeso lahayn.\"|SYNONYM=\"moy\"|ITALIAN_TRANSLATION=\"mortaio per pestare durante la preparazione del cibo tradizionale\"|ENGLISH_TRANSLATION=\"mortar (for pounding)\"" ; ontolex:canonicalForm term:le_2A73nOXkUAlVnaW5uu2I4_noun_lemma .
-	term:le_2A73nOXkUAlVnaW5uu2I4_noun_lemma rdf:type ontolex:Form .
-	term:le_2A73nOXkUAlVnaW5uu2I4_noun rdfs:label "mooye"@en .
-	term:le_2A73nOXkUAlVnaW5uu2I4_noun_lemma ontolex:writtenRep "mooye"@en .
-	term:le_2A73nOXkUAlVnaW5uu2I4_noun ontolex:sense term:le_2A73nOXkUAlVnaW5uu2I4_noun_sense .
-	term:le_2A73nOXkUAlVnaW5uu2I4_noun_sense rdf:type ontolex:LexicalSense .
-	:lexicon_en lime:entry term:le_267IcblytGnfgclM5CpKIK_noun .
-	term:le_267IcblytGnfgclM5CpKIK_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=ariish|SENSE=6708_0|DEFINITION=\"(-shyo/carshaan, m.dh) Hooy ka samaysan dhis iyo dhoobo oo dhinacyadiisu qaab laydi leeyihiin.\"|SYNONYM=\"mundul, mundille, muddul\"|ITALIAN_TRANSLATION=\"(-shyo o carshaan,/) - Capanna rettangolare di ramaglie e fango,\"|ENGLISH_TRANSLATION=\"mud hut\"" ; ontolex:canonicalForm term:le_267IcblytGnfgclM5CpKIK_noun_lemma .
-	term:le_267IcblytGnfgclM5CpKIK_noun_lemma rdf:type ontolex:Form .
-	term:le_267IcblytGnfgclM5CpKIK_noun rdfs:label "cariish"@en .
-	term:le_267IcblytGnfgclM5CpKIK_noun_lemma ontolex:writtenRep "cariish"@en .
-	term:le_267IcblytGnfgclM5CpKIK_noun ontolex:sense term:le_267IcblytGnfgclM5CpKIK_noun_sense .
-	term:le_267IcblytGnfgclM5CpKIK_noun_sense rdf:type ontolex:LexicalSense .
+	:lexicon_som lime:entry term:le_30e7nYywJLyFQC2kJbmZn3_noun .
+	term:le_30e7nYywJLyFQC2kJbmZn3_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=dawaco|SENSE=10017_0|DEFINITION=\"(-ooyin, m.l) 1. Dugaag hilib ku noolka ka mid ah, eyga u eg kase yar oo ariga laaya. 2. Dawacada midkeeda dheddig. ld dacawo, dayo_1 (2).\"|SYNONYM=\"dacawo, dayo_1\"|ITALIAN_TRANSLATION=\"(-ooyin, m.), vr. dacawo, dawo_1, dayo_1 - 1. Sciacallo femmina. 2. co. Sciacallo.\"|ENGLISH_TRANSLATION=\"jackal, fox\"" ; ontolex:canonicalForm term:le_30e7nYywJLyFQC2kJbmZn3_noun_lemma .
+	term:le_30e7nYywJLyFQC2kJbmZn3_noun_lemma rdf:type ontolex:Form .
+	term:le_30e7nYywJLyFQC2kJbmZn3_noun rdfs:label "dawaco"@som .
+	term:le_30e7nYywJLyFQC2kJbmZn3_noun_lemma ontolex:writtenRep "dawaco"@som .
+	term:le_30e7nYywJLyFQC2kJbmZn3_noun ontolex:sense term:le_30e7nYywJLyFQC2kJbmZn3_noun_sense .
+	term:le_30e7nYywJLyFQC2kJbmZn3_noun_sense rdf:type ontolex:LexicalSense .
+	:lexicon_som lime:entry term:le_6h8TnC3AY3xixxeirxR6mO_noun .
+	term:le_6h8TnC3AY3xixxeirxR6mO_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=ganso|SENSE=34596_1, 34597_1, 34596_2, 34597_2|DEFINITION=\"(-ooyin, m.l) 1. Qalab ka samaysan ul iyo wax la mid ah, oo lagu nadoocshay xarig labada af lagaga xiray, oo leebka iyo gammuunka laga gano. 2. Summad loo adeegsado ah hadalka ama codadka intooda kale, sababa kala duwan awgooda: qaansooyin deriley: {}; qaansooyin geesaley: []; qaansooyin bileed: ()., (-ooyin, m.l) (xis.) Qayb ka mid ah xood is-haysta. Haddii meeriska goobo ama xoodad kale oo oodan loo qaybiyo labaqaybood oo aan isle'ekeyn, labada qaanso midda dheer waa qaanso weyn, midda gaabanna waa qaanso yar. Labadooda waxa ay sammeeyaan lammaane qaansooyin oo xisti ah., (-ooyin, m.l) 1. Qalab ka samaysan ul iyo wax la mid ah, oo lagu nadoocshay xarig labada af lagaga xiray, oo leebka iyo gammuunka laga gano. 2. Summad loo adeegsado ah hadalka ama codadka intooda kale, sababa kala duwan awgooda: qaansooyin deriley: {}; qaansooyin geesaley: []; qaansooyin bileed: ()., (-ooyin, m.l) (xis.) Qayb ka mid ah xood is-haysta. Haddii meeriska goobo ama xoodad kale oo oodan loo qaybiyo labaqaybood oo aan isle'ekeyn, labada qaanso midda dheer waa qaanso weyn, midda gaabanna waa qaanso yar. Labadooda waxa ay sammeeyaan lammaane qaansooyin oo xisti ah.\"|ITALIAN_TRANSLATION=\"arco, arco\"|ENGLISH_TRANSLATION=\"arc\"" ; ontolex:canonicalForm term:le_6h8TnC3AY3xixxeirxR6mO_noun_lemma .
+	term:le_6h8TnC3AY3xixxeirxR6mO_noun_lemma rdf:type ontolex:Form .
+	term:le_6h8TnC3AY3xixxeirxR6mO_noun rdfs:label "qaanso"@som .
+	term:le_6h8TnC3AY3xixxeirxR6mO_noun_lemma ontolex:writtenRep "qaanso"@som .
+	term:le_6h8TnC3AY3xixxeirxR6mO_noun ontolex:sense term:le_6h8TnC3AY3xixxeirxR6mO_noun_sense .
+	term:le_6h8TnC3AY3xixxeirxR6mO_noun_sense rdf:type ontolex:LexicalSense .
+	:lexicon_som lime:entry term:le_5hSyXhrDoAZsgg9KPmNLbW_noun .
+	term:le_5hSyXhrDoAZsgg9KPmNLbW_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=mundull|SENSE=32649_0|DEFINITION=\"(-llo, m.dh) Aqal wareegsan oo inta badan dhis iyo dhoobo ka samaysan oo leh saqaf dhis iyo caws ah oo kor u fiiqan. ld muddul, mundulle.\"|SYNONYM=\"muddul; mundulle; cariish\"|ITALIAN_TRANSLATION=\"Capanna circolare di ramaglie e fango.\"|ENGLISH_TRANSLATION=\"circular mud hut - circular hut with thatch roof\"" ; ontolex:canonicalForm term:le_5hSyXhrDoAZsgg9KPmNLbW_noun_lemma .
+	term:le_5hSyXhrDoAZsgg9KPmNLbW_noun_lemma rdf:type ontolex:Form .
+	term:le_5hSyXhrDoAZsgg9KPmNLbW_noun rdfs:label "mundul"@som .
+	term:le_5hSyXhrDoAZsgg9KPmNLbW_noun_lemma ontolex:writtenRep "mundul"@som .
+	term:le_5hSyXhrDoAZsgg9KPmNLbW_noun ontolex:sense term:le_5hSyXhrDoAZsgg9KPmNLbW_noun_sense .
+	term:le_5hSyXhrDoAZsgg9KPmNLbW_noun_sense rdf:type ontolex:LexicalSense .
+	:lexicon_som lime:entry term:le_DiKddJHugrvWv2mEWBiI6_noun .
+	term:le_DiKddJHugrvWv2mEWBiI6_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=dundummu|SENSE=14449_0|DEFINITION=\"ld duddun.\"|ITALIAN_TRANSLATION=\"vr. di duddun.\"|ENGLISH_TRANSLATION=\"termitary\"" ; ontolex:canonicalForm term:le_DiKddJHugrvWv2mEWBiI6_noun_lemma .
+	term:le_DiKddJHugrvWv2mEWBiI6_noun_lemma rdf:type ontolex:Form .
+	term:le_DiKddJHugrvWv2mEWBiI6_noun rdfs:label "dundumo"@som .
+	term:le_DiKddJHugrvWv2mEWBiI6_noun_lemma ontolex:writtenRep "dundumo"@som .
+	term:le_DiKddJHugrvWv2mEWBiI6_noun ontolex:sense term:le_DiKddJHugrvWv2mEWBiI6_noun_sense .
+	term:le_DiKddJHugrvWv2mEWBiI6_noun_sense rdf:type ontolex:LexicalSense .
+	:lexicon_som lime:entry term:le_6fFAyfSU8uBpatnZ6C27B7_noun .
+	term:le_6fFAyfSU8uBpatnZ6C27B7_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=faranfar|SENSE=15823_0|DEFINITION=\"(-rro, m.dh) (c.nafl.) Naasley yar, god uu dhulka ka qotay ku nool oo leh laba ilig oo dhaadheer iyo af dhuuban. ld ferenfer.\"|SYNONYM=\"ferenfer, fadhaanfadh\"|ITALIAN_TRANSLATION=\"(-rro, f.) - Talpa,\"|ENGLISH_TRANSLATION=\"mole species\"" ; ontolex:canonicalForm term:le_6fFAyfSU8uBpatnZ6C27B7_noun_lemma .
+	term:le_6fFAyfSU8uBpatnZ6C27B7_noun_lemma rdf:type ontolex:Form .
+	term:le_6fFAyfSU8uBpatnZ6C27B7_noun rdfs:label "faranfar"@som .
+	term:le_6fFAyfSU8uBpatnZ6C27B7_noun_lemma ontolex:writtenRep "faranfar"@som .
+	term:le_6fFAyfSU8uBpatnZ6C27B7_noun ontolex:sense term:le_6fFAyfSU8uBpatnZ6C27B7_noun_sense .
+	term:le_6fFAyfSU8uBpatnZ6C27B7_noun_sense rdf:type ontolex:LexicalSense .
+	:lexicon_som lime:entry term:le_3sy8SPI5NsbGthRhccvxrJ_noun .
+	term:le_3sy8SPI5NsbGthRhccvxrJ_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=dofar|SENSE=13897_0|DEFINITION=\"(-rro, m.dh) Naasley caws-kunool ah idaha la eg ka ballaaran,leh madax weyn, gano iyo dhogor yar oo hilibkiisu muslimiinta xaaraan ka yahay. ld doonfaar.\"|SYNONYM=\"doonfaar\"|ITALIAN_TRANSLATION=\"(-rro,/), vr. doonfaar - 1 . Facocero. 2. Maiale; suino,\"|ENGLISH_TRANSLATION=\"warthog, pig, boar; porkpig\"" ; ontolex:canonicalForm term:le_3sy8SPI5NsbGthRhccvxrJ_noun_lemma .
+	term:le_3sy8SPI5NsbGthRhccvxrJ_noun_lemma rdf:type ontolex:Form .
+	term:le_3sy8SPI5NsbGthRhccvxrJ_noun rdfs:label "doofaar"@som .
+	term:le_3sy8SPI5NsbGthRhccvxrJ_noun_lemma ontolex:writtenRep "doofaar"@som .
+	term:le_3sy8SPI5NsbGthRhccvxrJ_noun ontolex:sense term:le_3sy8SPI5NsbGthRhccvxrJ_noun_sense .
+	term:le_3sy8SPI5NsbGthRhccvxrJ_noun_sense rdf:type ontolex:LexicalSense .
+	:lexicon_som lime:entry term:le_5iyPtvYLpFpfa2QcpCoJlq_noun .
+	term:le_5iyPtvYLpFpfa2QcpCoJlq_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=madegg|SENSE=29695_0|DEFINITION=\"(-dko, m.l) Qori gaaban oo sida badan geedka docolka, mareerka iwm laga qoro oo inta dhexda fantax yar looga yeelo ul yar oo af siman leh lagu fariisiyo, kaddibna xoog loo xurbiyo ilaa uu dab ka dhasho.\"" ; ontolex:canonicalForm term:le_5iyPtvYLpFpfa2QcpCoJlq_noun_lemma .
+	term:le_5iyPtvYLpFpfa2QcpCoJlq_noun_lemma rdf:type ontolex:Form .
+	term:le_5iyPtvYLpFpfa2QcpCoJlq_noun rdfs:label "madag"@som .
+	term:le_5iyPtvYLpFpfa2QcpCoJlq_noun_lemma ontolex:writtenRep "madag"@som .
+	term:le_5iyPtvYLpFpfa2QcpCoJlq_noun ontolex:sense term:le_5iyPtvYLpFpfa2QcpCoJlq_noun_sense .
+	term:le_5iyPtvYLpFpfa2QcpCoJlq_noun_sense rdf:type ontolex:LexicalSense .
+	:lexicon_som lime:entry term:le_2Clcjjc0d3CPMTDMHmc6pA_noun .
+	term:le_2Clcjjc0d3CPMTDMHmc6pA_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=curus|SENSE=27802_0|DEFINITION=\"(-syo, m.dh) Cad baruur ah oo weyn oo geela dhabarkiisa ka baxa.\"|ITALIAN_TRANSLATION=\"gobba di cammello\"|ENGLISH_TRANSLATION=\"camel's hump\"" ; ontolex:canonicalForm term:le_2Clcjjc0d3CPMTDMHmc6pA_noun_lemma .
+	term:le_2Clcjjc0d3CPMTDMHmc6pA_noun_lemma rdf:type ontolex:Form .
+	term:le_2Clcjjc0d3CPMTDMHmc6pA_noun rdfs:label "kurus"@som .
+	term:le_2Clcjjc0d3CPMTDMHmc6pA_noun_lemma ontolex:writtenRep "kurus"@som .
+	term:le_2Clcjjc0d3CPMTDMHmc6pA_noun ontolex:sense term:le_2Clcjjc0d3CPMTDMHmc6pA_noun_sense .
+	term:le_2Clcjjc0d3CPMTDMHmc6pA_noun_sense rdf:type ontolex:LexicalSense .
+	:lexicon_som lime:entry term:le_3IgOgTN87iFaiDPv0cJJuR_noun .
+	term:le_3IgOgTN87iFaiDPv0cJJuR_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=moi|SENSE=32386_0|DEFINITION=\"(-yayaal, m.l/dh) 1. ld moy. Weel qori ama bir ka samaysan oo ay tibi weheliso oo badarka iwm lagu tumo. 2. ld mooy (2) M. ah: neef lo' ah oo aan geeso lahayn.\"|SYNONYM=\"moy\"|ITALIAN_TRANSLATION=\"mortaio per pestare durante la preparazione del cibo tradizionale\"|ENGLISH_TRANSLATION=\"mortar (for pounding)\"" ; ontolex:canonicalForm term:le_3IgOgTN87iFaiDPv0cJJuR_noun_lemma .
+	term:le_3IgOgTN87iFaiDPv0cJJuR_noun_lemma rdf:type ontolex:Form .
+	term:le_3IgOgTN87iFaiDPv0cJJuR_noun rdfs:label "mooye"@som .
+	term:le_3IgOgTN87iFaiDPv0cJJuR_noun_lemma ontolex:writtenRep "mooye"@som .
+	term:le_3IgOgTN87iFaiDPv0cJJuR_noun ontolex:sense term:le_3IgOgTN87iFaiDPv0cJJuR_noun_sense .
+	term:le_3IgOgTN87iFaiDPv0cJJuR_noun_sense rdf:type ontolex:LexicalSense .
+	:lexicon_som lime:entry term:le_6hO3z0c4pu8kO0M6Pywm1f_noun .
+	term:le_6hO3z0c4pu8kO0M6Pywm1f_noun rdf:type ontolex:Word ; vs:term_status "working" ; lexinfo:partOfSpeech lexinfo:noun ; skos:note "FERRANDI=YES|FFORM=ariish|SENSE=6708_0|DEFINITION=\"(-shyo/carshaan, m.dh) Hooy ka samaysan dhis iyo dhoobo oo dhinacyadiisu qaab laydi leeyihiin.\"|SYNONYM=\"mundul, mundille, muddul\"|ITALIAN_TRANSLATION=\"(-shyo o carshaan,/) - Capanna rettangolare di ramaglie e fango,\"|ENGLISH_TRANSLATION=\"mud hut\"" ; ontolex:canonicalForm term:le_6hO3z0c4pu8kO0M6Pywm1f_noun_lemma .
+	term:le_6hO3z0c4pu8kO0M6Pywm1f_noun_lemma rdf:type ontolex:Form .
+	term:le_6hO3z0c4pu8kO0M6Pywm1f_noun rdfs:label "cariish"@som .
+	term:le_6hO3z0c4pu8kO0M6Pywm1f_noun_lemma ontolex:writtenRep "cariish"@som .
+	term:le_6hO3z0c4pu8kO0M6Pywm1f_noun ontolex:sense term:le_6hO3z0c4pu8kO0M6Pywm1f_noun_sense .
+	term:le_6hO3z0c4pu8kO0M6Pywm1f_noun_sense rdf:type ontolex:LexicalSense .
 
 	# [Add Metadata Processor] adding creator and date info
 
-	:lexicon_en dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_7NpR4B6bYkQNHaFtR2DUTl_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_7NpR4B6bYkQNHaFtR2DUTl_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_uyWIJnNTYr9CrRPiM4ctd_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_uyWIJnNTYr9CrRPiM4ctd_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_5CBaX82O5a0lRatzRAG5uE_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_5CBaX82O5a0lRatzRAG5uE_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_3Shyiylbl90SxpgvLEFFZG_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_3Shyiylbl90SxpgvLEFFZG_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_6qHabAhwIUUrJI4L4lAMNc_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_6qHabAhwIUUrJI4L4lAMNc_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_3MUOkJsdCVJ2sDXQJuNWz0_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_3MUOkJsdCVJ2sDXQJuNWz0_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_3GEa9mt9MTwxuzb8PemGnL_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_3GEa9mt9MTwxuzb8PemGnL_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_1DDsBaDBawuZGiJ59Ok0m7_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_1DDsBaDBawuZGiJ59Ok0m7_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_2A73nOXkUAlVnaW5uu2I4_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_2A73nOXkUAlVnaW5uu2I4_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_267IcblytGnfgclM5CpKIK_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
-	term:le_267IcblytGnfgclM5CpKIK_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	:lexicon_som dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_30e7nYywJLyFQC2kJbmZn3_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_30e7nYywJLyFQC2kJbmZn3_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6h8TnC3AY3xixxeirxR6mO_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6h8TnC3AY3xixxeirxR6mO_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5hSyXhrDoAZsgg9KPmNLbW_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5hSyXhrDoAZsgg9KPmNLbW_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_DiKddJHugrvWv2mEWBiI6_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_DiKddJHugrvWv2mEWBiI6_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6fFAyfSU8uBpatnZ6C27B7_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6fFAyfSU8uBpatnZ6C27B7_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3sy8SPI5NsbGthRhccvxrJ_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3sy8SPI5NsbGthRhccvxrJ_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5iyPtvYLpFpfa2QcpCoJlq_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_5iyPtvYLpFpfa2QcpCoJlq_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2Clcjjc0d3CPMTDMHmc6pA_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_2Clcjjc0d3CPMTDMHmc6pA_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3IgOgTN87iFaiDPv0cJJuR_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_3IgOgTN87iFaiDPv0cJJuR_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6hO3z0c4pu8kO0M6Pywm1f_noun dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
+	term:le_6hO3z0c4pu8kO0M6Pywm1f_noun_sense dct:creator "kicco" ; dct:created "2023-04-10T10:02+02:00" ; dct:modified "2023-04-10T10:02+02:00" .
 }
 
