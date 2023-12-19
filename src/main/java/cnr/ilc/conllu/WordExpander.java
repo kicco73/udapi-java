@@ -22,7 +22,7 @@ public class WordExpander {
 			triples.addStringWithLanguage(otherFormFQN, "ontolex:writtenRep", otherForm.text, language);
 
 			for (Entry<String,String> entry: otherForm.features.entrySet()) {
-				triples.addString(otherFormFQN, entry.getValue(), entry.getKey());
+				triples.add(otherFormFQN, entry.getKey(), entry.getValue());
 			}
 
 			TermInterface term = new PojoWord(otherForm.text, language, otherFormFQN, triples.serialise(), null);

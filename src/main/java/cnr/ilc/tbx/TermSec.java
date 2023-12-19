@@ -122,7 +122,7 @@ public class TermSec {
 		word = concept.newWord(lemma, partOfSpeechFQN, language, lexiconFQN);
 
 		if (grammaticalGender != null)
-			word.canonicalForm.features.put(grammaticalGenderFQN, "lexinfo:gender");
+			word.canonicalForm.features.put("lexinfo:gender", grammaticalGenderFQN);
 
 		parseTermType(termSec);
 		parseAdministrativeStatus(termSec);

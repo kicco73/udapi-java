@@ -39,7 +39,7 @@ public class WordSerialiser extends TripleSerialiser {
 		addStringWithLanguage(canonicalFormFQN, "ontolex:writtenRep", word.canonicalForm.text, word.getLanguage());
 
 		for (Entry<String,String> entry: word.canonicalForm.features.entrySet()) {
-			add(canonicalFormFQN, entry.getValue(), entry.getKey());
+			add(canonicalFormFQN, entry.getKey(), entry.getValue());
 		}
 
 	}
